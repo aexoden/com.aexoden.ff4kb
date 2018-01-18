@@ -1,5 +1,5 @@
 from django.http import Http404, HttpResponse
-from django.template import loader
+from django.shortcuts import render
 
 from .models import RouteDetail
 
@@ -14,10 +14,8 @@ def detail(request, route, seed):
 	except FileNotFoundError:
 		raise Http404("Route and seed combination does not exist.")
 
-	template = loader.get_template('routes/detail.html')
-
 	context = {
 		'detail': r.data
 	}
 
-	return HttpResponse(template.render(context, request))
+	return render(request, 'routes/detail.html', context)
