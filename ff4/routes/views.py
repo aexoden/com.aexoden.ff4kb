@@ -15,7 +15,8 @@ def detail(request, route, seed):
 		raise Http404("Route and seed combination does not exist.")
 
 	context = {
-		'detail': r.data
+		'detail': r.data,
+		'title': '{} Seed {}'.format(route, seed),
 	}
 
 	return render(request, 'routes/detail.html', context)

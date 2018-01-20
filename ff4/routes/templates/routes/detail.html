@@ -1,4 +1,12 @@
-<pre>
+{% extends "routes/base.html" %}
+
+{% block subtitle %}{{ title }}{% endblock %}
+
+{% block subheading %}{{ title }}{% endblock %}
+
+{% block content %}
+		<pre>
 {% for line in detail %}{{ line }}
 {% endfor %}
-</pre>
+		</pre>
+{% endblock %}
