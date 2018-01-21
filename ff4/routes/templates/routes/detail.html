@@ -4,9 +4,28 @@
 
 {% block subheading %}{{ title }}{% endblock %}
 
-{% block content %}
-		<pre>
+{% block content %}				<h2 id="overview">Route Overview</h2>
+				<dl class="dl-horizontal"></dl>
+				<h2 id="detail">Route Detail</h2>
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a class="nav-link active" id="tab-summary" data-toggle="tab" href="#tab-route-summary">Summary</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="tab-detail" data-toggle="tab" href="#tab-route-detail">Detail</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="tab-tutorial" data-toggle="tab" href="#tab-route-tutorial">Tutorial</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane fade show active" id="tab-route-summary">Summary</div>
+					<div class="tab-pane fade" id="tab-route-detail">
+						<pre>
 {% for line in detail %}{{ line }}
 {% endfor %}
-		</pre>
+						</pre>
+					</div>
+					<div class="tab-pane fade" id="tab-route-tutorial">Tutorial</div>
+				</div>
 {% endblock %}
