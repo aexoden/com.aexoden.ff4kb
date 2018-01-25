@@ -1,4 +1,5 @@
 {% extends "routes/base.html" %}
+{% load static %}
 
 {% block subtitle %}{{ title }}{% endblock %}
 
@@ -6,7 +7,7 @@
 
 {% block content %}				<h2 id="overview">Route Overview</h2>
 				<dl class="dl-horizontal"></dl>
-				<h2 id="detail">Route Detail</h2>
+				<h2 id="detail">Route Description</h2>
 				<ul class="nav nav-tabs">
 					<li class="nav-item">
 						<a class="nav-link active" id="tab-summary" data-toggle="tab" href="#tab-route-summary">Summary</a>
@@ -21,11 +22,28 @@
 				<div class="tab-content">
 					<div class="tab-pane fade show active" id="tab-route-summary">Summary</div>
 					<div class="tab-pane fade" id="tab-route-detail">
-						<pre>
-{% for line in detail %}{{ line }}
-{% endfor %}
-						</pre>
+						<pre>{% for line in detail %}{{ line }}
+{% endfor %}</pre>
 					</div>
-					<div class="tab-pane fade" id="tab-route-tutorial">Tutorial</div>
+					<div class="tab-pane fade" id="tab-route-tutorial">
+						<div class="btn-group-toggle" data-toggle="buttons">
+							<label class="btn btn-primary active">
+								<input type="checkbox" checked id="option-overlay" onchange="updateMaps()">Show Tile Overlay</input>
+							</label>
+							<label class="btn btn-primary active disabled">
+								<input type="checkbox" checked id="option-show-all" onchange="updateMaps()">Show All Maps</input>
+							</label>
+						</div>
+						<div id="tutorial-map-wrapper">
+						</div>
+					</div>
 				</div>
+				<script src="{% static "js/ff4.js" %}"></script>
+				<script>
+					function updateMaps() {
+						com.aexoden.ff4.drawMaps(document.getElementById("tutorial-map-wrapper"), "{{ route }}", {{ vars|safe }});
+					}
+
+					updateMaps();
+				</script>
 {% endblock %}

@@ -1,3 +1,5 @@
+import json
+
 from django.http import Http404, HttpResponse
 from django.shortcuts import render
 
@@ -16,7 +18,9 @@ def detail(request, route, seed):
 
 	context = {
 		'detail': r.data,
+		'route': route,
 		'title': '{} Seed {}'.format(route, seed),
+		'vars': json.dumps(r.vars),
 	}
 
 	return render(request, 'routes/detail.html', context)
