@@ -41,75 +41,83 @@ com.aexoden.ff4 = function()
 		"overworld-mist": {
 			"map": "0000-0",
 			"mapRange": [81, 103, 32, 32],
-			"segments": [
-				[96, 119, SegmentFlags.START],
-				[98, 119, SegmentFlags.RETURN],
-				[97, 119, SegmentFlags.END],
-			]
+			"segments": {
+				"base-0": [
+					[96, 119, SegmentFlags.START],
+					[98, 119, SegmentFlags.RETURN],
+					[97, 119, SegmentFlags.END]
+				]
+			}
 		},
 		"overworld-kaipo": {
 			"map": "0000-0",
 			"mapRange": [116, 77, 32, 32],
-			"segments": [
-				[126, 104, SegmentFlags.START],
-				[127, 104, SegmentFlags.NONE],
-				[127, 90, SegmentFlags.NONE],
-				[136, 90, SegmentFlags.NONE],
-				[136, 84, SegmentFlags.NONE],
-				[138, 84, SegmentFlags.NONE],
-				[138, 83, SegmentFlags.END],
-			]
+			"segments": {
+				"base-0": [
+					[126, 104, SegmentFlags.START],
+					[127, 104, SegmentFlags.NONE],
+					[127, 90, SegmentFlags.NONE],
+					[136, 90, SegmentFlags.NONE],
+					[136, 84, SegmentFlags.NONE],
+					[138, 84, SegmentFlags.NONE],
+					[138, 83, SegmentFlags.END]
+				]
+			}
 		},
 		"watery-pass-south-b1f": {
 			"map": "306F-0",
-			"segments": [
-				[26, 30, SegmentFlags.START],
-				[26, 28, SegmentFlags.NONE],
-				[21, 28, SegmentFlags.NONE],
-				[21, 25, SegmentFlags.NONE],
-				[15, 25, SegmentFlags.NONE],
-				[15, 22, SegmentFlags.NONE],
-				[7, 22, SegmentFlags.NONE],
-				[7, 16, SegmentFlags.END],
-				[7, 13, SegmentFlags.NONE],
-				[6, 13, SegmentFlags.NONE],
-				[6, 10, SegmentFlags.NONE],
-				[7, 10, SegmentFlags.NONE],
-				[7, 7, SegmentFlags.NONE],
-				[4, 7, SegmentFlags.NONE],
-				[4, 6, SegmentFlags.NONE],
-				[2, 6, SegmentFlags.NONE],
-				[2, 2, SegmentFlags.END]
-			]
+			"segments": {
+				"base-0": [
+					[26, 30, SegmentFlags.START],
+					[26, 28, SegmentFlags.NONE],
+					[21, 28, SegmentFlags.NONE],
+					[21, 25, SegmentFlags.NONE],
+					[15, 25, SegmentFlags.NONE],
+					[15, 22, SegmentFlags.NONE],
+					[7, 22, SegmentFlags.NONE],
+					[7, 16, SegmentFlags.END],
+					[7, 13, SegmentFlags.NONE],
+					[6, 13, SegmentFlags.NONE],
+					[6, 10, SegmentFlags.NONE],
+					[7, 10, SegmentFlags.NONE],
+					[7, 7, SegmentFlags.NONE],
+					[4, 7, SegmentFlags.NONE],
+					[4, 6, SegmentFlags.NONE],
+					[2, 6, SegmentFlags.NONE],
+					[2, 2, SegmentFlags.END]
+				]
+			}
 		},
 		"watery-pass-south-b2f": {
 			"map": "3070-0",
-			"segments": [
-				[26, 29, SegmentFlags.START],
-				[26, 21, SegmentFlags.NONE],
-				[29, 21, SegmentFlags.NONE],
-				[29, 13, SegmentFlags.NONE],
-				[28, 13, SegmentFlags.NONE],
-				[28, 9, SegmentFlags.NONE],
-				[26, 9, SegmentFlags.NONE],
-				[26, 12, SegmentFlags.NONE],
-				[23, 12, SegmentFlags.NONE],
-				[23, 19, SegmentFlags.NONE],
-				[24, 19, SegmentFlags.NONE],
-				[24, 25, SegmentFlags.NONE],
-				[22, 25, SegmentFlags.NONE],
-				[22, 20, SegmentFlags.NONE],
-				[18, 20, SegmentFlags.NONE],
-				[18, 25, SegmentFlags.NONE],
-				[12, 25, SegmentFlags.NONE],
-				[12, 27, SegmentFlags.NONE],
-				[10, 27, SegmentFlags.NONE],
-				[10, 28, SegmentFlags.NONE],
-				[5, 28, SegmentFlags.NONE],
-				[5, 19, SegmentFlags.NONE],
-				[2, 19, SegmentFlags.NONE],
-				[2, 17, SegmentFlags.END],
-			]
+			"segments": {
+				"base-0": [
+					[26, 29, SegmentFlags.START],
+					[26, 21, SegmentFlags.NONE],
+					[29, 21, SegmentFlags.NONE],
+					[29, 13, SegmentFlags.NONE],
+					[28, 13, SegmentFlags.NONE],
+					[28, 9, SegmentFlags.NONE],
+					[26, 9, SegmentFlags.NONE],
+					[26, 12, SegmentFlags.NONE],
+					[23, 12, SegmentFlags.NONE],
+					[23, 19, SegmentFlags.NONE],
+					[24, 19, SegmentFlags.NONE],
+					[24, 25, SegmentFlags.NONE],
+					[22, 25, SegmentFlags.NONE],
+					[22, 20, SegmentFlags.NONE],
+					[18, 20, SegmentFlags.NONE],
+					[18, 25, SegmentFlags.NONE],
+					[12, 25, SegmentFlags.NONE],
+					[12, 27, SegmentFlags.NONE],
+					[10, 27, SegmentFlags.NONE],
+					[10, 28, SegmentFlags.NONE],
+					[5, 28, SegmentFlags.NONE],
+					[5, 19, SegmentFlags.NONE],
+					[2, 19, SegmentFlags.NONE],
+					[2, 17, SegmentFlags.END]
+				]
+			}
 		},
 	};
 
@@ -220,9 +228,13 @@ com.aexoden.ff4 = function()
 			yOffset = path.mapRange[1] * -16;
 		}
 
-		for (var i = 0; i < path.segments.length; i++) {
-			drawSegment(ctx, i > 0 ? path.segments[i-1] : path.segments[i], path.segments[i], xOffset, yOffset);
-		}
+		Object.entries(path.segments).forEach(
+			([key, segments]) => {
+				for (var i = 0; i < segments.length; i++) {
+					drawSegment(ctx, i > 0 ? segments[i-1] : segments[i], segments[i], xOffset, yOffset);
+				}
+			}
+		);
 	};
 
 	var drawMaps = function(parent, route, vars) {
