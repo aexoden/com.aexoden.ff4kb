@@ -16,9 +16,10 @@ com.aexoden.ff4 = function()
 	 */
 
 	var SegmentFlags = {
-		NONE:  0x00,
-		START: 0x01,
-		END:   0x02
+		NONE:   0x00,
+		START:  0x01,
+		END:    0x02,
+		RETURN: 0x04,
 	};
 
 	/*
@@ -29,6 +30,7 @@ com.aexoden.ff4 = function()
 
 	data.routes = {
 		"paladin": [
+			"overworld-mist",
 			"overworld-kaipo",
 			"watery-pass-south-b1f",
 			"watery-pass-south-b2f"
@@ -36,6 +38,15 @@ com.aexoden.ff4 = function()
 	};
 
 	data.paths = {
+		"overworld-mist": {
+			"map": "0000-0",
+			"mapRange": [81, 103, 32, 32],
+			"segments": [
+				[96, 119, SegmentFlags.START],
+				[98, 119, SegmentFlags.RETURN],
+				[97, 119, SegmentFlags.END],
+			]
+		},
 		"overworld-kaipo": {
 			"map": "0000-0",
 			"mapRange": [116, 77, 32, 32],
@@ -153,7 +164,15 @@ com.aexoden.ff4 = function()
 				ctx.drawImage(img, 0, 0);
 			}
 
-			drawSegments(ctx, path);
+			var offScreenCanvas = document.createElement("canvas");
+			offScreenCanvas.width = canvas.width;
+			offScreenCanvas.height = canvas.height;
+
+			var offScreenCtx = offScreenCanvas.getContext("2d");
+
+			drawSegments(offScreenCtx, path);
+
+			ctx.drawImage(offScreenCanvas, 0, 0);
 		}
 
 		var drawOverlay = document.getElementById("option-overlay").checked;
@@ -174,6 +193,15 @@ com.aexoden.ff4 = function()
 			ctx.fillRect(previous[0] * 16 + 1 + 8 + xOffset, previous[1] * 16 - 1 + 8 + yOffset, (current[0] - previous[0]) * 16, 2);
 		} else if (current[1] > previous[1]) {
 			ctx.fillRect(previous[0] * 16 - 1 + 8 + xOffset, previous[1] * 16 + 1 + 8 + yOffset, 2, (current[1] - previous[1]) * 16);
+		}
+
+		if ((previous[2] & SegmentFlags.RETURN) > 0) {
+			ctx.clearRect(previous[0] * 16 - 2 + 8 + xOffset, previous[1] * 16 - 2 + 8 + yOffset, 4, 4);
+		}
+
+		if ((current[2] & SegmentFlags.RETURN) > 0) {
+			ctx.fillRect(current[0] * 16 - 3 + 8 + xOffset, current[1] * 16 - 3 + 8 + yOffset, 6, 6);
+			ctx.clearRect(current[0] * 16 - 2 + 8 + xOffset, current[1] * 16 - 2 + 8 + yOffset, 4, 4);
 		}
 
 		if ((current[2] & SegmentFlags.END) > 0) {
