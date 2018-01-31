@@ -29,11 +29,26 @@ com.aexoden.ff4 = function()
 
 	data.routes = {
 		"paladin": [
-			"watery-pass-south-b1f"
+			"overworld-kaipo",
+			"watery-pass-south-b1f",
+			"watery-pass-south-b2f"
 		]
 	};
 
 	data.paths = {
+		"overworld-kaipo": {
+			"map": "0000-0",
+			"mapRange": [116, 77, 32, 32],
+			"segments": [
+				[126, 104, SegmentFlags.START],
+				[127, 104, SegmentFlags.NONE],
+				[127, 90, SegmentFlags.NONE],
+				[136, 90, SegmentFlags.NONE],
+				[136, 84, SegmentFlags.NONE],
+				[138, 84, SegmentFlags.NONE],
+				[138, 83, SegmentFlags.END],
+			]
+		},
 		"watery-pass-south-b1f": {
 			"map": "06F-0",
 			"segments": [
@@ -55,16 +70,45 @@ com.aexoden.ff4 = function()
 				[2, 6, SegmentFlags.NONE],
 				[2, 2, SegmentFlags.END]
 			]
-		}
+		},
+		"watery-pass-south-b2f": {
+			"map": "070-0",
+			"segments": [
+				[26, 29, SegmentFlags.START],
+				[26, 21, SegmentFlags.NONE],
+				[29, 21, SegmentFlags.NONE],
+				[29, 13, SegmentFlags.NONE],
+				[28, 13, SegmentFlags.NONE],
+				[28, 9, SegmentFlags.NONE],
+				[26, 9, SegmentFlags.NONE],
+				[26, 12, SegmentFlags.NONE],
+				[23, 12, SegmentFlags.NONE],
+				[23, 19, SegmentFlags.NONE],
+				[24, 19, SegmentFlags.NONE],
+				[24, 25, SegmentFlags.NONE],
+				[22, 25, SegmentFlags.NONE],
+				[22, 20, SegmentFlags.NONE],
+				[18, 20, SegmentFlags.NONE],
+				[18, 25, SegmentFlags.NONE],
+				[12, 25, SegmentFlags.NONE],
+				[12, 27, SegmentFlags.NONE],
+				[10, 27, SegmentFlags.NONE],
+				[10, 28, SegmentFlags.NONE],
+				[5, 28, SegmentFlags.NONE],
+				[5, 19, SegmentFlags.NONE],
+				[2, 19, SegmentFlags.NONE],
+				[2, 17, SegmentFlags.END],
+			]
+		},
 	};
 
 	/*
 	 * Functions
 	 */
 
-	var drawArrow = function(ctx, previous, current) {
-		var x = current[0] * 16 + 8;
-		var y = current[1] * 16 + 8;
+	var drawArrow = function(ctx, previous, current, xOffset, yOffset) {
+		var x = current[0] * 16 + 8 + xOffset;
+		var y = current[1] * 16 + 8 + yOffset;
 
 		if (current[0] < previous[0]) {
 			ctx.fillRect(x + 2, y - 6, 1, 12);
@@ -103,7 +147,12 @@ com.aexoden.ff4 = function()
 		var img = new Image();
 
 		img.onload = function() {
-			ctx.drawImage(img, 0, 0);
+			if (path.mapRange) {
+				ctx.drawImage(img, path.mapRange[0] * 16, path.mapRange[1] * 16, path.mapRange[2] * 16, path.mapRange[3] * 16, 0, 0, path.mapRange[2] * 16, path.mapRange[3] * 16);
+			} else {
+				ctx.drawImage(img, 0, 0);
+			}
+
 			drawSegments(ctx, path);
 		}
 
@@ -112,31 +161,39 @@ com.aexoden.ff4 = function()
 		img.src = "/static/img/maps/" + (drawOverlay ? "composite" : "base") + "/" + path.map + ".png";
 	};
 
-	var drawSegment = function(ctx, previous, current) {
+	var drawSegment = function(ctx, previous, current, xOffset, yOffset) {
 		if ((current[2] & SegmentFlags.START) > 0) {
-			ctx.fillRect(previous[0] * 16 - 3 + 8, previous[1] * 16 - 3 + 8, 6, 6);
+			ctx.fillRect(previous[0] * 16 - 3 + 8 + xOffset, previous[1] * 16 - 3 + 8 + yOffset, 6, 6);
 		}
 
 		if (current[0] < previous[0]) {
-			ctx.fillRect(current[0] * 16 - 1 + 8, current[1] * 16 - 1 + 8, (previous[0] - current[0]) * 16, 2);
+			ctx.fillRect(current[0] * 16 - 1 + 8 + xOffset, current[1] * 16 - 1 + 8 + yOffset, (previous[0] - current[0]) * 16, 2);
 		} else if (current[1] < previous[1]) {
-			ctx.fillRect(current[0] * 16 - 1 + 8, current[1] * 16 - 1 + 8, 2, (previous[1] - current[1]) * 16);
+			ctx.fillRect(current[0] * 16 - 1 + 8 + xOffset, current[1] * 16 - 1 + 8 + yOffset, 2, (previous[1] - current[1]) * 16);
 		} else if (current[0] > previous[0]) {
-			ctx.fillRect(previous[0] * 16 + 1 + 8, previous[1] * 16 - 1 + 8, (current[0] - previous[0]) * 16, 2);
+			ctx.fillRect(previous[0] * 16 + 1 + 8 + xOffset, previous[1] * 16 - 1 + 8 + yOffset, (current[0] - previous[0]) * 16, 2);
 		} else if (current[1] > previous[1]) {
-			ctx.fillRect(previous[0] * 16 - 1 + 8, previous[1] * 16 + 1 + 8, 2, (current[1] - previous[1]) * 16);
+			ctx.fillRect(previous[0] * 16 - 1 + 8 + xOffset, previous[1] * 16 + 1 + 8 + yOffset, 2, (current[1] - previous[1]) * 16);
 		}
 
 		if ((current[2] & SegmentFlags.END) > 0) {
-			drawArrow(ctx, previous, current);
+			drawArrow(ctx, previous, current, xOffset, yOffset);
 		}
 	};
 
 	var drawSegments = function(ctx, path) {
 		ctx.fillStyle = "#FFFFFF";
 
+		var xOffset = 0;
+		var yOffset = 0;
+
+		if (path.mapRange) {
+			xOffset = path.mapRange[0] * -16;
+			yOffset = path.mapRange[1] * -16;
+		}
+
 		for (var i = 0; i < path.segments.length; i++) {
-			drawSegment(ctx, i > 0 ? path.segments[i-1] : path.segments[i], path.segments[i]);
+			drawSegment(ctx, i > 0 ? path.segments[i-1] : path.segments[i], path.segments[i], xOffset, yOffset);
 		}
 	};
 
