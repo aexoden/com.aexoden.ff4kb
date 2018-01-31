@@ -50,7 +50,7 @@ com.aexoden.ff4 = function()
 			]
 		},
 		"watery-pass-south-b1f": {
-			"map": "06F-0",
+			"map": "306F-0",
 			"segments": [
 				[26, 30, SegmentFlags.START],
 				[26, 28, SegmentFlags.NONE],
@@ -72,7 +72,7 @@ com.aexoden.ff4 = function()
 			]
 		},
 		"watery-pass-south-b2f": {
-			"map": "070-0",
+			"map": "3070-0",
 			"segments": [
 				[26, 29, SegmentFlags.START],
 				[26, 21, SegmentFlags.NONE],
