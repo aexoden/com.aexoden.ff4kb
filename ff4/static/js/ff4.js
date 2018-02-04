@@ -15,11 +15,17 @@ com.aexoden.ff4 = function()
 	 * Constants
 	 */
 
-	var SegmentFlags = {
+	var PathFlags = {
 		NONE:   0x00,
-		START:  0x01,
-		END:    0x02,
-		RETURN: 0x04,
+		STEPS:  0x01
+	};
+
+	var SegmentFlags = {
+		NONE:     0x00,
+		START:    0x01,
+		END:      0x02,
+		RETURN:   0x04,
+		ANNOTATE: 0x08
 	};
 
 	/*
@@ -30,26 +36,119 @@ com.aexoden.ff4 = function()
 
 	data.routes = {
 		"paladin": [
-			"overworld-mist",
-			"overworld-kaipo",
-			"watery-pass-south-b1f",
-			"watery-pass-south-b2f"
+			"overworld-mist-0",
+			"village-mist-0",
+			"village-mist-weapon-0",
+			"village-mist-1",
+			"village-mist-house-0",
+			"village-mist-2",
+			"overworld-kaipo-0",
+			"kaipo-0",
+			"kaipo-inn-0",
+			"kaipo-1",
+			"kaipo-house-0",
+			"kaipo-2",
+			"overworld-kaipo-1",
+			"watery-pass-south-b1f-0",
+			"watery-pass-south-b2f-0",
+			"watery-pass-south-b2f-save-room-0",
 		]
 	};
 
 	data.paths = {
-		"overworld-mist": {
-			"map": "0000-0",
-			"mapRange": [81, 103, 32, 32],
+		"kaipo-0": {
+			"flags": PathFlags.NONE,
+			"map": "3002-0",
 			"segments": {
 				"base-0": [
-					[96, 119, SegmentFlags.START],
-					[98, 119, SegmentFlags.RETURN],
-					[97, 119, SegmentFlags.END]
+					[15, 30, SegmentFlags.START],
+					[15, 26, SegmentFlags.END]
 				]
 			}
 		},
-		"overworld-kaipo": {
+		"kaipo-1": {
+			"flags": PathFlags.NONE,
+			"map": "3002-0",
+			"segments": {
+				"base-0": [
+					[14, 17, SegmentFlags.START],
+					[14, 18, SegmentFlags.NONE],
+					[18, 18, SegmentFlags.NONE],
+					[18, 17, SegmentFlags.NONE],
+					[21, 17, SegmentFlags.NONE],
+					[21, 16, SegmentFlags.NONE],
+					[24, 16, SegmentFlags.NONE],
+					[24, 15, SegmentFlags.NONE],
+					[27, 15, SegmentFlags.NONE],
+					[28, 15, SegmentFlags.NONE],
+					[28, 13, SegmentFlags.END]
+				]
+			}
+		},
+		"kaipo-2": {
+			"flags": PathFlags.NONE,
+			"map": "3002-0",
+			"segments": {
+				"base-0": [
+					[28, 14, SegmentFlags.START],
+					[28, 15, SegmentFlags.NONE],
+					[23, 15, SegmentFlags.NONE],
+					[23, 19, SegmentFlags.NONE],
+					[20, 19, SegmentFlags.NONE],
+					[20, 26, SegmentFlags.NONE],
+					[15, 26, SegmentFlags.NONE],
+					[15, 30, SegmentFlags.NONE],
+					[16, 30, SegmentFlags.NONE],
+					[16, 31, SegmentFlags.END]
+				]
+			}
+		},
+		"kaipo-house-0": {
+			"flags": PathFlags.NONE,
+			"map": "3012-0",
+			"segments": {
+				"base-0": [
+					[4, 15, SegmentFlags.START],
+					[4, 6, SegmentFlags.END],
+				],
+				"base-1": [
+					[6, 3, SegmentFlags.START],
+					[6, 5, SegmentFlags.NONE],
+					[4, 5, SegmentFlags.NONE],
+					[4, 18, SegmentFlags.END]
+				]
+			}
+		},
+		"kaipo-inn-0": {
+			"flags": PathFlags.NONE,
+			"map": "3010-0",
+			"segments": {
+				"base-0": [
+					[14, 12, SegmentFlags.START],
+					[18, 12, SegmentFlags.NONE],
+					[18, 14, SegmentFlags.NONE],
+					[20, 14, SegmentFlags.NONE],
+					[20, 17, SegmentFlags.END]
+				]
+			}
+		},
+		"overworld-kaipo-0": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [98, 95, 32, 32],
+			"segments": {
+				"base-0": [
+					[103, 119, SegmentFlags.START],
+					[103, 117, SegmentFlags.NONE],
+					[104, 117, SegmentFlags.NONE],
+					[104, 109, SegmentFlags.NONE],
+					[125, 109, SegmentFlags.NONE],
+					[125, 104, SegmentFlags.END]
+				]
+			}
+		},
+		"overworld-kaipo-1": {
+			"flags": PathFlags.STEPS,
 			"map": "0000-0",
 			"mapRange": [116, 77, 32, 32],
 			"segments": {
@@ -64,7 +163,101 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
-		"watery-pass-south-b1f": {
+		"overworld-mist-0": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [81, 103, 32, 32],
+			"segments": {
+				"base-0": [
+					[96, 119, SegmentFlags.START],
+					[98, 119, SegmentFlags.RETURN],
+					[97, 119, SegmentFlags.END]
+				]
+			}
+		},
+		"village-mist-0": {
+			"flags": PathFlags.NONE,
+			"map": "3001-0",
+			"segments": {
+				"base-0": [
+					[28, 16, SegmentFlags.START],
+					[19, 16, SegmentFlags.NONE],
+					[19, 24, SegmentFlags.NONE],
+					[18, 24, SegmentFlags.NONE],
+					[18, 26, SegmentFlags.NONE],
+					[14, 26, SegmentFlags.NONE],
+					[14, 25, SegmentFlags.END]
+				]
+			}
+		},
+		"village-mist-1": {
+			"flags": PathFlags.NONE,
+			"map": "3001-0",
+			"segments": {
+				"base-0": [
+					[14, 25, SegmentFlags.START],
+					[14, 26, SegmentFlags.NONE],
+					[12, 26, SegmentFlags.NONE],
+					[12, 8, SegmentFlags.NONE],
+					[11, 8, SegmentFlags.NONE],
+					[11, 7, SegmentFlags.END]
+				]
+			}
+		},
+		"village-mist-2": {
+			"flags": PathFlags.NONE,
+			"map": "3001-0",
+			"segments": {
+				"base-0": [
+					[11, 7, SegmentFlags.START],
+					[11, 10, SegmentFlags.NONE],
+					[12, 10, SegmentFlags.NONE],
+					[12, 16, SegmentFlags.NONE],
+					[8, 16, SegmentFlags.END]
+				]
+			}
+		},
+		"village-mist-house-0": {
+			"flags": PathFlags.NONE,
+			"map": "300F-0",
+			"segments": {
+				"base-0": [
+					[4, 13, SegmentFlags.START],
+					[4, 12, SegmentFlags.NONE],
+					[3, 12, SegmentFlags.NONE],
+					[3, 10, SegmentFlags.NONE],
+					[4, 10, SegmentFlags.NONE],
+					[4, 6, SegmentFlags.NONE],
+					[22, 6, SegmentFlags.END],
+					[26, 6, SegmentFlags.NONE],
+					[26, 10, SegmentFlags.NONE],
+					[22, 10, SegmentFlags.NONE],
+					[22, 24, SegmentFlags.RETURN],
+					[22, 10, SegmentFlags.NONE],
+					[26, 10, SegmentFlags.NONE],
+					[26, 6, SegmentFlags.NONE],
+					[4, 6, SegmentFlags.NONE],
+					[4, 10, SegmentFlags.NONE],
+					[3, 10, SegmentFlags.NONE],
+					[3, 12, SegmentFlags.NONE],
+					[4, 12, SegmentFlags.NONE],
+					[4, 16, SegmentFlags.END]
+				]
+			}
+		},
+		"village-mist-weapon-0": {
+			"flags": PathFlags.NONE,
+			"map": "30E1-0",
+			"segments": {
+				"base-0": [
+					[4, 7, SegmentFlags.START],
+					[4, 5, SegmentFlags.RETURN],
+					[4, 10, SegmentFlags.END]
+				]
+			}
+		},
+		"watery-pass-south-b1f-0": {
+			"flags": PathFlags.STEPS,
 			"map": "306F-0",
 			"segments": {
 				"base-0": [
@@ -88,7 +281,8 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
-		"watery-pass-south-b2f": {
+		"watery-pass-south-b2f-0": {
+			"flags": PathFlags.STEPS,
 			"map": "3070-0",
 			"segments": {
 				"base-0": [
@@ -119,6 +313,24 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"watery-pass-south-b2f-save-room-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3054-0",
+			"segments": {
+				"base-0": [
+					[4, 11, SegmentFlags.START],
+					[4, 10, SegmentFlags.END]
+				],
+				"base-1": [
+					[4, 7, SegmentFlags.START],
+					[4, 2, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[4, 4, SegmentFlags.NONE],
+					[5, 4, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		}
 	};
 
 	/*
@@ -218,8 +430,6 @@ com.aexoden.ff4 = function()
 	};
 
 	var drawSegments = function(ctx, path) {
-		ctx.fillStyle = "#FFFFFF";
-
 		var xOffset = 0;
 		var yOffset = 0;
 
@@ -230,8 +440,28 @@ com.aexoden.ff4 = function()
 
 		Object.entries(path.segments).forEach(
 			([key, segments]) => {
+				var fields = key.split("-");
+
+				if (fields[0] == "extra") {
+					ctx.fillStyle = "#00FF00";
+				} else {
+					ctx.fillStyle = "#FFFFFF";
+				}
+
 				for (var i = 0; i < segments.length; i++) {
 					drawSegment(ctx, i > 0 ? segments[i-1] : segments[i], segments[i], xOffset, yOffset);
+
+					if ((segments[i][2] & SegmentFlags.ANNOTATE) > 0) {
+						var x = segments[i][0] * 16 + xOffset + 12;
+						var y = segments[i][1] * 16 + yOffset + 2;
+						var style = ctx.fillStyle;
+						ctx.fillStyle = "rgba(0, 0, 0, 0.3)";
+						ctx.fillRect(x, y, 13, 11);
+
+						ctx.fillStyle = style;
+						ctx.textBaseline = "top";
+						ctx.fillText("+" + fields[1], x + 0.5, y);
+					}
 				}
 			}
 		);
