@@ -28,10 +28,10 @@
 					<div class="tab-pane fade" id="tab-route-tutorial">
 						<div class="btn-group-toggle" data-toggle="buttons">
 							<label class="btn btn-primary active">
-								<input type="checkbox" checked id="option-overlay" onchange="updateMaps()">Show Tile Overlay</input>
+								<input type="checkbox" checked id="option-overlay" onchange="updateMaps(false)">Show Tile Overlay</input>
 							</label>
-							<label class="btn btn-primary active disabled">
-								<input type="checkbox" checked id="option-show-all" onchange="updateMaps()">Show All Maps</input>
+							<label class="btn btn-primary active">
+								<input type="checkbox" checked id="option-show-all" onchange="updateMaps(true)">Show All Maps</input>
 							</label>
 						</div>
 						<div id="tutorial-map-wrapper">
@@ -40,8 +40,8 @@
 				</div>
 				<script src="{% static "js/ff4.js" %}"></script>
 				<script>
-					function updateMaps() {
-						com.aexoden.ff4.drawMaps(document.getElementById("tutorial-map-wrapper"), "{{ route }}", {{ vars|safe }});
+					function updateMaps(repaint) {
+						com.aexoden.ff4.drawMaps(document.getElementById("tutorial-map-wrapper"), "{{ route }}", {{ vars|safe }}, repaint);
 					}
 
 					updateMaps();

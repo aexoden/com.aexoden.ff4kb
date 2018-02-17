@@ -28,6 +28,11 @@ com.aexoden.ff4 = function()
 		ANNOTATE: 0x08
 	};
 
+	var VariableFlags = {
+		NONE:  0x00,
+		EXTRA: 0x01
+	};
+
 	/*
 	 * Data
 	 */
@@ -53,6 +58,16 @@ com.aexoden.ff4 = function()
 			"watery-pass-south-b2f-0",
 			"watery-pass-south-b2f-save-room-0",
 		]
+	};
+
+	data.variables = {
+		"paladin": {
+			0: {
+				"type": VariableFlags.EXTRA,
+				"path": "watery-pass-south-b2f-save-room-0",
+				"index": "0"
+			}
+		}
 	};
 
 	data.paths = {
@@ -467,24 +482,43 @@ com.aexoden.ff4 = function()
 		);
 	};
 
-	var drawMaps = function(parent, route, vars) {
+	var drawMaps = function(parent, route, vars, repaint) {
+		var drawAll = document.getElementById("option-show-all").checked;
 		var container = document.createDocumentFragment();
 
-		for (var i = 0; i < data.routes[route].length; i++) {
-			var canvas_id = "path-" + i;
-			var canvas = document.getElementById(canvas_id);
+		if (repaint) {
+			parent.innerHTML = '';
+		}
 
-			if (!canvas) {
-				var canvas = document.createElement("canvas");
+		var activeMaps = [];
 
-				canvas.id = canvas_id;
-				canvas.width = 512;
-				canvas.height = 512;
-
-				container.appendChild(canvas);
+		Object.entries(vars).forEach(
+			([key, value]) => {
+				if (value > 0 && key in data.variables[route]) {
+					activeMaps.push(data.variables[route][key].path);
+				}
 			}
+		);
 
-			drawPath(canvas, data.paths[data.routes[route][i]]);
+		for (var i = 0; i < data.routes[route].length; i++) {
+			var path = data.routes[route][i];
+
+			if (drawAll || activeMaps.indexOf(path) > -1) {
+				var canvas_id = "path-" + i;
+				var canvas = document.getElementById(canvas_id);
+
+				if (!canvas) {
+					var canvas = document.createElement("canvas");
+
+					canvas.id = canvas_id;
+					canvas.width = 512;
+					canvas.height = 512;
+
+					container.appendChild(canvas);
+				}
+
+				drawPath(canvas, data.paths[path]);
+			}
 		}
 
 		parent.appendChild(container);
