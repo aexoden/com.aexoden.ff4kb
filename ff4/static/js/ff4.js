@@ -490,12 +490,18 @@ com.aexoden.ff4 = function()
 			parent.innerHTML = '';
 		}
 
-		var activeMaps = [];
+		var activeMaps = {};
 
 		Object.entries(vars).forEach(
 			([key, value]) => {
 				if (value > 0 && key in data.variables[route]) {
-					activeMaps.push(data.variables[route][key].path);
+					var path = data.variables[route][key].path;
+
+					if (!(path in activeMaps)) {
+						activeMaps[path] = [];
+					}
+
+					activeMaps[path].push(key);
 				}
 			}
 		);
@@ -503,18 +509,48 @@ com.aexoden.ff4 = function()
 		for (var i = 0; i < data.routes[route].length; i++) {
 			var path = data.routes[route][i];
 
-			if (drawAll || activeMaps.indexOf(path) > -1) {
+			if (drawAll || path in activeMaps) {
 				var canvas_id = "path-" + i;
 				var canvas = document.getElementById(canvas_id);
+				var caption = document.getElementById(canvas_id + "-caption");
 
 				if (!canvas) {
+					var row = document.createElement("div");
+					var caption = document.createElement("div");
+					var canvas_container = document.createElement("div");
+
+					row.className = "row align-items-center";
+					caption.className = "col";
+					canvas_container.className = "col";
+
 					var canvas = document.createElement("canvas");
 
 					canvas.id = canvas_id;
 					canvas.width = 512;
 					canvas.height = 512;
 
-					container.appendChild(canvas);
+					caption.id = canvas_id + "-caption";
+
+					if (path in activeMaps) {
+						for (var j = 0; j < activeMaps[path].length; j++) {
+							var index = activeMaps[path][j];
+							var varData = data.variables[route][index]
+							var value = vars[index];
+
+							if (varData) {
+								if (varData.type == VariableFlags.EXTRA) {
+									if (value > 0) {
+										caption.innerHTML += "<p>Take " + value + " extra steps.</p>";
+									}
+								}
+							}
+						}
+					}
+
+					canvas_container.appendChild(canvas);
+					row.appendChild(canvas_container);
+					row.appendChild(caption);
+					container.appendChild(row);
 				}
 
 				drawPath(canvas, data.paths[path]);
