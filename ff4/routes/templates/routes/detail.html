@@ -30,8 +30,8 @@
 							<label class="btn btn-primary active">
 								<input type="checkbox" checked id="option-overlay" onchange="updateMaps(false)">Show Tile Overlay</input>
 							</label>
-							<label class="btn btn-primary active">
-								<input type="checkbox" checked id="option-show-all" onchange="updateMaps(true)">Show All Maps</input>
+							<label class="btn btn-primary">
+								<input type="checkbox" id="option-show-all" onchange="updateMaps(true)">Show All Maps</input>
 							</label>
 						</div>
 						<div id="tutorial-map-wrapper" class="container mx-0">
@@ -44,6 +44,6 @@
 						com.aexoden.ff4.drawMaps(document.getElementById("tutorial-map-wrapper"), "{{ route }}", {{ vars|safe }}, repaint);
 					}
 
-					updateMaps();
+					updateMaps(true);
 				</script>
 {% endblock %}
