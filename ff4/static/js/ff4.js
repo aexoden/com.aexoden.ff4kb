@@ -59,7 +59,8 @@ com.aexoden.ff4 = function()
 			"watery-pass-south-b2f-save-room-0",
 			"watery-pass-south-b2f-1",
 			"watery-pass-south-b3f-0",
-			"watery-pass-north-b2f-0"
+			"watery-pass-north-b2f-0",
+			"watery-pass-north-b1f-0"
 		]
 	};
 
@@ -91,6 +92,13 @@ com.aexoden.ff4 = function()
 				"location": "Watery Pass-North B2F",
 				"disambiguation": "",
 				"path": "watery-pass-north-b2f-0",
+				"index": "0"
+			},
+			4: {
+				"type": VariableFlags.EXTRA,
+				"location": "Watery Pass-North B1F",
+				"disambiguation": "",
+				"path": "watery-pass-north-b1f-0",
 				"index": "0"
 			}
 		}
@@ -294,6 +302,39 @@ com.aexoden.ff4 = function()
 					[4, 7, SegmentFlags.START],
 					[4, 5, SegmentFlags.RETURN],
 					[4, 10, SegmentFlags.END]
+				]
+			}
+		},
+		"watery-pass-north-b1f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3073-0",
+			"segments": {
+				"base-0": [
+					[10, 22, SegmentFlags.START],
+					[10, 16, SegmentFlags.NONE],
+					[13, 16, SegmentFlags.NONE],
+					[13, 9, SegmentFlags.NONE],
+					[21, 9, SegmentFlags.NONE],
+					[21, 11, SegmentFlags.NONE],
+					[23, 11, SegmentFlags.NONE],
+					[23, 19, SegmentFlags.NONE],
+					[21, 19, SegmentFlags.NONE],
+					[21, 17, SegmentFlags.NONE],
+					[18, 17, SegmentFlags.RETURN],
+					[21, 17, SegmentFlags.NONE],
+					[21, 19, SegmentFlags.NONE],
+					[23, 19, SegmentFlags.NONE],
+					[23, 11, SegmentFlags.NONE],
+					[24, 11, SegmentFlags.NONE],
+					[24, 8, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[24, 10, SegmentFlags.NONE],
+					[24, 9, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[24, 11, SegmentFlags.NONE],
+					[25, 11, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
