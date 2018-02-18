@@ -57,6 +57,7 @@ com.aexoden.ff4 = function()
 			"watery-pass-south-b1f-0",
 			"watery-pass-south-b2f-0",
 			"watery-pass-south-b2f-save-room-0",
+			"watery-pass-south-b2f-1"
 		]
 	};
 
@@ -67,6 +68,13 @@ com.aexoden.ff4 = function()
 				"location": "Watery Pass-South B2F Save Room",
 				"disambiguation": " after the scene",
 				"path": "watery-pass-south-b2f-save-room-0",
+				"index": "0"
+			},
+			1: {
+				"type": VariableFlags.EXTRA,
+				"location": "Watery Pass-South B2F (after Save Room)",
+				"disambiguation": "",
+				"path": "watery-pass-south-b2f-1",
 				"index": "0"
 			}
 		}
@@ -327,6 +335,30 @@ com.aexoden.ff4 = function()
 					[5, 19, SegmentFlags.NONE],
 					[2, 19, SegmentFlags.NONE],
 					[2, 17, SegmentFlags.END]
+				]
+			}
+		},
+		"watery-pass-south-b2f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3070-0",
+			"segments": {
+				"base-0": [
+					[2, 11, SegmentFlags.START],
+					[2, 8, SegmentFlags.NONE],
+					[10, 8, SegmentFlags.NONE],
+					[10, 12, SegmentFlags.NONE],
+					[8, 12, SegmentFlags.NONE],
+					[8, 15, SegmentFlags.NONE],
+					[12, 15, SegmentFlags.NONE],
+					[12, 16, SegmentFlags.NONE],
+					[13, 16, SegmentFlags.NONE],
+					[13, 17, SegmentFlags.NONE],
+					[16, 17, SegmentFlags.NONE],
+					[16, 7, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[16, 8, SegmentFlags.NONE],
+					[17, 8, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
