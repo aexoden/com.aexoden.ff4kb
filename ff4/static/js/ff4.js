@@ -64,6 +64,8 @@ com.aexoden.ff4 = function()
 		"paladin": {
 			0: {
 				"type": VariableFlags.EXTRA,
+				"location": "Watery Pass-South B2F Save Room",
+				"disambiguation": " after the scene",
 				"path": "watery-pass-south-b2f-save-room-0",
 				"index": "0"
 			}
@@ -532,6 +534,8 @@ com.aexoden.ff4 = function()
 					caption.id = canvas_id + "-caption";
 
 					if (path in activeMaps) {
+						caption.innerHTML += '<dl class="dl">';
+
 						for (var j = 0; j < activeMaps[path].length; j++) {
 							var index = activeMaps[path][j];
 							var varData = data.variables[route][index]
@@ -540,11 +544,13 @@ com.aexoden.ff4 = function()
 							if (varData) {
 								if (varData.type == VariableFlags.EXTRA) {
 									if (value > 0) {
-										caption.innerHTML += "<p>Take " + value + " extra steps.</p>";
+										caption.innerHTML += "<dt>" + varData.location + "</dt><dd>Take " + value + " extra steps" + varData.disambiguation + ".</dd>";
 									}
 								}
 							}
 						}
+
+						caption.innerHTML += '</dl>';
 					}
 
 					canvas_container.appendChild(canvas);
