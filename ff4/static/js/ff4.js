@@ -565,6 +565,10 @@ com.aexoden.ff4 = function()
 
 					caption.id = canvas_id + "-caption";
 
+					if ((data.paths[path].flags & PathFlags.STEPS) == 0) {
+						caption.innerHTML += '<p><em>Steps on this map do not matter.</em></p>';
+					}
+
 					if (path in activeMaps) {
 						caption.innerHTML += '<dl class="dl">';
 
