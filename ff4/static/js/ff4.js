@@ -69,7 +69,7 @@ com.aexoden.ff4 = function()
 	data.variableData = {
 		"overworld-kaipo-2": {
 			"type": VariableFlags.EXTRA,
-			"location": "Overworld (Kaipo) (before Waterfalls)",
+			"location": "Overworld (Kaipo) [before Waterfalls]",
 			"disambiguation": "",
 			"path": "watery-pass-kaipo-2",
 			"index": "0"
@@ -97,7 +97,7 @@ com.aexoden.ff4 = function()
 		},
 		"watery-pass-south-b2f-1": {
 			"type": VariableFlags.EXTRA,
-			"location": "Watery Pass-South B2F (after Save Room)",
+			"location": "Watery Pass-South B2F [after Save Room]",
 			"disambiguation": "",
 			"path": "watery-pass-south-b2f-1",
 			"index": "0"
