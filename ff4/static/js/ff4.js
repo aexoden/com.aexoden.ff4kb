@@ -65,50 +65,59 @@ com.aexoden.ff4 = function()
 		]
 	};
 
+	data.variableData = {
+		"overworld-kaipo-2": {
+			"type": VariableFlags.EXTRA,
+			"location": "Overworld (Kaipo) (before Waterfalls)",
+			"disambiguation": "",
+			"path": "watery-pass-kaipo-2",
+			"index": "0"
+		},
+		"watery-pass-north-b1f-0": {
+			"type": VariableFlags.EXTRA,
+			"location": "Watery Pass-North B1F",
+			"disambiguation": "",
+			"path": "watery-pass-north-b1f-0",
+			"index": "0"
+		},
+		"watery-pass-north-b2f-0": {
+			"type": VariableFlags.EXTRA,
+			"location": "Watery Pass-North B2F",
+			"disambiguation": "",
+			"path": "watery-pass-north-b2f-0",
+			"index": "0"
+		},
+		"watery-pass-south-b2f-1": {
+			"type": VariableFlags.EXTRA,
+			"location": "Watery Pass-South B2F (after Save Room)",
+			"disambiguation": "",
+			"path": "watery-pass-south-b2f-1",
+			"index": "0"
+		},
+		"watery-pass-south-b2f-save-room-0": {
+			"type": VariableFlags.EXTRA,
+			"location": "Watery Pass-South B2F Save Room",
+			"disambiguation": " after the scene",
+			"path": "watery-pass-south-b2f-save-room-0",
+			"index": "0"
+		},
+		"watery-pass-south-b3f-0": {
+			"type": VariableFlags.EXTRA,
+			"location": "Watery Pass-South B3F",
+			"disambiguation": "",
+			"path": "watery-pass-south-b3f-0",
+			"index": "0"
+		}
+	}
+
 	data.variables = {
 		"paladin": {
-			0: {
-				"type": VariableFlags.EXTRA,
-				"location": "Watery Pass-South B2F Save Room",
-				"disambiguation": " after the scene",
-				"path": "watery-pass-south-b2f-save-room-0",
-				"index": "0"
-			},
-			1: {
-				"type": VariableFlags.EXTRA,
-				"location": "Watery Pass-South B2F (after Save Room)",
-				"disambiguation": "",
-				"path": "watery-pass-south-b2f-1",
-				"index": "0"
-			},
-			2: {
-				"type": VariableFlags.EXTRA,
-				"location": "Watery Pass-South B3F",
-				"disambiguation": "",
-				"path": "watery-pass-south-b3f-0",
-				"index": "0"
-			},
-			3: {
-				"type": VariableFlags.EXTRA,
-				"location": "Watery Pass-North B2F",
-				"disambiguation": "",
-				"path": "watery-pass-north-b2f-0",
-				"index": "0"
-			},
-			4: {
-				"type": VariableFlags.EXTRA,
-				"location": "Watery Pass-North B1F",
-				"disambiguation": "",
-				"path": "watery-pass-north-b1f-0",
-				"index": "0"
-			},
-			5: {
-				"type": VariableFlags.EXTRA,
-				"location": "Overworld (Kaipo) (before Waterfalls)",
-				"disambiguation": "",
-				"path": "watery-pass-kaipo-2",
-				"index": "0"
-			}
+			0: "watery-pass-south-b2f-save-room-0",
+			1: "watery-pass-south-b2f-1",
+			2: "watery-pass-south-b3f-0",
+			3: "watery-pass-north-b2f-0",
+			4: "watery-pass-north-b1f-0",
+			5: "overworld-kaipo-2"
 		}
 	};
 
@@ -651,7 +660,8 @@ com.aexoden.ff4 = function()
 		Object.entries(vars).forEach(
 			([key, value]) => {
 				if (value > 0 && key in data.variables[route]) {
-					var path = data.variables[route][key].path;
+					var varData = data.variableData[data.variables[route][key]];
+					var path = varData.path;
 
 					if (!(path in activeMaps)) {
 						activeMaps[path] = [];
@@ -696,7 +706,7 @@ com.aexoden.ff4 = function()
 
 						for (var j = 0; j < activeMaps[path].length; j++) {
 							var index = activeMaps[path][j];
-							var varData = data.variables[route][index]
+							var varData = data.variableData[data.variables[route][index]]
 							var value = vars[index];
 
 							if (varData) {
