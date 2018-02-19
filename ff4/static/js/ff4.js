@@ -63,7 +63,9 @@ com.aexoden.ff4 = function()
 			"watery-pass-north-b1f-0",
 			"overworld-kaipo-2",
 			"waterfalls-b1f-0",
-			"waterfalls-b2f-0"
+			"waterfalls-b2f-0",
+			"waterfalls-lake-0",
+			"waterfalls-lake-1"
 		]
 	};
 
@@ -87,6 +89,20 @@ com.aexoden.ff4 = function()
 			"location": "Waterfalls B2F",
 			"disambiguation": "",
 			"path": "waterfalls-b2f-0",
+			"index": "0"
+		},
+		"waterfalls-lake-0": {
+			"type": VariableFlags.EXTRA,
+			"location": "Waterfalls Lake [before Octomamm]",
+			"disambiguation": "",
+			"path": "waterfalls-lake-0",
+			"index": "0"
+		},
+		"waterfalls-lake-1": {
+			"type": VariableFlags.EXTRA,
+			"location": "Waterfalls Lake [after Octomamm]",
+			"disambiguation": "",
+			"path": "waterfalls-lake-1",
 			"index": "0"
 		},
 		"watery-pass-north-b1f-0": {
@@ -135,7 +151,9 @@ com.aexoden.ff4 = function()
 			4: "watery-pass-north-b1f-0",
 			5: "overworld-kaipo-2",
 			6: "waterfalls-b1f-0",
-			7: "waterfalls-b2f-0"
+			7: "waterfalls-b2f-0",
+			8: "waterfalls-lake-0",
+			9: "waterfalls-lake-1"
 		}
 	};
 
@@ -394,6 +412,41 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[10, 12, SegmentFlags.NONE],
 					[11, 12, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"waterfalls-lake-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3076-0",
+			"segments": {
+				"base-0": [
+					[4, 23, SegmentFlags.START],
+					[13, 23, SegmentFlags.NONE],
+					[13, 22, SegmentFlags.NONE],
+					[21, 22, SegmentFlags.NONE],
+					[21, 17, SegmentFlags.NONE],
+					[19, 17, SegmentFlags.NONE],
+					[19, 20, SegmentFlags.NONE],
+					[16, 20, SegmentFlags.NONE],
+					[16, 12, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[13, 22, SegmentFlags.NONE],
+					[13, 21, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"waterfalls-lake-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3076-1",
+			"segments": {
+				"base-0": [
+					[16, 12, SegmentFlags.START],
+					[16, 10, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[16, 12, SegmentFlags.NONE],
+					[17, 12, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
