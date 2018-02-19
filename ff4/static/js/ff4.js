@@ -61,7 +61,8 @@ com.aexoden.ff4 = function()
 			"watery-pass-south-b3f-0",
 			"watery-pass-north-b2f-0",
 			"watery-pass-north-b1f-0",
-			"overworld-kaipo-2"
+			"overworld-kaipo-2",
+			"waterfalls-b1f-0"
 		]
 	};
 
@@ -71,6 +72,13 @@ com.aexoden.ff4 = function()
 			"location": "Overworld (Kaipo) (before Waterfalls)",
 			"disambiguation": "",
 			"path": "watery-pass-kaipo-2",
+			"index": "0"
+		},
+		"waterfalls-b1f-0": {
+			"type": VariableFlags.EXTRA,
+			"location": "Waterfalls B1F",
+			"disambiguation": "",
+			"path": "waterfalls-b1f-0",
 			"index": "0"
 		},
 		"watery-pass-north-b1f-0": {
@@ -117,7 +125,8 @@ com.aexoden.ff4 = function()
 			2: "watery-pass-south-b3f-0",
 			3: "watery-pass-north-b2f-0",
 			4: "watery-pass-north-b1f-0",
-			5: "overworld-kaipo-2"
+			5: "overworld-kaipo-2",
+			6: "waterfalls-b1f-0"
 		}
 	};
 
@@ -337,6 +346,20 @@ com.aexoden.ff4 = function()
 					[4, 7, SegmentFlags.START],
 					[4, 5, SegmentFlags.RETURN],
 					[4, 10, SegmentFlags.END]
+				]
+			}
+		},
+		"waterfalls-b1f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3074-0",
+			"segments": {
+				"base-0": [
+					[16, 9, SegmentFlags.START],
+					[16, 11, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[16, 9, SegmentFlags.NONE],
+					[17, 9, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
