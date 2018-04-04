@@ -266,8 +266,8 @@ com.aexoden.ff4 = function()
 					[119, 58, SegmentFlags.END]
 				],
 				"extra-2-0": [
-					[123, 68, SegmentFlags.NONE],
-					[124, 68, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+					[125, 67, SegmentFlags.NONE],
+					[126, 67, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				],
 				"extra-2-1": [
 					[119, 59, SegmentFlags.NONE],
