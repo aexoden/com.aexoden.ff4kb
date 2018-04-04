@@ -65,16 +65,31 @@ com.aexoden.ff4 = function()
 			"waterfalls-b1f-0",
 			"waterfalls-b2f-0",
 			"waterfalls-lake-0",
-			"waterfalls-lake-1"
+			"waterfalls-lake-1",
+			"overworld-damcyan-0"
 		]
 	};
 
 	data.variableData = {
+		"overworld-damcyan-0": {
+			"type": VariableFlags.EXTRA,
+			"location": "Overworld (Damcyan)",
+			"disambiguation": " just before entering the castle",
+			"path": "overworld-damcyan-0",
+			"index": "1"
+		},
 		"overworld-kaipo-2": {
 			"type": VariableFlags.EXTRA,
 			"location": "Overworld (Kaipo) [before Waterfalls]",
 			"disambiguation": "",
 			"path": "watery-pass-kaipo-2",
+			"index": "0"
+		},
+		"overworld-kaipo-3": {
+			"type": VariableFlags.EXTRA,
+			"location": "Overworld (Kaipo) [after Octomamm]",
+			"disambiguation": " immediately after exiting the cave",
+			"path": "overworld-damcyan-0",
 			"index": "0"
 		},
 		"waterfalls-b1f-0": {
@@ -153,7 +168,9 @@ com.aexoden.ff4 = function()
 			6: "waterfalls-b1f-0",
 			7: "waterfalls-b2f-0",
 			8: "waterfalls-lake-0",
-			9: "waterfalls-lake-1"
+			9: "waterfalls-lake-1",
+			10: "overworld-kaipo-3",
+			11: "overworld-damcyan-0"
 		}
 	};
 
@@ -231,6 +248,30 @@ com.aexoden.ff4 = function()
 					[18, 14, SegmentFlags.NONE],
 					[20, 14, SegmentFlags.NONE],
 					[20, 17, SegmentFlags.END]
+				]
+			}
+		},
+		"overworld-damcyan-0": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [106, 47, 32, 32],
+			"segments": {
+				"base-0": [
+					[125, 67, SegmentFlags.START],
+					[123, 67, SegmentFlags.NONE],
+					[123, 68, SegmentFlags.NONE],
+					[120, 68, SegmentFlags.NONE],
+					[120, 64, SegmentFlags.NONE],
+					[119, 64, SegmentFlags.NONE],
+					[119, 58, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[123, 68, SegmentFlags.NONE],
+					[124, 68, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-1": [
+					[119, 59, SegmentFlags.NONE],
+					[120, 59, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
