@@ -76,107 +76,137 @@ com.aexoden.ff4 = function()
 	data.variableData = {
 		"overworld-damcyan-0": {
 			"type": VariableFlags.EXTRA,
-			"location": "Overworld (Damcyan)",
-			"disambiguation": " just before entering the castle",
 			"paths": {
-				"overworld-damcyan-0": "1"
+				"overworld-damcyan-0": {
+					"index": "1",
+					"location": "Overworld (Damcyan)",
+					"disambiguation": " just before entering the castle"
+				}
 			}
 		},
 		"overworld-kaipo-2": {
 			"type": VariableFlags.EXTRA,
-			"location": "Overworld (Kaipo) [before Waterfalls]",
-			"disambiguation": "",
 			"paths": {
-				"watery-pass-kaipo-2": "0"
+				"watery-pass-kaipo-2": {
+					"index": "0",
+					"location": "Overworld (Kaipo) [before Waterfalls]",
+					"disambiguation": ""
+				}
 			}
 		},
 		"overworld-kaipo-3": {
 			"type": VariableFlags.EXTRA,
-			"location": "Overworld (Kaipo) [after Octomamm]",
-			"disambiguation": " immediately after exiting the cave",
 			"paths": {
-				"overworld-damcyan-0": "0"
+				"overworld-damcyan-0": {
+					"index": "0",
+					"location": "Overworld (Kaipo) [after Octomamm]",
+					"disambiguation": " immediately after exiting the cave"
+				}
 			}
 		},
 		"waterfalls-b1f-0": {
 			"type": VariableFlags.EXTRA,
-			"location": "Waterfalls B1F",
-			"disambiguation": "",
 			"paths": {
-				"waterfalls-b1f-0": "0"
+				"waterfalls-b1f-0": {
+					"index": "0",
+					"location": "Waterfalls B1F",
+					"disambiguation": ""
+				}
 			}
 		},
 		"waterfalls-b2f-0": {
 			"type": VariableFlags.EXTRA,
-			"location": "Waterfalls B2F",
-			"disambiguation": "",
 			"paths": {
-				"waterfalls-b2f-0": "0"
+				"waterfalls-b2f-0": {
+					"index": "0",
+					"location": "Waterfalls B2F",
+					"disambiguation": ""
+				}
 			}
 		},
 		"waterfalls-lake-0": {
 			"type": VariableFlags.EXTRA,
-			"location": "Waterfalls Lake [before Octomamm]",
-			"disambiguation": "",
 			"paths": {
-				"waterfalls-lake-0": "0"
+				"waterfalls-lake-0": {
+					"index": "0",
+					"location": "Waterfalls Lake [before Octomamm]",
+					"disambiguation": ""
+				}
 			}
 		},
 		"waterfalls-lake-1": {
 			"type": VariableFlags.EXTRA,
-			"location": "Waterfalls Lake [after Octomamm]",
-			"disambiguation": "",
 			"paths": {
-				"waterfalls-lake-1": "0"
+				"waterfalls-lake-1": {
+					"index": "0",
+					"location": "Waterfalls Lake [after Octomamm]",
+					"disambiguation": ""
+				}
 			}
 		},
 		"watery-pass-north-b1f-0": {
 			"type": VariableFlags.EXTRA,
-			"location": "Watery Pass-North B1F",
-			"disambiguation": "",
 			"paths": {
-				"watery-pass-north-b1f-0": "0"
+				"watery-pass-north-b1f-0": {
+					"index": "0",
+					"location": "Watery Pass-North B1F",
+					"disambiguation": ""
+				}
 			}
 		},
 		"watery-pass-north-b2f-0": {
 			"type": VariableFlags.EXTRA,
-			"location": "Watery Pass-North B2F",
-			"disambiguation": "",
 			"paths": {
-				"watery-pass-north-b2f-0": "0"
+				"watery-pass-north-b2f-0": {
+					"index": "0",
+					"location": "Watery Pass-North B2F",
+					"disambiguation": ""
+				}
 			}
 		},
 		"watery-pass-south-b2f-1": {
 			"type": VariableFlags.EXTRA,
-			"location": "Watery Pass-South B2F [after Save Room]",
-			"disambiguation": "",
 			"paths": {
-				"watery-pass-south-b2f-1": "0"
+				"watery-pass-south-b2f-1": {
+					"index": "0",
+					"location": "Watery Pass-South B2F [after Save Room]",
+					"disambiguation": ""
+				}
 			}
 		},
 		"watery-pass-south-b2f-save-room-0": {
 			"type": VariableFlags.EXTRA,
-			"location": "Watery Pass-South B2F Save Room",
-			"disambiguation": " after the scene",
 			"paths": {
-				"watery-pass-south-b2f-save-room-0": "0"
+				"watery-pass-south-b2f-save-room-0": {
+					"index": "0",
+					"location": "Watery Pass-South B2F Save Room",
+					"disambiguation": " after the scene"
+				}
 			}
 		},
 		"watery-pass-south-b3f-0": {
 			"type": VariableFlags.EXTRA,
-			"location": "Watery Pass-South B3F",
-			"disambiguation": "",
 			"paths": {
-				"watery-pass-south-b3f-0": "0"
+				"watery-pass-south-b3f-0": {
+					"index": "0",
+					"location": "Watery Pass-South B3F",
+					"disambiguation": ""
+				}
 			}
 		},
 		"damcyan": {
 			"type": VariableFlags.EXTRA,
-			"location": "Damcyan",
-			"disambiguation": "",
 			"paths": {
-				"damcyan-1f-0": "0",
-				"damcyan-2f-0": "0"
+				"damcyan-1f-0": {
+					"index": "0",
+					"location": "Damcyan 1F",
+					"disambiguation": "",
+				},
+				"damcyan-2f-0": {
+					"index": "0",
+					"location": "Damcyan 2F",
+					"disambiguation": "",
+				}
 			},
 		}
 	}
@@ -205,7 +235,7 @@ com.aexoden.ff4 = function()
 			"map": "3025-0",
 			"segments": {
 				"base-0": [
-					[16, 31, SegmentFlags.START],
+					[16, 30, SegmentFlags.START],
 					[16, 11, SegmentFlags.END]
 				]
 			}
@@ -939,7 +969,7 @@ com.aexoden.ff4 = function()
 								([key, segments]) => {
 									var fields = key.split("-");
 
-									if (fields[0] == "extra" && fields[2] == varData.paths[path]) {
+									if (fields[0] == "extra" && fields[2] == varData.paths[path].index) {
 										if (fields[1] == 2) {
 											extraEven = true;
 										} else if (fields[1] == 1) {
@@ -960,7 +990,7 @@ com.aexoden.ff4 = function()
 									}
 
 									if (value > 0) {
-										caption.innerHTML += "<dt>" + varData.location + "</dt><dd>Take " + value + " extra step" + (value > 1 ? "s" : "") + varData.disambiguation + ".</dd>";
+										caption.innerHTML += "<dt>" + varData.paths[path].location + "</dt><dd>Take " + value + " extra step" + (value > 1 ? "s" : "") + varData.paths[path].disambiguation + ".</dd>";
 									} else {
 										cancelPath = true;
 									}
