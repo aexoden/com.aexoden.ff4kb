@@ -66,7 +66,10 @@ com.aexoden.ff4 = function()
 			"waterfalls-b2f-0",
 			"waterfalls-lake-0",
 			"waterfalls-lake-1",
-			"overworld-damcyan-0"
+			"overworld-damcyan-0",
+			"damcyan-0",
+			"damcyan-1f-0",
+			"damcyan-2f-0"
 		]
 	};
 
@@ -75,85 +78,106 @@ com.aexoden.ff4 = function()
 			"type": VariableFlags.EXTRA,
 			"location": "Overworld (Damcyan)",
 			"disambiguation": " just before entering the castle",
-			"path": "overworld-damcyan-0",
-			"index": "1"
+			"paths": {
+				"overworld-damcyan-0": "1"
+			}
 		},
 		"overworld-kaipo-2": {
 			"type": VariableFlags.EXTRA,
 			"location": "Overworld (Kaipo) [before Waterfalls]",
 			"disambiguation": "",
-			"path": "watery-pass-kaipo-2",
-			"index": "0"
+			"paths": {
+				"watery-pass-kaipo-2": "0"
+			}
 		},
 		"overworld-kaipo-3": {
 			"type": VariableFlags.EXTRA,
 			"location": "Overworld (Kaipo) [after Octomamm]",
 			"disambiguation": " immediately after exiting the cave",
-			"path": "overworld-damcyan-0",
-			"index": "0"
+			"paths": {
+				"overworld-damcyan-0": "0"
+			}
 		},
 		"waterfalls-b1f-0": {
 			"type": VariableFlags.EXTRA,
 			"location": "Waterfalls B1F",
 			"disambiguation": "",
-			"path": "waterfalls-b1f-0",
-			"index": "0"
+			"paths": {
+				"waterfalls-b1f-0": "0"
+			}
 		},
 		"waterfalls-b2f-0": {
 			"type": VariableFlags.EXTRA,
 			"location": "Waterfalls B2F",
 			"disambiguation": "",
-			"path": "waterfalls-b2f-0",
-			"index": "0"
+			"paths": {
+				"waterfalls-b2f-0": "0"
+			}
 		},
 		"waterfalls-lake-0": {
 			"type": VariableFlags.EXTRA,
 			"location": "Waterfalls Lake [before Octomamm]",
 			"disambiguation": "",
-			"path": "waterfalls-lake-0",
-			"index": "0"
+			"paths": {
+				"waterfalls-lake-0": "0"
+			}
 		},
 		"waterfalls-lake-1": {
 			"type": VariableFlags.EXTRA,
 			"location": "Waterfalls Lake [after Octomamm]",
 			"disambiguation": "",
-			"path": "waterfalls-lake-1",
-			"index": "0"
+			"paths": {
+				"waterfalls-lake-1": "0"
+			}
 		},
 		"watery-pass-north-b1f-0": {
 			"type": VariableFlags.EXTRA,
 			"location": "Watery Pass-North B1F",
 			"disambiguation": "",
-			"path": "watery-pass-north-b1f-0",
-			"index": "0"
+			"paths": {
+				"watery-pass-north-b1f-0": "0"
+			}
 		},
 		"watery-pass-north-b2f-0": {
 			"type": VariableFlags.EXTRA,
 			"location": "Watery Pass-North B2F",
 			"disambiguation": "",
-			"path": "watery-pass-north-b2f-0",
-			"index": "0"
+			"paths": {
+				"watery-pass-north-b2f-0": "0"
+			}
 		},
 		"watery-pass-south-b2f-1": {
 			"type": VariableFlags.EXTRA,
 			"location": "Watery Pass-South B2F [after Save Room]",
 			"disambiguation": "",
-			"path": "watery-pass-south-b2f-1",
-			"index": "0"
+			"paths": {
+				"watery-pass-south-b2f-1": "0"
+			}
 		},
 		"watery-pass-south-b2f-save-room-0": {
 			"type": VariableFlags.EXTRA,
 			"location": "Watery Pass-South B2F Save Room",
 			"disambiguation": " after the scene",
-			"path": "watery-pass-south-b2f-save-room-0",
-			"index": "0"
+			"paths": {
+				"watery-pass-south-b2f-save-room-0": "0"
+			}
 		},
 		"watery-pass-south-b3f-0": {
 			"type": VariableFlags.EXTRA,
 			"location": "Watery Pass-South B3F",
 			"disambiguation": "",
-			"path": "watery-pass-south-b3f-0",
-			"index": "0"
+			"paths": {
+				"watery-pass-south-b3f-0": "0"
+			}
+		},
+		"damcyan": {
+			"type": VariableFlags.EXTRA,
+			"location": "Damcyan",
+			"disambiguation": "",
+			"paths": {
+				"damcyan-1f-0": "0",
+				"damcyan-2f-0": "0"
+			},
 		}
 	}
 
@@ -170,11 +194,55 @@ com.aexoden.ff4 = function()
 			8: "waterfalls-lake-0",
 			9: "waterfalls-lake-1",
 			10: "overworld-kaipo-3",
-			11: "overworld-damcyan-0"
+			11: "overworld-damcyan-0",
+			12: "damcyan"
 		}
 	};
 
 	data.paths = {
+		"damcyan-0": {
+			"flags": PathFlags.NONE,
+			"map": "3025-0",
+			"segments": {
+				"base-0": [
+					[16, 31, SegmentFlags.START],
+					[16, 11, SegmentFlags.END]
+				]
+			}
+		},
+		"damcyan-1f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "303F-0",
+			"segments": {
+				"base-0": [
+					[8, 15, SegmentFlags.START],
+					[8, 7, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[8, 13, SegmentFlags.NONE],
+					[9, 13, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"damcyan-2f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3040-0",
+			"segments": {
+				"base-0": [
+					[8, 8, SegmentFlags.START],
+					[8, 10, SegmentFlags.NONE],
+					[7, 10, SegmentFlags.NONE],
+					[7, 13, SegmentFlags.NONE],
+					[8, 13, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[8, 10, SegmentFlags.NONE],
+					[9, 10, SegmentFlags.NONE | SegmentFlags.ANNOTATE],
+					[9, 13, SegmentFlags.NONE],
+					[8, 13, SegmentFlags.END]
+				]
+			}
+		},
 		"kaipo-0": {
 			"flags": PathFlags.NONE,
 			"map": "3002-0",
@@ -812,13 +880,16 @@ com.aexoden.ff4 = function()
 			([key, value]) => {
 				if (value > 0 && key in data.variables[route]) {
 					var varData = data.variableData[data.variables[route][key]];
-					var path = varData.path;
 
-					if (!(path in activeMaps)) {
-						activeMaps[path] = [];
-					}
+					Object.entries(varData.paths).forEach(
+						([path, index]) => {
+							if (!(path in activeMaps)) {
+								activeMaps[path] = [];
+							}
 
-					activeMaps[path].push(key);
+							activeMaps[path].push(key);
+						}
+					);
 				}
 			}
 		);
@@ -830,6 +901,7 @@ com.aexoden.ff4 = function()
 				var canvas_id = "path-" + i;
 				var canvas = document.getElementById(canvas_id);
 				var caption = document.getElementById(canvas_id + "-caption");
+				var cancelPath = false;
 
 				if (!canvas) {
 					var row = document.createElement("div");
@@ -860,10 +932,37 @@ com.aexoden.ff4 = function()
 							var varData = data.variableData[data.variables[route][index]]
 							var value = vars[index];
 
+							var extraEven = false;
+							var extraOdd = false;
+
+							Object.entries(data.paths[path].segments).forEach(
+								([key, segments]) => {
+									var fields = key.split("-");
+
+									if (fields[0] == "extra" && fields[2] == varData.paths[path]) {
+										if (fields[1] == 2) {
+											extraEven = true;
+										} else if (fields[1] == 1) {
+											extraOdd = true;
+										}
+									}
+								}
+							);
+
 							if (varData) {
 								if (varData.type == VariableFlags.EXTRA) {
+									if (!extraEven) {
+										value = value % 2;
+									}
+
+									if (!extraOdd) {
+										value = value - (value % 2);
+									}
+
 									if (value > 0) {
-										caption.innerHTML += "<dt>" + varData.location + "</dt><dd>Take " + value + " extra steps" + varData.disambiguation + ".</dd>";
+										caption.innerHTML += "<dt>" + varData.location + "</dt><dd>Take " + value + " extra step" + (value > 1 ? "s" : "") + varData.disambiguation + ".</dd>";
+									} else {
+										cancelPath = true;
 									}
 								}
 							}
@@ -872,13 +971,17 @@ com.aexoden.ff4 = function()
 						caption.innerHTML += '</dl>';
 					}
 
-					canvas_container.appendChild(canvas);
-					row.appendChild(canvas_container);
-					row.appendChild(caption);
-					container.appendChild(row);
+					if (!cancelPath) {
+						canvas_container.appendChild(canvas);
+						row.appendChild(canvas_container);
+						row.appendChild(caption);
+						container.appendChild(row);
+					}
 				}
 
-				drawPath(canvas, data.paths[path]);
+				if (!cancelPath) {
+					drawPath(canvas, data.paths[path]);
+				}
 			}
 		}
 
