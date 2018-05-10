@@ -801,14 +801,14 @@ com.aexoden.ff4 = function()
 		}
 	};
 
-	var drawPath = function(canvas, path) {
+	var drawPath = function(canvas, path, route, vars, activeVars) {
 		var ctx = canvas.getContext("2d");
 
 		var img = new Image();
 
 		img.onload = function() {
-			if (path.mapRange) {
-				ctx.drawImage(img, path.mapRange[0] * 16, path.mapRange[1] * 16, path.mapRange[2] * 16, path.mapRange[3] * 16, 0, 0, path.mapRange[2] * 16, path.mapRange[3] * 16);
+			if (data.paths[path].mapRange) {
+				ctx.drawImage(img, data.paths[path].mapRange[0] * 16, data.paths[path].mapRange[1] * 16, data.paths[path].mapRange[2] * 16, data.paths[path].mapRange[3] * 16, 0, 0, data.paths[path].mapRange[2] * 16, data.paths[path].mapRange[3] * 16);
 			} else {
 				ctx.drawImage(img, 0, 0);
 			}
@@ -819,14 +819,14 @@ com.aexoden.ff4 = function()
 
 			var offScreenCtx = offScreenCanvas.getContext("2d");
 
-			drawSegments(offScreenCtx, path);
+			drawSegments(offScreenCtx, path, route, vars, activeVars);
 
 			ctx.drawImage(offScreenCanvas, 0, 0);
 		}
 
 		var drawOverlay = document.getElementById("option-overlay").checked;
 
-		img.src = "/static/img/maps/" + (drawOverlay ? "composite" : "base") + "/" + path.map + ".png";
+		img.src = "/static/img/maps/" + (drawOverlay ? "composite" : "base") + "/" + data.paths[path].map + ".png";
 	};
 
 	var drawSegment = function(ctx, previous, current, xOffset, yOffset) {
@@ -858,38 +858,60 @@ com.aexoden.ff4 = function()
 		}
 	};
 
-	var drawSegments = function(ctx, path) {
+	var drawSegments = function(ctx, path, route, vars, activeVars) {
 		var xOffset = 0;
 		var yOffset = 0;
 
-		if (path.mapRange) {
-			xOffset = path.mapRange[0] * -16;
-			yOffset = path.mapRange[1] * -16;
+		if (data.paths[path].mapRange) {
+			xOffset = data.paths[path].mapRange[0] * -16;
+			yOffset = data.paths[path].mapRange[1] * -16;
 		}
 
-		Object.entries(path.segments).forEach(
+		Object.entries(data.paths[path].segments).forEach(
 			([key, segments]) => {
 				var fields = key.split("-");
+				var draw = false;
 
 				if (fields[0] == "extra") {
 					ctx.fillStyle = "#00FF00";
+
+					if (vars && activeVars) {
+						for (var i = 0; i < activeVars.length; i++) {
+							var index = activeVars[i];
+							var varData = data.variableData[data.variables[route][index]];
+							var value = vars[index];
+
+							if (varData.paths[path].index == fields[2]) {
+								if (fields[1] == "2" && (value - value % 2) > 0) {
+									draw = true;
+								} else if (fields[1] == "1" && value % 2 == 1) {
+									draw = true;
+								}
+							}
+						}
+					} else {
+						draw = true;
+					}
 				} else {
 					ctx.fillStyle = "#FFFFFF";
+					draw = true;
 				}
 
-				for (var i = 0; i < segments.length; i++) {
-					drawSegment(ctx, i > 0 ? segments[i-1] : segments[i], segments[i], xOffset, yOffset);
+				if (draw) {
+					for (var i = 0; i < segments.length; i++) {
+						drawSegment(ctx, i > 0 ? segments[i-1] : segments[i], segments[i], xOffset, yOffset);
 
-					if ((segments[i][2] & SegmentFlags.ANNOTATE) > 0) {
-						var x = segments[i][0] * 16 + xOffset + 12;
-						var y = segments[i][1] * 16 + yOffset + 2;
-						var style = ctx.fillStyle;
-						ctx.fillStyle = "rgba(0, 0, 0, 0.3)";
-						ctx.fillRect(x, y, 13, 11);
+						if ((segments[i][2] & SegmentFlags.ANNOTATE) > 0) {
+							var x = segments[i][0] * 16 + xOffset + 12;
+							var y = segments[i][1] * 16 + yOffset + 2;
+							var style = ctx.fillStyle;
+							ctx.fillStyle = "rgba(0, 0, 0, 0.3)";
+							ctx.fillRect(x, y, 13, 11);
 
-						ctx.fillStyle = style;
-						ctx.textBaseline = "top";
-						ctx.fillText("+" + fields[1], x + 0.5, y);
+							ctx.fillStyle = style;
+							ctx.textBaseline = "top";
+							ctx.fillText("+" + fields[1], x + 0.5, y);
+						}
 					}
 				}
 			}
@@ -959,7 +981,7 @@ com.aexoden.ff4 = function()
 
 						for (var j = 0; j < activeMaps[path].length; j++) {
 							var index = activeMaps[path][j];
-							var varData = data.variableData[data.variables[route][index]]
+							var varData = data.variableData[data.variables[route][index]];
 							var value = vars[index];
 
 							var extraEven = false;
@@ -970,9 +992,9 @@ com.aexoden.ff4 = function()
 									var fields = key.split("-");
 
 									if (fields[0] == "extra" && fields[2] == varData.paths[path].index) {
-										if (fields[1] == 2) {
+										if (fields[1] == "2") {
 											extraEven = true;
-										} else if (fields[1] == 1) {
+										} else if (fields[1] == "1") {
 											extraOdd = true;
 										}
 									}
@@ -1010,7 +1032,7 @@ com.aexoden.ff4 = function()
 				}
 
 				if (!cancelPath) {
-					drawPath(canvas, data.paths[path]);
+					drawPath(canvas, path, route, vars, activeMaps[path]);
 				}
 			}
 		}
