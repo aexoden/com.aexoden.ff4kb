@@ -72,11 +72,37 @@ com.aexoden.ff4 = function()
 			"damcyan-1f-0",
 			"damcyan-2f-0",
 			"damcyan-3f-0",
-			"overworld-damcyan-1"
+			"overworld-damcyan-1",
+			"antlion-b1f-0"
 		]
 	};
 
 	data.variableData = {
+		"damcyan": {
+			"type": VariableFlags.EXTRA,
+			"paths": {
+				"damcyan-1f-0": {
+					"index": "0",
+					"location": "Damcyan 1F",
+					"disambiguation": "",
+				},
+				"damcyan-2f-0": {
+					"index": "0",
+					"location": "Damcyan 2F",
+					"disambiguation": "",
+				}
+			},
+		},
+		"antlion-b1f-0": {
+			"type": VariableFlags.EXTRA,
+			"paths": {
+				"antlion-b1f-0": {
+					"index": "0",
+					"location": "Antlion B1F",
+					"disambiguation": ""
+				}
+			}
+		},
 		"overworld-damcyan-0": {
 			"type": VariableFlags.EXTRA,
 			"paths": {
@@ -87,7 +113,7 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
-		"overworld-damcyan-1": {
+		/*"overworld-damcyan-1": {
 			"type": VariableFlags.EXTRA,
 			"paths": {
 				"overworld-damcyan-1": {
@@ -96,7 +122,7 @@ com.aexoden.ff4 = function()
 					"disambiguation": " after parking the hovercraft, just before entering the cave"
 				}
 			}
-		},
+		},*/
 		"overworld-kaipo-2": {
 			"type": VariableFlags.EXTRA,
 			"paths": {
@@ -206,21 +232,6 @@ com.aexoden.ff4 = function()
 					"disambiguation": ""
 				}
 			}
-		},
-		"damcyan": {
-			"type": VariableFlags.EXTRA,
-			"paths": {
-				"damcyan-1f-0": {
-					"index": "0",
-					"location": "Damcyan 1F",
-					"disambiguation": "",
-				},
-				"damcyan-2f-0": {
-					"index": "0",
-					"location": "Damcyan 2F",
-					"disambiguation": "",
-				}
-			},
 		}
 	}
 
@@ -239,11 +250,35 @@ com.aexoden.ff4 = function()
 			10: "overworld-kaipo-3",
 			11: "overworld-damcyan-0",
 			12: "damcyan",
-			13: "overworld-damcyan-1"
+			13: "antlion-b1f-0"
 		}
 	};
 
 	data.paths = {
+		"antlion-b1f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3077-0",
+			"segments": {
+				"base-0": [
+					[15, 1, SegmentFlags.START],
+					[15, 8, SegmentFlags.NONE],
+					[14, 8, SegmentFlags.NONE],
+					[14, 13, SegmentFlags.NONE],
+					[17, 13, SegmentFlags.NONE],
+					[17, 15, SegmentFlags.NONE],
+					[19, 15, SegmentFlags.NONE],
+					[19, 12, SegmentFlags.NONE],
+					[25, 12, SegmentFlags.NONE],
+					[25, 14, SegmentFlags.NONE],
+					[27, 14, SegmentFlags.NONE],
+					[27, 23, SegmentFlags.END],
+				],
+				"extra-2-0": [
+					[27, 21, SegmentFlags.NONE],
+					[28, 21, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
 		"damcyan-0": {
 			"flags": PathFlags.NONE,
 			"map": "3025-0",
@@ -415,10 +450,10 @@ com.aexoden.ff4 = function()
 					[132, 57, SegmentFlags.VEHICLE],
 					[136, 57, SegmentFlags.VEHICLE],
 					[136, 56, SegmentFlags.START | SegmentFlags.END]
-				],
+				/*],
 				"extra-2-0": [
 					[136, 57, SegmentFlags.NONE],
-					[137, 57, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+					[137, 57, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]*/
 				]
 			}
 		},
