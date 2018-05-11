@@ -546,7 +546,7 @@ com.aexoden.ff4 = function()
 					[11, 21, SegmentFlags.NONE],
 					[11, 13, SegmentFlags.NONE],
 					[10, 13, SegmentFlags.NONE],
-					[10, 11, SegmentFlags.NONE]
+					[10, 11, SegmentFlags.END]
 				],
 				"extra-2-0": [
 					[10, 12, SegmentFlags.NONE],
