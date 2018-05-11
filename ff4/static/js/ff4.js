@@ -69,7 +69,8 @@ com.aexoden.ff4 = function()
 			"overworld-damcyan-0",
 			"damcyan-0",
 			"damcyan-1f-0",
-			"damcyan-2f-0"
+			"damcyan-2f-0",
+			"damcyan-3f-0"
 		]
 	};
 
@@ -270,6 +271,16 @@ com.aexoden.ff4 = function()
 					[9, 10, SegmentFlags.NONE | SegmentFlags.ANNOTATE],
 					[9, 13, SegmentFlags.NONE],
 					[8, 13, SegmentFlags.END]
+				]
+			}
+		},
+		"damcyan-3f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3041-0",
+			"segments": {
+				"base-0": [
+					[13, 13, SegmentFlags.START],
+					[13, 11, SegmentFlags.END]
 				]
 			}
 		},
