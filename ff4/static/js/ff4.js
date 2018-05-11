@@ -260,7 +260,7 @@ com.aexoden.ff4 = function()
 			"map": "3077-0",
 			"segments": {
 				"base-0": [
-					[15, 1, SegmentFlags.START],
+					[15, 4, SegmentFlags.START],
 					[15, 8, SegmentFlags.NONE],
 					[14, 8, SegmentFlags.NONE],
 					[14, 13, SegmentFlags.NONE],
