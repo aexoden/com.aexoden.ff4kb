@@ -25,7 +25,8 @@ com.aexoden.ff4 = function()
 		START:    0x01,
 		END:      0x02,
 		RETURN:   0x04,
-		ANNOTATE: 0x08
+		ANNOTATE: 0x08,
+		VEHICLE:  0x10
 	};
 
 	var VariableFlags = {
@@ -70,7 +71,8 @@ com.aexoden.ff4 = function()
 			"damcyan-0",
 			"damcyan-1f-0",
 			"damcyan-2f-0",
-			"damcyan-3f-0"
+			"damcyan-3f-0",
+			"overworld-damcyan-1"
 		]
 	};
 
@@ -82,6 +84,16 @@ com.aexoden.ff4 = function()
 					"index": "1",
 					"location": "Overworld (Damcyan)",
 					"disambiguation": " just before entering the castle"
+				}
+			}
+		},
+		"overworld-damcyan-1": {
+			"type": VariableFlags.EXTRA,
+			"paths": {
+				"overworld-damcyan-1": {
+					"index": "0",
+					"location": "Overworld (Damcyan)",
+					"disambiguation": " after parking the hovercraft, just before entering the cave"
 				}
 			}
 		},
@@ -226,7 +238,8 @@ com.aexoden.ff4 = function()
 			9: "waterfalls-lake-1",
 			10: "overworld-kaipo-3",
 			11: "overworld-damcyan-0",
-			12: "damcyan"
+			12: "damcyan",
+			13: "overworld-damcyan-1"
 		}
 	};
 
@@ -381,6 +394,31 @@ com.aexoden.ff4 = function()
 				"extra-2-1": [
 					[119, 59, SegmentFlags.NONE],
 					[120, 59, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"overworld-damcyan-1": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [110, 35, 32, 32],
+			"segments": {
+				"base-0": [
+					[117, 57, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[117, 50, SegmentFlags.VEHICLE],
+					[124, 50, SegmentFlags.VEHICLE],
+					[124, 48, SegmentFlags.VEHICLE],
+					[127, 48, SegmentFlags.VEHICLE],
+					[127, 46, SegmentFlags.VEHICLE],
+					[131, 46, SegmentFlags.VEHICLE],
+					[131, 49, SegmentFlags.VEHICLE],
+					[132, 49, SegmentFlags.VEHICLE],
+					[132, 57, SegmentFlags.VEHICLE],
+					[136, 57, SegmentFlags.VEHICLE],
+					[136, 56, SegmentFlags.START | SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[136, 57, SegmentFlags.NONE],
+					[137, 57, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -882,9 +920,10 @@ com.aexoden.ff4 = function()
 			([key, segments]) => {
 				var fields = key.split("-");
 				var draw = false;
+				var fillStyle = "#FFFFFF";
 
 				if (fields[0] == "extra") {
-					ctx.fillStyle = "#00FF00";
+					fillStyle = "#00FF00";
 
 					if (vars && activeVars) {
 						for (var i = 0; i < activeVars.length; i++) {
@@ -902,12 +941,17 @@ com.aexoden.ff4 = function()
 						}
 					}
 				} else {
-					ctx.fillStyle = "#FFFFFF";
 					draw = true;
 				}
 
 				if (draw) {
 					for (var i = 0; i < segments.length; i++) {
+						if ((segments[i][2] & SegmentFlags.VEHICLE)> 0) {
+							ctx.fillStyle = "#FFFF00";
+						} else {
+							ctx.fillStyle = fillStyle;
+						}
+
 						drawSegment(ctx, i > 0 ? segments[i-1] : segments[i], segments[i], xOffset, yOffset);
 
 						if ((segments[i][2] & SegmentFlags.ANNOTATE) > 0) {
