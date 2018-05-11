@@ -889,8 +889,6 @@ com.aexoden.ff4 = function()
 								}
 							}
 						}
-					} else {
-						draw = true;
 					}
 				} else {
 					ctx.fillStyle = "#FFFFFF";
