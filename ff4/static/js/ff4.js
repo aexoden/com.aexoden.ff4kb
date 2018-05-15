@@ -30,8 +30,9 @@ com.aexoden.ff4 = function()
 	};
 
 	var VariableFlags = {
-		NONE:  0x00,
-		EXTRA: 0x01
+		NONE:   0x00,
+		EXTRA:  0x01,
+		CHOICE: 0x02
 	};
 
 	/*
@@ -73,12 +74,16 @@ com.aexoden.ff4 = function()
 			"damcyan-2f-0",
 			"damcyan-3f-0",
 			"overworld-damcyan-1",
-			"antlion-b1f-0"
+			"antlion-b1f-0",
+			"antlion-b2f-0",
+			"antlion-b2f-1",
+			"antlion-b2f-charm-room-0",
+			"antlion-b2f-2"
 		]
 	};
 
 	data.variableData = {
-		"damcyan": {
+		"damcyan-0": {
 			"type": VariableFlags.EXTRA,
 			"paths": {
 				"damcyan-1f-0": {
@@ -100,6 +105,65 @@ com.aexoden.ff4 = function()
 					"index": "0",
 					"location": "Antlion B1F",
 					"disambiguation": ""
+				}
+			}
+		},
+		"antlion-b2f-0": {
+			"type": VariableFlags.EXTRA,
+			"paths": {
+				"antlion-b2f-0": {
+					"index": "0",
+					"location": "Antlion B2F",
+					"disambiguation": ""
+				}
+			}
+		},
+		"antlion-b2f-1": {
+			"type": VariableFlags.EXTRA,
+			"paths": {
+				"antlion-b2f-1": {
+					"index": "0",
+					"location": "Antlion B2F [before Charm Room]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"antlion-b2f-2": {
+			"type": VariableFlags.EXTRA,
+			"paths": {
+				"antlion-b2f-2": {
+					"index": "0",
+					"location": "Antlion B2F [after Charm Room]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"antlion-b2f-charm-room-0": {
+			"type": VariableFlags.EXTRA,
+			"paths": {
+				"antlion-b2f-charm-room-0": {
+					"index": "0",
+					"location": "Antlion B2F Charm Room [before Antlion]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"antlion-b2f-choice-0": {
+			"type": VariableFlags.CHOICE,
+			"paths": {
+				0: {
+					"antlion-b2f-1": { "enabled": false },
+					"antlion-b2f-charm-room-0": { "enabled": false },
+					"antlion-b2f-2": { "enabled": false }
+				},
+				1: {
+					"antlion-b2f-0": { "enabled": false },
+					"antlion-b2f-1": {
+						"enabled": true,
+						"index": "0",
+						"location": "Antlion B2F [before Antlion]",
+						"instruction": "Enter the Charm Room"
+					}
 				}
 			}
 		},
@@ -237,20 +301,24 @@ com.aexoden.ff4 = function()
 
 	data.variables = {
 		"paladin": {
-			0: "watery-pass-south-b2f-save-room-0",
-			1: "watery-pass-south-b2f-1",
-			2: "watery-pass-south-b3f-0",
-			3: "watery-pass-north-b2f-0",
-			4: "watery-pass-north-b1f-0",
-			5: "overworld-kaipo-2",
-			6: "waterfalls-b1f-0",
-			7: "waterfalls-b2f-0",
-			8: "waterfalls-lake-0",
-			9: "waterfalls-lake-1",
-			10: "overworld-kaipo-3",
-			11: "overworld-damcyan-0",
-			12: "damcyan",
-			13: "antlion-b1f-0"
+			0: ["watery-pass-south-b2f-save-room-0"],
+			1: ["watery-pass-south-b2f-1"],
+			2: ["watery-pass-south-b3f-0"],
+			3: ["watery-pass-north-b2f-0"],
+			4: ["watery-pass-north-b1f-0"],
+			5: ["overworld-kaipo-2"],
+			6: ["waterfalls-b1f-0"],
+			7: ["waterfalls-b2f-0"],
+			8: ["waterfalls-lake-0"],
+			9: ["waterfalls-lake-1"],
+			10: ["overworld-kaipo-3"],
+			11: ["overworld-damcyan-0"],
+			12: ["damcyan-0"],
+			13: ["antlion-b1f-0"],
+			14: ["antlion-b2f-choice-0"],
+			15: ["antlion-b2f-0", "antlion-b2f-1"],
+			16: ["antlion-b2f-charm-room-0"],
+			17: ["antlion-b2f-2"]
 		}
 	};
 
@@ -276,6 +344,97 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[27, 21, SegmentFlags.NONE],
 					[28, 21, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"antlion-b2f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3078-0",
+			"segments": {
+				"base-0": [
+					[27, 3, SegmentFlags.START],
+					[27, 4, SegmentFlags.NONE],
+					[28, 4, SegmentFlags.NONE],
+					[28, 13, SegmentFlags.NONE],
+					[29, 13, SegmentFlags.NONE],
+					[29, 18, SegmentFlags.NONE],
+					[28, 18, SegmentFlags.NONE],
+					[28, 24, SegmentFlags.NONE],
+					[29, 24, SegmentFlags.END],
+					[29, 26, SegmentFlags.NONE],
+					[25, 26, SegmentFlags.NONE],
+					[25, 28, SegmentFlags.NONE],
+					[22, 28, SegmentFlags.NONE],
+					[22, 31, SegmentFlags.NONE],
+					[3, 31, SegmentFlags.NONE],
+					[3, 23, SegmentFlags.NONE],
+					[14, 23, SegmentFlags.NONE],
+					[14, 29, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[29, 13, SegmentFlags.NONE],
+					[30, 13, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"antlion-b2f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3078-0",
+			"segments": {
+				"base-0": [
+					[27, 3, SegmentFlags.START],
+					[27, 4, SegmentFlags.NONE],
+					[28, 4, SegmentFlags.NONE],
+					[28, 13, SegmentFlags.NONE],
+					[29, 13, SegmentFlags.NONE],
+					[29, 18, SegmentFlags.NONE],
+					[28, 18, SegmentFlags.NONE],
+					[28, 24, SegmentFlags.NONE],
+					[29, 24, SegmentFlags.END],
+					[29, 26, SegmentFlags.NONE],
+					[25, 26, SegmentFlags.NONE],
+				],
+				"alternate-0": [
+					[25, 26, SegmentFlags.NONE],
+					[25, 23, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[29, 13, SegmentFlags.NONE],
+					[30, 13, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"antlion-b2f-2": {
+			"flags": PathFlags.STEPS,
+			"map": "3078-0",
+			"segments": {
+				"base-0": [
+					[25, 23, SegmentFlags.START],
+					[25, 28, SegmentFlags.NONE],
+					[22, 28, SegmentFlags.NONE],
+					[22, 31, SegmentFlags.NONE],
+					[3, 31, SegmentFlags.NONE],
+					[3, 23, SegmentFlags.NONE],
+					[14, 23, SegmentFlags.NONE],
+					[14, 29, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[14, 27, SegmentFlags.NONE],
+					[15, 27, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"antlion-b2f-charm-room-0": {
+			"flags": PathFlags.STEPS,
+			"map": "307B-0",
+			"segments": {
+				"base-0": [
+					[4, 12, SegmentFlags.START],
+					[4, 13, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[4, 12, SegmentFlags.NONE],
+					[4, 11, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -957,20 +1116,30 @@ com.aexoden.ff4 = function()
 				var draw = false;
 				var fillStyle = "#FFFFFF";
 
-				if (fields[0] == "extra") {
+				if (fields[0] == "extra" || fields[0] == "alternate") {
 					fillStyle = "#00FF00";
 
 					if (vars && activeVars) {
 						for (var i = 0; i < activeVars.length; i++) {
 							var index = activeVars[i];
-							var varData = data.variableData[data.variables[route][index]];
-							var value = vars[index];
+							for (var j = 0; j < data.variables[route][index].length; j++) {
+								var varData = data.variableData[data.variables[route][index][j]];
+								var value = vars[index];
 
-							if (varData.paths[path].index == fields[2]) {
-								if (fields[1] == "2" && (value - value % 2) > 0) {
-									draw = true;
-								} else if (fields[1] == "1" && value % 2 == 1) {
-									draw = true;
+								if (varData.type == VariableFlags.EXTRA) {
+									if (varData.paths[path].index == fields[2]) {
+										if (fields[1] == "2" && (value - value % 2) > 0) {
+											draw = true;
+										} else if (fields[1] == "1" && value % 2 == 1) {
+											draw = true;
+										}
+									}
+								} else if (varData.type == VariableFlags.CHOICE) {
+									if (path in varData.paths[value]) {
+										if (varData.paths[value][path].index == fields[1]) {
+											draw = true;
+										}
+									}
 								}
 							}
 						}
@@ -1015,21 +1184,41 @@ com.aexoden.ff4 = function()
 		}
 
 		var activeMaps = {};
+		var invisibleMaps = {};
 
-		Object.entries(vars).forEach(
-			([key, value]) => {
-				if (value > 0 && key in data.variables[route]) {
-					var varData = data.variableData[data.variables[route][key]];
+		Object.keys(data.variables[route]).forEach(
+			(key) => {
+				var value = 0;
 
-					Object.entries(varData.paths).forEach(
-						([path, index]) => {
-							if (!(path in activeMaps)) {
-								activeMaps[path] = [];
-							}
+				if (key in vars) {
+					value = vars[key];
+				}
 
-							activeMaps[path].push(key);
+				if (key in data.variables[route]) {
+					for (var i = 0; i < data.variables[route][key].length; i++) {
+						var varData = data.variableData[data.variables[route][key][i]];
+						var entries = varData.paths;
+
+						if (varData.type == VariableFlags.CHOICE) {
+							entries = varData.paths[value];
 						}
-					);
+
+						Object.entries(entries).forEach(
+							([path, pathData]) => {
+								if ((varData.type == VariableFlags.CHOICE && pathData.enabled) || (varData.type == VariableFlags.EXTRA && value > 0)) {
+									if (!(path in activeMaps)) {
+										activeMaps[path] = [];
+									}
+
+									activeMaps[path].push(key);
+								}
+
+								if (varData.type == VariableFlags.CHOICE && !pathData.enabled) {
+									invisibleMaps[path] = true;
+								}
+							}
+						);
+					}
 				}
 			}
 		);
@@ -1037,7 +1226,7 @@ com.aexoden.ff4 = function()
 		for (var i = 0; i < data.routes[route].length; i++) {
 			var path = data.routes[route][i];
 
-			if (drawAll || path in activeMaps) {
+			if ((drawAll || path in activeMaps) && !(path in invisibleMaps)) {
 				var canvas_id = "path-" + i;
 				var canvas = document.getElementById(canvas_id);
 				var caption = document.getElementById(canvas_id + "-caption");
@@ -1069,40 +1258,48 @@ com.aexoden.ff4 = function()
 
 						for (var j = 0; j < activeMaps[path].length; j++) {
 							var index = activeMaps[path][j];
-							var varData = data.variableData[data.variables[route][index]];
-							var value = vars[index];
+							for (var k = 0; k < data.variables[route][index].length; k++) {
+								var varData = data.variableData[data.variables[route][index][k]];
+								var value = vars[index];
 
-							var extraEven = false;
-							var extraOdd = false;
-
-							Object.entries(data.paths[path].segments).forEach(
-								([key, segments]) => {
-									var fields = key.split("-");
-
-									if (fields[0] == "extra" && fields[2] == varData.paths[path].index) {
-										if (fields[1] == "2") {
-											extraEven = true;
-										} else if (fields[1] == "1") {
-											extraOdd = true;
-										}
-									}
-								}
-							);
-
-							if (varData) {
 								if (varData.type == VariableFlags.EXTRA) {
-									if (!extraEven) {
-										value = value % 2;
-									}
+									var extraEven = false;
+									var extraOdd = false;
 
-									if (!extraOdd) {
-										value = value - (value % 2);
-									}
+									Object.entries(data.paths[path].segments).forEach(
+										([key, segments]) => {
+											var fields = key.split("-");
 
-									if (value > 0) {
-										caption.innerHTML += "<dt>" + varData.paths[path].location + "</dt><dd>Take " + value + " extra step" + (value > 1 ? "s" : "") + varData.paths[path].disambiguation + ".</dd>";
-									} else {
-										cancelPath = true;
+											if (fields[0] == "extra" && fields[2] == varData.paths[path].index) {
+												if (fields[1] == "2") {
+													extraEven = true;
+												} else if (fields[1] == "1") {
+													extraOdd = true;
+												}
+											}
+										}
+									);
+								}
+
+								if (varData) {
+									if (varData.type == VariableFlags.EXTRA) {
+										if (!extraEven) {
+											value = value % 2;
+										}
+
+										if (!extraOdd) {
+											value = value - (value % 2);
+										}
+
+										if (value > 0) {
+											caption.innerHTML += "<dt>" + varData.paths[path].location + "</dt><dd>Take " + value + " extra step" + (value > 1 ? "s" : "") + varData.paths[path].disambiguation + ".</dd>";
+										} else {
+											cancelPath = true;
+										}
+									} else if (varData.type == VariableFlags.CHOICE) {
+										if (path in varData.paths[value]) {
+											caption.innerHTML += "<dt>" + varData.paths[value][path].location + "</dt><dd>" + varData.paths[value][path].instruction + ".</dd>";
+										}
 									}
 								}
 							}
