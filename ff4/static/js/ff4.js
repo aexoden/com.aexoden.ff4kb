@@ -84,7 +84,8 @@ com.aexoden.ff4 = function()
 			"antlion-b2f-3",
 			"antlion-b2f-4",
 			"antlion-b2f-charm-room-1",
-			"antlion-b2f-5"
+			"antlion-b2f-5",
+			"antlion-b1f-1"
 		]
 	};
 
@@ -110,6 +111,16 @@ com.aexoden.ff4 = function()
 				"antlion-b1f-0": {
 					"index": "0",
 					"location": "Antlion B1F [before Antlion]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"antlion-b1f-1": {
+			"type": VariableFlags.EXTRA,
+			"paths": {
+				"antlion-b1f-1": {
+					"index": "0",
+					"location": "Antlion B1F [after Antlion]",
 					"disambiguation": ""
 				}
 			}
@@ -409,7 +420,8 @@ com.aexoden.ff4 = function()
 			20: ["antlion-b2f-choice-1"],
 			21: ["antlion-b2f-4"],
 			22: ["antlion-b2f-charm-room-1"],
-			23: ["antlion-b2f-3", "antlion-b2f-5"]
+			23: ["antlion-b2f-3", "antlion-b2f-5"],
+			24: ["antlion-b1f-1"]
 		}
 	};
 
@@ -431,6 +443,30 @@ com.aexoden.ff4 = function()
 					[25, 14, SegmentFlags.NONE],
 					[27, 14, SegmentFlags.NONE],
 					[27, 23, SegmentFlags.END],
+				],
+				"extra-2-0": [
+					[27, 21, SegmentFlags.NONE],
+					[28, 21, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"antlion-b1f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3077-0",
+			"segments": {
+				"base-0": [
+					[27, 22, SegmentFlags.START],
+					[27, 14, SegmentFlags.NONE],
+					[25, 14, SegmentFlags.NONE],
+					[25, 12, SegmentFlags.NONE],
+					[19, 12, SegmentFlags.NONE],
+					[19, 15, SegmentFlags.NONE],
+					[17, 15, SegmentFlags.NONE],
+					[17, 10, SegmentFlags.NONE],
+					[14, 10, SegmentFlags.NONE],
+					[14, 5, SegmentFlags.NONE],
+					[15, 5, SegmentFlags.NONE],
+					[15, 3, SegmentFlags.END]
 				],
 				"extra-2-0": [
 					[27, 21, SegmentFlags.NONE],
