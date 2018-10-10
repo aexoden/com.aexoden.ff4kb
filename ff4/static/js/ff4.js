@@ -78,7 +78,9 @@ com.aexoden.ff4 = function()
 			"antlion-b2f-0",
 			"antlion-b2f-1",
 			"antlion-b2f-charm-room-0",
-			"antlion-b2f-2"
+			"antlion-b2f-2",
+			"antlions-nest-0",
+			"antlions-nest-1"
 		]
 	};
 
@@ -167,6 +169,26 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"antlions-nest-0": {
+			"type": VariableFlags.EXTRA,
+			"paths": {
+				"antlions-nest-0": {
+					"index": "0",
+					"location": "Antlion's Nest [before Antlion]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"antlions-nest-1": {
+			"type": VariableFlags.EXTRA,
+			"paths": {
+				"antlions-nest-1": {
+					"index": "0",
+					"location": "Antlion's Nest [after Antlion]",
+					"disambiguation": ""
+				}
+			}
+		},
 		"overworld-damcyan-0": {
 			"type": VariableFlags.EXTRA,
 			"paths": {
@@ -190,7 +212,7 @@ com.aexoden.ff4 = function()
 		"overworld-kaipo-2": {
 			"type": VariableFlags.EXTRA,
 			"paths": {
-				"watery-pass-kaipo-2": {
+				"overworld-kaipo-2": {
 					"index": "0",
 					"location": "Overworld (Kaipo) [before Waterfalls]",
 					"disambiguation": ""
@@ -318,7 +340,9 @@ com.aexoden.ff4 = function()
 			14: ["antlion-b2f-choice-0"],
 			15: ["antlion-b2f-0", "antlion-b2f-1"],
 			16: ["antlion-b2f-charm-room-0"],
-			17: ["antlion-b2f-2"]
+			17: ["antlion-b2f-2"],
+			18: ["antlions-nest-0"],
+			19: ["antlions-nest-1"]
 		}
 	};
 
@@ -435,6 +459,34 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[4, 12, SegmentFlags.NONE],
 					[4, 11, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"antlions-nest-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3079-0",
+			"segments": {
+				"base-0": [
+					[14, 4, SegmentFlags.START],
+					[14, 19, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[14, 17, SegmentFlags.NONE],
+					[15, 17, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"antlions-nest-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3079-0",
+			"segments": {
+				"base-0": [
+					[14, 20, SegmentFlags.START],
+					[14, 3, SegmentFlags.END],
+				],
+				"extra-2-0": [
+					[14, 17, SegmentFlags.NONE],
+					[15, 17, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
