@@ -1179,11 +1179,13 @@ com.aexoden.ff4 = function()
 								var value = vars[index];
 
 								if (varData.type == VariableFlags.EXTRA) {
-									if (varData.paths[path].index == fields[2]) {
-										if (fields[1] == "2" && (value - value % 2) > 0) {
-											draw = true;
-										} else if (fields[1] == "1" && value % 2 == 1) {
-											draw = true;
+									if (path in varData.paths) {
+										if (varData.paths[path].index == fields[2]) {
+											if (fields[1] == "2" && (value - value % 2) > 0) {
+												draw = true;
+											} else if (fields[1] == "1" && value % 2 == 1) {
+												draw = true;
+											}
 										}
 									}
 								} else if (varData.type == VariableFlags.CHOICE) {
@@ -1322,11 +1324,13 @@ com.aexoden.ff4 = function()
 										([key, segments]) => {
 											var fields = key.split("-");
 
-											if (fields[0] == "extra" && fields[2] == varData.paths[path].index) {
-												if (fields[1] == "2") {
-													extraEven = true;
-												} else if (fields[1] == "1") {
-													extraOdd = true;
+											if (path in varData.paths) {
+												if (fields[0] == "extra" && fields[2] == varData.paths[path].index) {
+													if (fields[1] == "2") {
+														extraEven = true;
+													} else if (fields[1] == "1") {
+														extraOdd = true;
+													}
 												}
 											}
 										}
