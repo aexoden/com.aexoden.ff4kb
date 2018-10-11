@@ -85,26 +85,21 @@ com.aexoden.ff4 = function()
 			"antlion-b2f-4",
 			"antlion-b2f-charm-room-1",
 			"antlion-b2f-5",
-			"antlion-b1f-1"
+			"antlion-b1f-1",
+			"overworld-damcyan-2",
+			"overworld-kaipo-3",
+			"overworld-kaipo-4",
+			"kaipo-3",
+			"kaipo-house-1",
+			"kaipo-4",
+			"overworld-kaipo-5",
+			"overworld-damcyan-3",
+			"overworld-damcyan-4",
+			"mt-hobs-west-0"
 		]
 	};
 
 	data.variableData = {
-		"damcyan-0": {
-			"type": VariableFlags.EXTRA,
-			"paths": {
-				"damcyan-1f-0": {
-					"index": "0",
-					"location": "Damcyan 1F",
-					"disambiguation": "",
-				},
-				"damcyan-2f-0": {
-					"index": "0",
-					"location": "Damcyan 2F",
-					"disambiguation": "",
-				}
-			},
-		},
 		"antlion-b1f-0": {
 			"type": VariableFlags.EXTRA,
 			"paths": {
@@ -259,6 +254,31 @@ com.aexoden.ff4 = function()
 				"antlions-nest-1": {
 					"index": "0",
 					"location": "Antlion's Nest [after Antlion]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"damcyan-0": {
+			"type": VariableFlags.EXTRA,
+			"paths": {
+				"damcyan-1f-0": {
+					"index": "0",
+					"location": "Damcyan 1F",
+					"disambiguation": ""
+				},
+				"damcyan-2f-0": {
+					"index": "0",
+					"location": "Damcyan 2F",
+					"disambiguation": ""
+				}
+			},
+		},
+		"mt-hobs-west-0": {
+			"type": VariableFlags.EXTRA,
+			"paths": {
+				"mt-hobs-west-0": {
+					"index": "0",
+					"location": "Mt.Hobs-West",
 					"disambiguation": ""
 				}
 			}
@@ -421,7 +441,8 @@ com.aexoden.ff4 = function()
 			21: ["antlion-b2f-4"],
 			22: ["antlion-b2f-charm-room-1"],
 			23: ["antlion-b2f-3", "antlion-b2f-5"],
-			24: ["antlion-b1f-1"]
+			24: ["antlion-b1f-1"],
+			25: ["mt-hobs-west-0"]
 		}
 	};
 
@@ -785,6 +806,40 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"kaipo-3": {
+			"flags": PathFlags.NONE,
+			"map": "3002-0",
+			"segments": {
+				"base-0": [
+					[15, 30, SegmentFlags.START],
+					[15, 25, SegmentFlags.NONE],
+					[20, 25, SegmentFlags.NONE],
+					[20, 19, SegmentFlags.NONE],
+					[23, 19, SegmentFlags.NONE],
+					[23, 15, SegmentFlags.NONE],
+					[28, 15, SegmentFlags.NONE],
+					[28, 13, SegmentFlags.END]
+				]
+			}
+		},
+		"kaipo-4": {
+			"flags": PathFlags.NONE,
+			"map": "3002-0",
+			"segments": {
+				"base-0": [
+					[28, 14, SegmentFlags.START],
+					[28, 15, SegmentFlags.NONE],
+					[23, 15, SegmentFlags.NONE],
+					[23, 19, SegmentFlags.NONE],
+					[20, 19, SegmentFlags.NONE],
+					[20, 26, SegmentFlags.NONE],
+					[15, 26, SegmentFlags.NONE],
+					[15, 30, SegmentFlags.NONE],
+					[14, 30, SegmentFlags.NONE],
+					[14, 31, SegmentFlags.END]
+				]
+			}
+		},
 		"kaipo-house-0": {
 			"flags": PathFlags.NONE,
 			"map": "3012-0",
@@ -801,6 +856,22 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"kaipo-house-1": {
+			"flags": PathFlags.NONE,
+			"map": "3012-0",
+			"segments": {
+				"base-0": [
+					[4, 15, SegmentFlags.START],
+					[4, 5, SegmentFlags.NONE],
+					[6, 5, SegmentFlags.NONE],
+					[6, 3, SegmentFlags.END]
+				],
+				"base-1": [
+					[4, 5, SegmentFlags.START],
+					[4, 18, SegmentFlags.END]
+				]
+			}
+		},
 		"kaipo-inn-0": {
 			"flags": PathFlags.NONE,
 			"map": "3010-0",
@@ -811,6 +882,32 @@ com.aexoden.ff4 = function()
 					[18, 14, SegmentFlags.NONE],
 					[20, 14, SegmentFlags.NONE],
 					[20, 17, SegmentFlags.END]
+				]
+			}
+		},
+		"mt-hobs-west-0": {
+			"flags": PathFlags.STEPS,
+			"map": "307E-0",
+			"segments": {
+				"base-0": [
+					[15, 28, SegmentFlags.START],
+					[15, 26, SegmentFlags.END]
+				],
+				"base-1": [
+					[15, 25, SegmentFlags.START],
+					[15, 17, SegmentFlags.NONE],
+					[8, 17, SegmentFlags.NONE],
+					[8, 11, SegmentFlags.NONE],
+					[22, 11, SegmentFlags.NONE],
+					[22, 7, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[15, 25, SegmentFlags.NONE],
+					[15, 26, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[15, 25, SegmentFlags.NONE],
+					[16, 25, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -863,6 +960,63 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"overworld-damcyan-2": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [107, 41, 32, 32],
+			"segments": {
+				"base-0": [
+					[136, 57, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[132, 57, SegmentFlags.VEHICLE],
+					[132, 49, SegmentFlags.VEHICLE],
+					[131, 49, SegmentFlags.VEHICLE],
+					[131, 46, SegmentFlags.VEHICLE],
+					[126, 46, SegmentFlags.VEHICLE],
+					[126, 49, SegmentFlags.VEHICLE],
+					[122, 49, SegmentFlags.VEHICLE],
+					[122, 62, SegmentFlags.VEHICLE],
+					[115, 62, SegmentFlags.VEHICLE],
+					[115, 68, SegmentFlags.VEHICLE],
+					[107, 68, SegmentFlags.VEHICLE | SegmentFlags.END]
+				]
+			}
+		},
+		"overworld-damcyan-3": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [98, 44, 32, 32],
+			"segments": {
+				"base-0": [
+					[99, 74, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[99, 68, SegmentFlags.VEHICLE],
+					[115, 68, SegmentFlags.VEHICLE],
+					[115, 62, SegmentFlags.VEHICLE],
+					[124, 62, SegmentFlags.VEHICLE],
+					[124, 48, SegmentFlags.VEHICLE],
+					[127, 48, SegmentFlags.VEHICLE],
+					[127, 46, SegmentFlags.VEHICLE],
+					[129, 46, SegmentFlags.END | SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-damcyan-4": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [124, 31, 32, 32],
+			"segments": {
+				"base-0": [
+					[129, 46, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[131, 46, SegmentFlags.VEHICLE],
+					[131, 49, SegmentFlags.VEHICLE],
+					[143, 49, SegmentFlags.VEHICLE],
+					[143, 48, SegmentFlags.VEHICLE],
+					[150, 48, SegmentFlags.VEHICLE],
+					[150, 49, SegmentFlags.VEHICLE],
+					[151, 49, SegmentFlags.VEHICLE],
+					[152, 49, SegmentFlags.START | SegmentFlags.END]
+				]
+			}
+		},
 		"overworld-kaipo-0": {
 			"flags": PathFlags.STEPS,
 			"map": "0000-0",
@@ -909,6 +1063,55 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[134, 73, SegmentFlags.NONE],
 					[135, 73, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"overworld-kaipo-3": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [92, 67, 32, 32],
+			"segments": {
+				"base-0": [
+					[107, 68, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[99, 68, SegmentFlags.VEHICLE],
+					[99, 77, SegmentFlags.VEHICLE],
+					[98, 77, SegmentFlags.VEHICLE],
+					[98, 80, SegmentFlags.VEHICLE],
+					[100, 80, SegmentFlags.VEHICLE],
+					[100, 83, SegmentFlags.VEHICLE],
+					[118, 83, SegmentFlags.VEHICLE],
+					[118, 98, SegmentFlags.VEHICLE | SegmentFlags.END]
+				]
+			}
+		},
+		"overworld-kaipo-4": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [105, 85, 32, 32],
+			"segments": {
+				"base-0": [
+					[118, 98, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[118, 104, SegmentFlags.VEHICLE],
+					[124, 104, SegmentFlags.VEHICLE],
+					[125, 104, SegmentFlags.START | SegmentFlags.END]
+				]
+			}
+		},
+		"overworld-kaipo-5": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [95, 74, 32, 32],
+			"segments": {
+				"base-0": [
+					[124, 104, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[107, 104, SegmentFlags.VEHICLE],
+					[107, 83, SegmentFlags.VEHICLE],
+					[99, 83, SegmentFlags.VEHICLE],
+					[99, 79, SegmentFlags.VEHICLE],
+					[98, 79, SegmentFlags.VEHICLE],
+					[98, 76, SegmentFlags.VEHICLE],
+					[99, 76, SegmentFlags.VEHICLE],
+					[99, 74, SegmentFlags.VEHICLE | SegmentFlags.END],
 				]
 			}
 		},
