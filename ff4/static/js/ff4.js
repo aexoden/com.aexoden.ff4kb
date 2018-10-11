@@ -95,7 +95,8 @@ com.aexoden.ff4 = function()
 			"overworld-kaipo-5",
 			"overworld-damcyan-3",
 			"overworld-damcyan-4",
-			"mt-hobs-west-0"
+			"mt-hobs-west-0",
+			"mt-hobs-summit-0"
 		]
 	};
 
@@ -273,6 +274,26 @@ com.aexoden.ff4 = function()
 				}
 			},
 		},
+		"mt-hobs-summit-0": {
+			"type": VariableFlags.EXTRA,
+			"paths": {
+				"mt-hobs-summit-0": {
+					"index": "0",
+					"location": "Mt.Hobs Summit",
+					"disambiguation": " before fighting MomBomb"
+				}
+			}
+		},
+		"mt-hobs-summit-1": {
+			"type": VariableFlags.EXTRA,
+			"paths": {
+				"mt-hobs-summit-0": {
+					"index": "1",
+					"location": "Mt.Hobs Summit",
+					"disambiguation": " after fighting MomBomb"
+				}
+			}
+		},
 		"mt-hobs-west-0": {
 			"type": VariableFlags.EXTRA,
 			"paths": {
@@ -442,7 +463,9 @@ com.aexoden.ff4 = function()
 			22: ["antlion-b2f-charm-room-1"],
 			23: ["antlion-b2f-3", "antlion-b2f-5"],
 			24: ["antlion-b1f-1"],
-			25: ["mt-hobs-west-0"]
+			25: ["mt-hobs-west-0"],
+			26: ["mt-hobs-summit-0"],
+			27: ["mt-hobs-summit-1"]
 		}
 	};
 
@@ -882,6 +905,32 @@ com.aexoden.ff4 = function()
 					[18, 14, SegmentFlags.NONE],
 					[20, 14, SegmentFlags.NONE],
 					[20, 17, SegmentFlags.END]
+				]
+			}
+		},
+		"mt-hobs-summit-0": {
+			"flags": PathFlags.STEPS,
+			"map": "307F-0",
+			"segments": {
+				"base-0": [
+					[8, 22, SegmentFlags.START],
+					[8, 23, SegmentFlags.NONE],
+					[16, 23, SegmentFlags.NONE],
+					[16, 20, SegmentFlags.NONE],
+					[20, 20, SegmentFlags.END]
+				],
+				"base-1": [
+					[21, 14, SegmentFlags.START],
+					[19, 14, SegmentFlags.NONE],
+					[19, 9, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[16, 23, SegmentFlags.NONE],
+					[17, 23, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-1": [
+					[21, 14, SegmentFlags.NONE],
+					[22, 14, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
