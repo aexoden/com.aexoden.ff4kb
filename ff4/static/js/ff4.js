@@ -97,7 +97,9 @@ com.aexoden.ff4 = function()
 			"overworld-damcyan-4",
 			"mt-hobs-west-0",
 			"mt-hobs-summit-0",
-			"mt-hobs-east-0"
+			"mt-hobs-east-0",
+			"overworld-fabul-0",
+			"overworld-fabul-1"
 		]
 	};
 
@@ -335,6 +337,16 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},*/
+		"overworld-fabul-0": {
+			"type": VariableFlags.EXTRA,
+			"paths": {
+				"overworld-fabul-1": {
+					"index": "0",
+					"location": "Overworld (Fabul) [before Fabul]",
+					"disambiguation": ""
+				}
+			}
+		},
 		"overworld-kaipo-2": {
 			"type": VariableFlags.EXTRA,
 			"paths": {
@@ -477,7 +489,8 @@ com.aexoden.ff4 = function()
 			25: ["mt-hobs-west-0"],
 			26: ["mt-hobs-summit-0"],
 			27: ["mt-hobs-summit-1"],
-			28: ["mt-hobs-east-0"]
+			28: ["mt-hobs-east-0"],
+			29: ["overworld-fabul-0"]
 		}
 	};
 
@@ -1104,6 +1117,46 @@ com.aexoden.ff4 = function()
 					[150, 49, SegmentFlags.VEHICLE],
 					[151, 49, SegmentFlags.VEHICLE],
 					[152, 49, SegmentFlags.START | SegmentFlags.END]
+				]
+			}
+		},
+		"overworld-fabul-0": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [159, 28, 32, 32],
+			"segments": {
+				"base-0": [
+					[160, 50, SegmentFlags.START],
+					[162, 50, SegmentFlags.NONE],
+					[162, 49, SegmentFlags.NONE],
+					[171, 49, SegmentFlags.NONE],
+					[171, 38, SegmentFlags.NONE],
+					[185, 38, SegmentFlags.NONE],
+					[185, 45, SegmentFlags.NONE],
+					[190, 45, SegmentFlags.END]
+				]
+			}
+		},
+		"overworld-fabul-1": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [186, 35, 32, 32],
+			"segments": {
+				"base-0": [
+					[190, 45, SegmentFlags.START],
+					[200, 45, SegmentFlags.NONE],
+					[200, 48, SegmentFlags.NONE],
+					[207, 48, SegmentFlags.NONE],
+					[207, 58, SegmentFlags.NONE],
+					[214, 58, SegmentFlags.END],
+				],
+				"extra-1-0": [
+					[212, 58, SegmentFlags.NONE],
+					[213, 58, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[208, 58, SegmentFlags.NONE],
+					[207, 58, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
