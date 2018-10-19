@@ -26,7 +26,8 @@ com.aexoden.ff4 = function()
 		END:      0x02,
 		RETURN:   0x04,
 		ANNOTATE: 0x08,
-		VEHICLE:  0x10
+		VEHICLE:  0x10,
+		VERTICAL: 0x20
 	};
 
 	var VariableFlags = {
@@ -99,13 +100,30 @@ com.aexoden.ff4 = function()
 			"mt-hobs-summit-0",
 			"mt-hobs-east-0",
 			"overworld-fabul-0",
-			"overworld-fabul-1"
+			"overworld-fabul-1",
+			"fabul-0",
+			"fabul-1f-0",
+			"fabul-2f-0",
+			"fabul-kings-room-0",
+			"fabul-crystal-room-0",
+			"fabul-kings-room-1",
+			"fabul-2f-1",
+			"fabul-1f-1",
+			"fabul-inn-0",
+			"fabul-right-tower-3f-0",
+			"fabul-right-tower-2f-0",
+			"fabul-right-tower-1f-0",
+			"fabul-1",
+			"fabul-2f-2",
+			"fabul-1f-2",
+			"fabul-2"
 		]
 	};
 
 	data.variableData = {
 		"antlion-b1f-0": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"antlion-b1f-0": {
 					"index": "0",
@@ -116,6 +134,7 @@ com.aexoden.ff4 = function()
 		},
 		"antlion-b1f-1": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"antlion-b1f-1": {
 					"index": "0",
@@ -126,6 +145,7 @@ com.aexoden.ff4 = function()
 		},
 		"antlion-b2f-0": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"antlion-b2f-0": {
 					"index": "0",
@@ -136,6 +156,7 @@ com.aexoden.ff4 = function()
 		},
 		"antlion-b2f-1": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"antlion-b2f-1": {
 					"index": "0",
@@ -146,6 +167,7 @@ com.aexoden.ff4 = function()
 		},
 		"antlion-b2f-2": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"antlion-b2f-2": {
 					"index": "0",
@@ -156,6 +178,7 @@ com.aexoden.ff4 = function()
 		},
 		"antlion-b2f-3": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"antlion-b2f-3": {
 					"index": "0",
@@ -166,6 +189,7 @@ com.aexoden.ff4 = function()
 		},
 		"antlion-b2f-4": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"antlion-b2f-4": {
 					"index": "0",
@@ -176,6 +200,7 @@ com.aexoden.ff4 = function()
 		},
 		"antlion-b2f-5": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"antlion-b2f-5": {
 					"index": "0",
@@ -186,6 +211,7 @@ com.aexoden.ff4 = function()
 		},
 		"antlion-b2f-charm-room-0": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"antlion-b2f-charm-room-0": {
 					"index": "0",
@@ -196,6 +222,7 @@ com.aexoden.ff4 = function()
 		},
 		"antlion-b2f-charm-room-1": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"antlion-b2f-charm-room-1": {
 					"index": "0",
@@ -244,6 +271,7 @@ com.aexoden.ff4 = function()
 		},
 		"antlions-nest-0": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"antlions-nest-0": {
 					"index": "0",
@@ -254,6 +282,7 @@ com.aexoden.ff4 = function()
 		},
 		"antlions-nest-1": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"antlions-nest-1": {
 					"index": "0",
@@ -264,6 +293,12 @@ com.aexoden.ff4 = function()
 		},
 		"damcyan-0": {
 			"type": VariableFlags.EXTRA,
+			"routes": {
+				1: {
+					"damcyan-1f-0": 0,
+					"damcyan-2f-0": 1
+				}
+			},
 			"paths": {
 				"damcyan-1f-0": {
 					"index": "0",
@@ -275,10 +310,98 @@ com.aexoden.ff4 = function()
 					"location": "Damcyan 2F",
 					"disambiguation": ""
 				}
+			}
+		},
+		"fabul-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {
+				1: {
+					"fabul-kings-room-1": 0,
+					"fabul-1f-1": 1,
+					"fabul-inn-0": 0,
+					"fabul-right-tower-3f-0": 0
+				},
+				2: {
+					"fabul-kings-room-1": 0,
+					"fabul-1f-1": 0,
+					"fabul-inn-0": 2,
+					"fabul-right-tower-3f-0": 0
+				},
+				3: {
+					"fabul-kings-room-1": 0,
+					"fabul-1f-1": 1,
+					"fabul-inn-0": 2,
+					"fabul-right-tower-3f-0": 0
+				},
+				4: {
+					"fabul-kings-room-1": 0,
+					"fabul-1f-1": 1,
+					"fabul-inn-0": 2,
+					"fabul-right-tower-3f-0": 1
+				},
+				5: {
+					"fabul-kings-room-1": 1,
+					"fabul-1f-1": 1,
+					"fabul-inn-0": 2,
+					"fabul-right-tower-3f-0": 1
+				},
+				6: {
+					"fabul-kings-room-1": 6,
+					"fabul-1f-1": 0,
+					"fabul-inn-0": 0,
+					"fabul-right-tower-3f-0": 0
+				},
+				7: {
+					"fabul-kings-room-1": 6,
+					"fabul-1f-1": 1,
+					"fabul-inn-0": 0,
+					"fabul-right-tower-3f-0": 0
+				},
+				8: {
+					"fabul-kings-room-1": 6,
+					"fabul-1f-1": 0,
+					"fabul-inn-0": 2,
+					"fabul-right-tower-3f-0": 0
+				},
+				9: {
+					"fabul-kings-room-1": 6,
+					"fabul-1f-1": 1,
+					"fabul-inn-0": 2,
+					"fabul-right-tower-3f-0": 0
+				},
+				10: {
+					"fabul-kings-room-1": 6,
+					"fabul-1f-1": 1,
+					"fabul-inn-0": 2,
+					"fabul-right-tower-3f-0": 1
+				}
 			},
+			"paths": {
+				"fabul-kings-room-1": {
+					"index": "0",
+					"location": "Fabul King's Room [after Dragoon]",
+					"disambiguation": ""
+				},
+				"fabul-1f-1": {
+					"index": "0",
+					"location": "Fabul 1F [after Dragoon]",
+					"disambiguation": ""
+				},
+				"fabul-inn-0": {
+					"index": "0",
+					"location": "Fabul Inn",
+					"disambiguation": ""
+				},
+				"fabul-right-tower-3f-0": {
+					"index": "0",
+					"location": "Fabul Right Tower 3F",
+					"disambiguation": " after talking to the King"
+				}
+			}
 		},
 		"mt-hobs-east-0": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"mt-hobs-east-0": {
 					"index": "0",
@@ -289,6 +412,7 @@ com.aexoden.ff4 = function()
 		},
 		"mt-hobs-summit-0": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"mt-hobs-summit-0": {
 					"index": "0",
@@ -299,6 +423,7 @@ com.aexoden.ff4 = function()
 		},
 		"mt-hobs-summit-1": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"mt-hobs-summit-0": {
 					"index": "1",
@@ -309,6 +434,7 @@ com.aexoden.ff4 = function()
 		},
 		"mt-hobs-west-0": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"mt-hobs-west-0": {
 					"index": "0",
@@ -319,6 +445,7 @@ com.aexoden.ff4 = function()
 		},
 		"overworld-damcyan-0": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"overworld-damcyan-0": {
 					"index": "1",
@@ -329,6 +456,7 @@ com.aexoden.ff4 = function()
 		},
 		/*"overworld-damcyan-1": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"overworld-damcyan-1": {
 					"index": "0",
@@ -339,6 +467,7 @@ com.aexoden.ff4 = function()
 		},*/
 		"overworld-fabul-0": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"overworld-fabul-1": {
 					"index": "0",
@@ -349,6 +478,7 @@ com.aexoden.ff4 = function()
 		},
 		"overworld-kaipo-2": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"overworld-kaipo-2": {
 					"index": "0",
@@ -359,6 +489,7 @@ com.aexoden.ff4 = function()
 		},
 		"overworld-kaipo-3": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"overworld-damcyan-0": {
 					"index": "0",
@@ -369,6 +500,7 @@ com.aexoden.ff4 = function()
 		},
 		"waterfalls-b1f-0": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"waterfalls-b1f-0": {
 					"index": "0",
@@ -379,6 +511,7 @@ com.aexoden.ff4 = function()
 		},
 		"waterfalls-b2f-0": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"waterfalls-b2f-0": {
 					"index": "0",
@@ -389,6 +522,7 @@ com.aexoden.ff4 = function()
 		},
 		"waterfalls-lake-0": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"waterfalls-lake-0": {
 					"index": "0",
@@ -399,6 +533,7 @@ com.aexoden.ff4 = function()
 		},
 		"waterfalls-lake-1": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"waterfalls-lake-1": {
 					"index": "0",
@@ -409,6 +544,7 @@ com.aexoden.ff4 = function()
 		},
 		"watery-pass-north-b1f-0": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"watery-pass-north-b1f-0": {
 					"index": "0",
@@ -419,6 +555,7 @@ com.aexoden.ff4 = function()
 		},
 		"watery-pass-north-b2f-0": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"watery-pass-north-b2f-0": {
 					"index": "0",
@@ -429,6 +566,7 @@ com.aexoden.ff4 = function()
 		},
 		"watery-pass-south-b2f-1": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"watery-pass-south-b2f-1": {
 					"index": "0",
@@ -439,6 +577,7 @@ com.aexoden.ff4 = function()
 		},
 		"watery-pass-south-b2f-save-room-0": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"watery-pass-south-b2f-save-room-0": {
 					"index": "0",
@@ -449,6 +588,7 @@ com.aexoden.ff4 = function()
 		},
 		"watery-pass-south-b3f-0": {
 			"type": VariableFlags.EXTRA,
+			"routes": {},
 			"paths": {
 				"watery-pass-south-b3f-0": {
 					"index": "0",
@@ -490,7 +630,8 @@ com.aexoden.ff4 = function()
 			26: ["mt-hobs-summit-0"],
 			27: ["mt-hobs-summit-1"],
 			28: ["mt-hobs-east-0"],
-			29: ["overworld-fabul-0"]
+			29: ["overworld-fabul-0"],
+			30: ["fabul-0"]
 		}
 	};
 
@@ -789,7 +930,7 @@ com.aexoden.ff4 = function()
 					[7, 13, SegmentFlags.NONE],
 					[8, 13, SegmentFlags.END]
 				],
-				"extra-1-0": [
+				"optional-1-0": [
 					[8, 10, SegmentFlags.NONE],
 					[9, 10, SegmentFlags.NONE | SegmentFlags.ANNOTATE],
 					[9, 13, SegmentFlags.NONE],
@@ -804,6 +945,212 @@ com.aexoden.ff4 = function()
 				"base-0": [
 					[13, 13, SegmentFlags.START],
 					[13, 11, SegmentFlags.END]
+				]
+			}
+		},
+		"fabul-0": {
+			"flags": PathFlags.NONE,
+			"map": "3026-0",
+			"segments": {
+				"base-0": [
+					[15, 29, SegmentFlags.START],
+					[15, 14, SegmentFlags.END]
+				]
+			}
+		},
+		"fabul-1": {
+			"flags": PathFlags.NONE,
+			"map": "3026-0",
+			"segments": {
+				"base-0": [
+					[17, 8, SegmentFlags.START],
+					[17, 11, SegmentFlags.NONE],
+					[15, 11, SegmentFlags.NONE],
+					[15, 10, SegmentFlags.END]
+				]
+			}
+		},
+		"fabul-2": {
+			"flags": PathFlags.NONE,
+			"map": "3026-0",
+			"segments": {
+				"base-0": [
+					[15, 15, SegmentFlags.START],
+					[15, 31, SegmentFlags.END]
+				]
+			}
+		},
+		"fabul-crystal-room-0": {
+			"flags": PathFlags.NONE,
+			"map": "304A-0",
+			"segments": {
+				"base-0": [
+					[12, 15, SegmentFlags.START],
+					[11, 15, SegmentFlags.NONE],
+					[11, 26, SegmentFlags.END]
+				]
+			}
+		},
+		"fabul-inn-0": {
+			"flags": PathFlags.STEPS,
+			"map": "304C-0",
+			"segments": {
+				"base-0": [
+					[20, 7, SegmentFlags.START],
+					[20, 5, SegmentFlags.NONE],
+					[17, 5, SegmentFlags.END]
+				],
+				"optional-2-0": [
+					[20, 7, SegmentFlags.NONE],
+					[18, 7, SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+					[18, 5, SegmentFlags.NONE]
+				]
+			}
+		},
+		"fabul-kings-room-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3049-0",
+			"segments": {
+				"base-0": [
+					[8, 13, SegmentFlags.START],
+					[8, 12, SegmentFlags.END]
+				]
+			}
+		},
+		"fabul-kings-room-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3049-0",
+			"segments": {
+				"base-0": [
+					[4, 3, SegmentFlags.START],
+					[4, 7, SegmentFlags.NONE],
+					[8, 7, SegmentFlags.NONE],
+					[8, 14, SegmentFlags.END]
+				],
+				"optional-1-0": [
+					[4, 7, SegmentFlags.NONE],
+					[4, 8, SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+					[8, 8, SegmentFlags.NONE]
+				],
+				"optional-6-0": [
+					[4, 7, SegmentFlags.NONE],
+					[4, 11, SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+					[8, 11, SegmentFlags.NONE]
+				]
+			}
+		},
+		"fabul-1f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3047-0",
+			"segments": {
+				"base-0": [
+					[11, 11, SegmentFlags.START],
+					[11, 3, SegmentFlags.END]
+				]
+			}
+		},
+		"fabul-1f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3047-0",
+			"segments": {
+				"base-0": [
+					[11, 4, SegmentFlags.START],
+					[11, 11, SegmentFlags.NONE],
+					[6, 11, SegmentFlags.NONE],
+					[6, 10, SegmentFlags.NONE],
+					[5, 10, SegmentFlags.NONE],
+					[5, 7, SegmentFlags.END]
+				],
+				"optional-1-0": [
+					[6, 11, SegmentFlags.NONE],
+					[5, 11, SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+					[5, 10, SegmentFlags.NONE]
+				]
+			}
+		},
+		"fabul-1f-2": {
+			"flags": PathFlags.STEPS,
+			"map": "3047-0",
+			"segments": {
+				"base-0": [
+					[11, 4, SegmentFlags.START],
+					[11, 15, SegmentFlags.END]
+				]
+			}
+		},
+		"fabul-2f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3048-0",
+			"segments": {
+				"base-0": [
+					[4, 8, SegmentFlags.START],
+					[4, 0, SegmentFlags.END]
+				]
+			}
+		},
+		"fabul-2f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3048-0",
+			"segments": {
+				"base-0": [
+					[4, 1, SegmentFlags.START],
+					[4, 9, SegmentFlags.END]
+				]
+			}
+		},
+		"fabul-2f-2": {
+			"flags": PathFlags.STEPS,
+			"map": "3048-0",
+			"segments": {
+				"base-0": [
+					[4, 13, SegmentFlags.START],
+					[6, 13, SegmentFlags.NONE],
+					[6, 6, SegmentFlags.NONE],
+					[4, 6, SegmentFlags.NONE],
+					[4, 9, SegmentFlags.END]
+				]
+			}
+		},
+		"fabul-right-tower-1f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "304D-0",
+			"segments": {
+				"base-0": [
+					[1, 4, SegmentFlags.START],
+					[1, 6, SegmentFlags.NONE],
+					[2, 6, SegmentFlags.NONE],
+					[2, 10, SegmentFlags.END]
+				]
+			}
+		},
+		"fabul-right-tower-2f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "304E-0",
+			"segments": {
+				"base-0": [
+					[1, 4, SegmentFlags.START],
+					[1, 6, SegmentFlags.END]
+				]
+			}
+		},
+		"fabul-right-tower-3f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "304F-0",
+			"segments": {
+				"base-0": [
+					[5, 4, SegmentFlags.START],
+					[5, 5, SegmentFlags.NONE],
+					[1, 5, SegmentFlags.NONE],
+					[1, 6, SegmentFlags.END]
+				],
+				"optional-1-0": [
+					[5, 4, SegmentFlags.NONE],
+					[3, 4, SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+					[3, 5, SegmentFlags.NONE]
+				],
+				"extra-2-0": [
+					[1, 5, SegmentFlags.NONE],
+					[1, 4, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -1709,7 +2056,7 @@ com.aexoden.ff4 = function()
 				var draw = false;
 				var fillStyle = "#FFFFFF";
 
-				if (fields[0] == "extra" || fields[0] == "alternate") {
+				if (fields[0] == "extra" || fields[0] == "optional" || fields[0] == "alternate") {
 					fillStyle = "#00FF00";
 
 					if (vars && activeVars) {
@@ -1722,9 +2069,14 @@ com.aexoden.ff4 = function()
 								if (varData.type == VariableFlags.EXTRA) {
 									if (path in varData.paths) {
 										if (varData.paths[path].index == fields[2]) {
-											if (fields[1] == "2" && (value - value % 2) > 0) {
+											var specialIndex = getSpecial(varData, value);
+											var delta = value - specialIndex;
+
+											if (specialIndex > 0 && parseInt(fields[1]) == varData.routes[specialIndex][path]) {
 												draw = true;
-											} else if (fields[1] == "1" && value % 2 == 1) {
+											} else if (fields[1] == "2" && (delta - delta % 2) > 0) {
+												draw = true;
+											} else if (fields[1] == "1" && delta % 2 == 1) {
 												draw = true;
 											}
 										}
@@ -1756,6 +2108,12 @@ com.aexoden.ff4 = function()
 						if ((segments[i][2] & SegmentFlags.ANNOTATE) > 0) {
 							var x = segments[i][0] * 16 + xOffset + 12;
 							var y = segments[i][1] * 16 + yOffset + 2;
+
+							if ((segments[i][2] & SegmentFlags.VERTICAL) > 0) {
+								x = segments[i][0] * 16 + xOffset + 10;
+								y = segments[i][1] * 16 + yOffset - 4;
+							}
+
 							var style = ctx.fillStyle;
 							ctx.fillStyle = "rgba(0, 0, 0, 0.3)";
 							ctx.fillRect(x, y, 13, 11);
@@ -1769,6 +2127,34 @@ com.aexoden.ff4 = function()
 			}
 		);
 	};
+
+	var getSpecial = function(varData, steps) {
+		var maxEven = 0;
+		var maxOdd = 0;
+
+		Object.keys(varData.routes).forEach(
+			(key) => {
+				key = parseInt(key);
+				if (key <= steps) {
+					if (key % 2 == 0) {
+						if (key > maxEven) {
+							maxEven = key;
+						}
+					} else {
+						if (key > maxOdd) {
+							maxOdd = key;
+						}
+					}
+				}
+			}
+		);
+
+		if (steps % 2 == 0) {
+			return maxEven;
+		} else {
+			return maxOdd;
+		}
+	}
 
 	var drawMaps = function(parent, route, vars, repaint) {
 		var drawAll = document.getElementById("option-show-all").checked;
@@ -1880,17 +2266,32 @@ com.aexoden.ff4 = function()
 
 								if (varData) {
 									if (varData.type == VariableFlags.EXTRA) {
-										if (!extraEven) {
-											value = value % 2;
-										}
+										var specialIndex = getSpecial(varData, value);
+										var delta = value - specialIndex;
 
-										if (!extraOdd) {
-											value = value - (value % 2);
+										if (specialIndex > 0) {
+											value = varData.routes[specialIndex][path];
+
+											if (extraEven) {
+												value += delta - (delta % 2);
+											}
+
+											if (extraOdd) {
+												value += delta % 2;
+											}
+										} else {
+											if (!extraEven) {
+												value = value % 2;
+											}
+
+											if (!extraOdd) {
+												value = value - (value % 2);
+											}
 										}
 
 										if (value > 0) {
 											caption.innerHTML += "<dt>" + varData.paths[path].location + "</dt><dd>Take " + value + " extra step" + (value > 1 ? "s" : "") + varData.paths[path].disambiguation + ".</dd>";
-										} else {
+										} else if (!drawAll) {
 											cancelPath = true;
 										}
 									} else if (varData.type == VariableFlags.CHOICE) {
