@@ -125,7 +125,10 @@ com.aexoden.ff4 = function()
 			"mysidia-house-of-wishes-0",
 			"mysidia-2",
 			"mysidia-item-shop-0",
-			"mysidia-3"
+			"mysidia-3",
+			"overworld-mysidia-1",
+			"overworld-mt-ordeals-0",
+			"overworld-mt-ordeals-1"
 		]
 	};
 
@@ -518,6 +521,17 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"overworld-mt-ordeals-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"overworld-mt-ordeals-1": {
+					"index": "0",
+					"location": "Overworld (Mt.Ordeals) [before Mt.Ordeals]",
+					"disambiguation": ""
+				}
+			}
+		},
 		"overworld-mysidia-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -526,6 +540,17 @@ com.aexoden.ff4 = function()
 					"index": "0",
 					"location": "Overworld (Mysidia) [before Mysidia]",
 					"disambiguation": ""
+				}
+			}
+		},
+		"overworld-mysidia-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"overworld-mysidia-1": {
+					"index": "0",
+					"location": "Overworld (Mysidia) [after Mysidia]",
+					"disambiguation": " before heading more than five tiles east, because the encounter rate goes up"
 				}
 			}
 		},
@@ -664,7 +689,9 @@ com.aexoden.ff4 = function()
 			29: ["overworld-fabul-0"],
 			30: ["fabul-0"],
 			31: ["overworld-fabul-1"],
-			32: ["overworld-mysidia-0"]
+			32: ["overworld-mysidia-0"],
+			33: ["overworld-mysidia-1"],
+			34: ["overworld-mt-ordeals-0"]
 		}
 	};
 
@@ -1761,6 +1788,43 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"overworld-mt-ordeals-0": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [159, 185, 32, 32],
+			"segments": {
+				"base-0": [
+					[160, 205, SegmentFlags.START],
+					[175, 205, SegmentFlags.NONE],
+					[175, 211, SegmentFlags.NONE],
+					[182, 211, SegmentFlags.NONE],
+					[182, 192, SegmentFlags.NONE],
+					[190, 192, SegmentFlags.END]
+				],
+				"boundary-0": [
+					[160, 185, SegmentFlags.NONE],
+					[160, 216, SegmentFlags.NONE]
+				]
+			}
+		},
+		"overworld-mt-ordeals-1": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [189, 180, 32, 32],
+			"segments": {
+				"base-0": [
+					[190, 192, SegmentFlags.START],
+					[211, 192, SegmentFlags.NONE],
+					[211, 201, SegmentFlags.NONE],
+					[218, 201, SegmentFlags.NONE],
+					[218, 199, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[218, 200, SegmentFlags.NONE],
+					[219, 200, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
 		"overworld-mysidia-0": {
 			"flags": PathFlags.STEPS,
 			"map": "0000-0",
@@ -1774,6 +1838,27 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[150, 199, SegmentFlags.NONE],
 					[150, 198, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"overworld-mysidia-1": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [141, 185, 32, 32],
+			"segments": {
+				"base-0": [
+					[154, 200, SegmentFlags.START],
+					[157, 200, SegmentFlags.NONE],
+					[157, 205, SegmentFlags.NONE],
+					[160, 205, SegmentFlags.END],
+				],
+				"extra-2-0": [
+					[157, 200, SegmentFlags.NONE],
+					[157, 199, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"boundary-0": [
+					[160, 185, SegmentFlags.NONE],
+					[160, 216, SegmentFlags.NONE]
 				]
 			}
 		},
@@ -2216,6 +2301,10 @@ com.aexoden.ff4 = function()
 				var draw = false;
 				var fillStyle = "#FFFFFF";
 
+				if (fields[0] == "boundary") {
+					fillStyle = "#FFFF00";
+				}
+
 				if (fields[0] == "extra" || fields[0] == "optional" || fields[0] == "alternate") {
 					fillStyle = "#00FF00";
 
@@ -2261,6 +2350,10 @@ com.aexoden.ff4 = function()
 							ctx.fillStyle = "#FFFF00";
 						} else {
 							ctx.fillStyle = fillStyle;
+						}
+
+						if (fields[0] == "boundary") {
+							xOffset = xOffset - 4;
 						}
 
 						drawSegment(ctx, i > 0 ? segments[i-1] : segments[i], segments[i], xOffset, yOffset);
