@@ -116,7 +116,8 @@ com.aexoden.ff4 = function()
 			"fabul-1",
 			"fabul-2f-2",
 			"fabul-1f-2",
-			"fabul-2"
+			"fabul-2",
+			"overworld-fabul-2"
 		]
 	};
 
@@ -476,6 +477,17 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"overworld-fabul-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"overworld-fabul-2": {
+					"index": "0",
+					"location": "Overworld (Fabul) [after Fabul]",
+					"disambiguation": ""
+				}
+			}
+		},
 		"overworld-kaipo-2": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -631,7 +643,8 @@ com.aexoden.ff4 = function()
 			27: ["mt-hobs-summit-1"],
 			28: ["mt-hobs-east-0"],
 			29: ["overworld-fabul-0"],
-			30: ["fabul-0"]
+			30: ["fabul-0"],
+			31: ["overworld-fabul-1"]
 		}
 	};
 
@@ -1504,6 +1517,29 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[208, 58, SegmentFlags.NONE],
 					[207, 58, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"overworld-fabul-2": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [202, 41, 32, 32],
+			"segments": {
+				"base-0": [
+					[215, 59, SegmentFlags.START],
+					[216, 59, SegmentFlags.NONE],
+					[216, 58, SegmentFlags.NONE],
+					[220, 58, SegmentFlags.NONE],
+					[220, 56, SegmentFlags.NONE],
+					[221, 56, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[216, 58, SegmentFlags.NONE],
+					[217, 58, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[220, 58, SegmentFlags.NONE],
+					[220, 57, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
