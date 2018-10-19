@@ -6,5 +6,6 @@ app_name = 'routes'
 
 urlpatterns = [
 	path('', views.index, name='index'),
+	path('<slug:route>/', views.route, name='route'),
 	path('<slug:route>/<int:seed>/', views.detail, name='detail'),
 ]

@@ -18,6 +18,10 @@ class RouteDetail(object):
 		return self._data
 
 	@property
+	def frames(self):
+		return self._frames
+
+	@property
 	def vars(self):
 		return self._vars
 
@@ -25,8 +29,9 @@ class RouteDetail(object):
 		return self._vars[index] if index in self._vars else 0
 
 	def _parse_variables(self, data):
-		for index, value in [x.split(':') for x in data.split(' ')]:
-			self._vars[int(index)] = int(value)
+		if data.strip() != '':
+			for index, value in [x.split(':') for x in data.split(' ')]:
+				self._vars[int(index)] = int(value)
 
 	def _load_data(self):
 		phase = 1
