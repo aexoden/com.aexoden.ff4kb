@@ -128,7 +128,11 @@ com.aexoden.ff4 = function()
 			"mysidia-3",
 			"overworld-mysidia-1",
 			"overworld-mt-ordeals-0",
-			"overworld-mt-ordeals-1"
+			"overworld-mt-ordeals-1",
+			"mt-ordeals-0",
+			"mt-ordeals-3rd-station-0",
+			"mt-ordeals-7th-station-0",
+			"mt-ordeals-summit-0"
 		]
 	};
 
@@ -455,6 +459,76 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"mt-ordeals-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"mt-ordeals-0": {
+					"index": "0",
+					"location": "Mt.Ordeals [before Paladin]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"mt-ordeals-3rd-station-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"mt-ordeals-3rd-station-0": {
+					"index": "0",
+					"location": "Mt.Ordeals-3rd station [before Paladin]",
+					"disambiguation": " before Tellah joins your party"
+				}
+			}
+		},
+		"mt-ordeals-3rd-station-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"mt-ordeals-3rd-station-0": {
+					"index": "1",
+					"location": "Mt.Ordeals-3rd station [before Paladin]",
+					"disambiguation": " after Tellah joins your party"
+				}
+			}
+		},
+		"mt-ordeals-7th-station-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"mt-ordeals-7th-station-0": {
+					"index": "0",
+					"location": "Mt.Ordeals-7th station [before Paladin]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"mt-ordeals-summit-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {
+				1: {
+					"mt-ordeals-summit-0": 1
+				}
+			},
+			"paths": {
+				"mt-ordeals-summit-0": {
+					"index": "0",
+					"location": "Mt.Ordeals Summit [before Paladin]",
+					"disambiguation": " before fighting Milon"
+				}
+			}
+		},
+		"mt-ordeals-summit-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"mt-ordeals-summit-0": {
+					"index": "1",
+					"location": "Mt.Ordeals Summit [before Paladin]",
+					"disambiguation": " after fighting Milon Z"
+				}
+			}
+		},
 		"overworld-damcyan-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -691,7 +765,13 @@ com.aexoden.ff4 = function()
 			31: ["overworld-fabul-1"],
 			32: ["overworld-mysidia-0"],
 			33: ["overworld-mysidia-1"],
-			34: ["overworld-mt-ordeals-0"]
+			34: ["overworld-mt-ordeals-0"],
+			35: ["mt-ordeals-0"],
+			36: ["mt-ordeals-3rd-station-0"],
+			37: ["mt-ordeals-3rd-station-1"],
+			38: ["mt-ordeals-7th-station-0"],
+			39: ["mt-ordeals-summit-0"],
+			40: ["mt-ordeals-summit-1"]
 		}
 	};
 
@@ -1418,6 +1498,130 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[15, 25, SegmentFlags.NONE],
 					[16, 25, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"mt-ordeals-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3084-0",
+			"segments": {
+				"base-0": [
+					[20, 31, SegmentFlags.START],
+					[20, 29, SegmentFlags.NONE],
+					[12, 29, SegmentFlags.NONE],
+					[12, 28, SegmentFlags.NONE],
+					[11, 28, SegmentFlags.END]
+				],
+				"base-1": [
+					[9, 26, SegmentFlags.START],
+					[9, 24, SegmentFlags.NONE],
+					[11, 24, SegmentFlags.NONE],
+					[11, 23, SegmentFlags.NONE],
+					[17, 23, SegmentFlags.NONE],
+					[17, 18, SegmentFlags.NONE],
+					[14, 18, SegmentFlags.NONE],
+					[14, 12, SegmentFlags.NONE],
+					[19, 12, SegmentFlags.NONE],
+					[19, 9, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[20, 29, SegmentFlags.NONE],
+					[21, 29, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"mt-ordeals-3rd-station-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3085-0",
+			"segments": {
+				"base-0": [
+					[10, 24, SegmentFlags.START],
+					[8, 24, SegmentFlags.NONE],
+					[8, 17, SegmentFlags.NONE],
+					[18, 17, SegmentFlags.NONE],
+					[18, 12, SegmentFlags.END]
+				],
+				"base-1": [
+					[18, 10, SegmentFlags.START],
+					[18, 8, SegmentFlags.NONE],
+					[21, 8, SegmentFlags.NONE],
+					[21, 7, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[18, 16, SegmentFlags.NONE],
+					[19, 16, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-1": [
+					[21, 8, SegmentFlags.NONE],
+					[22, 8, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"mt-ordeals-7th-station-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3086-0",
+			"segments": {
+				"base-0": [
+					[23, 23, SegmentFlags.START],
+					[23, 25, SegmentFlags.NONE],
+					[19, 25, SegmentFlags.NONE],
+					[19, 23, SegmentFlags.NONE],
+					[18, 23, SegmentFlags.NONE],
+					[18, 17, SegmentFlags.NONE],
+					[24, 17, SegmentFlags.NONE],
+					[24, 8, SegmentFlags.NONE],
+					[11, 8, SegmentFlags.NONE],
+					[11, 7, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[18, 8, SegmentFlags.NONE],
+					[19, 8, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[24, 8, SegmentFlags.NONE],
+					[25, 8, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"mt-ordeals-summit-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3087-0",
+			"segments": {
+				"base-0": [
+					[15, 22, SegmentFlags.START],
+					[15, 23, SegmentFlags.NONE],
+					[18, 23, SegmentFlags.NONE],
+					[18, 16, SegmentFlags.NONE],
+					[17, 16, SegmentFlags.NONE],
+					[16, 16, SegmentFlags.NONE],
+					[16, 15, SegmentFlags.NONE],
+					[16, 10, SegmentFlags.NONE],
+					[14, 10, SegmentFlags.END]
+				],
+				"base-1": [
+					[14, 10, SegmentFlags.NONE],
+					[9, 10, SegmentFlags.END],
+					[8, 10, SegmentFlags.NONE],
+					[8, 11, SegmentFlags.NONE],
+					[6, 11, SegmentFlags.NONE],
+					[6, 10, SegmentFlags.END]
+				],
+				"optional-1-0": [
+					[17, 16, SegmentFlags.NONE],
+					[17, 15, SegmentFlags.ANNOTATE],
+					[16, 15, SegmentFlags.NONE]
+				],
+				"extra-2-0": [
+					[16, 10, SegmentFlags.NONE],
+					[17, 10, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-1-1": [
+					[9, 10, SegmentFlags.NONE],
+					[9, 11, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-1": [
+					[6, 11, SegmentFlags.NONE],
+					[6, 12, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
