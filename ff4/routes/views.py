@@ -5,27 +5,34 @@ from django.shortcuts import render
 
 from .models import RouteDetail
 
+ROUTES = {
+	'paladin': {
+		'name': 'Paladin%'
+	}
+}
+
 
 def get_color(value, best_value, worst_value):
-	range = worst_value - best_value
-	value = (value - best_value) / range
+	colors = [
+		(0.00, (128, 64, 0)),
+		(0.50, (255, 255, 255)),
+		(1.00, (0, 224, 0)),
+	]
 
-	if value < 0:
-		value = 0
+	value = (worst_value - value) / (worst_value - best_value)
+	value = max(0, min(1, value))
 
-	if value > 1:
-		value = 1
+	index = 1
+	while colors[index][0] < value:
+		index += 1
+	best_color = colors[index]
+	worst_color = colors[index-1]
 
-	max_color = 255
-	min_color = 128
+	subvalue = (value - worst_color[0]) / (best_color[0] - worst_color[0])
+	delta = tuple(best_color[1][x] - worst_color[1][x] for x in range(3))
+	color = tuple(int(subvalue * delta[x] + worst_color[1][x]) for x in range(3))
 
-	color_range = max_color - min_color
-
-	red = (1 - value) * color_range + min_color
-	green = min_color
-	blue = value * color_range + min_color
-
-	return '#{:02X}{:02X}{:02X}'.format(int(red), int(green), int(blue))
+	return '#{:02X}{:02X}{:02X}'.format(*color)
 
 
 def index(request):
@@ -57,10 +64,17 @@ def route(request, route):
 
 		seeds.append(group)
 
+	fastest_seed = seed_frames.index(min(seed_frames))
+	fastest_time = '{:0.3f}s'.format(seed_frames[fastest_seed] / 60.0988)
+
 	context = {
 		'route': route,
+		'route_data': ROUTES[route],
+		'fastest_seed': fastest_seed,
+		'fastest_time': fastest_time,
 		'title': route,
 		'seeds': seeds,
+		'seed_frames': seed_frames,
 	}
 
 	return render(request, 'routes/route.html', context)

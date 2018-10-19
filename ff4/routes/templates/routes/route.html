@@ -5,9 +5,14 @@
 
 {% block subheading %}{{ title }}{% endblock %}
 
-{% block content %}				<h2 id="overview">Route Statistics</h2>
-				<dl class="dl-horizontal"></dl>
-				<h2 id="detail">Route Heat Map</h2>
+{% block content %}				<h1>{{ route_data.name }} Step Routes</h1>
+				<h2 id="statistics">Statistics</h2>
+				<dl class="row">
+					<dt class="col-md-auto">Fastest Seed</dt>
+					<dd class="col"><a href="{% url 'routes:detail' route fastest_seed %}">{{ fastest_seed }}</a> ({{ fastest_time }})</dd>
+				</dl>
+				<h2 id="detail">Complete Seed List</h2>
+				<p>This is a table of every possible seed for the route. Note that average seeds are white-colored, while slower seeds are brown and faster seeds are green.</p>
 				<table class="seeds">
 {% for group in seeds %}
 					<tr>
