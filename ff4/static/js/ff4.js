@@ -249,6 +249,9 @@ com.aexoden.ff4 = function()
 		},
 		"antlion-b2f-choice-0": {
 			"type": VariableFlags.CHOICE,
+			"descriptions": {
+				1: "Enter the Charm Room in Antlion B2F [before Antlion]."
+			},
 			"paths": {
 				0: {
 					"antlion-b2f-1": { "enabled": false },
@@ -268,6 +271,9 @@ com.aexoden.ff4 = function()
 		},
 		"antlion-b2f-choice-1": {
 			"type": VariableFlags.CHOICE,
+			"descriptions": {
+				1: "Enter the Charm Room in Antlion B2F [after Antlion]."
+			},
 			"paths": {
 				0: {
 					"antlion-b2f-4": { "enabled": false },
@@ -309,6 +315,7 @@ com.aexoden.ff4 = function()
 		},
 		"damcyan-0": {
 			"type": VariableFlags.EXTRA,
+			"description": "Damcyan",
 			"routes": {
 				1: {
 					"damcyan-1f-0": 0,
@@ -330,6 +337,7 @@ com.aexoden.ff4 = function()
 		},
 		"fabul-0": {
 			"type": VariableFlags.EXTRA,
+			"description": "Fabul",
 			"routes": {
 				1: {
 					"fabul-kings-room-1": 0,
@@ -2617,6 +2625,11 @@ com.aexoden.ff4 = function()
 		var drawAll = document.getElementById("option-show-all").checked;
 		var container = document.createDocumentFragment();
 
+		if (Object.keys(vars).length == 0 && !drawAll) {
+			parent.innerHTML = '<p class="alert alert-warning">There are no extra steps to take on this route. Unfortunately, this means you don\'t get much of a tutorial unless you click the <em>Show All Maps</em> button.</p>';
+			return;
+		}
+
 		if (repaint) {
 			parent.innerHTML = '';
 		}
@@ -2780,11 +2793,46 @@ com.aexoden.ff4 = function()
 		parent.appendChild(container);
 	};
 
+	var printSummary = function(target, route, vars) {
+		if (Object.keys(vars).length == 0) {
+			target.innerHTML = '<p class="alert alert-success" style="margin-bottom:0;">There are no extra steps to take! Easy!</p>';
+		} else {
+			target.innerHTML += '<ul>';
+
+			Object.entries(vars).forEach(
+				([index, value]) => {
+					var varKey = data.variables[route][index];
+					var varData = data.variableData[varKey];
+
+					var output = '';
+
+					if (varData.type == VariableFlags.EXTRA) {
+						var description = varData.description;
+
+						if (!description) {
+							var path = varData.paths[Object.keys(varData.paths)[0]];
+							description = path.location + path.disambiguation;
+						}
+
+						output = 'Take ' + value + ' extra steps in ' + description + '.';
+					} else if (varData.type == VariableFlags.CHOICE) {
+						output = varData.descriptions[value];
+					}
+
+					target.innerHTML += '<li>' + output + '</li>';
+				}
+			);
+
+			target.innerHTML += '</ul>';
+		}
+	}
+
 	/*
 	 * Public Definition
 	 */
 
 	return {
-		drawMaps: drawMaps
+		drawMaps: drawMaps,
+		printSummary: printSummary
 	};
 }();
