@@ -7,17 +7,25 @@
 
 {% block content %}				<h1>{{ route_data.name }} Step Routes</h1>
 				<h2 id="statistics">Statistics</h2>
-				<dl class="row">
-					<dt class="col-md-auto">Fastest Seed</dt>
-					<dd class="col"><a href="{% url 'routes:detail' route fastest_seed %}">{{ fastest_seed }}</a> ({{ fastest_time }})</dd>
-				</dl>
+				<table class="table table-striped">
+					<thead>
+						<tr><th>Metric</th><th>Best Value</th><th>Median Value</th><th>Worst Value</th></tr>
+					</thead>
+					<tbody>
+{% for metric in metrics %}						<tr>
+							<th>{{ metric.name }}</th>
+							<td>{{ metric.best|safe }}</td>
+							<td>{{ metric.median|safe }}</td>
+							<td>{{ metric.worst|safe }}</td>
+						</tr>
+{% endfor %}
+					</tbody>
+				</table>
 				<h2 id="detail">Complete Seed List</h2>
 				<p>This is a table of every possible seed for the route. Note that average seeds are white-colored, while slower seeds are brown and faster seeds are green.</p>
 				<table class="seeds">
-{% for group in seeds %}
-					<tr>
-{% for seed in group %}
-						<td style="background: {{ seed.background }}"><a href="{% url 'routes:detail' route seed.seed %}">{{ seed.seed }}</td>
+{% for group in seeds %}					<tr>
+{% for seed in group %}						<td style="background: {{ seed.background }}"><a href="{% url 'routes:detail' route seed.seed %}">{{ seed.seed }}</td>
 {% endfor %}
 					</tr>
 {% endfor %}

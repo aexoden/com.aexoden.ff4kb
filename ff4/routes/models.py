@@ -9,6 +9,8 @@ class RouteDetail(object):
 		self._seed = seed
 		self._filename = os.path.join(settings.BASE_DIR, 'ff4', 'data', 'routes', route, '{:03d}.txt'.format(seed))
 
+		self._steps = 0
+
 		self._data = []
 		self._vars = {}
 		self._load_data()
@@ -16,6 +18,14 @@ class RouteDetail(object):
 	@property
 	def data(self):
 		return self._data
+
+	@property
+	def encounters(self):
+		return self._encounters
+
+	@property
+	def steps(self):
+		return self._steps
 
 	@property
 	def frames(self):
@@ -54,3 +64,10 @@ class RouteDetail(object):
 						self._parse_variables(tokens[1])
 				elif phase == 2 and len(line) > 1:
 					self._data.append(line.rstrip())
+				elif phase >= 3 and len(line) > 1:
+					tokens = line.split()
+
+					if tokens[0] in ['Optional', 'Extra']:
+						self._steps += int(tokens[2])
+					elif tokens[0] == 'Encounters:':
+						self._encounters = int(tokens[1])

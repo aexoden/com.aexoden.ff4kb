@@ -2,6 +2,7 @@ import json
 
 from django.http import Http404, HttpResponse
 from django.shortcuts import render
+from django.urls import reverse
 
 from .models import RouteDetail
 
@@ -40,12 +41,18 @@ def index(request):
 
 
 def route(request, route):
-	seed_frames = []
+	seed_metrics = {
+		'frames': [],
+		'encounters': [],
+		'steps': [],
+	}
 
 	try:
 		for seed in range(256):
 			r = RouteDetail(route, seed)
-			seed_frames.append(r.frames)
+			seed_metrics['frames'].append(r.frames)
+			seed_metrics['encounters'].append(r.encounters)
+			seed_metrics['steps'].append(r.steps)
 	except FileNotFoundError:
 		raise Http404("Route does not exist.")
 
@@ -59,22 +66,54 @@ def route(request, route):
 
 			group.append({
 				'seed': seed,
-				'background': get_color(seed_frames[seed], min(seed_frames), max(seed_frames))
+				'background': get_color(seed_metrics['frames'][seed], min(seed_metrics['frames']), max(seed_metrics['frames']))
 			})
 
 		seeds.append(group)
 
-	fastest_seed = seed_frames.index(min(seed_frames))
-	fastest_time = '{:0.3f}s'.format(seed_frames[fastest_seed] / 60.0988)
+	metrics = []
+
+	metric_data = {
+		'Time': 'frames',
+		'Encounters': 'encounters',
+		'Extra Steps': 'steps',
+	}
+
+	for metric, key in metric_data.items():
+		values = {
+			'best': min(seed_metrics[key]),
+			'median': sorted(seed_metrics[key])[len(seed_metrics[key]) // 2],
+			'worst': max(seed_metrics[key]),
+		}
+
+		result = {
+			'name': metric,
+		}
+
+		for type in values:
+			selected = []
+
+			for seed, value in enumerate(seed_metrics[key]):
+				if value == values[type]:
+					selected.append(seed)
+
+			if metric == 'Time':
+				value = '{:0.3f}s'.format(values[type] / 60.0988)
+			else:
+				value = '{}'.format(values[type])
+
+			url = reverse('routes:detail', args=(route, selected[0]))
+
+			result[type] = '{} (<a href="{}">Seed {}</a>{})'.format(value, url, selected[0], ' and {} others'.format(len(selected) - 1) if len(selected) > 1 else '')
+
+		metrics.append(result)
 
 	context = {
 		'route': route,
 		'route_data': ROUTES[route],
-		'fastest_seed': fastest_seed,
-		'fastest_time': fastest_time,
+		'metrics': metrics,
 		'title': route,
 		'seeds': seeds,
-		'seed_frames': seed_frames,
 	}
 
 	return render(request, 'routes/route.html', context)
