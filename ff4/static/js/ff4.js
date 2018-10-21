@@ -2797,7 +2797,8 @@ com.aexoden.ff4 = function()
 		if (Object.keys(vars).length == 0) {
 			target.innerHTML = '<p class="alert alert-success" style="margin-bottom:0;">There are no extra steps to take! Easy!</p>';
 		} else {
-			target.innerHTML += '<ul>';
+			target.innerHTML += '<p class="alert alert-primary">This summary should include all critical information needed to follow the route. If you have any problems, please contact me.</p>';
+			list = '<ul>';
 
 			Object.entries(vars).forEach(
 				([index, value]) => {
@@ -2805,6 +2806,7 @@ com.aexoden.ff4 = function()
 					var varData = data.variableData[varKey];
 
 					var output = '';
+					var output_class = '';
 
 					if (varData.type == VariableFlags.EXTRA) {
 						var description = varData.description;
@@ -2814,16 +2816,19 @@ com.aexoden.ff4 = function()
 							description = path.location + path.disambiguation;
 						}
 
+						output_class = "text-primary";
 						output = 'Take ' + value + ' extra steps in ' + description + '.';
 					} else if (varData.type == VariableFlags.CHOICE) {
+						output_class = "text-success";
 						output = varData.descriptions[value];
 					}
 
-					target.innerHTML += '<li>' + output + '</li>';
+					list += '<li class ="' + output_class + '">' + output + '</li>';
 				}
 			);
 
-			target.innerHTML += '</ul>';
+			list += '</ul>';
+			target.innerHTML += list;
 		}
 	}
 
