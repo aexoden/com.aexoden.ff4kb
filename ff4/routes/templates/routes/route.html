@@ -1,5 +1,11 @@
 {% extends "routes/base.html" %}
 {% load static %}
+{% load django_bootstrap_breadcrumbs %}
+
+{% block breadcrumbs %}
+	{{ block.super }}
+	{% breadcrumb route_data.name "routes:route" route %}
+{% endblock %}
 
 {% block subtitle %}{{ route_data.name }}{% endblock %}
 

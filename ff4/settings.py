@@ -34,6 +34,7 @@ class Common(Configuration):
 		'django.contrib.staticfiles',
 
 		'django_extensions',
+		'django_bootstrap_breadcrumbs',
 		'debug_toolbar',
 
 		'ff4.routes',

@@ -1,9 +1,18 @@
 {% extends "routes/base.html" %}
 {% load static %}
+{% load django_bootstrap_breadcrumbs %}
+
+{% block breadcrumbs %}
+	{{ block.super }}
+	{% breadcrumb route_data.name "routes:route" route %}
+	{% breadcrumb_for "routes:detail" route seed %}Seed {{ seed }}{% endbreadcrumb_for %}
+{% endblock %}
+
 
 {% block subtitle %}{{ route_data.name }} Seed {{ seed }}{% endblock %}
 
-{% block content %}				<h1>{{ route_data.name }} Seed {{ seed }} Step Route</h1>
+{% block content %}
+				<h1>{{ route_data.name }} Seed {{ seed }} Step Route</h1>
 				<h2 id="overview">Route Overview</h2>
 				<dl class="dl row">
 {% for statistic in statistics %}

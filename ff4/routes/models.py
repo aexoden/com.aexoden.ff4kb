@@ -73,7 +73,7 @@ class RouteDetail(object):
 					tokens = line.split('\t')
 
 					if tokens[0] == 'ROUTE':
-						self._route_description = tokens[1]
+						self._route_description = tokens[1].strip()
 					elif tokens[0] == 'VERSION':
 						self._route_version = int(tokens[1])
 					elif tokens[0] == 'FRAMES':
