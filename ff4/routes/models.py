@@ -9,8 +9,6 @@ class RouteDetail(object):
 		self._seed = seed
 		self._filename = os.path.join(settings.BASE_DIR, 'ff4', 'data', 'routes', route, '{:03d}.txt'.format(seed))
 
-		self._steps = 0
-
 		self._data = []
 		self._vars = {}
 		self._load_data()
@@ -20,16 +18,36 @@ class RouteDetail(object):
 		return self._data
 
 	@property
+	def route_description(self):
+		return '{} (version {})'.format(self._route_description, self._route_version)
+
+	@property
 	def encounters(self):
 		return self._encounters
 
 	@property
 	def steps(self):
-		return self._steps
+		return self._optional_steps + self._extra_steps
+
+	@property
+	def optional_steps(self):
+		return self._optional_steps
+
+	@property
+	def extra_steps(self):
+		return self._extra_steps
 
 	@property
 	def frames(self):
 		return self._frames
+
+	@property
+	def saved_time(self):
+		return self._saved_time
+
+	@property
+	def saved_encounters(self):
+		return self._saved_encounters
 
 	@property
 	def vars(self):
@@ -67,7 +85,13 @@ class RouteDetail(object):
 				elif phase >= 3 and len(line) > 1:
 					tokens = line.split()
 
-					if tokens[0] in ['Optional', 'Extra']:
-						self._steps += int(tokens[2])
+					if tokens[0] == 'Optional':
+						self._optional_steps = int(tokens[2])
+					elif tokens[0] == 'Extra':
+						self._extra_steps = int(tokens[2])
 					elif tokens[0] == 'Encounters:':
 						self._encounters = int(tokens[1])
+					elif tokens[0] == 'Encounters':
+						self._saved_encounters = int(tokens[2])
+					elif tokens[0] == 'Time':
+						self._saved_time = float(tokens[2][:-1])

@@ -112,7 +112,6 @@ def route(request, route):
 		'route': route,
 		'route_data': ROUTES[route],
 		'metrics': metrics,
-		'title': route,
 		'seeds': seeds,
 	}
 
@@ -124,10 +123,20 @@ def detail(request, route, seed):
 	except FileNotFoundError:
 		raise Http404("Route and seed combination does not exist.")
 
+	statistics = [
+		{'name': 'Route', 'data': r.route_description},
+		{'name': 'Route Time', 'data': '{:0.3f}s (saves {:0.3f}s)'.format(r.frames / 60.0988, r.saved_time)},
+		{'name': 'Route Encounters', 'data': '{} (saves {} encounters)'.format(r.encounters, r.saved_encounters)},
+		{'name': 'Optional Steps', 'data': r.optional_steps},
+		{'name': 'Extra Steps', 'data': r.extra_steps},
+	]
+
 	context = {
 		'detail': r.data,
 		'route': route,
-		'title': '{} Seed {}'.format(route, seed),
+		'route_data': ROUTES[route],
+		'statistics': statistics,
+		'seed': seed,
 		'vars': json.dumps(r.vars),
 	}
 

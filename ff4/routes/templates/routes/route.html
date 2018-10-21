@@ -1,9 +1,7 @@
 {% extends "routes/base.html" %}
 {% load static %}
 
-{% block subtitle %}{{ title }}{% endblock %}
-
-{% block subheading %}{{ title }}{% endblock %}
+{% block subtitle %}{{ route_data.name }}{% endblock %}
 
 {% block content %}				<h1>{{ route_data.name }} Step Routes</h1>
 				<h2 id="statistics">Statistics</h2>
