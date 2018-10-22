@@ -8,7 +8,21 @@ from .models import RouteDetail
 
 ROUTES = {
 	'paladin': {
-		'name': 'Paladin%'
+		'name': 'Paladin%',
+		'enabled': True,
+		'description': 'From the beginning of the game until Cecil becomes a paladin.',
+	},
+	'nocw': {
+		'name': 'Any% NoCW',
+		'description': 'From the beginning of the game until Zeromus is defeated.',
+	},
+	'no64-rosa': {
+		'name': 'Any% No64 (Rosa)',
+		'description': 'From the beginning of the game until Zeromus is defeated. 64-floor glitch is disallowed. Rosa is primary damage dealer at the end.',
+	},
+	'no64-excalbur': {
+		'name': 'Any% No64 (Edge+Excalbur)',
+		'description': 'From the beginning of the game until Zeromus is defeated. 64-floor glitch is disallowed. Edge is primary damage dealer at the end.'
 	}
 }
 
@@ -37,7 +51,11 @@ def get_color(value, best_value, worst_value):
 
 
 def index(request):
-	return HttpResponse('Hello, world. You are at the index.')
+	context = {
+		'routes': ROUTES,
+	}
+
+	return render(request, 'routes/index.html', context)
 
 
 def route(request, route):

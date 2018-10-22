@@ -1,0 +1,29 @@
+{% extends "routes/base.html" %}
+{% load static %}
+{% load django_bootstrap_breadcrumbs %}
+
+{% block breadcrumbs %}
+	{{ block.super }}
+{% endblock %}
+
+{% block subtitle %}Index{% endblock %}
+
+{% block content %}				<h1>Step Routes</h1>
+			<h2>Introduction</h2>
+			<p>One of the potentially most annoying parts of any attempted speedrun of <em>Final Fantasy IV</em> is the prospect of random encounters. They are rarely actually fought, and the potential for a back attack or surprise attack means precious seconds lost. The routes listed on this page serve to minimize the amount of time wasted on random encounters.</p>
+			<p>Essentially, a step route is a series of extra steps or alternate paths taken while running the game with the goal of decreasing the total amount of time the run takes. This page provides ready-to-use step routes for the original US SNES release of <em>Final Fantasy IV</em> (originally released as <em>Final Fantasy II</em>). Routes for other releases may also be available at some point.</p>
+			<h2>Tutorial</h2>
+			<p>At some point, a completely introductory tutorial will once again be available. For now, each route has its own individual <em>Tutorial</em> tab which should help newcomers.</p>
+			<p>Until then, it is left as an exercise for the reader to actually determine your seed. This is the beta site, sorry.</p>
+			<h2>Standard Routes</h2>
+			<dl class="row">
+{% for route, route_data in routes.items %}
+{% if route_data.enabled %}
+				<dt class="col-sm-3"><a href="{% url "routes:route" route %}">{{ route_data.name }}</a></dt>
+{% else %}
+				<dt class="col-sm-3 text-muted">{{ route_data.name }}</dt>
+{% endif %}
+				<dd class="col-sm-9">{{ route_data.description }}</dd>
+{% endfor %}
+			</dl>
+{% endblock %}
