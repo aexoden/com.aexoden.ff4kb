@@ -1,0 +1,37 @@
+{% extends "tools/base.html" %}
+{% load static %}
+{% load django_bootstrap_breadcrumbs %}
+
+{% block breadcrumbs %}
+	{{ block.super }}
+	{% breadcrumb "Seed Finder" "tools:seed-finder" %}
+{% endblock %}
+
+{% block subtitle %}Seed Finder{% endblock %}
+
+{% block content %}				<h1>Seed Finder</h1>
+				<p>This tool will help you determine which seed you are on for the purpose of using a step route.</p>
+				<div class="btn-group-toggle" data-toggle="buttons">
+					<button type="button" class="btn btn-primary" id="button-image-previous" disabled>Previous Image</button>
+					<button type="button" class="btn btn-primary" id="button-image-next" disabled>Next Image</button>
+					<button type="button" class="btn btn-primary" id="button-reset">Reset</button>
+				</div>
+				<div class="row" style="margin-top: 1.0em">
+					<div class="col">
+						<canvas width="512" height="512" id="map">
+					</div>
+					<div class="col" id="encounters">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col" id="seeds">
+					</div>
+				</div>
+{% endblock %}
+
+{% block extrajs %}
+				<script src="{% static "js/seed-finder.js" %}"></script>
+				<script>
+					com.aexoden.ff4.init();
+				</script>
+{% endblock %}

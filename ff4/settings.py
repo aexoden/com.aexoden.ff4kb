@@ -38,6 +38,7 @@ class Common(Configuration):
 		'debug_toolbar',
 
 		'ff4.routes',
+		'ff4.tools',
 	]
 
 	MIDDLEWARE = [
