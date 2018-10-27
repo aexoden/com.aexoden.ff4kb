@@ -2551,9 +2551,18 @@ com.aexoden.ff4 = function()
 			}
 		);
 
+		var route = document.getElementById('route-select').value;
+
 		var e = document.getElementById('seeds');
-		e.innerHTML = '<h3>Possible Seeds</h3>';
-		e.innerHTML += '<p>' + Array.from(possibleSeeds).join(', ') + '</p>';
+		e.innerHTML = '';
+
+		var possibleSeedsLinks = [];
+
+		for (seed of possibleSeeds) {
+			possibleSeedsLinks.push('<a href="/routes/' + route + '/' + seed + '/">' + seed + '</a>');
+		}
+
+		e.innerHTML += '<p>' + Array.from(possibleSeedsLinks).join(', ') + '</p>';
 	}
 
 	var updateSteps = function() {
