@@ -133,6 +133,98 @@ com.aexoden.ff4 = function()
 			"mt-ordeals-3rd-station-0",
 			"mt-ordeals-7th-station-0",
 			"mt-ordeals-summit-0"
+		],
+		"nocw": [
+			"overworld-mist-0",
+			"village-mist-0",
+			"village-mist-weapon-0",
+			"village-mist-1",
+			"village-mist-house-0",
+			"village-mist-2",
+			"overworld-kaipo-0",
+			"kaipo-0",
+			"kaipo-inn-0",
+			"kaipo-1",
+			"kaipo-house-0",
+			"kaipo-2",
+			"overworld-kaipo-1",
+			"watery-pass-south-b1f-0",
+			"watery-pass-south-b2f-0",
+			"watery-pass-south-b2f-save-room-0",
+			"watery-pass-south-b2f-1",
+			"watery-pass-south-b3f-0",
+			"watery-pass-north-b2f-0",
+			"watery-pass-north-b1f-0",
+			"overworld-kaipo-2",
+			"waterfalls-b1f-0",
+			"waterfalls-b2f-0",
+			"waterfalls-lake-0",
+			"waterfalls-lake-1",
+			"overworld-damcyan-0",
+			"damcyan-0",
+			"damcyan-1f-0",
+			"damcyan-2f-0",
+			"damcyan-3f-0",
+			"overworld-damcyan-1",
+			"antlion-b1f-0",
+			"antlion-b2f-0",
+			"antlion-b2f-1",
+			"antlion-b2f-charm-room-0",
+			"antlion-b2f-2",
+			"antlions-nest-0",
+			"antlions-nest-1",
+			"antlion-b2f-3",
+			"antlion-b2f-4",
+			"antlion-b2f-charm-room-1",
+			"antlion-b2f-5",
+			"antlion-b1f-1",
+			"overworld-damcyan-2",
+			"overworld-kaipo-3",
+			"overworld-kaipo-4",
+			"kaipo-3",
+			"kaipo-house-1",
+			"kaipo-4",
+			"overworld-kaipo-5",
+			"overworld-damcyan-3",
+			"overworld-damcyan-4",
+			"mt-hobs-west-0",
+			"mt-hobs-summit-0",
+			"mt-hobs-east-0",
+			"overworld-fabul-0",
+			"overworld-fabul-1",
+			"fabul-0",
+			"fabul-1f-0",
+			"fabul-2f-0",
+			"fabul-kings-room-0",
+			"fabul-crystal-room-0",
+			"fabul-kings-room-1",
+			"fabul-2f-1",
+			"fabul-1f-1",
+			"fabul-inn-0",
+			"fabul-right-tower-3f-0",
+			"fabul-right-tower-2f-0",
+			"fabul-right-tower-1f-0",
+			"fabul-1",
+			"fabul-2f-2",
+			"fabul-1f-2",
+			"fabul-2",
+			"overworld-fabul-2",
+			"overworld-mysidia-0",
+			"mysidia-0",
+			"mysidia-armor-shop-0",
+			"mysidia-1",
+			"mysidia-house-of-wishes-0",
+			"mysidia-2",
+			"mysidia-item-shop-0",
+			"mysidia-3",
+			"overworld-mysidia-1",
+			"overworld-mt-ordeals-0",
+			"overworld-mt-ordeals-1",
+			"mt-ordeals-0",
+			"mt-ordeals-3rd-station-0",
+			"mt-ordeals-7th-station-0",
+			"mt-ordeals-summit-0",
+			"mt-ordeals-summit-1"
 		]
 	};
 
@@ -537,6 +629,17 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"mt-ordeals-summit-2": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"mt-ordeals-summit-1": {
+					"index": "0",
+					"location": "Mt.Ordeals Summit [after Paladin]",
+					"disambiguation": ""
+				}
+			}
+		},
 		"overworld-damcyan-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -780,6 +883,50 @@ com.aexoden.ff4 = function()
 			38: ["mt-ordeals-7th-station-0"],
 			39: ["mt-ordeals-summit-0"],
 			40: ["mt-ordeals-summit-1"]
+		},
+		"nocw": {
+			0: ["watery-pass-south-b2f-save-room-0"],
+			1: ["watery-pass-south-b2f-1"],
+			2: ["watery-pass-south-b3f-0"],
+			3: ["watery-pass-north-b2f-0"],
+			4: ["watery-pass-north-b1f-0"],
+			5: ["overworld-kaipo-2"],
+			6: ["waterfalls-b1f-0"],
+			7: ["waterfalls-b2f-0"],
+			8: ["waterfalls-lake-0"],
+			9: ["waterfalls-lake-1"],
+			10: ["overworld-kaipo-3"],
+			11: ["overworld-damcyan-0"],
+			12: ["damcyan-0"],
+			13: ["antlion-b1f-0"],
+			14: ["antlion-b2f-choice-0"],
+			15: ["antlion-b2f-0", "antlion-b2f-1"],
+			16: ["antlion-b2f-charm-room-0"],
+			17: ["antlion-b2f-2"],
+			18: ["antlions-nest-0"],
+			19: ["antlions-nest-1"],
+			20: ["antlion-b2f-choice-1"],
+			21: ["antlion-b2f-4"],
+			22: ["antlion-b2f-charm-room-1"],
+			23: ["antlion-b2f-3", "antlion-b2f-5"],
+			24: ["antlion-b1f-1"],
+			25: ["mt-hobs-west-0"],
+			26: ["mt-hobs-summit-0"],
+			27: ["mt-hobs-summit-1"],
+			28: ["mt-hobs-east-0"],
+			29: ["overworld-fabul-0"],
+			30: ["fabul-0"],
+			31: ["overworld-fabul-1"],
+			32: ["overworld-mysidia-0"],
+			33: ["overworld-mysidia-1"],
+			34: ["overworld-mt-ordeals-0"],
+			35: ["mt-ordeals-0"],
+			36: ["mt-ordeals-3rd-station-0"],
+			37: ["mt-ordeals-3rd-station-1"],
+			38: ["mt-ordeals-7th-station-0"],
+			39: ["mt-ordeals-summit-0"],
+			40: ["mt-ordeals-summit-1"],
+			41: ["mt-ordeals-summit-2"]
 		}
 	};
 
@@ -1630,6 +1777,33 @@ com.aexoden.ff4 = function()
 				"extra-2-1": [
 					[6, 11, SegmentFlags.NONE],
 					[6, 12, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"mt-ordeals-summit-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3087-0",
+			"segments": {
+				"base-0": [
+					[6, 10, SegmentFlags.START],
+					[6, 11, SegmentFlags.NONE],
+					[9, 11, SegmentFlags.NONE],
+					[9, 10, SegmentFlags.NONE],
+					[16, 10, SegmentFlags.NONE],
+					[16, 16, SegmentFlags.NONE],
+					[18, 16, SegmentFlags.NONE],
+					[18, 23, SegmentFlags.NONE],
+					[15, 23, SegmentFlags.NONE],
+					[15, 21, SegmentFlags.END]
+				],
+				"optional-1-0": [
+					[16, 15, SegmentFlags.NONE],
+					[17, 15, SegmentFlags.ANNOTATE],
+					[17, 16, SegmentFlags.NONE]
+				],
+				"extra-2-0": [
+					[16, 10, SegmentFlags.NONE],
+					[17, 10, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -2722,7 +2896,7 @@ com.aexoden.ff4 = function()
 											var fields = key.split("-");
 
 											if (path in varData.paths) {
-												if (fields[0] == "extra" && fields[2] == varData.paths[path].index) {
+												if ((fields[0] == "extra" || fields[0] == "optional") && fields[2] == varData.paths[path].index) {
 													if (fields[1] == "2") {
 														extraEven = true;
 													} else if (fields[1] == "1") {
@@ -2758,6 +2932,8 @@ com.aexoden.ff4 = function()
 												value = value - (value % 2);
 											}
 										}
+
+										console.log(path, extraEven, extraOdd, value);
 
 										if (value > 0) {
 											caption.innerHTML += "<dt>" + varData.paths[path].location + "</dt><dd>Take " + value + " extra step" + (value > 1 ? "s" : "") + varData.paths[path].disambiguation + ".</dd>";
@@ -2808,22 +2984,24 @@ com.aexoden.ff4 = function()
 					var output = '';
 					var output_class = '';
 
-					if (varData.type == VariableFlags.EXTRA) {
-						var description = varData.description;
+					if (varData) {
+						if (varData.type == VariableFlags.EXTRA) {
+							var description = varData.description;
 
-						if (!description) {
-							var path = varData.paths[Object.keys(varData.paths)[0]];
-							description = path.location + path.disambiguation;
+							if (!description) {
+								var path = varData.paths[Object.keys(varData.paths)[0]];
+								description = path.location + path.disambiguation;
+							}
+
+							output_class = "text-primary";
+							output = 'Take ' + value + ' extra steps in ' + description + '.';
+						} else if (varData.type == VariableFlags.CHOICE) {
+							output_class = "text-success";
+							output = varData.descriptions[value];
 						}
 
-						output_class = "text-primary";
-						output = 'Take ' + value + ' extra steps in ' + description + '.';
-					} else if (varData.type == VariableFlags.CHOICE) {
-						output_class = "text-success";
-						output = varData.descriptions[value];
+						list += '<li class ="' + output_class + '">' + output + '</li>';
 					}
-
-					list += '<li class ="' + output_class + '">' + output + '</li>';
 				}
 			);
 
