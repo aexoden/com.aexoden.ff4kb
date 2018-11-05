@@ -14,6 +14,7 @@ ROUTES = {
 	},
 	'nocw': {
 		'name': 'Any% NoCW',
+		'enabled': True,
 		'description': 'From the beginning of the game until Zeromus is defeated.',
 	},
 	'no64-rosa': {
