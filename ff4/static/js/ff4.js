@@ -16,8 +16,9 @@ com.aexoden.ff4 = function()
 	 */
 
 	var PathFlags = {
-		NONE:   0x00,
-		STEPS:  0x01
+		NONE:           0x00,
+		STEPS:          0x01,
+		YELLOW_CHOCOBO: 0x02
 	};
 
 	var SegmentFlags = {
@@ -228,7 +229,8 @@ com.aexoden.ff4 = function()
 			"mt-ordeals-7th-station-1",
 			"mt-ordeals-3rd-station-1",
 			"mt-ordeals-1",
-			"overworld-mt-ordeals-2"
+			"overworld-mt-ordeals-2",
+			"chocobos-forest-mt-ordeals-0"
 		]
 	};
 
@@ -1251,6 +1253,11 @@ com.aexoden.ff4 = function()
 					[16, 11, SegmentFlags.END]
 				]
 			}
+		},
+		"chocobos-forest-mt-ordeals-0": {
+			"flags": PathFlags.YELLOW_CHOCOBO,
+			"map": "30D1-0",
+			"segments": {}
 		},
 		"damcyan-1f-0": {
 			"flags": PathFlags.STEPS,
@@ -3018,6 +3025,10 @@ com.aexoden.ff4 = function()
 
 					if ((data.paths[path].flags & PathFlags.STEPS) == 0) {
 						caption.innerHTML += '<p><em>Steps on this map do not matter.</em></p>';
+					}
+
+					if ((data.paths[path].flags & PathFlags.YELLOW_CHOCOBO) > 0) {
+						caption.innerHTML += '<p>Leave by picking up a <strong>yellow</strong> chocobo.</p>';
 					}
 
 					if (path in activeMaps) {
