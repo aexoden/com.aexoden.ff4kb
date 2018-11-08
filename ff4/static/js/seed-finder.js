@@ -2,6 +2,13 @@
  * Global Variables
  */
 
+/*
+ * TODO:
+ *  - Detect Twin Seeds and provide additional clarification to the user.
+ *  - Give a better description of how to use the tool.
+ *  - Allow for fuzzy searches (with missing encounters or unsure locations).
+ */
+
 var com = com || {};
 com.aexoden = com.aexoden || {};
 
