@@ -224,7 +224,8 @@ com.aexoden.ff4 = function()
 			"mt-ordeals-3rd-station-0",
 			"mt-ordeals-7th-station-0",
 			"mt-ordeals-summit-0",
-			"mt-ordeals-summit-1"
+			"mt-ordeals-summit-1",
+			"mt-ordeals-7th-station-1"
 		]
 	};
 
@@ -603,6 +604,17 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"mt-ordeals-7th-station-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"mt-ordeals-7th-station-1": {
+					"index": "0",
+					"location": "Mt.Ordeals-7th station [after Paladin]",
+					"disambiguation": ""
+				}
+			}
+		},
 		"mt-ordeals-summit-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {
@@ -926,7 +938,8 @@ com.aexoden.ff4 = function()
 			38: ["mt-ordeals-7th-station-0"],
 			39: ["mt-ordeals-summit-0"],
 			40: ["mt-ordeals-summit-1"],
-			41: ["mt-ordeals-summit-2"]
+			41: ["mt-ordeals-summit-2"],
+			42: ["mt-ordeals-7th-station-1"]
 		}
 	};
 
@@ -1727,6 +1740,31 @@ com.aexoden.ff4 = function()
 					[24, 8, SegmentFlags.NONE],
 					[11, 8, SegmentFlags.NONE],
 					[11, 7, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[18, 8, SegmentFlags.NONE],
+					[19, 8, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[24, 8, SegmentFlags.NONE],
+					[25, 8, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"mt-ordeals-7th-station-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3086-0",
+			"segments": {
+				"base-0": [
+					[11, 8, SegmentFlags.START],
+					[24, 8, SegmentFlags.NONE],
+					[24, 17, SegmentFlags.NONE],
+					[18, 17, SegmentFlags.NONE],
+					[18, 23, SegmentFlags.NONE],
+					[19, 23, SegmentFlags.NONE],
+					[19, 25, SegmentFlags.NONE],
+					[23, 25, SegmentFlags.NONE],
+					[23, 22, SegmentFlags.END],
 				],
 				"extra-1-0": [
 					[18, 8, SegmentFlags.NONE],
