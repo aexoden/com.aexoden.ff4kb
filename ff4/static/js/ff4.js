@@ -3075,8 +3075,6 @@ com.aexoden.ff4 = function()
 											}
 										}
 
-										console.log(path, extraEven, extraOdd, value);
-
 										if (value > 0) {
 											caption.innerHTML += "<dt>" + varData.paths[path].location + "</dt><dd>Take " + value + " extra step" + (value > 1 ? "s" : "") + varData.paths[path].disambiguation + ".</dd>";
 										} else if (!drawAll) {
