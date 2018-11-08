@@ -227,7 +227,8 @@ com.aexoden.ff4 = function()
 			"mt-ordeals-summit-1",
 			"mt-ordeals-7th-station-1",
 			"mt-ordeals-3rd-station-1",
-			"mt-ordeals-1"
+			"mt-ordeals-1",
+			"overworld-mt-ordeals-2"
 		]
 	};
 
@@ -753,6 +754,17 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"overworld-mt-ordeals-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"overworld-mt-ordeals-2": {
+					"index": "0",
+					"location": "Overworld (Mt.Ordeals) [after Mt.Ordeals]",
+					"disambiguation": ""
+				}
+			}
+		},
 		"overworld-mysidia-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -965,7 +977,8 @@ com.aexoden.ff4 = function()
 			41: ["mt-ordeals-summit-2"],
 			42: ["mt-ordeals-7th-station-1"],
 			43: ["mt-ordeals-3rd-station-2"],
-			44: ["mt-ordeals-1"]
+			44: ["mt-ordeals-1"],
+			45: ["overworld-mt-ordeals-1"]
 		}
 	};
 
@@ -2317,6 +2330,22 @@ com.aexoden.ff4 = function()
 					[211, 201, SegmentFlags.NONE],
 					[218, 201, SegmentFlags.NONE],
 					[218, 199, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[218, 200, SegmentFlags.NONE],
+					[219, 200, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"overworld-mt-ordeals-2": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [199, 188, 32, 32],
+			"segments": {
+				"base-0": [
+					[218, 200, SegmentFlags.START],
+					[218, 209, SegmentFlags.NONE],
+					[213, 209, SegmentFlags.END]
 				],
 				"extra-2-0": [
 					[218, 200, SegmentFlags.NONE],
