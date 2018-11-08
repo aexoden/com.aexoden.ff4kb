@@ -3032,7 +3032,7 @@ com.aexoden.ff4 = function()
 							}
 
 							output_class = "text-primary";
-							output = 'Take ' + value + ' extra steps in ' + description + '.';
+							output = 'Take ' + value + ' extra step' + (value == 1 ? '' : 's') + ' in ' + description + '.';
 						} else if (varData.type == VariableFlags.CHOICE) {
 							output_class = "text-success";
 							output = varData.descriptions[value];
