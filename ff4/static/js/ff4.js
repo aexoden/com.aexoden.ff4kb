@@ -230,7 +230,9 @@ com.aexoden.ff4 = function()
 			"mt-ordeals-3rd-station-1",
 			"mt-ordeals-1",
 			"overworld-mt-ordeals-2",
-			"chocobos-forest-mt-ordeals-0"
+			"chocobos-forest-mt-ordeals-0",
+			"overworld-mt-ordeals-3",
+			"overworld-mysidia-2"
 		]
 	};
 
@@ -2360,6 +2362,20 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"overworld-mt-ordeals-3": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [182, 184, 32, 32],
+			"segments": {
+				"base-0": [
+					[213, 209, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[213, 200, SegmentFlags.VEHICLE],
+					[201, 200, SegmentFlags.VEHICLE],
+					[201, 192, SegmentFlags.VEHICLE],
+					[182, 192, SegmentFlags.VEHICLE | SegmentFlags.END]
+				]
+			}
+		},
 		"overworld-mysidia-0": {
 			"flags": PathFlags.STEPS,
 			"map": "0000-0",
@@ -2390,6 +2406,27 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[157, 200, SegmentFlags.NONE],
 					[157, 199, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"boundary-0": [
+					[160, 185, SegmentFlags.NONE],
+					[160, 216, SegmentFlags.NONE]
+				]
+			}
+		},
+		"overworld-mysidia-2": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [152, 185, 32, 32],
+			"segments": {
+				"base-0": [
+					[182, 192, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[182, 211, SegmentFlags.VEHICLE],
+					[175, 211, SegmentFlags.VEHICLE],
+					[175, 203, SegmentFlags.VEHICLE],
+					[157, 203, SegmentFlags.VEHICLE],
+					[157, 199, SegmentFlags.VEHICLE],
+					[156, 199, SegmentFlags.VEHICLE],
+					[155, 199, SegmentFlags.START | SegmentFlags.END]
 				],
 				"boundary-0": [
 					[160, 185, SegmentFlags.NONE],
@@ -2837,7 +2874,7 @@ com.aexoden.ff4 = function()
 				var fillStyle = "#FFFFFF";
 
 				if (fields[0] == "boundary") {
-					fillStyle = "#FFFF00";
+					fillStyle = "#FFA500";
 				}
 
 				if (fields[0] == "extra" || fields[0] == "optional" || fields[0] == "alternate") {
