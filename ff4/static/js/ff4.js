@@ -232,7 +232,12 @@ com.aexoden.ff4 = function()
 			"overworld-mt-ordeals-2",
 			"chocobos-forest-mt-ordeals-0",
 			"overworld-mt-ordeals-3",
-			"overworld-mysidia-2"
+			"overworld-mysidia-2",
+			"mysidia-4",
+			"mysidia-house-of-wishes-1",
+			"mysidia-5",
+			"mysidia-serpent-road-0",
+			"baron-serpent-road-0"
 		]
 	};
 
@@ -791,6 +796,17 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"serpent-road-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"baron-serpent-road-0": {
+					"index": "0",
+					"location": "Baron Serpent Road",
+					"disambiguation": ""
+				}
+			}
+		},
 		"waterfalls-b1f-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -982,7 +998,8 @@ com.aexoden.ff4 = function()
 			42: ["mt-ordeals-7th-station-1"],
 			43: ["mt-ordeals-3rd-station-2"],
 			44: ["mt-ordeals-1"],
-			45: ["overworld-mt-ordeals-1"]
+			45: ["overworld-mt-ordeals-1"],
+			46: ["serpent-road-0"]
 		}
 	};
 
@@ -1243,6 +1260,24 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[14, 17, SegmentFlags.NONE],
 					[15, 17, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"baron-serpent-road-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3097-0",
+			"segments": {
+				"base-0": [
+					[5, 5, SegmentFlags.START],
+					[5, 14, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[5, 10, SegmentFlags.NONE],
+					[5, 9, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[5, 10, SegmentFlags.NONE],
+					[6, 10, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -1994,6 +2029,30 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"mysidia-4": {
+			"flags": PathFlags.NONE,
+			"map": "3003-0",
+			"segments": {
+				"base-0": [
+					[16, 31, SegmentFlags.START],
+					[16, 8, SegmentFlags.END]
+				]
+			}
+		},
+		"mysidia-5": {
+			"flags": PathFlags.NONE,
+			"map": "3003-0",
+			"segments": {
+				"base-0": [
+					[16, 9, SegmentFlags.START],
+					[16, 20, SegmentFlags.NONE],
+					[19, 20, SegmentFlags.NONE],
+					[19, 19, SegmentFlags.NONE],
+					[25, 19, SegmentFlags.NONE],
+					[25, 17, SegmentFlags.END]
+				]
+			}
+		},
 		"mysidia-armor-shop-0": {
 			"flags": PathFlags.NONE,
 			"map": "30E6-0",
@@ -2019,6 +2078,20 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"mysidia-house-of-wishes-1": {
+			"flags": PathFlags.NONE,
+			"map": "3016-0",
+			"segments": {
+				"base-0": [
+					[14, 9, SegmentFlags.START],
+					[14, 6, SegmentFlags.END]
+				],
+				"base-1": [
+					[14, 9, SegmentFlags.START],
+					[14, 12, SegmentFlags.END]
+				]
+			}
+		},
 		"mysidia-item-shop-0": {
 			"flags": PathFlags.NONE,
 			"map": "30E7-0",
@@ -2027,6 +2100,16 @@ com.aexoden.ff4 = function()
 					[5, 7, SegmentFlags.START],
 					[5, 5, SegmentFlags.RETURN],
 					[5, 10, SegmentFlags.END]
+				]
+			}
+		},
+		"mysidia-serpent-road-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3089-0",
+			"segments": {
+				"base-0": [
+					[4, 7, SegmentFlags.START],
+					[4, 5, SegmentFlags.END]
 				]
 			}
 		},
