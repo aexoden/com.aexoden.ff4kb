@@ -237,7 +237,14 @@ com.aexoden.ff4 = function()
 			"mysidia-house-of-wishes-1",
 			"mysidia-5",
 			"mysidia-serpent-road-0",
-			"baron-serpent-road-0"
+			"baron-town-serpent-road-0",
+			"baron-town-0",
+			"baron-town-inn-0",
+			"baron-town-1",
+			"baron-town-weapon-shop-0",
+			"baron-town-2",
+			"old-water-way-antechamber-0",
+			"old-water-way-0"
 		]
 	};
 
@@ -686,6 +693,17 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"old-water-way-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"old-water-way-0": {
+					"index": "0",
+					"location": "Old Water-way",
+					"disambiguation": ""
+				}
+			}
+		},
 		"overworld-damcyan-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -800,7 +818,7 @@ com.aexoden.ff4 = function()
 			"type": VariableFlags.EXTRA,
 			"routes": {},
 			"paths": {
-				"baron-serpent-road-0": {
+				"baron-town-serpent-road-0": {
 					"index": "0",
 					"location": "Baron Serpent Road",
 					"disambiguation": ""
@@ -999,7 +1017,8 @@ com.aexoden.ff4 = function()
 			43: ["mt-ordeals-3rd-station-2"],
 			44: ["mt-ordeals-1"],
 			45: ["overworld-mt-ordeals-1"],
-			46: ["serpent-road-0"]
+			46: ["serpent-road-0"],
+			47: ["old-water-way-0"]
 		}
 	};
 
@@ -1263,7 +1282,66 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
-		"baron-serpent-road-0": {
+		"baron-town-0": {
+			"flags": PathFlags.NONE,
+			"map": "3000-0",
+			"segments": {
+				"base-0": [
+					[4, 27, SegmentFlags.START],
+					[20, 27, SegmentFlags.NONE],
+					[20, 26, SegmentFlags.END]
+				]
+			}
+		},
+		"baron-town-1": {
+			"flags": PathFlags.NONE,
+			"map": "3000-0",
+			"segments": {
+				"base-0": [
+					[20, 26, SegmentFlags.START],
+					[20, 27, SegmentFlags.NONE],
+					[17, 27, SegmentFlags.NONE],
+					[17, 20, SegmentFlags.NONE],
+					[14, 20, SegmentFlags.NONE],
+					[14, 17, SegmentFlags.END],
+					[14, 16, SegmentFlags.END]
+				]
+			}
+		},
+		"baron-town-2": {
+			"flags": PathFlags.NONE,
+			"map": "3000-0",
+			"segments": {
+				"base-0": [
+					[14, 16, SegmentFlags.START],
+					[14, 20, SegmentFlags.NONE],
+					[7, 20, SegmentFlags.NONE],
+					[7, 21, SegmentFlags.NONE],
+					[3, 21, SegmentFlags.NONE],
+					[3, 20, SegmentFlags.END],
+					[3, 19, SegmentFlags.END]
+				]
+			}
+		},
+		"baron-town-inn-0": {
+			"flags": PathFlags.NONE,
+			"map": "300B-0",
+			"segments": {
+				"base-0": [
+					[14, 17, SegmentFlags.START],
+					[18, 17, SegmentFlags.NONE],
+					[18, 8, SegmentFlags.NONE],
+					[12, 8, SegmentFlags.NONE],
+					[12, 4, SegmentFlags.NONE],
+					[13, 4, SegmentFlags.END]
+				],
+				"base-1": [
+					[14, 15, SegmentFlags.START],
+					[14, 21, SegmentFlags.END]
+				]
+			}
+		},
+		"baron-town-serpent-road-0": {
 			"flags": PathFlags.STEPS,
 			"map": "3097-0",
 			"segments": {
@@ -1278,6 +1356,23 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[5, 10, SegmentFlags.NONE],
 					[6, 10, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"baron-town-weapon-shop-0": {
+			"flags": PathFlags.NONE,
+			"map": "300C-0",
+			"segments": {
+				"base-0": [
+					[7, 9, SegmentFlags.START],
+					[10, 9, SegmentFlags.NONE],
+					[10, 7, SegmentFlags.RETURN],
+					[10, 8, SegmentFlags.NONE],
+					[5, 8, SegmentFlags.NONE],
+					[5, 7, SegmentFlags.RETURN],
+					[5, 9, SegmentFlags.NONE],
+					[7, 9, SegmentFlags.NONE],
+					[7, 12, SegmentFlags.END]
 				]
 			}
 		},
@@ -2110,6 +2205,44 @@ com.aexoden.ff4 = function()
 				"base-0": [
 					[4, 7, SegmentFlags.START],
 					[4, 5, SegmentFlags.END]
+				]
+			}
+		},
+		"old-water-way-0": {
+			"flags": PathFlags.STEPS,
+			"map": "303A-0",
+			"segments": {
+				"base-0": [
+					[3, 4, SegmentFlags.START],
+					[3, 15, SegmentFlags.NONE],
+					[7, 15, SegmentFlags.NONE],
+					[7, 24, SegmentFlags.NONE],
+					[16, 24, SegmentFlags.NONE],
+					[16, 17, SegmentFlags.NONE],
+					[12, 17, SegmentFlags.NONE],
+					[12, 7, SegmentFlags.NONE],
+					[14, 7, SegmentFlags.NONE],
+					[14, 5, SegmentFlags.NONE],
+					[18, 5, SegmentFlags.NONE],
+					[18, 7, SegmentFlags.NONE],
+					[20, 7, SegmentFlags.NONE],
+					[20, 16, SegmentFlags.NONE],
+					[27, 16, SegmentFlags.NONE],
+					[27, 7, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[27, 12, SegmentFlags.NONE],
+					[28, 12, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"old-water-way-antechamber-0": {
+			"flags": PathFlags.NONE,
+			"map": "3044-0",
+			"segments": {
+				"base-0": [
+					[2, 6, SegmentFlags.START],
+					[2, 4, SegmentFlags.END]
 				]
 			}
 		},
