@@ -244,7 +244,13 @@ com.aexoden.ff4 = function()
 			"baron-town-weapon-shop-0",
 			"baron-town-2",
 			"old-water-way-antechamber-0",
-			"old-water-way-0"
+			"old-water-way-0",
+			"castle-baron-b3f-0",
+			"castle-baron-b2f-0",
+			"castle-baron-b1f-0",
+			"castle-baron-b1f-1",
+			"castle-baron-b1f-save-room-0",
+			"castle-baron-b1f-2"
 		]
 	};
 
@@ -421,6 +427,94 @@ com.aexoden.ff4 = function()
 				"antlions-nest-1": {
 					"index": "0",
 					"location": "Antlion's Nest [after Antlion]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"castle-baron-b1f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"castle-baron-b1f-0": {
+					"index": "0",
+					"location": "Castle Baron B1F",
+					"disambiguation": ""
+				}
+			}
+		},
+		"castle-baron-b1f-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"castle-baron-b1f-1": {
+					"index": "0",
+					"location": "Castle Baron B1F [before Save Room]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"castle-baron-b1f-2": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"castle-baron-b1f-2": {
+					"index" :"0",
+					"location": "Castle Baron B1F [after Save Room]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"castle-baron-b1f-choice-0": {
+			"type": VariableFlags.CHOICE,
+			"descriptions": {
+				1: "Enter the Save Room in Castle Baron B1F."
+			},
+			"paths": {
+				0: {
+					"castle-baron-b1f-1": { "enabled": false },
+					"castle-baron-b1f-save-room-0": { "enabled": false },
+					"castle-baron-b1f-2": { "enabled": false }
+				},
+				1: {
+					"castle-baron-b1f-0": { "enabled": false },
+					"castle-baron-b1f-1": {
+						"enabled": true,
+						"index": "0",
+						"location": "Castle Baron B1F",
+						"instruction": "Enter the Save Room"
+					}
+				}
+			}
+		},
+		"castle-baron-b1f-save-room-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"castle-baron-b1f-save-room-0": {
+					"index": "0",
+					"location": "Castle Baron B1F Save Room",
+					"disambiguation": ""
+				}
+			}
+		},
+		"castle-baron-b2f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"castle-baron-b2f-0": {
+					"index": "0",
+					"location": "Castle Baron B2F",
+					"disambiguation": ""
+				}
+			}
+		},
+		"castle-baron-b3f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"castle-baron-b3f-0": {
+					"index": "0",
+					"location": "Castle Baron B3F",
 					"disambiguation": ""
 				}
 			}
@@ -1018,7 +1112,13 @@ com.aexoden.ff4 = function()
 			44: ["mt-ordeals-1"],
 			45: ["overworld-mt-ordeals-1"],
 			46: ["serpent-road-0"],
-			47: ["old-water-way-0"]
+			47: ["old-water-way-0"],
+			48: ["castle-baron-b3f-0"],
+			49: ["castle-baron-b2f-0"],
+			50: ["castle-baron-b1f-choice-0"],
+			51: ["castle-baron-b1f-1"],
+			52: ["castle-baron-b1f-save-room-0"],
+			53: ["castle-baron-b1f-0", "castle-baron-b1f-2"]
 		}
 	};
 
@@ -1376,6 +1476,125 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"castle-baron-b1f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "303C-0",
+			"segments": {
+				"base-0": [
+					[6, 16, SegmentFlags.START],
+					[6, 12, SegmentFlags.NONE],
+					[12, 12, SegmentFlags.NONE],
+					[12, 10, SegmentFlags.NONE],
+					[14, 10, SegmentFlags.NONE],
+					[14, 2, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[14, 4, SegmentFlags.NONE],
+					[15, 4, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"castle-baron-b1f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "303C-0",
+			"segments": {
+				"base-0": [
+					[6, 16, SegmentFlags.START],
+					[6, 12, SegmentFlags.NONE],
+				],
+				"alternate-0": [
+					[6, 12, SegmentFlags.NONE],
+					[6, 11, SegmentFlags.NONE],
+					[2, 11, SegmentFlags.NONE],
+					[2, 9, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[6, 12, SegmentFlags.NONE],
+					[7, 12, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"castle-baron-b1f-2": {
+			"flags": PathFlags.STEPS,
+			"map": "303C-0",
+			"segments": {
+				"base-0": [
+					[2, 9, SegmentFlags.START],
+					[2, 11, SegmentFlags.NONE],
+					[6, 11, SegmentFlags.NONE],
+					[6, 12, SegmentFlags.NONE],
+					[12, 12, SegmentFlags.NONE],
+					[12, 10, SegmentFlags.NONE],
+					[14, 10, SegmentFlags.NONE],
+					[14, 2, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[14, 4, SegmentFlags.NONE],
+					[15, 4, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"castle-baron-b1f-save-room-0": {
+			"flags": PathFlags.STEPS,
+			"map": "303D-0",
+			"segments": {
+				"base-0": [
+					[4, 11, SegmentFlags.START],
+					[4, 12, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[4, 11, SegmentFlags.NONE],
+					[4, 10, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"castle-baron-b2f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "303E-0",
+			"segments": {
+				"base-0": [
+					[2, 26, SegmentFlags.START],
+					[2, 23, SegmentFlags.NONE],
+					[8, 23, SegmentFlags.NONE],
+					[8, 5, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[8, 7, SegmentFlags.NONE],
+					[9, 7, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"castle-baron-b3f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "303B-0",
+			"segments": {
+				"base-0": [
+					[1, 5, SegmentFlags.START],
+					[1, 3, SegmentFlags.NONE],
+					[4, 3, SegmentFlags.NONE],
+					[4, 8, SegmentFlags.NONE],
+					[13, 8, SegmentFlags.NONE],
+					[13, 6, SegmentFlags.NONE],
+					[16, 6, SegmentFlags.NONE],
+					[16, 10, SegmentFlags.NONE],
+					[25, 10, SegmentFlags.NONE],
+					[25, 12, SegmentFlags.NONE],
+					[26, 12, SegmentFlags.NONE],
+					[26, 13, SegmentFlags.NONE],
+					[30, 13, SegmentFlags.NONE],
+					[30, 3, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[30, 13, SegmentFlags.NONE],
+					[30, 14, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"chocobos-forest-mt-ordeals-0": {
+			"flags": PathFlags.YELLOW_CHOCOBO,
+			"map": "30D1-0",
+			"segments": {}
+		},
 		"damcyan-0": {
 			"flags": PathFlags.NONE,
 			"map": "3025-0",
@@ -1385,11 +1604,6 @@ com.aexoden.ff4 = function()
 					[16, 11, SegmentFlags.END]
 				]
 			}
-		},
-		"chocobos-forest-mt-ordeals-0": {
-			"flags": PathFlags.YELLOW_CHOCOBO,
-			"map": "30D1-0",
-			"segments": {}
 		},
 		"damcyan-1f-0": {
 			"flags": PathFlags.STEPS,
