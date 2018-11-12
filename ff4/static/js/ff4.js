@@ -250,7 +250,14 @@ com.aexoden.ff4 = function()
 			"castle-baron-b1f-0",
 			"castle-baron-b1f-1",
 			"castle-baron-b1f-save-room-0",
-			"castle-baron-b1f-2"
+			"castle-baron-b1f-2",
+			"castle-baron-0",
+			"castle-baron-left-passage-0",
+			"castle-baron-1",
+			"castle-baron-1f-0",
+			"castle-baron-2f-0",
+			"castle-baron-3f-0",
+			"castle-baron-kings-room-0"
 		]
 	};
 
@@ -427,6 +434,18 @@ com.aexoden.ff4 = function()
 				"antlions-nest-1": {
 					"index": "0",
 					"location": "Antlion's Nest [after Antlion]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"baron-0": {
+			"type": VariableFlags.EXTRA,
+			"description": "Castle Baron [before Kainazzo]",
+			"routes": {},
+			"paths": {
+				"castle-baron-1f-0": {
+					"index": "1",
+					"location": "Castle Baron 1F [before Kainazzo]",
 					"disambiguation": ""
 				}
 			}
@@ -1118,7 +1137,8 @@ com.aexoden.ff4 = function()
 			50: ["castle-baron-b1f-choice-0"],
 			51: ["castle-baron-b1f-1"],
 			52: ["castle-baron-b1f-save-room-0"],
-			53: ["castle-baron-b1f-0", "castle-baron-b1f-2"]
+			53: ["castle-baron-b1f-0", "castle-baron-b1f-2"],
+			54: ["baron-0"]
 		}
 	};
 
@@ -1476,6 +1496,75 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"castle-baron-0": {
+			"flags": PathFlags.NONE,
+			"map": "3024-1",
+			"segments": {
+				"base-0": [
+					[10, 0, SegmentFlags.START],
+					[10, 2, SegmentFlags.NONE],
+					[0, 2, SegmentFlags.NONE],
+					[0, 30, SegmentFlags.NONE],
+					[3, 30, SegmentFlags.NONE],
+					[3, 19, SegmentFlags.NONE],
+					[8, 19, SegmentFlags.NONE],
+					[8, 17, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-baron-1": {
+			"flags": PathFlags.NONE,
+			"map": "3024-1",
+			"segments": {
+				"base-0": [
+					[8, 13, SegmentFlags.START],
+					[12, 13, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-baron-1f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "302A-1",
+			"segments": {
+				"base-0": [
+					[1, 6, SegmentFlags.START],
+					[1, 10, SegmentFlags.NONE],
+					[6, 10, SegmentFlags.END]
+				],
+				"base-1": [
+					[8, 4, SegmentFlags.START],
+					[8, 0, SegmentFlags.END]
+				],
+				"extra-1-1": [
+					[8, 3, SegmentFlags.NONE],
+					[9, 3, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-1": [
+					[8, 4, SegmentFlags.NONE],
+					[9, 4, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"castle-baron-2f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "302B-1",
+			"segments": {
+				"base-0": [
+					[14, 7, SegmentFlags.START],
+					[14, 2, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-baron-3f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "308A-0",
+			"segments": {
+				"base-0": [
+					[7, 6, SegmentFlags.START],
+					[7, 2, SegmentFlags.END]
+				]
+			}
+		},
 		"castle-baron-b1f-0": {
 			"flags": PathFlags.STEPS,
 			"map": "303C-0",
@@ -1587,6 +1676,26 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[30, 13, SegmentFlags.NONE],
 					[30, 14, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"castle-baron-kings-room-0": {
+			"flags": PathFlags.STEPS,
+			"map": "302C-1",
+			"segments": {
+				"base-0": [
+					[8, 10, SegmentFlags.START],
+					[8, 4, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-baron-left-passage-0": {
+			"flags": PathFlags.STEPS,
+			"map": "302D-0",
+			"segments": {
+				"base-0": [
+					[2, 8, SegmentFlags.START],
+					[2, 2, SegmentFlags.END]
 				]
 			}
 		},
