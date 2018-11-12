@@ -257,7 +257,17 @@ com.aexoden.ff4 = function()
 			"castle-baron-1f-0",
 			"castle-baron-2f-0",
 			"castle-baron-3f-0",
-			"castle-baron-kings-room-0"
+			"castle-baron-kings-room-0",
+			"overworld-airship-0-0",
+			"overworld-airship-0-1",
+			"overworld-airship-0-2",
+			"overworld-airship-0-3",
+			"overworld-toroia-0",
+			"toroian-castle-0",
+			"toroian-castle-1f-0",
+			"toroian-castle-1",
+			"toroian-castle-infirmary-0",
+			"overworld-toroia-1"
 		]
 	};
 
@@ -927,6 +937,30 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"overworld-toroia-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"overworld-toroia-0": {
+					"index": "0",
+					"location": "Overworld (Toroia) [before Toroian Castle]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"overworld-toroia-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {
+				1: { "overworld-toroia-1": 1 }
+			},
+			"paths": {
+				"overworld-toroia-1": {
+					"index": "0",
+					"location": "Overworld (Toroia) [after Toroian Castle]",
+					"disambiguation": ""
+				}
+			}
+		},
 		"serpent-road-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -934,6 +968,21 @@ com.aexoden.ff4 = function()
 				"baron-town-serpent-road-0": {
 					"index": "0",
 					"location": "Baron Serpent Road",
+					"disambiguation": ""
+				}
+			}
+		},
+		"toroian-castle-1f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {
+				1: { "toroian-castle-1f-0": 1 },
+				2: { "toroian-castle-1f-0": 2 },
+				3: { "toroian-castle-1f-0": 3 },
+			},
+			"paths": {
+				"toroian-castle-1f-0": {
+					"index": "0",
+					"location": "Toroian Castle 1F [before Cave Magnes]",
 					"disambiguation": ""
 				}
 			}
@@ -1138,7 +1187,10 @@ com.aexoden.ff4 = function()
 			51: ["castle-baron-b1f-1"],
 			52: ["castle-baron-b1f-save-room-0"],
 			53: ["castle-baron-b1f-0", "castle-baron-b1f-2"],
-			54: ["baron-0"]
+			54: ["baron-0"],
+			55: ["overworld-toroia-0"],
+			56: ["toroian-castle-1f-0"],
+			57: ["overworld-toroia-1"]
 		}
 	};
 
@@ -2569,6 +2621,51 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"overworld-airship-0-0": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [86, 127, 32, 32],
+			"segments": {
+				"base-0": [
+					[102, 155, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[102, 127, SegmentFlags.END | SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-airship-0-1": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [86, 96, 32, 32],
+			"segments": {
+				"base-0": [
+					[102, 127, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[102, 96, SegmentFlags.END | SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-airship-0-2": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [86, 66, 32, 32],
+			"segments": {
+				"base-0": [
+					[102, 96, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[102, 83, SegmentFlags.NONE | SegmentFlags.VEHICLE],
+					[86, 83, SegmentFlags.END | SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-airship-0-3": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [55, 66, 32, 32],
+			"segments": {
+				"base-0": [
+					[86, 83, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[55, 83, SegmentFlags.END | SegmentFlags.VEHICLE]
+				]
+			}
+		},
 		"overworld-damcyan-0": {
 			"flags": PathFlags.STEPS,
 			"map": "0000-0",
@@ -2970,6 +3067,115 @@ com.aexoden.ff4 = function()
 				"boundary-0": [
 					[160, 185, SegmentFlags.NONE],
 					[160, 216, SegmentFlags.NONE]
+				]
+			}
+		},
+		"overworld-toroia-0": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [24, 66, 32, 32],
+			"segments": {
+				"base-0": [
+					[55, 83, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[36, 83, SegmentFlags.VEHICLE],
+					[36, 82, SegmentFlags.START],
+					[35, 82, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[36, 82, SegmentFlags.NONE],
+					[37, 82, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"overworld-toroia-1": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [23, 52, 32, 32],
+			"segments": {
+				"base-0": [
+					[35, 82, SegmentFlags.START],
+					[35, 70, SegmentFlags.NONE],
+					[43, 70, SegmentFlags.NONE],
+					[43, 54, SegmentFlags.NONE],
+					[41, 54, SegmentFlags.NONE],
+					[41, 53, SegmentFlags.END]
+				],
+				"optional-1-0": [
+					[35, 82, SegmentFlags.NONE],
+					[36, 82, SegmentFlags.NONE | SegmentFlags.ANNOTATE],
+					[36, 70, SegmentFlags.NONE]
+				],
+				"extra-2-0": [
+					[43, 70, SegmentFlags.NONE],
+					[44, 70, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"toroian-castle-0": {
+			"flags": PathFlags.NONE,
+			"map": "3027-0",
+			"segments": {
+				"base-0": [
+					[16, 29, SegmentFlags.START],
+					[16, 10, SegmentFlags.END]
+				]
+			}
+		},
+		"toroian-castle-1": {
+			"flags": PathFlags.NONE,
+			"map": "3027-0",
+			"segments": {
+				"base-0": [
+					[7, 5, SegmentFlags.START],
+					[6, 5, SegmentFlags.NONE],
+					[6, 12, SegmentFlags.NONE],
+					[9, 12, SegmentFlags.NONE],
+					[9, 11, SegmentFlags.END]
+
+				]
+			}
+		},
+		"toroian-castle-1f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3055-0",
+			"segments": {
+				"base-0": [
+					[9, 17, SegmentFlags.START],
+					[9, 7, SegmentFlags.NONE],
+					[2, 7, SegmentFlags.NONE],
+					[2, 10, SegmentFlags.END]
+				],
+				"optional-1-0": [
+					[9, 8, SegmentFlags.NONE],
+					[7, 8, SegmentFlags.NONE | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+					[7, 7, SegmentFlags.NONE]
+				],
+				"optional-2-0": [
+					[9, 9, SegmentFlags.NONE],
+					[7, 9, SegmentFlags.NONE | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+					[7, 7, SegmentFlags.NONE]
+				],
+				"optional-3-0": [
+					[9, 10, SegmentFlags.NONE],
+					[7, 10, SegmentFlags.NONE | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+					[7, 7, SegmentFlags.NONE]
+				],
+				"extra-2-0": [
+					[2, 7, SegmentFlags.NONE],
+					[1, 7, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				]
+			}
+		},
+		"toroian-castle-infirmary-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3058-0",
+			"segments": {
+				"base-0": [
+					[2, 5, SegmentFlags.START],
+					[3, 5, SegmentFlags.NONE],
+					[3, 3, SegmentFlags.NONE],
+					[8, 3, SegmentFlags.NONE],
+					[8, 4, SegmentFlags.END]
 				]
 			}
 		},
@@ -3431,12 +3637,13 @@ com.aexoden.ff4 = function()
 										if (varData.paths[path].index == fields[2]) {
 											var specialIndex = getSpecial(varData, value);
 											var delta = value - specialIndex;
+											console.log(path, specialIndex, key);
 
-											if (specialIndex > 0 && parseInt(fields[1]) == varData.routes[specialIndex][path]) {
+											if (specialIndex > 0 && fields[0] == "optional" && parseInt(fields[1]) == varData.routes[specialIndex][path]) {
 												draw = true;
-											} else if (fields[1] == "2" && (delta - delta % 2) > 0) {
+											} else if (fields[0] == "extra" && fields[1] == "2" && (delta - delta % 2) > 0) {
 												draw = true;
-											} else if (fields[1] == "1" && delta % 2 == 1) {
+											} else if (fields[0] == "extra" && fields[1] == "1" && delta % 2 == 1) {
 												draw = true;
 											}
 										}
@@ -3625,7 +3832,7 @@ com.aexoden.ff4 = function()
 											var fields = key.split("-");
 
 											if (path in varData.paths) {
-												if ((fields[0] == "extra" || fields[0] == "optional") && fields[2] == varData.paths[path].index) {
+												if ((fields[0] == "extra") && fields[2] == varData.paths[path].index) {
 													if (fields[1] == "2") {
 														extraEven = true;
 													} else if (fields[1] == "1") {
