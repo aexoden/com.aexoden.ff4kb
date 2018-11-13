@@ -18,7 +18,8 @@ com.aexoden.ff4 = function()
 	var PathFlags = {
 		NONE:           0x00,
 		STEPS:          0x01,
-		YELLOW_CHOCOBO: 0x02
+		YELLOW_CHOCOBO: 0x02,
+		BLACK_CHOCOBO:  0x04
 	};
 
 	var SegmentFlags = {
@@ -267,7 +268,16 @@ com.aexoden.ff4 = function()
 			"toroian-castle-1f-0",
 			"toroian-castle-1",
 			"toroian-castle-infirmary-0",
-			"overworld-toroia-1"
+			"overworld-toroia-1",
+			"chocobos-village-0",
+			"overworld-toroia-2",
+			"overworld-toroia-3",
+			"cave-magnes-b1f-0",
+			"cave-magnes-b2f-0",
+			"cave-magnes-b3f-0",
+			"cave-magnes-b3f-1",
+			"cave-magnes-b3f-save-room-0",
+			"cave-magnes-b3f-2"
 		]
 	};
 
@@ -544,6 +554,94 @@ com.aexoden.ff4 = function()
 				"castle-baron-b3f-0": {
 					"index": "0",
 					"location": "Castle Baron B3F",
+					"disambiguation": ""
+				}
+			}
+		},
+		"cave-magnes-b1f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"cave-magnes-b1f-0": {
+					"index": "0",
+					"location": "Cave Magnes B1F",
+					"disambiguation": ""
+				}
+			}
+		},
+		"cave-magnes-b2f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"cave-magnes-b2f-0": {
+					"index": "0",
+					"location": "Cave Magnes B2F",
+					"disambiguation": ""
+				}
+			}
+		},
+		"cave-magnes-b3f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"cave-magnes-b3f-0": {
+					"index": "0",
+					"location": "Cave Magnes B3F",
+					"disambiguation": ""
+				}
+			}
+		},
+		"cave-magnes-b3f-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"cave-magnes-b3f-1": {
+					"index": "0",
+					"location": "Cave Magnes B3F [before Save Room]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"cave-magnes-b3f-2": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"cave-magnes-b3f-2": {
+					"index": "0",
+					"location": "Cave Magnes B3F [after Save Room]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"cave-magnes-b3f-choice-0": {
+			"type": VariableFlags.CHOICE,
+			"descriptions": {
+				1: "Enter the Save Room in Cave Magnes B3F."
+			},
+			"paths": {
+				0: {
+					"cave-magnes-b3f-1": { "enabled": false },
+					"cave-magnes-b3f-save-room-0": { "enabled": false },
+					"cave-magnes-b3f-2": { "enabled": false }
+				},
+				1: {
+					"cave-magnes-b3f-0": { "enabled": false },
+					"cave-magnes-b3f-1": {
+						"enabled": true,
+						"index": "0",
+						"location": "Cave Magnes B3F",
+						"instruction": "Enter the Save Room"
+					}
+				}
+			}
+		},
+		"cave-magnes-b3f-save-room-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"cave-magnes-b3f-save-room-0": {
+					"index": "0",
+					"location": "Cave Magnes B3F Save Room",
 					"disambiguation": ""
 				}
 			}
@@ -961,6 +1059,17 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"overworld-toroia-2": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"overworld-toroia-3": {
+					"index": "0",
+					"location": "Overworld (Toroia) [before Cave Magnes]",
+					"disambiguation": " immediately before entering the cave"
+				}
+			}
+		},
 		"serpent-road-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -1190,7 +1299,14 @@ com.aexoden.ff4 = function()
 			54: ["baron-0"],
 			55: ["overworld-toroia-0"],
 			56: ["toroian-castle-1f-0"],
-			57: ["overworld-toroia-1"]
+			57: ["overworld-toroia-1"],
+			58: ["overworld-toroia-2"],
+			59: ["cave-magnes-b1f-0"],
+			60: ["cave-magnes-b2f-0"],
+			61: ["cave-magnes-b3f-choice-0"],
+			62: ["cave-magnes-b3f-1"],
+			63: ["cave-magnes-b3f-save-room-0"],
+			64: ["cave-magnes-b3f-0", "cave-magnes-b3f-2"]
 		}
 	};
 
@@ -1751,10 +1867,167 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"cave-magnes-b1f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "308C-0",
+			"segments": {
+				"base-0": [
+					[5, 7, SegmentFlags.START],
+					[5, 8, SegmentFlags.NONE],
+					[9, 8, SegmentFlags.NONE],
+					[9, 5, SegmentFlags.NONE],
+					[16, 5, SegmentFlags.NONE],
+					[16, 14, SegmentFlags.NONE],
+					[24, 14, SegmentFlags.NONE],
+					[24, 24, SegmentFlags.NONE],
+					[24, 26, SegmentFlags.NONE],
+					[10, 26, SegmentFlags.NONE],
+					[10, 18, SegmentFlags.NONE],
+					[6, 18, SegmentFlags.NONE],
+					[6, 19, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[24, 24, SegmentFlags.NONE],
+					[25, 24, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[16, 5, SegmentFlags.NONE],
+					[17, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"cave-magnes-b2f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "308D-0",
+			"segments": {
+				"base-0": [
+					[27, 26, SegmentFlags.START],
+					[27, 27, SegmentFlags.NONE],
+					[18, 27, SegmentFlags.NONE],
+					[18, 18, SegmentFlags.NONE],
+					[13, 18, SegmentFlags.NONE],
+					[13, 9, SegmentFlags.NONE],
+					[5, 9, SegmentFlags.NONE],
+					[5, 10, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[27, 27, SegmentFlags.NONE],
+					[27, 26, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[18, 18, SegmentFlags.NONE],
+					[19, 18, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"cave-magnes-b3f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "308F-0",
+			"segments": {
+				"base-0": [
+					[27, 6, SegmentFlags.START],
+					[27, 9, SegmentFlags.NONE],
+					[22, 9, SegmentFlags.NONE],
+					[22, 16, SegmentFlags.NONE],
+					[29, 16, SegmentFlags.NONE],
+					[29, 20, SegmentFlags.NONE],
+					[28, 20, SegmentFlags.NONE],
+					[21, 20, SegmentFlags.NONE],
+					[21, 25, SegmentFlags.NONE],
+					[8, 25, SegmentFlags.NONE],
+					[8, 5, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[28, 20, SegmentFlags.NONE],
+					[29, 20, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[22, 12, SegmentFlags.NONE],
+					[23, 12, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"cave-magnes-b3f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "308F-0",
+			"segments": {
+				"base-0": [
+					[27, 6, SegmentFlags.START],
+					[27, 9, SegmentFlags.NONE],
+					[22, 9, SegmentFlags.NONE],
+				],
+				"alternate-0": [
+					[22, 9, SegmentFlags.NONE],
+					[21, 9, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[27, 7, SegmentFlags.NONE],
+					[27, 6, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[27, 9, SegmentFlags.NONE],
+					[28, 9, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"cave-magnes-b3f-2": {
+			"flags": PathFlags.STEPS,
+			"map": "308F-0",
+			"segments": {
+				"base-0": [
+					[21, 9, SegmentFlags.START],
+					[22, 9, SegmentFlags.NONE],
+					[22, 16, SegmentFlags.NONE],
+					[29, 16, SegmentFlags.NONE],
+					[29, 20, SegmentFlags.NONE],
+					[28, 20, SegmentFlags.NONE],
+					[21, 20, SegmentFlags.NONE],
+					[21, 25, SegmentFlags.NONE],
+					[8, 25, SegmentFlags.NONE],
+					[8, 5, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[28, 20, SegmentFlags.NONE],
+					[29, 20, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[22, 12, SegmentFlags.NONE],
+					[23, 12, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"cave-magnes-b3f-save-room-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3092-0",
+			"segments": {
+				"base-0": [
+					[6, 12, SegmentFlags.START],
+					[6, 13, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[6, 12, SegmentFlags.NONE],
+					[6, 11, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
 		"chocobos-forest-mt-ordeals-0": {
 			"flags": PathFlags.YELLOW_CHOCOBO,
 			"map": "30D1-0",
 			"segments": {}
+		},
+		"chocobos-village-0": {
+			"flags": PathFlags.BLACK_CHOCOBO,
+			"map": "3021-0",
+			"segments": {
+				"base-0": [
+					[8, 30, SegmentFlags.START],
+					[8, 28, SegmentFlags.NONE],
+					[9, 28, SegmentFlags.NONE],
+					[9, 27, SegmentFlags.NONE],
+					[10, 27, SegmentFlags.NONE],
+					[10, 26, SegmentFlags.END]
+				]
+			}
 		},
 		"damcyan-0": {
 			"flags": PathFlags.NONE,
@@ -3111,6 +3384,39 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"overworld-toroia-2": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [33, 41, 32, 32],
+			"segments": {
+				"base-0": [
+					[41, 53, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[41, 61, SegmentFlags.VEHICLE],
+					[64, 61, SegmentFlags.VEHICLE | SegmentFlags.END],
+					[65, 61, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-toroia-3": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [53, 42, 32, 32],
+			"segments": {
+				"base-0": [
+					[52, 61, SegmentFlags.VEHICLE],
+					[64, 61, SegmentFlags.VEHICLE | SegmentFlags.END],
+					[68, 61, SegmentFlags.VEHICLE],
+					[68, 56, SegmentFlags.VEHICLE],
+					[74, 56, SegmentFlags.VEHICLE],
+					[74, 55, SegmentFlags.VEHICLE],
+					[74, 53, SegmentFlags.START | SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[74, 54, SegmentFlags.NONE],
+					[75, 54, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
 		"toroian-castle-0": {
 			"flags": PathFlags.NONE,
 			"map": "3027-0",
@@ -3637,7 +3943,6 @@ com.aexoden.ff4 = function()
 										if (varData.paths[path].index == fields[2]) {
 											var specialIndex = getSpecial(varData, value);
 											var delta = value - specialIndex;
-											console.log(path, specialIndex, key);
 
 											if (specialIndex > 0 && fields[0] == "optional" && parseInt(fields[1]) == varData.routes[specialIndex][path]) {
 												draw = true;
@@ -3787,7 +4092,7 @@ com.aexoden.ff4 = function()
 				var canvas_id = "path-" + i;
 				var canvas = document.getElementById(canvas_id);
 				var caption = document.getElementById(canvas_id + "-caption");
-				var cancelPath = false;
+				var cancelPath = true;
 
 				if (!canvas) {
 					var row = document.createElement("div");
@@ -3812,6 +4117,8 @@ com.aexoden.ff4 = function()
 
 					if ((data.paths[path].flags & PathFlags.YELLOW_CHOCOBO) > 0) {
 						caption.innerHTML += '<p>Leave by picking up a <strong>yellow</strong> chocobo.</p>';
+					} else if ((data.paths[path].flags & PathFlags.BLACK_CHOCOBO) > 0) {
+						caption.innerHTML += '<p>Leave by picking up a <strong>black</strong> chocobo.</p>';
 					}
 
 					if (path in activeMaps) {
@@ -3871,12 +4178,12 @@ com.aexoden.ff4 = function()
 
 										if (value > 0) {
 											caption.innerHTML += "<dt>" + varData.paths[path].location + "</dt><dd>Take " + value + " extra step" + (value > 1 ? "s" : "") + varData.paths[path].disambiguation + ".</dd>";
-										} else if (!drawAll) {
-											cancelPath = true;
+											cancelPath = false;
 										}
 									} else if (varData.type == VariableFlags.CHOICE) {
 										if (path in varData.paths[value]) {
 											caption.innerHTML += "<dt>" + varData.paths[value][path].location + "</dt><dd>" + varData.paths[value][path].instruction + ".</dd>";
+											cancelPath = false;
 										}
 									}
 								}
@@ -3910,31 +4217,62 @@ com.aexoden.ff4 = function()
 			target.innerHTML += '<p class="alert alert-primary">This summary should include all critical information needed to follow the route. If you have any problems, please contact me.</p>';
 			list = '<ul>';
 
+			var disabledPaths = {};
+
 			Object.entries(vars).forEach(
 				([index, value]) => {
-					var varKey = data.variables[route][index];
-					var varData = data.variableData[varKey];
+					var varKeys = data.variables[route][index];
 
-					var output = '';
-					var output_class = '';
+					if (varKeys) {
+						for (var k = 0; k < varKeys.length; k++) {
+							var varKey = varKeys[k];
+							var varData = data.variableData[varKey];
 
-					if (varData) {
-						if (varData.type == VariableFlags.EXTRA) {
-							var description = varData.description;
-
-							if (!description) {
-								var path = varData.paths[Object.keys(varData.paths)[0]];
-								description = path.location + path.disambiguation;
+							if (varData.type == VariableFlags.CHOICE) {
+								Object.entries(varData.paths[value]).forEach(
+									([path, pathData]) => {
+										if (!pathData.enabled) {
+											disabledPaths[path] = true;
+										}
+									}
+								);
 							}
-
-							output_class = "text-primary";
-							output = 'Take ' + value + ' extra step' + (value == 1 ? '' : 's') + ' in ' + description + '.';
-						} else if (varData.type == VariableFlags.CHOICE) {
-							output_class = "text-success";
-							output = varData.descriptions[value];
 						}
+					}
+				}
+			);
 
-						list += '<li class ="' + output_class + '">' + output + '</li>';
+			Object.entries(vars).forEach(
+				([index, value]) => {
+					var varKeys = data.variables[route][index];
+
+					if (varKeys) {
+						for (var k = 0; k < varKeys.length; k++) {
+							var varKey = varKeys[k];
+							var varData = data.variableData[varKey];
+
+							if (varData && !disabledPaths[Object.keys(varData.paths)[0]]) {
+								var output = '';
+								var output_class = '';
+
+								if (varData.type == VariableFlags.EXTRA) {
+									var description = varData.description;
+
+									if (!description) {
+										var path = varData.paths[Object.keys(varData.paths)[0]];
+										description = path.location + path.disambiguation;
+									}
+
+									output_class = "text-primary";
+									output = 'Take ' + value + ' extra step' + (value == 1 ? '' : 's') + ' in ' + description + '.';
+								} else if (varData.type == VariableFlags.CHOICE) {
+									output_class = "text-success";
+									output = varData.descriptions[value];
+								}
+
+								list += '<li class ="' + output_class + '">' + output + '</li>';
+							}
+						}
 					}
 				}
 			);
