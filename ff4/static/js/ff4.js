@@ -278,7 +278,11 @@ com.aexoden.ff4 = function()
 			"cave-magnes-b3f-1",
 			"cave-magnes-b3f-save-room-0",
 			"cave-magnes-b3f-2",
-			"cave-magnes-b3f-passage-0"
+			"cave-magnes-b3f-passage-0",
+			"cave-magnes-b4f-0",
+			"cave-magnes-b4f-1",
+			"cave-magnes-b4f-save-room-0",
+			"cave-magnes-b4f-2"
 		]
 	};
 
@@ -654,6 +658,72 @@ com.aexoden.ff4 = function()
 				"cave-magnes-b3f-save-room-0": {
 					"index": "0",
 					"location": "Cave Magnes B3F Save Room",
+					"disambiguation": ""
+				}
+			}
+		},
+		"cave-magnes-b4f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"cave-magnes-b4f-0": {
+					"index": "0",
+					"location": "Cave Magnes B4F",
+					"disambiguation": ""
+				}
+			}
+		},
+		"cave-magnes-b4f-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"cave-magnes-b4f-1": {
+					"index": "0",
+					"location": "Cave Magnes B4F [before Save Room]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"cave-magnes-b4f-2": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"cave-magnes-b4f-2": {
+					"index": "0",
+					"location": "Cave Magnes B4F [after Save Room]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"cave-magnes-b4f-choice-0": {
+			"type": VariableFlags.CHOICE,
+			"descriptions": {
+				1: "Enter the Save Room in Cave Magnes B4F."
+			},
+			"paths": {
+				0: {
+					"cave-magnes-b4f-1": { "enabled": false },
+					"cave-magnes-b4f-save-room-0": { "enabled": false },
+					"cave-magnes-b4f-2": { "enabled": false }
+				},
+				1: {
+					"cave-magnes-b4f-0": { "enabled": false },
+					"cave-magnes-b4f-1": {
+						"enabled": true,
+						"index": "0",
+						"location": "Cave Magnes B4F",
+						"instruction": "Enter the Save Room"
+					},
+				}
+			}
+		},
+		"cave-magnes-b4f-save-room-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"cave-magnes-b4f-save-room-0": {
+					"index": "0",
+					"location": "Cave Magnes B4F Save Room",
 					"disambiguation": ""
 				}
 			}
@@ -1319,7 +1389,11 @@ com.aexoden.ff4 = function()
 			62: ["cave-magnes-b3f-1"],
 			63: ["cave-magnes-b3f-save-room-0"],
 			64: ["cave-magnes-b3f-0", "cave-magnes-b3f-2"],
-			65: ["cave-magnes-b3f-passage-0"]
+			65: ["cave-magnes-b3f-passage-0"],
+			66: ["cave-magnes-b4f-choice-0"],
+			67: ["cave-magnes-b4f-1"],
+			68: ["cave-magnes-b4f-save-room-0"],
+			69: ["cave-magnes-b4f-0", "cave-magnes-b4f-2"]
 		}
 	};
 
@@ -2028,6 +2102,93 @@ com.aexoden.ff4 = function()
 		"cave-magnes-b3f-save-room-0": {
 			"flags": PathFlags.STEPS,
 			"map": "3092-0",
+			"segments": {
+				"base-0": [
+					[6, 12, SegmentFlags.START],
+					[6, 13, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[6, 12, SegmentFlags.NONE],
+					[6, 11, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"cave-magnes-b4f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3093-0",
+			"segments": {
+				"base-0": [
+					[22, 27, SegmentFlags.START],
+					[22, 28, SegmentFlags.NONE],
+					[20, 28, SegmentFlags.NONE],
+					[20, 27, SegmentFlags.NONE],
+					[19, 27, SegmentFlags.NONE],
+					[19, 25, SegmentFlags.NONE],
+					[13, 25, SegmentFlags.NONE],
+					[13, 7, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[22, 28, SegmentFlags.NONE],
+					[22, 27, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[13, 8, SegmentFlags.NONE],
+					[14, 8, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"cave-magnes-b4f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3093-0",
+			"segments": {
+				"base-0": [
+					[22, 27, SegmentFlags.START],
+					[22, 28, SegmentFlags.NONE],
+					[20, 28, SegmentFlags.NONE],
+					[20, 27, SegmentFlags.NONE],
+					[19, 27, SegmentFlags.NONE],
+					[19, 25, SegmentFlags.NONE],
+					[13, 25, SegmentFlags.NONE],
+					[13, 15, SegmentFlags.NONE]
+				],
+				"alternate-0": [
+					[13, 15, SegmentFlags.NONE],
+					[24, 15, SegmentFlags.NONE],
+					[24, 16, SegmentFlags.NONE],
+					[27, 16, SegmentFlags.NONE],
+					[27, 15, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[22, 28, SegmentFlags.NONE],
+					[22, 27, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[27, 16, SegmentFlags.NONE],
+					[28, 16, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"cave-magnes-b4f-2": {
+			"flags": PathFlags.STEPS,
+			"map": "3093-0",
+			"segments": {
+				"base-0": [
+					[27, 15, SegmentFlags.START],
+					[27, 16, SegmentFlags.NONE],
+					[24, 16, SegmentFlags.NONE],
+					[24, 15, SegmentFlags.NONE],
+					[13, 15, SegmentFlags.NONE],
+					[13, 7, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[13, 8, SegmentFlags.NONE],
+					[14, 8, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"cave-magnes-b4f-save-room-0": {
+			"flags": PathFlags.STEPS,
+			"map": "30A1-0",
 			"segments": {
 				"base-0": [
 					[6, 12, SegmentFlags.START],
