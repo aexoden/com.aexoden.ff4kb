@@ -4583,6 +4583,8 @@ com.aexoden.ff4 = function()
 						row.appendChild(caption);
 						container.appendChild(row);
 					}
+				} else {
+					cancelPath = false;
 				}
 
 				if (!cancelPath) {
