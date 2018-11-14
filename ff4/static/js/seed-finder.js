@@ -2372,6 +2372,9 @@ com.aexoden.ff4 = function()
 		var reset = document.getElementById('button-reset');
 		reset.addEventListener('click', onResetClick);
 
+		var select = document.getElementById('route-select');
+		select.addEventListener('change', onRouteChange);
+
 		updateDisplay();
 	};
 
@@ -2485,6 +2488,10 @@ com.aexoden.ff4 = function()
 
 	var onResetClick = function(e) {
 		reset();
+	}
+
+	var onRouteChange = function(e) {
+		updateDisplay();
 	}
 
 	var updateEncounters = function() {
