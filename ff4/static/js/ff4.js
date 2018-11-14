@@ -282,7 +282,12 @@ com.aexoden.ff4 = function()
 			"cave-magnes-b4f-0",
 			"cave-magnes-b4f-1",
 			"cave-magnes-b4f-save-room-0",
-			"cave-magnes-b4f-2"
+			"cave-magnes-b4f-2",
+			"cave-magnes-crystal-room-0",
+			"cave-magnes-crystal-room-1",
+			"overworld-toroia-4",
+			"chocobos-village-1",
+			"overworld-toroia-5"
 		]
 	};
 
@@ -1152,6 +1157,28 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"overworld-toroia-3": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"overworld-toroia-4": {
+					"index": "0",
+					"location": "Overworld (Toroia) [after Cave Magnes]",
+					"disambiguation": " before boarding the black chocobo"
+				}
+			}
+		},
+		"overworld-toroia-4": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"overworld-toroia-5": {
+					"index": "0",
+					"location": "Overworld (Toroia) [after Cave Magnes]",
+					"disambiguation": " immediately before entering the Toroian Castle"
+				}
+			}
+		},
 		"serpent-road-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -1393,7 +1420,9 @@ com.aexoden.ff4 = function()
 			66: ["cave-magnes-b4f-choice-0"],
 			67: ["cave-magnes-b4f-1"],
 			68: ["cave-magnes-b4f-save-room-0"],
-			69: ["cave-magnes-b4f-0", "cave-magnes-b4f-2"]
+			69: ["cave-magnes-b4f-0", "cave-magnes-b4f-2"],
+			70: ["overworld-toroia-3"],
+			71: ["overworld-toroia-4"]
 		}
 	};
 
@@ -2200,12 +2229,47 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"cave-magnes-crystal-room-0": {
+			"flags": PathFlags.NONE,
+			"map": "3094-0",
+			"segments": {
+				"base-0": [
+					[11, 25, SegmentFlags.START],
+					[11, 12, SegmentFlags.END]
+				]
+			}
+		},
+		"cave-magnes-crystal-room-1": {
+			"flags": PathFlags.NONE,
+			"map": "3094-1",
+			"segments": {
+				"base-0": [
+					[11, 12, SegmentFlags.START],
+					[11, 9, SegmentFlags.RETURN],
+					[11, 26, SegmentFlags.END]
+				]
+			}
+		},
 		"chocobos-forest-mt-ordeals-0": {
 			"flags": PathFlags.YELLOW_CHOCOBO,
 			"map": "30D1-0",
 			"segments": {}
 		},
 		"chocobos-village-0": {
+			"flags": PathFlags.BLACK_CHOCOBO,
+			"map": "3021-0",
+			"segments": {
+				"base-0": [
+					[8, 30, SegmentFlags.START],
+					[8, 28, SegmentFlags.NONE],
+					[9, 28, SegmentFlags.NONE],
+					[9, 27, SegmentFlags.NONE],
+					[10, 27, SegmentFlags.NONE],
+					[10, 26, SegmentFlags.END]
+				]
+			}
+		},
+		"chocobos-village-1": {
 			"flags": PathFlags.BLACK_CHOCOBO,
 			"map": "3021-0",
 			"segments": {
@@ -3604,6 +3668,40 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[74, 54, SegmentFlags.NONE],
 					[75, 54, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"overworld-toroia-4": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [58, 38, 32, 32],
+			"segments": {
+				"base-0": [
+					[74, 53, SegmentFlags.START],
+					[74, 55, SegmentFlags.NONE],
+					[58, 55, SegmentFlags.VEHICLE | SegmentFlags.START | SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[74, 54, SegmentFlags.NONE],
+					[75, 54, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"overworld-toroia-5": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [30, 52, 32, 32],
+			"segments": {
+				"base-0": [
+					[41, 53, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[41, 61, SegmentFlags.VEHICLE],
+					[57, 61, SegmentFlags.VEHICLE],
+					[57, 81, SegmentFlags.VEHICLE],
+					[35, 81, SegmentFlags.START | SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[36, 81, SegmentFlags.NONE],
+					[36, 80, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
