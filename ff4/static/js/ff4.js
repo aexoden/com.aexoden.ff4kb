@@ -287,7 +287,10 @@ com.aexoden.ff4 = function()
 			"cave-magnes-crystal-room-1",
 			"overworld-toroia-4",
 			"chocobos-village-1",
-			"overworld-toroia-5"
+			"overworld-toroia-5",
+			"toroian-castle-2",
+			"toroian-castle-1f-1",
+			"toroian-castle-1f-2"
 		]
 	};
 
@@ -1205,6 +1208,41 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"toroian-castle-1f-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {
+				1: { "toroian-castle-1f-2": 1 },
+				2: { "toroian-castle-1f-2": 2 },
+				3: { "toroian-castle-1f-2": 3 },
+			},
+			"paths": {
+				"toroian-castle-1f-2": {
+					"index": "0",
+					"location": "Toroian Castle 1F [after Cave Magnes]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"toroian-castle-1f-choice-0": {
+			"type": VariableFlags.CHOICE,
+			"descriptions": {
+				1: "Enter the Extra Step Area in Toroian Castle 1F [after Cave Magnes]"
+			},
+			"paths": {
+				0: {
+					"toroian-castle-1f-2": { "enabled": false },
+				},
+				1: {
+					"toroian-castle-1f-1": { "enabled": false },
+					"toroian-castle-1f-2": {
+						"enabled": true,
+						"index": "0",
+						"location": "Toroian Castle 1F [after Cave Magnes]",
+						"instruction": "Enter the Extra Step Area"
+					}
+				}
+			}
+		},
 		"waterfalls-b1f-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -1422,7 +1460,9 @@ com.aexoden.ff4 = function()
 			68: ["cave-magnes-b4f-save-room-0"],
 			69: ["cave-magnes-b4f-0", "cave-magnes-b4f-2"],
 			70: ["overworld-toroia-3"],
-			71: ["overworld-toroia-4"]
+			71: ["overworld-toroia-4"],
+			72: ["toroian-castle-1f-choice-0"],
+			73: ["toroian-castle-1f-1"]
 		}
 	};
 
@@ -3729,6 +3769,16 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"toroian-castle-2": {
+			"flags": PathFlags.NONE,
+			"map": "3027-0",
+			"segments": {
+				"base-0": [
+					[16, 29, SegmentFlags.START],
+					[16, 10, SegmentFlags.END]
+				]
+			}
+		},
 		"toroian-castle-1f-0": {
 			"flags": PathFlags.STEPS,
 			"map": "3055-0",
@@ -3757,6 +3807,48 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[2, 7, SegmentFlags.NONE],
 					[1, 7, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				]
+			}
+		},
+		"toroian-castle-1f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3055-0",
+			"segments": {
+				"base-0": [
+					[9, 17, SegmentFlags.START],
+					[9, 0, SegmentFlags.END]
+				]
+			}
+		},
+		"toroian-castle-1f-2": {
+			"flags": PathFlags.STEPS,
+			"map": "3055-0",
+			"segments": {
+				"base-0": [
+					[9, 17, SegmentFlags.START],
+					[9, 7, SegmentFlags.NONE],
+					[7, 7, SegmentFlags.RETURN],
+					[9, 7, SegmentFlags.NONE],
+					[9, 0, SegmentFlags.END]
+				],
+				"optional-1-0": [
+					[9, 8, SegmentFlags.NONE],
+					[7, 8, SegmentFlags.NONE | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+					[7, 7, SegmentFlags.NONE]
+				],
+				"optional-2-0": [
+					[9, 9, SegmentFlags.NONE],
+					[7, 9, SegmentFlags.NONE | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+					[7, 7, SegmentFlags.NONE]
+				],
+				"optional-3-0": [
+					[9, 10, SegmentFlags.NONE],
+					[7, 10, SegmentFlags.NONE | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+					[7, 7, SegmentFlags.NONE]
+				],
+				"extra-2-0": [
+					[7, 7, SegmentFlags.NONE],
+					[6, 7, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
 				]
 			}
 		},
