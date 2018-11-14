@@ -277,7 +277,8 @@ com.aexoden.ff4 = function()
 			"cave-magnes-b3f-0",
 			"cave-magnes-b3f-1",
 			"cave-magnes-b3f-save-room-0",
-			"cave-magnes-b3f-2"
+			"cave-magnes-b3f-2",
+			"cave-magnes-b3f-passage-0"
 		]
 	};
 
@@ -632,6 +633,17 @@ com.aexoden.ff4 = function()
 						"location": "Cave Magnes B3F",
 						"instruction": "Enter the Save Room"
 					}
+				}
+			}
+		},
+		"cave-magnes-b3f-passage-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"cave-magnes-b3f-passage-0": {
+					"index": "0",
+					"location": "Cave Magnes B3F Passage",
+					"disambiguation": ""
 				}
 			}
 		},
@@ -1306,7 +1318,8 @@ com.aexoden.ff4 = function()
 			61: ["cave-magnes-b3f-choice-0"],
 			62: ["cave-magnes-b3f-1"],
 			63: ["cave-magnes-b3f-save-room-0"],
-			64: ["cave-magnes-b3f-0", "cave-magnes-b3f-2"]
+			64: ["cave-magnes-b3f-0", "cave-magnes-b3f-2"],
+			65: ["cave-magnes-b3f-passage-0"]
 		}
 	};
 
@@ -1993,6 +2006,22 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[22, 12, SegmentFlags.NONE],
 					[23, 12, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"cave-magnes-b3f-passage-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3091-0",
+			"segments": {
+				"base-0": [
+					[14, 13, SegmentFlags.START],
+					[14, 12, SegmentFlags.NONE],
+					[5, 12, SegmentFlags.NONE],
+					[5, 14, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[14, 12, SegmentFlags.NONE],
+					[15, 12, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -4094,6 +4123,10 @@ com.aexoden.ff4 = function()
 				var caption = document.getElementById(canvas_id + "-caption");
 				var cancelPath = true;
 
+				if (drawAll) {
+					cancelPath = false;
+				}
+
 				if (!canvas) {
 					var row = document.createElement("div");
 					var caption = document.createElement("div");
@@ -4219,24 +4252,30 @@ com.aexoden.ff4 = function()
 
 			var disabledPaths = {};
 
-			Object.entries(vars).forEach(
-				([index, value]) => {
-					var varKeys = data.variables[route][index];
+			Object.keys(data.variables[route]).forEach(
+				(key) => {
+					var value = 0;
 
-					if (varKeys) {
-						for (var k = 0; k < varKeys.length; k++) {
-							var varKey = varKeys[k];
-							var varData = data.variableData[varKey];
+					if (key in vars) {
+						value = vars[key];
+					}
+
+					if (key in data.variables[route]) {
+						for (var i = 0; i < data.variables[route][key].length; i++) {
+							var varData = data.variableData[data.variables[route][key][i]];
+							var entries = varData.paths;
 
 							if (varData.type == VariableFlags.CHOICE) {
-								Object.entries(varData.paths[value]).forEach(
-									([path, pathData]) => {
-										if (!pathData.enabled) {
-											disabledPaths[path] = true;
-										}
-									}
-								);
+								entries = varData.paths[value];
 							}
+
+							Object.entries(entries).forEach(
+								([path, pathData]) => {
+									if (varData.type == VariableFlags.CHOICE && !pathData.enabled) {
+										disabledPaths[path] = true;
+									}
+								}
+							);
 						}
 					}
 				}
