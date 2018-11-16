@@ -4,7 +4,6 @@
 
 /*
  * TODO:
- *  - Give a better description of how to use the tool.
  *  - Allow for fuzzy searches (with missing encounters or unsure locations).
  *  - Add data to allow the user to continue entering encounters for twin seeds. (route dependent)
  */

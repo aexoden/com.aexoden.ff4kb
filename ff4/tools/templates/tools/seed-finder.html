@@ -36,6 +36,21 @@
 					<div class="col" id="seeds">
 					</div>
 				</div>
+				<h3>Documentation</h3>
+				<p>In order to use this tool, simply follow these steps after resetting at Mist:</p>
+				<ol>
+					<li>Every time you get an encounter, select the tile on which you got the encounter. Optionally, select the exact formation you got by clicking on it. (This is highly recommended, as it will help distinguish seeds, and is essential in case of certain twin seeds.)</li>
+					<li>When you're done with a given map, simply click <em>Next Image</em> to move to the next map.</li>
+					<li>Once you reach the save room in Watery Pass-South B2F, click the <em>Finish</em> button. This will lock in your encounters and help distinguish between seeds that only differ in whether or not they get one last encounter.</li>
+				</ol>
+				<p>There are several pairs of seeds that can't be distinguished by steps alone by the time you reach the save room. We call these <em>twin seeds</em>. Some of these <em>can</em> be distinguished by formation, which is why it is highly recommended that you select formations. However, some of them cannot be distinguished until after the save room. If you reach the save room and are left with twin seeds, you should open both routes and try to figure out which one is the correct one.</p>
+				<p class="alert alert-warning">The current beta step routes are not twin seed safe. One of the twins may require taking steps in the save room and the other may not. In this case, you will have to guess and hope you're right. This will eventually be corrected.</p>
+				<h3>Roadmap</h3>
+				<p>The following features are planned, and may or may not actually happen depending on if I feel like working on this:</p>
+				<ul>
+					<li>Add additional maps after the save room in order to help with twin seeds. This is more complicated because the required data is route-dependent and can't be done until the step routes are finalized and twin seeds are corrected.</li>
+					<li>Allow for fuzzy searches. In particular, I'm thinking of two instances: First, the tool currently requires that you do not skip any encounters. If you do, it will return incorrect results. I'd like to make it possible to optionally be more lenient (though it may end up impossible to identify your seed in that case). Second, I'd like to add a feature to help in cases where you weren't sure exactly which tile you got an encounter on.</li>
+				</ul>
 {% endblock %}
 
 {% block extrajs %}
