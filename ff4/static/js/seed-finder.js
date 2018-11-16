@@ -6,6 +6,7 @@
  * TODO:
  *  - Give a better description of how to use the tool.
  *  - Allow for fuzzy searches (with missing encounters or unsure locations).
+ *  - Add data to allow the user to continue entering encounters for twin seeds. (route dependent)
  */
 
 var com = com || {};
@@ -2327,6 +2328,7 @@ com.aexoden.ff4 = function()
 	var possibleSeeds = new Set([]);
 	var possibleSteps = new Set([]);
 	var setEncounters = {};
+	var finished = false;
 
     /*
      * Functions
@@ -2481,6 +2483,8 @@ com.aexoden.ff4 = function()
 	var onNextImageClick = function(e) {
 		if (currentMapIndex < _mapData.length - 1) {
 			currentMapIndex += 1;
+		} else if (currentMapIndex == _mapData.length - 1) {
+			finished = !finished;
 		}
 
 		updateDisplay();
@@ -2544,6 +2548,10 @@ com.aexoden.ff4 = function()
 		possibleSeeds = new Set([]);
 
 		var maxStep = Math.max(...selectedSteps);
+
+		if (finished) {
+			maxStep = 211;
+		}
 
 		Object.entries(_encounterData).forEach(
 			([seed, data]) => {
@@ -2619,8 +2627,13 @@ com.aexoden.ff4 = function()
 		}
 
 		if (currentMapIndex == _mapData.length - 1) {
-			next.setAttribute('disabled', true);
+			if (finished) {
+				next.innerHTML = 'Unfinish';
+			} else {
+				next.innerHTML = 'Finish';
+			}
 		} else {
+			next.innerHTML = 'Next Image';
 			next.removeAttribute('disabled');
 		}
 	}
