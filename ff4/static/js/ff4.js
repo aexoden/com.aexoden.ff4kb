@@ -290,7 +290,16 @@ com.aexoden.ff4 = function()
 			"overworld-toroia-5",
 			"toroian-castle-2",
 			"toroian-castle-1f-1",
-			"toroian-castle-1f-2"
+			"toroian-castle-1f-2",
+			"toroian-castle-2f-0",
+			"overworld-toroia-6",
+			"tower-of-zot-1f-0",
+			"tower-of-zot-2f-0",
+			"tower-of-zot-3f-0",
+			"tower-of-zot-4f-0",
+			"tower-of-zot-5f-0",
+			"tower-of-zot-6f-0",
+			"tower-of-zot-7f-0"
 		]
 	};
 
@@ -1182,6 +1191,20 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"overworld-toroia-5": {
+			"type": VariableFlags.EXTRA,
+			"routes": {
+				1: { "overworld-toroia-6": 1 },
+				2: { "overworld-toroia-6": 2 }
+			},
+			"paths": {
+				"overworld-toroia-6": {
+					"index": "0",
+					"location": "Overworld (Toroia) [before Tower of Zot]",
+					"disambiguation": ""
+				}
+			}
+		},
 		"serpent-road-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -1240,6 +1263,83 @@ com.aexoden.ff4 = function()
 						"location": "Toroian Castle 1F [after Cave Magnes]",
 						"instruction": "Enter the Extra Step Area"
 					}
+				}
+			}
+		},
+		"tower-of-zot-1f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-zot-1f-0": {
+					"index": "0",
+					"location": "Tower of Zot 1F",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-zot-2f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-zot-2f-0": {
+					"index": "0",
+					"location": "Tower of Zot 2F",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-zot-3f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-zot-3f-0": {
+					"index": "0",
+					"location": "Tower of Zot 3F",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-zot-4f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-zot-4f-0": {
+					"index": "0",
+					"location": "Tower of Zot 4F",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-zot-5f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-zot-5f-0": {
+					"index": "0",
+					"location": "Tower of Zot 5F",
+					"disambiguation": " before fighting the Magus Sisters"
+				}
+			}
+		},
+		"tower-of-zot-5f-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-zot-5f-0": {
+					"index": "1",
+					"location": "Tower of Zot 5F",
+					"disambiguation": " after fighting the Magus Sisters"
+				}
+			}
+		},
+		"tower-of-zot-6f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-zot-6f-0": {
+					"index": "0",
+					"location": "Tower of Zot 6F",
+					"disambiguation": ""
 				}
 			}
 		},
@@ -1462,7 +1562,15 @@ com.aexoden.ff4 = function()
 			70: ["overworld-toroia-3"],
 			71: ["overworld-toroia-4"],
 			72: ["toroian-castle-1f-choice-0"],
-			73: ["toroian-castle-1f-1"]
+			73: ["toroian-castle-1f-1"],
+			74: ["overworld-toroia-5"],
+			75: ["tower-of-zot-1f-0"],
+			76: ["tower-of-zot-2f-0"],
+			77: ["tower-of-zot-3f-0"],
+			78: ["tower-of-zot-4f-0"],
+			79: ["tower-of-zot-5f-0"],
+			80: ["tower-of-zot-5f-1"],
+			81: ["tower-of-zot-6f-0"]
 		}
 	};
 
@@ -3745,6 +3853,32 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"overworld-toroia-6": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [20, 67, 32, 32],
+			"segments": {
+				"base-0": [
+					[35, 81, SegmentFlags.START],
+					[35, 83, SegmentFlags.NONE],
+					[36, 83, SegmentFlags.END]
+				],
+				"optional-1-0": [
+					[35, 82, SegmentFlags.NONE],
+					[36, 82, SegmentFlags.ANNOTATE],
+					[36, 83, SegmentFlags.NONE]
+				],
+				"optional-2-0": [
+					[35, 81, SegmentFlags.NONE],
+					[36, 81, SegmentFlags.ANNOTATE],
+					[36, 83, SegmentFlags.NONE]
+				],
+				"extra-2-0": [
+					[36, 82, SegmentFlags.NONE],
+					[37, 82, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
 		"toroian-castle-0": {
 			"flags": PathFlags.NONE,
 			"map": "3027-0",
@@ -3852,6 +3986,16 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"toroian-castle-2f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3056-0",
+			"segments": {
+				"base-0": [
+					[5, 18, SegmentFlags.START],
+					[5, 16, SegmentFlags.END]
+				]
+			}
+		},
 		"toroian-castle-infirmary-0": {
 			"flags": PathFlags.STEPS,
 			"map": "3058-0",
@@ -3862,6 +4006,174 @@ com.aexoden.ff4 = function()
 					[3, 3, SegmentFlags.NONE],
 					[8, 3, SegmentFlags.NONE],
 					[8, 4, SegmentFlags.END]
+				]
+			}
+		},
+		"tower-of-zot-1f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3098-0",
+			"segments": {
+				"base-0": [
+					[15, 24, SegmentFlags.START],
+					[17, 24, SegmentFlags.NONE],
+					[17, 26, SegmentFlags.NONE],
+					[28, 26, SegmentFlags.NONE],
+					[28, 5, SegmentFlags.NONE],
+					[26, 5, SegmentFlags.NONE],
+					[26, 4, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[17, 24, SegmentFlags.NONE],
+					[17, 23, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-zot-2f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3099-0",
+			"segments": {
+				"base-0": [
+					[26, 5, SegmentFlags.START],
+					[26, 14, SegmentFlags.NONE],
+					[19, 14, SegmentFlags.NONE],
+					[19, 21, SegmentFlags.NONE],
+					[17, 21, SegmentFlags.NONE],
+					[17, 27, SegmentFlags.NONE],
+					[8, 27, SegmentFlags.NONE],
+					[8, 15, SegmentFlags.RETURN],
+					[8, 20, SegmentFlags.NONE],
+					[2, 20, SegmentFlags.NONE],
+					[2, 13, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[26, 5, SegmentFlags.NONE],
+					[27, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-zot-3f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "309A-0",
+			"segments": {
+				"base-0": [
+					[2, 14, SegmentFlags.START],
+					[1, 14, SegmentFlags.NONE],
+					[1, 22, SegmentFlags.NONE],
+					[5, 22, SegmentFlags.NONE],
+					[5, 26, SegmentFlags.NONE],
+					[12, 26, SegmentFlags.NONE],
+					[12, 24, SegmentFlags.NONE],
+					[18, 24, SegmentFlags.NONE],
+					[18, 25, SegmentFlags.NONE],
+					[22, 25, SegmentFlags.NONE],
+					[22, 24, SegmentFlags.NONE],
+					[23, 24, SegmentFlags.NONE],
+					[23, 22, SegmentFlags.NONE],
+					[24, 22, SegmentFlags.NONE],
+					[24, 9, SegmentFlags.NONE],
+					[22, 9, SegmentFlags.NONE],
+					[22, 7, SegmentFlags.NONE],
+					[21, 7, SegmentFlags.NONE],
+					[21, 5, SegmentFlags.NONE],
+					[20, 5, SegmentFlags.NONE],
+					[20, 4, SegmentFlags.NONE],
+					[5, 4, SegmentFlags.NONE],
+					[5, 8, SegmentFlags.NONE],
+					[2, 8, SegmentFlags.NONE],
+					[2, 7, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[2, 14, SegmentFlags.START],
+					[3, 14, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-zot-4f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "309C-0",
+			"segments": {
+				"base-0": [
+					[5, 5, SegmentFlags.START],
+					[4, 5, SegmentFlags.NONE],
+					[4, 8, SegmentFlags.NONE],
+					[1, 8, SegmentFlags.NONE],
+					[1, 21, SegmentFlags.NONE],
+					[2, 21, SegmentFlags.NONE],
+					[2, 22, SegmentFlags.NONE],
+					[3, 22, SegmentFlags.NONE],
+					[3, 23, SegmentFlags.NONE],
+					[4, 23, SegmentFlags.NONE],
+					[4, 24, SegmentFlags.NONE],
+					[5, 24, SegmentFlags.NONE],
+					[5, 25, SegmentFlags.NONE],
+					[12, 25, SegmentFlags.NONE],
+					[12, 23, SegmentFlags.NONE],
+					[20, 23, SegmentFlags.NONE],
+					[20, 25, SegmentFlags.NONE],
+					[24, 25, SegmentFlags.NONE],
+					[24, 15, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[5, 5, SegmentFlags.NONE],
+					[6, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-zot-5f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "309D-0",
+			"segments": {
+				"base-0": [
+					[24, 14, SegmentFlags.START],
+					[25, 14, SegmentFlags.NONE],
+					[25, 22, SegmentFlags.NONE],
+					[19, 22, SegmentFlags.NONE],
+					[19, 19, SegmentFlags.NONE],
+					[15, 19, SegmentFlags.NONE],
+					[15, 17, SegmentFlags.END]
+				],
+				"base-1": [
+					[15, 17, SegmentFlags.NONE],
+					[15, 15, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[24, 14, SegmentFlags.NONE],
+					[23, 13, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				],
+				"extra-2-1": [
+					[15, 16, SegmentFlags.NONE],
+					[16, 16, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-zot-6f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "309E-0",
+			"segments": {
+				"base-0": [
+					[7, 16, SegmentFlags.START],
+					[10, 16, SegmentFlags.NONE],
+					[10, 10, SegmentFlags.NONE],
+					[7, 10, SegmentFlags.NONE],
+					[7, 9, SegmentFlags.END]
+				],
+				"base-1": [
+					[7, 6, SegmentFlags.START],
+					[5, 6, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[10, 16, SegmentFlags.NONE],
+					[11, 16, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-zot-7f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "309F-0",
+			"segments": {
+				"base-0": [
+					[7, 9, SegmentFlags.START],
+					[7, 10, SegmentFlags.END]
 				]
 			}
 		},
