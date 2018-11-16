@@ -299,7 +299,15 @@ com.aexoden.ff4 = function()
 			"tower-of-zot-4f-0",
 			"tower-of-zot-5f-0",
 			"tower-of-zot-6f-0",
-			"tower-of-zot-7f-0"
+			"tower-of-zot-7f-0",
+			"castle-baron-left-tower-room-0",
+			"castle-baron-left-tower-2f-0",
+			"castle-baron-left-tower-1f-0",
+			"castle-baron-2",
+			"castle-baron-left-passage-0",
+			"castle-baron-3",
+			"castle-baron-1f-1",
+			"castle-baron-4"
 		]
 	};
 
@@ -480,7 +488,7 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
-		"baron-0": {
+		"castle-baron-0": {
 			"type": VariableFlags.EXTRA,
 			"description": "Castle Baron [before Kainazzo]",
 			"routes": {},
@@ -488,6 +496,20 @@ com.aexoden.ff4 = function()
 				"castle-baron-1f-0": {
 					"index": "1",
 					"location": "Castle Baron 1F [before Kainazzo]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"castle-baron-1": {
+			"type": VariableFlags.EXTRA,
+			"description": "Castle Baron [after Valvalis]",
+			"routes": {
+				3: { "castle-baron-left-tower-room-0": 3 }
+			},
+			"paths": {
+				"castle-baron-left-tower-room-0": {
+					"index": "0",
+					"location": "Castle Baron Left Tower Room [after Valvalis]",
 					"disambiguation": ""
 				}
 			}
@@ -1543,7 +1565,7 @@ com.aexoden.ff4 = function()
 			51: ["castle-baron-b1f-1"],
 			52: ["castle-baron-b1f-save-room-0"],
 			53: ["castle-baron-b1f-0", "castle-baron-b1f-2"],
-			54: ["baron-0"],
+			54: ["castle-baron-0"],
 			55: ["overworld-toroia-0"],
 			56: ["toroian-castle-1f-0"],
 			57: ["overworld-toroia-1"],
@@ -1570,7 +1592,8 @@ com.aexoden.ff4 = function()
 			78: ["tower-of-zot-4f-0"],
 			79: ["tower-of-zot-5f-0"],
 			80: ["tower-of-zot-5f-1"],
-			81: ["tower-of-zot-6f-0"]
+			81: ["tower-of-zot-6f-0"],
+			82: ["castle-baron-1"]
 		}
 	};
 
@@ -1954,6 +1977,38 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"castle-baron-2": {
+			"flags": PathFlags.NONE,
+			"map": "3024-2",
+			"segments": {
+				"base-0": [
+					[6, 10, SegmentFlags.START],
+					[6, 18, SegmentFlags.NONE],
+					[8, 18, SegmentFlags.NONE],
+					[8, 17, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-baron-3": {
+			"flags": PathFlags.NONE,
+			"map": "3024-2",
+			"segments": {
+				"base-0": [
+					[8, 13, SegmentFlags.START],
+					[12, 13, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-baron-4": {
+			"flags": PathFlags.NONE,
+			"map": "3024-2",
+			"segments": {
+				"base-0": [
+					[15, 18, SegmentFlags.START],
+					[15, 31, SegmentFlags.END]
+				]
+			}
+		},
 		"castle-baron-1f-0": {
 			"flags": PathFlags.STEPS,
 			"map": "302A-1",
@@ -1974,6 +2029,18 @@ com.aexoden.ff4 = function()
 				"extra-2-1": [
 					[8, 4, SegmentFlags.NONE],
 					[9, 4, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"castle-baron-1f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "302A-1",
+			"segments": {
+				"base-0": [
+					[1, 6, SegmentFlags.START],
+					[1, 10, SegmentFlags.NONE],
+					[8, 10, SegmentFlags.NONE],
+					[8, 15, SegmentFlags.END]
 				]
 			}
 		},
@@ -2128,6 +2195,50 @@ com.aexoden.ff4 = function()
 				"base-0": [
 					[2, 8, SegmentFlags.START],
 					[2, 2, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-baron-left-tower-1f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3032-0",
+			"segments": {
+				"base-0": [
+					[5, 4, SegmentFlags.START],
+					[5, 9, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-baron-left-tower-2f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3033-1",
+			"segments": {
+				"base-0": [
+					[9, 4, SegmentFlags.START],
+					[5, 4, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-baron-left-tower-room-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3034-0",
+			"segments": {
+				"base-0": [
+					[6, 4, SegmentFlags.START],
+					[9, 4, SegmentFlags.END]
+				],
+				"optional-3-0": [
+					[6, 4, SegmentFlags.NONE],
+					[6, 5, SegmentFlags.NONE],
+					[8, 5, SegmentFlags.ANNOTATE],
+					[8, 4, SegmentFlags.NONE]
+				],
+				"extra-1-0": [
+					[7, 4, SegmentFlags.NONE],
+					[7, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[6, 4, SegmentFlags.NONE],
+					[6, 3, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
