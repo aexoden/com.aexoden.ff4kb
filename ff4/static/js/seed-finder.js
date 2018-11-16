@@ -2441,11 +2441,12 @@ com.aexoden.ff4 = function()
 	};
 
 	var getStep = function(x, y) {
+		var mapData = _mapData[currentMapIndex];
 		var result;
 
 		Object.entries(_stepData).forEach(
 			([step, [stepX, stepY]]) => {
-				if (x == stepX && y == stepY) {
+				if (x == stepX && y == stepY && parseInt(step) >= mapData.stepRange[0] && parseInt(step) <= mapData.stepRange[1]) {
 					result = parseInt(step);
 				}
 			}
