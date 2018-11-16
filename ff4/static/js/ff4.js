@@ -307,7 +307,14 @@ com.aexoden.ff4 = function()
 			"castle-baron-left-passage-0",
 			"castle-baron-3",
 			"castle-baron-1f-1",
-			"castle-baron-4"
+			"castle-baron-4",
+			"overworld-airship-1-0",
+			"overworld-agart-0",
+			"agart-0",
+			"agart-well-0",
+			"agart-1",
+			"overworld-agart-1",
+			"underworld-castle-of-dwarves-0"
 		]
 	};
 
@@ -1046,6 +1053,17 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"overworld-agart-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"overworld-agart-0": {
+					"index": "0",
+					"location": "Overworld (Agart)",
+					"disambiguation": ""
+				}
+			}
+		},
 		"overworld-damcyan-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -1593,11 +1611,45 @@ com.aexoden.ff4 = function()
 			79: ["tower-of-zot-5f-0"],
 			80: ["tower-of-zot-5f-1"],
 			81: ["tower-of-zot-6f-0"],
-			82: ["castle-baron-1"]
+			82: ["castle-baron-1"],
+			83: ["overworld-agart-0"]
 		}
 	};
 
 	data.paths = {
+		"agart-0": {
+			"flags": PathFlags.NONE,
+			"map": "3006-0",
+			"segments": {
+				"base-0": [
+					[16, 31, SegmentFlags.START],
+					[16, 22, SegmentFlags.NONE],
+					[15, 22, SegmentFlags.NONE],
+					[15, 21, SegmentFlags.END]
+				]
+			}
+		},
+		"agart-1": {
+			"flags": PathFlags.NONE,
+			"map": "3006-0",
+			"segments": {
+				"base-0": [
+					[15, 21, SegmentFlags.START],
+					[15, 31, SegmentFlags.END]
+				]
+			}
+		},
+		"agart-well-0": {
+			"flags": PathFlags.NONE,
+			"map": "308B-0",
+			"segments": {
+				"base-0": [
+					[9, 11, SegmentFlags.START],
+					[9, 10, SegmentFlags.RETURN],
+					[9, 14, SegmentFlags.END]
+				]
+			}
+		},
 		"antlion-b1f-0": {
 			"flags": PathFlags.STEPS,
 			"map": "3077-0",
@@ -3452,6 +3504,48 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"overworld-airship-1-0": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [88, 155, 32, 32],
+			"segments": {
+				"base-0": [
+					[102, 158, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[102, 186, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[102, 187, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-agart-0": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [88, 187, 32, 32],
+			"segments": {
+				"base-0": [
+					[102, 186, SegmentFlags.VEHICLE],
+					[102, 187, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[102, 215, SegmentFlags.VEHICLE],
+					[105, 215, SegmentFlags.VEHICLE],
+					[105, 216, SegmentFlags.START | SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[105, 215, SegmentFlags.NONE],
+					[106, 215, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"overworld-agart-1": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [89, 198, 32, 32],
+			"segments": {
+				"base-0": [
+					[105, 216, SegmentFlags.START],
+					[105, 215, SegmentFlags.NONE],
+					[105, 212, SegmentFlags.START | SegmentFlags.END | SegmentFlags.VEHICLE],
+				]
+			}
+		},
 		"overworld-damcyan-0": {
 			"flags": PathFlags.STEPS,
 			"map": "0000-0",
@@ -4285,6 +4379,21 @@ com.aexoden.ff4 = function()
 				"base-0": [
 					[7, 9, SegmentFlags.START],
 					[7, 10, SegmentFlags.END]
+				]
+			}
+		},
+		"underworld-castle-of-dwarves-0": {
+			"flags": PathFlags.STEPS,
+			"map": "1000-0",
+			"mapRange": [85, 65, 32, 32],
+			"segments": {
+				"base-0": [
+					[102, 82, SegmentFlags.START],
+					[100, 82, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[102, 82, SegmentFlags.NONE],
+					[102, 81, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
