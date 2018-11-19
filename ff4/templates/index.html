@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% load django_bootstrap_breadcrumbs %}
+
+{% block breadcrumbs %}
+	{{ block.super }}
+{% endblock %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}				<h1>Final Fantasy IV Knowledge Base</h1>
+			<h2>Introduction</h2>
+			<p>Originally released in 1991, <i>Final Fantasy IV</i> was the first game from the <i>Final Fantasy</i> series released for the Super Famicom in Japan and (as <i>Final Fantasy II</i>) for the Super Nintendo Entertainment System in the USA. Still played by numerous gamers worldwide, it has attracted a strong following owing to its immersive story, exciting gameplay and renowned soundtrack.</p>
+			<p>The goal of this site is to eventually collect as much information as possible about the game, ranging from strategy guides to technical information. The site currently contains mostly information related to speedrunning the game. This will expand in the future (albeit slowly).</p>
+{% endblock %}
