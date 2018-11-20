@@ -487,7 +487,7 @@ var ScrollTrigger = function () {
       if (this.options.end) {
         var endEl = findOne(this.options.end);
         var endRect = endEl.getBoundingClientRect();
-        var end = endRect.top + scrollY;
+        var end = endRect.top + scrollY + (this.options.offset || 0);
         var endPosition = this.options.positionEnd || 'bottom';
         if (endPosition === 'auto') {
           endPosition = 'top';
@@ -847,6 +847,7 @@ function init(el) {
       el: '.toc-li-' + j,
       fixed: 'true',
       start: '#' + item.index,
+      offset: offset,
       position: 'top',
       positionEnd: 'top',
       className: 'toc-visible'
