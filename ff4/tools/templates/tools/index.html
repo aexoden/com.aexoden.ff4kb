@@ -10,9 +10,12 @@
 
 {% block content %}				<h1>Tools</h1>
 				<p>This page provides a number of tools and calculators to help with playing Final Fantasy IV.</p>
-				<ul>
-					<li><a href="{% url "tools:seed-finder" %}">Seed Finder</a></li>
-				</ul>
+				<dl class="row">
+					<dt class="col-sm-3"><a href="{% url "tools:seed-finder" %}">Seed Finder</a></dt>
+					<dd class="col-sm-9">Helps you determine which seed you are on during a speedrun with a simple mouse-based interface.</dd>
+					<dt class="col-sm-3"><a href="{% url "tools:nocw-gp-calculator" %}">Any% NoCW GP Calculator</a></dt>
+					<dd class="col-sm-9">Determines if you have a safe amount of GP, and if not, how to make it safe during an Any% NoCW run.</dd>
+				</dl>
 {% endblock %}
 
 {% block extrajs %}
