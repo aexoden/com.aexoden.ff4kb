@@ -12,6 +12,90 @@
 	padding-top: 4.5rem;
 }
 
+.bs-callout {
+	background: #F4F4F4;
+	padding: 20px;
+	margin: 20px 0;
+	border: 1px solid #EEEEEE;
+	border-left-width: 5px;
+	border-radius: 3px;
+}
+
+.bs-callout.bs-callout-primary { background: #EFF5FF; }
+.bs-callout.bs-callout-success { background: #EDF7EF; }
+.bs-callout.bs-callout-danger { background: #FDF2ED; }
+.bs-callout.bs-callout-warning { background: #FFF1EC; }
+.bs-callout.bs-callout-info { background: #EDF5FF; }
+
+.bs-callout span.fas {
+	font-size: 40px;
+	margin-right: 0.3em;
+	min-width: 50px;
+	width: 50px;
+	text-align: center;
+	float: left;
+}
+
+.bs-callout h4 {
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+
+.bs-callout p:last-child {
+	margin-bottom: 0;
+}
+
+.bs-callout code {
+	border-radius: 3px;
+}
+
+.bs-callout + .bs-callout {
+	margin-top: -5px;
+}
+
+.bs-callout.bs-callout-default { border-left-color: #555555; }
+.bs-callout.bs-callout-primary { border-left-color: #075290; }
+.bs-callout.bs-callout-success { border-left-color: #008040; }
+.bs-callout.bs-callout-warning { border-left-color: #DC0000; }
+.bs-callout.bs-callout-danger { border-left-color: #AA5535; }
+.bs-callout.bs-callout-info { border-left-color: #2574A9; }
+
+.bs-callout.bs-callout-default h4,
+.bs-callout.bs-callout-default span.fas,
+.bs-callout.bs-callout-default b {
+	color: #555555;
+}
+
+.bs-callout.bs-callout-primary h4,
+.bs-callout.bs-callout-primary span.fas,
+.bs-callout.bs-callout-primary b {
+	color: #075290;
+}
+
+.bs-callout.bs-callout-success h4,
+.bs-callout.bs-callout-success span.fas,
+.bs-callout.bs-callout-success b {
+	color: #008040;
+}
+
+.bs-callout.bs-callout-warning h4,
+.bs-callout.bs-callout-warning span.fas,
+.bs-callout.bs-callout-warning b {
+	color: #DC0000;
+}
+
+.bs-callout.bs-callout-danger h4,
+.bs-callout.bs-callout-danger span.fas,
+.bs-callout.bs-callout-danger b {
+	color: #AA5535;
+}
+
+.bs-callout.bs-callout-info h4,
+.bs-callout.bs-callout-info span.fas,
+.bs-callout.bs-callout-info b {
+	color: #2574A9;
+}
+
 #toc {
 	background: #EEEEEE;
 	display: none;

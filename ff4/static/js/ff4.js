@@ -4949,7 +4949,7 @@ com.aexoden.ff4 = function()
 		var container = document.createDocumentFragment();
 
 		if (Object.keys(vars).length == 0 && !drawAll) {
-			parent.innerHTML = '<p class="alert alert-warning">There are no extra steps to take on this route. Unfortunately, this means you don\'t get much of a tutorial unless you click the <em>Show All Maps</em> button.</p>';
+			parent.innerHTML = '<div class="bs-callout bs-callout-danger"><span class="fas fa-exclamation-triangle"></span><h4>No Tutorial</h4><p>There are no extra steps to take on this route. Unfortunately, this means you don\'t get much of a tutorial unless you click the <em>Show All Maps</em> button.</p></div>';
 			return;
 		}
 
@@ -5130,9 +5130,9 @@ com.aexoden.ff4 = function()
 
 	var printSummary = function(target, route, vars) {
 		if (Object.keys(vars).length == 0) {
-			target.innerHTML = '<p class="alert alert-success" style="margin-bottom:0;">There are no extra steps to take! Easy!</p>';
+			target.innerHTML = '<div class="bs-callout bs-callout-success"><span class="fas fa-thumbs-up"></span><h4>Easy!</h4><p>There are no extra steps to take!</p></div>';
 		} else {
-			target.innerHTML += '<p class="alert alert-primary">This summary should include all critical information needed to follow the route. If you have any problems, please contact me.</p>';
+			target.innerHTML += '<div class="bs-callout bs-callout-info"><span class="fas fa-info"></span><h4>Information</h4><p>This summary should include all critical information needed to follow the route. If you have any problems, please contact me.</p></div>';
 			list = '<ul>';
 
 			var disabledPaths = {};

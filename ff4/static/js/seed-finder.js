@@ -2588,7 +2588,7 @@ com.aexoden.ff4 = function()
 		if (possibleSeeds.size == 2) {
 			for (seed of twinSeeds) {
 				if (possibleSeeds.has(seed.toString()) && possibleSeeds.has((seed + 1).toString())) {
-					e.innerHTML += '<p class="alert alert-danger">The following two seeds are twin seeds. You may be able to distinguish them by selecting formations. Otherwise, load both seeds and keep following one until you are either missing an encounter or have an extra encounter. At that point, switch to the other. (For now, this may not work. Eventually, the routes will be fixed to make this safe.)</p>';
+					e.innerHTML += '<div class="bs-callout bs-callout-danger"><span class="fas fa-exclamation-triangle"></span><h4>Twin Seed Alert</h4><p>The following two seeds are twin seeds. You may be able to distinguish them by selecting formations. Otherwise, load both seeds and keep following one until you are either missing an encounter or have an extra encounter. At that point, switch to the other. (For now, this may not work. Eventually, the routes will be fixed to make this safe.)</p></div>';
 				}
 			}
 		}
