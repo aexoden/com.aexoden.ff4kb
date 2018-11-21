@@ -1,0 +1,30 @@
+{% extends "tools/base.html" %}
+{% load static %}
+{% load django_bootstrap_breadcrumbs %}
+
+{% block breadcrumbs %}
+	{{ block.super }}
+	{% breadcrumb "Any% NoCW In-Game Timer Calculator" "tools:nocw-igt-calculator" %}
+{% endblock %}
+
+{% block subtitle %}Any% NoCW In-Game Timer Calculator{% endblock %}
+
+{% block content %}				<h1>Any% NoCW In-Game Timer Calculator</h1>
+				<address>Jason Lynch &lt;<a href="mailto:jason@calindora.com">jason@calindora.com</a>&gt; (Aexoden)</address>
+				<h2>Introduction</h2>
+				<p>This tool is designed to help you determine if your in-game timer value is safe for Any% NoCW runs. It's a replacement for the bacon chart.</p>
+				<h2>Calculator</h2>
+				<form id="data" onsubmit="com.aexoden.ff4.nocw.onSubmitIGT(); return false;">
+					<dl class="row">
+						<dt class="col-sm-3">Current In-Game Timer</dt>
+						<dd class="col-sm-9"><input type="text" id="igt" name="igt" value=""></dd>
+					</dl>
+					<p><input type="submit" value="Calculate!"></p>
+				</form>
+				<canvas id="bacon" width="729" height="253" style="margin: auto; display: none; margin-top: 10px; margin-bottom: 10px;"></canvas>
+				<pre id="output" style="display: none;"></pre>
+{% endblock %}
+
+{% block extrajs %}
+				<script src="{% static "js/nocw.js" %}"></script>
+{% endblock %}

@@ -536,7 +536,106 @@ com.aexoden.ff4.nocw = function()
 		document.getElementById("warning-text").innerHTML = warning;
 		document.getElementById("suggested-fix").innerHTML = fix;
 		document.getElementById("fixed-result").innerHTML = newResult;
+	}
 
+	var onSubmitIGT = function() {
+		var fields = document.getElementById("igt").value.split(':');
+		var seconds = (parseInt(fields[0]) * 60 + parseInt(fields[1])) * 60;
+
+		if (isNaN(seconds)) {
+			return;
+		}
+
+		var canvas = document.getElementById("bacon");
+		var ctx = canvas.getContext("2d");
+
+		ctx.fillStyle = "#FFFFFF";
+		ctx.fillRect(0, 0, 729, 253);
+
+		ctx.fillStyle = "#C3C3C3";
+		ctx.fillRect(126, 30, 603, 223);
+		ctx.fillRect(0, 0, 729, 1);
+		ctx.fillRect(0, 0, 1, 253);
+		ctx.fillRect(728, 0, 1, 253);
+		ctx.fillRect(0, 252, 729, 1);
+		ctx.fillRect(0, 20, 729, 1);
+		ctx.fillRect(0, 30, 729, 1);
+		ctx.fillRect(80, 0, 1, 253);
+		ctx.fillRect(34, 20, 1, 233);
+		ctx.fillRect(185, 7, 7, 7);
+		ctx.fillRect(223, 7, 7, 7);
+
+		ctx.fillStyle = "#FFAEC9";
+		ctx.fillRect(186, 8, 5, 5);
+
+		ctx.fillStyle = "#B97A57";
+		ctx.fillRect(224, 8, 5, 5);
+
+		ctx.fillStyle = "#00A2E8";
+		ctx.font = "9px monospace";
+		ctx.fillText("Floor -46", 15, 9);
+		ctx.fillText("Minute Range", 7, 19);
+		ctx.fillText("Hex", 9, 29);
+		ctx.fillText("Decimal", 37, 29);
+		ctx.fillText("Game Time Results", 87, 14);
+		ctx.fillText("Safe", 194, 14);
+		ctx.fillText("Extra-Crispy Bacon", 232, 14);
+		ctx.fillText("Template by chuckolator", 472, 14);
+
+		var output = "";
+
+		for (i = 0; i < 22 * 60; i++) {
+			var map = seconds % 256;
+			var x = Math.floor(seconds / 256) % 256;
+			var y = Math.floor(seconds / 65536);
+
+			var testResult = testMap(map, x, y);
+
+			var h = Math.floor(seconds / 3600);
+			var m = (Math.floor(seconds / 60) % 60);
+			var s = seconds % 60;
+
+			if (i % 60 == 0) {
+				ctx.fillStyle = "#00A2E8";
+				ctx.fillText(h + ":" + (m < 10 ? "0" : "") + m, 94, 39 + Math.floor(i / 60) * 10)
+
+				var map2 = (map + 59) % 256;
+				ctx.fillText((map < 100 ? (map < 10 ? "00" : "0") : "") + map + "〜" + (map2 < 100 ? (map2 < 10 ? "00" : "0") : "") + map2, 36, 40 + Math.floor(i / 60) * 10);
+				ctx.fillText((map < 16 ? "0" : "") + map.toString(16).toUpperCase() + "〜" + (map2 < 16 ? "0" : "") + map2.toString(16).toUpperCase(), 2, 40 + Math.floor(i / 60) * 10);
+
+				if (i > 0) {
+					ctx.fillStyle = "#C3C3C3";
+					ctx.fillRect(0, 31 + Math.floor(i / 60) * 10, 729, 1);
+				}
+			}
+
+			if (i < 60 && (i % 5 == 0 || i == 59)) {
+				ctx.fillStyle = "#00A2E8";
+				ctx.fillText((s < 10 ? "0" : "") + s, 127 + (i % 60) * 10, 29);
+			}
+
+			if (i < 300) {
+				output += (h < 10 ? "0" : "") + h + ":";
+				output += (m < 10 ? "0" : "") + m + ":";
+				output += (s < 10 ? "0" : "") + s + "\t";
+
+				output += mapResultStrings[testResult] + "\n";
+			}
+
+			if (mapResultBooleans[testResult]) {
+				ctx.fillStyle = "#FFAEC9";
+			} else {
+				ctx.fillStyle = "#B97A57";
+			}
+
+			ctx.fillRect(129 + (i % 60) * 10, 33 + Math.floor(i / 60) * 10, 7, 7);
+
+			seconds++;
+		}
+
+		document.getElementById("output").innerHTML = output;
+		document.getElementById("output").style.display = "block";
+		document.getElementById("bacon").style.display = "block";
 	}
 
     /*
@@ -544,6 +643,7 @@ com.aexoden.ff4.nocw = function()
      */
 
     return {
-		onSubmitGP: onSubmitGP
+		onSubmitGP: onSubmitGP,
+		onSubmitIGT: onSubmitIGT
     };
 }();
