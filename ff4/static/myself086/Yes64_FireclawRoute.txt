@@ -1,0 +1,154 @@
+Last update: July 14, 2015
+
+For the purpose of avoiding confusion with the word "room" which is used for 2 different things by most any% runners. I will be using "room" only for room counter and "mapID" only for what map is shown on screen.
+
+This tutorial assumes that you know the no64 route. I will only talk about the difference from no64.
+
+----------------------------------------------------------------
+
+Important to keep in mind:
+- Amount of GP during the 64 door glitch matters, make sure you buy the correct amount of items. GP dropped from battles will not matter as the GP can stay in a range greater than what you can possibly lose from running away.
+- Last yellow chocobo taken must leave on certain pixels. See https://dl.dropboxusercontent.com/u/19404607/ff4/YellowChocobo.PNG
+- Hovercraft must be 1 tile to the left of the event trigger to enter Mt.Hobs. Y coordinate of hovercraft doesn't matter.
+- After save/reset for Mist clip or black chocobo manipulation, do not stay on the file select screen for too long otherwise your run may die. Mashing A even slowly will be 100% safe.
+
+----------------------------------------------------------------
+
+(Optional)
+During Mist dragon, you can dupe iron shield instead of shadow shield. This will put your GP in a better range without affecting the buying route. It saves about 3 seconds and makes room -47 safer. See http://www.twitch.tv/myself086/c/6859696
+
+(Required)
+At Mist, buy exactly 10 dancing daggers
+
+(Required)
+Before Mt.Hobs, park the hovercraft exactly 1 tile to the left of the event trigger to enter the mountains. Y coordinate doesn't matter.
+
+(Required)
+At Fabul, during one of the fights, dupe yang's fireclaw. Before leaving Fabul, finish the dupe and equip 2 fireclaws on Yang. Your stack of fireclaws in the inventory will only show a 4 but it's 254.
+
+(Required)
+At Mysidia, buy:
+- 10 gaea hats
+- 10 gaea armors
+- 10 silver rings
+- 1 paladin shield
+- 1 paladin glove
+At the potion shop, buy:
+- 70 Cure2
+- 70 Life
+- 70 Heal
+- 70 Ether
+Then sell 70 fireclaw twice (140). You should have 114 fireclaws.
+
+(Optional)
+After MilonZ, start moving fireclaw x114 and staff where they need to be. You can also do it later if you miss the item menu.
+
+(Required)
+Yellow chocobo must leave on certain pixels.
+See https://dl.dropboxusercontent.com/u/19404607/ff4/YellowChocobo.PNG
+If your chocobo was bad, take another one after Dark elf or Valvalis.
+
+(Required)
+At Baron, buy:
+- 10 headbands
+- 10 karate
+Weapon shop:
+- 4x 13 cure rods (must be 4 stacks of 13)
+- 8 thunder claws
+- 58 iceclaws (equip 1 later)
+- 68 fireclaws
+- 96 iceclaws (or 98 and equip 2 later)
+- 20 cure rods (press X twice after buying 96)
+
+(Required)
+After Dark elf, take another black chocobo and land according to this image:
+https://dl.dropboxusercontent.com/u/19404607/ff4/BlackChocoboLanding.PNG
+Anywhere in the yellow box is fine.
+
+(Optional)
+Set your RGB to 11,7,6 for a save point in room -44. Once you land in that room you'll hear the chocobo music. Walk 2 steps to the right and save then walk up to exit the room.
+
+(Required)
+Before Calbrena, count the number of screen transitions since you've seen the world map. King's map should start at 3 and end at 63 before talking to the king.
+
+(Required)
+Make sure your inventory looks like this before the 64 door glitch with half the items at the top and half the items at the bottom. Staff goes where trashcan initially is.
+*NOTE: Third slot on the right can be anything but the quantity must be different than 13 until you move the cure rods.
+/-------------------------------- Top of inventory
+|CureRod x13		FireClaw x68
+|ThunderClaw x8		<Any>
+|<Any>			*(Move top CureRod x13 here after sealed cave)
+|IceClaw x96		CureRod x20
+\--------------------------------
+    Gap between top and bottom
+/-------------------------------- Bottom of inventory
+|CureRod x13		FireClaw x114
+|CureRod x13		<Any>
+|<Any>			CureRod x13
+|Iceclaw x57		Staff x1
+\--------------------------------
+
+----------------------------------------------------------------
+
+What to do during the glitch:
+
+Step 1: Go left until you see 2 glitched maps. You should land in a brown looking map with white and black mages. There are black tiles on your left, only second and third from the top are used. Second tile is called "fireclaw tile" and third is called "Iceclaw tile" because their destination is set by using these 2 claws.
+
+Step 2: Step on the iceclaw tile (third from the top). You will land in the same map, this isn't necessary but saves time later in the glitch. Highly recommended for the purpose of understanding the route.
+
+Step 3: Step on the fireclaw tile (second from the top) and you will land in sealed cave. Get rid of Kain by stepping near the door at the top.
+
+Step 4: Open menu and move the CureRod x13 from top left to third right as shown above.
+
+Step 5: Exit the sealed cave and step on the iceclaw tile. Stepping on the fireclaw tile at this point would ruin your run so be careful.
+
+Step 6: You should land on the map where you get FuSoYa, if not then make sure you followed step 4 correctly. Go down 1 tile to trigger FuSoYa's cutscene.
+
+Step 7: Go into FuSoYa's magic and place in order at the bottom of white magic: Life1, Mute, Bserk. Go to black magic and swap fire1/stop and warp/nuke.
+
+Step 8: Walk out of FuSoYa's map. You should land on the map with the mages. Go straight up. Walking on black tiles while already on a black tile will not trigger any event.
+
+Step 9: You are now restarting the room underflow. Go left until you land on the map with the black and white mages then go straight up. Pay attention to next room.
+
+Step 10: If you get pushed through the room just after the mages then go "up left up left". Otherwise go "up up left up left". Past these rooms, going either up or left doesn't matter but most people prefer going left until room -44.
+
+Step 11: If you've set your RGB to 11,7,6 then you will land in a red map with chocobo music. Step 2 to the right and save. Go straight up after saving.
+
+Step 12: Next 3 rooms after RGB are based on completely different things. If you get stuck, try walking out of bound or warping. Otherwise reset and read the notes below to understand what went wrong.
+
+Step 12b: If your GP is bad you can buy random junk by stepping down after loading your save file and pressing A. Generally you want to buy for around 32768 gp plus any multiple of 65536. Bad GP should only happen when your buying was bad (i.e.: Buying extra items by accident).
+
+Step 13: Once you pass the 3 dangerous rooms. Go left (or up) until you land in dwarf castle.
+
+Step 14: There should be stairs if you walk straight down. Take these stairs and open FuSoYa's white magic. Move "upt Co" to the top and cast exit.
+
+Step 15: Now you should be back on the map with the mages. Step on the fireclaw tile (second from the top) and win.
+
+----------------------------------------------------------------
+
+Room's in the 64 door glitch:
+
++0 is where you get the crystal.
+
+-7 is based on hovercraft.
+
+-9 is based on black chocobo. This is where we manipulate event triggers to teleport to places.
+
+-10 is based on yellow chocobo. https://dl.dropboxusercontent.com/u/19404607/ff4/YellowChocobo.PNG
+
+-11 to -14 are based on where you are and where you're facing. If room -10
+
+-44 is based on RGB colors. Use default blue to go through immediately or 11,7,6 for saving.
+
+-45 is based on how long you take to reload your save file. Just mash A and you should be fine. If you've saved and this room isn't good, just wait around 2 seconds on the file select screen.
+
+-46 is based on ingame timer. Changing mapID every second and cycling through every 256 seconds. If you have a good PB, learn pausing during scripted battles if necessary. 2:08 and 2:09 require no pausing. 2:06 requires almost a minute of pausing and 2:07 more than a minute of pausing. This cycle repeats every 4 minutes and 16 seconds. Exact timing can vary from person to person.
+
+-47 is based on GP amount. If you need to know whether your GP is good or not, use a calculator and divide your GP by 65536. If the first digit after the point is 5 or higher then your GP is bad.
+
+Anywhere past this point is in order: Edge's magic, FuSoYa's black magic, FuSoYa's white magic.
+
+
+
+
+

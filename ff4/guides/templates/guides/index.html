@@ -1,0 +1,46 @@
+{% extends "guides/base.html" %}
+{% load static %}
+{% load django_bootstrap_breadcrumbs %}
+
+{% block breadcrumbs %}
+	{{ block.super }}
+{% endblock %}
+
+{% block subtitle %}Index{% endblock %}
+
+{% block content %}				<h1>Guides</h1>
+				<p>This page provides various guides and notes for completing <i>Final Fantasy IV</i>, mostly in a speedrunning context.</p>
+				<h2>Speedrunning Introduction</h2>
+				<p>There are two primary categories for speedrunning <i>Final Fantasy IV</i>:</p>
+				<dl class="row">
+					<dt class="col-sm-3">Any% NoCW</dt>
+					<dd class="col-sm-9">Short for Any% No Credits Warp, this category requires you to defeat Zeromus without warping directly to the credits. A good run will finish in just under 2 hours.</dd>
+					<dt class="col-sm-3">Any% No64</dt>
+					<dd class="col-sm-9">This category disallows the use of the 64-door hierarchy glitch, which results in a slightly longer run that lasts just longer than 3 hours.</dd>
+				</dl>
+				<p>There are also several other categories that are considered less important:</p>
+				<dl class="row">
+					<dt class="col-sm-3">Octomamm%</dt>
+					<dd class="col-sm-9">An approximately 25-minute race to defeat Octomamm.</dd>
+					<dt class="col-sm-3">Paladin%</dt>
+					<dd class="col-sm-9">A good introductory category which ends upon Cecil becoming a Paladin. This hour-long category is almost identical to both Any% NoCW and Any% No64, and serves as a good starting point for someone new to running the game.</dd>
+					<dt class="col-sm-3">Any% (AKA Any% Credits Warp)</dt>
+					<dd class="col-sm-9">This category is largely identical to Any% NoCW, except it warps directly to the credits instead of defeating Zeromus. Due to the unstable nature of the glitch used, this run will typically fail approximately 50% of the time. As a result, it is currently out of favor. It's marginally shorter than Any% NoCW.</dd>
+				</dl>
+				<h2>Full Run Speedrunning Guides</h2>
+				<p>The following guides are in-depth notes created by two of the top runners of the game. They are excellent for either learning the runs or as a basis for your own notes. (The main NoCW notes by the_roth discuss the 9-item route. The community has since decided that the 12-item route is faster, and a link is provided to the_roth's addendum regarding that route.)</p>
+				<ul>
+					<li><a href="https://docs.google.com/document/d/1Q-tdhzzETGhkT8XUzaw0GbFWTqGCaAQzrz-HWNJEfZs/edit">Any% NoCW</a> and the <a href="https://docs.google.com/document/d/1FgPOf_Nc5hN6xd-wioO9xikvJJWXkPLDFTi1BSVAtb8/edit">12-Item Route Addendum</a> (by <a href="https://www.twitch.tv/the_roth">the_roth</a>)</li>
+					<li><a href="https://docs.google.com/document/d/1oLUA9Xt5RGQehK6I8MY7R4qKbhDeR5V9PY8gz7Lz4YI/edit">Any% No64</a> (by <a href="https://www.twitch.tv/riversmccown">riversmccown</a>)</li>
+				</ul>
+				<p>The following guides were originally written by me, primarily as notes to use during my own runs. As such, they are biased toward strategies I use in my runs and may be suboptimal, incomplete, or both. In addition, several techniques used in the run are not fully explained. They are best used as a reference during a run or as a basis for your own notes.</p>
+				<ul>
+					<li><a href="{% url "guides:nocw" %}">Any% NoCW</a></li>
+				</ul>
+				<h2>Mini-Guides</h2>
+				<h2>External Notes and Guides</h2>
+				<h2>Videos</h2>
+{% endblock %}
+
+{% block extrajs %}
+{% endblock %}

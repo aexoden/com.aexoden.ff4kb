@@ -1,0 +1,72 @@
+This is the earliest back attack manipulation (BAM) for RTA.
+
+Back attacks are influenced by a number of different things. But for simplicity, I will only explain the variables that you should know about:
+
+- World map frame counter, this one never resets so make sure your walk is frame perfect. That means the manipulation is ruined if you take extra time on the hovercraft. Picking up the hovercraft was thought to be a problem but in early practice I got it right over 90% of the time.
+
+- NPC step count, you will need a perfect Kaipo walk. Mist also matters but only outdoor and should only be a problem when skipping tiara and change.
+
+- Indoor frame counter, this one resets on every screen transitions and also from getting an encounter in most areas. If one room goes wrong, it will never affect the next room.
+
+- Character on screen, there are 2 variables for this one. What character is shown and whether you changed character during the room will affect back attacks.
+
+- Controller inputs, make sure to release every inputs before the screen goes black unless instructions specify certain button press. If any button is required, you must start holding the buttons less than 2/5 of a second before the black screen. If you hold the buttons much before the 2/5 second window, there will be a 1 in 3 chance of getting a different result.
+
+There is a lot more going with back attack manipulation.
+
+----------------------------------------
+
+Watery pass room 2
+	1 - Change to Rydia after entering the room and go straight up
+	2 - Change to Cecil
+After tent cave
+	1 - Change to Tellah during the room
+	... Change to Cecil before next room
+B3F
+
+B2F
+	1 - Change nothing, assuming you have Cecil
+Watery Pass-North
+	1 - Change nothing
+	2 - ??? after picking chest
+
+Antlion B1F
+	... Change to Cecil
+Antlion B2F
+	... Hug right wall before stairs
+	1 - Start running before black screen
+	2 - Change nothing
+	3 - Change to Edward
+	4 - Change nothing
+Antlion's Nest
+	1 - Change to Cecil during the room
+Antlion B2F
+	1 - Change nothing
+Antlion B1F
+	1 - Take path down and change nothing
+
+Yang frame based damage rolls (7E067A for frame count)
+frame(seed) - damage rolls
+ 97(110) - 26,12,20
+ 98(111) - 26,12,20
+ 99(240) - 31,27,15
+100(241) - 31,27,15
+101(242) - 31,27,15
+102(243) - 31,27,15
+104(245) - 33,15,30
+105(246) - 33,15,30
+106(247) - 33,15,30
+107(119) - 12,20,13
+108(120) - 14,36,18
+109(121) - 14,36,18
+110(122) - 14,36,18
+111(123) - 14,36,18
+112(124) - 36,18,35
+113(125) - 36,18,35
+114(126) - 36,18,35
+115(255) - 34,15,33
+116(1)   - 34,15,33
+117(2)   - 34,15,33
+118(3)   - 30,12,32
+119(4)   - 30,12,32
+120(5)   - 30,12,32

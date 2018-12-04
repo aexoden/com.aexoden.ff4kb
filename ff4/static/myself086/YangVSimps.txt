@@ -1,0 +1,50 @@
+Damage rolls for Yang VS imps is very limited. Based on where Yang is, slot 2 or 4, his damage rolls have a different table.
+
+By pausing to delay one of imps turn or Yang's turn, you can change future damage rolls and possibly change a 4 turns into a 3 turns.
+
+Here's a list of all the bad damage rolls for slot 2:
+ 12,20,13
+ 12,20,20
+ 13,32,33
+ 14,36,18
+ 16,21,29
+ 23,13,14
+ 25,33,15
+ 25,33,15
+ 33,14,22
+ 33,27,16
+
+----------------------------------------
+Seed - damage rolls for slot 2
+
+  3 - (30,12,32),kill right,(31,28,0)
+ 18 - (12,32,28),kill left,(0,28,25)
+ 21 - (27,20,24),kill right,(12,20,0)
+ 22 - (23,13,14),kill right,(12,20,0),kill top,(23,0,0)
+ 33 - (13,32,33),kill top,(12,0,13),kill left
+ 45 - (28,23,34),kill top,(12,0,13)
+ 57 - (29,13,22),kill top,(36,0,35)
+ 68 - (30,21,16),kill top,(36,0,35)
+ 69 - (37,30,21),kill top,(0,0,32)
+ 81 - (33,14,22),miss left,(20,14,35),kill top
+ 86 - (31,28,25),miss left,(20,14,35)
+ 89 - (14,37,30),kill right,(24,0,0)
+ 97 - (16,21,29),miss left,(20,14,35),kill left,(0,30,0)
+106 - (12,20,13),kill left,(0,31,18),kill right
+110 - (26,12,20),kill left,(0,31,18)
+113 - (36,18,35),kill top,(36,0,37)
+120 - (14,36,18),kill left,(0,31,18),kill right
+130 - (33,30,22),miss left,(30,12,32)
+152 - (13,34,28),kill top,(35,0,36)
+172 - (30,13,34),kill top,(35,0,36)
+173 - (23,36,31),kill right,(27,15,0)
+174 - (36,31,18),kill right,(27,15,0)
+193 - (12,20,20),kill top,(15,0,17),kill left
+203 - (14,35,32),kill left,(0,24,13)
+219 - (33,27,16),kill left,(0,24,13),kill right
+222 - (25,33,15),kill left,(0,24,13),kill right
+227 - (27,15,25),kill right,(32,33,0)
+228*- (25,33,15),kill left,(0,24,13),kill right
+240 - (31,27,15),kill right,(32,33,0)
+245 - (33,15,30),kill right,(32,33,0)
+248 - (34,15,33),miss left,(11,36,18)

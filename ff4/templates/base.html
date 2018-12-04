@@ -20,6 +20,9 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<ul class="navbar-nav mr-auto">
+						<li class="nav-item{% if request.resolver_match.namespace == 'guides' %} active{% endif %}">
+							<a class="nav-link" href="{% url 'guides:index' %}">Guides</a>
+						</li>
 						<li class="nav-item{% if request.resolver_match.namespace == 'routes' %} active{% endif %}">
 							<a class="nav-link" href="{% url 'routes:index' %}">Step Routes</a>
 						</li>

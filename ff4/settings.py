@@ -37,6 +37,7 @@ class Common(Configuration):
 		'django_bootstrap_breadcrumbs',
 		'debug_toolbar',
 
+		'ff4.guides',
 		'ff4.routes',
 		'ff4.tools',
 	]

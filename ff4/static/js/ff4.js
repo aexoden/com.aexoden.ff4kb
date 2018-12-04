@@ -5132,7 +5132,7 @@ com.aexoden.ff4 = function()
 		if (Object.keys(vars).length == 0) {
 			target.innerHTML = '<div class="bs-callout bs-callout-success"><span class="fas fa-thumbs-up"></span><h4>Easy!</h4><p>There are no extra steps to take!</p></div>';
 		} else {
-			target.innerHTML += '<div class="bs-callout bs-callout-info"><span class="fas fa-info"></span><h4>Information</h4><p>This summary should include all critical information needed to follow the route. If you have any problems, please contact me.</p></div>';
+			target.innerHTML += '<div class="bs-callout bs-callout-info"><span class="fas fa-info-circle"></span><h4>Information</h4><p>This summary should include all critical information needed to follow the route. If you have any problems, please contact me.</p></div>';
 			list = '<ul>';
 
 			var disabledPaths = {};
