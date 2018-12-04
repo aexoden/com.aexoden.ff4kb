@@ -818,14 +818,15 @@ function init(el) {
   var i = 1;
 
   // Building dict
-  selectors.forEach(function (selector) {
+  //selectors.forEach(function (selector) {
+    var selector = el.dataset.toc;
     var items = find(selector, container);
 
     items.forEach(function (item) {
       // Keep the id if already there
       var index = item.id || 'toc-' + i++;
       var text = item.dataset.tocTitle ? item.dataset.tocTitle.trim() : item.textContent.trim();
-      var sanitizedClassName = selector.replace(/((:+[\w-\d]*)|[^A-z0-9-\s])/g, ' ').replace(/\s{2,}/g, ' ').trim();
+      var sanitizedClassName = item.tagName.toLowerCase().replace(/((:+[\w-\d]*)|[^A-z0-9-\s])/g, ' ').replace(/\s{2,}/g, ' ').trim();
       var className = 'toc-' + sanitizedClassName;
 
       // Set it if none
@@ -835,7 +836,7 @@ function init(el) {
 
       tocItems.push({ index: index, text: text, className: className });
     });
-  });
+  //});
 
   var html = '<ul>';
   var triggerOptions = [];
