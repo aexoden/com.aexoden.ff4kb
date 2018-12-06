@@ -12,13 +12,13 @@
 	padding-top: 4.5rem;
 }
 
-.bs-callout {
-	background: #F9F9F9;
-	padding: 10px 20px;
-	margin: 20px 0;
-	border: 1px solid #EEEEEE;
-	border-left-width: 5px;
-	border-radius: 3px;
+.dl-horizontal dt {
+	float: left;
+	width: 8em;
+}
+
+.dl-horizontal dd {
+	margin-left: 9em;
 }
 
 .bs-callout dt {
@@ -27,6 +27,27 @@
 
 .bs-callout dd {
 	margin-bottom: 0px;
+}
+
+@media screen and (max-width: 480px) {
+	.dl-horizontal dt {
+		float: none;
+		width: auto;
+		text-align: left;
+	}
+
+	.dl-horizontal dd {
+		margin-left: 0;
+	}
+}
+
+.bs-callout {
+	background: #F9F9F9;
+	padding: 10px 20px;
+	margin: 20px 0;
+	border: 1px solid #EEEEEE;
+	border-left-width: 5px;
+	border-radius: 3px;
 }
 
 .bs-callout h5 {
