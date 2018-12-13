@@ -1,0 +1,193 @@
+{% extends "guides/base.html" %}
+{% load static %}
+{% load django_bootstrap_breadcrumbs %}
+
+{% block breadcrumbs %}
+	{{ block.super }}
+	{% breadcrumb "Inventory Warping" "guides:mini-inventory-warping" %}
+{% endblock %}
+
+{% block subtitle %}Inventory Warping{% endblock %}
+
+{% block content %}				<h1>Inventory Warping Fundamentals</h1>
+			<address>Jason Lynch &lt;<a href="mailto:jason@calindora.com">jason@calindora.com</a>&gt; (Aexoden)</address>
+			<h2 id="introduction">Introduction</h2>
+			<p>A key feature of the current routes that use the 64-floor glitch is the use of inventory warping. The exact technical description of this process is probably beyond the scope of this guide, but the short version is something like this: Certain tiles in the game are trigger tiles, and when you step on one, the game searches a particular area of memory for data about what to do. If a given trigger tile doesn't have any data to find, the game keeps searching memory endlessly until it finds some. These searches can happen to pass through areas of memory that we can modify, like our inventory. As far as I can tell, every trigger tile on a normal map in the game either has an associated trigger or is inaccessible. However, on certain glitch maps, there are trigger tiles that are completely manipulable.</p>
+			<h2 id="technical-details">Technical Details</h2>
+			<p>When searching for data regarding a trigger tile, the game is looking for five bytes in the following pattern:</p>
+			<dl class="row">
+				<dt class="col-3">Trigger X</dt><dd class="col-9">The X-coordinate of the trigger tile</dd>
+				<dt class="col-3">Trigger Y</dt><dd class="col-9">The Y-coordinate of the trigger tile</dd>
+				<dt class="col-3">Target Map</dt><dd class="col-9">The ID number of the target map</dd>
+				<dt class="col-3">Target X</dt><dd class="col-9">The target X-coordinate</dd>
+				<dt class="col-3">Target Y</dt><dd class="col-9">The target Y-coordinate</dd>
+			</dl>
+			<p>Thus, the game searches five bytes at a time until it finds an entry matching the X and Y coordinates of the trigger tile you are stepping on. Each map has a specific location for its trigger data, so the trigger map ID is implied. But again, the game assumes that it will find data, so it searches until it does, even if it goes far beyond the location of the map's trigger data.</p>
+			<p>Warp descriptions are five bytes long, but inventory entries are two bytes (one byte for the item and one byte for the count), so each warp description actually only takes 2.5 inventory slots. This isn't particularly useful in this case, however, as the trigger tiles we use in the Mage Room have an X-coordinate of 13. The item number with that ID number is the <i>Stardust</i> (rod), which isn't readily available. Therefore, the easiest way to make use of inventory warps is to actually use a six-byte sequence where the first byte can be anything we want (as it's ignored), and the other five bytes correspond to the warp description. We can then insert a new warp every 10 bytes (or every five inventory entries).</p>
+			<p>Keeping this mind, let's look at exactly how the warp descriptions are structured:</p>
+			<table class="table table-striped">
+				<thead><tr><th>Byte</th><th>Inventory Assocation</th><th>Warp Component</th></tr></thead>
+				<tbody>
+					<tr><td>0</td><td>Item</td><td>(padding)</td></tr>
+					<tr><td>1</td><td>Count</td><td>Trigger X</td></tr>
+					<tr><td>2</td><td>Item</td><td>Trigger Y</td></tr>
+					<tr><td>3</td><td>Count</td><td>Target Map ID</td></tr>
+					<tr><td>4</td><td>Item</td><td>Target X</td></tr>
+					<tr><td>5</td><td>Count</td><td>Target Y</td></tr>
+				</tbody>
+			</table>
+			<p>To summarize, we are going to set our trigger Y-coordinate and target X-coordinate with items, and our trigger X-coordinate, target map ID and target Y-coordinate with item counts.</p>
+			<p>By using different items, you can set up the warps in various ways, but two very useful items for are purposes are the <i>FireClaw</i> and <i>IceClaw</i>. They're both available for purchase, and have very favorable ID numbers: <i>FireClaw</i> is 1 and <i>IceClaw</i> is 2. the trigger tiles we use in the Glitch Room are stacked vertically. By varying which claw you use as your second item in the sequence, you are actually selecting which Y-coordinate will activate the associated warp.</p>
+			<h2 id="warps">Warps</h2>
+			<p>The following warps are presented in the order we use them, not necessarily the order they are in the inventory. THe first active warp in your inventory is the one that will be used.</p>
+			<p>The target map for each warp is non-negotiable. We need to access each room in the sequence (through inventory warps or through other means such as RGB). However, the target coordinates are often very flexible so if you screw something up, you may have some easy (and some difficult) alternatives available to you.</p>
+			<p>Again, the first item in each warp can be anything. We use <i>Cure</i> (staff) mainly because it's available for purchase at a shop we'd already be visiting.</p>
+			<h3 id="warps-us">Any% NoCW</h3>
+			<p>The following warps are used in the 12-item route of the Any% NoCW run. The 9-item warps are similar, but different.</p>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-bolt"></span>
+				<h4>Mage Room</h4>
+				<h5>Description</h5>
+				<p>This sets up a warp for the trigger at coordinates 13, 2 to travel to map 57 (the Mage Room) at coordinates 15, 1. The purpose of this warp is to help in setting the Mage Room as floor 0.</p>
+				<h5>Items</h5>
+				<ul>
+					<li><i>Cure</i> (staff) x13</li>
+					<li><i>IceClaw</i> x57</li>
+					<li><i>Staff</i> x1</li>
+				</ul>
+				<h5>Bytes</h5>
+				<dl class="dl-horizontal">
+					<dt>Decimal</dt><dd>(16) 13 2 57 15 1</dd>
+					<dt>Hex</dt><dd><code>(10) 0D 02 39 0F 01</code></dd>
+				</dl>
+				<h5>Last Item Variation</h5>
+				<p>For the last item, your target coordinates can actually vary quite a bit. The alternatives you're most likely to have, however, are <i>Cure</i> (staff) x1 or <i>Shadow</i> (sword) x1.</p>
+			</div>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-bolt"></span>
+				<h4>Sealed Cave</h4>
+				<h5>Description</h5>
+				<p>This sets up a warp for the trigger at coordinates 13, 1 to travel to map 68 (the Sealed Cave entrance) at coordinates 3, 8.</p>
+				<h5>Items</h5>
+				<ul>
+					<li><i>Cure</i> (staff) x13</li>
+					<li><i>FireClaw</i> x68</li>
+					<li><i>Thunder</i> (claw) x8</li>
+				</ul>
+				<h5>Bytes</h5>
+				<dl class="dl-horizontal">
+					<dt>Decimal</dt><dd>(16) 13 1 68 3 8</dd>
+					<dt>Hex</dt><dd><code>(10) 0D 01 44 03 08</code></dd>
+				</dl>
+				<h5>Last Item Variation</h5>
+				<p>I haven't looked at this one in detail, but some number of rods is a possibility as an alternative.</p>
+			</div>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-bolt"></span>
+				<h4>FuSoYa</h4>
+				<h5>Description</h5>
+				<p>This sets up a warp for the trigger at coordinates 13, 2 to travel to map 96 (the Lunarian Palace) at coordinates 16, 20.</p>
+				<h5>Items</h5>
+				<ul>
+					<li><i>Cure</i> (staff) x13</li>
+					<li><i>IceClaw</i> x96</li>
+					<li><i>Cure</i> (staff) x20</li>
+				</ul>
+				<h5>Bytes</h5>
+				<dl class="dl-horizontal">
+					<dt>Decimal</dt><dd>(16) 13 2 96 16 20</dd>
+					<dt>Hex</dt><dd><code>(10) 0D 02 60 10 14</code></dd>
+				</dl>
+				<h5>Last Item Variation</h5>
+				<p>The range of possible values for the <i>Cure</i> (staff) is actually quite large. 20 is optimal, however. Other potential items you could use instead are other staves or rods.</p>
+			</div>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-bolt"></span>
+				<h4>Zeromus</h4>
+				<h5>Description</h5>
+				<p>This sets up a warp for the trigger at coordinates 13, 1 to travel to map 114 (Zeromus) at coordinates 16, 13.</p>
+				<h5>Items</h5>
+				<ul>
+					<li><i>Cure</i> (staff) x13</li>
+					<li><i>FireClaw</i> x114</li>
+					<li><i>Cure</i> (staff) x13</li>
+				</ul>
+				<h5>Bytes</h5>
+				<dl class="dl-horizontal">
+					<dt>Decimal</dt><dd>(16) 13 1 114 16 13</dd>
+					<dt>Hex</dt><dd><code>(10) 0D 01 72 10 0D</code></dd>
+				</dl>
+				<h5>Last Item Variation</h5>
+				<p>There are possibilities, but it's kind of tight. An exact list would probably be more useful.</p>
+			</div>
+			<h3 id="warps-jp">SFC Any% NoCW</h3>
+			<p>The original SFC release of the game is slightly different. The Mage Room used in the U.S. version doesn't exist in the Japanese version, so I had to find a different room, which we've named the Stone Room. The basic idea is the same, but the details are different. I've included both the English and Japanese item names here for reader convenience.</p>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-bolt"></span>
+				<h4>Stone Room</h4>
+				<h5>Description</h5>
+				<p>This sets up a warp for the trigger at coordinates 14, 1 to travel to map 232 (the Stone Room) at coordinates 11, 1. The purpose of this warp is to help in setting the Stone Room as floor 0.</p>
+				<h5>Items</h5>
+				<ul>
+					<li><i>Cure</i> (staff) (いやしのつえ) x14</li>
+					<li><i>FireClaw</i> (ほのおのつめ) x232</li>
+					<li><i>Change</i> (rod) (へんげのロッド) x1</li>
+				</ul>
+				<h5>Bytes</h5>
+				<dl class="dl-horizontal">
+					<dt>Decimal</dt><dd>(16) 14 1 232 11 1</dd>
+					<dt>Hex</dt><dd><code>(10) 0E 01 E8 0B 01</code></dd>
+				</dl>
+			</div>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-bolt"></span>
+				<h4>Sealed Cave</h4>
+				<h5>Description</h5>
+				<p>This sets up a warp for the trigger at coordinates 14, 2 to travel to map 68 (the Sealed Cave entrance) at coordinates 3, 8.</p>
+				<h5>Items</h5>
+				<ul>
+					<li><i>Cure</i> (staff) (いやしのつえ) x14</li>
+					<li><i>IceClaw</i> (こおりのつめ) x68</li>
+					<li><i>Thunder</i> (claw) (いかづちのつめ) x8</li>
+				</ul>
+				<h5>Bytes</h5>
+				<dl class="dl-horizontal">
+					<dt>Decimal</dt><dd>(16) 14 2 68 3 8</dd>
+					<dt>Hex</dt><dd><code>(10) 0E 02 44 03 08</code></dd>
+				</dl>
+			</div>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-bolt"></span>
+				<h4>FuSoYa</h4>
+				<h5>Description</h5>
+				<p>This sets up a warp for the trigger at coordinates 14, 2 to travel to map 96 (the Lunarian Palace) at coordinates 16, 15.</p>
+				<h5>Items</h5>
+				<ul>
+					<li><i>Cure</i> (staff) (いやしのつえ) x14</li>
+					<li><i>IceClaw</i> (こおりのつめ) x96</li>
+					<li><i>Cure</i> (staff) (いやしのつえ) x15</li>
+				</ul>
+				<h5>Bytes</h5>
+				<dl class="dl-horizontal">
+					<dt>Decimal</dt><dd>(16) 14 2 96 16 15</dd>
+					<dt>Hex</dt><dd><code>(10) 0E 02 60 10 0F</code></dd>
+				</dl>
+			</div>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-bolt"></span>
+				<h4>Zeromus</h4>
+				<h5>Description</h5>
+				<p>This sets up a warp for the trigger at coordinates 14, 1 to travel to map 114 (Zeromus) at coordinates 16, 15.</p>
+				<h5>Items</h5>
+				<ul>
+					<li><i>Cure</i> (staff) (いやしのつえ) x14</li>
+					<li><i>FireClaw</i> (いやしのつえ) x114</li>
+					<li><i>Cure</i> (staff) (いやしのつえ) x15</li>
+				</ul>
+				<h5>Bytes</h5>
+				<dl class="dl-horizontal">
+					<dt>Decimal</dt><dd>(16) 14 1 114 16 15</dd>
+					<dt>Hex</dt><dd><code>(10) 0D 01 72 10 0F</code></dd>
+				</dl>
+			</div>
+{% endblock %}
