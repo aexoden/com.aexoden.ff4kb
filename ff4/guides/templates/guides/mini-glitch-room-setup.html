@@ -1,0 +1,55 @@
+{% extends "guides/base.html" %}
+{% load static %}
+{% load django_bootstrap_breadcrumbs %}
+
+{% block breadcrumbs %}
+	{{ block.super }}
+	{% breadcrumb "Glitch Room Setup" "guides:mini-glitch-room-setup" %}
+{% endblock %}
+
+{% block subtitle %}Glitch Room Setup{% endblock %}
+
+{% block content %}				<h1>Glitch Room Setup Guide</h1>
+			<address>Jason Lynch &lt;<a href="mailto:jason@calindora.com">jason@calindora.com</a>&gt; (Aexoden)</address>
+			<h2 id="introduction">Introduction</h2>
+			<p>Perhaps the most annoying aspect of seed 92 manipulation is the process of obtaining seed 81 and getting that coveted 10th-step encounter. In the default scenario, you have to hard reset between each attempt. For most consoles, this requires upwards of 15-20 seconds of the console being off between each attempt. In order to simplify our lives and reduce aggravation, the following method was devised. I'm honestly not entirely sure about everyone who is responsible for this, but I am almost certian that <a href="https://www.twitch.tv/myself086">Myself086</a> was involved.</p>
+			<h2 id="procedure">Setup Procedure</h2>
+			<h3 id="procedure-step-one">Get to the Mage Room</h3>
+			<p>The first step is to get to the so-called Mage Room. There are essentially two options, depending on if you already have late game saves available or if you are familiar with the Any% NoCW route:</p>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-bolt"></span>
+				<h4>Option A: Any% NoCW</h4>
+				<p>The first option is to simply do a standard Any% NoCW speedrun until you get to the Mage Room. For the purposes of setting up the glitch room, the inventory is completely irrelevant, so you can largely ignore that aspect of the route. It is, however, very important to put the black chocobo in the correct location as that is how you access the room.</p>
+			</div>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-bolt"></span>
+				<h4>Option B: Late Game Save</h4>
+				<p>The other option is to start with any late game save (one with one or more airships and access to both the Overworld and the Underworld). Once you have loaded that save, you will need to verify all of the following vehicles are in the proper location.</p>
+				<dl class="row">
+					<dt class="col-3">Red Airship (Falcon)</dt><dd class="col-9">The Falcon needs to be parked next to Eblan, immediately to the left of the top left tile of the castle.</dd>
+					<dt class="col-3">Big Whale</dt><dd class="col-9">You need to park the Big Whale four tiles south of the lower left tile of Castle Baron. After doing so, head through the Serpent Road to Mysidia where the Enterprise should be waiting.</dd>
+					<dt class="col-3">Hovercraft</dt><dd class="col-9">Using the Enterprise, pick up the hovercraft and park it to the left of the entrance to Mt.Hobs (the same location you would place it during an Any% NoCW run).</dd>
+					<dt class="col-3">Black Chocobo</dt><dd class="col-9">The black chocobo needs to be placed in the same way as in the Any% NoCW run. For a reference, refer to the <a href="{% static "myself086/BlackChocoboLanding.PNG" %}">Black Chocobo Image</a>.</dd>
+					<dt class="col-3">Yellow Airship (Enterprise)</dt><dd class="col-9">Park the Enterprise two tiles east of the lower right tile of the Castle of Dwarves and enter the castle.</dd>
+				</dl>
+				<p>From here, all you need to do is enter the glitch. After entering the main hall of the castle, head to the right stairway and go up the stairs. This is the third screen transition, so you are now on floor 3. Repeatedly go down and back up this staircase until you reach floor 63. At this point, head in between the two shops into Cafe HOWDY! Exit the room the same way you came in and you should enter the glitch. Keep walking left until you enter the Mage ROom, which should be fairly obvious due to the presence of numerous well-known mages.</p>
+			</div>
+			<h3 id="procedure-step-two">Access the Glitch Room</h3>
+			<p>Once you're in the Mage Room, you simply need to execute the following set of maneuvers:</p>
+			<ol>
+				<li>In the Mage Room, walk down until you are below the line of black tiles, and then walk left until you are below the sixth black tile from the left. Go up and enter that tile.</li>
+				<li>You are now in the Glitch Room. From here, go up until you run into a wall.</li>
+				<li>Take one step to the right and then once again go up until you hit a wall (approximately two steps).</li>
+				<li>Take one step to the left and again go up until you hit a wall.</li>
+				<li>From here, go down twice, and then go left until you hit a wall.</li>
+				<li>Go down once, open the menu and save. (Most likely, you will want to save on slot 2, but there will be more discussion about this later.)</li>
+			</ol>
+			<p>Congratulations, you now have a Glitch Room save that you can probably use to get to seed 92 slightly faster than you were able to before.</p>
+			<h2 id="using">Using the Glitch Room</h2>
+			<p>Using the Glitch Room is actually very simple. When you're ready to begin a run, load the Glitch Room save and (assuming you're facing downward) press A. Immediately reset the console.</p>
+			<p>You now need to press A on the title screen at the appropriate time to get seed 92. This apparently varies slightly depending on how quickly you reset, but it will generally be around the second or third note of the song. For me, it's approximately 2.75 notes in. You will probably need to practice this timing a little bit before you get it down.</p>
+			<p>Of course, you still have to successfully hit seed 81 to make this all work, but now your downtime between attempts is greatly reduced.</p>
+			<h2 id="caveats">Caveats</h2>
+			<p>There is one major caveat you should be aware of: save wiping.</p>
+			<p>When using the Glitch Room, there is a cahnce that the game will completely wipe one or more of your save files. My console rarely wipes anything, but others have reported all their saves being wiped (which makes the room pretty useless). More typically, it will erase either only save 1 or both saves 1 and 4 (and even more rarely save 2). For this reason, we recommend keeping your seed 223 file on save 3 (as it appears to be the safest), and your Glitch Room setup on save 2. (For extra safety, if you don't need save 4 for anything, you can save the Glitch Room there too. I've had the Glitch Room wipe only saves 1 and 2 before.)</p>
+{% endblock %}
