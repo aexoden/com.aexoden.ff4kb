@@ -1,0 +1,1131 @@
+{% extends "guides/base.html" %}
+{% load static %}
+{% load django_bootstrap_breadcrumbs %}
+
+{% block breadcrumbs %}
+	{{ block.super }}
+	{% breadcrumb "SFC Any% NoCW" "guides:sfc-nocw" %}
+{% endblock %}
+
+{% block subtitle %}SFC Any% NoCW{% endblock %}
+
+{% block content %}				<h1>Final Fantasy IV SFC Any% NoCW Guide</h1>
+			<address>Jason Lynch &lt;<a href="mailto:jason@calindora.com">jason@calindora.com</a>&gt; (Aexoden)</address>
+			<h2 id="introduction">Introduction</h2>
+			<p>These are my notes for the Final Fantasy IV SFC Any% NoCW speedrun. While I am very familiar with the game and the speedrun, I am nonetheless nowhere near being the world record holder in this category or any other, so there are almost certainly faster ways to do things. That said, I do periodically update this document as new techniques and strategies are discovered, so if you follow them, you're probably not doomed to be perilously slow.</p>
+			<p>Do note, however, that this guide is much less updated than some of my others. You may wish to view the top runs at <a href="https://www.speedrun.com/ff4#Any_SNES_SFC">speedrun.com</a>as they use slightly newer routing, though the inventory warps should be the same.</p>
+			<h2 id="general-concepts">General Concepts</h2>
+			<p>While these are largely my personal notes used when I actually run the game, a number of people have been using them to learn the run, so I will briefly go over some of the more general concepts that apply to the run. However, the notes will almost certainly still assume you are generally familiar with some of the techniques used speedrunning the game (such as item duplication and run buffering). If you are unfamiliar with these, there are other resources on this site that you may wish to examine.</p>
+			<h3 id="general-concepts-experience-path">Experience Path</h3>
+			<p>Unfortunately, as it turns out, levels matter a lot in this run. As such, there is a lot of research into the best ways to allocate experience throughout the run. Experience is primarily manipulated using the following facts:</p>
+			<ol>
+				<li>Dead characters do not gain experience. Total experience from the fight is divided amongst living party members. Therefore, the fewer characters that are alive, the more experience the living ones collect.</li>
+				<li>Characters in the so-called <em>shadow party</em> gain the same amount of experience as living party members. These are characters who have left the party and will later return.</li>
+			</ol>
+			<p>The &quot;perfect&quot; path is a matter of personal preference and is always up for debate. I make my recommendations throughout this guide, but there are many ways to skin a cat, and you're welcome to develop your own path that suits your playing style better. You'll still want to keep in mind the following point:</p>
+			<ul>
+				<li>Kain should reach level 19 by the time you reach Valvalis. Experience is slightly harder to come by in this version, so the route used for the SNES version will not be sufficient.</li>
+			</ul>
+			<h3 id="general-concepts-inventory-management">Inventory Management</h3>
+			<p>Another important aspect of any NoCW run is inventory management. You end up with a very full inventory and the exact locations of some of the items will be important by the end of the run. This guide makes some recommendations, but ultimately, you will need to come up with an inventory management scheme you're comfortable with.</p>
+			<h3 id="general-concepts-mimic-glitch">Mimic Glitch</h3>
+			<p>You have the option of using the Mimic Glitch (AKA <i>Carrot</i>/<i>TrashCan</i>) to defeat Milon and/or Milon Z. Learning these is beyond the scope of this guide, but it may be useful to know that you only need to pick up the <i>Carrot</i> or move the <i>TrashCan</i> to the top of the inventory if you intend to utilize these strategies.</p>
+			<h3 id="general-concepts-assumptions">Assumptions</h3>
+			<p>This guide makes the assumption that you are following along from start to finish. Menuing instructions assume that your characters are already equipped as per the guide, and won't list equipment that is staying the same. If you attempt to join in the middle, you may miss this or similar points.</p>
+			<h3 id="general-concepts-conventions">Conventions</h3>
+			<p>This guide uses the following conventions:</p>
+			<ul>
+				<li>Names are given in both the original Japanese and translated into English, using the FF2US name if it exists, otherwise using a literal translation.</li>
+				<li>Item names are <i>italicized</i>.</li>
+				<li>Each battle lists the recommended party formation. The slots are listed from top to bottom. Characters in the front row are prefixed with an asterisk (*). In addition, their level and current experience is listed (assuming you follow this guide's experience path).</li>
+				<li>The battle strategies occasionally list multiple actions separated by slashes (/). In such cases, you should take the first option that applies to your situation. That is, don't use a <i>Cure2</i> potion on your party if all your characters are fully healed.</li>
+				<li>In contrast, occasionally multiple commands are listed on separate lines. In this case, you should execute each command in order.</li>
+				<li>Battle summaries list the experience earned through the battle. This assumes you kill the same enemies as the guide. (For example, killing the General at Fabul or having to fight Calbrena will result in different experience gains.)</li>
+				<li>Starting at Milon, battles each list an inventory reminder, to help you set up the item warps. This simply lists the item counts in order that you can use as a reminder of which items to place where, as long as you know the correct locations already. To learn them, refer to the complete list at the bottom.</li>
+			</ul>
+			<h3 id="general-concepts-acknowledgements">Acknowledgements</h3>
+			<p>This route was heavily inspired by the inventory warps devised by <a href="https://www.twitch.tv/myself086">Myself086</a> for the SNES Any% NoCW route. Following that template (and after exhaustively searching all the SFC rooms), I devised a comparable item route for the SFC version, based on the superior 12-item route.</p>
+			<p>The remainder of the route, including the SFC-specific battle strategies and buying route, was initially put together by <a href="https://www.twitch.tv/catastrophic4">catastrophic4</a>. Some modifications have been made since his work, but much of it still remains.</p>
+			<p>Of course, I must thank the entire FF4 speedrunning community for their unending helpfulness and drive toward improving all categories.</p>
+			<h3 id="general-concepts-resources">Resources</h3>
+			<p>The following resources should prove invaluable to either help during a run or to help you learn the run in the first place:</p>
+			<ul>
+				<li><a href="{% url 'routes:route' "sfc-nocw-aexoden" %}">SFC Any% NoCW Step Routes</a></li>
+				<li><a href="{% url 'tools:seed-finder' %}">Seed Finder Tool</a></li>
+				<li><a href="{% static "myself086/YellowChocobo.PNG" %}">Yellow Chocobo Image</a> (by <a href="https://www.twitch.tv/myself086">Myself086</a>)</li>
+				<li><a href="{% url 'tools:nocw-gp-calculator' %}">Any% NoCW GP Calculator</a></li>
+				<li><a href="{% url 'tools:nocw-igt-calculator' %}">Any% NoCW In-Game Timer Calculator (AKA Bacon Chart)</a></li>
+				</ul>
+			<h3 id="general-concepts-differences">Differences from SNES</h3>
+			<p>The following is a short, non-comprehensive list of major differences between the SFC and SNES releases, targeted toward speedrunners of the game:</p>
+			<ul>
+				<li>Japanese RTA timing is traditionally from power on to &quot;The End&quot;. In FF4, this adds approximately 18 minutes to the total time and prevents seed 92 manipulation.</li>
+				<li>Bosses (and enemies in general) have more HP and are often stronger, so some strategies are different to compensate.</li>
+				<li>The SFC release has access to active ATB mode, while the SNES release is locked in wait mode.</li>
+				<li>The primary room used in the SNES release for item warps does not exist in the SFC release, so an alternate route has been developed.</li>
+				<li>The SFC release has additional abilities and items, so some battle strategies have been altered to take advantage of this.</li>
+				<li>The walking paths are different, so the step routes are different as well. (For example, there are six additional optional steps in Fabul.) In addition, there are still multiple routes. If I pick up this category again, I will likely update this guide to reflect the world record route, but until then, there will be two sets of step routes.</li>
+			</ul>
+			<h2 id="walkthrough">Walkthrough</h2>
+			<h3 id="walkthrough-prologue">Prologue</h3>
+			<p>Begin the game. During the introduction, you may wish to hold down B+Right+Down immediately before the battle with the Raven, in an attempt to avoid the Raven's attack. This is known as the BRD or BIRD skip. It may or may not work for you, depending on the awesomeness of your mashing. Finish the introduction and gain control.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Set <i>battle speed (バトルスピード)</i> and <i>battle message (バトルメッセージ)</i> to 1.</li>
+					<li>Set <i>window color RGB (ウィンドウカラー)</i> to 8,7,3.</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Unless you're relatively sure that you're on seed 92, your best bet is to take 0 extra steps in Castle Baron.</p>
+				<p>Check if your first encounter is either of the following:</p>
+				<ul>
+					<li>World Map (Baron), Step 6: Imp x4</li>
+					<li>Misty Cave, Step 65 (first tile of northwest bridge): SandMoth x2, Larva x2 (followed by Larva x3 6 steps later)</li>
+				</ul>
+				<p>If so, you are on one of the seeds with a Mist Clip encounter. To avoid it, you need to take 4 extra steps at some point. (Taking 2 steps will skip one encounter, only to cruelishly give you another on the Mist Clip).</p>
+					<p>If you take an extra step, you're on your own, but you should be safe if you're relatively close to hitting 92.</p>
+			</div>
+			<p>Pick up the <i>Ether1</i> (エーテル) and <i>Tent</i> (テント) on Castle Baron 1F (the middle and rightmost chests) and then head to Cecil's room in the left tower to finish the introduction.</p>
+			<p>Walk to the chocobo forest, optinally pick up the <i>Carrot</i> (ギサールのやさい), capture a yellow chocobo, and ride to the Misty Cave (ミストのどうくつ).</p>
+			<h3 id="walkthrough-misty-cave">Misty Cave (ミストのどうくつ)</h3>
+			<p>Walk through the cave until you reach the boss.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: D.Mist (ミストドラゴン)</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>465</dd>
+						<dt>EXP</dt><dd>700</dd>
+						<dt>Party</dt><dd>*Kain (10:2300) / empty / *Cecil (10:3000) / empty / *empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Kain</dt><dd>Jump (ジャンプ)</dd>
+						<dt>Cecil</dt><dd>Fight (たたかう)</dd>
+						<dt>Cecil</dt><dd>Fight (たたかう)</dd>
+						<dt>Kain</dt><dd>Fight (たたかう)</dd>
+						<dt>Cecil</dt><dd>Fight (たたかう)</dd>
+						<dt>Kain</dt><dd>Jump (ジャンプ)</dd>
+						<dt>Cecil</dt><dd>Fight (たたかう)</dd>
+					</dl>
+					<p>D.Mist (ミストドラゴン) turns to mist.</p>
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Parry (ぼうぎょ)</dd>
+						<dt>Kain</dt><dd>Wait until note before long high note<br>Jump (ジャンプ)</dd>
+						<dt>Cecil</dt><dd>Wait for &quot;もとに　もどる！　いまがこうげきの　チャンス！&quot;<br>Duplicate shield slot<br>Fight (たたかう)</dd>
+						<dt>Cecil</dt><dd>Fight (たたかう)</dd>
+						<dt>Kain</dt><dd>Jump (ジャンプ)</dd>
+						<dt>Cecil</dt><dd>Fight (たたかう)</dd>
+					</dl>
+					<p>Continue with Fight and Jump until D.Mist falls. There is a small chance (just under 1%) of a third cycle, depending on damage rolls.</p>
+				</div>
+			</div>
+			<h3 id="walkthrough-mist-clip">Mist Clip</h3>
+			<p>After the battle, exit the cave and head toward Mist. When you approach the last tile before the town, hold left, and then hold X. When the menu opens, release the keys, and then use the <i>Tent (テント)</i>. After the night is over, and Cecil lowers his arm, begin to hold right, and almost immediately after, begin to hold X (while continuing to hold right). Once the menu is open, you can release the keys.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Unequip Kain: <i>Iron</i> (armor) (アイアンアーマー)</li>
+					<li>Equip Cecil: <i>Shadow</i> (shield) (あんこくのたて)</li>
+					<li>Unequip Cecil: <i>Shadow</i> (shield) (あんこくのたて) in same slot, which will leave an &quot;empty&quot; slot in your inventory.</li>
+					<li>Save the game, reset, and reload.</li>
+				</ul>
+			</div>
+			<p>Walk past the village tiles, and then enter Mist (ミストのむら) from the right side. Head to the weapon shop.</p>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-shopping-cart"></span>
+				<h4>Shopping</h4>
+				<ul>
+					<li>Sell empty slot where you unequipped <i>Shadow</i> (shield) (あんこくのたて).</li>
+					<li>Buy 10 <i>Dancing</i> (dagger) (ダンシングダガー).</li>
+				</ul>
+			</div>
+			<p>Head to the northeast grass field and pick up the <i>Bomb Fragment</i> (ボムのかけら).</p>
+			<p>Head to the northwest house, enter the fireplace, and pick up the <i>Tiara</i> (きんのかみかざり) from the first chest and <i>Change</i> (rod) (へんげのロッド) from the chest at the end of the long passage. Exit the house and trigger the cut scene.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Girl (おんなのこ)</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>60000</dd>
+						<dt>EXP</dt><dd>0</dd>
+						<dt>Party</dt><dd>*Kain (10:2650) / empty / *Cecil (11:3350) / empty / *empty</dd>
+						<dt>Inventory Goals</dt><dd><i>Tiara</i> (きんのかみかざり) to 1L<br><i>Dancing</i> (ダンシングダガー) to 1R<br><i>Change</i> (へんげのロッド) to 3L<br><i>Carrot</i> (ギアールのやさい) to 3R<br><i>Bomb Fragment</i> (ボムのかけら) to 4R<br><i>Ether1</i> (エーテル) to 5R<br><i>Iron</i> (armor) (アイアンアーマー) to 7L</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<p>Attempt to rearrange your inventory during the animations. Change rows (チェンジ) at the end for fist-pump swag strats.</p>
+				</div>
+			</div>
+			<h3 id="walkthrough-kaipo">Kaipo (オアシスのむらカイポ)</h3>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>If you are using a step route, this is when you need to start watching which steps you get encounters on.</p>
+			</div>
+			<p>Continue to Kaipo (オアシスのむらカイポ) in the middle of the desert. Enter the town and trigger the cut scene.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-info-circle"></span>
+				<h4>NPC Movement</h4>
+				<p>NPC movement may seem random, but it's actually reasonably deterministic during this portion of the game. Assuming you walk perfectly and don't stand around, the NPCs will always be in the same location from run to run. This will remain true until Fabul. Learn where the NPCs will be and optimize your walking accordingly.</p>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<h4>Battle: Officer (ジェネラル) x1, Soldier (バロンへい) x3</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>Officer (ジェネラル): 221 / Soldier (バロンへい): 27</dd>
+						<dt>EXP</dt><dd>471</dd>
+						<dt>Party</dt><dd>empty / empty / *Cecil (11:3350) / empty / empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Run Buffer<br>Darkness (あんこく)</dd>
+						<dt>Cecil</dt><dd>Run Buffer<br>Darkness (あんこく)</dd>
+					</dl>
+					<p>If any of the soldiers survive, either use Fight (たたかう) or Darkness (あんこく) as appropriate.</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Equip Rydia: <i>Tiara</i> (きんのかみかざり).</li>
+					<li>Move Rydia down one slot. (Form (ならびかえ), A, Down, A)</li>
+				</ul>
+			</div>
+			<p>Visit Rosa in the northeast house. Mash with B to avoid talking to Rosa repeatedly. Afterward, leave the house.</p>
+			<p>On the way out of town, pick up the <i>Ether1</i> (エーテル) in the top pot next to the house to the south of the house Rosa is in.</p>
+			<p>Just before exiting the town (immediately after emerging from the door in the wall), take one step to the right, and then go down.</p>
+			<p>Head north to the cave and enter the Watery Pass (ちかすいみゃくみなみぐち).</p>
+			<h3 id="walkthrough-watery-pass">Watery Pass (ちかすいみゃくみなみぐち)</h3>
+			<p>Walk through the first part of the cave, recruit Tellah, and then continue to the end of the cave. In the last room, pick up the <i>Copper Hourglass</i> (どうのすなどけい) and <i>Darkness</i> (sword) (シャドーブレイド), and exit the cave.</p>
+			<p>Enter the other cave and proceed until you meet Octomamm (オクトマンモス).</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Octomamm (オクトマンモス)</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>2350</dd>
+						<dt>EXP</dt><dd>1200</dd>
+						<dt>Party</dt><dd>*Tellah (20:54873) / Rydia (1:0) / *Cecil (11:3821) / empty / *empty</dd>
+						<dt>Inventory Goals</dt><dd><i>Shadow</i> (sword) (あんこくのつるぎ) to bottom<br><i>Rod</i> (ロッド) to bottom<br><i>Staff</i> (つえ) to bottom<br><i>Bomb Fragment</i> (ぼむのかけら) to 2R<br><i>TrashCan</i> (ゴミばこ) to 4R<br><i>Change</i> (rod) (へんげのロッド) to 6L<br><i>Copper Hourglass</i> (どうのすなどけい) to 6R</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<p>The following turn order assumes nothing goes particularly badly. Depending on how the battle actually flows, you may need to have Tellah revive Rydia with Life1 (レイズ) or cure the party with Cure2 (ケアルラ). Research suggests it is optimal for Tellah to stop himself on his third turn, but you can delay this if you need to cure. If Tellah gets any additional turns after casting Stop, it's easiest to just Parry (ぼうぎょ).</p>
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Equip <i>Darkness</i> (sword) (シャドーブレイド)<br>Fight (たたかう)</dd>
+						<dt>Tellah</dt><dd>Equip <i>Change</i> (へんげのロッド)<br>Cast Lit-1 (サンダー)</dd>
+						<dt>Rydia</dt><dd>Equip <i>Dancing</i> (ダンシングダガー)<br>Use <i>Dancing</i> (ダンシングダガー)</dd>
+						<dt>Cecil</dt><dd>Inventory Management<br>Fight (たたかう)</dd>
+						<dt>Tellah</dt><dd>Cast Lit-1 (サンダー)</dd>
+						<dt>Cecil</dt><dd>Inventory Management<br>Fight (たたかう)</dd>
+						<dt>Rydia</dt><dd>Use <i>Dancing</i> (ダンシングダガー)</dd>
+						<dt>Tellah</dt><dd>Duplicate weapon slot<br>Cast Stop (ストップ) on Tellah</dd>
+						<dt>Cecil</dt><dd>Fight (たたかう)</dd>
+						<dt>Rydia</dt><dd>Use <i>Dancing</i> (ダンシングダガー)<br>Run Buffer</dd>
+						<dt>Cecil</dt><dd>Inventory Management<br>Fight (たたかう)</dd>
+						<dt>Cecil</dt><dd>Fight (たたかう)</dd>
+						<dt>Rydia</dt><dd>Use <i>Dancing</i> (ダンシングダガー)</dd>
+					</dl>
+					<p>At this point, just continue the pattern until Octomamm dies.</p>
+				</div>
+			</div>
+			<p>Immediately after the battle, open the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Equip Tellah: <i>Change</i> (へんげのロッド) (finishes duplication).</li>
+					<li>Change rows and swap Tellah and Rydia. (Form (ならびかえ), Left, A, Down, A)</li>
+					<li>Move Cecil down one slot. (Form (ならびかえ), Down, Down, A, Down, A)</li>
+				</ul>
+			</div>
+			<p>Exit the cave and enter Damcyan (ダムシアンじょう). Head to the top of the castle, watch the scene, and then take the hovercraft to the Antlion cave (アントリオン　ちか１かい).</p>
+			<h3 id="walkthrough-antlion">Antlion (アントリオン)</h3>
+			<p>Follow the path to the second room. You may take either the left or right path, but the right path feels better to me. Your mileage may vary. Once in the second room, pick up the chest on the right side with an <i>Antarctic Wind</i> (なんきょくのかぜ).</p>
+			<p>Head to the save room and pick up the three chests: <i>Life</i> (フェニックスのお), <i>Ether1</i> (エーテル), and <i>Emergency Exit</i> (ひじょうぐち).</p>
+			<p>On the way to Antlion's Nest (アントリオンのす), pick up the <i>Spider Web</i> (くものいと) in the chest in the upper left corner. Head to Antlion.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Antlion (アントリオン)</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>1100</dd>
+						<dt>EXP</dt><dd>1500</dd>
+						<dt>Party</dt><dd>Rydia (4:400) / *empty / Edward (5:388) / *Cecil (11:4221) / empty</dd>
+						<dt>Inventory Goals</dt><dd><i>Cap</i> (かわのぼうし) to 8L</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Use <i>Life</i> (フェニックスのお) on Rydia/Parry (ぼうぎょ)</dd>
+						<dt>Edward</dt><dd>Equip <i>Dancing</i> (ダンシングダガー)<br>Use <i>Dancing</i> (ダンシングダガー)</dd>
+						<dt>Rydia</dt><dd>Inventory Management<br>Use <i>Dancing</i> (ダンシングダガー)</dd>
+						<dt>Cecil</dt><dd>Parry (ぼうぎょ)</dd>
+						<dt>Edward</dt><dd>Run Buffer<br>Use <i>Dancing</i> (ダンシングダガー)</dd>
+						<dt>Cecil</dt><dd>Parry (ぼうぎょ)</dd>
+						<dt>Rydia</dt><dd>Use <i>Dancing</i> (ダンシングダガー)</dd>
+					</dl>
+				</div>
+			</div>
+			<p>Immediately use the <i>Emergency Exit</i> (ひじょうぐち) to exit the cave. Board the hovercraft and return to Kaipo (オアシスのむらカイポ), making sure to park directly to the left of the town.</p>
+			<h3 id="walkthrough-kaipo-2">Kaipo (オアシスのむらカイポ) Revisited</h3>
+			<p>Head to the house in the northeast corner of town and use the SandRuby (さばくのひかり) on Rosa.</p>
+			<p>During the night, Edward will loudly play his harp and an angry monster will attack.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: WaterHag (サハギン)</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>45672</dd>
+						<dt>EXP</dt><dd>800</dd>
+						<dt>Party</dt><dd>empty / *empty / Edward (6:888) / *empty / empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Edward</dt><dd>Run Buffer<br>Use <i>Dancing</i> (ダンシングダガー)</dd>
+						<dt>Edward</dt><dd>Run Buffer<br>Use <i>Dancing</i> (ダンシングダガー)</dd>
+						<dt>Edward</dt><dd>Use <i>Dancing</i> (ダンシングダガー)</dd>
+					</dl>
+					<p>This method will guarantee finishing the battle within 3 turns. You may also opt to hold A and hope Edward doesn't miss too much. However, in the current formation his accuracy is approximately 47%. A potential alternate method is to change rows in the nearest menus on both sides of the fight.</p>
+					<p>The reason for the difference from the SNES version is that in the SFC version, Edward's initial harp is not a back-row compatible weapon, so he isn't immediately back-row glitched.</p>
+				</div>
+			</div>
+			<p>After waking up, leave the town, making sure to take a step to the left immediately before exiting.</p>
+			<p>Take the hovercraft to the entrance of Mt.Hobs-West (ホブスのやま　にしぐち), parking directly to the left of the entrance.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-exclamation-triangle"></span>
+				<h4>Glitch Setup</h4>
+				<p>This choice of parking location is not optional, and is actually critical to the glitch used later. If you park somewhere else, you will probably be unable to finish your run.</p>
+			</div>
+			<h3 id="walkthrough-mt-hobs">Mt.Hobs (ホブスのやま)</h3>
+			<p>Climb the mountain and meet Yang at the top.</p>
+			<p>During Yang's solo battle, you can potentially manipulate yourself out of a longer battle by checking the damage rolls against <a href="{% static "myself086/YangVSimps.txt" %}">this chart</a> and pausing for a short while if you get a bad first kick.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: MomBomb (マザーボム)</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>MomBomb (マザーボム): 11000 (1000) / Bomb (ボム): 55 / GrayBomb (ペイニーボム): 111</dd>
+						<dt>EXP</dt><dd>2418</dd>
+						<dt>Party</dt><dd>Rydia (6:900) / *Yang (10:2061) / Edward (8:1688) / *Cecil (12:4721) / Rosa (10:2139)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Edward</dt><dd>Run Buffer<br>Use <i>Dancing</i> (ダンシングダガー)</dd>
+						<dt>Cecil</dt><dd>Fight (たたかう)</dd>
+						<dt>Rosa</dt><dd>Aim (ねらう)</dd>
+						<dt>Yang</dt><dd>Fight (たたかう)</dd>
+						<dt>Rydia</dt><dd>Use <i>Dancing</i> (ダンシングダガー)</dd>
+						<dt>Edward</dt><dd>Use <i>Dancing</i> (ダンシングダガー)</dd>
+						<dt>Cecil</dt><dd>Fight (たたかう)</dd>
+						<dt>Rosa</dt><dd>Parry (ぼうぎょ)</dd>
+					</dl>
+					<p>Rosa may need to cure if anyone (especially Rydia or Edward) gets hurt too much. MomBomb has an extra 200 HP compared to the US version, so you'll probably just end up wanting everyone to attack. Once you've done 1000 HP, parry until it's Yang's turn.</p>
+					<dl class="dl-horizontal">
+						<dt>Yang</dt><dd>Duplicate weapon slot.<br>Wait for "ば　く　は　つ　　するーーー！"<br>Wait one second after the text disappears.<br>Kick (けり)</dd>
+						<dt>Rydia</dt><dd>Use <i>Dancing</i> (ダンシングダガー) on upper GrayBomb (ペイニーボム)</dd>
+						<dt>Edward</dt><dd>Use <i>Dancing</i> (ダンシングダガー) on lower GrayBomb (ペイニーボム)</dd>
+						<dt>Cecil</dt><dd>Darkness (あんこく)</dd>
+						<dt>Rosa</dt><dd>Aim (ねらう) on weakest Bomb (ボム)</dd>
+						<dt>Edward</dt><dd>Use <i>Dancing</i> (ダンシングダガー) on rear GrayBomb (ペイニーボム)</dd>
+						<dt>Yang</dt><dd>Kick (けり)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Equip Yang: <i>FireClaw</i> (ほのおのつめ)/<i>FireClaw</i> (ほのおのつめ)/*/*/* (finishes duplication).</li>
+					<li>You should now have 254 <i>FireClaw</i> (ほのおのつめ).</li>
+				</ul>
+			</div>
+			<p>Continue to the other side of the mountain, continue downward, and then head east to Fabul.</p>
+			<h3 id="walkthrough-fabul">Fabul (ファブール)</h3>
+			<p>Head to the King's Room and offer to help. (Do not mash the B button during this dialogue.)</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Fabul Gauntlet #1 - General (キャプテン) x1, Fighter (バロンかいへい) x2</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>General (キャプテン): 320 / Fighter (バロンかいへい): 65</dd>
+						<dt>EXP</dt><dd>800</dd>
+						<dt>Party</dt><dd>empty / *Yang (10:2544) / Edward (9:2171) / *Cecil (12:5204) / empty</dd>
+						<dt>Inventory Goals</dt><dd><i>Dreamer</i> (ゆめのたてごと) to bottom</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Edward</dt><dd>Run Buffer<br>Use <i>Antarctic Wind</i> (なんきょくのかぜ)</dd>
+						<dt>Cecil</dt><dd>Inventory Management<br>Fight (たたかう)</dd>
+						<dt>Yang</dt><dd>Fight (たたかう)</dd>
+					</dl>
+					<p>Depending on the Antarctic Wind damage rolls, you may not need Cecil and Yang to attack.</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Fabul Gauntlet #2 - Weeper (レーシイ) x1, Imp Cap. (ドモボーイ) x1, WaterHag (サハギン) x1</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>Weeper (レーシイ): 130 / Imp Cap. (ドモボーイ): 37 / WaterHag (サハギン): 64</dd>
+						<dt>EXP</dt><dd>477</dd>
+						<dt>Party</dt><dd>empty / *Yang (10:2810) / Edward (9:2437) / *Cecil (12:5470) / empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Edward</dt><dd>Run Buffer<br>Use <i>Dancing</i> (ダンシングダガー)</dd>
+						<dt>Cecil</dt><dd>Run Buffer<br>Fight (たたかう) WaterHag (サハギン)</dd>
+						<dt>Yang</dt><dd>Fight (たたかう)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Fabul Gauntlet #3 - General (キャプテン) x1, Fighter (バロンかいへい) x2</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>General (キャプテン): 320 / Fighter (バロンかいへい): 65</dd>
+						<dt>EXP</dt><dd>800</dd>
+						<dt>Party</dt><dd>empty / *Yang (11:2969) / Edward (10:2596) / *Cecil (12:5629) / empty</dd>
+						<dt>Inventory Goals</dt><dd><i>Cap</i> (かわのぼうし) to 1L<br>&lt;empty&gt; to 2L/2R</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Edward</dt><dd>Run Buffer<br>Use <i>Bomb Fragment</i> (ボムのかけら)</dd>
+						<dt>Cecil</dt><dd>Inventory Management<br>Fight (たたかう)</dd>
+						<dt>Yang</dt><dd>Fight (たたかう)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Fabul Gauntlet #4 - Gargoyle (ガーゴイル) x1</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>160</dd>
+						<dt>EXP</dt><dd>315</dd>
+						<dt>Party</dt><dd>empty / *Yang (11:3235) / Edward (10:2862) / *Cecil (12:5895) / empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Edward</dt><dd>Run Buffer<br>Use <i>Dancing</i> (ダンシングダガー)</dd>
+						<dt>Yang</dt><dd>Duplicate <i>FireClaw</i> (ほのおのつめ) slot</dd>
+					</dl>
+					<p>If for whatever reason you are unable to do the duplication in this fight, you can do it in either of the upcoming two fights.</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Fabul Gauntlet #5 - Weeper (レーシイ) x1, Imp Cap. (ドモボーイ) x1, WaterHag (サハギン) x1</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>Weeper (レーシイ): 130 / Imp Cap. (ドモボーイ): 37 / WaterHag (サハギン): 64</dd>
+						<dt>EXP</dt><dd>477</dd>
+						<dt>Party</dt><dd>empty / *Yang (11:3340) / Edward (10:2967) / *Cecil (12:6000) / empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Edward</dt><dd>Run Buffer<br>Use <i>Dancing</i> (ダンシングダガー)</dd>
+						<dt>Yang</dt><dd>Fight (たたかう)</dd>
+						<dt>Cecil</dt><dd>Fight (たたかう) WaterHag</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Fabul Gauntlet #6 - General (キャプテン) x1, Fighter (バロンかいへい) x2</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>General (キャプテン): 320 / Fighter (バロンかいへい): 65</dd>
+						<dt>EXP</dt><dd>800</dd>
+						<dt>Party</dt><dd>empty / *Yang (11:3499) / Edward (10:3126) / *Cecil (13:6159) / empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Edward</dt><dd>Run Buffer<br>Use <i>Dancing</i> (ダンシングダガー)</dd>
+						<dt>Yang</dt><dd>Fight (たたかう)</dd>
+						<dt>Cecil</dt><dd>Fight (たたかう)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Dragoon (りゅうきし)</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>65000</dd>
+						<dt>EXP</dt><dd>0</dd>
+						<dt>Party</dt><dd>empty / *empty / empty / *Cecil (13:6425) / empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Fight (たたかう) Cecil</dd>
+					</dl>
+				</div>
+			</div>
+			<p>Walk to the Inn and watch the scenes.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Equip Yang: <i>FireClaw</i> (ほのおのつめ) (finishes duplication).</li>
+					<li>You should now have a stack of 255 <i>FireClaw</i> (ほのおのつめ) (and also your previous stack of 254).</li>
+					<li>Equip Rydia: <i>Cap</i> (かわのぼうし)</li>
+					<li>Equip Cecil: <i>Black</i> (sword) (デスブリンガー)</li>
+				</ul>
+			</div>
+			<p>Head down the stairs and in the next room, pick up the <i>Bacchus Wine</i> (バッカスのさけ) in the bottom right pot.</p>
+			<p>Leave Fabul and head for the ship to the east.</p>
+			<h3 id="walkthrough-mysidia">Mysidia (ミシディア)</h3>
+			<p>Walk east into Mysidia (ミシディア). Go to the armor shop on the left.</p>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-shopping-cart"></span>
+				<h4>Shopping</h4>
+				<ul>
+					<li>Buy 10 <i>Gaea</i> (helm) (さんかくぼうし), 10 <i>Gaea</i> (armor) (だいちのころも), 10 <i>Silver</i> (ring) (ぎんのうでわ).</li>
+					<li>Buy 1 <i>Paladin</i> (shield) (ひかりのたて), 1 <i>Paladin</i> (gauntlet) (ガントレット).</li>
+					<li>Sell 70 <i>FireClaw</i> (ほのおのつめ) (twice from the stack of 254, should have 114 (い4) afterward).</li>
+				</ul>
+			</div>
+			<p>Head to the House of Wishes (いのりのやかた) and talk to the elder. After the scene, head to the item shop on the right side of town.</p>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-shopping-cart"></span>
+				<h4>Shopping</h4>
+				<ul>
+					<li>Buy 23 <i>Cure2</i> (ハイポーション) (three times), 23 <i>Life</i> (フェニックスのお), 23 <i>Gold Needle</i> (きんのはり), 23 <i>Echo Herbs</i> (やまびこそう)</li>
+					<li>Sell 23 <i>FireClaw</i> (ほのおのつめ) (from stack of 255, which should leave 232 (せ２))</li>
+				</ul>
+			</div>
+			<p>Exit the town and head east to Mt.Ordeals (しれんのやま).</p>
+			<h3 id="walkthrough-mt-ordeals">Mt.Ordeals (しれんのやま)</h3>
+			<p>Climb the mountain until you reach the summit.</p>
+			<p>Once on the summit, continue until you are even with the final bridge.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Equip Porom (for Twin strats only): */*/<i>Tiara</i> (きんのかみかざり)/<i>Gaea</i> (だいちのころも)/<i>Silver</i> (ぎんのうでわ).</li>
+					<li>Equip Palom: */<i>Change</i> (へんげのロッド)/<i>Gaea</i> (さんかくぼうし)/<i>Gaea</i> (だいちのころも)/<i>Silver</i> (ぎんのうでわ)</li>
+					<li>Equip Tellah: <i>Change</i> (へんげのロッド)/*/<i>Gaea</i> (さんかくぼうし)/*/<i>Silver</i> (ぎんのうでわ)</li>
+					<li>Fully heal the party (for Twin strats only).</li>
+				</ul>
+				<p>If you are going to use the Mimic (<i>Carrot</i>) strategy, you should not equip or heal Porom. You can also opt to skip equipping the other characters, as well. I do recommend at least equipping <i>Change</i> on Palom to make the backup strategy more effective.</p>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Milon (スカルミリョーネ)</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>Milon (スカルミリョーネ): 3500 (2500) / Ghast (スカルナント): 170</dd>
+						<dt>EXP</dt><dd>3800</dd>
+						<dt>Party</dt><dd>Porom (10:1957) / *empty / Palom (10:1957) / *Cecil (13:6425) / Tellah (20:58277)</dd>
+						<dt>Inventory Goals</dt><dd><i>Cure2</i> (ハイポーション) to 1L</dd>
+						<dt>Glitch Inventory</dt><dd>14,232,1&nbsp;&nbsp;96,15 &nbsp;&nbsp;14,68,8&nbsp;&nbsp;14,114,15</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<ul class="nav nav-tabs">
+					<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tab-battle-milon-twin">Twin</a></li>
+					<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-battle-milon-mimic">Mimic (<i>Carrot</i>)</a></li>
+				</ul>
+				<div class="info-block tab-content">
+					<div class="tab-pane fade show active" id="tab-battle-milon-twin">
+						<dl class="dl-horizontal">
+							<dt>Cecil</dt><dd>Use <i>Cure2</i> (ハイポーション) on Ghast</dd>
+							<dt>Palom</dt><dd>Bluff (つよがる)</dd>
+							<dt>Porom</dt><dd>Use <i>Cure2</i> (ハイポーション) on Ghast</dd>
+							<dt>Tellah</dt><dd>Use <i>Cure2</i> (ハイポーション) on Ghast</dd>
+							<dt>Cecil</dt><dd>Use <i>Cure2</i> (ハイポーション) on Ghast</dd>
+							<dt>Palom</dt><dd>Bluff (つよがる)</dd>
+							<dt>Cecil</dt><dd>Parry (ぼうぎょ)</dd>
+							<dt>Porom</dt><dd>Parry (ぼうぎょ)</dd>
+							<dt>Tellah</dt><dd>Parry (ぼうぎょ)</dd>
+							<dt>Palom</dt><dd>Bluff (つよがる)</dd>
+							<dt>Cecil</dt><dd>Parry (ぼうぎょ)</dd>
+							<dt>Porom</dt><dd>Twin (ふたりがけ)</dd>
+						</dl>
+						<p>If Milon doesn't die, you can either risk attacking with Cecil if you were close to the threshold (2500) or you can cast another Twin spell.</p>
+					</div>
+					<div class="tab-pane fade" id="tab-battle-milon-mimic">
+						<p>If your Porom is at full health, you should probably just abort and click that Twin tab instead.</p>
+						<dl class="dl-horizontal">
+							<dt>Cecil</dt><dd>Use <i>Cure2</i> (ハイポーション) on Ghast</dd>
+							<dt>Palom</dt><dd>Inventory Management<br>Cast Fire1 (ファイア) on Porom</dd>
+							<dt>Porom</dt><dd>Run Buffer<br>Twin (ふたりがけ)</dd>
+							<dt>Tellah</dt><dd>Use <i>Life</i> (フェニックスのお) on Porom</dd>
+							<dt>Cecil</dt><dd>Use <i>Cure2</i> (ハイポーション) on Ghast</dd>
+						</dl>
+						<p>At this point, Milon should screech "Go, my children!" (or Japanese equivalent). Cecil's next turn should arrive before Palom uses the <i>Cure2</i> (ハイポーション).</p>
+						<dl class="dl-horizontal">
+							<dt>Cecil</dt><dd>Wait for Palom's <i>Cure2</i> (ハイポーション)<br>Parry</dd>
+							<dt>Tellah</dt><dd>Cast Stop (ストップ) on Cecil</dd>
+							<dt>Porom</dt><dd>Run Buffer<br>Use <i>Cure2</i> (ハイポーション) on Ghast<br>Run Buffer</dd>
+							<dt>Cecil</dt><dd>Half-use <i>Cure2</i> (ハイポーション) (don't select a target, but cancel back to the item selection instead)<br>Swap <i>Cure2</i> (ハイポーション) and <i>Carrot</i> (ギサールのやさい)<br>Close menu and wait</dd>
+						</dl>
+						<p>This strategy is incredibly timing-sensitive. There are many ways it can go wrong, and the only way to really get good at this strategy is to practice it over and over. Porom's first run buffer has an incredibly short window, and in my experience, you must slightly anticipate it unless you have excellent reaction times. Regarding Tellah casting Stop, you may have better success if you have him wait a second or two before casting, but that never works for me.</p>
+					</div>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Fully heal the party. Use up to 2 <i>Ether1</i> (エーテル) if needed.</li>
+					<li>Change <i>battle mode</i> (バトルモード) to active (アクティブ).</li>
+					<li>Change rows and swap Porom and Tellah (Form (ならびかえ), Left, A, Up, A)</li>
+				</ul>
+			</div>
+			<p>Walk across the bridge and engage Milon Z. (スカルミリョーネ).</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Milon Z. (スカルミリョーネ)</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>3523</dd>
+						<dt>EXP</dt><dd>4000</dd>
+						<dt>Party</dt><dd>*Tellah (20:59127) / empty / *Palom (11:2807) / Cecil (13:7275) / *Porom (11:2807)</dd>
+						<dt>Ideal Survivors</dt><dd>Cecil, Palom and Tellah</dd>
+						<dt>Inventory Goals</dt><dd><i>Paladin</i> (shield) (ひかりのたて) to 2L<br><i>Rod</i> (ロッド) to bottom<br><i>Darkness</i> (シャドーブレイド) to bottom<br><i>Leather</i> (はねつきぼうし) to bottom<br><i>Leather</i> (かわのふく) to bottom<br><i>IronRing</i> (てつのうでわ) to bottom</dd>
+						<dt>Glitch Inventory</dt><dd>14,232,1&nbsp;&nbsp;96,15 &nbsp;&nbsp;14,68,8&nbsp;&nbsp;14,114,15</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<ul class="nav nav-tabs">
+					<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tab-battle-milonz-twin">Twin</a></li>
+					<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-battle-milonz-mimic">Mimic (<i>TrashCan</i>)</a></li>
+				</ul>
+				<div class="info-block tab-content">
+					<div class="tab-pane fade show active" id="tab-battle-milonz-twin">
+						<p>Bluff (つよがる) three times then cast Twin (ふたりがけ).</p>
+					</div>
+					<div class="tab-pane fade" id="tab-battle-milonz-mimic">
+						<dl class="dl-horizontal">
+							<dt>Cecil</dt><dd>Use <i>Cure2</i> (ハイポーション)/Parry</dd>
+						</dl>
+						<p>Cecil should execute this action as the damage from Milon Z.'s attack disappears. If he gets another turn, he should Parry (ほうきょ) immediately. Some people recommend a Run Buffer as well, though I haven't personally needed that.</p>
+						<dl class="dl-horizontal">
+							<dt>Palom</dt><dd>Cast Ice-2 (ブリザラ) on Porom</dd>
+							<dt>Tellah</dt><dd>Run Buffer<br>Cast Stop (ストップ) on Cecil</dd>
+							<dt>Porom</dt><dd>Run Buffer<br>Twin (ふたりがけ)</dd>
+							<dt>Cecil</dt><dd>Half-use <i>Cure2</i> 　(ハイポーション) (don't select a target, but cancel back to the item selection instead)<br>Swap <i>Cure2</i> (ハイポーション) and <i>TrashCan</i> (ゴミばこ)<br>Close menu and wait</dd>
+						</dl>
+						<p>Tellah's menu should pop up before Palom uses the <i>TrashCan</i> (ゴミばこ), leaving you plenty of time to do any necessary inventory management.</p>
+					</div>
+				</div>
+			</div>
+			<p>After the battle, enter the tomb and watch the scene.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: D.Knight (あんこくきし)</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>4520</dd>
+						<dt>EXP</dt><dd>0</dd>
+						<dt>Party</dt><dd>*empty / empty / *empty / Cecil (1:0) / *empty</dd>
+						<dt>Glitch Inventory</dt><dd>14,232,1&nbsp;&nbsp;96,15&nbsp;&nbsp;14,68,8&nbsp;&nbsp;14,114,15</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Equip <i>Dancing</i> (ダンシングダガー)<br>Equip <i>Paladin</i> (shield) (ひかりのたて)<br>Inventory Management</dd>
+					</dl>
+					<p>In contrast to the SNES version, D.Knight here has 4520 HP, making the <i>Dancing</i> approach useless.</p>
+				</div>
+			</div>
+			<p>After the scenes, descend the mountain and head to the chocobo forest. Catch a yellow chocobo and travel back to Mysidia.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-exclamation-triangle"></span>
+				<h4>Glitch Setup</h4>
+				<p>When you release the chocobo, check if you had a good chocobo using
+ the <a href="{% static "myself086/YellowChocobo.PNG" %}">yellow chocobo image</a>. The top pixel of the chocobo should not be in one of the red areas if it <strong>goes right</strong>. If your chocobo goes left, congratulations, it's good no matter what.</p>
+			</div>
+			<p>Talk to the elder, and then head to Baron via the Serpent Road (デビルロード).</p>
+			<h3 id="walkthrough-return-to-baron">Return to Baron (バロン)</h3>
+			<p>Go to the back of the Inn and talk to Yang.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Guard (バロンこのえへい) x2</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>280</dd>
+						<dt>EXP</dt><dd>0</dd>
+						<dt>Party</dt><dd>*Porom (12:3707) / Cecil (1:0) / *Palom (12:3707) / empty / *Tellah (20:60027)</dd>
+						<dt>Glitch Inventory</dt><dd>14,232,1&nbsp;&nbsp;96,15&nbsp;&nbsp;14,68,8&nbsp;&nbsp;14,114,15</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Run Buffer<br>Cover (かばう) Tellah</dd>
+						<dt>Palom</dt><dd>Equip <i>Dancing</i> (ダンシングダガー)<br>Parry (ほうきょ)</dd>
+						<dt>Porom</dt><dd>Parry (ほうきょ)
+						<dt>Tellah</dt><dd>Cast Bio (バイオ) on all enemies</dd>
+						<dt>Cecil</dt><dd>Inventory Management</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Karate (モンクそう)</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>62000</dd>
+						<dt>EXP</dt><dd>0</dd>
+						<dt>Party</dt><dd>*Tellah (20:60027) / Cecil (1:0) / *Palom (12:3707) / empty / *Porom (12:3707)</dd>
+						<dt>Glitch Inventory</dt><dd>14,232,1&nbsp;&nbsp;96,15&nbsp;&nbsp;14,68,8&nbsp;&nbsp;14,114,15</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Inventory Management until "うりゃうりゃー！"<br>Fight</dd>
+					</dl>
+				</div>
+			</div>
+			<p>After the scenes, head to the Baron weapon and armor shop.</p>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-shopping-cart"></span>
+				<h4>Shopping</h4>
+				<ul>
+					<li>Buy 10 <i>Headband</i> (ねじりはちまき), 10 <i>Karate</i> (けんぽうぎ).</li>
+					<li>Buy 8 <i>Thunder</i> (claw) (いかづちのつめ), 68 <i>IceClaw</i> (こおりのつめ), 98 <i>IceClaw</i> (こおりのつめ).</li>
+					<li>Buy 14 <i>Cure</i> (staff) (いやしのつえ) (three times), 15 <i>Cure</i> (staff) (いやしのつえ) (twice).</li>
+				</ul>
+				<p>Remember that pressing X will increase the buy count by 10.</p>
+			</div>
+			<p>Enter the Old Water-way (むかしのすいる) and continue until just before the Baigan battle on Castle Baron 1F (１かい).</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Change <i>battle mode (バトルモード)</i> to Wait (ウェイと).</li>
+					<li>Underflow Tellah's MP.</li>
+					<li>Fully cure Cecil and Tellah.</li>
+					<li>Equip Cecil: */*/<i>Headband</i> (ねじりはちまき)/<i>Karate</i> (けんぽうぎ)/<i>Paladin</i> (ガントレット).</li>
+					<li>Equip Yang: <i>IceClaw</i> (こおりのつめ) (from stack of 98)/<i>IceClaw</i> (こおりのつめ) (from same stack)/<i>Headband</i> (ねじりはちまき)/<i>Karate</i> (けんぽうぎ)/<i>Silver</i> (ぎんのうでわ)</li>
+				</ul>
+			</div>
+			<p>Move on to challenge Baigan.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Baigan (ベイガン)</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>Baigan (ベイガン): 4444 / RightArm (みぎうで): 444 / Left Arm (ひだりうで): 444</dd>
+						<dt>EXP</dt><dd>4820</dd>
+						<dt>Party</dt><dd>*Tellah (20:60027) / Cecil (1:0) / *Palom (12:3707) / Yang (13:5515) / *Porom (12:3707)</dd>
+						<dt>Ideal Survivors</dt><dd>Cecil and Tellah</dd>
+						<dt>Glitch Inventory</dt><dd>14,232,1&nbsp;&nbsp;96,15&nbsp;&nbsp;14,68,8&nbsp;&nbsp;14,114,15</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Run Buffer<br>Cover (かばう) Tellah</dd>
+						<dt>Yang</dt><dd>Fight (たたかう) Porom/Yang</dd>
+						<dt>Palom</dt><dd>Use <i>Dancing</i> (ダンシングダガー) on Yang/Porom/Palom</dd>
+						<dt>Tellah</dt><dd>Cast Meteo (メテオ)</dd>
+						<dt>Porom</dt><dd>Parry (ぼうぎょ)</dd>
+						<dt>Cecil</dt><dd>Use <i>Dancing</i> (ダンシングダガー) on Porom/Yang/Palom</dd>
+						<dt>Palom</dt><dd>Use <i>Dancing</i> (ダンシングダガー) on Yang/Porom/Palom</dd>
+						<dt>Cecil</dt><dd>Wait for Meteo<br>Equip <i>Legend</i> (でんせつのつるぎ)<br>Move <i>Ether1</i> (エーテル) to 1L</dd>
+					</dl>
+					<p>If you have the opportunity, any inventory management you do should probably begin to focus on setting up your inventory for the glitch. Refer to the <a href="#walkthrough-golbez">Golbez section</a> for more details on item placement. Once you're familiar with that, the <b>Glitch Inventory</b> section in the "Battle Information" block will help remind you the item ordering (by referring to the count of each item, as they're unique).</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Fully cure Cecil and Tellah.</li>
+					<li>Change rows (たいけい).</li>
+				</ul>
+			</div>
+			<p>Head to the throne room to fight Kainazzo (カイナッツォ).</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Kainazzo (カイナッツォ)</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>5312</dd>
+						<dt>EXP</dt><dd>5500</dd>
+						<dt>Party</dt><dd>Tellah (20:62437) / *Cecil (10:2410) / Palom (12:3707) / *Yang (13:5515) / Porom (12:3707)</dd>
+						<dt>Survivors</dt><dd>Cecil and Tellah</dd>
+						<dt>Glitch Inventory</dt><dd>14,232,1&nbsp;&nbsp;96,15&nbsp;&nbsp;14,68,8&nbsp;&nbsp;14,114,15</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Cover (かばう) Tellah</dd>
+						<dt>Tellah</dt><dd>Cast Meteo (メテオ)</dd>
+						<dt>Cecil</dt><dd>Use <i>Cure2</i> (ハイポーション) on Tellah</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-exclamation-triangle"></span>
+				<h4>Mash Warning</h4>
+				<p>Do not mash X during the scenes, unless you're looking to mercy kill your run. In particular, once you're on the airship, pressing X at the wrong time will cause the game to lock up. Stick to A or B (or some other button) instead.</p>
+			</div>
+			<p>After the scenes, fly to Toroia (トロいアじょう) and enter the castle. Visit Edward on the left side of the castle, use an <i>Ether1</i> (エーテル) on Tellah and then cast Exit (テレポ).</p>
+			<p>Head north to the Chocobo Village (チョコボのむら), catch a black chocobo, and fly to Cave Magnes (じりょくのどうくつ).</p>
+			<h3 id="walkthrough-cave-magnes">Cave Magnes (じりょくのどうくつ)</h3>
+			<p>Head through the cave until you reach the crystal room (クリスタルルーム).</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Equip Cid: */*/<i>Headband</i> (ねじりはちまき)/<i>Iron</i> (armor) (アイアンアーマー)/*</li>
+					<li>Change rows and swap Tellah and Cid (Form (ならびかえ), Left, A, Down, Down, A)</li>
+					<li>Swap Cecil and Tellah (Form (ならびかえ), Down, A, Down, A)</li>
+					<li>Move Yang down a slot (Form (ならびかえ), Up, A, Up, Up, A)</li>
+				</ul>
+			</div>
+			<p>Talk to the Dark Elf. After the scene, talk to him again.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Dark Elf (ダークエルフ)</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>23890 (3890) (pre-change) / 3927 (post-change)</dd>
+						<dt>EXP</dt><dd>6000</dd>
+						<dt>Party</dt><dd>*Cid (20:26754) / Tellah (21:65187) / *Cecil (13:5160) / empty / Yang (13:5515)</dd>
+						<dt>Ideal Survivors</dt><dd>Cecil and Tellah</dd>
+						<dt>Glitch Inventory</dt><dd>14,232,1&nbsp;&nbsp;96,15&nbsp;&nbsp;14,68,8&nbsp;&nbsp;14,114,15</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Run Buffer<br>Use <i>Bacchus Wine</i> (バッカスのさけ)</dd>
+						<dt>Yang</dt><dd>Fight (たたかう)</dd>
+						<dt>Cid</dt><dd>Fight (たたかう)</dd>
+						<dt>Tellah</dt><dd>Cast Bio (バイオ) on Cid</dd>
+						<dt>Yang</dt><dd>Fight Yang (if weaked)</dd>
+						<dt>Tellah</dt><dd>Wait for "ナラバ　スガタ　カエルシカ　ナイ!"<br>Cast Weak (トルネード)/Use <i>Cure2</i> (ハイポーション) on Cecil</dd>
+					</dl>
+					<p>If Tellah is a pig when the time comes to cast Weak (トルネード), simply have him keep Cecil healthy while Cecil ends the fight.</p>
+				</div>
+			</div>
+			<p>After the battle, get the crystal, leave the room, and cast Exit (テレポ).</p>
+			<p>Take the black chocobo back to the Chocobo Village. While landing, hold the down button and walk back to Toroia.</p>
+			<p>Talk to the clerics, cast Exit (テレポ) and board your airship.</p>
+			<h3 id="walkthrough-tower-of-zot">Tower of Zot</h3>
+			<p>After Golbez is done taunting you, go up a floor and head to the chest with <i>Fire</i> (フレイムソード).</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Fully cure Cecil and Tellah.</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: FlameDog (フレイムドッグ)</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>1221</dd>
+						<dt>EXP</dt><dd>1708</dd>
+						<dt>Party</dt><dd>*Cid (20:26754) / Tellah (21:68187) / *Cecil (15:8160) / empty / Yang (13:5515)</dd>
+						<dt>Ideal Survivors</dt><dd>Cecil, Tellah and Yang</dd>
+						<dt>Glitch Inventory</dt><dd>14,232,1&nbsp;&nbsp;96,15&nbsp;&nbsp;14,68,8&nbsp;&nbsp;14,114,15</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Run Buffer<br>Cover (かばう) Tellah</dd>
+						<dt>Yang</dt><dd>Parry (ぼうぎょ)</dd>
+						<dt>Tellah</dt><dd>Cast Ice-2 (ブリザラ)</dd>
+						<dt>Cecil</dt><dd>Single Duplicate Weapon Slot</dd>
+					</dl>
+					<p>Cecil can also run buffer, then use <i>Dancing</i> (ダンシングダガー) on Yang if needed.</p>
+				</div>
+			</div>
+			<p>Continue to the top of the tower.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Underflow Tellah's MP.</li>
+					<li>Fully cure Cecil and Tellah.</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Magus Sisters</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>Sandy (ドグ): 2591 / Cindy (マグ): 4599 / Mindy (ラグ): 2590</dd>
+						<dt>EXP</dt><dd>7500</dd>
+						<dt>Party</dt><dd>*Cid (20:26754) / Tellah (21:68756) / *Cecil (15:8729) / empty / *Yang (13:6084)</dd>
+						<dt>IDeal Survivors</dt><dd>Cecil and Tellah</dd>
+						<dt>Glitch Inventory</dt><dd>14,232,1&nbsp;&nbsp;96,15&nbsp;&nbsp;14,68,8&nbsp;&nbsp;14,114,15</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Run Buffer<br>Cover (かばう) Tellah</dd>
+						<dt>Yang</dt><dd>Use <i>Cure2</i> (ハイポーション) on Tellah/Parry (ほうりょ)</dd>
+						<dt>Tellah</dt><dd>Cast Meteo (メテオ)</dd>
+						<dt>Cecil</dt><dd>Wait for Meteo<br>Inventory Management</dd>
+					</dl>
+				</div>
+			</div>
+			<p>Enter the door, watch the scene, talk to Kain and then finally watch the next scene.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Equip Cecil: <i>Fire</i> (フレイムソード)/*/*/*/* (finishes duplication).</li>
+					<li>Equip Cecil: <i>Dancing</i> (ダンシングダガー)/*/*/*/*.</li>
+					<li>Equip Kain: */<i>Fire</i> (フレイムソード)/<i>Headband</i> (ねじりはちまき)/<i>Karate</i> (けんぽうぎ)/*.</li>
+					<li>Equip Rosa: */*/<i>Gaea</i> (さんかくぼうし)/<i>Gaea</i> (だいちのころも)/<i>Silver</i> (ぎんのうでわ).</li>
+					<li>Swap Kain and Cecil. (Form (ならびかえ), Down, A, Down, A)</li>
+					<li>Swap Cecil and Rosa. (Form (ならびかえ), Down, A, Down, Down, A)</li>
+					<li>Revive all dead party members.</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Valvalis</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>8636</dd>
+						<dt>EXP</dt><dd>9500</dd>
+						<dt>Party</dt><dd>*Cid (20:26754) / Rosa (18:18072) / *Kain (19:20754) / Cecil (16:12479) / *Yang (13:6084)</dd>
+						<dt>Glitch Inventory</dt><dd>14,232,1&nbsp;&nbsp;96,15&nbsp;&nbsp;14,68,8&nbsp;&nbsp;14,114,15</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<p>If Kain is only level 18, this will almost certainly be a different fight. I have not mapped out that version at all.</p>
+					<dl class="dl-horizontal">
+						<dt>Kain</dt><dd>Jump (ジャンプ)</dd>
+						<dt>Cecil</dt><dd>Cover (かばう) Rosa</dd>
+						<dt>Yang</dt><dd>Build Up (ためる)</dd>
+						<dt>Rosa</dt><dd>Use <i>Spider Web</i> (くものいと)</dd>
+						<dt>Cid</dt><dd>Fight (たたかう)</dd>
+						<dt>Cecil</dt><dd>Use <i>Dancing</i> (ダンシングダガー)</dd>
+						<dt>Kain</dt><dd>Jump (ジャンプ)</dd>
+						<dt>Rosa</dt><dd>Use <i>Cure2</i> (ハイポーション) or <i>Gold Needle</i> (きんのはり) on Cecil/Parry (ぼうぎょ)</dd>
+						<dt>Cecil</dt><dd>Use <i>Dancing</i> (ダンシングダガー)</dd>
+						<dt>Cid</dt><dd>Fight (たたかう)</dd>
+						<dt>Yang</dt><dd>Build Up (ためる)</dd>
+						<dt>Rosa</dt><dd>Use <i>Cure2</i> (ハイポーション) or <i>Gold Needle</i> (きんのはり) on Cecil/Parry (ぼうぎょ)</dd>
+						<dt>Cecil</dt><dd>Use <i>Dancing</i> (ダンシングダガー)</dd>
+						<dt>Kain</dt><dd>Jump (ジャンプ)</dd>
+						<dt>Cid</dt><dd>Wait for Kain to land<br>Fight (たたかう)</dd>
+						<dt>Rosa</dt><dd>Use <i>Cure2</i> (ハイポーション) or <i>Gold Needle</i> (きんのはり) on Cecil/Parry (ぼうぎょ)</dd>
+						<dt>Cecil</dt><dd>Use <i>Dancing</i> (ダンシングダガー)</dd>
+						<dt>Kain</dt><dd>Jump (ジャンプ)</dd>
+						<dt>Yang</dt><dd>Build Up (ためる)</dd>
+					</dl>
+					<p>At this point, continue the pattern until she is dead.</p>
+				</div>
+			</div>
+			<h3 id="walkthrough-underworld">The Underworld</h3>
+			<p>After the scenes, leave the castle and take the airship to Agart (アガルトのむら).</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-exclamation-triangle"></span>
+				<h4>Glitch Setup: Chocobo</h4>
+				<p>This is your last chance to fix your yellow chocobo if you got a bad one. Head to the Chocobo Forest outside of Baron and keep getting yellow chocobos until you get a good one.</p>
+			</div>
+			<p>Use <i>Magma</i> (マグマのいし) on the well. Afterward, pick up the <i>Arctic Wind</i> (ほっきょくのかぜ) in the grass patch to the west of the well, and then fly to the Underworld.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Swap Cid and Rosa (Form (ならびかえ), A, Down, A)</li>
+					<li>Swap Rosa and Cecil (Form (ならびかえ), A, Up, Up, A)</li>
+					<li>Change battle mode (バトルモード) to Active (アクティブ).</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-exclamation-triangle"></span>
+				<h4>Glitch Setup</h4>
+				<p>At this point, you need to enter the castle and observe 63 screen transitions before talking to the King. When you first arrive in the throne room, your count is 3. You need to go back down the stairs and back up the stairs a total of 30 times to get your count up to 63. If you don't do this correctly, you will not be going to glitchland today.</p>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Calbrena (カルコブリーナ)</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>Cal (カルコ): 1369 / Brena (ブリーナ): 369</dd>
+						<dt>EXP</dt><dd>6000</dd>
+						<dt>Party</dt><dd>*Cecil (17:14729) / empty / *Kain (19:23004) / Rosa (18:20322) / *Yang (14:8334)</dd>
+						<dt>Glitch Inventory</dt><dd>14,232,1&nbsp;&nbsp;96,15&nbsp;&nbsp;14,68,8&nbsp;&nbsp;14,114,15</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Kain</dt><dd>Run Buffer<br>Jump (ジャンプ) center Blue</dd>
+						<dt>Cecil</dt><dd>Use <i>Dancing</i> (ダンシングダガー) on top Blue</dd>
+						<dt>Rosa</dt><dd>Use <i>Arctic Wind</i> (ほっきょくのかぜ)</dd>
+						<dt>Yang</dt><dd>Use <i>Copper Hourglass</i> (どうのすなどけい)</dd>
+						<dt>Kain</dt><dd>Jump (ジャンプ) bottom Blue</dd>
+					</dl>
+					<p>At this point, you need to ensure that Rosa casts Mute (サイレス) on the party. After that, you can eliminate the remaining dolls.</p>
+				</div>
+			</div>
+			<h3 id="walkthrough-golbez">Golbez (ゴルベーザ)</h3>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Golbez (ゴルベーザ)</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>23001 (4000)</dd>
+						<dt>EXP</dt><dd>15000</dd>
+						<dt>Glitch Inventory</dt><dd>14,232,1&nbsp;&nbsp;96,15&nbsp;&nbsp;14,68,8&nbsp;&nbsp;14,114,15</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Kain</dt><dd>Run Buffer<br>Jump (ジャンプ)</dd>
+						<dt>Cecil</dt><dd>Equip <i>Fire</i> (sword) (フレイムソード)<br>Inventory Management<br>Wait for "セシル　つぎは　おまえだ！"<br>Fight (たたかう)</dd>
+						<dt>Kain</dt><dd>Fight (たたかう)</dd>
+						<dt>Cecil</dt><dd>Fight (たたかう)</dd>
+						<dt>Rydia</dt><dd>Cast Fire2 (ファイラ)</dd>
+					</dl>
+					<p>Your primary focus is setting up your inventory for the glitch. By the end of the fight, your inventory should match the following:</p>
+					<table class="table table-bordered table-striped table-sm">
+						<tr class="table-primary"><td colspan="2" class="text-center">&darr; Top of Inventory &darr;</td></tr>
+						<tr><td>(any)</td><td>(any)</td></tr>
+						<tr><td>(any)</td><td>(any)</td></tr>
+						<tr><td><i>Cure</i> (staff) (いやしのつえ) x14</td><td><i>FireClaw</i> (ほのおのつめ) x232 (せ２)</td></tr>
+						<tr><td><i>Change</i> (rod) (へんげのロッド) x1</td><td>(any)</td></tr>
+						<tr><td>(any)</td><td>(any)</td></tr>
+						<tr><td><i>IceClaw</i> (こおりのつめ) x96</td><td><i>Cure</i> (staff) (いやしのつえ) x15</td></tr>
+						<tr class="table-primary"><td colspan="2" class="text-center">...</td></tr>
+						<tr><td></td><td><i>Cure</i> (staff) (いやしのつえ) x14</td></tr>
+						<tr><td><i>IceClaw</i> (こおりのつめ) x68</td><td><i>Thunder</i> (claw) (いかづちのつめ) x8</td></tr>
+						<tr><td>(any)</td><td>(any)</td></tr>
+						<tr><td><i>Cure</i> (staff) (いやしのつえ) x14</td><td><i>FireClaw</i> (ほのおのつめ) x114 (い４)</td></tr>
+						<tr><td><i>Cure</i> (staff) (いやしのつえ) x15</td><td>(any)</td></tr>
+						<tr class="table-primary"><td colspan="2" class="text-center">&uarr; Bottom of Inventory &uarr;</td></tr>
+					</table>
+					<p>Some of the inventory counts are flexible. You can use either 1 or 2 Change (へんげのロッド), and the second set of Cure (いやしのつえ) can be anywhere from 15 to 20.</p>
+				</div>
+			</div>
+			<h3 id="walkthrough-glitch">Glitch Navigation</h3>
+			<p>After the scenes, open the menu, finish setting your inventory to match the above, and use Rydia to cast Warp (デジョン). Get the crystal, and then walk down out of the crystal room.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-exclamation-triangle"></span>
+				<h4>Warning</h4>
+				<p>The following instructions to get to the Stone Room are probably somewhat confusing and may not be 100% accurate.</p>
+			</div>
+			<p>Go left until you see the red room with the chocobo music. After that room, there will be two black rooms that you automatically exit. The next room will either be an underground town or a room that sort of flashes red. If you are pushed through this room automatically, continue to the next step. Otherwise, leave the room by pressing up.</p>
+			<p>From here, go up, left, up, and then left until you reach the Stone Room.</p>
+			<p>Go down one tile, then right to the trigger tile. (second tile from top)</p>
+			<p>Again, go down one tile, and then right to the trigger. (third tile from top)</p>
+			<p>Trigger the cut scene to eliminate Kain.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Move the top stack of <i>Cure</i> (staff) (いやしのつえ) to the fifth slot on the right just above the 15 <i>Cure</i> (staff) (いやしのつえ).</li>
+					<li>Change <i>battle speed (バトルスピード)</i> to 1.</li>
+					<li>Change <i>window color RGB (ウィンドウカラー)</i> to 11,7,3.</li>
+				</ul>
+			</div>
+			<p>Exit the Sealed Cave, and then go left and right to hit the same trigger tile. Go down to recruit FuSoYa.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Move Life1, Mute, Bersk (レイズ, サイレス, バーサク) to the bottom of FuSoYa's white magic.</li>
+					<li>In FuSoYa's black magic, swap Fire1 (ファイア)/Stop (ストップ) and Warp (デジョン)/Nuke (フレア).</li>
+				</ul>
+			</div>
+			<p>Leave the room and return to the Stone Room.</p>
+			<p>Go straight up to leave the area, then proceed to the room with chocobo music, following the same path as when you initially went to the Stone Room.</p>
+			<p>Save, and then go up.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-hand-point-right"></span>
+				<h4>Bacon Time</h4>
+				<p>The next three maps carry a bacon risk, and depend on the following variables:</p>
+				<dl class="dl-horizontal">
+					<dt>Floor -45</dt><dd>This is based on the time spent on the Load Game screen. In general, as long as you mash A whenever you load the game, you should be fine. You'll most likely have trouble with this if you did a lot of safety saving. If you do have a problem, just wait a little bit on the Load Game screen and try again.</dd>
+					<dt>Floor -46</dt><dd>This is determined by your in-game timer. Consult the <a href="{% url 'tools:nocw-igt-calculator' %}">Any% NoCW In-Game Timer Calculator</a> for help. It's probably not worth worrying about pausing during battles until you are reasonably consistent on your times.</dd>
+					<dt>Floor -47</dt><dd>This is determined by your GP. If you followed these notes, it's very unlikely you will have a problem here. If you do have a problem, consult the <a href="{% url 'tools:nocw-gp-calculator' %}">Any% NoCW GP Calculator</a> for a fix. There is a shop located on the same map where you safety saved (with the chocobo music). To get to it, go down once from the save point and press A.</dd>
+				</dl>
+			</div>
+			<p>After passing through those three floors, you're in the clear. Go left until you reach the Castle of Dwarves.</p>
+			<p>Head down the stairs, open FuSoYa's magic, move &quot;upt Co&quot; (ひずみ　つめ) to the top, then cast Exit (テレポ). Upon arriving at the Stone Room, a dialog box will appear. There's nothing special about it, other than that if you were forced to reload from your safety save, it will likely be 84 pages of text you must scroll through. Consider this an incentive to not use your safety save.</p>
+			<p>Go to the second tile from top (left, up, right) and then go face Zeromus.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Zeromus</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<p>Make sure to hold down the L and R buttons to run until Zeromus starts shaking. This will save about 12 seconds.</p>
+					<dl class="dl-horizontal">
+						<dt>FuSoYa</dt><dd>Cast upt Co (ひずみ　つめ)</dd>
+					</dl>
+				</div>
+			</div>
+{% endblock %}
