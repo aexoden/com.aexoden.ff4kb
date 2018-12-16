@@ -23,6 +23,7 @@ ROUTES = {
 	},
 	'no64-excalbur': {
 		'name': 'Any% No64 (Edge+Excalbur)',
+		'enabled': True,
 		'description': 'From the beginning of the game until Zeromus is defeated. 64-floor glitch is disallowed. Edge is primary damage dealer at the end.'
 	}
 }
