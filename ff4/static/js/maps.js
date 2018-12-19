@@ -171,15 +171,25 @@ com.aexoden.ff4.maps = function()
 			var nheight = currentSize - pheight;
 
 			var spwidth = pwidth * 512 / currentSize;
-			var snwidth = nwidth * 512 / currentSize;
+			var snwidth = 512 - spwidth;
 			var spheight = pheight * 512 / currentSize;
-			var snheight = nheight * 512 / currentSize;
+			var snheight = 512 - spheight;
 
 			ctx.imageSmoothingQuality = "high";
+
 			ctx.drawImage(currentImage, currentStartX, currentStartY, pwidth, pheight, 0, 0, spwidth, spheight);
-			ctx.drawImage(currentImage, 0, currentStartY, nwidth, pheight, spwidth, 0, snwidth, spheight);
-			ctx.drawImage(currentImage, currentStartX, 0, pwidth, nheight, 0, spheight, spwidth, snheight);
-			ctx.drawImage(currentImage, 0, 0, nwidth, nheight, spwidth, spheight, snwidth, snheight);
+
+			if (snwidth > 0) {
+				ctx.drawImage(currentImage, 0, currentStartY, nwidth, pheight, spwidth, 0, snwidth, spheight);
+			}
+
+			if (snheight > 0) {
+				ctx.drawImage(currentImage, currentStartX, 0, pwidth, nheight, 0, spheight, spwidth, snheight);
+			}
+
+			if (snwidth > 0 && snheight > 0) {
+				ctx.drawImage(currentImage, 0, 0, nwidth, nheight, spwidth, spheight, snwidth, snheight);
+			}
 		}
 	}
 
@@ -209,6 +219,9 @@ com.aexoden.ff4.maps = function()
 		var canvas = document.getElementById('map');
 		//canvas.addEventListener('click', onMapClick);
 		canvas.addEventListener('wheel', onMapWheel);
+		canvas.addEventListener('DOMMouseScroll', onMapWheel);
+
+
 		canvas.addEventListener('mousedown', onMapMouseDown);
 		canvas.addEventListener('mousemove', onMapMouseMove);
 		canvas.addEventListener('mouseup', onMapMouseUp);
