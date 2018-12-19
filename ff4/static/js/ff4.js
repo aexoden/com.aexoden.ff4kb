@@ -495,7 +495,31 @@ com.aexoden.ff4 = function()
 			"agart-1",
 			"overworld-agart-1",
 			"underworld-castle-of-dwarves-0",
-			"castle-of-dwarves-0"
+			"castle-of-dwarves-0",
+			"castle-of-dwarves-1f-0",
+			"castle-of-dwarves-kings-room-0",
+			"castle-of-dwarves-crystal-room-0",
+			"castle-of-dwarves-crystal-room-1",
+			"castle-of-dwarves-kings-room-1",
+			"castle-of-dwarves-kings-room-2",
+			"castle-of-dwarves-1f-1",
+			"castle-of-dwarves-1f-2",
+			"castle-of-dwarves-right-tower-2f-0",
+			"castle-of-dwarves-right-tower-2f-1",
+			"castle-of-dwarves-right-tower-3f-0",
+			"castle-of-dwarves-right-tower-3f-1",
+			"castle-of-dwarves-4f-0",
+			"castle-of-dwarves-5f-0",
+			"castle-of-dwarves-4f-1",
+			"castle-of-dwarves-right-tower-3f-2",
+			"castle-of-dwarves-right-tower-3f-3",
+			"castle-of-dwarves-right-tower-2f-2",
+			"castle-of-dwarves-right-tower-2f-3",
+			"castle-of-dwarves-b1f-0",
+			"castle-of-dwarves-b2f-0",
+			"castle-of-dwarves-b2f-1",
+			"castle-of-dwarves-dwarf-base-0",
+			"castle-of-dwarves-dwarf-base-1"
 		]
 	};
 
@@ -787,6 +811,525 @@ com.aexoden.ff4 = function()
 					"index": "0",
 					"location": "Castle Baron B3F",
 					"disambiguation": ""
+				}
+			}
+		},
+		"castle-of-dwarves-0": {
+			"type": VariableFlags.EXTRA,
+			"description": "the Castle of Dwarves",
+			"routes": {
+				1: {
+					"castle-of-dwarves-kings-room-1": 0,
+					"castle-of-dwarves-1f-1": 0,
+					"castle-of-dwarves-right-tower-2f-0": 0,
+					"castle-of-dwarves-right-tower-3f-0": 0,
+					"castle-of-dwarves-right-tower-3f-2": 0,
+					"castle-of-dwarves-right-tower-2f-2": 0,
+					"castle-of-dwarves-b2f-0": 0,
+					"castle-of-dwarves-dwarf-base-0": 1
+				},
+				2: {
+					"castle-of-dwarves-kings-room-1": 0,
+					"castle-of-dwarves-1f-1": 0,
+					"castle-of-dwarves-right-tower-2f-0": 0,
+					"castle-of-dwarves-right-tower-3f-0": 0,
+					"castle-of-dwarves-right-tower-3f-2": 0,
+					"castle-of-dwarves-right-tower-2f-2": 0,
+					"castle-of-dwarves-b2f-0": 0,
+					"castle-of-dwarves-dwarf-base-0": 2
+				},
+				3: {
+					"castle-of-dwarves-kings-room-1": 0,
+					"castle-of-dwarves-1f-1": 0,
+					"castle-of-dwarves-right-tower-2f-0": 0,
+					"castle-of-dwarves-right-tower-3f-0": 0,
+					"castle-of-dwarves-right-tower-3f-2": 0,
+					"castle-of-dwarves-right-tower-2f-2": 0,
+					"castle-of-dwarves-b2f-0": 1,
+					"castle-of-dwarves-dwarf-base-0": 2
+				},
+				4: {
+					"castle-of-dwarves-kings-room-1": 0,
+					"castle-of-dwarves-1f-1": 0,
+					"castle-of-dwarves-right-tower-2f-0": 0,
+					"castle-of-dwarves-right-tower-3f-0": 0,
+					"castle-of-dwarves-right-tower-3f-2": 0,
+					"castle-of-dwarves-right-tower-2f-2": 0,
+					"castle-of-dwarves-b2f-0": 2,
+					"castle-of-dwarves-dwarf-base-0": 2
+				},
+				5: {
+					"castle-of-dwarves-kings-room-1": 0,
+					"castle-of-dwarves-1f-1": 0,
+					"castle-of-dwarves-right-tower-2f-0": 0,
+					"castle-of-dwarves-right-tower-3f-0": 0,
+					"castle-of-dwarves-right-tower-3f-2": 0,
+					"castle-of-dwarves-right-tower-2f-2": 1,
+					"castle-of-dwarves-b2f-0": 2,
+					"castle-of-dwarves-dwarf-base-0": 2
+				},
+				6: {
+					"castle-of-dwarves-kings-room-1": 0,
+					"castle-of-dwarves-1f-1": 0,
+					"castle-of-dwarves-right-tower-2f-0": 0,
+					"castle-of-dwarves-right-tower-3f-0": 0,
+					"castle-of-dwarves-right-tower-3f-2": 1,
+					"castle-of-dwarves-right-tower-2f-2": 1,
+					"castle-of-dwarves-b2f-0": 2,
+					"castle-of-dwarves-dwarf-base-0": 2
+				},
+				7: {
+					"castle-of-dwarves-kings-room-1": 0,
+					"castle-of-dwarves-1f-1": 0,
+					"castle-of-dwarves-right-tower-2f-0": 0,
+					"castle-of-dwarves-right-tower-3f-0": 1,
+					"castle-of-dwarves-right-tower-3f-2": 1,
+					"castle-of-dwarves-right-tower-2f-2": 1,
+					"castle-of-dwarves-b2f-0": 2,
+					"castle-of-dwarves-dwarf-base-0": 2
+				},
+				8: {
+					"castle-of-dwarves-kings-room-1": 0,
+					"castle-of-dwarves-1f-1": 1,
+					"castle-of-dwarves-right-tower-2f-0": 0,
+					"castle-of-dwarves-right-tower-3f-0": 1,
+					"castle-of-dwarves-right-tower-3f-2": 1,
+					"castle-of-dwarves-right-tower-2f-2": 1,
+					"castle-of-dwarves-b2f-0": 2,
+					"castle-of-dwarves-dwarf-base-0": 2
+				},
+				9: {
+					"castle-of-dwarves-kings-room-1": 1,
+					"castle-of-dwarves-1f-1": 1,
+					"castle-of-dwarves-right-tower-2f-0": 0,
+					"castle-of-dwarves-right-tower-3f-0": 1,
+					"castle-of-dwarves-right-tower-3f-2": 1,
+					"castle-of-dwarves-right-tower-2f-2": 1,
+					"castle-of-dwarves-b2f-0": 2,
+					"castle-of-dwarves-dwarf-base-0": 2
+				},
+				10: {
+					"castle-of-dwarves-kings-room-1": 2,
+					"castle-of-dwarves-1f-1": 1,
+					"castle-of-dwarves-right-tower-2f-0": 0,
+					"castle-of-dwarves-right-tower-3f-0": 1,
+					"castle-of-dwarves-right-tower-3f-2": 1,
+					"castle-of-dwarves-right-tower-2f-2": 1,
+					"castle-of-dwarves-b2f-0": 2,
+					"castle-of-dwarves-dwarf-base-0": 2
+				},
+				11: {
+					"castle-of-dwarves-kings-room-1": 2,
+					"castle-of-dwarves-1f-1": 1,
+					"castle-of-dwarves-right-tower-2f-0": 1,
+					"castle-of-dwarves-right-tower-3f-0": 1,
+					"castle-of-dwarves-right-tower-3f-2": 1,
+					"castle-of-dwarves-right-tower-2f-2": 1,
+					"castle-of-dwarves-b2f-0": 2,
+					"castle-of-dwarves-dwarf-base-0": 2
+				},
+				12: {
+					"castle-of-dwarves-kings-room-1": 2,
+					"castle-of-dwarves-1f-1": 1,
+					"castle-of-dwarves-right-tower-2f-0": 2,
+					"castle-of-dwarves-right-tower-3f-0": 1,
+					"castle-of-dwarves-right-tower-3f-2": 1,
+					"castle-of-dwarves-right-tower-2f-2": 1,
+					"castle-of-dwarves-b2f-0": 2,
+					"castle-of-dwarves-dwarf-base-0": 2
+				},
+				13: {
+					"castle-of-dwarves-kings-room-1": 2,
+					"castle-of-dwarves-1f-1": 1,
+					"castle-of-dwarves-right-tower-2f-0": 3,
+					"castle-of-dwarves-right-tower-3f-0": 1,
+					"castle-of-dwarves-right-tower-3f-2": 1,
+					"castle-of-dwarves-right-tower-2f-2": 1,
+					"castle-of-dwarves-b2f-0": 2,
+					"castle-of-dwarves-dwarf-base-0": 2
+				},
+				14: {
+					"castle-of-dwarves-kings-room-1": 2,
+					"castle-of-dwarves-1f-1": 1,
+					"castle-of-dwarves-right-tower-2f-0": 4,
+					"castle-of-dwarves-right-tower-3f-0": 1,
+					"castle-of-dwarves-right-tower-3f-2": 1,
+					"castle-of-dwarves-right-tower-2f-2": 1,
+					"castle-of-dwarves-b2f-0": 2,
+					"castle-of-dwarves-dwarf-base-0": 2
+				},
+				15: {
+					"castle-of-dwarves-kings-room-1": 2,
+					"castle-of-dwarves-1f-1": 1,
+					"castle-of-dwarves-right-tower-2f-0": 5,
+					"castle-of-dwarves-right-tower-3f-0": 1,
+					"castle-of-dwarves-right-tower-3f-2": 1,
+					"castle-of-dwarves-right-tower-2f-2": 1,
+					"castle-of-dwarves-b2f-0": 2,
+					"castle-of-dwarves-dwarf-base-0": 2
+				},
+				16: {
+					"castle-of-dwarves-kings-room-1": 2,
+					"castle-of-dwarves-1f-1": 1,
+					"castle-of-dwarves-right-tower-2f-0": 6,
+					"castle-of-dwarves-right-tower-3f-0": 1,
+					"castle-of-dwarves-right-tower-3f-2": 1,
+					"castle-of-dwarves-right-tower-2f-2": 1,
+					"castle-of-dwarves-b2f-0": 2,
+					"castle-of-dwarves-dwarf-base-0": 2
+				},
+				17: {
+					"castle-of-dwarves-kings-room-1": 2,
+					"castle-of-dwarves-1f-1": 1,
+					"castle-of-dwarves-right-tower-2f-0": 7,
+					"castle-of-dwarves-right-tower-3f-0": 1,
+					"castle-of-dwarves-right-tower-3f-1": 1,
+					"castle-of-dwarves-right-tower-2f-1": 1,
+					"castle-of-dwarves-b2f-0": 2,
+					"castle-of-dwarves-dwarf-base-0": 2
+				},
+				18: {
+					"castle-of-dwarves-kings-room-1": 2,
+					"castle-of-dwarves-1f-1": 1,
+					"castle-of-dwarves-right-tower-2f-0": 8,
+					"castle-of-dwarves-right-tower-3f-0": 1,
+					"castle-of-dwarves-right-tower-3f-2": 1,
+					"castle-of-dwarves-right-tower-2f-2": 1,
+					"castle-of-dwarves-b2f-0": 2,
+					"castle-of-dwarves-dwarf-base-0": 2
+				},
+				19: {
+					"castle-of-dwarves-kings-room-1": 2,
+					"castle-of-dwarves-1f-1": 1,
+					"castle-of-dwarves-right-tower-2f-0": 9,
+					"castle-of-dwarves-right-tower-3f-0": 1,
+					"castle-of-dwarves-right-tower-3f-2": 1,
+					"castle-of-dwarves-right-tower-2f-2": 1,
+					"castle-of-dwarves-b2f-0": 2,
+					"castle-of-dwarves-dwarf-base-0": 2
+				},
+				20: {
+					"castle-of-dwarves-kings-room-1": 2,
+					"castle-of-dwarves-1f-1": 1,
+					"castle-of-dwarves-right-tower-2f-0": 10,
+					"castle-of-dwarves-right-tower-3f-0": 1,
+					"castle-of-dwarves-right-tower-3f-2": 1,
+					"castle-of-dwarves-right-tower-2f-2": 1,
+					"castle-of-dwarves-b2f-0": 2,
+					"castle-of-dwarves-dwarf-base-0": 2
+				}
+			},
+			"paths": {
+				"castle-of-dwarves-kings-room-1": {
+					"index": "0",
+					"location": "Castle of Dwarves King's Room [after Golbez]",
+					"disambiguation": ""
+				},
+				"castle-of-dwarves-1f-1": {
+					"index": "0",
+					"location": "Castle of Dwarves 1F [after Golbez]",
+					"disambiguation": ""
+				},
+				"castle-of-dwarves-right-tower-2f-0": {
+					"index": "0",
+					"location": "Castle of Dwarves Right Tower 2F [before Strength Ring]",
+					"disambiguation": ""
+				},
+				"castle-of-dwarves-right-tower-3f-0": {
+					"index": "0",
+					"location": "Castle of Dwarves Right Tower 3F [before Strength Ring]",
+					"disambiguation": ""
+				},
+				"castle-of-dwarves-right-tower-3f-2": {
+					"index": "0",
+					"location": "Castle of Dwarves Right Tower 3F [after Strength Ring]",
+					"disambiguation": ""
+				},
+				"castle-of-dwarves-right-tower-2f-2": {
+					"index": "0",
+					"location": "Castle of Dwarves Right Tower 2F [after Strength Ring]",
+					"disambiguation": ""
+				},
+				"castle-of-dwarves-b2f-0": {
+					"index": "0",
+					"location": "Castle of Dwarves B2F",
+					"disambiguation": ""
+				},
+				"castle-of-dwarves-dwarf-base-0": {
+					"index": "0",
+					"location": "Castle of Dwarves Dwarf Base",
+					"disambiguation": ""
+				}
+			}
+		},
+		"castle-of-dwarves-1": {
+			"type": VariableFlags.EXTRA,
+			"description": "the Castle of Dwarves",
+			"routes": {
+				1: {
+					"castle-of-dwarves-kings-room-2": 0,
+					"castle-of-dwarves-1f-2": 0,
+					"castle-of-dwarves-right-tower-2f-1": 0,
+					"castle-of-dwarves-right-tower-3f-1": 0,
+					"castle-of-dwarves-right-tower-3f-3": 0,
+					"castle-of-dwarves-right-tower-2f-3": 0,
+					"castle-of-dwarves-b2f-1": 0,
+					"castle-of-dwarves-dwarf-base-1": 1
+				},
+				2: {
+					"castle-of-dwarves-kings-room-2": 0,
+					"castle-of-dwarves-1f-2": 0,
+					"castle-of-dwarves-right-tower-2f-1": 0,
+					"castle-of-dwarves-right-tower-3f-1": 0,
+					"castle-of-dwarves-right-tower-3f-3": 0,
+					"castle-of-dwarves-right-tower-2f-3": 0,
+					"castle-of-dwarves-b2f-1": 0,
+					"castle-of-dwarves-dwarf-base-1": 2
+				},
+				3: {
+					"castle-of-dwarves-kings-room-2": 0,
+					"castle-of-dwarves-1f-2": 0,
+					"castle-of-dwarves-right-tower-2f-1": 0,
+					"castle-of-dwarves-right-tower-3f-1": 0,
+					"castle-of-dwarves-right-tower-3f-3": 0,
+					"castle-of-dwarves-right-tower-2f-3": 0,
+					"castle-of-dwarves-b2f-1": 1,
+					"castle-of-dwarves-dwarf-base-1": 2
+				},
+				4: {
+					"castle-of-dwarves-kings-room-2": 0,
+					"castle-of-dwarves-1f-2": 0,
+					"castle-of-dwarves-right-tower-2f-1": 0,
+					"castle-of-dwarves-right-tower-3f-1": 0,
+					"castle-of-dwarves-right-tower-3f-3": 0,
+					"castle-of-dwarves-right-tower-2f-3": 0,
+					"castle-of-dwarves-b2f-1": 2,
+					"castle-of-dwarves-dwarf-base-1": 2
+				},
+				5: {
+					"castle-of-dwarves-kings-room-2": 0,
+					"castle-of-dwarves-1f-2": 0,
+					"castle-of-dwarves-right-tower-2f-1": 0,
+					"castle-of-dwarves-right-tower-3f-1": 0,
+					"castle-of-dwarves-right-tower-3f-3": 0,
+					"castle-of-dwarves-right-tower-2f-3": 1,
+					"castle-of-dwarves-b2f-1": 2,
+					"castle-of-dwarves-dwarf-base-1": 2
+				},
+				6: {
+					"castle-of-dwarves-kings-room-2": 0,
+					"castle-of-dwarves-1f-2": 0,
+					"castle-of-dwarves-right-tower-2f-1": 0,
+					"castle-of-dwarves-right-tower-3f-1": 0,
+					"castle-of-dwarves-right-tower-3f-3": 1,
+					"castle-of-dwarves-right-tower-2f-3": 1,
+					"castle-of-dwarves-b2f-1": 2,
+					"castle-of-dwarves-dwarf-base-1": 2
+				},
+				7: {
+					"castle-of-dwarves-kings-room-2": 0,
+					"castle-of-dwarves-1f-2": 0,
+					"castle-of-dwarves-right-tower-2f-1": 0,
+					"castle-of-dwarves-right-tower-3f-1": 1,
+					"castle-of-dwarves-right-tower-3f-3": 1,
+					"castle-of-dwarves-right-tower-2f-3": 1,
+					"castle-of-dwarves-b2f-1": 2,
+					"castle-of-dwarves-dwarf-base-1": 2
+				},
+				8: {
+					"castle-of-dwarves-kings-room-2": 0,
+					"castle-of-dwarves-1f-2": 1,
+					"castle-of-dwarves-right-tower-2f-1": 0,
+					"castle-of-dwarves-right-tower-3f-1": 1,
+					"castle-of-dwarves-right-tower-3f-3": 1,
+					"castle-of-dwarves-right-tower-2f-3": 1,
+					"castle-of-dwarves-b2f-1": 2,
+					"castle-of-dwarves-dwarf-base-1": 2
+				},
+				9: {
+					"castle-of-dwarves-kings-room-2": 0,
+					"castle-of-dwarves-1f-2": 1,
+					"castle-of-dwarves-right-tower-2f-1": 1,
+					"castle-of-dwarves-right-tower-3f-1": 1,
+					"castle-of-dwarves-right-tower-3f-3": 1,
+					"castle-of-dwarves-right-tower-2f-3": 1,
+					"castle-of-dwarves-b2f-1": 2,
+					"castle-of-dwarves-dwarf-base-1": 2
+				},
+				10: {
+					"castle-of-dwarves-kings-room-2": 0,
+					"castle-of-dwarves-1f-2": 1,
+					"castle-of-dwarves-right-tower-2f-1": 2,
+					"castle-of-dwarves-right-tower-3f-1": 1,
+					"castle-of-dwarves-right-tower-3f-3": 1,
+					"castle-of-dwarves-right-tower-2f-3": 1,
+					"castle-of-dwarves-b2f-1": 2,
+					"castle-of-dwarves-dwarf-base-1": 2
+				},
+				11: {
+					"castle-of-dwarves-kings-room-2": 0,
+					"castle-of-dwarves-1f-2": 1,
+					"castle-of-dwarves-right-tower-2f-1": 3,
+					"castle-of-dwarves-right-tower-3f-1": 1,
+					"castle-of-dwarves-right-tower-3f-3": 1,
+					"castle-of-dwarves-right-tower-2f-3": 1,
+					"castle-of-dwarves-b2f-1": 2,
+					"castle-of-dwarves-dwarf-base-1": 2
+				},
+				12: {
+					"castle-of-dwarves-kings-room-2": 0,
+					"castle-of-dwarves-1f-2": 1,
+					"castle-of-dwarves-right-tower-2f-1": 4,
+					"castle-of-dwarves-right-tower-3f-1": 1,
+					"castle-of-dwarves-right-tower-3f-3": 1,
+					"castle-of-dwarves-right-tower-2f-3": 1,
+					"castle-of-dwarves-b2f-1": 2,
+					"castle-of-dwarves-dwarf-base-1": 2
+				},
+				13: {
+					"castle-of-dwarves-kings-room-2": 0,
+					"castle-of-dwarves-1f-2": 1,
+					"castle-of-dwarves-right-tower-2f-1": 5,
+					"castle-of-dwarves-right-tower-3f-1": 1,
+					"castle-of-dwarves-right-tower-3f-3": 1,
+					"castle-of-dwarves-right-tower-2f-3": 1,
+					"castle-of-dwarves-b2f-1": 2,
+					"castle-of-dwarves-dwarf-base-1": 2
+				},
+				14: {
+					"castle-of-dwarves-kings-room-2": 0,
+					"castle-of-dwarves-1f-2": 1,
+					"castle-of-dwarves-right-tower-2f-1": 6,
+					"castle-of-dwarves-right-tower-3f-1": 1,
+					"castle-of-dwarves-right-tower-3f-3": 1,
+					"castle-of-dwarves-right-tower-2f-3": 1,
+					"castle-of-dwarves-b2f-1": 2,
+					"castle-of-dwarves-dwarf-base-1": 2
+				},
+				15: {
+					"castle-of-dwarves-kings-room-2": 0,
+					"castle-of-dwarves-1f-2": 1,
+					"castle-of-dwarves-right-tower-2f-1": 7,
+					"castle-of-dwarves-right-tower-3f-1": 1,
+					"castle-of-dwarves-right-tower-3f-3": 1,
+					"castle-of-dwarves-right-tower-2f-3": 1,
+					"castle-of-dwarves-b2f-1": 2,
+					"castle-of-dwarves-dwarf-base-1": 2
+				},
+				16: {
+					"castle-of-dwarves-kings-room-2": 0,
+					"castle-of-dwarves-1f-2": 1,
+					"castle-of-dwarves-right-tower-2f-1": 8,
+					"castle-of-dwarves-right-tower-3f-1": 1,
+					"castle-of-dwarves-right-tower-3f-3": 1,
+					"castle-of-dwarves-right-tower-2f-3": 1,
+					"castle-of-dwarves-b2f-1": 2,
+					"castle-of-dwarves-dwarf-base-1": 2
+				},
+				17: {
+					"castle-of-dwarves-kings-room-2": 0,
+					"castle-of-dwarves-1f-2": 1,
+					"castle-of-dwarves-right-tower-2f-1": 9,
+					"castle-of-dwarves-right-tower-3f-1": 1,
+					"castle-of-dwarves-right-tower-3f-3": 1,
+					"castle-of-dwarves-right-tower-2f-3": 1,
+					"castle-of-dwarves-b2f-1": 2,
+					"castle-of-dwarves-dwarf-base-1": 2
+				},
+				18: {
+					"castle-of-dwarves-kings-room-2": 0,
+					"castle-of-dwarves-1f-2": 1,
+					"castle-of-dwarves-right-tower-2f-1": 10,
+					"castle-of-dwarves-right-tower-3f-1": 1,
+					"castle-of-dwarves-right-tower-3f-3": 1,
+					"castle-of-dwarves-right-tower-2f-3": 1,
+					"castle-of-dwarves-b2f-1": 2,
+					"castle-of-dwarves-dwarf-base-1": 2
+				}
+			},
+			"paths": {
+				"castle-of-dwarves-kings-room-2": {
+					"index": "0",
+					"location": "Castle of Dwarves King's Room [after Golbez]",
+					"disambiguation": ""
+				},
+				"castle-of-dwarves-1f-2": {
+					"index": "0",
+					"location": "Castle of Dwarves 1F [after Golbez]",
+					"disambiguation": ""
+				},
+				"castle-of-dwarves-right-tower-2f-1": {
+					"index": "0",
+					"location": "Castle of Dwarves Right Tower 2F [before Strength Ring]",
+					"disambiguation": ""
+				},
+				"castle-of-dwarves-right-tower-3f-1": {
+					"index": "0",
+					"location": "Castle of Dwarves Right Tower 3F [before Strength Ring]",
+					"disambiguation": ""
+				},
+				"castle-of-dwarves-right-tower-3f-3": {
+					"index": "0",
+					"location": "Castle of Dwarves Right Tower 3F [after Strength Ring]",
+					"disambiguation": ""
+				},
+				"castle-of-dwarves-right-tower-2f-3": {
+					"index": "0",
+					"location": "Castle of Dwarves Right Tower 2F [after Strength Ring]",
+					"disambiguation": ""
+				},
+				"castle-of-dwarves-b2f-1": {
+					"index": "0",
+					"location": "Castle of Dwarves B2F",
+					"disambiguation": ""
+				},
+				"castle-of-dwarves-dwarf-base-1": {
+					"index": "0",
+					"location": "Castle of Dwarves Dwarf Base",
+					"disambiguation": ""
+				}
+			}
+		},
+		"castle-of-dwarves-choice-0": {
+			"type": VariableFlags.CHOICE,
+			"descriptions": {
+				0: "Walk out of the Castle of Dwarves Crystal Room.",
+				1: "Cast Warp to leave the Castle of Dwarves Crystal Room."
+			},
+			"paths": {
+				0: {
+					"castle-of-dwarves-crystal-room-0": {
+						"enabled": true,
+						"index": "0",
+						"location": "Castle of Dwarves Crystal Room",
+						"instruction": "Walk out of the Crystal Room"
+					},
+					"castle-of-dwarves-crystal-room-1": { "enabled": false },
+					"castle-of-dwarves-kings-room-2": { "enabled": false },
+					"castle-of-dwarves-1f-2": { "enabled": false },
+					"castle-of-dwarves-right-tower-2f-1": { "enabled": false },
+					"castle-of-dwarves-right-tower-3f-1": { "enabled": false },
+					"castle-of-dwarves-right-tower-3f-3": { "enabled": false },
+					"castle-of-dwarves-right-tower-2f-3": { "enabled": false },
+					"castle-of-dwarves-b2f-1": { "enabled": false },
+					"castle-of-dwarves-dwarf-base-1": { "enabled": false }
+				},
+				1: {
+					"castle-of-dwarves-crystal-room-0": { "enabled": false },
+					"castle-of-dwarves-crystal-room-1": {
+						"enabled": true,
+						"index": "0",
+						"location": "Castle of Dwarves Crystal Room",
+						"instruction": "Cast Warp to leave the Crystal Room"
+					},
+					"castle-of-dwarves-kings-room-1": { "enabled": false },
+					"castle-of-dwarves-1f-1": { "enabled": false },
+					"castle-of-dwarves-right-tower-2f-0": { "enabled": false },
+					"castle-of-dwarves-right-tower-3f-0": { "enabled": false },
+					"castle-of-dwarves-right-tower-3f-2": { "enabled": false },
+					"castle-of-dwarves-right-tower-2f-2": { "enabled": false },
+					"castle-of-dwarves-b2f-0": { "enabled": false },
+					"castle-of-dwarves-dwarf-base-0": { "enabled": false }
 				}
 			}
 		},
@@ -1890,7 +2433,9 @@ com.aexoden.ff4 = function()
 			80: ["tower-of-zot-6f-0"],
 			81: ["castle-baron-1"],
 			82: ["overworld-agart-0"],
-			83: ["underworld-castle-of-dwarves-0"]
+			83: ["underworld-castle-of-dwarves-0"],
+			84: ["castle-of-dwarves-choice-0"],
+			85: ["castle-of-dwarves-0", "castle-of-dwarves-1"]
 		}
 	};
 
@@ -2579,6 +3124,542 @@ com.aexoden.ff4 = function()
 				"base-0": [
 					[15, 30, SegmentFlags.START],
 					[15, 19, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-of-dwarves-b1f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "310A-0",
+			"segments": {
+				"base-0": [
+					[26, 8, SegmentFlags.START],
+					[15, 8, SegmentFlags.NONE],
+					[15, 4, SegmentFlags.NONE],
+					[14, 4, SegmentFlags.END],
+					[14, 0, SegmentFlags.NONE],
+					[11, 0, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-of-dwarves-b2f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "310B-0",
+			"segments": {
+				"base-0": [
+					[29, 9, SegmentFlags.START],
+					[28, 9, SegmentFlags.NONE],
+					[28, 8, SegmentFlags.NONE],
+					[25, 8, SegmentFlags.NONE],
+					[25, 9, SegmentFlags.NONE],
+					[23, 9, SegmentFlags.NONE],
+					[23, 10, SegmentFlags.NONE],
+					[22, 10, SegmentFlags.NONE],
+					[22, 11, SegmentFlags.NONE],
+					[10, 11, SegmentFlags.NONE],
+					[10, 17, SegmentFlags.NONE],
+					[11, 17, SegmentFlags.NONE],
+					[11, 26, SegmentFlags.NONE],
+					[5, 26, SegmentFlags.NONE],
+					[5, 27, SegmentFlags.NONE],
+					[2, 27, SegmentFlags.END]
+				],
+				"optional-1-0": [
+					[11, 11, SegmentFlags.NONE],
+					[11, 12, SegmentFlags.ANNOTATE],
+					[10, 12, SegmentFlags.NONE]
+				],
+				"optional-2-0": [
+					[11, 11, SegmentFlags.NONE],
+					[11, 12, SegmentFlags.NONE],
+					[10, 12, SegmentFlags.NONE],
+					[10, 14, SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+					[11, 14, SegmentFlags.NONE],
+					[11, 17, SegmentFlags.NONE]
+				]
+			}
+		},
+		"castle-of-dwarves-b2f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "310B-0",
+			"segments": {
+				"base-0": [
+					[29, 9, SegmentFlags.START],
+					[28, 9, SegmentFlags.NONE],
+					[28, 8, SegmentFlags.NONE],
+					[25, 8, SegmentFlags.NONE],
+					[25, 9, SegmentFlags.NONE],
+					[23, 9, SegmentFlags.NONE],
+					[23, 10, SegmentFlags.NONE],
+					[22, 10, SegmentFlags.NONE],
+					[22, 11, SegmentFlags.NONE],
+					[10, 11, SegmentFlags.NONE],
+					[10, 17, SegmentFlags.NONE],
+					[11, 17, SegmentFlags.NONE],
+					[11, 26, SegmentFlags.NONE],
+					[5, 26, SegmentFlags.NONE],
+					[5, 27, SegmentFlags.NONE],
+					[2, 27, SegmentFlags.END]
+				],
+				"optional-1-0": [
+					[11, 11, SegmentFlags.NONE],
+					[11, 12, SegmentFlags.ANNOTATE],
+					[10, 12, SegmentFlags.NONE]
+				],
+				"optional-2-0": [
+					[11, 11, SegmentFlags.NONE],
+					[11, 12, SegmentFlags.NONE],
+					[10, 12, SegmentFlags.NONE],
+					[10, 14, SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+					[11, 14, SegmentFlags.NONE],
+					[11, 17, SegmentFlags.NONE]
+				]
+			}
+		},
+		"castle-of-dwarves-1f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3108-0",
+			"segments": {
+				"base-0": [
+					[11, 11, SegmentFlags.START],
+					[11, 1, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-of-dwarves-1f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3108-1",
+			"segments": {
+				"base-0": [
+					[11, 3, SegmentFlags.START],
+					[11, 8, SegmentFlags.NONE],
+					[21, 8, SegmentFlags.NONE],
+					[21, 6, SegmentFlags.END]
+				],
+				"optional-1-0": [
+					[11, 7, SegmentFlags.NONE],
+					[16, 7, SegmentFlags.ANNOTATE],
+					[16, 8, SegmentFlags.NONE]
+				]
+			}
+		},
+		"castle-of-dwarves-1f-2": {
+			"flags": PathFlags.STEPS,
+			"map": "3108-1",
+			"segments": {
+				"base-0": [
+					[11, 3, SegmentFlags.START],
+					[11, 8, SegmentFlags.NONE],
+					[21, 8, SegmentFlags.NONE],
+					[21, 6, SegmentFlags.END]
+				],
+				"optional-1-0": [
+					[11, 7, SegmentFlags.NONE],
+					[16, 7, SegmentFlags.ANNOTATE],
+					[16, 8, SegmentFlags.NONE]
+				]
+			}
+		},
+		"castle-of-dwarves-crystal-room-0": {
+			"flags": PathFlags.NONE,
+			"map": "310D-0",
+			"segments": {
+				"base-0": [
+					[9, 9, SegmentFlags.START],
+					[9, 8, SegmentFlags.RETURN],
+					[9, 20, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-of-dwarves-crystal-room-1": {
+			"flags": PathFlags.NONE,
+			"map": "310D-0",
+			"segments": {
+				"base-0": [
+					[9, 9, SegmentFlags.START],
+					[9, 8, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-of-dwarves-dwarf-base-0": {
+			"flags": PathFlags.STEPS,
+			"map": "310F-0",
+			"segments": {
+				"base-0": [
+					[29, 5, SegmentFlags.START],
+					[28, 5, SegmentFlags.NONE],
+					[28, 8, SegmentFlags.NONE],
+					[26, 8, SegmentFlags.NONE],
+					[10, 8, SegmentFlags.NONE],
+					[10, 12, SegmentFlags.NONE],
+					[3, 12, SegmentFlags.NONE],
+					[3, 7, SegmentFlags.RETURN],
+					[3, 14, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[3, 7, SegmentFlags.RETURN],
+					[3, 6, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"optional-1-0": [
+					[29, 5, SegmentFlags.NONE],
+					[29, 6, SegmentFlags.NONE | SegmentFlags.ANNOTATE],
+					[28, 6, SegmentFlags.NONE]
+				],
+				"optional-2-0": [
+					[29, 5, SegmentFlags.NONE],
+					[29, 6, SegmentFlags.NONE | SegmentFlags.ANNOTATE],
+					[27, 6, SegmentFlags.NONE],
+					[27, 8, SegmentFlags.NONE]
+				]
+			}
+		},
+		"castle-of-dwarves-dwarf-base-1": {
+			"flags": PathFlags.STEPS,
+			"map": "310F-0",
+			"segments": {
+				"base-0": [
+					[29, 5, SegmentFlags.START],
+					[28, 5, SegmentFlags.NONE],
+					[28, 8, SegmentFlags.NONE],
+					[26, 8, SegmentFlags.NONE],
+					[10, 8, SegmentFlags.NONE],
+					[10, 12, SegmentFlags.NONE],
+					[3, 12, SegmentFlags.NONE],
+					[3, 7, SegmentFlags.RETURN],
+					[3, 14, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[3, 7, SegmentFlags.RETURN],
+					[3, 6, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"optional-1-0": [
+					[29, 5, SegmentFlags.NONE],
+					[29, 6, SegmentFlags.NONE | SegmentFlags.ANNOTATE],
+					[28, 6, SegmentFlags.NONE]
+				],
+				"optional-2-0": [
+					[29, 5, SegmentFlags.NONE],
+					[29, 6, SegmentFlags.NONE | SegmentFlags.ANNOTATE],
+					[27, 6, SegmentFlags.NONE],
+					[27, 8, SegmentFlags.NONE]
+				]
+			}
+		},
+		"castle-of-dwarves-kings-room-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3109-0",
+			"segments": {
+				"base-0": [
+					[10, 13, SegmentFlags.START],
+					[10, 11, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-of-dwarves-kings-room-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3109-0",
+			"segments": {
+				"base-0": [
+					[9, 1, SegmentFlags.START],
+					[8, 1, SegmentFlags.NONE],
+					[8, 6, SegmentFlags.NONE],
+					[10, 6, SegmentFlags.NONE],
+					[10, 10, SegmentFlags.NONE],
+					[10, 15, SegmentFlags.END]
+				],
+				"optional-1-0": [
+					[9, 6, SegmentFlags.NONE],
+					[9, 10, SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+					[10, 10, SegmentFlags.NONE]
+				],
+				"optional-2-0": [
+					[8, 6, SegmentFlags.NONE],
+					[8, 10, SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+					[10, 10, SegmentFlags.NONE]
+				]
+			}
+		},
+		"castle-of-dwarves-kings-room-2": {
+			"flags": PathFlags.STEPS,
+			"map": "3109-0",
+			"segments": {
+				"base-0": [
+					[10, 8, SegmentFlags.START],
+					[10, 15, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-of-dwarves-right-tower-2f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "310E-0",
+			"segments": {
+				"base-0": [
+					[1, 13, SegmentFlags.START],
+					[1, 9, SegmentFlags.NONE],
+					[4, 9, SegmentFlags.NONE],
+					[4, 6, SegmentFlags.NONE],
+					[13, 6, SegmentFlags.NONE],
+					[13, 4, SegmentFlags.END]
+				],
+				"optional-1-0": [
+					[3, 9, SegmentFlags.NONE],
+					[3, 8, SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+					[4, 8, SegmentFlags.NONE],
+				],
+				"optional-2-0": [
+					[4, 9, SegmentFlags.NONE],
+					[5, 9, SegmentFlags.ANNOTATE],
+					[5, 6, SegmentFlags.NONE]
+				],
+				"optional-3-0": [
+					[4, 9, SegmentFlags.NONE],
+					[6, 9, SegmentFlags.ANNOTATE],
+					[6, 6, SegmentFlags.NONE]
+				],
+				"optional-4-0": [
+					[4, 9, SegmentFlags.NONE],
+					[7, 9, SegmentFlags.ANNOTATE],
+					[7, 6, SegmentFlags.NONE]
+				],
+				"optional-5-0": [
+					[3, 9, SegmentFlags.NONE],
+					[3, 7, SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+					[7, 7, SegmentFlags.NONE],
+					[7, 6, SegmentFlags.NONE]
+				],
+				"optional-6-0": [
+					[4, 9, SegmentFlags.NONE],
+					[9, 9, SegmentFlags.ANNOTATE],
+					[9, 6, SegmentFlags.NONE]
+				],
+				"optional-7-0": [
+					[4, 9, SegmentFlags.NONE],
+					[10, 9, SegmentFlags.ANNOTATE],
+					[10, 6, SegmentFlags.NONE]
+				],
+				"optional-8-0": [
+					[4, 9, SegmentFlags.NONE],
+					[11, 9, SegmentFlags.ANNOTATE],
+					[11, 6, SegmentFlags.NONE]
+				],
+				"optional-9-0": [
+					[4, 9, SegmentFlags.NONE],
+					[13, 9, SegmentFlags.ANNOTATE],
+					[13, 6, SegmentFlags.NONE]
+				],
+				"optional-10-0": [
+					[4, 9, SegmentFlags.NONE],
+					[11, 9, SegmentFlags.NONE],
+					[11, 7, SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+					[13, 7, SegmentFlags.NONE],
+					[13, 6, SegmentFlags.NONE]
+				]
+			},
+		},
+		"castle-of-dwarves-right-tower-2f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "310E-0",
+			"segments": {
+				"base-0": [
+					[1, 13, SegmentFlags.START],
+					[1, 9, SegmentFlags.NONE],
+					[4, 9, SegmentFlags.NONE],
+					[4, 6, SegmentFlags.NONE],
+					[13, 6, SegmentFlags.NONE],
+					[13, 4, SegmentFlags.END]
+				],
+				"optional-1-0": [
+					[3, 9, SegmentFlags.NONE],
+					[3, 8, SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+					[4, 8, SegmentFlags.NONE],
+				],
+				"optional-2-0": [
+					[4, 9, SegmentFlags.NONE],
+					[5, 9, SegmentFlags.ANNOTATE],
+					[5, 6, SegmentFlags.NONE]
+				],
+				"optional-3-0": [
+					[4, 9, SegmentFlags.NONE],
+					[6, 9, SegmentFlags.ANNOTATE],
+					[6, 6, SegmentFlags.NONE]
+				],
+				"optional-4-0": [
+					[4, 9, SegmentFlags.NONE],
+					[7, 9, SegmentFlags.ANNOTATE],
+					[7, 6, SegmentFlags.NONE]
+				],
+				"optional-5-0": [
+					[3, 9, SegmentFlags.NONE],
+					[3, 7, SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+					[7, 7, SegmentFlags.NONE],
+					[7, 6, SegmentFlags.NONE]
+				],
+				"optional-6-0": [
+					[4, 9, SegmentFlags.NONE],
+					[9, 9, SegmentFlags.ANNOTATE],
+					[9, 6, SegmentFlags.NONE]
+				],
+				"optional-7-0": [
+					[4, 9, SegmentFlags.NONE],
+					[10, 9, SegmentFlags.ANNOTATE],
+					[10, 6, SegmentFlags.NONE]
+				],
+				"optional-8-0": [
+					[4, 9, SegmentFlags.NONE],
+					[11, 9, SegmentFlags.ANNOTATE],
+					[11, 6, SegmentFlags.NONE]
+				],
+				"optional-9-0": [
+					[4, 9, SegmentFlags.NONE],
+					[13, 9, SegmentFlags.ANNOTATE],
+					[13, 6, SegmentFlags.NONE]
+				],
+				"optional-10-0": [
+					[4, 9, SegmentFlags.NONE],
+					[11, 9, SegmentFlags.NONE],
+					[11, 7, SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+					[13, 7, SegmentFlags.NONE],
+					[13, 6, SegmentFlags.NONE]
+				]
+			},
+		},
+		"castle-of-dwarves-right-tower-2f-2": {
+			"flags": PathFlags.STEPS,
+			"map": "310E-0",
+			"segments": {
+				"base-0": [
+					[13, 4, SegmentFlags.START],
+					[13, 6, SegmentFlags.NONE],
+					[10, 6, SegmentFlags.END],
+					[1, 6, SegmentFlags.NONE],
+					[1, 4, SegmentFlags.END]
+				],
+				"optional-1-0": [
+					[2, 6, SegmentFlags.NONE],
+					[2, 5, SegmentFlags.ANNOTATE],
+					[1, 5, SegmentFlags.NONE]
+				]
+			}
+		},
+		"castle-of-dwarves-right-tower-2f-3": {
+			"flags": PathFlags.STEPS,
+			"map": "310E-0",
+			"segments": {
+				"base-0": [
+					[13, 4, SegmentFlags.START],
+					[13, 6, SegmentFlags.NONE],
+					[10, 6, SegmentFlags.END],
+					[1, 6, SegmentFlags.NONE],
+					[1, 4, SegmentFlags.END]
+				],
+				"optional-1-0": [
+					[2, 6, SegmentFlags.NONE],
+					[2, 5, SegmentFlags.ANNOTATE],
+					[1, 5, SegmentFlags.NONE]
+				]
+			}
+		},
+		"castle-of-dwarves-right-tower-3f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3110-0",
+			"segments": {
+				"base-0": [
+					[10, 10, SegmentFlags.START],
+					[10, 6, SegmentFlags.NONE],
+					[9, 6, SegmentFlags.NONE],
+					[9, 4, SegmentFlags.NONE],
+					[6, 4, SegmentFlags.END],
+					[6, 5, SegmentFlags.END]
+				],
+				"optional-1-0": [
+					[10, 6, SegmentFlags.NONE],
+					[10, 5, SegmentFlags.ANNOTATE],
+					[9, 5, SegmentFlags.NONE]
+				]
+			}
+		},
+		"castle-of-dwarves-right-tower-3f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3110-0",
+			"segments": {
+				"base-0": [
+					[10, 10, SegmentFlags.START],
+					[10, 6, SegmentFlags.NONE],
+					[9, 6, SegmentFlags.NONE],
+					[9, 4, SegmentFlags.NONE],
+					[6, 4, SegmentFlags.END],
+					[6, 5, SegmentFlags.END]
+				],
+				"optional-1-0": [
+					[10, 6, SegmentFlags.NONE],
+					[10, 5, SegmentFlags.ANNOTATE],
+					[9, 5, SegmentFlags.NONE]
+				]
+			}
+		},
+		"castle-of-dwarves-right-tower-3f-2": {
+			"flags": PathFlags.STEPS,
+			"map": "3110-0",
+			"segments": {
+				"base-0": [
+					[6, 5, SegmentFlags.START],
+					[6, 8, SegmentFlags.NONE],
+					[8, 8, SegmentFlags.NONE],
+					[10, 8, SegmentFlags.NONE],
+					[10, 10, SegmentFlags.END]
+				],
+				"optional-1-0": [
+					[6, 6, SegmentFlags.NONE],
+					[8, 6, SegmentFlags.ANNOTATE],
+					[8, 8, SegmentFlags.NONE]
+				]
+			}
+		},
+		"castle-of-dwarves-right-tower-3f-3": {
+			"flags": PathFlags.STEPS,
+			"map": "3110-0",
+			"segments": {
+				"base-0": [
+					[6, 5, SegmentFlags.START],
+					[6, 8, SegmentFlags.NONE],
+					[8, 8, SegmentFlags.NONE],
+					[10, 8, SegmentFlags.NONE],
+					[10, 10, SegmentFlags.END]
+				],
+				"optional-1-0": [
+					[6, 6, SegmentFlags.NONE],
+					[8, 6, SegmentFlags.ANNOTATE],
+					[8, 8, SegmentFlags.NONE]
+				]
+			}
+		},
+		"castle-of-dwarves-4f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "311B-0",
+			"segments": {
+				"base-0": [
+					[24, 21, SegmentFlags.START],
+					[24, 23, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-of-dwarves-4f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "311B-0",
+			"segments": {
+				"base-0": [
+					[24, 23, SegmentFlags.START],
+					[24, 21, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-of-dwarves-5f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3119-0",
+			"segments": {
+				"base-0": [
+					[6, 7, SegmentFlags.START],
+					[6, 4, SegmentFlags.RETURN],
+					[6, 7, SegmentFlags.END]
 				]
 			}
 		},
@@ -5354,6 +6435,10 @@ com.aexoden.ff4 = function()
 								var varData = data.variableData[data.variables[route][index][k]];
 								var value = vars[index];
 
+								if (typeof value === 'undefined') {
+									value = 0
+								}
+
 								if (varData.type == VariableFlags.EXTRA) {
 									var extraEven = false;
 									var extraOdd = false;
@@ -5460,6 +6545,10 @@ com.aexoden.ff4 = function()
 
 							if (varData.type == VariableFlags.CHOICE) {
 								entries = varData.paths[value];
+
+								if (value in varData.descriptions) {
+									vars[key] = value;
+								}
 							}
 
 							Object.entries(entries).forEach(
