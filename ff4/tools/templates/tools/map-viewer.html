@@ -1,0 +1,30 @@
+{% extends "tools/base.html" %}
+{% load static %}
+{% load django_bootstrap_breadcrumbs %}
+
+{% block breadcrumbs %}
+	{{ block.super }}
+	{% breadcrumb "Map Viewer" "tools:map-viewer" %}
+{% endblock %}
+
+{% block subtitle %}Map Viewer{% endblock %}
+
+{% block content %}				<h1>Map Viewer</h1>
+					<p>This tool will let you browse the Final Fantasy IV universe with a simple point-and-click interface.</p>
+					<div class="btn-group-toggle" data-toggle="buttons">
+						<button type="button" class="btn btn-primary" id="button-image-previous" disabled>Button</button>
+					</div>
+					<div class="row" style="margin-top: 1.0em">
+						<div class="col">
+							<canvas width="512" height="512" id="map">
+						</div>
+						<div class="col" id="information"></div>
+					</div>
+{% endblock %}
+
+{% block extrajs %}
+				<script src="{% static "js/maps.js" %}"></script>
+				<script>
+					com.aexoden.ff4.maps.init();
+				</script>
+{% endblock %}
