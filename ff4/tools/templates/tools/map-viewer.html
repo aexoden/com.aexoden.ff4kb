@@ -11,10 +11,15 @@
 
 {% block content %}				<h1>Map Viewer</h1>
 					<p>This tool will let you browse the Final Fantasy IV universe with a simple point-and-click interface.</p>
-					<div class="btn-group-toggle">
-						<button type="button" class="btn btn-primary" id="button-go-overworld">Overworld</button>
-						<button type="button" class="btn btn-primary" id="button-go-underworld">Underworld</button>
-						<button type="button" class="btn btn-primary" id="button-go-moon">Moon</button>
+					<div class="btn-toolbar">
+						<div class="btn-group btn-group-toggle mr-2" data-toggle="buttons">
+							<button type="button" class="btn btn-primary active" id="button-base-overworld" data-toggle="button">Overworld</button>
+							<button type="button" class="btn btn-primary" id="button-base-underworld" data-toggle="button">Underworld</button>
+							<button type="button" class="btn btn-primary" id="button-base-moon" data-toggle="button">Moon</button>
+						</div>
+						<div class="btn-group mr-2" data-toggle="buttons">
+							<button type="button" class="btn btn-outline-info active" id="button-show-overlay">Show Tile Overlay</button>
+						</div>
 					</div>
 					<div class="row" style="margin-top: 1.0em">
 						<div class="col">

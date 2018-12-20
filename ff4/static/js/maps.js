@@ -31,6 +31,8 @@ com.aexoden.ff4.maps = function()
      * Global Variables
      */
 
+	var drawOverlay = true;
+
 	var currentMapIndex = null;
 
 	var currentImage = null;
@@ -159,15 +161,32 @@ com.aexoden.ff4.maps = function()
 	}
 
 	var onButtonGoOverworld = function(e) {
+		document.getElementById('button-base-overworld').classList.add('active');
+		document.getElementById('button-base-underworld').classList.remove('active');
+		document.getElementById('button-base-moon').classList.remove('active');
+
 		updateMap(MAP_OVERWORLD);
 	}
 
 	var onButtonGoUnderworld = function(e) {
+		document.getElementById('button-base-overworld').classList.remove('active');
+		document.getElementById('button-base-underworld').classList.add('active');
+		document.getElementById('button-base-moon').classList.remove('active');
+
 		updateMap(MAP_UNDERWORLD);
 	}
 
 	var onButtonGoMoon = function(e) {
+		document.getElementById('button-base-overworld').classList.remove('active');
+		document.getElementById('button-base-underworld').classList.remove('active');
+		document.getElementById('button-base-moon').classList.add('active');
+
 		updateMap(MAP_MOON);
+	}
+
+	var onButtonShowOverlay = function(e) {
+		drawOverlay = !drawOverlay;
+		updateMap(currentMapIndex, false);
 	}
 
 	var drawMap = function() {
@@ -205,21 +224,24 @@ com.aexoden.ff4.maps = function()
 		}
 	}
 
-	var updateMap = function(mapIndex) {
+	var updateMap = function(mapIndex, fullUpdate = true) {
 		currentMapIndex = mapIndex;
 		currentImage = new Image();
 		currentImageReady = false;
 
 		currentImage.onload = function() {
 			currentImageReady = true;
-			currentStartX = 0;
-			currentStartY = 0;
-			currentSize = getMapSize();
+
+			if (fullUpdate) {
+				currentStartX = 0;
+				currentStartY = 0;
+				currentSize = getMapSize();
+			}
 
 			drawMap();
 		}
 
-		currentImage.src = '/static/img/maps/composite/' + currentMapIndex.toString(16).padStart(4, '0') + '-0.png';
+		currentImage.src = '/static/img/maps/' + (drawOverlay ? 'composite' : 'base') + '/' + currentMapIndex.toString(16).padStart(4, '0') + '-0.png';
 	}
 
 	var updateDisplay = function() {
@@ -236,14 +258,17 @@ com.aexoden.ff4.maps = function()
 		canvas.addEventListener('mousemove', onMapMouseMove);
 		canvas.addEventListener('mouseup', onMapMouseUp);
 
-		var button = document.getElementById('button-go-overworld');
+		var button = document.getElementById('button-base-overworld');
 		button.addEventListener('click', onButtonGoOverworld);
 
-		var button = document.getElementById('button-go-underworld');
+		var button = document.getElementById('button-base-underworld');
 		button.addEventListener('click', onButtonGoUnderworld);
 
-		var button = document.getElementById('button-go-moon');
+		var button = document.getElementById('button-base-moon');
 		button.addEventListener('click', onButtonGoMoon);
+
+		var button = document.getElementById('button-show-overlay');
+		button.addEventListener('click', onButtonShowOverlay);
 
 		updateMap(MAP_OVERWORLD);
 		updateDisplay();
