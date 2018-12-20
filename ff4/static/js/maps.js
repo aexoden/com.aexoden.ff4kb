@@ -158,6 +158,18 @@ com.aexoden.ff4.maps = function()
 		e.preventDefault();
 	}
 
+	var onButtonGoOverworld = function(e) {
+		updateMap(MAP_OVERWORLD);
+	}
+
+	var onButtonGoUnderworld = function(e) {
+		updateMap(MAP_UNDERWORLD);
+	}
+
+	var onButtonGoMoon = function(e) {
+		updateMap(MAP_MOON);
+	}
+
 	var drawMap = function() {
 		if (currentImageReady) {
 			var canvas = document.getElementById('map');
@@ -217,16 +229,23 @@ com.aexoden.ff4.maps = function()
 
 	var init = function() {
 		var canvas = document.getElementById('map');
-		//canvas.addEventListener('click', onMapClick);
 		canvas.addEventListener('wheel', onMapWheel);
 		canvas.addEventListener('DOMMouseScroll', onMapWheel);
-
 
 		canvas.addEventListener('mousedown', onMapMouseDown);
 		canvas.addEventListener('mousemove', onMapMouseMove);
 		canvas.addEventListener('mouseup', onMapMouseUp);
 
-		updateMap(0x0000);
+		var button = document.getElementById('button-go-overworld');
+		button.addEventListener('click', onButtonGoOverworld);
+
+		var button = document.getElementById('button-go-underworld');
+		button.addEventListener('click', onButtonGoUnderworld);
+
+		var button = document.getElementById('button-go-moon');
+		button.addEventListener('click', onButtonGoMoon);
+
+		updateMap(MAP_OVERWORLD);
 		updateDisplay();
 	}
 
