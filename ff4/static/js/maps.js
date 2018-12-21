@@ -1377,7 +1377,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"18": {
 					"targetMap": 12290,
-					"targetX": 156,
+					"targetX": 28,
 					"targetY": 14,
 					"type": "warp"
 				}
@@ -1414,7 +1414,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"12": {
 					"targetMap": 12291,
-					"targetX": 144,
+					"targetX": 16,
 					"targetY": 9,
 					"type": "warp"
 				}
@@ -1424,7 +1424,7 @@ com.aexoden.ff4.maps = function()
 			"5": {
 				"12": {
 					"targetMap": 12424,
-					"targetX": 139,
+					"targetX": 11,
 					"targetY": 5,
 					"type": "warp"
 				}
@@ -1451,7 +1451,7 @@ com.aexoden.ff4.maps = function()
 			"25": {
 				"6": {
 					"targetMap": 12314,
-					"targetX": 195,
+					"targetX": 3,
 					"targetY": 2,
 					"type": "warp"
 				}
@@ -1485,7 +1485,7 @@ com.aexoden.ff4.maps = function()
 			"2": {
 				"2": {
 					"targetMap": 12317,
-					"targetX": 195,
+					"targetX": 3,
 					"targetY": 5,
 					"type": "warp"
 				},
@@ -1606,7 +1606,7 @@ com.aexoden.ff4.maps = function()
 			"8": {
 				"13": {
 					"targetMap": 12333,
-					"targetX": 130,
+					"targetX": 2,
 					"targetY": 2,
 					"type": "warp"
 				},
@@ -1635,7 +1635,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"13": {
 					"targetMap": 12330,
-					"targetX": 129,
+					"targetX": 1,
 					"targetY": 6,
 					"type": "warp"
 				}
@@ -1695,7 +1695,7 @@ com.aexoden.ff4.maps = function()
 			"19": {
 				"13": {
 					"targetMap": 12330,
-					"targetX": 208,
+					"targetX": 16,
 					"targetY": 10,
 					"type": "warp"
 				}
@@ -1711,7 +1711,7 @@ com.aexoden.ff4.maps = function()
 			"28": {
 				"14": {
 					"targetMap": 12334,
-					"targetX": 146,
+					"targetX": 18,
 					"targetY": 2,
 					"type": "warp"
 				},
@@ -1881,7 +1881,7 @@ com.aexoden.ff4.maps = function()
 			"1": {
 				"5": {
 					"targetMap": 12324,
-					"targetX": 204,
+					"targetX": 12,
 					"targetY": 13,
 					"type": "warp"
 				}
@@ -1909,7 +1909,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"15": {
 					"targetMap": 12324,
-					"targetX": 143,
+					"targetX": 15,
 					"targetY": 18,
 					"type": "warp"
 				}
@@ -1950,7 +1950,7 @@ com.aexoden.ff4.maps = function()
 			"16": {
 				"10": {
 					"targetMap": 12324,
-					"targetX": 83,
+					"targetX": 19,
 					"targetY": 13,
 					"type": "warp"
 				}
@@ -1964,7 +1964,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"9": {
 					"targetMap": 12330,
-					"targetX": 136,
+					"targetX": 8,
 					"targetY": 1,
 					"type": "warp"
 				}
@@ -1991,7 +1991,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"29": {
 					"targetMap": 12483,
-					"targetX": 217,
+					"targetX": 25,
 					"targetY": 8,
 					"type": "warp"
 				}
@@ -2001,7 +2001,7 @@ com.aexoden.ff4.maps = function()
 			"2": {
 				"2": {
 					"targetMap": 12324,
-					"targetX": 72,
+					"targetX": 8,
 					"targetY": 13,
 					"type": "warp"
 				},
@@ -2011,7 +2011,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"12": {
 					"targetMap": 12324,
-					"targetX": 136,
+					"targetX": 8,
 					"targetY": 18,
 					"type": "warp"
 				}
@@ -2063,13 +2063,13 @@ com.aexoden.ff4.maps = function()
 			"18": {
 				"2": {
 					"targetMap": 12324,
-					"targetX": 220,
+					"targetX": 28,
 					"targetY": 14,
 					"type": "warp"
 				},
 				"12": {
 					"targetMap": 12324,
-					"targetX": 156,
+					"targetX": 28,
 					"targetY": 19,
 					"type": "warp"
 				}
@@ -2079,7 +2079,7 @@ com.aexoden.ff4.maps = function()
 			"1": {
 				"3": {
 					"targetMap": 12336,
-					"targetX": 129,
+					"targetX": 1,
 					"targetY": 1,
 					"type": "warp"
 				}
@@ -2106,7 +2106,7 @@ com.aexoden.ff4.maps = function()
 			"11": {
 				"7": {
 					"targetMap": 12324,
-					"targetX": 76,
+					"targetX": 12,
 					"targetY": 8,
 					"type": "warp"
 				}
@@ -2122,7 +2122,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"9": {
 					"targetMap": 12324,
-					"targetX": 134,
+					"targetX": 6,
 					"targetY": 10,
 					"type": "warp"
 				}
@@ -2132,7 +2132,7 @@ com.aexoden.ff4.maps = function()
 			"5": {
 				"4": {
 					"targetMap": 12338,
-					"targetX": 133,
+					"targetX": 5,
 					"targetY": 4,
 					"type": "warp"
 				}
@@ -2140,7 +2140,7 @@ com.aexoden.ff4.maps = function()
 			"9": {
 				"4": {
 					"targetMap": 12340,
-					"targetX": 201,
+					"targetX": 9,
 					"targetY": 4,
 					"type": "warp"
 				}
@@ -2156,7 +2156,7 @@ com.aexoden.ff4.maps = function()
 			"9": {
 				"4": {
 					"targetMap": 12339,
-					"targetX": 201,
+					"targetX": 9,
 					"targetY": 4,
 					"type": "warp"
 				}
@@ -2205,7 +2205,7 @@ com.aexoden.ff4.maps = function()
 			"9": {
 				"4": {
 					"targetMap": 12342,
-					"targetX": 201,
+					"targetX": 9,
 					"targetY": 4,
 					"type": "warp"
 				}
@@ -2227,7 +2227,7 @@ com.aexoden.ff4.maps = function()
 			"7": {
 				"3": {
 					"targetMap": 12343,
-					"targetX": 135,
+					"targetX": 7,
 					"targetY": 3,
 					"type": "warp"
 				}
@@ -2293,7 +2293,7 @@ com.aexoden.ff4.maps = function()
 			"24": {
 				"5": {
 					"targetMap": 12345,
-					"targetX": 129,
+					"targetX": 1,
 					"targetY": 1,
 					"type": "warp"
 				}
@@ -2316,7 +2316,7 @@ com.aexoden.ff4.maps = function()
 			"3": {
 				"3": {
 					"targetMap": 12356,
-					"targetX": 130,
+					"targetX": 2,
 					"targetY": 4,
 					"type": "warp"
 				}
@@ -2355,7 +2355,7 @@ com.aexoden.ff4.maps = function()
 			"1": {
 				"6": {
 					"targetMap": 12346,
-					"targetX": 155,
+					"targetX": 27,
 					"targetY": 8,
 					"type": "warp"
 				},
@@ -2400,7 +2400,7 @@ com.aexoden.ff4.maps = function()
 			"6": {
 				"17": {
 					"targetMap": 12350,
-					"targetX": 136,
+					"targetX": 8,
 					"targetY": 6,
 					"type": "warp"
 				}
@@ -2408,7 +2408,7 @@ com.aexoden.ff4.maps = function()
 			"14": {
 				"2": {
 					"targetMap": 12324,
-					"targetX": 138,
+					"targetX": 10,
 					"targetY": 0,
 					"type": "warp"
 				}
@@ -2437,7 +2437,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"27": {
 					"targetMap": 12347,
-					"targetX": 158,
+					"targetX": 30,
 					"targetY": 4,
 					"type": "warp"
 				}
@@ -2504,7 +2504,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"9": {
 					"targetMap": 12355,
-					"targetX": 132,
+					"targetX": 4,
 					"targetY": 1,
 					"type": "warp"
 				}
@@ -2597,13 +2597,13 @@ com.aexoden.ff4.maps = function()
 			"2": {
 				"4": {
 					"targetMap": 12346,
-					"targetX": 131,
+					"targetX": 3,
 					"targetY": 4,
 					"type": "warp"
 				},
 				"10": {
 					"targetMap": 12288,
-					"targetX": 131,
+					"targetX": 3,
 					"targetY": 20,
 					"type": "warp"
 				}
@@ -2648,7 +2648,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"15": {
 					"targetMap": 12326,
-					"targetX": 143,
+					"targetX": 15,
 					"targetY": 15,
 					"type": "warp"
 				}
@@ -2672,13 +2672,13 @@ com.aexoden.ff4.maps = function()
 				},
 				"9": {
 					"targetMap": 12359,
-					"targetX": 139,
+					"targetX": 11,
 					"targetY": 4,
 					"type": "warp"
 				},
 				"16": {
 					"targetMap": 12326,
-					"targetX": 143,
+					"targetX": 15,
 					"targetY": 10,
 					"type": "warp"
 				}
@@ -2707,7 +2707,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"14": {
 					"targetMap": 12360,
-					"targetX": 132,
+					"targetX": 4,
 					"targetY": 1,
 					"type": "warp"
 				}
@@ -2781,7 +2781,7 @@ com.aexoden.ff4.maps = function()
 			"2": {
 				"10": {
 					"targetMap": 12326,
-					"targetX": 145,
+					"targetX": 17,
 					"targetY": 8,
 					"type": "warp"
 				}
@@ -2797,7 +2797,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"6": {
 					"targetMap": 12365,
-					"targetX": 129,
+					"targetX": 1,
 					"targetY": 4,
 					"type": "warp"
 				}
@@ -2814,7 +2814,7 @@ com.aexoden.ff4.maps = function()
 			"1": {
 				"6": {
 					"targetMap": 12366,
-					"targetX": 129,
+					"targetX": 1,
 					"targetY": 4,
 					"type": "warp"
 				}
@@ -2909,7 +2909,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"12": {
 					"targetMap": 12400,
-					"targetX": 130,
+					"targetX": 2,
 					"targetY": 18,
 					"type": "warp"
 				}
@@ -2919,7 +2919,7 @@ com.aexoden.ff4.maps = function()
 			"2": {
 				"10": {
 					"targetMap": 12327,
-					"targetX": 135,
+					"targetX": 7,
 					"targetY": 5,
 					"type": "warp"
 				}
@@ -2933,7 +2933,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"18": {
 					"targetMap": 12327,
-					"targetX": 144,
+					"targetX": 16,
 					"targetY": 11,
 					"type": "warp"
 				}
@@ -2941,7 +2941,7 @@ com.aexoden.ff4.maps = function()
 			"16": {
 				"10": {
 					"targetMap": 12327,
-					"targetX": 153,
+					"targetX": 25,
 					"targetY": 5,
 					"type": "warp"
 				}
@@ -2961,7 +2961,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"19": {
 					"targetMap": 12373,
-					"targetX": 137,
+					"targetX": 9,
 					"targetY": 2,
 					"type": "warp"
 				}
@@ -2991,7 +2991,7 @@ com.aexoden.ff4.maps = function()
 			"2": {
 				"3": {
 					"targetMap": 12378,
-					"targetX": 129,
+					"targetX": 1,
 					"targetY": 4,
 					"type": "warp"
 				}
@@ -2999,7 +2999,7 @@ com.aexoden.ff4.maps = function()
 			"4": {
 				"3": {
 					"targetMap": 12379,
-					"targetX": 131,
+					"targetX": 3,
 					"targetY": 5,
 					"type": "warp"
 				},
@@ -3031,7 +3031,7 @@ com.aexoden.ff4.maps = function()
 			"12": {
 				"4": {
 					"targetMap": 12381,
-					"targetX": 129,
+					"targetX": 1,
 					"targetY": 3,
 					"type": "warp"
 				}
@@ -3327,7 +3327,7 @@ com.aexoden.ff4.maps = function()
 			"0": {
 				"4": {
 					"targetMap": 12383,
-					"targetX": 129,
+					"targetX": 1,
 					"targetY": 3,
 					"type": "warp"
 				}
@@ -3340,7 +3340,7 @@ com.aexoden.ff4.maps = function()
 			"26": {
 				"4": {
 					"targetMap": 12383,
-					"targetX": 145,
+					"targetX": 17,
 					"targetY": 3,
 					"type": "warp"
 				}
@@ -3370,7 +3370,8 @@ com.aexoden.ff4.maps = function()
 			},
 			"11": {
 				"5": {
-					"contents": 449,
+					"contents": 448,
+					"reward": 33,
 					"treasure": "battle",
 					"type": "treasure"
 				}
@@ -3443,7 +3444,7 @@ com.aexoden.ff4.maps = function()
 			"11": {
 				"7": {
 					"targetMap": 12389,
-					"targetX": 200,
+					"targetX": 8,
 					"targetY": 3,
 					"type": "warp"
 				}
@@ -3490,14 +3491,15 @@ com.aexoden.ff4.maps = function()
 			"10": {
 				"5": {
 					"targetMap": 12387,
-					"targetX": 139,
+					"targetX": 11,
 					"targetY": 5,
 					"type": "warp"
 				}
 			},
 			"11": {
 				"5": {
-					"contents": 450,
+					"contents": 449,
+					"reward": 41,
 					"treasure": "battle",
 					"type": "treasure"
 				},
@@ -3525,7 +3527,8 @@ com.aexoden.ff4.maps = function()
 			},
 			"8": {
 				"12": {
-					"contents": 451,
+					"contents": 450,
+					"reward": 211,
 					"treasure": "battle",
 					"type": "treasure"
 				}
@@ -3686,7 +3689,7 @@ com.aexoden.ff4.maps = function()
 			"2": {
 				"12": {
 					"targetMap": 12372,
-					"targetX": 132,
+					"targetX": 4,
 					"targetY": 3,
 					"type": "warp"
 				},
@@ -3714,7 +3717,7 @@ com.aexoden.ff4.maps = function()
 			"16": {
 				"7": {
 					"targetMap": 12401,
-					"targetX": 151,
+					"targetX": 23,
 					"targetY": 9,
 					"type": "warp"
 				}
@@ -3729,7 +3732,7 @@ com.aexoden.ff4.maps = function()
 			"26": {
 				"29": {
 					"targetMap": 12399,
-					"targetX": 130,
+					"targetX": 2,
 					"targetY": 3,
 					"type": "warp"
 				}
@@ -3761,7 +3764,7 @@ com.aexoden.ff4.maps = function()
 			"23": {
 				"8": {
 					"targetMap": 12400,
-					"targetX": 144,
+					"targetX": 16,
 					"targetY": 8,
 					"type": "warp"
 				}
@@ -3786,7 +3789,7 @@ com.aexoden.ff4.maps = function()
 			"13": {
 				"27": {
 					"targetMap": 12401,
-					"targetX": 134,
+					"targetX": 6,
 					"targetY": 10,
 					"type": "warp"
 				}
@@ -3817,7 +3820,7 @@ com.aexoden.ff4.maps = function()
 			"10": {
 				"23": {
 					"targetMap": 12402,
-					"targetX": 135,
+					"targetX": 7,
 					"targetY": 11,
 					"type": "warp"
 				}
@@ -3864,7 +3867,7 @@ com.aexoden.ff4.maps = function()
 			"10": {
 				"11": {
 					"targetMap": 12406,
-					"targetX": 133,
+					"targetX": 5,
 					"targetY": 23,
 					"type": "warp"
 				}
@@ -3888,7 +3891,7 @@ com.aexoden.ff4.maps = function()
 			"5": {
 				"22": {
 					"targetMap": 12405,
-					"targetX": 138,
+					"targetX": 10,
 					"targetY": 12,
 					"type": "warp"
 				}
@@ -3968,7 +3971,7 @@ com.aexoden.ff4.maps = function()
 			"21": {
 				"28": {
 					"targetMap": 12408,
-					"targetX": 149,
+					"targetX": 21,
 					"targetY": 8,
 					"type": "warp"
 				}
@@ -3988,7 +3991,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"23": {
 					"targetMap": 12408,
-					"targetX": 155,
+					"targetX": 27,
 					"targetY": 3,
 					"type": "warp"
 				}
@@ -4005,7 +4008,7 @@ com.aexoden.ff4.maps = function()
 			"14": {
 				"29": {
 					"targetMap": 12409,
-					"targetX": 142,
+					"targetX": 14,
 					"targetY": 4,
 					"type": "warp"
 				}
@@ -4109,7 +4112,7 @@ com.aexoden.ff4.maps = function()
 			"8": {
 				"9": {
 					"targetMap": 12417,
-					"targetX": 212,
+					"targetX": 20,
 					"targetY": 10,
 					"type": "warp"
 				}
@@ -4129,7 +4132,7 @@ com.aexoden.ff4.maps = function()
 			"22": {
 				"7": {
 					"targetMap": 12415,
-					"targetX": 136,
+					"targetX": 8,
 					"targetY": 22,
 					"type": "warp"
 				}
@@ -4139,7 +4142,7 @@ com.aexoden.ff4.maps = function()
 			"8": {
 				"21": {
 					"targetMap": 12414,
-					"targetX": 150,
+					"targetX": 22,
 					"targetY": 8,
 					"type": "warp"
 				}
@@ -4147,7 +4150,7 @@ com.aexoden.ff4.maps = function()
 			"19": {
 				"9": {
 					"targetMap": 12416,
-					"targetX": 135,
+					"targetX": 7,
 					"targetY": 10,
 					"type": "warp"
 				}
@@ -4168,7 +4171,7 @@ com.aexoden.ff4.maps = function()
 			"7": {
 				"9": {
 					"targetMap": 12415,
-					"targetX": 147,
+					"targetX": 19,
 					"targetY": 10,
 					"type": "warp"
 				}
@@ -4207,7 +4210,7 @@ com.aexoden.ff4.maps = function()
 			"20": {
 				"9": {
 					"targetMap": 12414,
-					"targetX": 136,
+					"targetX": 8,
 					"targetY": 10,
 					"type": "warp"
 				}
@@ -4276,7 +4279,7 @@ com.aexoden.ff4.maps = function()
 			"19": {
 				"9": {
 					"targetMap": 12421,
-					"targetX": 138,
+					"targetX": 10,
 					"targetY": 24,
 					"type": "warp"
 				}
@@ -4316,7 +4319,7 @@ com.aexoden.ff4.maps = function()
 			"10": {
 				"23": {
 					"targetMap": 12420,
-					"targetX": 147,
+					"targetX": 19,
 					"targetY": 10,
 					"type": "warp"
 				}
@@ -4330,7 +4333,7 @@ com.aexoden.ff4.maps = function()
 			"21": {
 				"7": {
 					"targetMap": 12422,
-					"targetX": 151,
+					"targetX": 23,
 					"targetY": 23,
 					"type": "warp"
 				}
@@ -4347,7 +4350,7 @@ com.aexoden.ff4.maps = function()
 			"11": {
 				"7": {
 					"targetMap": 12423,
-					"targetX": 143,
+					"targetX": 15,
 					"targetY": 22,
 					"type": "warp"
 				}
@@ -4362,7 +4365,7 @@ com.aexoden.ff4.maps = function()
 			"23": {
 				"22": {
 					"targetMap": 12421,
-					"targetX": 149,
+					"targetX": 21,
 					"targetY": 8,
 					"type": "warp"
 				}
@@ -4390,7 +4393,7 @@ com.aexoden.ff4.maps = function()
 			"15": {
 				"21": {
 					"targetMap": 12422,
-					"targetX": 139,
+					"targetX": 11,
 					"targetY": 8,
 					"type": "warp"
 				},
@@ -4420,7 +4423,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"19": {
 					"targetMap": 12310,
-					"targetX": 142,
+					"targetX": 14,
 					"targetY": 1,
 					"type": "warp"
 				}
@@ -4434,7 +4437,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"11": {
 					"targetMap": 12291,
-					"targetX": 153,
+					"targetX": 25,
 					"targetY": 18,
 					"type": "warp"
 				}
@@ -4450,7 +4453,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"9": {
 					"targetMap": 12331,
-					"targetX": 142,
+					"targetX": 14,
 					"targetY": 3,
 					"type": "warp"
 				}
@@ -4464,7 +4467,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"9": {
 					"targetMap": 12331,
-					"targetX": 142,
+					"targetX": 14,
 					"targetY": 3,
 					"type": "warp"
 				}
@@ -4497,7 +4500,7 @@ com.aexoden.ff4.maps = function()
 			"6": {
 				"19": {
 					"targetMap": 12429,
-					"targetX": 155,
+					"targetX": 27,
 					"targetY": 26,
 					"type": "warp"
 				}
@@ -4521,7 +4524,7 @@ com.aexoden.ff4.maps = function()
 			"5": {
 				"10": {
 					"targetMap": 12431,
-					"targetX": 155,
+					"targetX": 27,
 					"targetY": 6,
 					"type": "warp"
 				}
@@ -4622,7 +4625,7 @@ com.aexoden.ff4.maps = function()
 			"5": {
 				"14": {
 					"targetMap": 12435,
-					"targetX": 150,
+					"targetX": 22,
 					"targetY": 27,
 					"type": "warp"
 				}
@@ -4694,7 +4697,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"14": {
 					"targetMap": 12288,
-					"targetX": 132,
+					"targetX": 4,
 					"targetY": 27,
 					"type": "warp"
 				}
@@ -4717,7 +4720,7 @@ com.aexoden.ff4.maps = function()
 			"26": {
 				"4": {
 					"targetMap": 12441,
-					"targetX": 154,
+					"targetX": 26,
 					"targetY": 5,
 					"type": "warp"
 				}
@@ -4727,14 +4730,15 @@ com.aexoden.ff4.maps = function()
 			"2": {
 				"13": {
 					"targetMap": 12442,
-					"targetX": 130,
+					"targetX": 2,
 					"targetY": 14,
 					"type": "warp"
 				}
 			},
 			"7": {
 				"15": {
-					"contents": 452,
+					"contents": 451,
+					"reward": 28,
 					"treasure": "battle",
 					"type": "treasure"
 				}
@@ -4749,7 +4753,7 @@ com.aexoden.ff4.maps = function()
 			"2": {
 				"7": {
 					"targetMap": 12444,
-					"targetX": 133,
+					"targetX": 5,
 					"targetY": 5,
 					"type": "warp"
 				},
@@ -4767,7 +4771,7 @@ com.aexoden.ff4.maps = function()
 			"8": {
 				"10": {
 					"targetMap": 12445,
-					"targetX": 136,
+					"targetX": 8,
 					"targetY": 9,
 					"type": "warp"
 				}
@@ -4775,7 +4779,7 @@ com.aexoden.ff4.maps = function()
 			"16": {
 				"7": {
 					"targetMap": 12445,
-					"targetX": 144,
+					"targetX": 16,
 					"targetY": 10,
 					"type": "warp"
 				}
@@ -4783,7 +4787,7 @@ com.aexoden.ff4.maps = function()
 			"22": {
 				"4": {
 					"targetMap": 12445,
-					"targetX": 150,
+					"targetX": 22,
 					"targetY": 7,
 					"type": "warp"
 				}
@@ -4791,7 +4795,7 @@ com.aexoden.ff4.maps = function()
 			"24": {
 				"15": {
 					"targetMap": 12445,
-					"targetX": 152,
+					"targetX": 24,
 					"targetY": 14,
 					"type": "warp"
 				}
@@ -4825,7 +4829,7 @@ com.aexoden.ff4.maps = function()
 			"15": {
 				"15": {
 					"targetMap": 12446,
-					"targetX": 135,
+					"targetX": 7,
 					"targetY": 16,
 					"type": "warp"
 				},
@@ -4935,7 +4939,7 @@ com.aexoden.ff4.maps = function()
 			"21": {
 				"19": {
 					"targetMap": 12456,
-					"targetX": 149,
+					"targetX": 21,
 					"targetY": 20,
 					"type": "warp"
 				}
@@ -4960,7 +4964,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"18": {
 					"targetMap": 12490,
-					"targetX": 150,
+					"targetX": 22,
 					"targetY": 3,
 					"type": "warp"
 				}
@@ -4970,14 +4974,15 @@ com.aexoden.ff4.maps = function()
 			"7": {
 				"19": {
 					"targetMap": 12457,
-					"targetX": 134,
+					"targetX": 6,
 					"targetY": 20,
 					"type": "warp"
 				}
 			},
 			"14": {
 				"20": {
-					"contents": 453,
+					"contents": 452,
+				"reward": 58,
 					"treasure": "battle",
 					"type": "treasure"
 				}
@@ -4985,7 +4990,7 @@ com.aexoden.ff4.maps = function()
 			"21": {
 				"19": {
 					"targetMap": 12455,
-					"targetX": 149,
+					"targetX": 21,
 					"targetY": 20,
 					"type": "warp"
 				}
@@ -5003,7 +5008,7 @@ com.aexoden.ff4.maps = function()
 			"6": {
 				"19": {
 					"targetMap": 12456,
-					"targetX": 135,
+					"targetX": 7,
 					"targetY": 20,
 					"type": "warp"
 				}
@@ -5011,7 +5016,7 @@ com.aexoden.ff4.maps = function()
 			"13": {
 				"25": {
 					"targetMap": 12458,
-					"targetX": 142,
+					"targetX": 14,
 					"targetY": 26,
 					"type": "warp"
 				}
@@ -5032,7 +5037,7 @@ com.aexoden.ff4.maps = function()
 			"24": {
 				"7": {
 					"targetMap": 12458,
-					"targetX": 151,
+					"targetX": 23,
 					"targetY": 8,
 					"type": "warp"
 				}
@@ -5042,7 +5047,7 @@ com.aexoden.ff4.maps = function()
 			"3": {
 				"7": {
 					"targetMap": 12457,
-					"targetX": 130,
+					"targetX": 2,
 					"targetY": 8,
 					"type": "warp"
 				}
@@ -5057,7 +5062,7 @@ com.aexoden.ff4.maps = function()
 			"14": {
 				"25": {
 					"targetMap": 12457,
-					"targetX": 141,
+					"targetX": 13,
 					"targetY": 26,
 					"type": "warp"
 				}
@@ -5065,7 +5070,7 @@ com.aexoden.ff4.maps = function()
 			"20": {
 				"7": {
 					"targetMap": 12460,
-					"targetX": 150,
+					"targetX": 22,
 					"targetY": 8,
 					"type": "warp"
 				}
@@ -5073,7 +5078,7 @@ com.aexoden.ff4.maps = function()
 			"23": {
 				"7": {
 					"targetMap": 12457,
-					"targetX": 152,
+					"targetX": 24,
 					"targetY": 8,
 					"type": "warp"
 				}
@@ -5093,7 +5098,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"23": {
 					"targetMap": 12460,
-					"targetX": 142,
+					"targetX": 14,
 					"targetY": 16,
 					"type": "warp"
 				}
@@ -5128,7 +5133,7 @@ com.aexoden.ff4.maps = function()
 			"22": {
 				"7": {
 					"targetMap": 12458,
-					"targetX": 148,
+					"targetX": 20,
 					"targetY": 8,
 					"type": "warp"
 				}
@@ -5160,7 +5165,7 @@ com.aexoden.ff4.maps = function()
 			"9": {
 				"7": {
 					"targetMap": 12470,
-					"targetX": 135,
+					"targetX": 7,
 					"targetY": 4,
 					"type": "warp"
 				}
@@ -5176,7 +5181,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"7": {
 					"targetMap": 12471,
-					"targetX": 142,
+					"targetX": 14,
 					"targetY": 3,
 					"type": "warp"
 				}
@@ -5237,7 +5242,7 @@ com.aexoden.ff4.maps = function()
 			"3": {
 				"4": {
 					"targetMap": 12474,
-					"targetX": 131,
+					"targetX": 3,
 					"targetY": 4,
 					"type": "warp"
 				}
@@ -5245,7 +5250,7 @@ com.aexoden.ff4.maps = function()
 			"17": {
 				"20": {
 					"targetMap": 12471,
-					"targetX": 146,
+					"targetX": 18,
 					"targetY": 9,
 					"type": "warp"
 				}
@@ -5269,14 +5274,15 @@ com.aexoden.ff4.maps = function()
 			"3": {
 				"4": {
 					"targetMap": 12473,
-					"targetX": 131,
+					"targetX": 3,
 					"targetY": 4,
 					"type": "warp"
 				}
 			},
 			"14": {
 				"21": {
-					"contents": 456,
+					"contents": 455,
+					"reward": 211,
 					"treasure": "battle",
 					"type": "treasure"
 				}
@@ -5314,7 +5320,7 @@ com.aexoden.ff4.maps = function()
 			"8": {
 				"18": {
 					"targetMap": 12476,
-					"targetX": 143,
+					"targetX": 15,
 					"targetY": 4,
 					"type": "warp"
 				}
@@ -5330,7 +5336,7 @@ com.aexoden.ff4.maps = function()
 			"3": {
 				"30": {
 					"targetMap": 12488,
-					"targetX": 155,
+					"targetX": 27,
 					"targetY": 3,
 					"type": "warp"
 				}
@@ -5426,7 +5432,7 @@ com.aexoden.ff4.maps = function()
 			"7": {
 				"30": {
 					"targetMap": 12488,
-					"targetX": 137,
+					"targetX": 9,
 					"targetY": 4,
 					"type": "warp"
 				}
@@ -5523,7 +5529,7 @@ com.aexoden.ff4.maps = function()
 			"3": {
 				"28": {
 					"targetMap": 12489,
-					"targetX": 134,
+					"targetX": 6,
 					"targetY": 9,
 					"type": "warp"
 				}
@@ -5531,7 +5537,7 @@ com.aexoden.ff4.maps = function()
 			"11": {
 				"27": {
 					"targetMap": 12489,
-					"targetX": 143,
+					"targetX": 15,
 					"targetY": 8,
 					"type": "warp"
 				}
@@ -5579,7 +5585,7 @@ com.aexoden.ff4.maps = function()
 			"26": {
 				"26": {
 					"targetMap": 12489,
-					"targetX": 153,
+					"targetX": 25,
 					"targetY": 4,
 					"type": "warp"
 				}
@@ -5615,7 +5621,8 @@ com.aexoden.ff4.maps = function()
 			},
 			"17": {
 				"5": {
-					"contents": 455,
+					"contents": 454,
+					"reward": 31,
 					"treasure": "battle",
 					"type": "treasure"
 				}
@@ -6023,7 +6030,7 @@ com.aexoden.ff4.maps = function()
 			"14": {
 				"5": {
 					"targetMap": 12547,
-					"targetX": 201,
+					"targetX": 9,
 					"targetY": 4,
 					"type": "warp"
 				}
@@ -6061,7 +6068,7 @@ com.aexoden.ff4.maps = function()
 			"6": {
 				"12": {
 					"targetMap": 12545,
-					"targetX": 147,
+					"targetX": 19,
 					"targetY": 10,
 					"type": "warp"
 				}
@@ -6069,7 +6076,7 @@ com.aexoden.ff4.maps = function()
 			"25": {
 				"12": {
 					"targetMap": 12545,
-					"targetX": 151,
+					"targetX": 23,
 					"targetY": 10,
 					"type": "warp"
 				}
@@ -6186,7 +6193,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"15": {
 					"targetMap": 12551,
-					"targetX": 143,
+					"targetX": 15,
 					"targetY": 20,
 					"type": "warp"
 				}
@@ -6220,7 +6227,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"15": {
 					"targetMap": 12552,
-					"targetX": 139,
+					"targetX": 11,
 					"targetY": 3,
 					"type": "warp"
 				}
@@ -6230,7 +6237,7 @@ com.aexoden.ff4.maps = function()
 			"1": {
 				"8": {
 					"targetMap": 12561,
-					"targetX": 144,
+					"targetX": 16,
 					"targetY": 3,
 					"type": "warp"
 				}
@@ -6279,7 +6286,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"8": {
 					"targetMap": 12558,
-					"targetX": 129,
+					"targetX": 1,
 					"targetY": 4,
 					"type": "warp"
 				}
@@ -6289,7 +6296,7 @@ com.aexoden.ff4.maps = function()
 			"2": {
 				"27": {
 					"targetMap": 12559,
-					"targetX": 221,
+					"targetX": 29,
 					"targetY": 5,
 					"type": "warp"
 				}
@@ -6311,7 +6318,7 @@ com.aexoden.ff4.maps = function()
 			"29": {
 				"9": {
 					"targetMap": 12554,
-					"targetX": 139,
+					"targetX": 11,
 					"targetY": 0,
 					"type": "warp"
 				},
@@ -6339,7 +6346,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"13": {
 					"targetMap": 12552,
-					"targetX": 149,
+					"targetX": 21,
 					"targetY": 6,
 					"type": "warp"
 				}
@@ -6373,7 +6380,7 @@ com.aexoden.ff4.maps = function()
 			"29": {
 				"5": {
 					"targetMap": 12555,
-					"targetX": 66,
+					"targetX": 2,
 					"targetY": 27,
 					"type": "warp"
 				}
@@ -6394,7 +6401,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"14": {
 					"targetMap": 12551,
-					"targetX": 151,
+					"targetX": 23,
 					"targetY": 9,
 					"type": "warp"
 				}
@@ -6402,7 +6409,7 @@ com.aexoden.ff4.maps = function()
 			"10": {
 				"10": {
 					"targetMap": 12558,
-					"targetX": 141,
+					"targetX": 13,
 					"targetY": 4,
 					"type": "warp"
 				}
@@ -6427,13 +6434,13 @@ com.aexoden.ff4.maps = function()
 			"16": {
 				"3": {
 					"targetMap": 12554,
-					"targetX": 65,
+					"targetX": 1,
 					"targetY": 8,
 					"type": "warp"
 				},
 				"12": {
 					"targetMap": 12552,
-					"targetX": 129,
+					"targetX": 1,
 					"targetY": 6,
 					"type": "warp"
 				}
@@ -6449,7 +6456,7 @@ com.aexoden.ff4.maps = function()
 			"9": {
 				"10": {
 					"targetMap": 12554,
-					"targetX": 134,
+					"targetX": 6,
 					"targetY": 8,
 					"type": "warp"
 				}
@@ -6459,7 +6466,7 @@ com.aexoden.ff4.maps = function()
 			"2": {
 				"10": {
 					"targetMap": 12561,
-					"targetX": 65,
+					"targetX": 1,
 					"targetY": 12,
 					"type": "warp"
 				}
@@ -6473,7 +6480,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"14": {
 					"targetMap": 12551,
-					"targetX": 135,
+					"targetX": 7,
 					"targetY": 9,
 					"type": "warp"
 				}
@@ -6494,7 +6501,8 @@ com.aexoden.ff4.maps = function()
 		"12565": {
 			"5": {
 				"4": {
-					"contents": 449,
+					"contents": 480,
+					"reward": 29,
 					"treasure": "battle",
 					"type": "treasure"
 				},
@@ -6506,7 +6514,8 @@ com.aexoden.ff4.maps = function()
 		"12566": {
 			"5": {
 				"4": {
-					"contents": 450,
+					"contents": 481,
+					"reward": 38,
 					"treasure": "battle",
 					"type": "treasure"
 				},
@@ -6518,7 +6527,8 @@ com.aexoden.ff4.maps = function()
 		"12567": {
 			"5": {
 				"4": {
-					"contents": 451,
+					"contents": 482,
+					"reward": 103,
 					"treasure": "battle",
 					"type": "treasure"
 				},
@@ -6530,7 +6540,8 @@ com.aexoden.ff4.maps = function()
 		"12568": {
 			"5": {
 				"4": {
-					"contents": 452,
+					"contents": 483,
+					"reward": 136,
 					"treasure": "battle",
 					"type": "treasure"
 				},
@@ -6608,7 +6619,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"7": {
 					"targetMap": 12570,
-					"targetX": 134,
+					"targetX": 6,
 					"targetY": 7,
 					"type": "warp"
 				}
@@ -6633,7 +6644,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"23": {
 					"targetMap": 12569,
-					"targetX": 134,
+					"targetX": 6,
 					"targetY": 7,
 					"type": "warp"
 				}
@@ -6643,7 +6654,7 @@ com.aexoden.ff4.maps = function()
 			"2": {
 				"20": {
 					"targetMap": 12574,
-					"targetX": 130,
+					"targetX": 2,
 					"targetY": 21,
 					"type": "warp"
 				}
@@ -6670,7 +6681,7 @@ com.aexoden.ff4.maps = function()
 			"10": {
 				"4": {
 					"targetMap": 12575,
-					"targetX": 138,
+					"targetX": 10,
 					"targetY": 5,
 					"type": "warp"
 				}
@@ -6731,7 +6742,7 @@ com.aexoden.ff4.maps = function()
 			"15": {
 				"4": {
 					"targetMap": 12578,
-					"targetX": 143,
+					"targetX": 15,
 					"targetY": 5,
 					"type": "warp"
 				},
@@ -6765,7 +6776,7 @@ com.aexoden.ff4.maps = function()
 			"15": {
 				"4": {
 					"targetMap": 12577,
-					"targetX": 143,
+					"targetX": 15,
 					"targetY": 5,
 					"type": "warp"
 				},
@@ -6779,7 +6790,7 @@ com.aexoden.ff4.maps = function()
 			"16": {
 				"13": {
 					"targetMap": 12579,
-					"targetX": 144,
+					"targetX": 16,
 					"targetY": 14,
 					"type": "warp"
 				}
@@ -6797,7 +6808,7 @@ com.aexoden.ff4.maps = function()
 			"12": {
 				"19": {
 					"targetMap": 12580,
-					"targetX": 140,
+					"targetX": 12,
 					"targetY": 20,
 					"type": "warp"
 				}
@@ -6819,7 +6830,7 @@ com.aexoden.ff4.maps = function()
 			"16": {
 				"13": {
 					"targetMap": 12578,
-					"targetX": 144,
+					"targetX": 16,
 					"targetY": 14,
 					"type": "warp"
 				}
@@ -6827,7 +6838,7 @@ com.aexoden.ff4.maps = function()
 			"20": {
 				"19": {
 					"targetMap": 12580,
-					"targetX": 148,
+					"targetX": 20,
 					"targetY": 20,
 					"type": "warp"
 				}
@@ -6844,7 +6855,7 @@ com.aexoden.ff4.maps = function()
 			"3": {
 				"8": {
 					"targetMap": 12581,
-					"targetX": 131,
+					"targetX": 3,
 					"targetY": 9,
 					"type": "warp"
 				}
@@ -6860,7 +6871,7 @@ com.aexoden.ff4.maps = function()
 			"12": {
 				"19": {
 					"targetMap": 12579,
-					"targetX": 140,
+					"targetX": 12,
 					"targetY": 20,
 					"type": "warp"
 				}
@@ -6911,7 +6922,7 @@ com.aexoden.ff4.maps = function()
 			"3": {
 				"8": {
 					"targetMap": 12580,
-					"targetX": 131,
+					"targetX": 3,
 					"targetY": 9,
 					"type": "warp"
 				}
@@ -6934,7 +6945,7 @@ com.aexoden.ff4.maps = function()
 			"25": {
 				"5": {
 					"targetMap": 12582,
-					"targetX": 153,
+					"targetX": 25,
 					"targetY": 6,
 					"type": "warp"
 				}
@@ -6956,7 +6967,7 @@ com.aexoden.ff4.maps = function()
 			"14": {
 				"4": {
 					"targetMap": 12583,
-					"targetX": 142,
+					"targetX": 14,
 					"targetY": 5,
 					"type": "warp"
 				}
@@ -7003,7 +7014,7 @@ com.aexoden.ff4.maps = function()
 			"29": {
 				"16": {
 					"targetMap": 12584,
-					"targetX": 157,
+					"targetX": 29,
 					"targetY": 17,
 					"type": "warp"
 				}
@@ -7092,7 +7103,7 @@ com.aexoden.ff4.maps = function()
 			"3": {
 				"17": {
 					"targetMap": 12599,
-					"targetX": 132,
+					"targetX": 4,
 					"targetY": 19,
 					"type": "warp"
 				}
@@ -7151,7 +7162,7 @@ com.aexoden.ff4.maps = function()
 			"28": {
 				"16": {
 					"targetMap": 12600,
-					"targetX": 139,
+					"targetX": 11,
 					"targetY": 2,
 					"type": "warp"
 				}
@@ -7191,7 +7202,8 @@ com.aexoden.ff4.maps = function()
 			},
 			"18": {
 				"6": {
-					"contents": 453,
+					"contents": 484,
+					"reward": 30,
 					"treasure": "battle",
 					"type": "treasure"
 				},
@@ -7514,7 +7526,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"29": {
 					"targetMap": 12614,
-					"targetX": 134,
+					"targetX": 6,
 					"targetY": 27,
 					"type": "warp"
 				}
@@ -7537,7 +7549,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"19": {
 					"targetMap": 12614,
-					"targetX": 145,
+					"targetX": 17,
 					"targetY": 18,
 					"type": "warp"
 				},
@@ -7569,7 +7581,7 @@ com.aexoden.ff4.maps = function()
 			"4": {
 				"8": {
 					"targetMap": 12615,
-					"targetX": 133,
+					"targetX": 5,
 					"targetY": 7,
 					"type": "warp"
 				},
@@ -7587,13 +7599,14 @@ com.aexoden.ff4.maps = function()
 			},
 			"11": {
 				"6": {
-					"contents": 454,
+					"contents": 485,
+					"reward": 50,
 					"treasure": "battle",
 					"type": "treasure"
 				},
 				"15": {
 					"targetMap": 12615,
-					"targetX": 141,
+					"targetX": 13,
 					"targetY": 12,
 					"type": "warp"
 				}
@@ -7658,7 +7671,7 @@ com.aexoden.ff4.maps = function()
 			"28": {
 				"29": {
 					"targetMap": 12615,
-					"targetX": 93,
+					"targetX": 29,
 					"targetY": 28,
 					"type": "warp"
 				}
@@ -7722,7 +7735,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"8": {
 					"targetMap": 12616,
-					"targetX": 66,
+					"targetX": 2,
 					"targetY": 6,
 					"type": "warp"
 				}
@@ -7739,36 +7752,42 @@ com.aexoden.ff4.maps = function()
 		"12616": {
 			"7": {
 				"5": {
-					"contents": 455,
+					"contents": 486,
+					"reward": 211,
 					"treasure": "battle",
 					"type": "treasure"
 				},
 				"7": {
-					"contents": 456,
+					"contents": 487,
+					"reward": 67,
 					"treasure": "battle",
 					"type": "treasure"
 				}
 			},
 			"9": {
 				"5": {
-					"contents": 455,
+					"contents": 486,
+					"reward": 211,
 					"treasure": "battle",
 					"type": "treasure"
 				},
 				"7": {
-					"contents": 457,
+					"contents": 488,
+					"reward": 76,
 					"treasure": "battle",
 					"type": "treasure"
 				}
 			},
 			"11": {
 				"5": {
-					"contents": 455,
+					"contents": 486,
+					"reward": 211,
 					"treasure": "battle",
 					"type": "treasure"
 				},
 				"7": {
-					"contents": 458,
+					"contents": 489,
+					"reward": 94,
 					"treasure": "battle",
 					"type": "treasure"
 				}
@@ -7923,7 +7942,7 @@ com.aexoden.ff4.maps = function()
 			"14": {
 				"13": {
 					"targetMap": 12621,
-					"targetX": 148,
+					"targetX": 20,
 					"targetY": 21,
 					"type": "warp"
 				}
@@ -8096,7 +8115,7 @@ com.aexoden.ff4.maps = function()
 			"2": {
 				"14": {
 					"targetMap": 12627,
-					"targetX": 135,
+					"targetX": 7,
 					"targetY": 4,
 					"type": "warp"
 				}
@@ -8123,7 +8142,7 @@ com.aexoden.ff4.maps = function()
 			"7": {
 				"21": {
 					"targetMap": 12630,
-					"targetX": 134,
+					"targetX": 6,
 					"targetY": 4,
 					"type": "warp"
 				}
@@ -8172,7 +8191,7 @@ com.aexoden.ff4.maps = function()
 			"6": {
 				"13": {
 					"targetMap": 12626,
-					"targetX": 132,
+					"targetX": 4,
 					"targetY": 7,
 					"type": "warp"
 				}
@@ -8231,7 +8250,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"11": {
 					"targetMap": 12631,
-					"targetX": 143,
+					"targetX": 15,
 					"targetY": 22,
 					"type": "warp"
 				}
@@ -8250,7 +8269,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"18": {
 					"targetMap": 12629,
-					"targetX": 143,
+					"targetX": 15,
 					"targetY": 4,
 					"type": "warp"
 				}
@@ -8306,7 +8325,7 @@ com.aexoden.ff4.maps = function()
 			"23": {
 				"26": {
 					"targetMap": 12635,
-					"targetX": 153,
+					"targetX": 25,
 					"targetY": 28,
 					"type": "warp"
 				}
@@ -8336,7 +8355,7 @@ com.aexoden.ff4.maps = function()
 			"20": {
 				"6": {
 					"targetMap": 12636,
-					"targetX": 153,
+					"targetX": 25,
 					"targetY": 11,
 					"type": "warp"
 				}
@@ -8430,7 +8449,8 @@ com.aexoden.ff4.maps = function()
 			},
 			"26": {
 				"22": {
-					"contents": 459,
+					"contents": 490,
+					"reward": 211,
 					"treasure": "battle",
 					"type": "treasure"
 				}
@@ -8484,7 +8504,8 @@ com.aexoden.ff4.maps = function()
 					"type": "warp"
 				},
 				"24": {
-					"contents": 460,
+					"contents": 491,
+					"reward": 155,
 					"treasure": "battle",
 					"type": "treasure"
 				}
@@ -8497,7 +8518,7 @@ com.aexoden.ff4.maps = function()
 			"16": {
 				"24": {
 					"targetMap": 12648,
-					"targetX": 147,
+					"targetX": 19,
 					"targetY": 25,
 					"type": "warp"
 				}
@@ -8505,7 +8526,7 @@ com.aexoden.ff4.maps = function()
 			"24": {
 				"17": {
 					"targetMap": 12648,
-					"targetX": 154,
+					"targetX": 26,
 					"targetY": 20,
 					"type": "warp"
 				},
@@ -8518,7 +8539,7 @@ com.aexoden.ff4.maps = function()
 			"4": {
 				"26": {
 					"targetMap": 12649,
-					"targetX": 132,
+					"targetX": 4,
 					"targetY": 27,
 					"type": "warp"
 				}
@@ -8538,7 +8559,7 @@ com.aexoden.ff4.maps = function()
 			"15": {
 				"4": {
 					"targetMap": 12649,
-					"targetX": 143,
+					"targetX": 15,
 					"targetY": 5,
 					"type": "warp"
 				}
@@ -8551,7 +8572,7 @@ com.aexoden.ff4.maps = function()
 			"22": {
 				"19": {
 					"targetMap": 12648,
-					"targetX": 206,
+					"targetX": 14,
 					"targetY": 15,
 					"type": "warp"
 				}
@@ -8565,7 +8586,8 @@ com.aexoden.ff4.maps = function()
 			},
 			"26": {
 				"12": {
-					"contents": 461,
+					"contents": 492,
+					"reward": 20,
 					"treasure": "battle",
 					"type": "treasure"
 				},
@@ -8595,7 +8617,7 @@ com.aexoden.ff4.maps = function()
 			"16": {
 				"15": {
 					"targetMap": 12650,
-					"targetX": 137,
+					"targetX": 9,
 					"targetY": 7,
 					"type": "warp"
 				}
@@ -8618,7 +8640,8 @@ com.aexoden.ff4.maps = function()
 		"12650": {
 			"6": {
 				"24": {
-					"contents": 468,
+					"contents": 499,
+					"reward": 13,
 					"treasure": "battle",
 					"type": "treasure"
 				}
@@ -8644,7 +8667,7 @@ com.aexoden.ff4.maps = function()
 			"16": {
 				"31": {
 					"targetMap": 12651,
-					"targetX": 144,
+					"targetX": 16,
 					"targetY": 2,
 					"type": "warp"
 				}
@@ -8668,7 +8691,8 @@ com.aexoden.ff4.maps = function()
 		"12651": {
 			"1": {
 				"15": {
-					"contents": 469,
+					"contents": 500,
+					"reward": 174,
 					"treasure": "battle",
 					"type": "treasure"
 				},
@@ -8679,21 +8703,23 @@ com.aexoden.ff4.maps = function()
 			"3": {
 				"6": {
 					"targetMap": 12664,
-					"targetX": 131,
+					"targetX": 3,
 					"targetY": 4,
 					"type": "warp"
 				}
 			},
 			"5": {
 				"20": {
-					"contents": 467,
+					"contents": 498,
+					"reward": 118,
 					"treasure": "battle",
 					"type": "treasure"
 				}
 			},
 			"7": {
 				"9": {
-					"contents": 463,
+					"contents": 494,
+					"reward": 108,
 					"treasure": "battle",
 					"type": "treasure"
 				}
@@ -8733,7 +8759,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"31": {
 					"targetMap": 12652,
-					"targetX": 148,
+					"targetX": 20,
 					"targetY": 1,
 					"type": "warp"
 				}
@@ -8753,14 +8779,16 @@ com.aexoden.ff4.maps = function()
 			},
 			"26": {
 				"11": {
-					"contents": 465,
+					"contents": 496,
+					"reward": 140,
 					"treasure": "battle",
 					"type": "treasure"
 				}
 			},
 			"27": {
 				"16": {
-					"contents": 466,
+					"contents": 497,
+					"reward": 166,
 					"treasure": "battle",
 					"type": "treasure"
 				}
@@ -8788,7 +8816,7 @@ com.aexoden.ff4.maps = function()
 			"8": {
 				"8": {
 					"targetMap": 12652,
-					"targetX": 136,
+					"targetX": 8,
 					"targetY": 20,
 					"type": "warp"
 				},
@@ -8856,7 +8884,7 @@ com.aexoden.ff4.maps = function()
 			"17": {
 				"7": {
 					"targetMap": 12654,
-					"targetX": 145,
+					"targetX": 17,
 					"targetY": 8,
 					"type": "warp"
 				}
@@ -8892,7 +8920,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"19": {
 					"targetMap": 12655,
-					"targetX": 143,
+					"targetX": 15,
 					"targetY": 8,
 					"type": "warp"
 				}
@@ -8921,7 +8949,7 @@ com.aexoden.ff4.maps = function()
 			"22": {
 				"23": {
 					"targetMap": 12656,
-					"targetX": 149,
+					"targetX": 21,
 					"targetY": 7,
 					"type": "warp"
 				}
@@ -8943,7 +8971,7 @@ com.aexoden.ff4.maps = function()
 			"23": {
 				"24": {
 					"targetMap": 12657,
-					"targetX": 217,
+					"targetX": 25,
 					"targetY": 8,
 					"type": "warp"
 				}
@@ -9005,7 +9033,7 @@ com.aexoden.ff4.maps = function()
 			"6": {
 				"13": {
 					"targetMap": 12650,
-					"targetX": 138,
+					"targetX": 10,
 					"targetY": 21,
 					"type": "warp"
 				}
@@ -9039,7 +9067,7 @@ com.aexoden.ff4.maps = function()
 			"20": {
 				"21": {
 					"targetMap": 12651,
-					"targetX": 148,
+					"targetX": 20,
 					"targetY": 15,
 					"type": "warp"
 				}
@@ -9047,7 +9075,7 @@ com.aexoden.ff4.maps = function()
 			"22": {
 				"7": {
 					"targetMap": 12651,
-					"targetX": 150,
+					"targetX": 22,
 					"targetY": 22,
 					"type": "warp"
 				}
@@ -9064,7 +9092,7 @@ com.aexoden.ff4.maps = function()
 			"6": {
 				"3": {
 					"targetMap": 12651,
-					"targetX": 142,
+					"targetX": 14,
 					"targetY": 28,
 					"type": "warp"
 				}
@@ -9096,7 +9124,7 @@ com.aexoden.ff4.maps = function()
 				},
 				"11": {
 					"targetMap": 12651,
-					"targetX": 147,
+					"targetX": 19,
 					"targetY": 9,
 					"type": "warp"
 				}
@@ -9105,7 +9133,8 @@ com.aexoden.ff4.maps = function()
 		"12665": {
 			"2": {
 				"4": {
-					"contents": 462,
+					"contents": 493,
+					"reward": 149,
 					"treasure": "battle",
 					"type": "treasure"
 				}
@@ -9118,7 +9147,7 @@ com.aexoden.ff4.maps = function()
 			"10": {
 				"4": {
 					"targetMap": 12653,
-					"targetX": 131,
+					"targetX": 3,
 					"targetY": 8,
 					"type": "warp"
 				}
@@ -9163,7 +9192,696 @@ com.aexoden.ff4.maps = function()
 				}
 			}
 		}
-	}
+	};
+
+	var EVENTS = {
+		0x01: 'Open a Door',
+		0x02: 'No Event (Cut Content?)',
+		0x03: 'Baigan Battle',
+		0x04: 'Rosa Greeting Cecil',
+		0x05: 'Prologue',
+		0x06: 'Take Serpent Road to Mysidia',
+		0x07: 'Sealed with Unknown Power',
+		0x08: 'Odin Battle',
+		0x09: 'Misty Cave Message 1',
+		0x0A: 'Misty Cave Message 2',
+		0x0B: 'D.Mist Battle',
+		0x0C: 'Mist Events',
+		0x0D: 'Kaipo Events, Rydia Joining',
+		0x0E: 'Waterfalls Jump',
+		0x0F: 'Octomamm Battle',
+		0x10: 'Damcyan Bombing',
+		0x11: 'Tellah Raging, Edward Joining',
+		0x12: 'Antlion Battle',
+		0x13: 'Rydia Learns Fire1',
+		0x14: 'Yang Joins, MomBomb Battle',
+		0x15: 'Fabul Gauntlet',
+		0x16: 'Cid Greeting Cecil',
+		0x17: 'Watery Pass Camping Scene',
+		0x18: 'Open a Remote Door',
+		0x19: 'Fabul Strategy Meeting',
+		0x1A: 'Palom Extinguishes a Fire',
+		0x1B: 'Tellah Joins on Mt.Ordeals',
+		0x1C: 'Mt.Ordeals Summit Message 1',
+		0x1D: 'Mt.Ordeals Summit Message 2',
+		0x1E: 'Milon Battle',
+		0x1F: 'Cecil Becomes a Paladin, Tellah Remembers',
+		0x20: 'Take Serpent Road to Baron',
+		0x21: 'Milon Z. Battle',
+		0x22: 'Warp to Castle Baron 3F Bottom',
+		0x23: 'Warp to Castle Baron 3F Top',
+		0x24: 'Finding Edward in Toroia',
+		0x25: 'Conversation Exiting Watery Pass-North',
+		0x26: 'Magus Sisters Battle',
+		0x27: 'Tellah Dies, Kain and Rosa Join',
+		0x28: 'Valvalis Battle',
+		0x29: 'Finding Rosa Sick in Bed',
+		0x2A: 'Cave Magnes Entrance Message',
+		0x2B: 'Fabul Boat',
+		0x2C: 'Talking to Clerics with Earth Crystal',
+		0x2E: 'Warp to Castle Baron B1F',
+		0x30: 'Various Giott Events',
+		0x31: 'Exit the Tower of Zot',
+		0x32: 'Resting in King of Fabul\'s Bed',
+		0x33: 'Dr. Lugae Battles',
+		0x34: 'Super Cannon Destruction, Yang Leaves',
+		0x35: 'Jump from Tower of Bab-il',
+		0x36: 'Bab-il and Tank Combat',
+		0x37: 'Was it Flame? Edge Gets Shown How...',
+		0x38: 'Ninja into Bab-il',
+		0x39: 'Ninja Out of Bab-il',
+		0x3A: 'K.Eblan/Q.Eblan Battle',
+		0x3B: 'Fall to Lower Bab-il',
+		0x3C: 'Warp to Mysidia Room of Wishes',
+		0x3E: 'Finding the Falcon',
+		0x3F: 'Cid Meets Edge, Falcon Gets Heat Shield',
+		0x40: 'Land of Monsters Dialogue',
+		0x41: 'Climbing a Rope Down',
+		0x42: 'Climbing a Rope Up',
+		0x43: 'Climbing a Long Rope to Nowhere and Returning',
+		0x44: 'Climbing a Long Rope Down',
+		0x45: 'Climbing a Long Rope Up',
+		0x46: 'Climbing a Short Rope to Nowhere and Returning',
+		0x47: 'EvilWall Battle',
+		0x48: 'Kain Steals the Darkness Crystal',
+		0x49: 'Big Whale Surfacing',
+		0x4A: 'FuSoYa Joins',
+		0x4B: 'Restore HP',
+		0x4C: 'Restore MP',
+		0x4D: 'Warp to Lunar Subterrane',
+		0x4F: 'Elements Battle',
+		0x50: 'Obtaining Ribbon',
+		0x51: 'CPU Battle',
+		0x53: 'Resting for Free',
+		0x55: 'Zeromus Battle, Ending',
+		0x56: 'Cave Bahamut Behemoth Battle 1',
+		0x57: 'Cave Bahamut Behemoth Battle 3',
+		0x58: 'Warp to Tower of Bab-il 1F',
+		0x59: 'Cave Bahamut Behemoth Battle 2',
+	};
+
+	var EVENTWARPS = {
+		0x06: {
+			targetMap: 0x3089,
+			targetX: 4,
+			targetY: 5
+		},
+		0x20: {
+			targetMap: 0x3097,
+			targetX: 5,
+			targetY: 5
+		},
+		0x22: {
+			targetMap: 0x308A,
+			targetX: 23,
+			targetY: 6
+		},
+		0x23: {
+			targetMap: 0x308A,
+			targetX: 23,
+			targetY: 3
+		},
+		0x2E: {
+			targetMap: 0x303C,
+			targetX: 14,
+			targetY: 3
+		},
+		0x3B: {
+			targetMap: 0x311D,
+			targetX: 6,
+			targetY: 4
+		},
+		0x3C: {
+			targetMap: 0x3017,
+			targetX: 5,
+			targetY: 12
+		},
+		0x4D: {
+			targetMap: 0x3167,
+			targetX: 13,
+			targetY: 13
+		},
+		0x58: {
+			targetMap: 0x3121,
+			targetX: 15,
+			targetY: 24
+		},
+	};
+
+	var FORMATIONS = {
+		0x1C0: 'Staleman x1, Skull x4',
+		0x1C1: 'BlackCat x2, Lamia x1',
+		0x1C2: 'Mad Ogre x3',
+		0x1C3: 'FlameDog x1',
+		0x1C4: 'Mad Ogre x4',
+		0x1C6: 'Staleman x2',
+		0x1C7: 'Last Arm x1',
+		0x1E0: 'Alert (summons Chimera) x1',
+		0x1E1: 'Alert (summons Stoneman) x1',
+		0x1E2: 'Alert (summons Naga) x1',
+		0x1E3: 'Alert (summons FlameDog) x1',
+		0x1E4: 'Warrior x5',
+		0x1E5: 'ToadLady x1, TinyToad x6',
+		0x1E6: 'Ghost x6',
+		0x1E7: 'DarkTree x2, Molbol x2',
+		0x1E8: 'Molbol x2',
+		0x1E9: 'Centpede x2',
+		0x1EA: 'Procyote x2, Juclyote x2',
+		0x1EB: 'RedGiant x2',
+		0x1EC: 'Warlock x2, Kary x2',
+		0x1ED: 'Warlock x1, Kary x3',
+		0x1EE: 'Red D. x1, Blue D. x1',
+		0x1EF: 'Blue D. x2',
+		0x1F0: 'Behemoth x1',
+		0x1F1: 'Red D. x2',
+		0x1F2: 'D.Fossil x1, Warlock x1',
+		0x1F3: 'Behemoth x1',
+		0x1F4: 'Behemoth x1',
+	};
+
+	var ITEMS = {
+		0x01: 'FireClaw',
+		0x02: 'IceClaw',
+		0x03: 'Thunder (claw)',
+		0x04: 'Charm (claw)',
+		0x05: 'Poison (claw)',
+		0x06: 'CatClaw',
+		0x07: 'Rod',
+		0x08: 'IceRod',
+		0x09: 'FlameRod',
+		0x0A: 'Thunder (rod)',
+		0x0B: 'Change (rod)',
+		0x0C: 'Charm (rod)',
+		0x0D: 'Stardust (rod)',
+		0x0E: 'Lilith (rod)',
+		0x0F: 'Staff',
+		0x10: 'Cure (staff)',
+		0x11: 'Silver (staff)',
+		0x12: 'Power (staff)',
+		0x13: 'Lunar (staff)',
+		0x14: 'Life (staff)',
+		0x15: 'Silence (staff)',
+		0x16: 'Shadow (sword)',
+		0x17: 'Darkness (sword)',
+		0x18: 'Black (sword)',
+		0x19: 'Legend',
+		0x1A: 'Light',
+		0x1B: 'Excalbur',
+		0x1C: 'Fire (sword)',
+		0x1D: 'IceBrand',
+		0x1E: 'Defense',
+		0x1F: 'Drain (sword)',
+		0x20: 'Ancient',
+		0x21: 'Sleep (sword)',
+		0x22: 'Medusa',
+		0x23: 'Spear',
+		0x24: 'Wind (spear)',
+		0x25: 'Flame (spear)',
+		0x26: 'Blizzard (spear)',
+		0x27: 'Dragoon (spear)',
+		0x28: 'White (spear)',
+		0x29: 'Drain (spear)',
+		0x2A: 'Gungnir',
+		0x2B: 'Short',
+		0x2C: 'Middle',
+		0x2D: 'Long',
+		0x2E: 'Ninja (sword)',
+		0x2F: 'Murasame',
+		0x30: 'Masamune',
+		0x31: 'Assassin (dagger)',
+		0x32: 'Mute (dagger)',
+		0x33: 'Whip',
+		0x34: 'Chain (whip)',
+		0x35: 'Blitz (whip)',
+		0x36: 'Flame (whip)',
+		0x37: 'Dragon (whip)',
+		0x38: 'HandAxe',
+		0x39: 'Dwarf (axe)',
+		0x3A: 'Ogre (axe)',
+		0x3B: 'Silver (dagger)',
+		0x3C: 'Dancing (dagger)',
+		0x3D: 'Silver (sword)',
+		0x3E: 'Spoon',
+		0x3F: 'Crystal (sword)',
+		0x40: 'Shuriken',
+		0x41: 'Ninja (star)',
+		0x42: 'Boomrang',
+		0x43: 'FullMoon',
+		0x44: 'Dreamer',
+		0x45: 'Charm (harp)',
+		0x47: 'Poison (axe)',
+		0x48: 'RuneAxe',
+		0x49: 'Silver (hammer)',
+		0x4A: 'Earth (hammer)',
+		0x4B: 'Wooden (hammer)',
+		0x4C: 'Avenger',
+		0x4D: 'ShortBow',
+		0x4E: 'CrossBow',
+		0x4F: 'GreatBow',
+		0x50: 'Archer',
+		0x51: 'ElvenBow',
+		0x52: 'Samurai (bow)',
+		0x53: 'Artemis (bow)',
+		0x54: 'Iron (arrow)',
+		0x55: 'White (arrow)',
+		0x56: 'Fire (arrow)',
+		0x57: 'Ice (arrow)',
+		0x58: 'Lit (arrow)',
+		0x59: 'Darkness (arrow)',
+		0x5A: 'Poison (arrow)',
+		0x5B: 'Mute (arrow)',
+		0x5C: 'Charm (arrow)',
+		0x5D: 'Samurai (arrow)',
+		0x5E: 'Medusa (arrow)',
+		0x5F: 'Artemis (arrow)',
+		0x61: 'Iron (shield)',
+		0x62: 'Shadow (shield)',
+		0x63: 'Black (shield)',
+		0x64: 'Paladin (shield)',
+		0x65: 'Silver (shield)',
+		0x66: 'Fire (shield)',
+		0x67: 'Ice (shield)',
+		0x68: 'Diamond (shield)',
+		0x69: 'Aegis (shield)',
+		0x6A: 'Samurai (shield)',
+		0x6B: 'Dragoon (shield)',
+		0x6C: 'Crystal (shield)',
+		0x6D: 'Iron (helm)',
+		0x6E: 'Shadow (helm)',
+		0x6F: 'Darkness (helm)',
+		0x70: 'Black (helm)',
+		0x71: 'Paladin (helm)',
+		0x72: 'Silver (helm)',
+		0x73: 'Diamond (helm)',
+		0x74: 'Samurai (helm)',
+		0x75: 'Dragoon (helm)',
+		0x76: 'Crystal (helm)',
+		0x77: 'Cap',
+		0x78: 'Leather (helm)',
+		0x79: 'Gaea (helm)',
+		0x7A: 'Wizard (helm)',
+		0x7B: 'Tiara',
+		0x7C: 'Ribbon',
+		0x7D: 'Headband',
+		0x7E: 'Bandanna',
+		0x7F: 'Ninja (helm)',
+		0x80: 'Glass',
+		0x81: 'Iron (armor)',
+		0x82: 'Shadow (armor)',
+		0x83: 'Darkness (armor)',
+		0x84: 'Black (armor)',
+		0x85: 'Paladin (armor)',
+		0x86: 'Silver (armor)',
+		0x87: 'Fire (armor)',
+		0x88: 'Ice (armor)',
+		0x89: 'Diamond (armor)',
+		0x8A: 'Genji (armor)',
+		0x8B: 'Dragoon (armor)',
+		0x8C: 'Crystal (armor)',
+		0x8D: 'Cloth',
+		0x8E: 'Leather (robe)',
+		0x8F: 'Gaea (robe)',
+		0x90: 'Wizard (robe)',
+		0x91: 'Black (robe)',
+		0x92: 'Sorceror (robe)',
+		0x93: 'White (robe)',
+		0x94: 'Power (robe)',
+		0x95: 'Heroine (robe)',
+		0x96: 'Prisoner',
+		0x97: 'Bard',
+		0x98: 'Karate',
+		0x99: 'Bl.Belt',
+		0x9A: 'Adamant (armor)',
+		0x9B: 'Ninja (armor)',
+		0x9C: 'Iron (gauntlet)',
+		0x9D: 'Shadow (gauntlet)',
+		0x9E: 'Darkness (gauntlet)',
+		0x9F: 'Black (gauntlet)',
+		0xA0: 'Paladin (gauntlet)',
+		0xA1: 'Silver (gauntlet)',
+		0xA2: 'Diamond (gauntlet)',
+		0xA3: 'Zeus',
+		0xA4: 'Samurai (gauntlet)',
+		0xA5: 'Dragoon (gauntlet)',
+		0xA6: 'Crystal (gauntlet)',
+		0xA7: 'IronRing',
+		0xA8: 'RubyRing',
+		0xA9: 'Silver (ring)',
+		0xAA: 'Strength (ring)',
+		0xAB: 'Rune (ring)',
+		0xAC: 'Crystal (ring)',
+		0xAD: 'Diamond (ring)',
+		0xAE: 'Protect',
+		0xAF: 'Cursed',
+		0xCE: 'Cure1',
+		0xCF: 'Cure2',
+		0xD0: 'Cure3',
+		0xD1: 'Ether1',
+		0xD2: 'Ether2',
+		0xD3: 'Elixir',
+		0xD4: 'Life',
+		0xDD: 'Heal',
+		0xE2: 'Tent',
+		0xE3: 'Cabin',
+		0xEB: 'Carrot',
+		0xED: 'Whistle',
+	};
+
+	var MAPS = {
+		0x0000: "Overworld",
+		0x1000: "Underworld",
+		0x2000: "Moon",
+		0x3000: "Town of Baron",
+		0x3001: "Village Mist",
+		0x3002: "Kaipo",
+		0x3003: "Mysidia",
+		0x3004: "Silvera",
+		0x3005: "Town of Toroia",
+		0x3006: "Agart",
+		0x3007: "Town of Toroia Inn",
+		0x3008: "Town of Toroia Weapon Shop",
+		0x3009: "Town of Toroia Armor Shop",
+		0x300A: "Town of Toroia Item Shop",
+		0x300B: "Town of Baron Inn",
+		0x300C: "Town of Baron Weapon Shop",
+		0x300D: "Town of Baron House (Cid)",
+		0x300E: "Town of Baron House (Rosa)",
+		0x300F: "Village Mist House",
+		0x3010: "Kaipo Inn",
+		0x3011: "Kaipo Cafe",
+		0x3012: "Kaipo House",
+		0x3013: "Mysidia Cafe",
+		0x3014: "Mysidia Inn",
+		0x3015: "Mt.Ordeals Tomb",
+		0x3016: "Mysidia House of Wishes",
+		0x3017: "Mysidia Room of Wishes",
+		0x3018: "Town of Toroia Cafe 1F",
+		0x3019: "Town of Toroia Cafe 2F",
+		0x301A: "Town of Toroia Cafe Saloon KING",
+		0x301C: "Town of Toroia Black Chocobo Farm",
+		0x301D: "Town of Toroia Black Chocobo Farm Basement",
+		0x301E: "Agart Astro Tower",
+		0x301F: "Agart Astro Tower Observatory",
+		0x3020: "Agart Inn",
+		0x3021: "Chocobo's Village",
+		0x3024: "Castle Baron",
+		0x3025: "Damcyan",
+		0x3026: "Fabul",
+		0x3027: "Toroian Castle",
+		0x3028: "Eblan",
+		0x302A: "Castle Baron 1F",
+		0x302B: "Castle Baron 2F",
+		0x302C: "Castle Baron King's Room",
+		0x302D: "Castle Baron Left Passage",
+		0x302E: "Castle Baron Right Passage",
+		0x302F: "Castle Baron Dungeon Antechamber",
+		0x3030: "Castle Baron Dungeon",
+		0x3031: "Castle Baron Infirmary",
+		0x3032: "Castle Baron Left Tower 1F",
+		0x3033: "Castle Baron Left Tower 2F",
+		0x3034: "Castle Baron Left Tower Room",
+		0x3035: "Castle Baron Right Tower 1F",
+		0x3036: "Castle Baron Right Tower 2F",
+		0x3037: "Castle Baron Right Tower 3F",
+		0x3038: "Castle Baron Right Tower B1F",
+		0x3039: "Castle Baron Right Tower B2F",
+		0x303A: "Old Water-way",
+		0x303B: "Castle Baron B3F",
+		0x303C: "Castle Baron B1F",
+		0x303D: "Castle Baron B1F Save Room",
+		0x303E: "Castle Baron B2F",
+		0x303F: "Damcyan 1F",
+		0x3040: "Damcyan 2F",
+		0x3041: "Damcyan 3F",
+		0x3042: "Damcyan Basement",
+		0x3043: "Damcyan B1F",
+		0x3044: "Old Water-way Antechamber",
+		0x3045: "Agart Weapon Shop",
+		0x3046: "Agart Armor Shop",
+		0x3047: "Fabul 1F",
+		0x3048: "Fabul 2F",
+		0x3049: "Fabul King's Room",
+		0x304A: "Fabul Crystal Room",
+		0x304B: "Fabul Weapons/Armors",
+		0x304C: "Fabul Inn",
+		0x304D: "Fabul Right Tower 1F",
+		0x304E: "Fabul Right Tower 2F",
+		0x304F: "Fabul Right Tower 3F",
+		0x3050: "Fabul Left Tower 1F",
+		0x3051: "Fabul Left Tower 2F",
+		0x3052: "Fabul Left Tower 3F",
+		0x3053: "Village Mist Clearing",
+		0x3054: "Watery Pass-South B2F Save Room",
+		0x3055: "Toroian Castle 1F",
+		0x3056: "Toroian Castle 2F",
+		0x3057: "Toroian Castle Crystal Room",
+		0x3058: "Toroian Castle Infirmary",
+		0x3059: "Toroian Castle B1F Antechamber",
+		0x305A: "Toroian Castle B1F Left",
+		0x305B: "Toroian Castle B1F Center",
+		0x305C: "Toroian Castle B1F Right",
+		0x305D: "Toroian Castle B2F",
+		0x305E: "Eblan 1F",
+		0x305F: "Eblan 2F",
+		0x3060: "Eblan King's Room",
+		0x3061: "Eblan Left Tower 1F",
+		0x3062: "Eblan Left Tower 2F",
+		0x3063: "Eblan Right Tower 1F",
+		0x3064: "Eblan Right Tower 2F",
+		0x3065: "Eblan Basement",
+		0x3066: "Castle Baron Black Magic Class",
+		0x3067: "Castle Baron White Magic Class",
+		0x3068: "Beach (outside Mysidia)",
+		0x306A: "Waterfalls Waterfall",
+		0x306C: "Misty Cave",
+		0x306F: "Watery Pass-South B1F",
+		0x3070: "Watery Pass-South B2F",
+		0x3071: "Watery Pass-South B3F",
+		0x3072: "Watery Pass-North B2F",
+		0x3073: "Watery Pass-North B1F",
+		0x3074: "Waterfalls B1F",
+		0x3075: "Waterfalls B2F",
+		0x3076: "Waterfalls Lake",
+		0x3077: "Antlion B1F",
+		0x3078: "Antlion B2F",
+		0x3079: "Antlion's Nest",
+		0x307A: "Antlion B1F Save Room",
+		0x307B: "Antlion B2F Treasure Room",
+		0x307C: "(black background)",
+		0x307E: "Mt.Hobs-West",
+		0x307F: "Mt.Hobs Summit",
+		0x3080: "Mt.Hobs-East",
+		0x3081: "Mt.Hobs-West Treasure Area",
+		0x3083: "Watery Pass-South B1F Treasure Room",
+		0x3084: "Mt.Ordeals",
+		0x3085: "Mt.Ordeals-3rd station",
+		0x3086: "Mt.Ordeals-7th station",
+		0x3087: "Mt.Ordeals Summit",
+		0x3088: "Mysidia Crystal Room",
+		0x3089: "Mysidia Serpent Road",
+		0x308A: "Castle Baron 3F",
+		0x308B: "Agart Well",
+		0x308C: "Cave Magnes B1F",
+		0x308D: "Cave Magnes B2F",
+		0x308E: "Cave Magnes B2F Treasure Room",
+		0x308F: "Cave Magnes B3F",
+		0x3090: "Cave Magnes B3F Treasure Room",
+		0x3091: "Cave Magnes B3F Passage",
+		0x3092: "Cave Magnes B3F Save Room",
+		0x3093: "Cave Magnes B4F",
+		0x3094: "Cave Magnes Crystal Room",
+		0x3096: "Watery Pass-South B2F Save Room Camp",
+		0x3097: "Town of Baron Serpent Road",
+		0x3098: "Tower of Zot 1F",
+		0x3099: "Tower of Zot 2F",
+		0x309A: "Tower of Zot 3F",
+		0x309B: "(falling black background)",
+		0x309C: "Tower of Zot 4F",
+		0x309D: "Tower of Zot 5F",
+		0x309E: "Tower of Zot 6F",
+		0x309F: "Tower of Zot 7F",
+		0x30A0: "Grotto Adamant",
+		0x30A1: "Cave Magnes B4F Save Room",
+		0x30A2: "Tower of Zot 5F Save Room",
+		0x30A3: "Airship (Giant of Bab-il scene/Baron)",
+		0x30A4: "Airship (Giant of Bab-il scene/Mysidia)",
+		0x30A5: "Airship (Giant of Bab-il scene/Toroia)",
+		0x30A6: "Tower of Bab-il B3F Save Room",
+		0x30A7: "Tower of Bab-il 1F",
+		0x30A8: "Tower of Bab-il B2F",
+		0x30A9: "Tower of Bab-il B3F",
+		0x30AA: "Tower of Bab-il B4F",
+		0x30AB: "Tower of Bab-il Crystal Room",
+		0x30AC: "Tower of Bab-il B5F",
+		0x30AD: "(falling cliff background)",
+		0x30B1: "Training Room 1F",
+		0x30B2: "Training Room 2F",
+		0x30B5: "Giant of Bab-il Mouth",
+		0x30B6: "Giant of Bab-il Neck",
+		0x30B7: "Giant of Bab-il Chest",
+		0x30B9: "Giant of Bab-il Stomach",
+		0x30BA: "Giant of Bab-il Passage",
+		0x30BC: "Giant of Bab-il Lung",
+		0x30BD: "Giant of Bab-il CPU",
+		0x30C0: "Airship (flying above Overworld)",
+		0x30C1: "Port of Fabul",
+		0x30C2: "Ship (at sea)",
+		0x30C3: "Airship (docked)",
+		0x30C4: "Two Airships (hovering above Overworld)",
+		0x30C6: "Airship (flying above Underworld)",
+		0x30C7: "Cave Eblana B1F",
+		0x30C8: "Cave Eblana B2F",
+		0x30C9: "Pass to Bab-il (south)",
+		0x30CA: "Pass to Bab-il (north)",
+		0x30CB: "Cave Eblana B2F Inn",
+		0x30CC: "Cave Eblana B2F Weapons/Armors",
+		0x30CD: "Pass to Bab-il (north) Save Room",
+		0x30CE: "Cave Eblana B2F Infirmarmy",
+		0x30CF: "Chocobo's Forest (Fabul)",
+		0x30D0: "Airship (hovering above Overworld near Baron)",
+		0x30D1: "Chocobo's Forest (Mt.Ordeals)",
+		0x30D2: "Chocobo's Forest (Baron)",
+		0x30D3: "Chocobo's Forest (Toroia)",
+		0x30D4: "Chocobo's Forest (Chocobo Island)",
+		0x30D5: "Castle Baron King's Room (hidden passage)",
+		0x30D6: "Airship (remodeling)",
+		0x30D7: "Airship (hovering above Overworld near Agart)",
+		0x30D9: "Airship (landed)",
+		0x30DA: "Mysidia Room of Wishes (final boss scene)",
+		0x30E0: "Village Mist Inn",
+		0x30E1: "Village Mist Weapon Shop",
+		0x30E2: "Village Mist Armor Shop",
+		0x30E3: "Kaipo Weapon Shop",
+		0x30E4: "Kaipo Armor Shop",
+		0x30E5: "Mysidia Weapon Shop",
+		0x30E6: "Mysidia Armor Shop",
+		0x30E7: "Mysidia Item Shop",
+		0x30E8: "Silvera Inn",
+		0x30E9: "Silvera Weapon Shop",
+		0x30EA: "Silvera Armor Shop",
+		0x30EB: "Silvera Item Shop",
+		0x30EC: "Town of Baron Item Shop",
+		0x30ED: "House of Wishes (ending)",
+		0x30EE: "Pond (ending)",
+		0x30EF: "Eblan King's Room (ending)",
+		0x30F0: "Town of Monsters King's Room (ending)",
+		0x30F1: "Damcyan 3F (ending)",
+		0x30F2: "Castle of Dwarves (ending)",
+		0x30F3: "Mt.Ordeals-7th station (ending)",
+		0x30F4: "Agart Astro Tower Observatory (ending)",
+		0x30F5: "Castle Baron Left Tower Room (ending)",
+		0x30F6: "Castle Baron King's Room (ending)",
+		0x30F7: "Fabul King's Room (ending)",
+		0x3100: "Kokkol, the Smith's",
+		0x3101: "Tomra",
+		0x3102: "Kokkol, the Smith's 1F",
+		0x3103: "Kokkol, the Smith's 2F",
+		0x3104: "Tomra Inn",
+		0x3105: "Tomra Weapons/Armors",
+		0x3106: "Tomra Treasure Room",
+		0x3107: "Castle of Dwarves",
+		0x3108: "Castle of Dwarves 1F",
+		0x3109: "Castle of Dwarves King's Room",
+		0x310A: "Castle of Dwarves B1F",
+		0x310B: "Castle of Dwarves B2F",
+		0x310D: "Castle of Dwarves Crystal Room",
+		0x310E: "Castle of Dwarves Right Tower 2F",
+		0x310F: "Castle of Dwarves Dwarf Base",
+		0x3110: "Castle of Dwarves Right Tower 3F",
+		0x3111: "Castle of Dwarves Left Tower 2F",
+		0x3112: "Castle of Dwarves Infirmary",
+		0x3113: "Castle of Dwarves Left Tower 3F",
+		0x3114: "Tower of Bab-il Save Room/Empty Room",
+		0x3115: "Tower of Bab-il 2F Treasure Room B (IceBrand)",
+		0x3116: "Tower of Bab-il 2F Treasure Room A (Blizzard)",
+		0x3117: "Tower of Bab-il 4F Treasure Room A (Ice Shield)",
+		0x3118: "Tower of Bab-il 4F Treasure Room B (Ice Armor)",
+		0x3119: "Castle of Dwarves Right Tower 5F",
+		0x311A: "Castle of Dwarves Left Tower 5F",
+		0x311B: "Castle of Dwarves 4F",
+		0x311D: "Tower of Bab-il 8F (revisit)",
+		0x311E: "Tower of Bab-il 7F (revisit)",
+		0x311F: "Tower of Bab-il 6F (revisit)",
+		0x3120: "Castle of Dwarves Cafe HOWDY!",
+		0x3121: "Tower of Bab-il 1F",
+		0x3122: "Tower of Bab-il 2F",
+		0x3123: "Tower of Bab-il 3F",
+		0x3124: "Tower of Bab-il 4F",
+		0x3125: "Tower of Bab-il 5F",
+		0x3126: "Tower of Bab-il 6F",
+		0x3127: "Tower of Bab-il 7F",
+		0x3128: "Tower of Bab-il 8F",
+		0x312C: "The Big Whale (Giant of Bab-il scene)",
+		0x312D: "Tower of Bab-il 5F Super Cannon",
+		0x312E: "Dwarf Tank",
+		0x312F: "The Big Whale",
+		0x3132: "Tomra Item Shop",
+		0x3136: "Land of Monsters B1F",
+		0x3137: "Land of Monsters B2F",
+		0x3138: "Land of Monsters B3F",
+		0x313A: "Land of Monsters B4F",
+		0x313B: "Land of Monsters Treasure Room",
+		0x313C: "Town of Monsters",
+		0x313D: "Town of Monsters Save Room",
+		0x313E: "Town of Monsters Library",
+		0x313F: "Town of Monsters Library Downstairs",
+		0x3140: "Town of Monsters King's Room",
+		0x3141: "Town of Monsters Weapon Shop",
+		0x3142: "Town of Monsters Armor Shop",
+		0x3143: "Town of Monsters Inn",
+		0x3144: "Sealed Cave",
+		0x3145: "Sylvan Cave B1F",
+		0x3146: "Sylvan Cave B2F",
+		0x3147: "Sylvan Cave B3F",
+		0x3148: "Sylvan Cave Treasure Room",
+		0x3149: "Sylvan House",
+		0x314A: "Sealed Cave B1F",
+		0x314B: "Sealed Cave B1F Treasure Room",
+		0x314C: "Sealed Cave B1F Passage",
+		0x314D: "Sealed Cave B2F",
+		0x314E: "Sealed Cave B2F Treasure Room C (Long/Ninja)",
+		0x314F: "Sealed Cave B2F Treasure Room B (various)",
+		0x3150: "Sealed Cave B2F Treasure Room A (Light)",
+		0x3151: "Sealed Cave B2F Passage",
+		0x3152: "Sealed Cave B3F",
+		0x3153: "Sealed Cave B3F Passage",
+		0x3154: "Sealed Cave B3F Treasure Room",
+		0x3155: "Sealed Cave B4F",
+		0x3156: "Sealed Cave B4F Save Room",
+		0x3157: "Sealed Cave B5F",
+		0x3158: "Sealed Cave Save Room/Empty Room",
+		0x3159: "Sealed Cave Crystal Room",
+		0x315A: "Cave Bahamut B1F",
+		0x315B: "Cave Bahamut B2F",
+		0x315C: "Cave Bahamut B3F",
+		0x3160: "Lunair's Lair 1F",
+		0x3161: "Lunar's Lair 2F",
+		0x3163: "Lunar Path (west)",
+		0x3164: "Lunar Path (east)",
+		0x3165: "Hummingway Cave",
+		0x3167: "Lunar Subterrane B1",
+		0x3168: "Lunar Subterrane B2",
+		0x3169: "Lunar Subterrane B3",
+		0x316A: "Lunar Subterrane B4",
+		0x316B: "Lunar Subterrane B5",
+		0x316C: "Lunar Subterrane B6",
+		0x316D: "Lunar Subterrane B7",
+		0x316E: "Lunar Core B1",
+		0x316F: "Lunar Core B2",
+		0x3170: "Lunar Core B3",
+		0x3171: "Lunar Core B4",
+		0x3172: "Lunar Core B5",
+		0x3173: "Lunar Subterrane B4 Treasure Room",
+		0x3174: "Lunar Subterrane B4 Passage",
+		0x3175: "Lunar Subterrane B5 Passage A",
+		0x3176: "Lunar Subterrane B5 Passage B",
+		0x3177: "Lunar Subterrane B5 Pink Puff Room",
+		0x3178: "Lunar Subterrane B5 Save Room",
+		0x3179: "Lunar Subterrane B6 Passage",
+		0x317A: "Lunar Subterrane B7 Treasure Room A (White)",
+		0x317B: "Lunar Subterrane B7 Save Room",
+		0x317C: "Lunar Subterrane B7 Treasure Room B (Ribbon)",
+	};
 
     /*
      * Global Variables
@@ -9238,6 +9956,38 @@ com.aexoden.ff4.maps = function()
 		return null;
 	}
 
+	var getEventText = function(id) {
+		if (id in EVENTS) {
+			return EVENTS[id];
+		} else {
+			return "Unknown Event Call: 0x" + id.toString(16).padStart(2, '0').toUpperCase();
+		}
+	}
+
+	var getFormationText = function(id) {
+		if (id in FORMATIONS) {
+			return FORMATIONS[id];
+		} else {
+			return "Unknown Formation: 0x" + id.toString(16).padStart(4, '0').toUpperCase();
+		}
+	}
+
+	var getItemText = function(id) {
+		if (id in ITEMS) {
+			return ITEMS[id];
+		} else {
+			return "Unknown Item: 0x" + id.toString(16).padStart(2, '0').toUpperCase();
+		}
+	}
+
+	var getMapText = function(id) {
+		if (id in MAPS) {
+			return MAPS[id];
+		} else {
+			return "Unknown Map: 0x" + id.toString(16).padStart(4, '0').toUpperCase();
+		}
+	}
+
 	var onMapMouseDown = function(e) {
 		if (e.buttons == 1) {
 			dragStartX = e.offsetX;
@@ -9270,9 +10020,62 @@ com.aexoden.ff4.maps = function()
 			var trigger = getTrigger(tileX, tileY);
 
 			if (trigger !== null) {
+				contents = "";
+
 				if (trigger.type == 'warp') {
-					div.innerHTML = 'Warps to map ' + trigger.targetMap.toString(16) + ' at ' + trigger.targetX + ', ' + trigger.targetY + '.';
+					contents += '<h3>Warp</h3>';
+					contents += '<dl class="dl-horizontal">';
+					contents += '<dt>Target Map</dt><dd>' + getMapText(trigger.targetMap) + '</dd>';
+					contents += '<dt>Coordinates</dt><dd>' + trigger.targetX + ', ' + trigger.targetY + '</dd>';
+					contents += '</dl>';
+					contents += '<p>Click to view that map.</p>'
+				} else if (trigger.type == 'return') {
+					contents += '<h3>Return</h3>';
+					contents += '<p>Returns to the previously-visited map and coordinates.</p>';
+					contents += '<p>Click to return to your most recently visited map.</p>';
+				} else if (trigger.type == 'event') {
+					contents += '<h3>Event Call</h3>';
+					contents += '<dl class="dl-horizontal">';
+					contents += '<dt>Event Call ID</dt><dd>0x' + trigger.event.toString(16).padStart(2, '0').toUpperCase() + '</dd>';
+					contents += '<dt>Description</dt><dd>' + getEventText(trigger.event) + '</dd>';
+					contents += '</dl>';
+
+					if (trigger.event in EVENTWARPS) {
+						contents += '<h3>Event Warp</h3>';
+						contents += '<dl class="dl-horizontal">';
+						contents += '<dt>Target Map</dt><dd>' + getMapText(EVENTWARPS[trigger.event].targetMap) + '</dd>';
+						contents += '<dt>Coordinates</dt><dd>' + EVENTWARPS[trigger.event].targetX + ', ' + EVENTWARPS[trigger.event].targetY + '</dd>';
+						contents += '</dl>';
+						contents += '<p>Click to view that map.</p>'
+					}
+				} else if (trigger.type == 'treasure') {
+					var type = 'Item';
+					var contentsLabel = 'Contents';
+					var contentsText = '';
+
+					if (trigger.treasure == 'battle') {
+						type = 'Trapped Chest';
+						contentsLabel = 'Formation';
+						contentsText = getFormationText(trigger.contents);
+					} else if (trigger.treasure == 'gp') {
+						contentsText = trigger.contents + ' GP';
+					} else if (trigger.treasure == 'item') {
+						contentsText = getItemText(trigger.contents)
+					}
+
+					contents += '<h3>Treasure</h3>';
+					contents += '<dl class="dl-horizontal">';
+					contents += '<dt>Type</dt><dd>' + type + '</dd>';
+					contents += '<dt>' + contentsLabel + '</dt><dd>' + contentsText + '</dd>';
+
+					if (trigger.treasure == 'battle') {
+						contents += '<dt>Reward</dt><dd>' + getItemText(trigger.reward) + '</dd>';
+					}
+
+					contents += '</dl>';
 				}
+
+				div.innerHTML = contents;
 			} else {
 				div.innerHTML = '';
 			}
@@ -9290,16 +10093,30 @@ com.aexoden.ff4.maps = function()
 				var trigger = getTrigger(tileX, tileY);
 
 				if (trigger !== null) {
-					if (trigger.type == 'warp') {
+					var eventWarpData = null;
+
+					if (trigger.type == 'event' && trigger.event in EVENTWARPS) {
+						eventWarpData = EVENTWARPS[trigger.event];
+					}
+
+					if (trigger.type == 'warp' || eventWarpData !== null) {
+						var targetMap = null;
+
+						if (eventWarpData !== null) {
+							targetMap = eventWarpData.targetMap;
+						} else {
+							targetMap = trigger.targetMap;
+						}
+
 						div.innerHTML = '';
 
-						if (trigger.targetMap >= 0x3000) {
+						if (targetMap >= 0x3000) {
 							mapStack.push(currentMapIndex);
 						} else {
 							mapStack = [];
 						}
 
-						updateMap(trigger.targetMap);
+						updateMap(targetMap);
 					} else if (trigger.type == 'return') {
 						if (mapStack.length > 0) {
 							div.innerHTML = '';
@@ -9334,10 +10151,13 @@ com.aexoden.ff4.maps = function()
 			var offsetX = (e.offsetX / 512) * currentSize + currentStartX;
 			var offsetY = (e.offsetY / 512) * currentSize + currentStartY;
 
-			currentSize = Math.floor(Math.max(512, Math.min(getMapSize(), currentSize * factor)));
+			var oldCurrentSize = currentSize;
+			currentSize = Math.round(Math.max(512, Math.min(getMapSize(), currentSize * factor)));
 
-			var dx = Math.floor((offsetX - currentStartX) * (1 - factor));
-			var dy = Math.floor((offsetY - currentStartY) * (1 - factor));
+			var actualFactor = currentSize / oldCurrentSize
+
+			var dx = Math.round((offsetX - currentStartX) * (1 - actualFactor));
+			var dy = Math.round((offsetY - currentStartY) * (1 - actualFactor));
 
 			currentStartX += dx;
 			currentStartY += dy;
@@ -9348,33 +10168,43 @@ com.aexoden.ff4.maps = function()
 		e.preventDefault();
 	}
 
-	var onButtonGoOverworld = function(e) {
-		document.getElementById('button-base-overworld').classList.add('active');
+	var setGoButtons = function(target) {
+		document.getElementById('button-base-overworld').classList.remove('active');
+		document.getElementById('button-base-zot').classList.remove('active');
+		document.getElementById('button-base-giant').classList.remove('active');
 		document.getElementById('button-base-underworld').classList.remove('active');
 		document.getElementById('button-base-moon').classList.remove('active');
 
-		mapStack = [];
+		document.getElementById('button-base-' + target).classList.add('active');
+	}
 
+	var onButtonGoOverworld = function(e) {
+		setGoButtons('overworld');
+		mapStack = [];
 		updateMap(MAP_OVERWORLD);
 	}
 
-	var onButtonGoUnderworld = function(e) {
-		document.getElementById('button-base-overworld').classList.remove('active');
-		document.getElementById('button-base-underworld').classList.add('active');
-		document.getElementById('button-base-moon').classList.remove('active');
-
+	var onButtonGoZot = function(e) {
+		setGoButtons('zot');
 		mapStack = [];
+		updateMap(0x3098);
+	}
 
+	var onButtonGoGiant = function(e) {
+		setGoButtons('giant');
+		mapStack = [];
+		updateMap(0x30B5);
+	}
+
+	var onButtonGoUnderworld = function(e) {
+		setGoButtons('underworld');
+		mapStack = [];
 		updateMap(MAP_UNDERWORLD);
 	}
 
 	var onButtonGoMoon = function(e) {
-		document.getElementById('button-base-overworld').classList.remove('active');
-		document.getElementById('button-base-underworld').classList.remove('active');
-		document.getElementById('button-base-moon').classList.add('active');
-
+		setGoButtons('moon');
 		mapStack = [];
-
 		updateMap(MAP_MOON);
 	}
 
@@ -9460,6 +10290,12 @@ com.aexoden.ff4.maps = function()
 
 		var button = document.getElementById('button-base-overworld');
 		button.addEventListener('click', onButtonGoOverworld);
+
+		var button = document.getElementById('button-base-zot');
+		button.addEventListener('click', onButtonGoZot);
+
+		var button = document.getElementById('button-base-giant');
+		button.addEventListener('click', onButtonGoGiant);
 
 		var button = document.getElementById('button-base-underworld');
 		button.addEventListener('click', onButtonGoUnderworld);
