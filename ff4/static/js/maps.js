@@ -32,7 +32,7 @@ com.aexoden.ff4.maps = function()
 			"24": {
 				"231": {
 					"targetMap": 12487,
-					"targetX": 138,
+					"targetX": 10,
 					"targetY": 4,
 					"type": "warp"
 				}
@@ -130,7 +130,7 @@ com.aexoden.ff4.maps = function()
 			"74": {
 				"53": {
 					"targetMap": 12428,
-					"targetX": 133,
+					"targetX": 5,
 					"targetY": 7,
 					"type": "warp"
 				}
@@ -146,7 +146,7 @@ com.aexoden.ff4.maps = function()
 			"84": {
 				"119": {
 					"targetMap": 12396,
-					"targetX": 155,
+					"targetX": 27,
 					"targetY": 3,
 					"type": "warp"
 				}
@@ -170,7 +170,7 @@ com.aexoden.ff4.maps = function()
 			"96": {
 				"119": {
 					"targetMap": 12289,
-					"targetX": 67,
+					"targetX": 3,
 					"targetY": 16,
 					"type": "warp"
 				}
@@ -178,7 +178,7 @@ com.aexoden.ff4.maps = function()
 			"97": {
 				"119": {
 					"targetMap": 12289,
-					"targetX": 220,
+					"targetX": 28,
 					"targetY": 16,
 					"type": "warp"
 				}
@@ -290,7 +290,7 @@ com.aexoden.ff4.maps = function()
 			"125": {
 				"66": {
 					"targetMap": 12406,
-					"targetX": 144,
+					"targetX": 16,
 					"targetY": 11,
 					"type": "warp"
 				},
@@ -304,7 +304,7 @@ com.aexoden.ff4.maps = function()
 			"134": {
 				"72": {
 					"targetMap": 12404,
-					"targetX": 144,
+					"targetX": 16,
 					"targetY": 9,
 					"type": "warp"
 				}
@@ -312,7 +312,7 @@ com.aexoden.ff4.maps = function()
 			"136": {
 				"56": {
 					"targetMap": 12407,
-					"targetX": 143,
+					"targetX": 15,
 					"targetY": 4,
 					"type": "warp"
 				}
@@ -320,7 +320,7 @@ com.aexoden.ff4.maps = function()
 			"138": {
 				"77": {
 					"targetMap": 12403,
-					"targetX": 152,
+					"targetX": 24,
 					"targetY": 9,
 					"type": "warp"
 				},
@@ -442,7 +442,7 @@ com.aexoden.ff4.maps = function()
 			"13": {
 				"14": {
 					"targetMap": 12613,
-					"targetX": 144,
+					"targetX": 16,
 					"targetY": 2,
 					"type": "warp"
 				}
@@ -450,7 +450,7 @@ com.aexoden.ff4.maps = function()
 			"27": {
 				"86": {
 					"targetMap": 12598,
-					"targetX": 145,
+					"targetX": 17,
 					"targetY": 10,
 					"type": "warp"
 				}
@@ -564,7 +564,7 @@ com.aexoden.ff4.maps = function()
 			"18": {
 				"14": {
 					"targetMap": 12643,
-					"targetX": 147,
+					"targetX": 19,
 					"targetY": 5,
 					"type": "warp"
 				},
@@ -602,7 +602,7 @@ com.aexoden.ff4.maps = function()
 			"41": {
 				"24": {
 					"targetMap": 12644,
-					"targetX": 149,
+					"targetX": 21,
 					"targetY": 6,
 					"type": "warp"
 				}
