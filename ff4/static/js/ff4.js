@@ -519,7 +519,10 @@ com.aexoden.ff4 = function()
 			"castle-of-dwarves-b2f-0",
 			"castle-of-dwarves-b2f-1",
 			"castle-of-dwarves-dwarf-base-0",
-			"castle-of-dwarves-dwarf-base-1"
+			"castle-of-dwarves-dwarf-base-1",
+			"underworld-castle-of-dwarves-1",
+			"underworld-castle-of-dwarves-2",
+			"underworld-castle-of-dwarves-3"
 		]
 	};
 
@@ -2118,6 +2121,17 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"underworld-castle-of-dwarves-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"underworld-castle-of-dwarves-3": {
+					"index": "0",
+					"location": "Underworld (Castle of Dwarves) [after Castle of Dwarves]",
+					"disambiguation": ""
+				}
+			}
+		},
 		"waterfalls-b1f-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -2435,7 +2449,8 @@ com.aexoden.ff4 = function()
 			82: ["overworld-agart-0"],
 			83: ["underworld-castle-of-dwarves-0"],
 			84: ["castle-of-dwarves-choice-0"],
-			85: ["castle-of-dwarves-0", "castle-of-dwarves-1"]
+			85: ["castle-of-dwarves-0", "castle-of-dwarves-1"],
+			86: ["underworld-castle-of-dwarves-1"]
 		}
 	};
 
@@ -5778,6 +5793,67 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[102, 82, SegmentFlags.NONE],
 					[102, 81, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"underworld-castle-of-dwarves-1": {
+			"flags": PathFlags.STEPS,
+			"map": "1000-0",
+			"mapRange": [60, 64, 32, 32],
+			"segments": {
+				"base-0": [
+					[91, 84, SegmentFlags.START],
+					[91, 85, SegmentFlags.NONE],
+					[82, 85, SegmentFlags.NONE],
+					[82, 83, SegmentFlags.NONE],
+					[80, 83, SegmentFlags.NONE],
+					[80, 79, SegmentFlags.NONE],
+					[71, 79, SegmentFlags.NONE],
+					[71, 78, SegmentFlags.NONE],
+					[70, 78, SegmentFlags.NONE],
+					[70, 76, SegmentFlags.NONE],
+					[60, 76, SegmentFlags.END],
+					[59, 76, SegmentFlags.NONE]
+				]
+			}
+		},
+		"underworld-castle-of-dwarves-2": {
+			"flags": PathFlags.STEPS,
+			"map": "1000-0",
+			"mapRange": [38, 45, 32, 32],
+			"segments": {
+				"base-0": [
+					[70, 76, SegmentFlags.NONE],
+					[60, 76, SegmentFlags.END],
+					[54, 76, SegmentFlags.NONE],
+					[54, 53, SegmentFlags.NONE],
+					[48, 53, SegmentFlags.NONE],
+					[48, 45, SegmentFlags.END],
+					[48, 44, SegmentFlags.NONE]
+				]
+			}
+		},
+		"underworld-castle-of-dwarves-3": {
+			"flags": PathFlags.STEPS,
+			"map": "1000-0",
+			"mapRange": [35, 14, 32, 32],
+			"segments": {
+				"base-0": [
+					[48, 46, SegmentFlags.NONE],
+					[48, 45, SegmentFlags.END],
+					[48, 24, SegmentFlags.NONE],
+					[54, 24, SegmentFlags.NONE],
+					[54, 21, SegmentFlags.NONE],
+					[55, 21, SegmentFlags.NONE],
+					[55, 18, SegmentFlags.NONE],
+					[54, 18, SegmentFlags.NONE],
+					[54, 16, SegmentFlags.NONE],
+					[49, 16, SegmentFlags.NONE],
+					[49, 15, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[49, 16, SegmentFlags.NONE],
+					[49, 17, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
