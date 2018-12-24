@@ -11,6 +11,8 @@
 {% block content %}				<h1>Tools</h1>
 				<p>This page provides a number of tools and calculators to help with playing Final Fantasy IV.</p>
 				<dl class="row">
+					<dt class="col-sm-3"><a href="{% url "tools:map-viewer" %}">Map Viewer</a></dt>
+					<dd class="col-sm-9">Alows you to explore the Final Fantasy IV universe with a simple point-and-click interface.</dd>
 					<dt class="col-sm-3"><a href="{% url "tools:seed-finder" %}">Seed Finder</a></dt>
 					<dd class="col-sm-9">Helps you determine which seed you are on during a speedrun with a simple mouse-based interface.</dd>
 					<dt class="col-sm-3"><a href="{% url "tools:nocw-gp-calculator" %}">Any% NoCW GP Calculator</a></dt>
