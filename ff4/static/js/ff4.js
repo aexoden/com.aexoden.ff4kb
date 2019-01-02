@@ -540,7 +540,19 @@ com.aexoden.ff4 = function()
 			"tower-of-babil-4f-1",
 			"tower-of-babil-3f-1",
 			"tower-of-babil-2f-1",
-			"tower-of-babil-1f-1"
+			"tower-of-babil-1f-1",
+			"overworld-airship-2-0",
+			"overworld-baron-0",
+			"castle-baron-5",
+			"castle-baron-1f-2",
+			"castle-baron-6",
+			"castle-baron-right-passage-0",
+			"castle-baron-7",
+			"overworld-airship-3-0",
+			"overworld-airship-3-1",
+			"overworld-airship-3-2",
+			"overworld-airship-3-3",
+			"overworld-airship-3-4"
 		]
 	};
 
@@ -743,6 +755,18 @@ com.aexoden.ff4 = function()
 				"castle-baron-left-tower-room-0": {
 					"index": "0",
 					"location": "Castle Baron Left Tower Room [after Valvalis]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"castle-baron-2": {
+			"type": VariableFlags.EXTRA,
+			"description": "Castle Baron [before Hook Installation]",
+			"routes": {},
+			"paths": {
+				"castle-baron-1f-2": {
+					"index": "0",
+					"location": "Castle Baron 1F [before Hook Installation]",
 					"disambiguation": ""
 				}
 			}
@@ -2672,7 +2696,8 @@ com.aexoden.ff4 = function()
 			100: ["tower-of-babil-4f-1"],
 			101: ["tower-of-babil-3f-1"],
 			102: ["tower-of-babil-2f-1"],
-			103: ["tower-of-babil-1f-1"]
+			103: ["tower-of-babil-1f-1"],
+			104: ["castle-baron-2"]
 		}
 	};
 
@@ -3121,6 +3146,44 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"castle-baron-5": {
+			"flags": PathFlags.NONE,
+			"map": "3024-2",
+			"segments": {
+				"base-0": [
+					[16, 30, SegmentFlags.START],
+					[16, 29, SegmentFlags.NONE],
+					[14, 29, SegmentFlags.RETURN],
+					[15, 29, SegmentFlags.NONE],
+					[15, 18, SegmentFlags.NONE],
+					[14, 18, SegmentFlags.RETURN],
+					[15, 18, SegmentFlags.NONE],
+					[15, 15, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-baron-6": {
+			"flags": PathFlags.NONE,
+			"map": "3024-2",
+			"segments": {
+				"base-0": [
+					[19, 13, SegmentFlags.START],
+					[23, 13, SegmentFlags.NONE],
+					[23, 14, SegmentFlags.NONE],
+					[28, 14, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-baron-7": {
+			"flags": PathFlags.NONE,
+			"map": "3024-2",
+			"segments": {
+				"base-0": [
+					[28, 19, SegmentFlags.START],
+					[24, 19, SegmentFlags.END]
+				]
+			}
+		},
 		"castle-baron-1f-0": {
 			"flags": PathFlags.STEPS,
 			"map": "302A-1",
@@ -3153,6 +3216,25 @@ com.aexoden.ff4 = function()
 					[1, 10, SegmentFlags.NONE],
 					[8, 10, SegmentFlags.NONE],
 					[8, 15, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-baron-1f-2": {
+			"flags": PathFlags.STEPS,
+			"map": "302A-0",
+			"segments": {
+				"base-0": [
+					[8, 12, SegmentFlags.START],
+					[8, 10, SegmentFlags.NONE],
+					[16, 10, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[8, 12, SegmentFlags.NONE],
+					[8, 13, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[8, 12, SegmentFlags.NONE],
+					[9, 12, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -3351,6 +3433,16 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[6, 4, SegmentFlags.NONE],
 					[6, 3, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"castle-baron-right-passage-0": {
+			"flags": PathFlags.STEPS,
+			"map": "302E-1",
+			"segments": {
+				"base-0": [
+					[18, 2, SegmentFlags.START],
+					[18, 12, SegmentFlags.END]
 				]
 			}
 		},
@@ -5122,6 +5214,86 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"overworld-airship-2-0": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [88, 184, 32, 32],
+			"segments": {
+				"base-0": [
+					[106, 212, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[102, 212, SegmentFlags.VEHICLE],
+					[102, 184, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[102, 183, SegmentFlags.NONE | SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-airship-3-0": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [86, 133, 32, 32],
+			"segments": {
+				"base-0": [
+					[102, 155, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[102, 133, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[102, 132, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-airship-3-1": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [95, 103, 32, 32],
+			"segments": {
+				"base-0": [
+					[102, 135, SegmentFlags.VEHICLE],
+					[102, 134, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[102, 119, SegmentFlags.VEHICLE],
+					[126, 119, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[127, 119, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-airship-3-2": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [127, 103, 32, 32],
+			"segments": {
+				"base-0": [
+					[126, 119, SegmentFlags.VEHICLE],
+					[127, 119, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[151, 119, SegmentFlags.VEHICLE],
+					[151, 103, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[151, 102, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-airship-3-3": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [127, 72, 32, 32],
+			"segments": {
+				"base-0": [
+					[151, 104, SegmentFlags.VEHICLE],
+					[151, 103, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[151, 72, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[151, 71, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-airship-3-4": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [127, 41, 32, 32],
+			"segments": {
+				"base-0": [
+					[151, 73, SegmentFlags.VEHICLE],
+					[151, 72, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[151, 49, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[127, 49, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[126, 49, SegmentFlags.VEHICLE]
+				]
+			}
+		},
 		"overworld-agart-0": {
 			"flags": PathFlags.STEPS,
 			"map": "0000-0",
@@ -5149,6 +5321,19 @@ com.aexoden.ff4 = function()
 					[105, 216, SegmentFlags.START],
 					[105, 215, SegmentFlags.NONE],
 					[105, 212, SegmentFlags.START | SegmentFlags.END | SegmentFlags.VEHICLE],
+				]
+			}
+		},
+		"overworld-baron-0": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [86, 154, 32, 32],
+			"segments": {
+				"base-0": [
+					[102, 186, SegmentFlags.VEHICLE],
+					[102, 184, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[102, 158, SegmentFlags.VEHICLE],
+					[102, 157, SegmentFlags.START | SegmentFlags.END]
 				]
 			}
 		},
