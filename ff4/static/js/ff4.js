@@ -522,7 +522,25 @@ com.aexoden.ff4 = function()
 			"castle-of-dwarves-dwarf-base-1",
 			"underworld-castle-of-dwarves-1",
 			"underworld-castle-of-dwarves-2",
-			"underworld-castle-of-dwarves-3"
+			"underworld-castle-of-dwarves-3",
+			"tower-of-babil-1f-0",
+			"tower-of-babil-2f-0",
+			"tower-of-babil-3f-0",
+			"tower-of-babil-4f-0",
+			"tower-of-babil-5f-0",
+			"tower-of-babil-6f-0",
+			"tower-of-babil-7f-0",
+			"tower-of-babil-8f-0",
+			"tower-of-babil-8f-1",
+			"tower-of-babil-7f-1",
+			"tower-of-babil-6f-1",
+			"tower-of-babil-5f-1",
+			"tower-of-babil-5f-super-cannon-0",
+			"tower-of-babil-5f-2",
+			"tower-of-babil-4f-1",
+			"tower-of-babil-3f-1",
+			"tower-of-babil-2f-1",
+			"tower-of-babil-1f-1"
 		]
 	};
 
@@ -2033,6 +2051,193 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"tower-of-babil-1f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-1f-0": {
+					"index": "0",
+					"location": "Tower of Bab-il 1F [before Lugae]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-babil-1f-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-1f-1": {
+					"index": "0",
+					"location": "Tower of Bab-il 1F [after Dark Imps]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-babil-2f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-2f-0": {
+					"index": "0",
+					"location": "Tower of Bab-il 2F [before Lugae]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-babil-2f-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-2f-1": {
+					"index": "0",
+					"location": "Tower of Bab-il 2F [after Dark Imps]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-babil-3f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-3f-0": {
+					"index": "0",
+					"location": "Tower of Bab-il 3F [before Lugae]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-babil-3f-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-3f-1": {
+					"index": "0",
+					"location": "Tower of Bab-il 3F [after Dark Imps]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-babil-4f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-4f-0": {
+					"index": "0",
+					"location": "Tower of Bab-il 4F [before Lugae]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-babil-4f-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-4f-1": {
+					"index": "0",
+					"location": "Tower of Bab-il 4F [after Dark Imps]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-babil-5f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-5f-0": {
+					"index": "0",
+					"location": "Tower of Bab-il 5F [before Lugae]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-babil-5f-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-5f-1": {
+					"index": "0",
+					"location": "Tower of Bab-il 5F [before Dark Imps]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-babil-5f-2": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-5f-2": {
+					"index": "0",
+					"location": "Tower of Bab-il 5F [after Dark Imps]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-babil-6f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-6f-0": {
+					"index": "0",
+					"location": "Tower of Bab-il 6F [before Lugae]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-babil-6f-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-6f-1": {
+					"index": "0",
+					"location": "Tower of Bab-il 6F [after Lugae]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-babil-7f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-7f-0": {
+					"index": "0",
+					"location": "Tower of Bab-il 7F [before Lugae]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-babil-7f-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-7f-1": {
+					"index": "0",
+					"location": "Tower of Bab-il 7F [after Lugae]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-babil-8f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-8f-0": {
+					"index": "0",
+					"location": "Tower of Bab-il 8F [before Lugae]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-babil-8f-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-8f-1": {
+					"index": "0",
+					"location": "Tower of Bab-il 8F [after Lugae]",
+					"disambiguation": ""
+				}
+			}
+		},
 		"tower-of-zot-1f-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -2450,7 +2655,24 @@ com.aexoden.ff4 = function()
 			83: ["underworld-castle-of-dwarves-0"],
 			84: ["castle-of-dwarves-choice-0"],
 			85: ["castle-of-dwarves-0", "castle-of-dwarves-1"],
-			86: ["underworld-castle-of-dwarves-1"]
+			86: ["underworld-castle-of-dwarves-1"],
+			87: ["tower-of-babil-1f-0"],
+			88: ["tower-of-babil-2f-0"],
+			89: ["tower-of-babil-3f-0"],
+			90: ["tower-of-babil-4f-0"],
+			91: ["tower-of-babil-5f-0"],
+			92: ["tower-of-babil-6f-0"],
+			93: ["tower-of-babil-7f-0"],
+			94: ["tower-of-babil-8f-0"],
+			95: ["tower-of-babil-8f-1"],
+			96: ["tower-of-babil-7f-1"],
+			97: ["tower-of-babil-6f-1"],
+			98: ["tower-of-babil-5f-1"],
+			99: ["tower-of-babil-5f-2"],
+			100: ["tower-of-babil-4f-1"],
+			101: ["tower-of-babil-3f-1"],
+			102: ["tower-of-babil-2f-1"],
+			103: ["tower-of-babil-1f-1"]
 		}
 	};
 
@@ -5613,7 +5835,374 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
-		"tower-of-zot-1f-0": {
+		"tower-of-babil-1f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3121-0",
+			"segments": {
+				"base-0": [
+					[15, 24, SegmentFlags.START],
+					[15, 4, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[15, 20, SegmentFlags.NONE],
+					[15, 21, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[15, 10, SegmentFlags.NONE],
+					[16, 10, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-babil-1f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3121-0",
+			"segments": {
+				"base-0": [
+					[15, 5, SegmentFlags.START],
+					[15, 21, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[15, 10, SegmentFlags.NONE],
+					[16, 10, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-babil-2f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3122-0",
+			"segments": {
+				"base-0": [
+					[15, 5, SegmentFlags.START],
+					[15, 6, SegmentFlags.NONE],
+					[12, 6, SegmentFlags.NONE],
+					[12, 23, SegmentFlags.NONE],
+					[18, 23, SegmentFlags.NONE],
+					[18, 17, SegmentFlags.NONE],
+					[17, 17, SegmentFlags.NONE],
+					[17, 16, SegmentFlags.NONE],
+					[16, 16, SegmentFlags.NONE],
+					[16, 13, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[16, 14, SegmentFlags.NONE],
+					[17, 14, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-babil-2f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3122-0",
+			"segments": {
+				"base-0": [
+					[16, 14, SegmentFlags.START],
+					[17, 14, SegmentFlags.NONE],
+					[17, 17, SegmentFlags.NONE],
+					[18, 17, SegmentFlags.NONE],
+					[18, 23, SegmentFlags.NONE],
+					[12, 23, SegmentFlags.NONE],
+					[12, 6, SegmentFlags.NONE],
+					[15, 6, SegmentFlags.NONE],
+					[15, 4, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[15, 5, SegmentFlags.NONE],
+					[16, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-babil-3f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3123-0",
+			"segments": {
+				"base-0": [
+					[16, 14, SegmentFlags.START],
+					[21, 14, SegmentFlags.NONE],
+					[21, 6, SegmentFlags.NONE],
+					[19, 6, SegmentFlags.NONE],
+					[19, 5, SegmentFlags.NONE],
+					[13, 5, SegmentFlags.NONE],
+					[13, 10, SegmentFlags.RETURN],
+					[13, 6, SegmentFlags.NONE],
+					[9, 6, SegmentFlags.NONE],
+					[9, 7, SegmentFlags.NONE],
+					[8, 7, SegmentFlags.NONE],
+					[8, 10, SegmentFlags.NONE],
+					[6, 10, SegmentFlags.NONE],
+					[6, 19, SegmentFlags.NONE],
+					[7, 19, SegmentFlags.NONE],
+					[7, 20, SegmentFlags.NONE],
+					[12, 20, SegmentFlags.NONE],
+					[12, 19, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[12, 20, SegmentFlags.NONE],
+					[13, 20, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-babil-3f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3123-0",
+			"segments": {
+				"base-0": [
+					[12, 20, SegmentFlags.START],
+					[7, 20, SegmentFlags.NONE],
+					[7, 17, SegmentFlags.NONE],
+					[6, 17, SegmentFlags.NONE],
+					[6, 10, SegmentFlags.NONE],
+					[8, 10, SegmentFlags.NONE],
+					[8, 7, SegmentFlags.NONE],
+					[9, 7, SegmentFlags.NONE],
+					[9, 6, SegmentFlags.NONE],
+					[13, 6, SegmentFlags.NONE],
+					[13, 5, SegmentFlags.NONE],
+					[19, 5, SegmentFlags.NONE],
+					[19, 6, SegmentFlags.NONE],
+					[21, 6, SegmentFlags.NONE],
+					[21, 14, SegmentFlags.NONE],
+					[16, 14, SegmentFlags.NONE],
+					[16, 13, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[16, 14, SegmentFlags.NONE],
+					[15, 14, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				]
+			}
+		},
+		"tower-of-babil-4f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3124-0",
+			"segments": {
+				"base-0": [
+					[12, 20, SegmentFlags.START],
+					[8, 20, SegmentFlags.NONE],
+					[8, 10, SegmentFlags.NONE],
+					[24, 10, SegmentFlags.NONE],
+					[24, 4, SegmentFlags.NONE],
+					[21, 4, SegmentFlags.NONE],
+					[21, 6, SegmentFlags.NONE],
+					[7, 6, SegmentFlags.NONE],
+					[7, 7, SegmentFlags.NONE],
+					[6, 7, SegmentFlags.NONE],
+					[6, 9, SegmentFlags.NONE],
+					[3, 9, SegmentFlags.NONE],
+					[3, 8, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[3, 9, SegmentFlags.NONE],
+					[3, 10, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-babil-4f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3124-0",
+			"segments": {
+				"base-0": [
+					[3, 9, SegmentFlags.START],
+					[6, 9, SegmentFlags.NONE],
+					[6, 7, SegmentFlags.NONE],
+					[10, 7, SegmentFlags.NONE],
+					[10, 6, SegmentFlags.NONE],
+					[21, 6, SegmentFlags.NONE],
+					[21, 4, SegmentFlags.NONE],
+					[24, 4, SegmentFlags.NONE],
+					[24, 10, SegmentFlags.NONE],
+					[8, 10, SegmentFlags.NONE],
+					[8, 20, SegmentFlags.NONE],
+					[12, 20, SegmentFlags.NONE],
+					[12, 19, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[12, 20, SegmentFlags.NONE],
+					[12, 21, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-babil-5f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3125-0",
+			"segments": {
+				"base-0": [
+					[3, 9, SegmentFlags.START],
+					[2, 9, SegmentFlags.NONE],
+					[2, 22, SegmentFlags.NONE],
+					[9, 22, SegmentFlags.NONE],
+					[9, 24, SegmentFlags.NONE],
+					[23, 24, SegmentFlags.NONE],
+					[23, 19, SegmentFlags.NONE],
+					[25, 19, SegmentFlags.NONE],
+					[25, 5, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[25, 6, SegmentFlags.NONE],
+					[26, 6, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-babil-5f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3125-0",
+			"segments": {
+				"base-0": [
+					[25, 5, SegmentFlags.START],
+					[25, 22, SegmentFlags.NONE],
+					[23, 22, SegmentFlags.NONE],
+					[23, 24, SegmentFlags.NONE],
+					[16, 24, SegmentFlags.NONE],
+					[16, 10, SegmentFlags.END],
+					[16, 9, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[16, 18, SegmentFlags.NONE],
+					[17, 18, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-babil-5f-2": {
+			"flags": PathFlags.STEPS,
+			"map": "3125-0",
+			"segments": {
+				"base-0": [
+					[16, 10, SegmentFlags.START],
+					[16, 24, SegmentFlags.NONE],
+					[7, 24, SegmentFlags.NONE],
+					[7, 22, SegmentFlags.NONE],
+					[2, 22, SegmentFlags.NONE],
+					[2, 9, SegmentFlags.NONE],
+					[3, 9, SegmentFlags.NONE],
+					[3, 8, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[3, 9, SegmentFlags.NONE],
+					[4, 9, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-babil-5f-super-cannon-0": {
+			"flags": PathFlags.STEPS,
+			"map": "312D-0",
+			"segments": {
+				"base-0": [
+					[5, 11, SegmentFlags.START],
+					[5, 10, SegmentFlags.END]
+				]
+			}
+		},
+		"tower-of-babil-6f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3126-0",
+			"segments": {
+				"base-0": [
+					[25, 6, SegmentFlags.START],
+					[14, 6, SegmentFlags.NONE],
+					[14, 4, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[14, 5, SegmentFlags.NONE],
+					[15, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-babil-6f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3126-0",
+			"segments": {
+				"base-0": [
+					[14, 4, SegmentFlags.START],
+					[14, 6, SegmentFlags.NONE],
+					[25, 6, SegmentFlags.NONE],
+					[25, 5, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[25, 6, SegmentFlags.NONE],
+					[26, 6, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-babil-7f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3127-0",
+			"segments": {
+				"base-0": [
+					[14, 5, SegmentFlags.START],
+					[18, 5, SegmentFlags.NONE],
+					[18, 15, SegmentFlags.NONE],
+					[21, 15, SegmentFlags.NONE],
+					[21, 25, SegmentFlags.NONE],
+					[27, 25, SegmentFlags.NONE],
+					[27, 18, SegmentFlags.NONE],
+					[29, 18, SegmentFlags.NONE],
+					[29, 16, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[29, 17, SegmentFlags.NONE],
+					[30, 17, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-babil-7f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3127-0",
+			"segments": {
+				"base-0": [
+					[29, 16, SegmentFlags.START],
+					[29, 19, SegmentFlags.NONE],
+					[26, 19, SegmentFlags.NONE],
+					[26, 25, SegmentFlags.NONE],
+					[21, 25, SegmentFlags.NONE],
+					[21, 14, SegmentFlags.NONE],
+					[17, 14, SegmentFlags.NONE],
+					[17, 11, SegmentFlags.NONE],
+					[14, 11, SegmentFlags.NONE],
+					[14, 4, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[14, 5, SegmentFlags.NONE],
+					[15, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-babil-8f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3128-0",
+			"segments": {
+				"base-0": [
+					[29, 17, SegmentFlags.START],
+					[25, 17, SegmentFlags.NONE],
+					[25, 25, SegmentFlags.NONE],
+					[16, 25, SegmentFlags.NONE],
+					[16, 20, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[16, 24, SegmentFlags.NONE],
+					[17, 24, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-babil-8f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3128-1",
+			"segments": {
+				"base-0": [
+					[16, 19, SegmentFlags.START],
+					[16, 25, SegmentFlags.NONE],
+					[28, 25, SegmentFlags.NONE],
+					[28, 17, SegmentFlags.NONE],
+					[29, 17, SegmentFlags.NONE],
+					[29, 16, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[16, 20, SegmentFlags.NONE],
+					[17, 20, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[29, 17, SegmentFlags.NONE],
+					[30, 17, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		 "tower-of-zot-1f-0": {
 			"flags": PathFlags.STEPS,
 			"map": "3098-0",
 			"segments": {
