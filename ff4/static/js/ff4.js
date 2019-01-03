@@ -552,7 +552,20 @@ com.aexoden.ff4 = function()
 			"overworld-airship-3-1",
 			"overworld-airship-3-2",
 			"overworld-airship-3-3",
-			"overworld-airship-3-4"
+			"overworld-airship-3-4",
+			"overworld-airship-3-5",
+			"overworld-airship-3-6",
+			"overworld-airship-3-7",
+			"overworld-airship-3-8",
+			"overworld-airship-3-9",
+			"overworld-eblan-0",
+			"cave-eblana-b1f-0",
+			"cave-eblana-b2f-0",
+			"cave-eblana-b2f-weapons-armors-0",
+			"cave-eblana-b2f-1",
+			"pass-to-babil-south-0",
+			"pass-to-babil-north-0",
+			"pass-to-babil-south-1"
 		]
 	};
 
@@ -1378,6 +1391,36 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"cave-eblana-b1f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"cave-eblana-b1f-0": {
+					"index": "0",
+					"location": "Cave Eblana B1F",
+					"disambiguation": ""
+				}
+			}
+		},
+		"cave-eblana-b2f-0": {
+			"type": VariableFlags.EXTRA,
+			"description": "Cave Eblana B2F",
+			"routes": {
+				1: {
+					"cave-eblana-b2f-weapons-armors-0": 1
+				},
+				2: {
+					"cave-eblana-b2f-weapons-armors-0": 2
+				}
+			},
+			"paths": {
+				"cave-eblana-b2f-weapons-armors-0": {
+					"index": "0",
+					"location": "Cave Eblana B2F Weapons/Armors",
+					"disambiguation": ""
+				}
+			}
+		},
 		"cave-magnes-b1f-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -1855,6 +1898,17 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},*/
+		"overworld-eblan-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"overworld-eblan-0": {
+					"index": "0",
+					"location": "Overworld (Eblan)",
+					"disambiguation": ""
+				}
+			}
+		},
 		"overworld-fabul-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -2010,6 +2064,39 @@ com.aexoden.ff4 = function()
 				"overworld-toroia-6": {
 					"index": "0",
 					"location": "Overworld (Toroia) [before Tower of Zot]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"pass-to-babil-north-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"pass-to-babil-north-0": {
+					"index": "0",
+					"location": "Pass to Bab-il (north) [west side]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"pass-to-babil-south-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"pass-to-babil-south-0": {
+					"index": "0",
+					"location": "Pass to Bab-il (south) [west side]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"pass-to-babil-south-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"pass-to-babil-south-1": {
+					"index": "0",
+					"location": "Pass to Bab-il (south) [east side]",
 					"disambiguation": ""
 				}
 			}
@@ -2697,7 +2784,13 @@ com.aexoden.ff4 = function()
 			101: ["tower-of-babil-3f-1"],
 			102: ["tower-of-babil-2f-1"],
 			103: ["tower-of-babil-1f-1"],
-			104: ["castle-baron-2"]
+			104: ["castle-baron-2"],
+			105: ["overworld-eblan-0"],
+			106: ["cave-eblana-b1f-0"],
+			107: ["cave-eblana-b2f-0"],
+			108: ["pass-to-babil-south-0"],
+			109: ["pass-to-babil-north-0"],
+			110: ["pass-to-babil-south-1"]
 		}
 	};
 
@@ -3989,6 +4082,88 @@ com.aexoden.ff4 = function()
 					[6, 7, SegmentFlags.START],
 					[6, 4, SegmentFlags.RETURN],
 					[6, 7, SegmentFlags.END]
+				]
+			}
+		},
+		"cave-eblana-b1f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "30C7-0",
+			"segments": {
+				"base-0": [
+					[10, 4, SegmentFlags.START],
+					[10, 10, SegmentFlags.NONE],
+					[12, 10, SegmentFlags.NONE],
+					[12, 12, SegmentFlags.NONE],
+					[8, 12, SegmentFlags.NONE],
+					[8, 15, SegmentFlags.NONE],
+					[11, 15, SegmentFlags.NONE],
+					[11, 23, SegmentFlags.NONE],
+					[10, 23, SegmentFlags.NONE],
+					[10, 24, SegmentFlags.NONE],
+					[9, 24, SegmentFlags.NONE],
+					[9, 28, SegmentFlags.NONE],
+					[3, 28, SegmentFlags.NONE],
+					[3, 30, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[3, 28, SegmentFlags.NONE],
+					[2, 28, SegmentFlags.RETURN | SegmentFlags.VERTICAL]
+				]
+			}
+		},
+		"cave-eblana-b2f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "30C8-0",
+			"segments": {
+				"base-0": [
+					[27, 3, SegmentFlags.START],
+					[27, 9, SegmentFlags.NONE],
+					[25, 9, SegmentFlags.NONE],
+					[25, 10, SegmentFlags.NONE],
+					[17, 10, SegmentFlags.NONE],
+					[17, 7, SegmentFlags.END]
+				]
+			}
+		},
+		"cave-eblana-b2f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "30C8-0",
+			"segments": {
+				"base-0": [
+					[17, 7, SegmentFlags.START],
+					[17, 13, SegmentFlags.NONE],
+					[13, 13, SegmentFlags.NONE],
+					[13, 9, SegmentFlags.NONE],
+					[9, 9, SegmentFlags.NONE],
+					[9, 3, SegmentFlags.END]
+				]
+			}
+		},
+		"cave-eblana-b2f-weapons-armors-0": {
+			"flags": PathFlags.STEPS,
+			"map": "30CC-0",
+			"segments": {
+				"base-0": [
+					[9, 11, SegmentFlags.START],
+					[9, 5, SegmentFlags.END],
+					[5, 5, SegmentFlags.RETURN],
+					[9, 5, SegmentFlags.NONE],
+					[9, 14, SegmentFlags.END]
+				],
+				"optional-1-0": [
+					[8, 5, SegmentFlags.NONE],
+					[8, 6, SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL | SegmentFlags.END],
+					[9, 6, SegmentFlags.NONE]
+				],
+				"optional-2-0": [
+					[7, 5, SegmentFlags.NONE],
+					[7, 6, SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+					[8, 6, SegmentFlags.END],
+					[9, 6, SegmentFlags.NONE]
+				],
+				"extra-2-0": [
+					[9, 9, SegmentFlags.NONE],
+					[8, 9, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
 				]
 			}
 		},
@@ -5294,6 +5469,72 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"overworld-airship-3-5": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [96, 31, 32, 32],
+			"segments": {
+				"base-0": [
+					[128, 49, SegmentFlags.VEHICLE],
+					[127, 49, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[96, 49, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[95, 49, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-airship-3-6": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [65, 31, 32, 32],
+			"segments": {
+				"base-0": [
+					[97, 49, SegmentFlags.VEHICLE],
+					[96, 49, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[65, 49, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[64, 49, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-airship-3-7": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [34, 31, 32, 32],
+			"segments": {
+				"base-0": [
+					[66, 49, SegmentFlags.VEHICLE],
+					[65, 49, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[34, 49, SegmentFlags.VEHICLE],
+					[34, 31, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[34, 30, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-airship-3-8": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [18, 0, 32, 32],
+			"segments": {
+				"base-0": [
+					[34, 32, SegmentFlags.VEHICLE],
+					[34, 31, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[34, 0, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[34, -1, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-airship-3-9": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [18, 224, 32, 32],
+			"segments": {
+				"base-0": [
+					[34, 256, SegmentFlags.VEHICLE],
+					[34, 255, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[34, 237, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[35, 237, SegmentFlags.END | SegmentFlags.VEHICLE]
+				]
+			}
+		},
 		"overworld-agart-0": {
 			"flags": PathFlags.STEPS,
 			"map": "0000-0",
@@ -5440,6 +5681,27 @@ com.aexoden.ff4 = function()
 					[150, 49, SegmentFlags.VEHICLE],
 					[151, 49, SegmentFlags.VEHICLE],
 					[152, 49, SegmentFlags.START | SegmentFlags.END]
+				]
+			}
+		},
+		"overworld-eblan-0": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [14, 219, 32, 32],
+			"segments": {
+				"base-0": [
+					[35, 237, SegmentFlags.START],
+					[34, 237, SegmentFlags.NONE],
+					[34, 239, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[28, 239, SegmentFlags.VEHICLE],
+					[28, 237, SegmentFlags.VEHICLE],
+					[24, 237, SegmentFlags.VEHICLE],
+					[24, 232, SegmentFlags.VEHICLE],
+					[24, 231, SegmentFlags.START | SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[35, 237, SegmentFlags.NONE],
+					[36, 237, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -5887,6 +6149,82 @@ com.aexoden.ff4 = function()
 					[43, 81, SegmentFlags.VEHICLE],
 					[36, 81, SegmentFlags.VEHICLE],
 					[35, 81, SegmentFlags.START | SegmentFlags.END]
+				]
+			}
+		},
+		"pass-to-babil-north-0": {
+			"flags": PathFlags.STEPS,
+			"map": "30CA-0",
+			"segments": {
+				"base-0": [
+					[3, 27, SegmentFlags.START],
+					[3, 25, SegmentFlags.NONE],
+					[2, 25, SegmentFlags.NONE],
+					[2, 20, SegmentFlags.NONE],
+					[6, 20, SegmentFlags.NONE],
+					[6, 17, SegmentFlags.NONE],
+					[12, 17, SegmentFlags.NONE],
+					[12, 18, SegmentFlags.NONE],
+					[13, 18, SegmentFlags.NONE],
+					[13, 24, SegmentFlags.NONE],
+					[11, 24, SegmentFlags.NONE],
+					[11, 27, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[13, 23, SegmentFlags.NONE],
+					[12, 23, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				]
+			}
+		},
+		"pass-to-babil-south-0": {
+			"flags": PathFlags.STEPS,
+			"map": "30C9-0",
+			"segments": {
+				"base-0": [
+					[7, 29, SegmentFlags.START],
+					[7, 28, SegmentFlags.NONE],
+					[4, 28, SegmentFlags.NONE],
+					[4, 25, SegmentFlags.NONE],
+					[2, 25, SegmentFlags.NONE],
+					[2, 22, SegmentFlags.NONE],
+					[1, 22, SegmentFlags.NONE],
+					[1, 18, SegmentFlags.NONE],
+					[2, 18, SegmentFlags.NONE],
+					[2, 11, SegmentFlags.NONE],
+					[6, 11, SegmentFlags.NONE],
+					[6, 8, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[6, 11, SegmentFlags.NONE],
+					[6, 12, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"pass-to-babil-south-1": {
+			"flags": PathFlags.STEPS,
+			"map": "30C9-0",
+			"segments": {
+				"base-0": [
+					[15, 8, SegmentFlags.START],
+					[15, 20, SegmentFlags.NONE],
+					[22, 20, SegmentFlags.NONE],
+					[22, 28, SegmentFlags.NONE],
+					[24, 28, SegmentFlags.NONE],
+					[24, 29, SegmentFlags.NONE],
+					[26, 29, SegmentFlags.NONE],
+					[26, 17, SegmentFlags.NONE],
+					[25, 17, SegmentFlags.NONE],
+					[25, 15, SegmentFlags.NONE],
+					[23, 15, SegmentFlags.NONE],
+					[23, 7, SegmentFlags.NONE],
+					[22, 7, SegmentFlags.NONE],
+					[22, 5, SegmentFlags.NONE],
+					[25, 5, SegmentFlags.NONE],
+					[25, 3, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[25, 5, SegmentFlags.NONE],
+					[26, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
