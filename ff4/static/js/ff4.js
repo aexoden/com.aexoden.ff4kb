@@ -565,7 +565,18 @@ com.aexoden.ff4 = function()
 			"cave-eblana-b2f-1",
 			"pass-to-babil-south-0",
 			"pass-to-babil-north-0",
-			"pass-to-babil-south-1"
+			"pass-to-babil-south-1",
+			"pass-to-babil-north-1",
+			"pass-to-babil-north-2",
+			"pass-to-babil-north-save-room-0",
+			"pass-to-babil-north-3",
+			"tower-of-babil-1f-upper-0",
+			"tower-of-babil-b2f-0",
+			"tower-of-babil-b3f-0",
+			"tower-of-babil-b4f-0",
+			"tower-of-babil-b3f-1",
+			"tower-of-babil-b4f-1",
+			"tower-of-babil-b5f-0"
 		]
 	};
 
@@ -2079,6 +2090,125 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"pass-to-babil-north-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"pass-to-babil-north-1": {
+					"index": "0",
+					"location": "Pass to Bab-il (north) [east side]",
+					"disambiguation": " before Edge joins"
+				}
+			}
+		},
+		"pass-to-babil-north-2": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"pass-to-babil-north-2": {
+					"index": "0",
+					"location": "Pass to Bab-il (north) [east side] [before Save Room]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"pass-to-babil-north-3": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"pass-to-babil-north-3": {
+					"index": "0",
+					"location": "Pass to Bab-il (north) [east side] [after Save Room]",
+					"disambiguation": " before Edge joins"
+				}
+			}
+		},
+		"pass-to-babil-north-4": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"pass-to-babil-north-1": {
+					"index": "1",
+					"location": "Pass to Bab-il (north) [east side]",
+					"disambiguation": " after Edge joins"
+				}
+			}
+		},
+		"pass-to-babil-north-5": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"pass-to-babil-north-3": {
+					"index": "1",
+					"location": "Pass to Bab-il (north) [east side] [after Save Room]",
+					"disambiguation": " after Edge joins"
+				}
+			}
+		},
+		"pass-to-babil-north-choice-0": {
+			"type": VariableFlags.CHOICE,
+			"descriptions": {
+				1: "Enter the Save Room in Pass to Bab-il (north)."
+			},
+			"paths": {
+				0: {
+					"pass-to-babil-north-2": { "enabled": false },
+					"pass-to-babil-north-save-room-0": { "enabled": false },
+					"pass-to-babil-north-3": { "enabled": false }
+				},
+				1: {
+					"pass-to-babil-north-1": { "enabled": false },
+					"pass-to-babil-north-2": {
+						"enabled": true,
+						"index": "0",
+						"location": "Pass to Bab-il (north) [east side]",
+						"instruction": "Enter the Save Room"
+					}
+				}
+			}
+		},
+		"pass-to-babil-north-choice-1": {
+			"type": VariableFlags.CHOICE,
+			"descriptions": {
+				0: "Unequip the Dwarf Axe during the menu after Edge joins.",
+				1: "Unequip the Dwarf Axe immediately before the K.Eblan/Q.Eblan battle."
+			},
+			"paths": {
+				0: {
+					"pass-to-babil-north-1": {
+						"enabled": true,
+						"index": "1",
+						"location": "Pass to Bab-il (north) [east side]",
+						"instruction": "Unequip the Dwarf Axe during the menu after Edge joins"
+					},
+					"pass-to-babil-north-3": {
+						"enabled": true,
+						"index": "1",
+						"location": "Pass to Bab-il (north) [east side]",
+						"instruction": "Unequip the Dwarf Axe during the menu after Edge joins"
+					}
+				},
+				1: {
+					"tower-of-babil-b5f-0": {
+						"enabled": true,
+						"index": "0",
+						"location": "Tower of Bab-il B5F",
+						"instruction": "Unequip the Dwarf Axe immediately before the K.Eblan/Q.Eblan battle"
+					}
+				}
+			}
+		},
+		"pass-to-babil-north-save-room-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"pass-to-babil-north-save-room-0": {
+					"index": "0",
+					"location": "Pass to Bab-il (north) Save Room",
+					"disambiguation": ""
+				}
+			}
+		},
 		"pass-to-babil-south-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -2145,7 +2275,7 @@ com.aexoden.ff4 = function()
 		"toroian-castle-1f-choice-0": {
 			"type": VariableFlags.CHOICE,
 			"descriptions": {
-				1: "Enter the Extra Step Area in Toroian Castle 1F [after Cave Magnes]"
+				1: "Enter the Extra Step Area in Toroian Castle 1F [after Cave Magnes]."
 			},
 			"paths": {
 				0: {
@@ -2169,6 +2299,17 @@ com.aexoden.ff4 = function()
 				"tower-of-babil-1f-0": {
 					"index": "0",
 					"location": "Tower of Bab-il 1F [before Lugae]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-babil-1f-upper-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-1f-upper-0": {
+					"index": "1",
+					"location": "Tower of Bab-il 1F [after Edge joins]",
 					"disambiguation": ""
 				}
 			}
@@ -2346,6 +2487,108 @@ com.aexoden.ff4 = function()
 					"index": "0",
 					"location": "Tower of Bab-il 8F [after Lugae]",
 					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-babil-b2f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-b2f-0": {
+					"index": "0",
+					"location": "Tower of Bab-il B2F",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-babil-b3f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-b3f-0": {
+					"index": "0",
+					"location": "Tower of Bab-il B3F [south side]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-babil-b3f-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-b3f-1": {
+					"index": "0",
+					"location": "Tower of Babil B3F [north side]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-babil-b4f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-b4f-0": {
+					"index": "0",
+					"location": "Tower of Bab-il B4F [large southwest room]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-babil-b4f-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-b4f-1": {
+					"index": "0",
+					"location": "Tower of Bab-il B4F [small northeast room]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-babil-b5f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-b5f-0": {
+					"index": "0",
+					"location": "Tower of Bab-il B5F",
+					"disambiguation": " before the boss battles"
+				}
+			}
+		},
+		"tower-of-babil-b5f-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-b5f-0": {
+					"index": "1",
+					"location": "Tower of Bab-il B5F",
+					"disambiguation": " after the boss battles"
+				}
+			}
+		},
+		"tower-of-babil-b5f-choice-0": {
+			"type": VariableFlags.CHOICE,
+			"descriptions": {
+				0: "Equip the Dwarf Axe when removing the Strength Ring.",
+				1: "Equip the Dwarf Axe immediately after the Rubicant battle."
+			},
+			"paths": {
+				0: {
+					"tower-of-babil-b5f-0": {
+						"enabled": true,
+						"index": "1",
+						"location": "Tower of Bab-il B5F",
+						"instruction": "Equip the Dwarf Axe LATER"
+					}
+				},
+				1: {
+					"tower-of-babil-b5f-0": {
+						"enabled": true,
+						"index": "1",
+						"location": "Tower of Bab-il B5F",
+						"instruction": "Equip the Dwarf Axe immediately after the Rubicant battle"
+					}
 				}
 			}
 		},
@@ -2790,7 +3033,22 @@ com.aexoden.ff4 = function()
 			107: ["cave-eblana-b2f-0"],
 			108: ["pass-to-babil-south-0"],
 			109: ["pass-to-babil-north-0"],
-			110: ["pass-to-babil-south-1"]
+			110: ["pass-to-babil-south-1"],
+			111: ["pass-to-babil-north-choice-0"],
+			112: ["pass-to-babil-north-1", "pass-to-babil-north-2"],
+			113: ["pass-to-babil-north-save-room-0"],
+			114: ["pass-to-babil-north-3"],
+			115: ["pass-to-babil-north-choice-1"],
+			116: ["pass-to-babil-north-4", "pass-to-babil-north-5"],
+			117: ["tower-of-babil-1f-upper-0"],
+			118: ["tower-of-babil-b2f-0"],
+			119: ["tower-of-babil-b3f-0"],
+			120: ["tower-of-babil-b4f-0"],
+			121: ["tower-of-babil-b3f-1"],
+			122: ["tower-of-babil-b4f-1"],
+			123: ["tower-of-babil-b5f-0"],
+			124: ["tower-of-babil-b5f-choice-0"],
+			125: ["tower-of-babil-b5f-1"]
 		}
 	};
 
@@ -6176,6 +6434,98 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"pass-to-babil-north-1": {
+			"flags": PathFlags.STEPS,
+			"map": "30CA-0",
+			"segments": {
+				"base-0": [
+					[26, 25, SegmentFlags.START],
+					[26, 24, SegmentFlags.NONE],
+					[27, 24, SegmentFlags.NONE],
+					[27, 18, SegmentFlags.NONE],
+					[26, 18, SegmentFlags.NONE],
+					[26, 12, SegmentFlags.NONE],
+					[27, 12, SegmentFlags.NONE],
+					[27, 8, SegmentFlags.NONE],
+					[24, 8, SegmentFlags.END]
+				],
+				"base-1": [
+					[22, 6, SegmentFlags.START],
+					[22, 2, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[27, 8, SegmentFlags.NONE],
+					[28, 8, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-1": [
+					[22, 4, SegmentFlags.NONE],
+					[23, 4, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"pass-to-babil-north-2": {
+			"flags": PathFlags.STEPS,
+			"map": "30CA-0",
+			"segments": {
+				"base-0": [
+					[26, 25, SegmentFlags.START],
+					[26, 24, SegmentFlags.NONE],
+					[27, 24, SegmentFlags.NONE]
+				],
+				"alternate-0": [
+					[27, 24, SegmentFlags.NONE],
+					[29, 24, SegmentFlags.NONE],
+					[29, 23, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[29, 24, SegmentFlags.NONE],
+					[30, 24, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"pass-to-babil-north-3": {
+			"flags": PathFlags.STEPS,
+			"map": "30CA-0",
+			"segments": {
+				"base-0": [
+					[29, 23, SegmentFlags.START],
+					[29, 24, SegmentFlags.NONE],
+					[27, 24, SegmentFlags.NONE],
+					[27, 18, SegmentFlags.NONE],
+					[26, 18, SegmentFlags.NONE],
+					[26, 12, SegmentFlags.NONE],
+					[27, 12, SegmentFlags.NONE],
+					[27, 8, SegmentFlags.NONE],
+					[24, 8, SegmentFlags.END]
+				],
+				"base-1": [
+					[22, 6, SegmentFlags.START],
+					[22, 2, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[27, 8, SegmentFlags.NONE],
+					[28, 8, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-1": [
+					[22, 4, SegmentFlags.NONE],
+					[23, 4, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"pass-to-babil-north-save-room-0": {
+			"flags": PathFlags.STEPS,
+			"map": "30CD-0",
+			"segments": {
+				"base-0": [
+					[4, 11, SegmentFlags.START],
+					[4, 12, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[4, 11, SegmentFlags.NONE],
+					[4, 10, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
 		"pass-to-babil-south-0": {
 			"flags": PathFlags.STEPS,
 			"map": "30C9-0",
@@ -6373,6 +6723,43 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[15, 10, SegmentFlags.NONE],
 					[16, 10, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-babil-1f-upper-0": {
+			"flags": PathFlags.STEPS,
+			"map": "30A7-0",
+			"segments": {
+				"base-0": [
+					[28, 17, SegmentFlags.START],
+					[28, 6, SegmentFlags.END]
+				],
+				"base-1": [
+					[25, 6, SegmentFlags.START],
+					[22, 6, SegmentFlags.NONE],
+					[22, 10, SegmentFlags.NONE],
+					[14, 10, SegmentFlags.NONE],
+					[14, 6, SegmentFlags.NONE],
+					[12, 6, SegmentFlags.NONE],
+					[12, 4, SegmentFlags.NONE],
+					[6, 4, SegmentFlags.NONE],
+					[6, 5, SegmentFlags.NONE],
+					[4, 5, SegmentFlags.NONE],
+					[4, 6, SegmentFlags.NONE],
+					[3, 6, SegmentFlags.NONE],
+					[3, 10, SegmentFlags.NONE],
+					[7, 10, SegmentFlags.NONE],
+					[7, 13, SegmentFlags.NONE],
+					[5, 13, SegmentFlags.NONE],
+					[5, 21, SegmentFlags.NONE],
+					[12, 21, SegmentFlags.NONE],
+					[12, 20, SegmentFlags.NONE],
+					[21, 20, SegmentFlags.NONE],
+					[21, 19, SegmentFlags.END]
+				],
+				"extra-2-1": [
+					[21, 20, SegmentFlags.NONE],
+					[22, 20, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -6725,7 +7112,146 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
-		 "tower-of-zot-1f-0": {
+		"tower-of-babil-b2f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "30A8-0",
+			"segments": {
+				"base-0": [
+					[21, 20, SegmentFlags.START],
+					[27, 20, SegmentFlags.NONE],
+					[27, 8, SegmentFlags.NONE],
+					[25, 8, SegmentFlags.NONE],
+					[25, 6, SegmentFlags.NONE],
+					[24, 6, SegmentFlags.NONE],
+					[24, 5, SegmentFlags.NONE],
+					[22, 5, SegmentFlags.NONE],
+					[22, 4, SegmentFlags.NONE],
+					[16, 4, SegmentFlags.NONE],
+					[16, 6, SegmentFlags.NONE],
+					[12, 6, SegmentFlags.NONE],
+					[12, 4, SegmentFlags.NONE],
+					[6, 4, SegmentFlags.NONE],
+					[6, 5, SegmentFlags.NONE],
+					[4, 5, SegmentFlags.NONE],
+					[4, 6, SegmentFlags.NONE],
+					[3, 6, SegmentFlags.NONE],
+					[3, 8, SegmentFlags.NONE],
+					[1, 8, SegmentFlags.NONE],
+					[1, 20, SegmentFlags.NONE],
+					[7, 20, SegmentFlags.NONE],
+					[7, 19, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[7, 20, SegmentFlags.NONE],
+					[8, 20, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-babil-b3f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "30A9-0",
+			"segments": {
+				"base-0": [
+					[6, 20, SegmentFlags.START],
+					[6, 26, SegmentFlags.NONE],
+					[13, 26, SegmentFlags.NONE],
+					[13, 25, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[13, 26, SegmentFlags.NONE],
+					[14, 26, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-babil-b3f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "30A9-0",
+			"segments": {
+				"base-0": [
+					[2, 8, SegmentFlags.START],
+					[5, 8, SegmentFlags.NONE],
+					[5, 4, SegmentFlags.NONE],
+					[8, 4, SegmentFlags.NONE],
+					[8, 10, SegmentFlags.NONE],
+					[10, 10, SegmentFlags.NONE],
+					[10, 6, SegmentFlags.NONE],
+					[17, 6, SegmentFlags.NONE],
+					[17, 10, SegmentFlags.NONE],
+					[24, 10, SegmentFlags.NONE],
+					[24, 7, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[24, 8, SegmentFlags.NONE],
+					[25, 8, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-babil-b4f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "30AA-0",
+			"segments": {
+				"base-0": [
+					[14, 26, SegmentFlags.START],
+					[20, 26, SegmentFlags.NONE],
+					[20, 24, SegmentFlags.NONE],
+					[23, 24, SegmentFlags.NONE],
+					[23, 14, SegmentFlags.NONE],
+					[16, 14, SegmentFlags.NONE],
+					[16, 6, SegmentFlags.NONE],
+					[11, 6, SegmentFlags.NONE],
+					[11, 11, SegmentFlags.NONE],
+					[10, 11, SegmentFlags.NONE],
+					[10, 16, SegmentFlags.NONE],
+					[3, 16, SegmentFlags.NONE],
+					[3, 7, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[10, 16, SegmentFlags.NONE],
+					[11, 16, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-babil-b4f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "30AA-0",
+			"segments": {
+				"base-0": [
+					[23, 8, SegmentFlags.START],
+					[20, 8, SegmentFlags.NONE],
+					[20, 7, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[20, 8, SegmentFlags.NONE],
+					[19, 8, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				]
+			}
+		},
+		"tower-of-babil-b5f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "30AC-0",
+			"segments": {
+				"base-0": [
+					[22, 8, SegmentFlags.START],
+					[21, 8, SegmentFlags.NONE],
+					[21, 24, SegmentFlags.NONE],
+					[14, 24, SegmentFlags.NONE],
+					[14, 20, SegmentFlags.END]
+				],
+				"base-1": [
+					[14, 17, SegmentFlags.START],
+					[14, 15, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[14, 24, SegmentFlags.NONE],
+					[13, 24, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				],
+				"extra-2-1": [
+					[14, 17, SegmentFlags.NONE],
+					[15, 17, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-zot-1f-0": {
 			"flags": PathFlags.STEPS,
 			"map": "3098-0",
 			"segments": {
@@ -7421,6 +7947,10 @@ com.aexoden.ff4 = function()
 							for (var j = 0; j < data.variables[route][index].length; j++) {
 								var varData = data.variableData[data.variables[route][index][j]];
 								var value = vars[index];
+
+								if (typeof value === 'undefined') {
+									value = 0
+								}
 
 								if (varData.type == VariableFlags.EXTRA) {
 									if (path in varData.paths) {
