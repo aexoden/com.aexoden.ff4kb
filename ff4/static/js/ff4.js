@@ -576,7 +576,11 @@ com.aexoden.ff4 = function()
 			"tower-of-babil-b4f-0",
 			"tower-of-babil-b3f-1",
 			"tower-of-babil-b4f-1",
-			"tower-of-babil-b5f-0"
+			"tower-of-babil-b5f-0",
+			"tower-of-babil-crystal-room-0",
+			"tower-of-babil-8f-revisit-0",
+			"tower-of-babil-7f-revisit-0",
+			"tower-of-babil-6f-revisit-0"
 		]
 	};
 
@@ -2446,6 +2450,17 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"tower-of-babil-6f-revisit-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-6f-revisit-0": {
+					"index": "0",
+					"location": "Tower of Bab-il 6F [after Rubicant]",
+					"disambiguation": ""
+				}
+			}
+		},
 		"tower-of-babil-7f-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -2468,6 +2483,17 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"tower-of-babil-7f-revisit-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-7f-revisit-0": {
+					"index": "0",
+					"location": "Tower of Bab-il 7F [after Rubicant]",
+					"disambiguation": ""
+				}
+			}
+		},
 		"tower-of-babil-8f-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -2486,6 +2512,17 @@ com.aexoden.ff4 = function()
 				"tower-of-babil-8f-1": {
 					"index": "0",
 					"location": "Tower of Bab-il 8F [after Lugae]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"tower-of-babil-8f-revisit-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-babil-8f-revisit-0": {
+					"index": "0",
+					"location": "Tower of Bab-il 8F [after Rubicant]",
 					"disambiguation": ""
 				}
 			}
@@ -3048,7 +3085,10 @@ com.aexoden.ff4 = function()
 			122: ["tower-of-babil-b4f-1"],
 			123: ["tower-of-babil-b5f-0"],
 			124: ["tower-of-babil-b5f-choice-0"],
-			125: ["tower-of-babil-b5f-1"]
+			125: ["tower-of-babil-b5f-1"],
+			126: ["tower-of-babil-8f-revisit-0"],
+			127: ["tower-of-babil-7f-revisit-0"],
+			128: ["tower-of-babil-6f-revisit-0"]
 		}
 	};
 
@@ -7030,6 +7070,30 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"tower-of-babil-6f-revisit-0": {
+			"flags": PathFlags.STEPS,
+			"map": "311F-0",
+			"segments": {
+				"base-0": [
+					[10, 5, SegmentFlags.START],
+					[10, 10, SegmentFlags.NONE],
+					[12, 10, SegmentFlags.NONE],
+					[12, 11, SegmentFlags.NONE],
+					[16, 11, SegmentFlags.NONE],
+					[16, 12, SegmentFlags.NONE],
+					[19, 12, SegmentFlags.NONE],
+					[19, 13, SegmentFlags.NONE],
+					[21, 13, SegmentFlags.NONE],
+					[21, 27, SegmentFlags.NONE],
+					[9, 27, SegmentFlags.NONE],
+					[9, 21, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[18, 27, SegmentFlags.NONE],
+					[17, 27, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
 		"tower-of-babil-7f-0": {
 			"flags": PathFlags.STEPS,
 			"map": "3127-0",
@@ -7073,6 +7137,23 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"tower-of-babil-7f-revisit-0": {
+			"flags": PathFlags.STEPS,
+			"map": "311E-0",
+			"segments": {
+				"base-0": [
+					[2, 21, SegmentFlags.START],
+					[7, 21, SegmentFlags.NONE],
+					[7, 12, SegmentFlags.NONE],
+					[10, 12, SegmentFlags.NONE],
+					[10, 4, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[10, 5, SegmentFlags.NONE],
+					[11, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
 		"tower-of-babil-8f-0": {
 			"flags": PathFlags.STEPS,
 			"map": "3128-0",
@@ -7109,6 +7190,22 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[29, 17, SegmentFlags.NONE],
 					[30, 17, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"tower-of-babil-8f-revisit-0": {
+			"flags": PathFlags.STEPS,
+			"map": "311D-0",
+			"segments": {
+				"base-0": [
+					[6, 9, SegmentFlags.START],
+					[6, 21, SegmentFlags.NONE],
+					[2, 21, SegmentFlags.NONE],
+					[2, 20, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[2, 21, SegmentFlags.NONE],
+					[1, 21, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
 				]
 			}
 		},
@@ -7223,6 +7320,16 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[20, 8, SegmentFlags.NONE],
 					[19, 8, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				]
+			}
+		},
+		"tower-of-babil-crystal-room-0": {
+			"flags": PathFlags.STEPS,
+			"map": "30AB-0",
+			"segments": {
+				"base-0": [
+					[16, 22, SegmentFlags.START],
+					[16, 20, SegmentFlags.END]
 				]
 			}
 		},
