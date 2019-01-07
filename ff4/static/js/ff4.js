@@ -580,7 +580,19 @@ com.aexoden.ff4 = function()
 			"tower-of-babil-crystal-room-0",
 			"tower-of-babil-8f-revisit-0",
 			"tower-of-babil-7f-revisit-0",
-			"tower-of-babil-6f-revisit-0"
+			"tower-of-babil-6f-revisit-0",
+			"underworld-airship-0-0",
+			"underworld-airship-0-1",
+			"underworld-castle-of-dwarves-4",
+			"castle-of-dwarves-1",
+			"castle-of-dwarves-1f-3",
+			"castle-of-dwarves-left-tower-2f-0",
+			"castle-of-dwarves-b1f-1",
+			"castle-of-dwarves-infirmary-0",
+			"underworld-castle-of-dwarves-5",
+			"underworld-airship-1-0",
+			"underworld-castle-of-dwarves-6",
+			"land-of-monsters-b1f-0"
 		]
 	};
 
@@ -889,7 +901,7 @@ com.aexoden.ff4 = function()
 		},
 		"castle-of-dwarves-0": {
 			"type": VariableFlags.EXTRA,
-			"description": "the Castle of Dwarves",
+			"description": "the Castle of Dwarves [after Golbez]",
 			"routes": {
 				1: {
 					"castle-of-dwarves-kings-room-1": 0,
@@ -1137,7 +1149,7 @@ com.aexoden.ff4 = function()
 		},
 		"castle-of-dwarves-1": {
 			"type": VariableFlags.EXTRA,
-			"description": "the Castle of Dwarves",
+			"description": "the Castle of Dwarves [after Golbez]",
 			"routes": {
 				1: {
 					"castle-of-dwarves-kings-room-2": 0,
@@ -1359,6 +1371,31 @@ com.aexoden.ff4 = function()
 				"castle-of-dwarves-dwarf-base-1": {
 					"index": "0",
 					"location": "Castle of Dwarves Dwarf Base",
+					"disambiguation": ""
+				}
+			}
+		},
+		"castle-of-dwarves-2": {
+			"type": VariableFlags.EXTRA,
+			"description": "the Castle of Dwarves [after Rubicant]",
+			"routes": {
+				1: {
+					"castle-of-dwarves-1f-3": 1
+				},
+				2: {
+					"castle-of-dwarves-1f-3": 2
+				},
+				3: {
+					"castle-of-dwarves-1f-3": 3
+				},
+				4: {
+					"castle-of-dwarves-1f-3": 4
+				}
+			},
+			"paths": {
+				"castle-of-dwarves-1f-3": {
+					"index": "0",
+					"location": "Castle of Dwarves 1F [after Rubicant]",
 					"disambiguation": ""
 				}
 			}
@@ -1708,6 +1745,17 @@ com.aexoden.ff4 = function()
 					"index": "0",
 					"location": "Fabul Right Tower 3F",
 					"disambiguation": " after talking to the King"
+				}
+			}
+		},
+		"land-of-monsters-b1f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"land-of-monsters-b1f-0": {
+					"index": "0",
+					"location": "Land of Monsters B1F",
+					"disambiguation": ""
 				}
 			}
 		},
@@ -2612,11 +2660,11 @@ com.aexoden.ff4 = function()
 			},
 			"paths": {
 				0: {
-					"tower-of-babil-b5f-0": {
+					"castle-of-dwarves-infirmary-0": {
 						"enabled": true,
-						"index": "1",
-						"location": "Tower of Bab-il B5F",
-						"instruction": "Equip the Dwarf Axe LATER"
+						"index": "0",
+						"location": "Castle of Dwarves Infirmary",
+						"instruction": "Equip the Dwarf Axe when removing the Strength Ring"
 					}
 				},
 				1: {
@@ -2724,6 +2772,17 @@ com.aexoden.ff4 = function()
 				"underworld-castle-of-dwarves-3": {
 					"index": "0",
 					"location": "Underworld (Castle of Dwarves) [after Castle of Dwarves]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"underworld-castle-of-dwarves-2": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"underworld-castle-of-dwarves-5": {
+					"index": "0",
+					"location": "Underworld (Castle of Dwarves) [after infirmary visit]",
 					"disambiguation": ""
 				}
 			}
@@ -3088,7 +3147,10 @@ com.aexoden.ff4 = function()
 			125: ["tower-of-babil-b5f-1"],
 			126: ["tower-of-babil-8f-revisit-0"],
 			127: ["tower-of-babil-7f-revisit-0"],
-			128: ["tower-of-babil-6f-revisit-0"]
+			128: ["tower-of-babil-6f-revisit-0"],
+			129: ["castle-of-dwarves-2"],
+			130: ["underworld-castle-of-dwarves-2"],
+			131: ["land-of-monsters-b1f-0"]
 		}
 	};
 
@@ -3847,6 +3909,16 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"castle-of-dwarves-1": {
+			"flags": PathFlags.NONE,
+			"map": "3107-0",
+			"segments": {
+				"base-0": [
+					[15, 30, SegmentFlags.START],
+					[15, 19, SegmentFlags.END]
+				]
+			}
+		},
 		"castle-of-dwarves-b1f-0": {
 			"flags": PathFlags.STEPS,
 			"map": "310A-0",
@@ -3858,6 +3930,17 @@ com.aexoden.ff4 = function()
 					[14, 4, SegmentFlags.END],
 					[14, 0, SegmentFlags.NONE],
 					[11, 0, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-of-dwarves-b1f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "310A-0",
+			"segments": {
+				"base-0": [
+					[1, 8, SegmentFlags.START],
+					[6, 8, SegmentFlags.NONE],
+					[6, 7, SegmentFlags.END]
 				]
 			}
 		},
@@ -3976,6 +4059,42 @@ com.aexoden.ff4 = function()
 					[11, 7, SegmentFlags.NONE],
 					[16, 7, SegmentFlags.ANNOTATE],
 					[16, 8, SegmentFlags.NONE]
+				]
+			}
+		},
+		"castle-of-dwarves-1f-3": {
+			"flags": PathFlags.STEPS,
+			"map": "3108-1",
+			"segments": {
+				"base-0": [
+					[11, 11, SegmentFlags.START],
+					[11, 8, SegmentFlags.NONE],
+					[1, 8, SegmentFlags.NONE],
+					[1, 6, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[6, 8, SegmentFlags.NONE],
+					[6, 7, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"optional-1-0": [
+					[11, 9, SegmentFlags.NONE],
+					[8, 9, SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+					[8, 8, SegmentFlags.NONE]
+				],
+				"optional-2-0": [
+					[11, 10, SegmentFlags.NONE],
+					[8, 10, SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+					[8, 8, SegmentFlags.NONE]
+				],
+				"optional-3-0": [
+					[11, 11, SegmentFlags.NONE],
+					[8, 11, SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+					[8, 8, SegmentFlags.NONE]
+				],
+				"optional-4-0": [
+					[11, 11, SegmentFlags.NONE],
+					[6, 11, SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+					[6, 8, SegmentFlags.NONE]
 				]
 			}
 		},
@@ -4105,6 +4224,27 @@ com.aexoden.ff4 = function()
 				"base-0": [
 					[10, 8, SegmentFlags.START],
 					[10, 15, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-of-dwarves-infirmary-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3112-0",
+			"segments": {
+				"base-0": [
+					[9, 7, SegmentFlags.START],
+					[9, 5, SegmentFlags.NONE],
+					[5, 5, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-of-dwarves-left-tower-2f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3111-0",
+			"segments": {
+				"base-0": [
+					[16, 12, SegmentFlags.START],
+					[16, 3, SegmentFlags.END]
 				]
 			}
 		},
@@ -5147,6 +5287,30 @@ com.aexoden.ff4 = function()
 					[18, 14, SegmentFlags.NONE],
 					[20, 14, SegmentFlags.NONE],
 					[20, 17, SegmentFlags.END]
+				]
+			}
+		},
+		"land-of-monsters-b1f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3136-0",
+			"segments": {
+				"base-0": [
+					[17, 10, SegmentFlags.START],
+					[17, 22, SegmentFlags.NONE],
+					[11, 22, SegmentFlags.NONE],
+					[11, 21, SegmentFlags.NONE],
+					[10, 21, SegmentFlags.NONE],
+					[10, 14, SegmentFlags.NONE],
+					[3, 14, SegmentFlags.NONE],
+					[3, 17, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[17, 12, SegmentFlags.NONE],
+					[17, 11, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[3, 15, SegmentFlags.NONE],
+					[4, 15, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -7526,6 +7690,47 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"underworld-airship-0-0": {
+			"flags": PathFlags.STEPS,
+			"map": "1000-0",
+			"mapRange": [32, 15, 32, 32],
+			"segments": {
+				"base-0": [
+					[48, 16, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[48, 46, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[48, 47, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"underworld-airship-0-1": {
+			"flags": PathFlags.STEPS,
+			"map": "1000-0",
+			"mapRange": [48, 46, 32, 32],
+			"segments": {
+				"base-0": [
+					[48, 45, SegmentFlags.VEHICLE],
+					[48, 46, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[48, 62, SegmentFlags.VEHICLE],
+					[55, 62, SegmentFlags.VEHICLE],
+					[55, 76, SegmentFlags.VEHICLE],
+					[79, 76, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[80, 76, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"underworld-airship-1-0": {
+			"flags": PathFlags.STEPS,
+			"map": "1000-0",
+			"mapRange": [38, 66, 32, 32],
+			"segments": {
+				"base-0": [
+					[70, 82, SegmentFlags.VEHICLE],
+					[69, 82, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[38, 82, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[37, 82, SegmentFlags.VEHICLE]
+				]
+			}
+		},
 		"underworld-castle-of-dwarves-0": {
 			"flags": PathFlags.STEPS,
 			"map": "1000-0",
@@ -7599,6 +7804,53 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[49, 16, SegmentFlags.NONE],
 					[49, 17, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"underworld-castle-of-dwarves-4": {
+			"flags": PathFlags.STEPS,
+			"map": "1000-0",
+			"mapRange": [72, 63, 32, 32],
+			"segments": {
+				"base-0": [
+					[71, 76, SegmentFlags.VEHICLE],
+					[79, 76, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[86, 76, SegmentFlags.VEHICLE],
+					[86, 82, SegmentFlags.VEHICLE],
+					[98, 82, SegmentFlags.VEHICLE],
+					[99, 82, SegmentFlags.START | SegmentFlags.END]
+				]
+			}
+		},
+		"underworld-castle-of-dwarves-5": {
+			"flags": PathFlags.STEPS,
+			"map": "1000-0",
+			"mapRange": [69, 66, 32, 32],
+			"segments": {
+				"base-0": [
+					[99, 82, SegmentFlags.START],
+					[98, 82, SegmentFlags.NONE],
+					[69, 82, SegmentFlags.START | SegmentFlags.END | SegmentFlags.VEHICLE],
+					[68, 82, SegmentFlags.VEHICLE]
+				],
+				"extra-2-0": [
+					[98, 82, SegmentFlags.NONE],
+					[98, 81, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"underworld-castle-of-dwarves-6": {
+			"flags": PathFlags.STEPS,
+			"map": "1000-0",
+			"mapRange": [11, 68, 32, 32],
+			"segments": {
+				"base-0": [
+					[43, 82, SegmentFlags.VEHICLE],
+					[38, 82, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[29, 82, SegmentFlags.VEHICLE],
+					[29, 87, SegmentFlags.VEHICLE],
+					[27, 87, SegmentFlags.VEHICLE],
+					[27, 86, SegmentFlags.START | SegmentFlags.END]
 				]
 			}
 		},
