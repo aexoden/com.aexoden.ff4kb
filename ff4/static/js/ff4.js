@@ -591,8 +591,17 @@ com.aexoden.ff4 = function()
 			"castle-of-dwarves-infirmary-0",
 			"underworld-castle-of-dwarves-5",
 			"underworld-airship-1-0",
-			"underworld-castle-of-dwarves-6",
-			"land-of-monsters-b1f-0"
+			"underworld-sealed-cave-0",
+			"land-of-monsters-b1f-0",
+			"land-of-monsters-b2f-0",
+			"land-of-monsters-b3f-0",
+			"land-of-monsters-b3f-1",
+			"land-of-monsters-b3f-2",
+			"land-of-monsters-b4f-0",
+			"town-of-monsters-0",
+			"land-of-monsters-b4f-1",
+			"underworld-sealed-cave-1",
+			"sealed-cave-0"
 		]
 	};
 
@@ -1759,6 +1768,78 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"land-of-monsters-b2f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"land-of-monsters-b2f-0": {
+					"index": "0",
+					"location": "Land of Monsters B2F",
+					"disambiguation": ""
+				}
+			}
+		},
+		"land-of-monsters-b3f-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"land-of-monsters-b3f-0": {
+					"index": "0",
+					"location": "Land of Monsters B3F",
+					"disambiguation": ""
+				},
+				"land-of-monsters-b3f-1": {
+					"index": "0",
+					"location": "Land of Monsters B3F",
+					"disambiguation": ""
+				},
+				"land-of-monsters-b3f-2": {
+					"index": "0",
+					"location": "Land of Monsters B3F",
+					"disambiguation": ""
+				}
+			}
+		},
+		"land-of-monsters-b3f-choice-0": {
+			"type": VariableFlags.CHOICE,
+			"descriptions": {
+				0: "Take the direct route in Land of Monsters B3F.",
+				1: "Take the partial secret passage in Land of Monsters B3F.",
+				2: "Take the full secret passage in Land of Monsters B3F."
+			},
+			"paths": {
+				0: {
+					"land-of-monsters-b3f-0": {
+						"enabled": true,
+						"index": "0",
+						"location": "Land of Monsters B3F",
+						"instruction": "Take the direct route"
+					},
+					"land-of-monsters-b3f-1": { "enabled": false },
+					"land-of-monsters-b3f-2": { "enabled": false }
+				},
+				1: {
+					"land-of-monsters-b3f-0": { "enabled": false },
+					"land-of-monsters-b3f-1": {
+						"enabled": true,
+						"index": "0",
+						"location": "Land of Monsters B3F",
+						"instruction": "Take the partial secret passage"
+					},
+					"land-of-monsters-b3f-2": { "enabled": false }
+				},
+				2: {
+					"land-of-monsters-b3f-0": { "enabled": false },
+					"land-of-monsters-b3f-1": { "enabled": false },
+					"land-of-monsters-b3f-2": {
+						"enabled": true,
+						"index": "0",
+						"location": "Land of Monsters B3F",
+						"instruction": "Take the full secret passage"
+					}
+				}
+			}
+		},
 		"mt-hobs-east-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -2283,6 +2364,17 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"sealed-cave-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"sealed-cave-0": {
+					"index": "0",
+					"location": "Sealed Cave",
+					"disambiguation": ""
+				}
+			}
+		},
 		"serpent-road-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -2787,6 +2879,17 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"underworld-sealed-cave-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"underworld-sealed-cave-1": {
+					"index": "0",
+					"location": "Underworld (Sealed Cave) [before Sealed Cave]",
+					"disambiguation": ""
+				}
+			}
+		},
 		"waterfalls-b1f-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -3150,7 +3253,12 @@ com.aexoden.ff4 = function()
 			128: ["tower-of-babil-6f-revisit-0"],
 			129: ["castle-of-dwarves-2"],
 			130: ["underworld-castle-of-dwarves-2"],
-			131: ["land-of-monsters-b1f-0"]
+			131: ["land-of-monsters-b1f-0"],
+			132: ["land-of-monsters-b2f-0"],
+			133: ["land-of-monsters-b3f-choice-0"],
+			134: ["land-of-monsters-b3f-0"],
+			135: ["underworld-sealed-cave-0"],
+			136: ["sealed-cave-0"]
 		}
 	};
 
@@ -5314,6 +5422,136 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"land-of-monsters-b2f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3137-0",
+			"segments": {
+				"base-0": [
+					[4, 19, SegmentFlags.START],
+					[4, 23, SegmentFlags.NONE],
+					[8, 23, SegmentFlags.NONE],
+					[8, 22, SegmentFlags.NONE],
+					[9, 22, SegmentFlags.NONE],
+					[9, 20, SegmentFlags.NONE],
+					[13, 20, SegmentFlags.NONE],
+					[13, 19, SegmentFlags.NONE],
+					[14, 19, SegmentFlags.NONE],
+					[14, 11, SegmentFlags.NONE],
+					[20, 11, SegmentFlags.NONE],
+					[20, 12, SegmentFlags.NONE],
+					[24, 12, SegmentFlags.NONE],
+					[24, 13, SegmentFlags.NONE],
+					[27, 13, SegmentFlags.NONE],
+					[27, 14, SegmentFlags.NONE],
+					[28, 14, SegmentFlags.NONE],
+					[28, 16, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[18, 11, SegmentFlags.NONE],
+					[18, 10, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"land-of-monsters-b3f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3138-0",
+			"segments": {
+				"base-0": [
+					[11, 2, SegmentFlags.START],
+					[11, 6, SegmentFlags.NONE],
+					[4, 6, SegmentFlags.NONE],
+					[4, 14, SegmentFlags.NONE],
+					[11, 14, SegmentFlags.NONE],
+					[11, 22, SegmentFlags.NONE],
+					[18, 22, SegmentFlags.NONE],
+					[18, 14, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[18, 15, SegmentFlags.NONE],
+					[19, 15, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"land-of-monsters-b3f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3138-0",
+			"segments": {
+				"base-0": [
+					[11, 2, SegmentFlags.START],
+					[11, 6, SegmentFlags.NONE],
+					[4, 6, SegmentFlags.NONE],
+					[4, 14, SegmentFlags.NONE]
+				],
+				"alternate-0": [
+					[4, 14, SegmentFlags.NONE],
+					[0, 14, SegmentFlags.NONE],
+					[0, 26, SegmentFlags.NONE],
+					[29, 26, SegmentFlags.NONE],
+					[29, 22, SegmentFlags.NONE],
+					[18, 22, SegmentFlags.NONE],
+					[18, 14, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[18, 15, SegmentFlags.NONE],
+					[19, 15, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"land-of-monsters-b3f-2": {
+			"flags": PathFlags.STEPS,
+			"map": "3138-0",
+			"segments": {
+				"base-0": [
+					[11, 2, SegmentFlags.START],
+					[11, 6, SegmentFlags.NONE],
+					[4, 6, SegmentFlags.NONE],
+					[4, 14, SegmentFlags.NONE]
+				],
+				"alternate-0": [
+					[4, 14, SegmentFlags.NONE],
+					[0, 14, SegmentFlags.NONE],
+					[0, 26, SegmentFlags.NONE],
+					[29, 26, SegmentFlags.NONE],
+					[29, 14, SegmentFlags.NONE],
+					[18, 14, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[19, 14, SegmentFlags.NONE],
+					[18, 14, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"land-of-monsters-b4f-0": {
+			"flags": PathFlags.STEPS,
+			"map": "313A-0",
+			"segments": {
+				"base-0": [
+					[12, 14, SegmentFlags.START],
+					[9, 14, SegmentFlags.NONE],
+					[9, 11, SegmentFlags.NONE],
+					[4, 11, SegmentFlags.NONE],
+					[4, 5, SegmentFlags.NONE],
+					[6, 5, SegmentFlags.NONE],
+					[6, 4, SegmentFlags.NONE],
+					[7, 4, SegmentFlags.NONE],
+					[7, 3, SegmentFlags.NONE],
+					[14, 3, SegmentFlags.NONE],
+					[14, 4, SegmentFlags.END]
+				]
+			}
+		},
+		"land-of-monsters-b4f-1": {
+			"flags": PathFlags.STEPS,
+			"map": "313A-0",
+			"segments": {
+				"base-0": [
+					[14, 4, SegmentFlags.START],
+					[14, 6, SegmentFlags.NONE],
+					[20, 6, SegmentFlags.NONE],
+					[20, 7, SegmentFlags.END]
+				]
+			}
+		},
 		"mt-hobs-east-0": {
 			"flags": PathFlags.STEPS,
 			"map": "3080-0",
@@ -6782,6 +7020,24 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"sealed-cave-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3144-0",
+			"segments": {
+				"base-0": [
+					[4, 10, SegmentFlags.START],
+					[4, 4, SegmentFlags.END]
+				],
+				"base-1": [
+					[4, 8, SegmentFlags.START],
+					[4, 11, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[4, 9, SegmentFlags.NONE],
+					[5, 9, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
 		"toroian-castle-0": {
 			"flags": PathFlags.NONE,
 			"map": "3027-0",
@@ -7690,6 +7946,17 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"town-of-monsters-0": {
+			"flags": PathFlags.STEPS,
+			"map": "313C-0",
+			"segments": {
+				"base-0": [
+					[28, 11, SegmentFlags.START],
+					[28, 12, SegmentFlags.RETURN],
+					[28, 11, SegmentFlags.END]
+				]
+			}
+		},
 		"underworld-airship-0-0": {
 			"flags": PathFlags.STEPS,
 			"map": "1000-0",
@@ -7839,7 +8106,7 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
-		"underworld-castle-of-dwarves-6": {
+		"underworld-sealed-cave-0": {
 			"flags": PathFlags.STEPS,
 			"map": "1000-0",
 			"mapRange": [11, 68, 32, 32],
@@ -7851,6 +8118,24 @@ com.aexoden.ff4 = function()
 					[29, 87, SegmentFlags.VEHICLE],
 					[27, 87, SegmentFlags.VEHICLE],
 					[27, 86, SegmentFlags.START | SegmentFlags.END]
+				]
+			}
+		},
+		"underworld-sealed-cave-1": {
+			"flags": PathFlags.STEPS,
+			"map": "1000-0",
+			"mapRange": [20, 82, 32, 32],
+			"segments": {
+				"base-0": [
+					[27, 86, SegmentFlags.START],
+					[27, 87, SegmentFlags.NONE],
+					[27, 110, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[46, 110, SegmentFlags.VEHICLE],
+					[46, 109, SegmentFlags.START | SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[46, 110, SegmentFlags.NONE],
+					[47, 110, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
