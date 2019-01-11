@@ -601,7 +601,48 @@ com.aexoden.ff4 = function()
 			"town-of-monsters-0",
 			"land-of-monsters-b4f-1",
 			"underworld-sealed-cave-1",
-			"sealed-cave-0"
+			"sealed-cave-0",
+			"underworld-sealed-cave-2",
+			"underworld-castle-of-dwarves-6",
+			"castle-of-dwarves-1",
+			"castle-of-dwarves-1f-4",
+			"castle-of-dwarves-kings-room-3",
+			"underworld-castle-of-dwarves-7",
+			"underworld-airship-2-0",
+			"underworld-airship-2-1",
+			"overworld-airship-4-0",
+			"overworld-airship-4-1",
+			"overworld-eblan-1",
+			"overworld-airship-4-2",
+			"overworld-airship-4-3",
+			"overworld-airship-4-4",
+			"overworld-airship-4-5",
+			"overworld-silvera-0",
+			"grotto-adamant-0",
+			"overworld-silvera-1",
+			"overworld-airship-5-0",
+			"overworld-airship-5-1",
+			"overworld-airship-5-2",
+			"overworld-airship-5-3",
+			"mysidia-6",
+			"overworld-airship-6-0",
+			"overworld-airship-6-1",
+			"underworld-airship-3-0",
+			"underworld-airship-3-1",
+			"underworld-airship-3-2",
+			"underworld-kokkol-0",
+			"kokkol-the-smiths-0",
+			"kokkol-the-smiths-1f-0",
+			"kokkol-the-smiths-2f-0",
+			"kokkol-the-smiths-1f-1",
+			"kokkol-the-smiths-1",
+			"underworld-kokkol-1",
+			"underworld-airship-4-0",
+			"underworld-airship-4-1",
+			"underworld-airship-4-2",
+			"overworld-airship-7-0",
+			"overworld-mysidia-3",
+			"big-whale-0"
 		]
 	};
 
@@ -1409,6 +1450,18 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"castle-of-dwarves-3": {
+			"type": VariableFlags.EXTRA,
+			"description": "the Castle of Dwarves [after Sealed Cave]",
+			"routes": {},
+			"paths": {
+				"castle-of-dwarves-kings-room-3": {
+					"index": "0",
+					"location": "Castle of Dwarves 1F [after Sealed Cave]",
+					"disambiguation": ""
+				}
+			}
+		},
 		"castle-of-dwarves-choice-0": {
 			"type": VariableFlags.CHOICE,
 			"descriptions": {
@@ -1757,6 +1810,17 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"grotto-adamant-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"grotto-adamant-0": {
+					"index": "0",
+					"location": "Grotto Adamant",
+					"disambiguation": ""
+				}
+			}
+		},
 		"land-of-monsters-b1f-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -1880,7 +1944,7 @@ com.aexoden.ff4 = function()
 				"mt-hobs-west-0": {
 					"index": "0",
 					"location": "Mt.Hobs-West",
-					"disambiguation": ""
+					"disambiguaEdward Edwardtion": ""
 				}
 			}
 		},
@@ -2048,7 +2112,18 @@ com.aexoden.ff4 = function()
 			"paths": {
 				"overworld-eblan-0": {
 					"index": "0",
-					"location": "Overworld (Eblan)",
+					"location": "Overworld (Eblan) [before Edge joins]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"overworld-eblan-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"overworld-eblan-1": {
+					"index": "0",
+					"location": "Overworld (Eblan) [switching airships]",
 					"disambiguation": ""
 				}
 			}
@@ -2138,6 +2213,39 @@ com.aexoden.ff4 = function()
 					"index": "0",
 					"location": "Overworld (Mysidia) [after Mysidia]",
 					"disambiguation": " before heading more than five tiles east, because the encounter rate goes up"
+				}
+			}
+		},
+		"overworld-mysidia-2": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"overworld-mysidia-3": {
+					"index": "0",
+					"location": "Overworld (Mysidia) [before Moon]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"overworld-silvera-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"overworld-silvera-0": {
+					"index": "0",
+					"location": "Overworld (Silvera) [before Grotto Adamant]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"overworld-silvera-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"overworld-silvera-1": {
+					"index": "0",
+					"location": "Overworld (Silvera) [after Grotto Adamant]",
+					"disambiguation": ""
 				}
 			}
 		},
@@ -2879,6 +2987,28 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"underworld-castle-of-dwarves-3": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"underworld-castle-of-dwarves-7": {
+					"index": "0",
+					"location": "Underworld (Castle of Dwarves) [after drill installation]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"underworld-kokkol-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"underworld-kokkol-0": {
+					"index": "0",
+					"location": "Underworld (Kokkol)",
+					"disambiguation": ""
+				}
+			}
+		},
 		"underworld-sealed-cave-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -2886,6 +3016,17 @@ com.aexoden.ff4 = function()
 				"underworld-sealed-cave-1": {
 					"index": "0",
 					"location": "Underworld (Sealed Cave) [before Sealed Cave]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"underworld-sealed-cave-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"underworld-sealed-cave-2": {
+					"index": "0",
+					"location": "Underworld (Sealed Cave) [after Sealed Cave]",
 					"disambiguation": ""
 				}
 			}
@@ -3258,7 +3399,16 @@ com.aexoden.ff4 = function()
 			133: ["land-of-monsters-b3f-choice-0"],
 			134: ["land-of-monsters-b3f-0"],
 			135: ["underworld-sealed-cave-0"],
-			136: ["sealed-cave-0"]
+			136: ["sealed-cave-0"],
+			137: ["underworld-sealed-cave-1"],
+			138: ["castle-of-dwarves-3"],
+			139: ["underworld-castle-of-dwarves-3"],
+			140: ["overworld-eblan-1"],
+			141: ["overworld-silvera-0"],
+			142: ["grotto-adamant-0"],
+			143: ["overworld-silvera-1"],
+			144: ["underworld-kokkol-0"],
+			145: ["overworld-mysidia-2"]
 		}
 	};
 
@@ -3646,6 +3796,17 @@ com.aexoden.ff4 = function()
 					[5, 9, SegmentFlags.NONE],
 					[7, 9, SegmentFlags.NONE],
 					[7, 12, SegmentFlags.END]
+				]
+			}
+		},
+		"big-whale-0": {
+			"flags": PathFlags.NONE,
+			"map": "312F-0",
+			"segments": {
+				"base-0": [
+					[3, 13, SegmentFlags.START],
+					[7, 13, SegmentFlags.NONE],
+					[7, 11, SegmentFlags.END]
 				]
 			}
 		},
@@ -4206,6 +4367,16 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"castle-of-dwarves-1f-4": {
+			"flags": PathFlags.STEPS,
+			"map": "3108-1",
+			"segments": {
+				"base-0": [
+					[11, 11, SegmentFlags.START],
+					[11, 1, SegmentFlags.END]
+				]
+			}
+		},
 		"castle-of-dwarves-crystal-room-0": {
 			"flags": PathFlags.NONE,
 			"map": "310D-0",
@@ -4332,6 +4503,24 @@ com.aexoden.ff4 = function()
 				"base-0": [
 					[10, 8, SegmentFlags.START],
 					[10, 15, SegmentFlags.END]
+				]
+			}
+		},
+		"castle-of-dwarves-kings-room-3": {
+			"flags": PathFlags.STEPS,
+			"map": "3109-0",
+			"segments": {
+				"base-0": [
+					[10, 13, SegmentFlags.START],
+					[10, 11, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[10, 13, SegmentFlags.NONE],
+					[10, 14, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[10, 13, SegmentFlags.NONE],
+					[10, 12, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -5272,6 +5461,21 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"grotto-adamant-0": {
+			"flags": PathFlags.STEPS,
+			"map": "30A0-0",
+			"segments": {
+				"base-0": [
+					[7, 20, SegmentFlags.START],
+					[7, 13, SegmentFlags.RETURN],
+					[7, 21, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[7, 19, SegmentFlags.NONE],
+					[8, 19, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
 		"kaipo-0": {
 			"flags": PathFlags.NONE,
 			"map": "3002-0",
@@ -5395,6 +5599,69 @@ com.aexoden.ff4 = function()
 					[18, 14, SegmentFlags.NONE],
 					[20, 14, SegmentFlags.NONE],
 					[20, 17, SegmentFlags.END]
+				]
+			}
+		},
+		"kokkol-the-smiths-0": {
+			"flags": PathFlags.NONE,
+			"map": "3100-0",
+			"segments": {
+				"base-0": [
+					[6, 11, SegmentFlags.START],
+					[6, 6, SegmentFlags.END]
+				]
+			}
+		},
+		"kokkol-the-smiths-1": {
+			"flags": PathFlags.NONE,
+			"map": "3100-0",
+			"segments": {
+				"base-0": [
+					[6, 6, SegmentFlags.START],
+					[6, 12, SegmentFlags.END]
+				]
+			}
+		},
+		"kokkol-the-smiths-1f-0": {
+			"flags": PathFlags.NONE,
+			"map": "3102-0",
+			"segments": {
+				"base-0": [
+					[7, 14, SegmentFlags.START],
+					[11, 14, SegmentFlags.NONE],
+					[11, 11, SegmentFlags.NONE],
+					[14, 11, SegmentFlags.NONE],
+					[14, 5, SegmentFlags.END]
+				]
+			}
+		},
+		"kokkol-the-smiths-1f-1": {
+			"flags": PathFlags.NONE,
+			"map": "3102-1",
+			"segments": {
+				"base-0": [
+					[14, 5, SegmentFlags.START],
+					[14, 10, SegmentFlags.NONE],
+					[11, 10, SegmentFlags.NONE],
+					[11, 9, SegmentFlags.NONE],
+					[7, 9, SegmentFlags.RETURN],
+					[11, 9, SegmentFlags.NONE],
+					[11, 14, SegmentFlags.NONE],
+					[7, 14, SegmentFlags.NONE],
+					[7, 17, SegmentFlags.END]
+				]
+			}
+		},
+		"kokkol-the-smiths-2f-0": {
+			"flags": PathFlags.NONE,
+			"map": "3103-0",
+			"segments": {
+				"base-0": [
+					[9, 4, SegmentFlags.START],
+					[2, 4, SegmentFlags.NONE],
+					[2, 5, SegmentFlags.RETURN],
+					[2, 4, SegmentFlags.NONE],
+					[9, 4, SegmentFlags.END]
 				]
 			}
 		},
@@ -5934,6 +6201,16 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"mysidia-6": {
+			"flags": PathFlags.NONE,
+			"map": "3003-1",
+			"segments": {
+				"base-0": [
+					[16, 31, SegmentFlags.START],
+					[16, 28, SegmentFlags.END]
+				]
+			}
+		},
 		"mysidia-armor-shop-0": {
 			"flags": PathFlags.NONE,
 			"map": "30E6-0",
@@ -6235,6 +6512,174 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"overworld-airship-4-0": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [78, 196, 32, 32],
+			"segments": {
+				"base-0": [
+					[106, 212, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[78, 212, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[77, 212, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-airship-4-1": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [47, 196, 32, 32],
+			"segments": {
+				"base-0": [
+					[79, 212, SegmentFlags.VEHICLE],
+					[78, 212, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[47, 212, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[46, 212, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-airship-4-2": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [241, 216, 32, 32],
+			"segments": {
+				"base-0": [
+					[273, 232, SegmentFlags.VEHICLE],
+					[272, 232, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[241, 232, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[240, 232, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-airship-4-3": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [210, 201, 32, 32],
+			"segments": {
+				"base-0": [
+					[242, 232, SegmentFlags.VEHICLE],
+					[241, 232, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[221, 232, SegmentFlags.VEHICLE],
+					[221, 201, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[221, 200, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-airship-4-4": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [205, 170, 32, 32],
+			"segments": {
+				"base-0": [
+					[221, 202, SegmentFlags.VEHICLE],
+					[221, 201, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[221, 170, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[221, 169, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-airship-4-5": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [205, 139, 32, 32],
+			"segments": {
+				"base-0": [
+					[221, 171, SegmentFlags.VEHICLE],
+					[221, 170, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[221, 140, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[222, 140, SegmentFlags.END | SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-airship-5-0": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [204, 153, 32, 32],
+			"segments": {
+				"base-0": [
+					[222, 152, SegmentFlags.VEHICLE],
+					[222, 153, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[222, 184, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[222, 154, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-airship-5-1": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [204, 184, 32, 32],
+			"segments": {
+				"base-0": [
+					[222, 183, SegmentFlags.VEHICLE],
+					[222, 184, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[222, 199, SegmentFlags.VEHICLE],
+					[204, 199, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[203, 199, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-airship-5-2": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [173, 184, 32, 32],
+			"segments": {
+				"base-0": [
+					[205, 199, SegmentFlags.VEHICLE],
+					[204, 199, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[173, 199, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[172, 199, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-airship-5-3": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [142, 184, 32, 32],
+			"segments": {
+				"base-0": [
+					[174, 199, SegmentFlags.VEHICLE],
+					[173, 199, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[153, 199, SegmentFlags.RETURN | SegmentFlags.VEHICLE],
+					[154, 199, SegmentFlags.END]
+				]
+			}
+		},
+		"overworld-airship-6-0": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [125, 189, 32, 32],
+			"segments": {
+				"base-0": [
+					[153, 199, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[153, 211, SegmentFlags.VEHICLE],
+					[125, 211, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[124, 211, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-airship-6-1": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [94, 189, 32, 32],
+			"segments": {
+				"base-0": [
+					[126, 211, SegmentFlags.VEHICLE],
+					[125, 211, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[107, 211, SegmentFlags.END | SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"overworld-airship-7-0": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [97, 189, 32, 32],
+			"segments": {
+				"base-0": [
+					[106, 212, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[128, 212, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[129, 212, SegmentFlags.VEHICLE]
+				]
+			}
+		},
 		"overworld-agart-0": {
 			"flags": PathFlags.STEPS,
 			"map": "0000-0",
@@ -6402,6 +6847,28 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[35, 237, SegmentFlags.NONE],
 					[36, 237, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"overworld-eblan-1": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [16, 208, 32, 32],
+			"segments": {
+				"base-0": [
+					[48, 212, SegmentFlags.VEHICLE],
+					[47, 212, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[36, 212, SegmentFlags.VEHICLE],
+					[36, 237, SegmentFlags.VEHICLE],
+					[35, 237, SegmentFlags.START],
+					[24, 237, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[24, 232, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[16, 232, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[15, 232, SegmentFlags.VEHICLE]
+				],
+				"extra-2-0": [
+					[35, 237, SegmentFlags.NONE],
+					[35, 236, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -6700,6 +7167,62 @@ com.aexoden.ff4 = function()
 				"boundary-0": [
 					[160, 185, SegmentFlags.NONE],
 					[160, 216, SegmentFlags.NONE]
+				]
+			}
+		},
+		"overworld-mysidia-3": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [128, 189, 32, 32],
+			"segments": {
+				"base-0": [
+					[127, 212, SegmentFlags.VEHICLE],
+					[128, 212, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[149, 212, SegmentFlags.VEHICLE],
+					[149, 199, SegmentFlags.VEHICLE],
+					[150, 199, SegmentFlags.START | SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[149, 199, SegmentFlags.NONE],
+					[149, 198, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"overworld-silvera-0": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [204, 122, 32, 32],
+			"segments": {
+				"base-0": [
+					[222, 140, SegmentFlags.START],
+					[221, 140, SegmentFlags.NONE],
+					[219, 140, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[219, 137, SegmentFlags.VEHICLE],
+					[219, 136, SegmentFlags.START | SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[222, 140, SegmentFlags.NONE],
+					[222, 139, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"overworld-silvera-1": {
+			"flags": PathFlags.STEPS,
+			"map": "0000-0",
+			"mapRange": [204, 122, 32, 32],
+			"segments": {
+				"base-0": [
+					[219, 136, SegmentFlags.START],
+					[219, 137, SegmentFlags.NONE],
+					[219, 140, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[221, 140, SegmentFlags.VEHICLE],
+					[222, 140, SegmentFlags.START],
+					[222, 153, SegmentFlags.START | SegmentFlags.END | SegmentFlags.VEHICLE],
+					[222, 154, SegmentFlags.VEHICLE]
+				],
+				"extra-2-0": [
+					[222, 140, SegmentFlags.NONE],
+					[222, 139, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -7998,6 +8521,108 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"underworld-airship-2-0": {
+			"flags": PathFlags.STEPS,
+			"map": "1000-0",
+			"mapRange": [96, 35, 32, 32],
+			"segments": {
+				"base-0": [
+					[112, 67, SegmentFlags.VEHICLE],
+					[112, 66, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[112, 35, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[112, 34, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"underworld-airship-2-1": {
+			"flags": PathFlags.STEPS,
+			"map": "1000-0",
+			"mapRange": [96, 4, 32, 32],
+			"segments": {
+				"base-0": [
+					[112, 36, SegmentFlags.VEHICLE],
+					[112, 35, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[112, 17, SegmentFlags.END | SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"underworld-airship-3-0": {
+			"flags": PathFlags.STEPS,
+			"map": "1000-0",
+			"mapRange": [92, 9, 32, 32],
+			"segments": {
+				"base-0": [
+					[113, 16, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[106, 16, SegmentFlags.VEHICLE],
+					[106, 40, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[106, 41, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"underworld-airship-3-1": {
+			"flags": PathFlags.STEPS,
+			"map": "1000-0",
+			"mapRange": [92, 40, 32, 32],
+			"segments": {
+				"base-0": [
+					[106, 39, SegmentFlags.VEHICLE],
+					[106, 40, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[106, 71, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[106, 72, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"underworld-airship-3-2": {
+			"flags": PathFlags.STEPS,
+			"map": "1000-0",
+			"mapRange": [92, 71, 32, 32],
+			"segments": {
+				"base-0": [
+					[106, 70, SegmentFlags.VEHICLE],
+					[106, 71, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[106, 102, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[106, 103, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"underworld-airship-4-0": {
+			"flags": PathFlags.STEPS,
+			"map": "1000-0",
+			"mapRange": [96, 63, 32, 32],
+			"segments": {
+				"base-0": [
+					[112, 95, SegmentFlags.VEHICLE],
+					[112, 94, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[112, 63, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[112, 62, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"underworld-airship-4-1": {
+			"flags": PathFlags.STEPS,
+			"map": "1000-0",
+			"mapRange": [96, 32, 32, 32],
+			"segments": {
+				"base-0": [
+					[112, 64, SegmentFlags.VEHICLE],
+					[112, 63, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[112, 32, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[112, 31, SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"underworld-airship-4-2": {
+			"flags": PathFlags.STEPS,
+			"map": "1000-0",
+			"mapRange": [96, 1, 32, 32],
+			"segments": {
+				"base-0": [
+					[112, 33, SegmentFlags.VEHICLE],
+					[112, 32, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[112, 17, SegmentFlags.END | SegmentFlags.VEHICLE]
+				]
+			}
+		},
 		"underworld-castle-of-dwarves-0": {
 			"flags": PathFlags.STEPS,
 			"map": "1000-0",
@@ -8106,6 +8731,69 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"underworld-castle-of-dwarves-6": {
+			"flags": PathFlags.STEPS,
+			"map": "1000-0",
+			"mapRange": [74, 66, 32, 32],
+			"segments": {
+				"base-0": [
+					[73, 83, SegmentFlags.VEHICLE],
+					[74, 83, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[100, 83, SegmentFlags.VEHICLE],
+					[100, 82, SegmentFlags.START | SegmentFlags.END]
+				]
+			}
+		},
+		"underworld-castle-of-dwarves-7": {
+			"flags": PathFlags.STEPS,
+			"map": "1000-0",
+			"mapRange": [90, 66, 32, 32],
+			"segments": {
+				"base-0": [
+					[100, 82, SegmentFlags.START],
+					[100, 83, SegmentFlags.NONE],
+					[112, 83, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[112, 66, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[112, 65, SegmentFlags.VEHICLE]
+				],
+				"extra-2-0": [
+					[100, 83, SegmentFlags.NONE],
+					[99, 83, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				]
+			}
+		},
+		"underworld-kokkol-0": {
+			"flags": PathFlags.STEPS,
+			"map": "1000-0",
+			"mapRange": [92, 96, 32, 32],
+			"segments": {
+				"base-0": [
+					[106, 95, SegmentFlags.VEHICLE],
+					[106, 102, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[106, 122, SegmentFlags.VEHICLE],
+					[104, 122, SegmentFlags.VEHICLE],
+					[104, 123, SegmentFlags.START | SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[104, 122, SegmentFlags.NONE],
+					[104, 121, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"underworld-kokkol-1": {
+			"flags": PathFlags.STEPS,
+			"map": "1000-0",
+			"mapRange": [96, 94, 32, 32],
+			"segments": {
+				"base-0": [
+					[104, 123, SegmentFlags.START],
+					[104, 122, SegmentFlags.NONE],
+					[112, 122, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[112, 94, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[112, 93, SegmentFlags.VEHICLE]
+				]
+			}
+		},
 		"underworld-sealed-cave-0": {
 			"flags": PathFlags.STEPS,
 			"map": "1000-0",
@@ -8136,6 +8824,25 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[46, 110, SegmentFlags.NONE],
 					[47, 110, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"underworld-sealed-cave-2": {
+			"flags": PathFlags.STEPS,
+			"map": "1000-0",
+			"mapRange": [43, 80, 32, 32],
+			"segments": {
+				"base-0": [
+					[46, 109, SegmentFlags.START],
+					[46, 110, SegmentFlags.NONE],
+					[50, 110, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[50, 83, SegmentFlags.VEHICLE],
+					[74, 83, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[75, 83, SegmentFlags.VEHICLE]
+				],
+				"extra-2-0": [
+					[46, 110, SegmentFlags.NONE],
+					[45, 110, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
 				]
 			}
 		},
@@ -8514,6 +9221,10 @@ com.aexoden.ff4 = function()
 		img.onload = function() {
 			if (data.paths[path].mapRange) {
 				ctx.drawImage(img, data.paths[path].mapRange[0] * 16, data.paths[path].mapRange[1] * 16, data.paths[path].mapRange[2] * 16, data.paths[path].mapRange[3] * 16, 0, 0, data.paths[path].mapRange[2] * 16, data.paths[path].mapRange[3] * 16);
+
+				if (data.paths[path].mapRange[0] > 224) {
+					ctx.drawImage(img, 0, data.paths[path].mapRange[1] * 16, data.paths[path].mapRange[2] * 16, data.paths[path].mapRange[3] * 16, (256 - data.paths[path].mapRange[0]) * 16, 0, data.paths[path].mapRange[2] * 16, data.paths[path].mapRange[3] * 16);
+				}
 			} else {
 				ctx.drawImage(img, 0, 0);
 			}
@@ -8539,13 +9250,16 @@ com.aexoden.ff4 = function()
 			ctx.fillRect(previous[0] * 16 - 3 + 8 + xOffset, previous[1] * 16 - 3 + 8 + yOffset, 6, 6);
 		}
 
-		if (current[0] < previous[0]) {
+		var deltaX = current[0] - previous[0];
+		var deltaY = current[1] - previous[1];
+
+		if (deltaX > 0 && deltaX < 128) {
 			ctx.fillRect(current[0] * 16 - 1 + 8 + xOffset, current[1] * 16 - 1 + 8 + yOffset, (previous[0] - current[0]) * 16, 2);
-		} else if (current[1] < previous[1]) {
+		} else if (deltaY > 0 && deltaY < 128) {
 			ctx.fillRect(current[0] * 16 - 1 + 8 + xOffset, current[1] * 16 - 1 + 8 + yOffset, 2, (previous[1] - current[1]) * 16);
-		} else if (current[0] > previous[0]) {
+		} else if (deltaX > -128 && deltaX < 0) {
 			ctx.fillRect(previous[0] * 16 + 1 + 8 + xOffset, previous[1] * 16 - 1 + 8 + yOffset, (current[0] - previous[0]) * 16, 2);
-		} else if (current[1] > previous[1]) {
+		} else if (deltaY > -128 && deltaY < 0) {
 			ctx.fillRect(previous[0] * 16 - 1 + 8 + xOffset, previous[1] * 16 + 1 + 8 + yOffset, 2, (current[1] - previous[1]) * 16);
 		}
 
