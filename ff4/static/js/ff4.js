@@ -19,7 +19,8 @@ com.aexoden.ff4 = function()
 		NONE:           0x00,
 		STEPS:          0x01,
 		YELLOW_CHOCOBO: 0x02,
-		BLACK_CHOCOBO:  0x04
+		BLACK_CHOCOBO:  0x04,
+		HUMMINGWAY:     0x08
 	};
 
 	var SegmentFlags = {
@@ -642,7 +643,44 @@ com.aexoden.ff4 = function()
 			"underworld-airship-4-2",
 			"overworld-airship-7-0",
 			"overworld-mysidia-3",
-			"big-whale-0"
+			"big-whale-crystal",
+
+			"lunar-overworld-0", // 0 start to hummingway
+			"lunar-overworld-1", // 1 start to lunarian landing
+			"big-whale-exit",    // B exit whale
+			"lunar-overworld-2-0", // 0 walk from whale to hummingway
+			"hummingway-cave-0-0", // 0 hummingway
+			"lunar-overworld-3-0", // 0 walk from hummingway to whale
+			"lunar-overworld-5-1",
+			"lunar-path-west-0-1",
+			"lunar-overworld-6-1",
+			"lunar-path-east-0-1",
+			"lunar-overworld-7-1",
+			"lunars-lair-1f-0-1",
+			"lunar-overworld-8-1",
+			"lunar-path-east-1-1",
+			"lunar-overworld-9-1",
+			"lunar-path-west-1-1",
+			"lunar-overworld-10-1",
+			"big-whale-console", // 0 enter whale
+			"lunar-overworld-4-0", // 0 hummingway to fusoya landing
+			"lunar-overworld-4-1",
+			"big-whale-exit",
+			"lunar-overworld-5-0",
+			"lunar-path-west-0-0",
+			"lunar-overworld-6-0",
+			"lunar-path-east-0-0",
+			"lunar-overworld-7-0",
+			"lunars-lair-1f-0-0",
+			"lunar-overworld-8-0",
+			"lunar-path-east-1-0",
+			"lunar-overworld-9-0",
+			"lunar-path-west-1-0",
+			"lunar-overworld-10-0",
+			"lunar-overworld-2-1", // 0 walk from whale to hummingway
+			"hummingway-cave-0-1", // 0 hummingway
+			"lunar-overworld-3-1", // 0 walk from hummingway to whale
+			"big-whale-crystal"
 		]
 	};
 
@@ -1821,6 +1859,28 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"hummingway-cave-0-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"hummingway-cave-0-0": {
+					"index": "0",
+					"location": "Hummingway Cave",
+					"disambiguation": ""
+				}
+			}
+		},
+		"hummingway-cave-0-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"hummingway-cave-0-1": {
+					"index": "0",
+					"location": "Hummingway Cave",
+					"disambiguation": ""
+				}
+			}
+		},
 		"land-of-monsters-b1f-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -1901,6 +1961,305 @@ com.aexoden.ff4 = function()
 						"location": "Land of Monsters B3F",
 						"instruction": "Take the full secret passage"
 					}
+				}
+			}
+		},
+		"lunar-overworld-choice-0": {
+			"type": VariableFlags.CHOICE,
+			"descriptions": {
+				0: "Visit the Namingway Cave before recruiting FuSoYa.",
+				1: "Recruit FuSoYa before visiting the Namingway Cave."
+			},
+			"paths": {
+				0: {
+					"lunar-overworld-0": {
+						"enabled": true,
+						"index": "0",
+						"location": "Lunar Overworld",
+						"instruction": "Visit the Namingway Cave before recruiting FuSoYa"
+					},
+					"lunar-overworld-1": { "enabled": false },
+					"lunar-overworld-2-1": { "enabled": false },
+					"hummingway-cave-0-1": { "enabled": false },
+					"lunar-overworld-3-1": { "enabled": false },
+					"lunar-overworld-4-1": { "enabled": false },
+					"lunar-overworld-5-1": { "enabled": false },
+					"lunar-path-west-0-1": { "enabled": false },
+					"lunar-overworld-6-1": { "enabled": false },
+					"lunar-path-east-0-1": { "enabled": false },
+					"lunar-overworld-7-1": { "enabled": false },
+					"lunars-lair-1f-0-1": { "enabled": false },
+					"lunar-overworld-8-1": { "enabled": false },
+					"lunar-path-east-1-1": { "enabled": false },
+					"lunar-overworld-9-1": { "enabled": false },
+					"lunar-path-west-1-1": { "enabled": false },
+					"lunar-overworld-10-1": { "enabled": false },
+				},
+				1: {
+					"lunar-overworld-0": { "enabled": false },
+					"lunar-overworld-1": {
+						"enabled": true,
+						"index": "0",
+						"location": "Lunar Overworld",
+						"instruction": "Recruit FuSoYa before visiting the Namingway cave"
+					},
+					"lunar-overworld-2-0": { "enabled": false },
+					"hummingway-cave-0-0": { "enabled": false },
+					"lunar-overworld-3-0": { "enabled": false },
+					"lunar-overworld-4-0": { "enabled": false },
+					"lunar-overworld-5-0": { "enabled": false },
+					"lunar-path-west-0-0": { "enabled": false },
+					"lunar-overworld-6-0": { "enabled": false },
+					"lunar-path-east-0-0": { "enabled": false },
+					"lunar-overworld-7-0": { "enabled": false },
+					"lunars-lair-1f-0-0": { "enabled": false },
+					"lunar-overworld-8-0": { "enabled": false },
+					"lunar-path-east-1-0": { "enabled": false },
+					"lunar-overworld-9-0": { "enabled": false },
+					"lunar-path-west-1-0": { "enabled": false },
+					"lunar-overworld-10-0": { "enabled": false },
+				},
+			}
+		},
+		"lunar-overworld-3-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-overworld-3-0": {
+					"index": "0",
+					"location": "Lunar Overworld [after Hummingway Cave]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-overworld-3-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-overworld-3-1": {
+					"index": "0",
+					"location": "Lunar Overworld [after Hummingway Cave]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-overworld-5-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-overworld-5-0": {
+					"index": "0",
+					"location": "Lunar Overworld [before FuSoYa before Lunar Path (west)]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-overworld-5-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-overworld-5-1": {
+					"index": "0",
+					"location": "Lunar Overworld [before FuSoYa before Lunar Path (west)]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-overworld-6-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-overworld-6-0": {
+					"index": "0",
+					"location": "Lunar Overworld [before FuSoYa before Lunar Path (east)]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-overworld-6-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-overworld-6-1": {
+					"index": "0",
+					"location": "Lunar Overworld [before FuSoYa before Lunar Path (east)]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-overworld-7-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-overworld-7-0": {
+					"index": "0",
+					"location": "Lunar Overworld [before FuSoYa after Lunar Path (east)]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-overworld-7-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-overworld-7-1": {
+					"index": "0",
+					"location": "Lunar Overworld [before FuSoYa after Lunar Path (east)]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-overworld-8-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-overworld-8-0": {
+					"index": "0",
+					"location": "Lunar Overworld [after FuSoYa before Lunar Path (east)]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-overworld-8-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-overworld-8-1": {
+					"index": "0",
+					"location": "Lunar Overworld [after FuSoYa before Lunar Path (east)]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-overworld-9-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-overworld-9-0": {
+					"index": "0",
+					"location": "Lunar Overworld [after FuSoYa after Lunar Path (east)]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-overworld-9-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-overworld-9-1": {
+					"index": "0",
+					"location": "Lunar Overworld [after FuSoYa after Lunar Path (east)]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-overworld-10-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-overworld-10-0": {
+					"index": "0",
+					"location": "Lunar Overworld [after FuSoYa after Lunar Path (west)]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-overworld-10-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-overworld-10-1": {
+					"index": "0",
+					"location": "Lunar Overworld [after FuSoYa after Lunar Path (west)]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-path-east-0-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-path-east-0-0": {
+					"index": "0",
+					"location": "Lunar Path (east) [before FuSoYa]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-path-east-0-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-path-east-0-1": {
+					"index": "0",
+					"location": "Lunar Path (east) [before FuSoYa]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-path-east-1-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-path-east-1-0": {
+					"index": "0",
+					"location": "Lunar Path (east) [after FuSoYa]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-path-east-1-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-path-east-1-1": {
+					"index": "0",
+					"location": "Lunar Path (east) [after FuSoYa]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-path-west-0-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-path-west-0-0": {
+					"index": "0",
+					"location": "Lunar Path (west) [before FuSoYa]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-path-west-0-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-path-west-0-1": {
+					"index": "0",
+					"location": "Lunar Path (west) [before FuSoYa]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-path-west-1-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-path-west-1-0": {
+					"index": "0",
+					"location": "Lunar Path (west) [after FuSoYa]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-path-west-1-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-path-west-1-1": {
+					"index": "0",
+					"location": "Lunar Path (west) [after FuSoYa]",
+					"disambiguation": ""
 				}
 			}
 		},
@@ -3408,7 +3767,20 @@ com.aexoden.ff4 = function()
 			142: ["grotto-adamant-0"],
 			143: ["overworld-silvera-1"],
 			144: ["underworld-kokkol-0"],
-			145: ["overworld-mysidia-2"]
+			145: ["overworld-mysidia-2"],
+			146: ["lunar-overworld-choice-0"],
+			147: ["hummingway-cave-0-0", "lunar-overworld-5-1"],
+			148: ["lunar-overworld-3-0", "lunar-path-west-0-1"],
+			149: ["lunar-overworld-5-0", "lunar-overworld-6-1"],
+			150: ["lunar-path-west-0-0", "lunar-path-east-0-1"],
+			151: ["lunar-overworld-6-0", "lunar-overworld-7-1"],
+			152: ["lunar-path-east-0-0", "lunar-overworld-8-1"],
+			153: ["lunar-overworld-7-0", "lunar-path-east-1-1"],
+			154: ["lunar-overworld-8-0", "lunar-overworld-9-1"],
+			155: ["lunar-path-east-1-0", "lunar-path-west-1-1"],
+			156: ["lunar-overworld-9-0", "lunar-overworld-10-1"],
+			157: ["lunar-path-west-1-0", "hummingway-cave-0-1"],
+			158: ["lunar-overworld-10-0", "lunar-overworld-3-1"]
 		}
 	};
 
@@ -3799,7 +4171,19 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
-		"big-whale-0": {
+		"big-whale-console": {
+			"flags": PathFlags.NONE,
+			"map": "312F-0",
+			"segments": {
+				"base-0": [
+					[3, 13, SegmentFlags.START],
+					[5, 13, SegmentFlags.NONE],
+					[5, 7, SegmentFlags.NONE],
+					[7, 7, SegmentFlags.END]
+				]
+			}
+		},
+		"big-whale-crystal": {
 			"flags": PathFlags.NONE,
 			"map": "312F-0",
 			"segments": {
@@ -3807,6 +4191,18 @@ com.aexoden.ff4 = function()
 					[3, 13, SegmentFlags.START],
 					[7, 13, SegmentFlags.NONE],
 					[7, 11, SegmentFlags.END]
+				]
+			}
+		},
+		"big-whale-exit": {
+			"flags": PathFlags.NONE,
+			"map": "312F-0",
+			"segments": {
+				"base-0": [
+					[7, 7, SegmentFlags.START],
+					[5, 7, SegmentFlags.NONE],
+					[5, 13, SegmentFlags.NONE],
+					[2, 13, SegmentFlags.END]
 				]
 			}
 		},
@@ -5476,6 +5872,36 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"hummingway-cave-0-0": {
+			"flags": PathFlags.STEPS | PathFlags.HUMMINGWAY,
+			"map": "3165-0",
+			"segments": {
+				"base-0": [
+					[10, 16, SegmentFlags.START],
+					[10, 11, SegmentFlags.NONE],
+					[12, 11, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[10, 16, SegmentFlags.NONE],
+					[11, 16, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"hummingway-cave-0-1": {
+			"flags": PathFlags.STEPS | PathFlags.HUMMINGWAY,
+			"map": "3165-0",
+			"segments": {
+				"base-0": [
+					[10, 16, SegmentFlags.START],
+					[10, 11, SegmentFlags.NONE],
+					[12, 11, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[10, 16, SegmentFlags.NONE],
+					[11, 16, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
 		"kaipo-0": {
 			"flags": PathFlags.NONE,
 			"map": "3002-0",
@@ -5816,6 +6242,528 @@ com.aexoden.ff4 = function()
 					[14, 6, SegmentFlags.NONE],
 					[20, 6, SegmentFlags.NONE],
 					[20, 7, SegmentFlags.END]
+				]
+			}
+		},
+		"lunar-overworld-0": {
+			"flags": PathFlags.STEPS,
+			"map": "2000-0",
+			"mapRange": [33, 36, 32, 32],
+			"segments": {
+				"base-0": [
+					[64, 64, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[64, 40, SegmentFlags.VEHICLE],
+					[33, 40, SegmentFlags.END | SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"lunar-overworld-1": {
+			"flags": PathFlags.STEPS,
+			"map": "2000-0",
+			"mapRange": [58, 57, 32, 32],
+			"segments": {
+				"base-0": [
+					[64, 64, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[85, 64, SegmentFlags.VEHICLE],
+					[85, 83, SegmentFlags.END | SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"lunar-overworld-2-0": {
+			"flags": PathFlags.STEPS,
+			"map": "2000-0",
+			"mapRange": [17, 23, 32, 32],
+			"segments": {
+				"base-0": [
+					[33, 40, SegmentFlags.START],
+					[33, 39, SegmentFlags.END]
+				]
+			}
+		},
+		"lunar-overworld-2-1": {
+			"flags": PathFlags.STEPS,
+			"map": "2000-0",
+			"mapRange": [17, 23, 32, 32],
+			"segments": {
+				"base-0": [
+					[33, 40, SegmentFlags.START],
+					[33, 39, SegmentFlags.END]
+				]
+			}
+		},
+		"lunar-overworld-3-0": {
+			"flags": PathFlags.STEPS,
+			"map": "2000-0",
+			"mapRange": [17, 23, 32, 32],
+			"segments": {
+				"base-0": [
+					[33, 39, SegmentFlags.START],
+					[33, 40, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[33, 40, SegmentFlags.NONE],
+					[34, 40, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-overworld-3-1": {
+			"flags": PathFlags.STEPS,
+			"map": "2000-0",
+			"mapRange": [17, 23, 32, 32],
+			"segments": {
+				"base-0": [
+					[33, 39, SegmentFlags.START],
+					[33, 40, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[33, 40, SegmentFlags.NONE],
+					[34, 40, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-overworld-4-0": {
+			"flags": PathFlags.STEPS,
+			"map": "2000-0",
+			"mapRange": [11, 13, 32, 32],
+			"segments": {
+				"base-0": [
+					[33, 40, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[21, 40, SegmentFlags.VEHICLE],
+					[21, 19, SegmentFlags.END | SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"lunar-overworld-4-1": {
+			"flags": PathFlags.STEPS,
+			"map": "2000-0",
+			"mapRange": [11, 13, 32, 32],
+			"segments": {
+				"base-0": [
+					[21, 19, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[21, 40, SegmentFlags.VEHICLE],
+					[33, 40, SegmentFlags.END | SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"lunar-overworld-5-0": {
+			"flags": PathFlags.STEPS,
+			"map": "2000-0",
+			"mapRange": [3, 4, 32, 32],
+			"segments": {
+				"base-0": [
+					[21, 19, SegmentFlags.START],
+					[21, 21, SegmentFlags.NONE],
+					[18, 21, SegmentFlags.NONE],
+					[18, 20, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[18, 21, SegmentFlags.NONE],
+					[17, 21, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				]
+			}
+		},
+		"lunar-overworld-5-1": {
+			"flags": PathFlags.STEPS,
+			"map": "2000-0",
+			"mapRange": [3, 4, 32, 32],
+			"segments": {
+				"base-0": [
+					[21, 19, SegmentFlags.START],
+					[21, 21, SegmentFlags.NONE],
+					[18, 21, SegmentFlags.NONE],
+					[18, 20, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[18, 21, SegmentFlags.NONE],
+					[17, 21, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				]
+			}
+		},
+		"lunar-overworld-6-0": {
+			"flags": PathFlags.STEPS,
+			"map": "2000-0",
+			"mapRange": [14, 3, 32, 32],
+			"segments": {
+				"base-0": [
+					[18, 15, SegmentFlags.START],
+					[23, 15, SegmentFlags.NONE],
+					[23, 14, SegmentFlags.NONE],
+					[33, 14, SegmentFlags.NONE],
+					[33, 16, SegmentFlags.NONE],
+					[37, 16, SegmentFlags.NONE],
+					[37, 25, SegmentFlags.NONE],
+					[41, 25, SegmentFlags.NONE],
+					[41, 24, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[41, 25, SegmentFlags.NONE],
+					[42, 25, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-overworld-6-1": {
+			"flags": PathFlags.STEPS,
+			"map": "2000-0",
+			"mapRange": [14, 3, 32, 32],
+			"segments": {
+				"base-0": [
+					[18, 15, SegmentFlags.START],
+					[23, 15, SegmentFlags.NONE],
+					[23, 14, SegmentFlags.NONE],
+					[33, 14, SegmentFlags.NONE],
+					[33, 16, SegmentFlags.NONE],
+					[37, 16, SegmentFlags.NONE],
+					[37, 25, SegmentFlags.NONE],
+					[41, 25, SegmentFlags.NONE],
+					[41, 24, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[41, 25, SegmentFlags.NONE],
+					[42, 25, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-overworld-7-0": {
+			"flags": PathFlags.STEPS,
+			"map": "2000-0",
+			"mapRange": [17, 11, 32, 32],
+			"segments": {
+				"base-0": [
+					[40, 29, SegmentFlags.START],
+					[37, 29, SegmentFlags.NONE],
+					[37, 30, SegmentFlags.NONE],
+					[33, 30, SegmentFlags.NONE],
+					[33, 28, SegmentFlags.NONE],
+					[28, 28, SegmentFlags.NONE],
+					[28, 25, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[28, 26, SegmentFlags.NONE],
+					[29, 26, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-overworld-7-1": {
+			"flags": PathFlags.STEPS,
+			"map": "2000-0",
+			"mapRange": [17, 11, 32, 32],
+			"segments": {
+				"base-0": [
+					[40, 29, SegmentFlags.START],
+					[37, 29, SegmentFlags.NONE],
+					[37, 30, SegmentFlags.NONE],
+					[33, 30, SegmentFlags.NONE],
+					[33, 28, SegmentFlags.NONE],
+					[28, 28, SegmentFlags.NONE],
+					[28, 25, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[28, 26, SegmentFlags.NONE],
+					[29, 26, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-overworld-8-0": {
+			"flags": PathFlags.STEPS,
+			"map": "2000-0",
+			"mapRange": [17, 11, 32, 32],
+			"segments": {
+				"base-0": [
+					[28, 25, SegmentFlags.START],
+					[28, 29, SegmentFlags.NONE],
+					[34, 29, SegmentFlags.NONE],
+					[34, 30, SegmentFlags.NONE],
+					[37, 30, SegmentFlags.NONE],
+					[37, 29, SegmentFlags.NONE],
+					[40, 29, SegmentFlags.NONE],
+					[40, 28, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[40, 29, SegmentFlags.NONE],
+					[41, 29, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-overworld-8-1": {
+			"flags": PathFlags.STEPS,
+			"map": "2000-0",
+			"mapRange": [17, 11, 32, 32],
+			"segments": {
+				"base-0": [
+					[28, 25, SegmentFlags.START],
+					[28, 29, SegmentFlags.NONE],
+					[34, 29, SegmentFlags.NONE],
+					[34, 30, SegmentFlags.NONE],
+					[37, 30, SegmentFlags.NONE],
+					[37, 29, SegmentFlags.NONE],
+					[40, 29, SegmentFlags.NONE],
+					[40, 28, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[40, 29, SegmentFlags.NONE],
+					[41, 29, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-overworld-9-0": {
+			"flags": PathFlags.STEPS,
+			"map": "2000-0",
+			"mapRange": [13, 3, 32, 32],
+			"segments": {
+				"base-0": [
+					[41, 25, SegmentFlags.START],
+					[37, 25, SegmentFlags.NONE],
+					[37, 16, SegmentFlags.NONE],
+					[33, 16, SegmentFlags.NONE],
+					[33, 14, SegmentFlags.NONE],
+					[22, 14, SegmentFlags.NONE],
+					[22, 15, SegmentFlags.NONE],
+					[18, 15, SegmentFlags.NONE],
+					[18, 14, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[22, 15, SegmentFlags.NONE],
+					[23, 15, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-overworld-9-1": {
+			"flags": PathFlags.STEPS,
+			"map": "2000-0",
+			"mapRange": [13, 3, 32, 32],
+			"segments": {
+				"base-0": [
+					[41, 25, SegmentFlags.START],
+					[37, 25, SegmentFlags.NONE],
+					[37, 16, SegmentFlags.NONE],
+					[33, 16, SegmentFlags.NONE],
+					[33, 14, SegmentFlags.NONE],
+					[22, 14, SegmentFlags.NONE],
+					[22, 15, SegmentFlags.NONE],
+					[18, 15, SegmentFlags.NONE],
+					[18, 14, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[22, 15, SegmentFlags.NONE],
+					[23, 15, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-overworld-10-0": {
+			"flags": PathFlags.STEPS,
+			"map": "2000-0",
+			"mapRange": [13, 3, 32, 32],
+			"segments": {
+				"base-0": [
+					[18, 21, SegmentFlags.START],
+					[21, 21, SegmentFlags.NONE],
+					[21, 19, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[21, 19, SegmentFlags.NONE],
+					[22, 19, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-overworld-10-1": {
+			"flags": PathFlags.STEPS,
+			"map": "2000-0",
+			"mapRange": [13, 3, 32, 32],
+			"segments": {
+				"base-0": [
+					[18, 21, SegmentFlags.START],
+					[21, 21, SegmentFlags.NONE],
+					[21, 19, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[21, 19, SegmentFlags.NONE],
+					[22, 19, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-path-east-0-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3164-0",
+			"segments": {
+				"base-0": [
+					[21, 6, SegmentFlags.START],
+					[14, 6, SegmentFlags.NONE],
+					[14, 19, SegmentFlags.NONE],
+					[9, 19, SegmentFlags.NONE],
+					[9, 26, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[9, 25, SegmentFlags.NONE],
+					[10, 25, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-path-east-0-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3164-0",
+			"segments": {
+				"base-0": [
+					[21, 6, SegmentFlags.START],
+					[14, 6, SegmentFlags.NONE],
+					[14, 19, SegmentFlags.NONE],
+					[9, 19, SegmentFlags.NONE],
+					[9, 26, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[9, 25, SegmentFlags.NONE],
+					[10, 25, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-path-east-1-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3164-0",
+			"segments": {
+				"base-0": [
+					[9, 25, SegmentFlags.START],
+					[9, 18, SegmentFlags.NONE],
+					[14, 18, SegmentFlags.NONE],
+					[14, 6, SegmentFlags.NONE],
+					[21, 6, SegmentFlags.NONE],
+					[21, 5, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[21, 6, SegmentFlags.NONE],
+					[21, 7, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-path-east-1-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3164-0",
+			"segments": {
+				"base-0": [
+					[9, 25, SegmentFlags.START],
+					[9, 18, SegmentFlags.NONE],
+					[14, 18, SegmentFlags.NONE],
+					[14, 6, SegmentFlags.NONE],
+					[21, 6, SegmentFlags.NONE],
+					[21, 5, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[21, 6, SegmentFlags.NONE],
+					[21, 7, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-path-west-0-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3163-0",
+			"segments": {
+				"base-0": [
+					[12, 30, SegmentFlags.START],
+					[12, 29, SegmentFlags.NONE],
+					[14, 29, SegmentFlags.NONE],
+					[14, 23, SegmentFlags.NONE],
+					[11, 23, SegmentFlags.NONE],
+					[11, 15, SegmentFlags.NONE],
+					[14, 15, SegmentFlags.NONE],
+					[14, 10, SegmentFlags.NONE],
+					[19, 10, SegmentFlags.NONE],
+					[19, 4, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[19, 5, SegmentFlags.NONE],
+					[20, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-path-west-0-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3163-0",
+			"segments": {
+				"base-0": [
+					[12, 30, SegmentFlags.START],
+					[12, 29, SegmentFlags.NONE],
+					[14, 29, SegmentFlags.NONE],
+					[14, 23, SegmentFlags.NONE],
+					[11, 23, SegmentFlags.NONE],
+					[11, 15, SegmentFlags.NONE],
+					[14, 15, SegmentFlags.NONE],
+					[14, 10, SegmentFlags.NONE],
+					[19, 10, SegmentFlags.NONE],
+					[19, 4, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[19, 5, SegmentFlags.NONE],
+					[20, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-path-west-1-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3163-0",
+			"segments": {
+				"base-0": [
+					[19, 5, SegmentFlags.START],
+					[19, 10, SegmentFlags.NONE],
+					[12, 10, SegmentFlags.NONE],
+					[12, 15, SegmentFlags.NONE],
+					[11, 15, SegmentFlags.NONE],
+					[11, 23, SegmentFlags.NONE],
+					[14, 23, SegmentFlags.NONE],
+					[14, 29, SegmentFlags.NONE],
+					[12, 29, SegmentFlags.NONE],
+					[12, 31, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[12, 29, SegmentFlags.NONE],
+					[11, 29, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				]
+			}
+		},
+		"lunar-path-west-1-1": {
+			"flags": PathFlags.STEPS,
+			"map": "3163-0",
+			"segments": {
+				"base-0": [
+					[19, 5, SegmentFlags.START],
+					[19, 10, SegmentFlags.NONE],
+					[12, 10, SegmentFlags.NONE],
+					[12, 15, SegmentFlags.NONE],
+					[11, 15, SegmentFlags.NONE],
+					[11, 23, SegmentFlags.NONE],
+					[14, 23, SegmentFlags.NONE],
+					[14, 29, SegmentFlags.NONE],
+					[12, 29, SegmentFlags.NONE],
+					[12, 31, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[12, 29, SegmentFlags.NONE],
+					[11, 29, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				]
+			}
+		},
+		"lunars-lair-1f-0-0": {
+			"flags": PathFlags.NONE,
+			"map": "3160-0",
+			"segments": {
+				"base-0": [
+					[16, 28, SegmentFlags.START],
+					[16, 21, SegmentFlags.END]
+				],
+				"base-1": [
+					[16, 15, SegmentFlags.START],
+					[16, 29, SegmentFlags.END]
+				]
+			}
+		},
+		"lunars-lair-1f-0-1": {
+			"flags": PathFlags.NONE,
+			"map": "3160-0",
+			"segments": {
+				"base-0": [
+					[16, 28, SegmentFlags.START],
+					[16, 21, SegmentFlags.END]
+				],
+				"base-1": [
+					[16, 15, SegmentFlags.START],
+					[16, 29, SegmentFlags.END]
 				]
 			}
 		},
@@ -9222,8 +10170,30 @@ com.aexoden.ff4 = function()
 			if (data.paths[path].mapRange) {
 				ctx.drawImage(img, data.paths[path].mapRange[0] * 16, data.paths[path].mapRange[1] * 16, data.paths[path].mapRange[2] * 16, data.paths[path].mapRange[3] * 16, 0, 0, data.paths[path].mapRange[2] * 16, data.paths[path].mapRange[3] * 16);
 
-				if (data.paths[path].mapRange[0] > 224) {
-					ctx.drawImage(img, 0, data.paths[path].mapRange[1] * 16, data.paths[path].mapRange[2] * 16, data.paths[path].mapRange[3] * 16, (256 - data.paths[path].mapRange[0]) * 16, 0, data.paths[path].mapRange[2] * 16, data.paths[path].mapRange[3] * 16);
+				var testValue = 224;
+				var maxValue = 256;
+
+				if (data.paths[path].map == "2000-0") {
+					testValue = 32;
+					maxValue = 64;
+				}
+
+				var both = true;
+
+				if (data.paths[path].mapRange[0] > testValue) {
+					ctx.drawImage(img, 0, data.paths[path].mapRange[1] * 16, data.paths[path].mapRange[2] * 16, data.paths[path].mapRange[3] * 16, (maxValue - data.paths[path].mapRange[0]) * 16, 0, data.paths[path].mapRange[2] * 16, data.paths[path].mapRange[3] * 16);
+				} else {
+					both = false;
+				}
+
+				if (data.paths[path].mapRange[1] > testValue) {
+					ctx.drawImage(img, data.paths[path].mapRange[0] * 16, 0, data.paths[path].mapRange[2] * 16, data.paths[path].mapRange[3] * 16, 0, (maxValue - data.paths[path].mapRange[1]) * 16, data.paths[path].mapRange[2] * 16, data.paths[path].mapRange[3] * 16);
+				} else {
+					both = false;
+				}
+
+				if (both) {
+					ctx.drawImage(img, 0, 0, data.paths[path].mapRange[2] * 16, data.paths[path].mapRange[3] * 16, (maxValue - data.paths[path].mapRange[0]) * 16, (maxValue - data.paths[path].mapRange[1]) * 16, data.paths[path].mapRange[2] * 16, data.paths[path].mapRange[3] * 16);
 				}
 			} else {
 				ctx.drawImage(img, 0, 0);
@@ -9500,6 +10470,10 @@ com.aexoden.ff4 = function()
 						caption.innerHTML += '<p>Leave by picking up a <strong>yellow</strong> chocobo.</p>';
 					} else if (black) {
 						caption.innerHTML += '<p>Leave by picking up a <strong>black</strong> chocobo.</p>';
+					}
+
+					if ((data.paths[path].flags & PathFlags.HUMMINGWAY) > 0) {
+						caption.innerHTML += '<p>Track down the shop Hummingway as pointed to by the arrow, and then leave, making sure to take a total of 16 steps, plus any extras below.</p>'
 					}
 
 					if (path in activeMaps) {
