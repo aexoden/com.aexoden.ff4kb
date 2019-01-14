@@ -644,13 +644,12 @@ com.aexoden.ff4 = function()
 			"overworld-airship-7-0",
 			"overworld-mysidia-3",
 			"big-whale-crystal",
-
-			"lunar-overworld-0", // 0 start to hummingway
-			"lunar-overworld-1", // 1 start to lunarian landing
-			"big-whale-exit",    // B exit whale
-			"lunar-overworld-2-0", // 0 walk from whale to hummingway
-			"hummingway-cave-0-0", // 0 hummingway
-			"lunar-overworld-3-0", // 0 walk from hummingway to whale
+			"lunar-overworld-0",
+			"lunar-overworld-1",
+			"big-whale-exit",
+			"lunar-overworld-2-0",
+			"hummingway-cave-0-0",
+			"lunar-overworld-3-0",
 			"lunar-overworld-5-1",
 			"lunar-path-west-0-1",
 			"lunar-overworld-6-1",
@@ -662,8 +661,8 @@ com.aexoden.ff4 = function()
 			"lunar-overworld-9-1",
 			"lunar-path-west-1-1",
 			"lunar-overworld-10-1",
-			"big-whale-console", // 0 enter whale
-			"lunar-overworld-4-0", // 0 hummingway to fusoya landing
+			"big-whale-console",
+			"lunar-overworld-4-0",
 			"lunar-overworld-4-1",
 			"big-whale-exit",
 			"lunar-overworld-5-0",
@@ -677,10 +676,17 @@ com.aexoden.ff4 = function()
 			"lunar-overworld-9-0",
 			"lunar-path-west-1-0",
 			"lunar-overworld-10-0",
-			"lunar-overworld-2-1", // 0 walk from whale to hummingway
-			"hummingway-cave-0-1", // 0 hummingway
-			"lunar-overworld-3-1", // 0 walk from hummingway to whale
-			"big-whale-crystal"
+			"lunar-overworld-2-1",
+			"hummingway-cave-0-1",
+			"lunar-overworld-3-1",
+			"big-whale-crystal",
+			"giant-of-babil-mouth-0",
+			"giant-of-babil-neck-0",
+			"giant-of-babil-chest-0",
+			"giant-of-babil-stomach-0",
+			"giant-of-babil-passage-0",
+			"giant-of-babil-lung-0",
+			"giant-of-babil-cpu-0"
 		]
 	};
 
@@ -1845,6 +1851,96 @@ com.aexoden.ff4 = function()
 					"index": "0",
 					"location": "Fabul Right Tower 3F",
 					"disambiguation": " after talking to the King"
+				}
+			}
+		},
+		"giant-of-babil-chest-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"giant-of-babil-chest-0": {
+					"index": "0",
+					"location": "Giant of Bab-il Chest",
+					"disambiguation": ""
+				}
+			}
+		},
+		"giant-of-babil-cpu-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"giant-of-babil-cpu-0": {
+					"index": "0",
+					"location": "Giant of Bab-il CPU",
+					"disambiguation": ""
+				}
+			}
+		},
+		"giant-of-babil-lung-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"giant-of-babil-lung-0": {
+					"index": "0",
+					"location": "Giant of Bab-il Lung",
+					"disambiguation": " before the Elements battle"
+				}
+			}
+		},
+		"giant-of-babil-lung-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"giant-of-babil-lung-0": {
+					"index": "1",
+					"location": "Giant of Bab-il Lung",
+					"disambiguation": " after the Elements battle"
+				}
+			}
+		},
+		"giant-of-babil-mouth-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {
+				1: { "giant-of-babil-mouth-0": 1 }
+			},
+			"paths": {
+				"giant-of-babil-mouth-0": {
+					"index": "0",
+					"location": "Giant of Bab-il Mouth",
+					"disambiguation": ""
+				}
+			}
+		},
+		"giant-of-babil-neck-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"giant-of-babil-neck-0": {
+					"index": "0",
+					"location": "Giant of Bab-il Neck",
+					"disambiguation": ""
+				}
+			}
+		},
+		"giant-of-babil-passage-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"giant-of-babil-passage-0": {
+					"index": "0",
+					"location": "Giant of Bab-il Passage",
+					"disambiguation": ""
+				}
+			}
+		},
+		"giant-of-babil-stomach-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"giant-of-babil-stomach-0": {
+					"index": "0",
+					"location": "Giant of Bab-il Stomach",
+					"disambiguation": ""
 				}
 			}
 		},
@@ -3780,7 +3876,15 @@ com.aexoden.ff4 = function()
 			155: ["lunar-path-east-1-0", "lunar-path-west-1-1"],
 			156: ["lunar-overworld-9-0", "lunar-overworld-10-1"],
 			157: ["lunar-path-west-1-0", "hummingway-cave-0-1"],
-			158: ["lunar-overworld-10-0", "lunar-overworld-3-1"]
+			158: ["lunar-overworld-10-0", "lunar-overworld-3-1"],
+			159: ["giant-of-babil-mouth-0"],
+			160: ["giant-of-babil-neck-0"],
+			161: ["giant-of-babil-chest-0"],
+			162: ["giant-of-babil-stomach-0"],
+			163: ["giant-of-babil-passage-0"],
+			164: ["giant-of-babil-lung-0"],
+			165: ["giant-of-babil-lung-1"],
+			166: ["giant-of-babil-cpu-0"]
 		}
 	};
 
@@ -5854,6 +5958,203 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[1, 5, SegmentFlags.NONE],
 					[1, 4, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"giant-of-babil-chest-0": {
+			"flags": PathFlags.STEPS,
+			"map": "30B7-0",
+			"segments": {
+				"base-0": [
+					[14, 3, SegmentFlags.START],
+					[14, 9, SegmentFlags.NONE],
+					[13, 9, SegmentFlags.NONE],
+					[13, 10, SegmentFlags.NONE],
+					[9, 10, SegmentFlags.NONE],
+					[9, 16, SegmentFlags.NONE],
+					[6, 16, SegmentFlags.NONE],
+					[6, 15, SegmentFlags.NONE],
+					[5, 15, SegmentFlags.NONE],
+					[5, 11, SegmentFlags.NONE],
+					[2, 11, SegmentFlags.NONE],
+					[2, 19, SegmentFlags.NONE],
+					[3, 19, SegmentFlags.NONE],
+					[3, 22, SegmentFlags.NONE],
+					[5, 22, SegmentFlags.NONE],
+					[5, 25, SegmentFlags.NONE],
+					[9, 25, SegmentFlags.NONE],
+					[9, 21, SegmentFlags.NONE],
+					[14, 21, SegmentFlags.NONE],
+					[14, 25, SegmentFlags.NONE],
+					[17, 25, SegmentFlags.NONE],
+					[17, 26, SegmentFlags.NONE],
+					[24, 26, SegmentFlags.NONE],
+					[24, 18, SegmentFlags.NONE],
+					[23, 18, SegmentFlags.NONE],
+					[23, 15, SegmentFlags.NONE],
+					[19, 15, SegmentFlags.NONE],
+					[19, 9, SegmentFlags.NONE],
+					[18, 9, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[23, 16, SegmentFlags.NONE],
+					[22, 16, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				],
+				"extra-2-0": [
+					[19, 14, SegmentFlags.NONE],
+					[18, 14, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				]
+			}
+		},
+		"giant-of-babil-cpu-0": {
+			"flags": PathFlags.STEPS,
+			"map": "30BD-0",
+			"segments": {
+				"base-0": [
+					[8, 18, SegmentFlags.START],
+					[9, 18, SegmentFlags.NONE],
+					[9, 13, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[9, 16, SegmentFlags.NONE],
+					[9, 17, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[9, 18, SegmentFlags.NONE],
+					[10, 18, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"giant-of-babil-lung-0": {
+			"flags": PathFlags.STEPS,
+			"map": "30BC-0",
+			"segments": {
+				"base-0": [
+					[15, 24, SegmentFlags.START],
+					[15, 15, SegmentFlags.END]
+				],
+				"base-1": [
+					[15, 15, SegmentFlags.NONE],
+					[15, 4, SegmentFlags.END]
+				],
+				"extra-1-1": [
+					[15, 5, SegmentFlags.NONE],
+					[16, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[15, 22, SegmentFlags.NONE],
+					[16, 22, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-1": [
+					[15, 8, SegmentFlags.NONE],
+					[15, 9, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"giant-of-babil-mouth-0": {
+			"flags": PathFlags.STEPS,
+			"map": "30B5-0",
+			"segments": {
+				"base-0": [
+					[9, 20, SegmentFlags.START],
+					[9, 15, SegmentFlags.NONE],
+					[10, 15, SegmentFlags.NONE],
+					[10, 10, SegmentFlags.NONE],
+					[11, 10, SegmentFlags.NONE],
+					[11, 9, SegmentFlags.NONE],
+					[12, 9, SegmentFlags.NONE],
+					[12, 6, SegmentFlags.NONE],
+					[11, 6, SegmentFlags.NONE],
+					[11, 5, SegmentFlags.NONE],
+					[9, 5, SegmentFlags.NONE],
+					[9, 7, SegmentFlags.END]
+				],
+				"optional-1-0": [
+					[9, 16, SegmentFlags.NONE],
+					[10, 16, SegmentFlags.ANNOTATE],
+					[10, 15, SegmentFlags.NONE]
+				],
+				"extra-2-0": [
+					[9, 5, SegmentFlags.NONE],
+					[8, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				]
+			}
+		},
+		"giant-of-babil-neck-0": {
+			"flags": PathFlags.STEPS,
+			"map": "30B6-0",
+			"segments": {
+				"base-0": [
+					[7, 4, SegmentFlags.START],
+					[7, 7, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[7, 6, SegmentFlags.NONE],
+					[8, 6, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"giant-of-babil-passage-0": {
+			"flags": PathFlags.STEPS,
+			"map": "30BA-0",
+			"segments": {
+				"base-0": [
+					[3, 4, SegmentFlags.START],
+					[3, 23, SegmentFlags.NONE],
+					[4, 23, SegmentFlags.NONE],
+					[4, 25, SegmentFlags.NONE],
+					[6, 25, SegmentFlags.NONE],
+					[6, 26, SegmentFlags.NONE],
+					[11, 26, SegmentFlags.NONE],
+					[11, 25, SegmentFlags.NONE],
+					[17, 25, SegmentFlags.NONE],
+					[17, 26, SegmentFlags.NONE],
+					[24, 26, SegmentFlags.NONE],
+					[24, 23, SegmentFlags.NONE],
+					[25, 23, SegmentFlags.NONE],
+					[25, 15, SegmentFlags.NONE],
+					[21, 15, SegmentFlags.NONE],
+					[21, 4, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[21, 8, SegmentFlags.NONE],
+					[22, 8, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[21, 5, SegmentFlags.NONE],
+					[22, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"giant-of-babil-stomach-0": {
+			"flags": PathFlags.STEPS,
+			"map": "30B9-0",
+			"segments": {
+				"base-0": [
+					[17, 20, SegmentFlags.START],
+					[22, 20, SegmentFlags.NONE],
+					[22, 19, SegmentFlags.NONE],
+					[23, 19, SegmentFlags.NONE],
+					[23, 14, SegmentFlags.NONE],
+					[23, 6, SegmentFlags.NONE],
+					[21, 6, SegmentFlags.NONE],
+					[21, 5, SegmentFlags.NONE],
+					[14, 5, SegmentFlags.NONE],
+					[14, 8, SegmentFlags.NONE],
+					[11, 8, SegmentFlags.NONE],
+					[11, 10, SegmentFlags.NONE],
+					[5, 10, SegmentFlags.NONE],
+					[5, 6, SegmentFlags.NONE],
+					[3, 6, SegmentFlags.NONE],
+					[3, 4, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[23, 14, SegmentFlags.NONE],
+					[23, 13, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[3, 5, SegmentFlags.NONE],
+					[4, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
