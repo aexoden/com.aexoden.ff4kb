@@ -686,7 +686,17 @@ com.aexoden.ff4 = function()
 			"giant-of-babil-stomach-0",
 			"giant-of-babil-passage-0",
 			"giant-of-babil-lung-0",
-			"giant-of-babil-cpu-0"
+			"giant-of-babil-cpu-0",
+			"big-whale-console",
+			"lunar-overworld-11-0",
+			"big-whale-exit",
+			"lunar-overworld-12-0",
+			"lunar-path-west-2",
+			"lunar-overworld-13-0",
+			"lunar-path-east-2",
+			"lunar-overworld-14-0",
+			"lunars-lair-1f-1",
+			"lunars-lair-2f-0"
 		]
 	};
 
@@ -2071,7 +2081,7 @@ com.aexoden.ff4 = function()
 					"lunar-overworld-0": {
 						"enabled": true,
 						"index": "0",
-						"location": "Lunar Overworld",
+						"location": "Lunar Overworld [first visit]",
 						"instruction": "Visit the Namingway Cave before recruiting FuSoYa"
 					},
 					"lunar-overworld-1": { "enabled": false },
@@ -2096,7 +2106,7 @@ com.aexoden.ff4 = function()
 					"lunar-overworld-1": {
 						"enabled": true,
 						"index": "0",
-						"location": "Lunar Overworld",
+						"location": "Lunar Overworld [first visit]",
 						"instruction": "Recruit FuSoYa before visiting the Namingway cave"
 					},
 					"lunar-overworld-2-0": { "enabled": false },
@@ -2115,6 +2125,31 @@ com.aexoden.ff4 = function()
 					"lunar-path-west-1-0": { "enabled": false },
 					"lunar-overworld-10-0": { "enabled": false },
 				},
+			}
+		},
+		"lunar-overworld-choice-1": {
+			"type": VariableFlags.CHOICE,
+			"descriptions": {
+				0: "Skip equipping the Dwarf Axe when arriving on the Moon after the CPU battle",
+				1: "Equip the Dwarf Axe when arriving on the Moon after the CPU battle"
+			},
+			"paths": {
+				0: {
+					"lunar-overworld-12-0": {
+						"enabled": true,
+						"index": "0",
+						"location": "Lunar Overworld [after CPU before Lunar Path (west)]",
+						"instruction": "Skip equipping the Dwarf Axe"
+					}
+				},
+				1: {
+					"lunar-overworld-12-0": {
+						"enabled": true,
+						"index": "0",
+						"location": "Lunar Overworld [after CPU before Lunar Path (west)]",
+						"instruction": "Equip the Dwarf Axe"
+					}
+				}
 			}
 		},
 		"lunar-overworld-3-0": {
@@ -2271,6 +2306,39 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"lunar-overworld-12-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-overworld-12-0": {
+					"index": "0",
+					"location": "Lunar Overworld [after CPU before Lunar Path (west)]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-overworld-13-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-overworld-13-0": {
+					"index": "0",
+					"location": "Lunar Overworld [after CPU before Lunar Path (east)]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-overworld-14-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-overworld-14-0": {
+					"index": "0",
+					"location": "Lunar Overworld [after CPU after Lunar Path (east)]",
+					"disambiguation": ""
+				}
+			}
+		},
 		"lunar-path-east-0-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -2315,6 +2383,17 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"lunar-path-east-2": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-path-east-2": {
+					"index": "0",
+					"location": "Lunar Path (east) [after CPU]",
+					"disambiguation": ""
+				}
+			}
+		},
 		"lunar-path-west-0-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -2355,6 +2434,17 @@ com.aexoden.ff4 = function()
 				"lunar-path-west-1-1": {
 					"index": "0",
 					"location": "Lunar Path (west) [after FuSoYa]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-path-west-2": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-path-west-2": {
+					"index": "0",
+					"location": "Lunar Path (west) [after CPU]",
 					"disambiguation": ""
 				}
 			}
@@ -3884,7 +3974,13 @@ com.aexoden.ff4 = function()
 			163: ["giant-of-babil-passage-0"],
 			164: ["giant-of-babil-lung-0"],
 			165: ["giant-of-babil-lung-1"],
-			166: ["giant-of-babil-cpu-0"]
+			166: ["giant-of-babil-cpu-0"],
+			167: ["lunar-overworld-choice-1"],
+			168: ["lunar-overworld-12-0"],
+			169: ["lunar-path-west-2"],
+			170: ["lunar-overworld-13-0"],
+			171: ["lunar-path-east-2"],
+			172: ["lunar-overworld-14-0"]
 		}
 	};
 
@@ -6882,6 +6978,77 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"lunar-overworld-11-0": {
+			"flags": PathFlags.STEPS,
+			"map": "2000-0",
+			"mapRange": [4, 13, 32, 32],
+			"segments": {
+				"base-0": [
+					[19, 39, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[21, 39, SegmentFlags.VEHICLE],
+					[21, 19, SegmentFlags.END | SegmentFlags.VEHICLE]
+				]
+			}
+		},
+		"lunar-overworld-12-0": {
+			"flags": PathFlags.STEPS,
+			"map": "2000-0",
+			"mapRange": [3, 4, 32, 32],
+			"segments": {
+				"base-0": [
+					[21, 19, SegmentFlags.START],
+					[21, 21, SegmentFlags.NONE],
+					[18, 21, SegmentFlags.NONE],
+					[18, 20, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[18, 21, SegmentFlags.NONE],
+					[17, 21, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				]
+			}
+		},
+		"lunar-overworld-13-0": {
+			"flags": PathFlags.STEPS,
+			"map": "2000-0",
+			"mapRange": [14, 3, 32, 32],
+			"segments": {
+				"base-0": [
+					[18, 15, SegmentFlags.START],
+					[23, 15, SegmentFlags.NONE],
+					[23, 14, SegmentFlags.NONE],
+					[33, 14, SegmentFlags.NONE],
+					[33, 16, SegmentFlags.NONE],
+					[37, 16, SegmentFlags.NONE],
+					[37, 25, SegmentFlags.NONE],
+					[41, 25, SegmentFlags.NONE],
+					[41, 24, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[41, 25, SegmentFlags.NONE],
+					[42, 25, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-overworld-14-0": {
+			"flags": PathFlags.STEPS,
+			"map": "2000-0",
+			"mapRange": [17, 11, 32, 32],
+			"segments": {
+				"base-0": [
+					[40, 29, SegmentFlags.START],
+					[37, 29, SegmentFlags.NONE],
+					[37, 30, SegmentFlags.NONE],
+					[33, 30, SegmentFlags.NONE],
+					[33, 28, SegmentFlags.NONE],
+					[28, 28, SegmentFlags.NONE],
+					[28, 25, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[28, 26, SegmentFlags.NONE],
+					[29, 26, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
 		"lunar-path-east-0-0": {
 			"flags": PathFlags.STEPS,
 			"map": "3164-0",
@@ -6949,6 +7116,23 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[21, 6, SegmentFlags.NONE],
 					[21, 7, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-path-east-2": {
+			"flags": PathFlags.STEPS,
+			"map": "3164-0",
+			"segments": {
+				"base-0": [
+					[21, 6, SegmentFlags.START],
+					[14, 6, SegmentFlags.NONE],
+					[14, 19, SegmentFlags.NONE],
+					[9, 19, SegmentFlags.NONE],
+					[9, 26, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[9, 25, SegmentFlags.NONE],
+					[10, 25, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -7040,6 +7224,28 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"lunar-path-west-2": {
+			"flags": PathFlags.STEPS,
+			"map": "3163-0",
+			"segments": {
+				"base-0": [
+					[12, 30, SegmentFlags.START],
+					[12, 29, SegmentFlags.NONE],
+					[14, 29, SegmentFlags.NONE],
+					[14, 23, SegmentFlags.NONE],
+					[11, 23, SegmentFlags.NONE],
+					[11, 15, SegmentFlags.NONE],
+					[14, 15, SegmentFlags.NONE],
+					[14, 10, SegmentFlags.NONE],
+					[19, 10, SegmentFlags.NONE],
+					[19, 4, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[19, 5, SegmentFlags.NONE],
+					[20, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
 		"lunars-lair-1f-0-0": {
 			"flags": PathFlags.NONE,
 			"map": "3160-0",
@@ -7065,6 +7271,35 @@ com.aexoden.ff4 = function()
 				"base-1": [
 					[16, 15, SegmentFlags.START],
 					[16, 29, SegmentFlags.END]
+				]
+			}
+		},
+		"lunars-lair-1f-1": {
+			"flags": PathFlags.NONE,
+			"map": "3160-0",
+			"segments": {
+				"base-0": [
+					[16, 28, SegmentFlags.START],
+					[16, 21, SegmentFlags.NONE],
+					[19, 21, SegmentFlags.NONE],
+					[19, 8, SegmentFlags.NONE],
+					[16, 8, SegmentFlags.NONE],
+					[16, 5, SegmentFlags.END]
+				]
+			}
+		},
+		"lunars-lair-2f-0": {
+			"flags": PathFlags.NONE,
+			"map": "3161-0",
+			"segments": {
+				"base-0": [
+					[16, 28, SegmentFlags.START],
+					[16, 27, SegmentFlags.NONE],
+					[23, 27, SegmentFlags.NONE],
+					[23, 23, SegmentFlags.NONE],
+					[26, 23, SegmentFlags.NONE],
+					[26, 16, SegmentFlags.NONE],
+					[16, 16, SegmentFlags.END]
 				]
 			}
 		},
