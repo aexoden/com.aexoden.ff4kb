@@ -4065,44 +4065,60 @@ com.aexoden.ff4.treasure = function()
 		}
 
 		total = 0;
-		missing = [];
+		count = 0;
+		missing = {};
 
 		for (var i = 0; i < 512; i++) {
 			if (i in treasure) {
 				total++;
 
 				if (!(i in results)) {
-					missing.push(i);
+					data = treasure[i];
+
+					if (!(data[0] in missing)) {
+						missing[data[0]] = [];
+					}
+
+					missing[data[0]].push(i);
+					count++;
 				}
 			}
 		}
 
 		var output = document.getElementById("results");
-		output.innerHTML = "<p>You are missing <b>" + missing.length + "</b> out of <b>" + total + "</b> treasures:";
+		output.innerHTML = "<p>You are missing <b>" + count + "</b> out of <b>" + total + "</b> treasures:";
 
-		for (var i = 0; i < missing.length; i++) {
-			var index = missing[i];
+		Object.keys(missing).forEach(
+			(key) => {
+				var row = document.createElement("div");
+				var caption = document.createElement("div");
+				var img_container = document.createElement("div");
 
-			var map = treasure[index][0];
-			var x = treasure[index][1];
-			var y = treasure[index][2];
+				row.className = "row align-items-center mb-2";
+				caption.className = "col";
+				img_container.className = "col";
 
-			var row = document.createElement("div");
-			var caption = document.createElement("div");
-			var img_container = document.createElement("div");
+				img_container.innerHTML = '<img src="/static/img/maps/composite/3' + parseInt(key).toString(16).padStart(3, '0').toUpperCase() + '-0.png">';
+				caption.innerHTML = '<p>You are missing the treasures at the following coordinates:</p><ul>';
 
-			row.className = "row align-items-center mb-2";
-			caption.className = "col";
-			img_container.className = "col";
+				for (var i = 0; i < missing[key].length; i++) {
+					var index = missing[key][i];
 
-			img_container.innerHTML = '<img src="/static/img/maps/composite/3' + map.toString(16).padStart(3, '0').toUpperCase() + '-0.png">';
-			caption.innerHTML = '<p>You are missing the treasure at coordinates ' + x + ', ' + y + '</p>';
+					var map = treasure[index][0];
+					var x = treasure[index][1];
+					var y = treasure[index][2];
 
-			row.appendChild(img_container);
-			row.appendChild(caption);
+					caption.innerHTML += '<li>' + x + ', ' + y + '</li>';
+				}
 
-			output.appendChild(row);
-		}
+				caption.innerHTML += '</ul>';
+
+				row.appendChild(img_container);
+				row.appendChild(caption);
+
+				output.appendChild(row);
+			}
+		);
 	}
 
 	var onButtonCheck = function(e) {
