@@ -696,7 +696,32 @@ com.aexoden.ff4 = function()
 			"lunar-path-east-2",
 			"lunar-overworld-14-0",
 			"lunars-lair-1f-1",
-			"lunars-lair-2f-0"
+			"lunars-lair-2f-0",
+			"lunar-subterrane-b1-0",
+			"lunar-subterrane-b2-0",
+			"lunar-subterrane-b3-0",
+			"lunar-subterrane-b4-0",
+			"lunar-subterrane-b4-passage-0",
+			"lunar-subterrane-b4-1",
+			"lunar-subterrane-b5-0",
+			"lunar-subterrane-b5-passage-a-0",
+			"lunar-subterrane-b5-1",
+			"lunar-subterrane-b5-passage-b-0",
+			"lunar-subterrane-b5-2",
+			"lunar-subterrane-b5-3",
+			"lunar-subterrane-b5-pink-puff-room-0",
+			"lunar-subterrane-b5-4",
+			"lunar-subterrane-b6-0",
+			"lunar-subterrane-b6-passage-0",
+			"lunar-subterrane-b7-0",
+			"lunar-subterrane-b7-1",
+			"lunar-subterrane-b7-save-room-0",
+			"lunar-subterrane-b7-2",
+			"lunar-core-b1-0",
+			"lunar-core-b2-0",
+			"lunar-core-b3-0",
+			"lunar-core-b4-0",
+			"lunar-core-b5-0"
 		]
 	};
 
@@ -2070,6 +2095,39 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"lunar-core-b1-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-core-b1-0": {
+					"index": "0",
+					"location": "Lunar Core B1",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-core-b2-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-core-b2-0": {
+					"index": "0",
+					"location": "Lunar Core B2",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-core-b3-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-core-b3-0": {
+					"index": "0",
+					"location": "Lunar Core B3",
+					"disambiguation": ""
+				}
+			}
+		},
 		"lunar-overworld-choice-0": {
 			"type": VariableFlags.CHOICE,
 			"descriptions": {
@@ -2445,6 +2503,306 @@ com.aexoden.ff4 = function()
 				"lunar-path-west-2": {
 					"index": "0",
 					"location": "Lunar Path (west) [after CPU]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-subterrane-b1-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-subterrane-b1-0": {
+					"index": "0",
+					"location": "Lunar Subterrane B1",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-subterrane-b2-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-subterrane-b2-0": {
+					"index": "0",
+					"location": "Lunar Subterrane B2",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-subterrane-b3-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-subterrane-b3-0": {
+					"index": "0",
+					"location": "Lunar Subterrane B3",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-subterrane-b4-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-subterrane-b4-0": {
+					"index": "0",
+					"location": "Lunar Subterrane B4 (upper)",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-subterrane-b4-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-subterrane-b4-1": {
+					"index": "0",
+					"location": "Lunar Subterrane B4 (lower)",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-subterrane-b4-passage-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-subterrane-b4-passage-0": {
+					"index": "0",
+					"location": "Lunar Subterrane B4 Passage",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-subterrane-b5-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-subterrane-b5-0": {
+					"index": "0",
+					"location": "Lunar Subterrane B5 (upper)",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-subterrane-b5-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-subterrane-b5-1": {
+					"index": "0",
+					"location": "Lunar Subterrane B5 (middle)",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-subterrane-b5-2": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-subterrane-b5-2": {
+					"index": "0",
+					"location": "Lunar Subterrane B5 (lower)",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-subterrane-b5-3": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-subterrane-b5-3": {
+					"index": "0",
+					"location": "Lunar Subterrane B5 (lower) [before Pink Puff Room]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-subterrane-b5-4": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-subterrane-b5-4": {
+					"index": "0",
+					"location": "Lunar Subterrane B5 (lower) [after Pink Puff Room]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-subterrane-b5-choice-0": {
+			"type": VariableFlags.CHOICE,
+			"descriptions": {
+				1: "Enter the Pink Puff Room on Lunar Subterrane B5 (lower)."
+			},
+			"paths": {
+				0: {
+					"lunar-subterrane-b5-3": { "enabled": false },
+					"lunar-subterrane-b5-pink-puff-room-0": { "enabled": false },
+					"lunar-subterrane-b5-4": { "enabled": false }
+				},
+				1: {
+					"lunar-subterrane-b5-2": { "enabled": false },
+					"lunar-subterrane-b5-3": {
+						"enabled": true,
+						"index": "0",
+						"location": "Lunar Subterrane B5 (lower)",
+						"instruction": "Enter the Pink Puff Room"
+					}
+				}
+			}
+		},
+		"lunar-subterrane-b5-passage-a-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-subterrane-b5-passage-a-0": {
+					"index": "0",
+					"location": "Lunar Subterrane B5 Passage A",
+					"disambiguation": " before getting the Protect Ring"
+				}
+			}
+		},
+		"lunar-subterrane-b5-passage-a-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-subterrane-b5-passage-a-0": {
+					"index": "1",
+					"location": "Lunar Subterrane B5 Passage A",
+					"disambiguation": " after getting the Protect Ring and any associated menuing"
+				}
+			}
+		},
+		"lunar-subterrane-b5-passage-b-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-subterrane-b5-passage-b-0": {
+					"index": "0",
+					"location": "Lunar Subterrane B5 Passage B",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-subterrane-b5-passage-a-choice-0": {
+			"type": VariableFlags.CHOICE,
+			"descriptions": {
+				0: "Do the final Zeromus menu immediately after getting the Protect Ring.",
+				1: "Do the final Zeromus menu immediately before Zeromus."
+			},
+			"paths": {
+				0: {
+					"lunar-subterrane-b5-passage-a-0": {
+						"enabled": true,
+						"index": "0",
+						"location": "Lunar Subterrane B5 Passage A",
+						"instruction": "Do the final Zeromus menu immediately after getting the Protect Ring"
+					}
+				},
+				1: {
+					"lunar-core-b5-0": {
+						"enabled": true,
+						"index": "0",
+						"location": "Lunar Core B5",
+						"instruction": "Do the final Zeromus menu immediately before Zeromus"
+					}
+				}
+			}
+		},
+		"lunar-subterrane-b5-pink-puff-room-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-subterrane-b5-pink-puff-room-0": {
+					"index": "0",
+					"location": "Lunar Subterrane B5 Pink Puff Room",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-subterrane-b6-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-subterrane-b6-0": {
+					"index": "0",
+					"location": "Lunar Subterrane B6",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-subterrane-b6-passage-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-subterrane-b6-passage-0": {
+					"index": "0",
+					"location": "Lunar Subterrane B6 Passage",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-subterrane-b7-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-subterrane-b7-0": {
+					"index": "0",
+					"location": "Lunar Subterrane B7",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-subterrane-b7-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-subterrane-b7-1": {
+					"index": "0",
+					"location": "Lunar Subterrane B7 [before Save Room]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-subterrane-b7-2": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-subterrane-b7-2": {
+					"index": "0",
+					"location": "Lunar Subterrane B7 [after Save Room]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-subterrane-b7-choice-0": {
+			"type": VariableFlags.CHOICE,
+			"descriptions": {
+				1: "Enter the Save Room on Lunar Subterrane B7."
+			},
+			"paths": {
+				0: {
+					"lunar-subterrane-b7-1": { "enabled": false },
+					"lunar-subterrane-b7-save-room-0": { "enabled": false },
+					"lunar-subterrane-b7-2": { "enabled": false }
+				},
+				1: {
+					"lunar-subterrane-b7-0": { "enabled": false },
+					"lunar-subterrane-b7-1": {
+						"enabled": true,
+						"index": "0",
+						"location": "Lunar Subterrane B7",
+						"instruction": "Enter the Save Room"
+					}
+				}
+			}
+		},
+		"lunar-subterrane-b7-save-room-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-subterrane-b7-save-room-0": {
+					"index": "0",
+					"location": "Lunar Subterrane B7 Save Room",
 					"disambiguation": ""
 				}
 			}
@@ -3980,7 +4338,32 @@ com.aexoden.ff4 = function()
 			169: ["lunar-path-west-2"],
 			170: ["lunar-overworld-13-0"],
 			171: ["lunar-path-east-2"],
-			172: ["lunar-overworld-14-0"]
+			172: ["lunar-overworld-14-0"],
+			173: ["lunar-subterrane-b1-0"],
+			174: ["lunar-subterrane-b2-0"],
+			175: ["lunar-subterrane-b3-0"],
+			176: ["lunar-subterrane-b4-0"],
+			177: ["lunar-subterrane-b4-passage-0"],
+			178: ["lunar-subterrane-b4-1"],
+			179: ["lunar-subterrane-b5-0"],
+			180: ["lunar-subterrane-b5-passage-a-0"],
+			181: ["lunar-subterrane-b5-passage-a-choice-0"],
+			182: ["lunar-subterrane-b5-passage-a-1"],
+			183: ["lunar-subterrane-b5-1"],
+			184: ["lunar-subterrane-b5-passage-b-0"],
+			185: ["lunar-subterrane-b5-choice-0"],
+			186: ["lunar-subterrane-b5-2", "lunar-subterrane-b5-3"],
+			187: ["lunar-subterrane-b5-pink-puff-room-0"],
+			188: ["lunar-subterrane-b5-4"],
+			189: ["lunar-subterrane-b6-0"],
+			190: ["lunar-subterrane-b6-passage-0"],
+			191: ["lunar-subterrane-b7-choice-0"],
+			192: ["lunar-subterrane-b7-1"],
+			193: ["lunar-subterrane-b7-save-room-0"],
+			194: ["lunar-subterrane-b7-0", "lunar-subterrane-b7-2"],
+			195: ["lunar-core-b1-0"],
+			196: ["lunar-core-b2-0"],
+			197: ["lunar-core-b3-0"]
 		}
 	};
 
@@ -6642,6 +7025,130 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"lunar-core-b1-0": {
+			"flags": PathFlags.STEPS,
+			"map": "316E-0",
+			"segments": {
+				"base-0": [
+					[17, 8, SegmentFlags.START],
+					[17, 9, SegmentFlags.NONE],
+					[24, 9, SegmentFlags.NONE],
+					[24, 12, SegmentFlags.NONE],
+					[26, 12, SegmentFlags.NONE],
+					[26, 16, SegmentFlags.NONE],
+					[24, 16, SegmentFlags.NONE],
+					[24, 15, SegmentFlags.NONE],
+					[23, 15, SegmentFlags.NONE],
+					[23, 14, SegmentFlags.NONE],
+					[21, 14, SegmentFlags.NONE],
+					[21, 13, SegmentFlags.NONE],
+					[13, 13, SegmentFlags.NONE],
+					[13, 15, SegmentFlags.NONE],
+					[9, 15, SegmentFlags.NONE],
+					[9, 20, SegmentFlags.NONE],
+					[12, 20, SegmentFlags.NONE],
+					[12, 19, SegmentFlags.NONE],
+					[14, 19, SegmentFlags.NONE],
+					[14, 20, SegmentFlags.NONE],
+					[15, 20, SegmentFlags.NONE],
+					[15, 21, SegmentFlags.NONE],
+					[19, 21, SegmentFlags.NONE],
+					[19, 20, SegmentFlags.NONE],
+					[20, 20, SegmentFlags.NONE],
+					[20, 16, SegmentFlags.NONE],
+					[17, 16, SegmentFlags.NONE],
+					[17, 19, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[17, 21, SegmentFlags.NONE],
+					[17, 22, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-core-b2-0": {
+			"flags": PathFlags.STEPS,
+			"map": "316F-0",
+			"segments": {
+				"base-0": [
+					[15, 8, SegmentFlags.START],
+					[15, 11, SegmentFlags.NONE],
+					[17, 11, SegmentFlags.NONE],
+					[17, 15, SegmentFlags.NONE],
+					[21, 15, SegmentFlags.NONE],
+					[21, 18, SegmentFlags.NONE],
+					[13, 18, SegmentFlags.NONE],
+					[13, 16, SegmentFlags.NONE],
+					[9, 16, SegmentFlags.NONE],
+					[9, 15, SegmentFlags.NONE],
+					[7, 15, SegmentFlags.NONE],
+					[7, 22, SegmentFlags.NONE],
+					[22, 22, SegmentFlags.NONE],
+					[22, 23, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[22, 22, SegmentFlags.NONE],
+					[23, 22, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-core-b3-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3170-0",
+			"segments": {
+				"base-0": [
+					[21, 7, SegmentFlags.START],
+					[21, 9, SegmentFlags.NONE],
+					[14, 9, SegmentFlags.NONE],
+					[14, 12, SegmentFlags.NONE],
+					[17, 12, SegmentFlags.NONE],
+					[17, 11, SegmentFlags.NONE],
+					[19, 11, SegmentFlags.NONE],
+					[19, 12, SegmentFlags.NONE],
+					[22, 12, SegmentFlags.NONE],
+					[22, 15, SegmentFlags.NONE],
+					[13, 15, SegmentFlags.NONE],
+					[13, 18, SegmentFlags.NONE],
+					[14, 18, SegmentFlags.NONE],
+					[14, 19, SegmentFlags.NONE],
+					[16, 19, SegmentFlags.NONE],
+					[16, 20, SegmentFlags.NONE],
+					[23, 20, SegmentFlags.NONE],
+					[23, 24, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[23, 21, SegmentFlags.NONE],
+					[24, 21, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-core-b4-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3171-0",
+			"segments": {
+				"base-0": [
+					[25, 8, SegmentFlags.START],
+					[6, 8, SegmentFlags.NONE],
+					[6, 15, SegmentFlags.NONE],
+					[25, 15, SegmentFlags.NONE],
+					[25, 20, SegmentFlags.NONE],
+					[9, 20, SegmentFlags.NONE],
+					[9, 19, SegmentFlags.NONE],
+					[7, 19, SegmentFlags.NONE],
+					[7, 20, SegmentFlags.NONE],
+					[6, 20, SegmentFlags.END]
+				]
+			}
+		},
+		"lunar-core-b5-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3172-0",
+			"segments": {
+				"base-0": [
+					[15, 23, SegmentFlags.START],
+					[15, 15, SegmentFlags.END]
+				]
+			}
+		},
 		"lunar-overworld-0": {
 			"flags": PathFlags.STEPS,
 			"map": "2000-0",
@@ -7243,6 +7750,400 @@ com.aexoden.ff4 = function()
 				"extra-2-0": [
 					[19, 5, SegmentFlags.NONE],
 					[20, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-subterrane-b1-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3167-0",
+			"segments": {
+				"base-0": [
+					[13, 13, SegmentFlags.START],
+					[13, 8, SegmentFlags.NONE],
+					[17, 8, SegmentFlags.NONE],
+					[17, 19, SegmentFlags.NONE],
+					[13, 19, SegmentFlags.NONE],
+					[13, 25, SegmentFlags.NONE],
+					[16, 25, SegmentFlags.NONE],
+					[16, 24, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[16, 25, SegmentFlags.NONE],
+					[17, 25, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-subterrane-b2-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3168-0",
+			"segments": {
+				"base-0": [
+					[19, 25, SegmentFlags.START],
+					[19, 30, SegmentFlags.NONE],
+					[30, 30, SegmentFlags.NONE],
+					[31, 30, SegmentFlags.NONE],
+					[31, 4, SegmentFlags.NONE],
+					[23, 4, SegmentFlags.NONE],
+					[23, 5, SegmentFlags.NONE],
+					[15, 5, SegmentFlags.NONE],
+					[15, 4, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[19, 5, SegmentFlags.NONE],
+					[20, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				],
+				"extra-2-0": [
+					[15, 5, SegmentFlags.NONE],
+					[14, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				]
+			}
+		},
+		"lunar-subterrane-b3-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3169-0",
+			"segments": {
+				"base-0": [
+					[15, 5, SegmentFlags.START],
+					[14, 5, SegmentFlags.NONE],
+					[14, 16, SegmentFlags.NONE],
+					[16, 16, SegmentFlags.NONE],
+					[16, 15, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[16, 16, SegmentFlags.NONE],
+					[16, 17, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-subterrane-b4-0": {
+			"flags": PathFlags.STEPS,
+			"map": "316A-0",
+			"segments": {
+				"base-0": [
+					[9, 7, SegmentFlags.START],
+					[13, 7, SegmentFlags.NONE],
+					[13, 5, SegmentFlags.NONE],
+					[18, 5, SegmentFlags.NONE],
+					[18, 18, SegmentFlags.NONE],
+					[29, 18, SegmentFlags.NONE],
+					[29, 16, SegmentFlags.NONE],
+					[31, 16, SegmentFlags.NONE],
+					[31, 24, SegmentFlags.NONE],
+					[28, 24, SegmentFlags.NONE],
+					[28, 26, SegmentFlags.NONE],
+					[25, 26, SegmentFlags.NONE],
+					[25, 24, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[25, 26, SegmentFlags.NONE],
+					[24, 26, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				]
+			}
+		},
+		"lunar-subterrane-b4-1": {
+			"flags": PathFlags.STEPS,
+			"map": "316A-0",
+			"segments": {
+				"base-0": [
+					[10, 21, SegmentFlags.START],
+					[10, 27, SegmentFlags.NONE],
+					[16, 27, SegmentFlags.NONE],
+					[16, 31, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[16, 27, SegmentFlags.NONE],
+					[16, 26, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-subterrane-b4-passage-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3174-0",
+			"segments": {
+				"base-0": [
+					[24, 19, SegmentFlags.START],
+					[24, 14, SegmentFlags.NONE],
+					[18, 14, SegmentFlags.NONE],
+					[18, 12, SegmentFlags.NONE],
+					[12, 12, SegmentFlags.NONE],
+					[12, 14, SegmentFlags.NONE],
+					[9, 14, SegmentFlags.NONE],
+					[9, 12, SegmentFlags.NONE],
+					[6, 12, SegmentFlags.NONE],
+					[6, 13, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[6, 12, SegmentFlags.NONE],
+					[5, 12, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				]
+			}
+		},
+		"lunar-subterrane-b5-0": {
+			"flags": PathFlags.STEPS,
+			"map": "316B-0",
+			"segments": {
+				"base-0": [
+					[16, 2, SegmentFlags.START],
+					[16, 14, SegmentFlags.NONE],
+					[11, 14, SegmentFlags.NONE],
+					[11, 13, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[11, 14, SegmentFlags.NONE],
+					[10, 14, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				]
+			}
+		},
+		"lunar-subterrane-b5-1": {
+			"flags": PathFlags.STEPS,
+			"map": "316B-0",
+			"segments": {
+				"base-0": [
+					[22, 22, SegmentFlags.START],
+					[19, 22, SegmentFlags.NONE],
+					[19, 21, SegmentFlags.NONE],
+					[14, 21, SegmentFlags.NONE],
+					[14, 20, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[14, 21, SegmentFlags.NONE],
+					[13, 21, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				]
+			}
+		},
+		"lunar-subterrane-b5-2": {
+			"flags": PathFlags.STEPS,
+			"map": "316B-0",
+			"segments": {
+				"base-0": [
+					[14, 28, SegmentFlags.START],
+					[18, 28, SegmentFlags.NONE],
+					[18, 26, SegmentFlags.NONE],
+					[20, 26, SegmentFlags.NONE],
+					[20, 31, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[20, 28, SegmentFlags.NONE],
+					[21, 28, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-subterrane-b5-3": {
+			"flags": PathFlags.STEPS,
+			"map": "316B-0",
+			"segments": {
+				"base-0": [
+					[14, 28, SegmentFlags.START],
+					[18, 28, SegmentFlags.NONE],
+					[18, 26, SegmentFlags.NONE],
+					[20, 26, SegmentFlags.NONE],
+					[20, 28, SegmentFlags.NONE]
+				],
+				"alternate-0": [
+					[20, 28, SegmentFlags.NONE],
+					[23, 28, SegmentFlags.NONE],
+					[23, 27, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[23, 28, SegmentFlags.NONE],
+					[24, 28, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-subterrane-b5-4": {
+			"flags": PathFlags.STEPS,
+			"map": "316B-0",
+			"segments": {
+				"base-0": [
+					[23, 27, SegmentFlags.START],
+					[23, 28, SegmentFlags.NONE],
+					[20, 28, SegmentFlags.NONE],
+					[20, 31, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[20, 28, SegmentFlags.NONE],
+					[20, 27, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-subterrane-b5-passage-a-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3175-0",
+			"segments": {
+				"base-0": [
+					[5, 15, SegmentFlags.START],
+					[5, 5, SegmentFlags.NONE],
+					[13, 5, SegmentFlags.END]
+				],
+				"base-1": [
+					[13, 5, SegmentFlags.NONE],
+					[17, 5, SegmentFlags.NONE],
+					[17, 8, SegmentFlags.NONE],
+					[14, 8, SegmentFlags.NONE],
+					[14, 13, SegmentFlags.NONE],
+					[22, 13, SegmentFlags.NONE],
+					[22, 7, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[12, 5, SegmentFlags.NONE],
+					[12, 6, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-1-1": [
+					[16, 5, SegmentFlags.NONE],
+					[17, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				],
+				"extra-2-1": [
+					[22, 8, SegmentFlags.NONE],
+					[23, 8, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-subterrane-b5-passage-b-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3176-0",
+			"segments": {
+				"base-0": [
+					[9, 15, SegmentFlags.START],
+					[9, 7, SegmentFlags.NONE],
+					[6, 7, SegmentFlags.NONE],
+					[6, 3, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[6, 4, SegmentFlags.NONE],
+					[7, 4, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-subterrane-b5-pink-puff-room-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3177-0",
+			"segments": {
+				"base-0": [
+					[2, 9, SegmentFlags.START],
+					[2, 10, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[2, 9, SegmentFlags.NONE],
+					[3, 9, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-subterrane-b6-0": {
+			"flags": PathFlags.STEPS,
+			"map": "316C-0",
+			"segments": {
+				"base-0": [
+					[20, 1, SegmentFlags.START],
+					[20, 10, SegmentFlags.NONE],
+					[21, 10, SegmentFlags.NONE],
+					[21, 14, SegmentFlags.NONE],
+					[23, 14, SegmentFlags.NONE],
+					[23, 12, SegmentFlags.NONE],
+					[27, 12, SegmentFlags.NONE],
+					[27, 20, SegmentFlags.NONE],
+					[26, 20, SegmentFlags.NONE],
+					[26, 21, SegmentFlags.NONE],
+					[25, 21, SegmentFlags.NONE],
+					[25, 22, SegmentFlags.NONE],
+					[22, 22, SegmentFlags.NONE],
+					[22, 21, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[22, 22, SegmentFlags.NONE],
+					[21, 22, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				]
+			}
+		},
+		"lunar-subterrane-b6-passage-0": {
+			"flags": PathFlags.STEPS,
+			"map": "3179-0",
+			"segments": {
+				"base-0": [
+					[5, 13, SegmentFlags.START],
+					[5, 11, SegmentFlags.NONE],
+					[10, 11, SegmentFlags.NONE],
+					[10, 4, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[10, 5, SegmentFlags.NONE],
+					[11, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-subterrane-b7-0": {
+			"flags": PathFlags.STEPS,
+			"map": "316D-0",
+			"segments": {
+				"base-0": [
+					[3, 8, SegmentFlags.START],
+					[3, 13, SegmentFlags.NONE],
+					[8, 13, SegmentFlags.NONE],
+					[8, 21, SegmentFlags.NONE],
+					[30, 21, SegmentFlags.NONE],
+					[30, 2, SegmentFlags.NONE],
+					[21, 2, SegmentFlags.NONE],
+					[21, 9, SegmentFlags.NONE],
+					[17, 9, SegmentFlags.NONE],
+					[17, 7, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[17, 8, SegmentFlags.NONE],
+					[18, 8, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-subterrane-b7-1": {
+			"flags": PathFlags.STEPS,
+			"map": "316D-0",
+			"segments": {
+				"base-0": [
+					[3, 8, SegmentFlags.START],
+					[3, 13, SegmentFlags.NONE],
+					[8, 13, SegmentFlags.NONE],
+					[8, 21, SegmentFlags.NONE],
+					[13, 21, SegmentFlags.NONE]
+				],
+				"alternate-0": [
+					[13, 21, SegmentFlags.NONE],
+					[13, 20, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[13, 21, SegmentFlags.NONE],
+					[13, 22, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-subterrane-b7-2": {
+			"flags": PathFlags.STEPS,
+			"map": "316D-0",
+			"segments": {
+				"base-0": [
+					[13, 20, SegmentFlags.START],
+					[13, 21, SegmentFlags.NONE],
+					[30, 21, SegmentFlags.NONE],
+					[30, 2, SegmentFlags.NONE],
+					[21, 2, SegmentFlags.NONE],
+					[21, 9, SegmentFlags.NONE],
+					[17, 9, SegmentFlags.NONE],
+					[17, 7, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[17, 8, SegmentFlags.NONE],
+					[18, 8, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-subterrane-b7-save-room-0": {
+			"flags": PathFlags.STEPS,
+			"map": "317B-0",
+			"segments": {
+				"base-0": [
+					[3, 14, SegmentFlags.START],
+					[3, 15, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[3, 14, SegmentFlags.NONE],
+					[4, 14, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
