@@ -4033,7 +4033,7 @@ com.aexoden.ff4 = function()
 				}
 			}
 		}
-	}
+	};
 
 	data.variables = {
 		"paladin": {
@@ -9992,7 +9992,7 @@ com.aexoden.ff4 = function()
 				],
 				"optional-1-0": [
 					[9, 8, SegmentFlags.NONE],
-					[7, 8, SegmentFlags.NONE | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+					[7, 8, SegmentFlags.NONE | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
 					[7, 7, SegmentFlags.NONE]
 				],
 				"optional-2-0": [
@@ -10034,7 +10034,7 @@ com.aexoden.ff4 = function()
 				],
 				"optional-1-0": [
 					[9, 8, SegmentFlags.NONE],
-					[7, 8, SegmentFlags.NONE | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+					[7, 8, SegmentFlags.NONE | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
 					[7, 7, SegmentFlags.NONE]
 				],
 				"optional-2-0": [
@@ -11645,7 +11645,7 @@ com.aexoden.ff4 = function()
 			drawSegments(offScreenCtx, path, route, vars, activeVars);
 
 			ctx.drawImage(offScreenCanvas, 0, 0);
-		}
+		};
 
 		var drawOverlay = document.getElementById("option-overlay").checked;
 
@@ -11707,14 +11707,14 @@ com.aexoden.ff4 = function()
 					fillStyle = "#00FF00";
 
 					if (vars && activeVars) {
-						for (var i = 0; i < activeVars.length; i++) {
+						for (let i = 0; i < activeVars.length; i++) {
 							var index = activeVars[i];
 							for (var j = 0; j < data.variables[route][index].length; j++) {
 								var varData = data.variableData[data.variables[route][index][j]];
 								var value = vars[index];
 
-								if (typeof value === 'undefined') {
-									value = 0
+								if (typeof value === "undefined") {
+									value = 0;
 								}
 
 								if (varData.type == VariableFlags.EXTRA) {
@@ -11725,7 +11725,7 @@ com.aexoden.ff4 = function()
 
 											if (specialIndex > 0 && fields[0] == "optional" && parseInt(fields[1]) == varData.routes[specialIndex][path]) {
 												draw = true;
-											} else if (fields[0] == "extra" && fields[1] == "2" && (delta - delta % 2) > 0) {
+											} else if (fields[0] == "extra" && fields[1] == "2" && delta - delta % 2 > 0) {
 												draw = true;
 											} else if (fields[0] == "extra" && fields[1] == "1" && delta % 2 == 1) {
 												draw = true;
@@ -11784,20 +11784,21 @@ com.aexoden.ff4 = function()
 	};
 
 	var getSpecial = function(varData, steps) {
-		var maxEven = 0;
-		var maxOdd = 0;
+		let maxEven = 0;
+		let maxOdd = 0;
 
 		Object.keys(varData.routes).forEach(
 			(key) => {
-				key = parseInt(key);
-				if (key <= steps) {
-					if (key % 2 == 0) {
-						if (key > maxEven) {
-							maxEven = key;
+				let varIndex = parseInt(key);
+
+				if (varIndex <= steps) {
+					if (varIndex % 2 == 0) {
+						if (varIndex > maxEven) {
+							maxEven = varIndex;
 						}
 					} else {
-						if (key > maxOdd) {
-							maxOdd = key;
+						if (varIndex > maxOdd) {
+							maxOdd = varIndex;
 						}
 					}
 				}
@@ -11809,7 +11810,7 @@ com.aexoden.ff4 = function()
 		} else {
 			return maxOdd;
 		}
-	}
+	};
 
 	var drawMaps = function(parent, route, vars, repaint) {
 		var drawAll = document.getElementById("option-show-all").checked;
@@ -11821,7 +11822,7 @@ com.aexoden.ff4 = function()
 		}
 
 		if (repaint) {
-			parent.innerHTML = '';
+			parent.innerHTML = "";
 		}
 
 		var activeMaps = {};
@@ -11846,7 +11847,7 @@ com.aexoden.ff4 = function()
 
 						Object.entries(entries).forEach(
 							([path, pathData]) => {
-								if ((varData.type == VariableFlags.CHOICE && pathData.enabled) || (varData.type == VariableFlags.EXTRA && value > 0)) {
+								if (varData.type == VariableFlags.CHOICE && pathData.enabled || varData.type == VariableFlags.EXTRA && value > 0) {
 									if (!(path in activeMaps)) {
 										activeMaps[path] = [];
 									}
@@ -11878,15 +11879,15 @@ com.aexoden.ff4 = function()
 				}
 
 				if (!canvas) {
-					var row = document.createElement("div");
-					var caption = document.createElement("div");
-					var canvas_container = document.createElement("div");
+					let row = document.createElement("div");
+					caption = document.createElement("div");
+					let canvas_container = document.createElement("div");
 
 					row.className = "row align-items-center";
 					caption.className = "col";
 					canvas_container.className = "col";
 
-					var canvas = document.createElement("canvas");
+					canvas = document.createElement("canvas");
 
 					canvas.id = canvas_id;
 					canvas.width = 512;
@@ -11895,22 +11896,22 @@ com.aexoden.ff4 = function()
 					caption.id = canvas_id + "-caption";
 
 					if ((data.paths[path].flags & PathFlags.STEPS) == 0) {
-						caption.innerHTML += '<p><em>Steps on this map do not matter.</em></p>';
+						caption.innerHTML += "<p><em>Steps on this map do not matter.</em></p>";
 					}
 
 					var yellow = (data.paths[path].flags & PathFlags.YELLOW_CHOCOBO) > 0;
 					var black = (data.paths[path].flags & PathFlags.BLACK_CHOCOBO) > 0;
 
 					if (black && yellow) {
-						caption.innerHTML += '<p>Leave by picking up a <strong>yellow or black</strong> chocobo.</p>';
+						caption.innerHTML += "<p>Leave by picking up a <strong>yellow or black</strong> chocobo.</p>";
 					} else if (yellow) {
-						caption.innerHTML += '<p>Leave by picking up a <strong>yellow</strong> chocobo.</p>';
+						caption.innerHTML += "<p>Leave by picking up a <strong>yellow</strong> chocobo.</p>";
 					} else if (black) {
-						caption.innerHTML += '<p>Leave by picking up a <strong>black</strong> chocobo.</p>';
+						caption.innerHTML += "<p>Leave by picking up a <strong>black</strong> chocobo.</p>";
 					}
 
 					if ((data.paths[path].flags & PathFlags.HUMMINGWAY) > 0) {
-						caption.innerHTML += '<p>Track down the shop Hummingway as pointed to by the arrow, and then leave, making sure to take a total of 16 steps, plus any extras below.</p>'
+						caption.innerHTML += "<p>Track down the shop Hummingway as pointed to by the arrow, and then leave, making sure to take a total of 16 steps, plus any extras below.</p>";
 					}
 
 					if (path in activeMaps) {
@@ -11922,29 +11923,27 @@ com.aexoden.ff4 = function()
 								var varData = data.variableData[data.variables[route][index][k]];
 								var value = vars[index];
 
-								if (typeof value === 'undefined') {
-									value = 0
+								if (typeof value === "undefined") {
+									value = 0;
 								}
 
 								if (varData.type == VariableFlags.EXTRA) {
 									var extraEven = false;
 									var extraOdd = false;
 
-									Object.entries(data.paths[path].segments).forEach(
-										([key, segments]) => {
-											var fields = key.split("-");
+									for (const key of Object.keys(data.paths[path].segments)) {
+										var fields = key.split("-");
 
-											if (path in varData.paths) {
-												if ((fields[0] == "extra") && fields[2] == varData.paths[path].index) {
-													if (fields[1] == "2") {
-														extraEven = true;
-													} else if (fields[1] == "1") {
-														extraOdd = true;
-													}
+										if (path in varData.paths) {
+											if (fields[0] == "extra" && fields[2] == varData.paths[path].index) {
+												if (fields[1] == "2") {
+													extraEven = true;
+												} else if (fields[1] == "1") {
+													extraOdd = true;
 												}
 											}
 										}
-									);
+									}
 								}
 
 								if (varData) {
@@ -11956,7 +11955,7 @@ com.aexoden.ff4 = function()
 											value = varData.routes[specialIndex][path];
 
 											if (extraEven) {
-												value += delta - (delta % 2);
+												value += delta - delta % 2;
 											}
 
 											if (extraOdd) {
@@ -11968,7 +11967,7 @@ com.aexoden.ff4 = function()
 											}
 
 											if (!extraOdd) {
-												value = value - (value % 2);
+												value = value - value % 2;
 											}
 										}
 
@@ -11986,7 +11985,7 @@ com.aexoden.ff4 = function()
 							}
 						}
 
-						caption.innerHTML += '</dl>';
+						caption.innerHTML += "</dl>";
 					}
 
 					if (!cancelPath) {
@@ -12013,7 +12012,7 @@ com.aexoden.ff4 = function()
 			target.innerHTML = '<div class="bs-callout bs-callout-success"><span class="fas fa-thumbs-up"></span><h4>Easy!</h4><p>There are no extra steps to take!</p></div>';
 		} else {
 			target.innerHTML += '<div class="bs-callout bs-callout-info"><span class="fas fa-info-circle"></span><h4>Information</h4><p>This summary should include all critical information needed to follow the route. If you have any problems, please contact me.</p></div>';
-			list = '<ul>';
+			var list = "<ul>";
 
 			var disabledPaths = {};
 
@@ -12060,8 +12059,8 @@ com.aexoden.ff4 = function()
 							var varData = data.variableData[varKey];
 
 							if (varData && !disabledPaths[Object.keys(varData.paths)[0]]) {
-								var output = '';
-								var output_class = '';
+								var output = "";
+								var output_class = "";
 
 								if (varData.type == VariableFlags.EXTRA) {
 									var description = varData.description;
@@ -12072,23 +12071,23 @@ com.aexoden.ff4 = function()
 									}
 
 									output_class = "text-primary";
-									output = 'Take ' + value + ' extra step' + (value == 1 ? '' : 's') + ' in ' + description + '.';
+									output = "Take " + value + " extra step" + (value == 1 ? "" : "s") + " in " + description + ".";
 								} else if (varData.type == VariableFlags.CHOICE) {
 									output_class = "text-success";
 									output = varData.descriptions[value];
 								}
 
-								list += '<li class ="' + output_class + '">' + output + '</li>';
+								list += '<li class ="' + output_class + '">' + output + "</li>";
 							}
 						}
 					}
 				}
 			);
 
-			list += '</ul>';
+			list += "</ul>";
 			target.innerHTML += list;
 		}
-	}
+	};
 
 	/*
 	 * Public Definition
