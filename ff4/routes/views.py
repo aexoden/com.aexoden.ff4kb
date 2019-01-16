@@ -1,6 +1,6 @@
 import json
 
-from django.http import Http404, HttpResponse
+from django.http import Http404
 from django.shortcuts import render
 from django.urls import reverse
 
@@ -19,6 +19,7 @@ ROUTES = {
 	},
 	'no64-rosa': {
 		'name': 'Any% No64 (Rosa)',
+		'enabled': True,
 		'description': 'From the beginning of the game until Zeromus is defeated. 64-floor glitch is disallowed. Rosa is primary damage dealer at the end.',
 	},
 	'no64-excalbur': {
@@ -43,7 +44,7 @@ def get_color(value, best_value, worst_value):
 	while colors[index][0] < value:
 		index += 1
 	best_color = colors[index]
-	worst_color = colors[index-1]
+	worst_color = colors[index - 1]
 
 	subvalue = (value - worst_color[0]) / (best_color[0] - worst_color[0])
 	delta = tuple(best_color[1][x] - worst_color[1][x] for x in range(3))
@@ -136,6 +137,7 @@ def route(request, route):
 	}
 
 	return render(request, 'routes/route.html', context)
+
 
 def detail(request, route, seed):
 	try:
