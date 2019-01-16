@@ -2338,6 +2338,7 @@ com.aexoden.ff4 = function()
 		},
 		"hummingway-cave-0-0": {
 			"type": VariableFlags.EXTRA,
+			"minSteps": 16,
 			"routes": {},
 			"paths": {
 				"hummingway-cave-0-0": {
@@ -2349,6 +2350,7 @@ com.aexoden.ff4 = function()
 		},
 		"hummingway-cave-0-1": {
 			"type": VariableFlags.EXTRA,
+			"minSteps": 16,
 			"routes": {},
 			"paths": {
 				"hummingway-cave-0-1": {
@@ -3561,7 +3563,7 @@ com.aexoden.ff4 = function()
 			"paths": {
 				"overworld-toroia-1": {
 					"index": "0",
-					"location": "Overworld (Toroia) [after Toroian Castle]",
+					"location": "Overworld (Toroia) [before Black Chocobo]",
 					"disambiguation": ""
 				}
 			}
@@ -3804,6 +3806,7 @@ com.aexoden.ff4 = function()
 		},
 		"toroian-castle-1f-1": {
 			"type": VariableFlags.EXTRA,
+			"minSteps": 1,
 			"routes": {
 				1: { "toroian-castle-1f-2": 1 },
 				2: { "toroian-castle-1f-2": 2 },
@@ -3813,7 +3816,7 @@ com.aexoden.ff4 = function()
 				"toroian-castle-1f-2": {
 					"index": "0",
 					"location": "Toroian Castle 1F [after Cave Magnes]",
-					"disambiguation": ""
+					"disambiguation": " in the Extra Steps Area"
 				}
 			}
 		},
@@ -12715,12 +12718,14 @@ com.aexoden.ff4 = function()
 		parent.appendChild(container);
 	};
 
-	var printSummary = function(target, route, vars) {
+	var printSummary = function(target, route, vars, battles) {
+		target.innerHTML += '<div class="bs-callout bs-callout-info"><span class="fas fa-info-circle"></span><h4>Information</h4><p>This summary should include all critical information needed to follow the route. If you have any problems, please contact me.</p></div>';
+		target.innerHTML += '<h3>Instructions</h3>';
+
 		if (Object.keys(vars).length == 0) {
 			target.innerHTML = '<div class="bs-callout bs-callout-success"><span class="fas fa-thumbs-up"></span><h4>Easy!</h4><p>There are no extra steps to take!</p></div>';
 		} else {
-			target.innerHTML += '<div class="bs-callout bs-callout-info"><span class="fas fa-info-circle"></span><h4>Information</h4><p>This summary should include all critical information needed to follow the route. If you have any problems, please contact me.</p></div>';
-			var list = "<ul>";
+			let list = "<ul>";
 
 			var disabledPaths = {};
 
@@ -12772,14 +12777,19 @@ com.aexoden.ff4 = function()
 
 								if (varData.type == VariableFlags.EXTRA) {
 									var description = varData.description;
+									let totalSteps = "";
 
 									if (!description) {
 										var path = varData.paths[Object.keys(varData.paths)[0]];
 										description = path.location + path.disambiguation;
 									}
 
+									if (varData.minSteps) {
+										totalSteps = " (" + (varData.minSteps + value) + " total extra step" + (varData.minSteps + value == 1 ? "" : "s") + ")";
+									}
+
 									output_class = "text-primary";
-									output = "Take " + value + " extra step" + (value == 1 ? "" : "s") + " in " + description + ".";
+									output = "Take " + value + " extra step" + (value == 1 ? "" : "s") + totalSteps + " in " + description + ".";
 								} else if (varData.type == VariableFlags.CHOICE) {
 									output_class = "text-success";
 									output = varData.descriptions[value];
@@ -12793,6 +12803,28 @@ com.aexoden.ff4 = function()
 			);
 
 			list += "</ul>";
+			target.innerHTML += list;
+		}
+
+		if (Object.keys(battles).length > 0) {
+			target.innerHTML += '<h3>Important Battles</h3>';
+			let list = "";
+
+			console.log(battles);
+
+			for (const [room, data] of Object.entries(battles)) {
+				console.log(data);
+				list += "<h4>" + room + "</h4>";
+
+				list += "<ul>";
+
+				for (const [step, style, formation] of data) {
+					list += '<li class="' + style + '">Step ' + step + ": " + formation + "</li>";
+				}
+
+				list += "</ul>";
+			}
+
 			target.innerHTML += list;
 		}
 	};

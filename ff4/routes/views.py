@@ -154,7 +154,8 @@ def detail(request, route, seed):
 	]
 
 	context = {
-		'detail': r.data,
+		'detail': r.html_data,
+		'battles': json.dumps(r.battles),
 		'route': route,
 		'route_data': ROUTES[route],
 		'statistics': statistics,

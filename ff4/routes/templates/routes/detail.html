@@ -35,7 +35,7 @@
 				<div class="tab-content">
 					<div class="tab-pane fade show active" id="tab-route-summary"></div>
 					<div class="tab-pane fade" id="tab-route-detail">
-						<pre>{% for line in detail %}{{ line }}
+						<pre style="padding: 10px;">{% for line in detail %}{{ line|safe }}
 {% endfor %}</pre>
 					</div>
 					<div class="tab-pane fade" id="tab-route-tutorial">
@@ -54,7 +54,7 @@
 				</div>
 				<script src="{% static "js/ff4.js" %}"></script>
 				<script>
-					com.aexoden.ff4.printSummary(document.getElementById("tab-route-summary"), "{{ route }}", {{ vars|safe }});
+					com.aexoden.ff4.printSummary(document.getElementById("tab-route-summary"), "{{ route }}", {{ vars|safe }}, {{ battles|safe }});
 
 					function updateMaps(repaint) {
 						com.aexoden.ff4.drawMaps(document.getElementById("tutorial-map-wrapper"), "{{ route }}", {{ vars|safe }}, repaint);

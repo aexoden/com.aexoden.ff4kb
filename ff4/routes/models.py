@@ -1,3 +1,4 @@
+import re
 import os
 
 from django.conf import settings
@@ -10,12 +11,18 @@ class RouteDetail(object):
 		self._filename = os.path.join(settings.BASE_DIR, 'ff4', 'data', 'routes', route, '{:03d}.txt'.format(seed))
 
 		self._data = []
+		self._html_data = []
+		self._battles = {}
 		self._vars = {}
 		self._load_data()
 
 	@property
 	def data(self):
 		return self._data
+
+	@property
+	def html_data(self):
+		return self._html_data
 
 	@property
 	def route_description(self):
@@ -50,6 +57,10 @@ class RouteDetail(object):
 		return self._saved_encounters
 
 	@property
+	def battles(self):
+		return self._battles
+
+	@property
 	def vars(self):
 		return self._vars
 
@@ -61,10 +72,47 @@ class RouteDetail(object):
 			for index, value in [x.split(':') for x in data.split(' ')]:
 				self._vars[int(index)] = int(value)
 
+	def _test_line(self, patterns, line):
+		for pattern in patterns:
+			if re.search(pattern, line):
+				return True
+
+		return False
+
+	def _test_options(self, line):
+		patterns = [
+			'(In|Out)ward.*(Steps|Secret)',
+			'Castle of Dwarves (Walk|Warp)',
+			'(Remove|Equip|Skip) Dwarf Axe',
+			'Zeromus Menu',
+			'Visit Hummingway',
+			'Recruit FuSoYa First',
+		]
+
+		return self._test_line(patterns, line)
+
+	def _test_battles(self, line):
+		patterns = [
+			'Blue D. x1',
+			'Searcher.*D.Machin',
+			'MacGiant.*12.226',
+			'MacGiant.*14.593',
+			'Mind',
+			'Red D.',
+			'Red Worm x2.*(9.065|9.010)',
+			'Roc x1.*(8.592|8.643)',
+		]
+
+		return self._test_line(patterns, line)
+
 	def _load_data(self):
 		phase = 1
 
 		with open(self._filename) as f:
+			current_area = None
+			current_battles = []
+			keep_battles = False
+
 			for line in f:
 				if line.strip() == '':
 					phase += 1
@@ -81,8 +129,43 @@ class RouteDetail(object):
 					elif tokens[0] == 'VARS':
 						self._parse_variables(tokens[1])
 				elif phase == 2 and len(line) > 1:
+					if re.search('Steps: [1-9]', line):
+						self._html_data.append('<b class="text-primary">{}</b>'.format(line.rstrip()))
+					elif self._test_options(line):
+						self._html_data.append('<b class="text-info">{}</b>'.format(line.rstrip()))
+					elif self._test_battles(line):
+						keep_battles = True
+						self._html_data.append('<b class="text-danger">{}</b>'.format(line.rstrip()))
+					else:
+						self._html_data.append(line.rstrip())
+
+					if line.strip().startswith('Step') or line.strip().startswith('(Step'):
+						matches = re.search('Step *(?P<step>[0-9]*): (?P<index>[0-9]*) / (?P<formation>.*) .[0-9.s]*.', line)
+
+						if re.search('Searcher.*Machin', line):
+							style = "text-primary"
+						elif self._test_battles(line):
+							style = "text-danger"
+						elif line.strip().startswith('('):
+							style = "text-muted"
+						else:
+							style = ""
+
+						current_battles.append((int(matches.group('step')), style, matches.group('formation')))
+					elif not line.strip().startswith('Battle'):
+						if keep_battles:
+							self._battles[current_area] = current_battles
+
+						current_area = line[:30].strip()
+						current_battles = []
+						keep_battles = False
+
 					self._data.append(line.rstrip())
 				elif phase >= 3 and len(line) > 1:
+					if keep_battles:
+						self._battles[current_area] = current_battles
+						keep_battles = False
+
 					tokens = line.split()
 
 					if tokens[0] == 'Optional':
