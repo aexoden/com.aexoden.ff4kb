@@ -502,7 +502,6 @@ com.aexoden.ff4 = function()
 			"castle-of-dwarves-crystal-room-0",
 			"castle-of-dwarves-crystal-room-1",
 			"castle-of-dwarves-kings-room-1",
-			"castle-of-dwarves-kings-room-2",
 			"castle-of-dwarves-1f-1",
 			"castle-of-dwarves-1f-2",
 			"castle-of-dwarves-right-tower-2f-0",
@@ -908,7 +907,6 @@ com.aexoden.ff4 = function()
 			"castle-of-dwarves-crystal-room-0",
 			"castle-of-dwarves-crystal-room-1",
 			"castle-of-dwarves-kings-room-1",
-			"castle-of-dwarves-kings-room-2",
 			"castle-of-dwarves-1f-1",
 			"castle-of-dwarves-1f-2",
 			"castle-of-dwarves-right-tower-2f-0",
@@ -1627,7 +1625,6 @@ com.aexoden.ff4 = function()
 			"description": "the Castle of Dwarves [after Golbez]",
 			"routes": {
 				1: {
-					"castle-of-dwarves-kings-room-2": 0,
 					"castle-of-dwarves-1f-2": 0,
 					"castle-of-dwarves-right-tower-2f-1": 0,
 					"castle-of-dwarves-right-tower-3f-1": 0,
@@ -1637,7 +1634,6 @@ com.aexoden.ff4 = function()
 					"castle-of-dwarves-dwarf-base-1": 1
 				},
 				2: {
-					"castle-of-dwarves-kings-room-2": 0,
 					"castle-of-dwarves-1f-2": 0,
 					"castle-of-dwarves-right-tower-2f-1": 0,
 					"castle-of-dwarves-right-tower-3f-1": 0,
@@ -1647,7 +1643,6 @@ com.aexoden.ff4 = function()
 					"castle-of-dwarves-dwarf-base-1": 2
 				},
 				3: {
-					"castle-of-dwarves-kings-room-2": 0,
 					"castle-of-dwarves-1f-2": 0,
 					"castle-of-dwarves-right-tower-2f-1": 0,
 					"castle-of-dwarves-right-tower-3f-1": 0,
@@ -1657,7 +1652,6 @@ com.aexoden.ff4 = function()
 					"castle-of-dwarves-dwarf-base-1": 2
 				},
 				4: {
-					"castle-of-dwarves-kings-room-2": 0,
 					"castle-of-dwarves-1f-2": 0,
 					"castle-of-dwarves-right-tower-2f-1": 0,
 					"castle-of-dwarves-right-tower-3f-1": 0,
@@ -1667,7 +1661,6 @@ com.aexoden.ff4 = function()
 					"castle-of-dwarves-dwarf-base-1": 2
 				},
 				5: {
-					"castle-of-dwarves-kings-room-2": 0,
 					"castle-of-dwarves-1f-2": 0,
 					"castle-of-dwarves-right-tower-2f-1": 0,
 					"castle-of-dwarves-right-tower-3f-1": 0,
@@ -1677,7 +1670,6 @@ com.aexoden.ff4 = function()
 					"castle-of-dwarves-dwarf-base-1": 2
 				},
 				6: {
-					"castle-of-dwarves-kings-room-2": 0,
 					"castle-of-dwarves-1f-2": 0,
 					"castle-of-dwarves-right-tower-2f-1": 0,
 					"castle-of-dwarves-right-tower-3f-1": 0,
@@ -1687,7 +1679,6 @@ com.aexoden.ff4 = function()
 					"castle-of-dwarves-dwarf-base-1": 2
 				},
 				7: {
-					"castle-of-dwarves-kings-room-2": 0,
 					"castle-of-dwarves-1f-2": 0,
 					"castle-of-dwarves-right-tower-2f-1": 0,
 					"castle-of-dwarves-right-tower-3f-1": 1,
@@ -1697,7 +1688,6 @@ com.aexoden.ff4 = function()
 					"castle-of-dwarves-dwarf-base-1": 2
 				},
 				8: {
-					"castle-of-dwarves-kings-room-2": 0,
 					"castle-of-dwarves-1f-2": 1,
 					"castle-of-dwarves-right-tower-2f-1": 0,
 					"castle-of-dwarves-right-tower-3f-1": 1,
@@ -1707,7 +1697,6 @@ com.aexoden.ff4 = function()
 					"castle-of-dwarves-dwarf-base-1": 2
 				},
 				9: {
-					"castle-of-dwarves-kings-room-2": 0,
 					"castle-of-dwarves-1f-2": 1,
 					"castle-of-dwarves-right-tower-2f-1": 1,
 					"castle-of-dwarves-right-tower-3f-1": 1,
@@ -1717,7 +1706,6 @@ com.aexoden.ff4 = function()
 					"castle-of-dwarves-dwarf-base-1": 2
 				},
 				10: {
-					"castle-of-dwarves-kings-room-2": 0,
 					"castle-of-dwarves-1f-2": 1,
 					"castle-of-dwarves-right-tower-2f-1": 2,
 					"castle-of-dwarves-right-tower-3f-1": 1,
@@ -1727,7 +1715,6 @@ com.aexoden.ff4 = function()
 					"castle-of-dwarves-dwarf-base-1": 2
 				},
 				11: {
-					"castle-of-dwarves-kings-room-2": 0,
 					"castle-of-dwarves-1f-2": 1,
 					"castle-of-dwarves-right-tower-2f-1": 3,
 					"castle-of-dwarves-right-tower-3f-1": 1,
@@ -1737,7 +1724,6 @@ com.aexoden.ff4 = function()
 					"castle-of-dwarves-dwarf-base-1": 2
 				},
 				12: {
-					"castle-of-dwarves-kings-room-2": 0,
 					"castle-of-dwarves-1f-2": 1,
 					"castle-of-dwarves-right-tower-2f-1": 4,
 					"castle-of-dwarves-right-tower-3f-1": 1,
@@ -1747,7 +1733,6 @@ com.aexoden.ff4 = function()
 					"castle-of-dwarves-dwarf-base-1": 2
 				},
 				13: {
-					"castle-of-dwarves-kings-room-2": 0,
 					"castle-of-dwarves-1f-2": 1,
 					"castle-of-dwarves-right-tower-2f-1": 5,
 					"castle-of-dwarves-right-tower-3f-1": 1,
@@ -1757,7 +1742,6 @@ com.aexoden.ff4 = function()
 					"castle-of-dwarves-dwarf-base-1": 2
 				},
 				14: {
-					"castle-of-dwarves-kings-room-2": 0,
 					"castle-of-dwarves-1f-2": 1,
 					"castle-of-dwarves-right-tower-2f-1": 6,
 					"castle-of-dwarves-right-tower-3f-1": 1,
@@ -1767,7 +1751,6 @@ com.aexoden.ff4 = function()
 					"castle-of-dwarves-dwarf-base-1": 2
 				},
 				15: {
-					"castle-of-dwarves-kings-room-2": 0,
 					"castle-of-dwarves-1f-2": 1,
 					"castle-of-dwarves-right-tower-2f-1": 7,
 					"castle-of-dwarves-right-tower-3f-1": 1,
@@ -1777,7 +1760,6 @@ com.aexoden.ff4 = function()
 					"castle-of-dwarves-dwarf-base-1": 2
 				},
 				16: {
-					"castle-of-dwarves-kings-room-2": 0,
 					"castle-of-dwarves-1f-2": 1,
 					"castle-of-dwarves-right-tower-2f-1": 8,
 					"castle-of-dwarves-right-tower-3f-1": 1,
@@ -1787,7 +1769,6 @@ com.aexoden.ff4 = function()
 					"castle-of-dwarves-dwarf-base-1": 2
 				},
 				17: {
-					"castle-of-dwarves-kings-room-2": 0,
 					"castle-of-dwarves-1f-2": 1,
 					"castle-of-dwarves-right-tower-2f-1": 9,
 					"castle-of-dwarves-right-tower-3f-1": 1,
@@ -1797,7 +1778,6 @@ com.aexoden.ff4 = function()
 					"castle-of-dwarves-dwarf-base-1": 2
 				},
 				18: {
-					"castle-of-dwarves-kings-room-2": 0,
 					"castle-of-dwarves-1f-2": 1,
 					"castle-of-dwarves-right-tower-2f-1": 10,
 					"castle-of-dwarves-right-tower-3f-1": 1,
@@ -1808,11 +1788,6 @@ com.aexoden.ff4 = function()
 				}
 			},
 			"paths": {
-				"castle-of-dwarves-kings-room-2": {
-					"index": "0",
-					"location": "Castle of Dwarves King's Room [after Golbez]",
-					"disambiguation": ""
-				},
 				"castle-of-dwarves-1f-2": {
 					"index": "0",
 					"location": "Castle of Dwarves 1F [after Golbez]",
@@ -1891,7 +1866,7 @@ com.aexoden.ff4 = function()
 			"type": VariableFlags.CHOICE,
 			"descriptions": {
 				0: "Walk out of the Castle of Dwarves Crystal Room.",
-				1: "Cast Warp to leave the Castle of Dwarves Crystal Room."
+				1: "Cast Warp twice to leave the Castle of Dwarves Crystal Room."
 			},
 			"paths": {
 				0: {
@@ -1902,7 +1877,6 @@ com.aexoden.ff4 = function()
 						"instruction": "Walk out of the Crystal Room"
 					},
 					"castle-of-dwarves-crystal-room-1": { "enabled": false },
-					"castle-of-dwarves-kings-room-2": { "enabled": false },
 					"castle-of-dwarves-1f-2": { "enabled": false },
 					"castle-of-dwarves-right-tower-2f-1": { "enabled": false },
 					"castle-of-dwarves-right-tower-3f-1": { "enabled": false },
@@ -1917,7 +1891,7 @@ com.aexoden.ff4 = function()
 						"enabled": true,
 						"index": "0",
 						"location": "Castle of Dwarves Crystal Room",
-						"instruction": "Cast Warp to leave the Crystal Room"
+						"instruction": "Cast Warp twice to leave the Crystal Room"
 					},
 					"castle-of-dwarves-kings-room-1": { "enabled": false },
 					"castle-of-dwarves-1f-1": { "enabled": false },
@@ -5874,7 +5848,7 @@ com.aexoden.ff4 = function()
 			"map": "3108-1",
 			"segments": {
 				"base-0": [
-					[11, 3, SegmentFlags.START],
+					[11, 1, SegmentFlags.START],
 					[11, 8, SegmentFlags.NONE],
 					[21, 8, SegmentFlags.NONE],
 					[21, 6, SegmentFlags.END]
@@ -6048,16 +6022,6 @@ com.aexoden.ff4 = function()
 					[8, 6, SegmentFlags.NONE],
 					[8, 10, SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
 					[10, 10, SegmentFlags.NONE]
-				]
-			}
-		},
-		"castle-of-dwarves-kings-room-2": {
-			"flags": PathFlags.STEPS,
-			"map": "3109-0",
-			"segments": {
-				"base-0": [
-					[10, 8, SegmentFlags.START],
-					[10, 15, SegmentFlags.END]
 				]
 			}
 		},
