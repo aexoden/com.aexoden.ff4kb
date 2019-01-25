@@ -4130,6 +4130,13 @@ com.aexoden.ff4.treasure = function()
 
 			reader.onload = function() {
 				var data = new Uint8Array(this.result);
+
+				if (data.length != 8192 && data.length != 32768) {
+					document.getElementById("warning").innerHTML = '<div class="bs-callout bs-callout-warning"><span class="fas fa-exclamation"></span><h4>Oops!</h4>Based on the file size, it is very unlikely that the submitted file is an SRAM file. Be sure you are selecting a valid SRAM file (usually ending in .srm or .SaveRAM) and try again. Just in case this check is wrong, your results are still shown below.</p></div>';
+				} else {
+					document.getElementById("warning").innerHTML = '';
+				}
+
 				check(data);
 			}
 
