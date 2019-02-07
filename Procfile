@@ -1,1 +1,1 @@
-web: gunicorn ff4/wsgi.py --log-file -
+web: gunicorn ff4.wsgi --log-file -
