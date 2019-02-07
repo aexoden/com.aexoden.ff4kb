@@ -10,21 +10,27 @@ ROUTES = {
 	'paladin': {
 		'name': 'Paladin%',
 		'enabled': True,
+		'status': 'Optimized',
+		'steps': 256,
 		'description': 'From the beginning of the game until Cecil becomes a paladin.',
 	},
 	'nocw': {
 		'name': 'Any% NoCW',
 		'enabled': True,
+		'status': 'Partially Optimized',
+		'steps': 64,
 		'description': 'From the beginning of the game until Zeromus is defeated.',
 	},
 	'no64-rosa': {
 		'name': 'Any% No64 (Rosa)',
-		'enabled': True,
+		'status': 'Unavailable',
+		'enabled': False,
 		'description': 'From the beginning of the game until Zeromus is defeated. 64-floor glitch is disallowed. Rosa is primary damage dealer at the end.',
 	},
 	'no64-excalbur': {
 		'name': 'Any% No64 (Edge+Excalbur)',
-		'enabled': True,
+		'status': 'Unavailable',
+		'enabled': False,
 		'description': 'From the beginning of the game until Zeromus is defeated. 64-floor glitch is disallowed. Edge is primary damage dealer at the end.'
 	}
 }
