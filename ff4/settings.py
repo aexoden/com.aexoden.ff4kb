@@ -22,7 +22,7 @@ class Common(Configuration):
 	# SECURITY WARNING: don't run with debug turned on in production!
 	DEBUG = values.BooleanValue(False)
 
-	ALLOWED_HOSTS = ['ff4-beta.aexoden.com']
+	ALLOWED_HOSTS = ['ff4.aexoden.com']
 
 	# Application definition
 	INSTALLED_APPS = [
