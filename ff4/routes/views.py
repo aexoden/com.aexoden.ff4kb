@@ -119,7 +119,7 @@ def route(request, route):
 					selected.append(seed)
 
 			if metric == 'Time':
-				value = '{:0.3f}s'.format(values[type] / 60.0988)
+				value = '{:0.3f}s'.format(values[type] * 655171 / 39375000000000)
 			else:
 				value = '{}'.format(values[type])
 
@@ -147,7 +147,7 @@ def detail(request, route, seed):
 
 	statistics = [
 		{'name': 'Route', 'data': r.route_description},
-		{'name': 'Route Time', 'data': '{:0.3f}s (saves {:0.3f}s)'.format(r.frames / 60.0988, r.saved_time)},
+		{'name': 'Route Time', 'data': '{:0.3f}s (saves {:0.3f}s)'.format(r.frames * 655171 / 39375000000000, r.saved_time)},
 		{'name': 'Route Encounters', 'data': '{} (saves {} encounters)'.format(r.encounters, r.saved_encounters)},
 		{'name': 'Optional Steps', 'data': r.optional_steps},
 		{'name': 'Extra Steps', 'data': r.extra_steps},

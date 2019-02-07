@@ -70,7 +70,7 @@ class RouteDetail(object):
 	def _parse_variables(self, data):
 		if data.strip() != '':
 			for index, value in [x.split(':') for x in data.split(' ')]:
-				self._vars[int(index)] = int(value)
+				self._vars[index] = int(value)
 
 	def _test_line(self, patterns, line):
 		for pattern in patterns:
@@ -125,7 +125,7 @@ class RouteDetail(object):
 					elif tokens[0] == 'VERSION':
 						self._route_version = int(tokens[1])
 					elif tokens[0] == 'FRAMES':
-						self._frames = float(tokens[1])
+						self._frames = float(tokens[1]) * 1000
 					elif tokens[0] == 'VARS':
 						self._parse_variables(tokens[1])
 				elif phase == 2 and len(line) > 1:
@@ -140,14 +140,19 @@ class RouteDetail(object):
 						self._html_data.append(line.rstrip())
 
 					if line.strip().startswith('Step') or line.strip().startswith('(Step'):
-						matches = re.search('Step *(?P<step>[0-9]*): (?P<index>[0-9]*) / (?P<formation>.*)\\)?', line)
+						matches = re.search('Step *(?P<step>[0-9]*): *(?P<index>[0-9]*) / (?P<formation>.*)\\)?', line)
 
 						if re.search('Searcher.*Machin', line):
 							style = "text-primary"
+
+							if line.strip().startswith('('):
+								style += ' font-italic'
+							else:
+								style += ' font-weight-bold'
 						elif self._test_battles(line):
 							style = "text-danger"
 						elif line.strip().startswith('('):
-							style = "text-muted"
+							style = "text-muted font-italic"
 						else:
 							style = ""
 

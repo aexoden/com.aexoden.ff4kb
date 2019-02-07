@@ -47,7 +47,7 @@
 								<input type="checkbox" id="option-show-all" onchange="updateMaps(true)">Show All Maps</input>
 							</label>
 						</div>
-						<div class="bs-callout bs-callout-info"><span class="fas fa-info-circle"></span><h4>Information</h4><p>The following images show maps on which to take extra steps for this route. The exact location to take these steps is only a suggestion. Feel free to find a location that works better for you, but be mindful of tiles that don't count as steps.</p></div>
+						<div class="bs-callout bs-callout-info"><span class="fas fa-info-circle"></span><h4>Information</h4><p>The following images show maps on which to take extra steps for this route. The exact location to take these steps is only a suggestion. Feel free to find a location that works better for you, but be mindful of tiles that don't count as steps. You might also review the <i>Summary</i> or <i>Detail</i> tabs for encounter information. Most of them are shown here, but due to limitations in the current route output format, they can't always be assigned to the correct map.</p></div>
 						<div id="tutorial-map-wrapper" class="container mx-0">
 						</div>
 					</div>
@@ -57,7 +57,7 @@
 					com.aexoden.ff4.printSummary(document.getElementById("tab-route-summary"), "{{ route }}", {{ vars|safe }}, {{ battles|safe }});
 
 					function updateMaps(repaint) {
-						com.aexoden.ff4.drawMaps(document.getElementById("tutorial-map-wrapper"), "{{ route }}", {{ vars|safe }}, repaint);
+						com.aexoden.ff4.drawMaps(document.getElementById("tutorial-map-wrapper"), "{{ route }}", {{ vars|safe }}, {{ battles|safe }}, repaint);
 					}
 
 					updateMaps(true);

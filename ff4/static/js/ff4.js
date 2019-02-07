@@ -20,7 +20,8 @@ com.aexoden.ff4 = function()
 		STEPS:          0x01,
 		YELLOW_CHOCOBO: 0x02,
 		BLACK_CHOCOBO:  0x04,
-		HUMMINGWAY:     0x08
+		HUMMINGWAY:     0x08,
+		SINGLE:         0x10
 	};
 
 	var SegmentFlags = {
@@ -2364,12 +2365,24 @@ com.aexoden.ff4 = function()
 					"index": "0",
 					"location": "Land of Monsters B3F",
 					"disambiguation": ""
-				},
+				}
+			}
+		},
+		"land-of-monsters-b3f-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
 				"land-of-monsters-b3f-1": {
 					"index": "0",
 					"location": "Land of Monsters B3F",
 					"disambiguation": ""
-				},
+				}
+			}
+		},
+		"land-of-monsters-b3f-2": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
 				"land-of-monsters-b3f-2": {
 					"index": "0",
 					"location": "Land of Monsters B3F",
@@ -3202,7 +3215,7 @@ com.aexoden.ff4 = function()
 				"mt-hobs-west-0": {
 					"index": "0",
 					"location": "Mt.Hobs-West",
-					"disambiguaEdward Edwardtion": ""
+					"disambiguation": ""
 				}
 			}
 		},
@@ -3311,7 +3324,11 @@ com.aexoden.ff4 = function()
 		},
 		"mt-ordeals-summit-2": {
 			"type": VariableFlags.EXTRA,
-			"routes": {},
+			"routes": {
+				1: {
+					"mt-ordeals-summit-1": 1
+				}
+			},
 			"paths": {
 				"mt-ordeals-summit-1": {
 					"index": "0",
@@ -3342,6 +3359,17 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"overworld-baron-0": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"overworld-baron-0": {
+					"index": "0",
+					"location": "Overworld (Baron) [before Hook Installation]",
+					"disambiguation": ""
+				}
+			}
+		},
 		"overworld-damcyan-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -3353,7 +3381,7 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
-		/*"overworld-damcyan-1": {
+		"overworld-damcyan-1": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
 			"paths": {
@@ -3363,7 +3391,29 @@ com.aexoden.ff4 = function()
 					"disambiguation": " after parking the hovercraft, just before entering the cave"
 				}
 			}
-		},*/
+		},
+		"overworld-damcyan-2": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"overworld-damcyan-2": {
+					"index": "0",
+					"location": "Overworld (Damcyan) [after Antlion]",
+					"disambiguation": " after exiting the cave before boarding the hovercraft"
+				}
+			}
+		},
+		"overworld-damcyan-3": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"overworld-damcyan-4": {
+					"index": "0",
+					"location": "Overworld (Damcyan) [after WaterHag]",
+					"disambiguation": " after parking the hovercraft, just before entering Mt.Hobs"
+				}
+			}
+		},
 		"overworld-eblan-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -3430,6 +3480,28 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"overworld-kaipo-4": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"overworld-kaipo-4": {
+					"index": "0",
+					"location": "Overworld (Kaipo) [after Antlion]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"overworld-kaipo-5": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"overworld-kaipo-5": {
+					"index": "0",
+					"location": "Overworld (Kaipo) [after WaterHag]",
+					"disambiguation": ""
+				}
+			}
+		},
 		"overworld-mt-ordeals-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -3475,6 +3547,17 @@ com.aexoden.ff4 = function()
 			}
 		},
 		"overworld-mysidia-2": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"overworld-mysidia-2": {
+					"index": "0",
+					"location": "Overworld (Mysidia) [after Mt.Ordeals]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"overworld-mysidia-3": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
 			"paths": {
@@ -3532,7 +3615,9 @@ com.aexoden.ff4 = function()
 		"overworld-toroia-1": {
 			"type": VariableFlags.EXTRA,
 			"routes": {
-				1: { "overworld-toroia-1": 1 }
+				1: {
+					"overworld-toroia-1": 1
+				}
 			},
 			"paths": {
 				"overworld-toroia-1": {
@@ -4165,7 +4250,18 @@ com.aexoden.ff4 = function()
 				"tower-of-zot-2f-0": {
 					"index": "0",
 					"location": "Tower of Zot 2F",
-					"disambiguation": ""
+					"disambiguation": " before the FlameDog battle"
+				}
+			}
+		},
+		"tower-of-zot-2f-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"tower-of-zot-2f-0": {
+					"index": "1",
+					"location": "Tower of Zot 2F",
+					"disambiguation": " after the FlameDog battle"
 				}
 			}
 		},
@@ -4235,7 +4331,7 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
-		"underworld-castle-of-dwarves-1": {
+		"underworld-castle-of-dwarves-3": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
 			"paths": {
@@ -4246,7 +4342,18 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
-		"underworld-castle-of-dwarves-2": {
+		"underworld-castle-of-dwarves-4": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"underworld-castle-of-dwarves-4": {
+					"index": "0",
+					"location": "Underworld (Castle of Dwarves) [after getting Falcon]",
+					"disambiguation": ""
+				}
+			}
+		},
+		"underworld-castle-of-dwarves-5": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
 			"paths": {
@@ -4257,7 +4364,7 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
-		"underworld-castle-of-dwarves-3": {
+		"underworld-castle-of-dwarves-7": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
 			"paths": {
@@ -4404,516 +4511,542 @@ com.aexoden.ff4 = function()
 
 	data.variables = {
 		"paladin": {
-			0: ["watery-pass-south-b2f-save-room-0"],
-			1: ["watery-pass-south-b2f-1"],
-			2: ["watery-pass-south-b3f-0"],
-			3: ["watery-pass-north-b2f-0"],
-			4: ["watery-pass-north-b1f-0"],
-			5: ["overworld-kaipo-2"],
-			6: ["waterfalls-b1f-0"],
-			7: ["waterfalls-b2f-0"],
-			8: ["waterfalls-lake-0"],
-			9: ["waterfalls-lake-1"],
-			10: ["overworld-kaipo-3"],
-			11: ["overworld-damcyan-0"],
-			12: ["damcyan-0"],
-			13: ["antlion-b1f-0"],
-			14: ["antlion-b2f-choice-0"],
-			15: ["antlion-b2f-0", "antlion-b2f-1"],
-			16: ["antlion-b2f-charm-room-0"],
-			17: ["antlion-b2f-2"],
-			18: ["antlions-nest-0"],
-			19: ["antlions-nest-1"],
-			20: ["antlion-b2f-choice-1"],
-			21: ["antlion-b2f-4"],
-			22: ["antlion-b2f-charm-room-1"],
-			23: ["antlion-b2f-3", "antlion-b2f-5"],
-			24: ["antlion-b1f-1"],
-			25: ["mt-hobs-west-0"],
-			26: ["mt-hobs-summit-0"],
-			27: ["mt-hobs-summit-1"],
-			28: ["mt-hobs-east-0"],
-			29: ["overworld-fabul-0"],
-			30: ["fabul-0"],
-			31: ["overworld-fabul-1"],
-			32: ["overworld-mysidia-0"],
-			33: ["overworld-mysidia-1"],
-			34: ["overworld-mt-ordeals-0"],
-			35: ["mt-ordeals-0"],
-			36: ["mt-ordeals-3rd-station-0"],
-			37: ["mt-ordeals-3rd-station-1"],
-			38: ["mt-ordeals-7th-station-0"],
-			39: ["mt-ordeals-summit-0"],
-			40: ["mt-ordeals-summit-1"]
+			"E305400": ["watery-pass-south-b2f-save-room-0"],
+			"E307000": ["watery-pass-south-b2f-1"],
+			"E307100": ["watery-pass-south-b3f-0"],
+			"E307200": ["watery-pass-north-b2f-0"],
+			"E307300": ["watery-pass-north-b1f-0"],
+			"E000200": ["overworld-kaipo-2"],
+			"E307400": ["waterfalls-b1f-0"],
+			"E307500": ["waterfalls-b2f-0"],
+			"E307600": ["waterfalls-lake-0"],
+			"E307601": ["waterfalls-lake-1"],
+			"E000201": ["overworld-kaipo-3"],
+			"E000300": ["overworld-damcyan-0"],
+			"E302500": ["damcyan-0"],
+			"E000301": ["overworld-damcyan-1"],
+			"E307700": ["antlion-b1f-0"],
+			"E307800": ["antlion-b2f-1"],
+			"C307800": ["antlion-b2f-choice-0"],
+			"E307B00": ["antlion-b2f-charm-room-0"],
+			"E307801": ["antlion-b2f-0", "antlion-b2f-2"],
+			"E307900": ["antlions-nest-0"],
+			"E307901": ["antlions-nest-1"],
+			"E307802": ["antlion-b2f-3", "antlion-b2f-4"],
+			"C307801": ["antlion-b2f-choice-1"],
+			"E307B01": ["antlion-b2f-charm-room-1"],
+			"E307803": ["antlion-b2f-5"],
+			"E307701": ["antlion-b1f-1"],
+			"E000302": ["overworld-damcyan-2"],
+			"E000202": ["overworld-kaipo-4"],
+			"E000203": ["overworld-kaipo-5"],
+			"E000304": ["overworld-damcyan-3"],
+			"E307E00": ["mt-hobs-west-0"],
+			"E307F00": ["mt-hobs-summit-0"],
+			"E307F01": ["mt-hobs-summit-1"],
+			"E308000": ["mt-hobs-east-0"],
+			"E000400": ["overworld-fabul-0"],
+			"E302600": ["fabul-0"],
+			"E000401": ["overworld-fabul-1"],
+			"E000500": ["overworld-mysidia-0"],
+			"E000501": ["overworld-mysidia-1"],
+			"E000600": ["overworld-mt-ordeals-0"],
+			"E308400": ["mt-ordeals-0"],
+			"E308500": ["mt-ordeals-3rd-station-0"],
+			"E308501": ["mt-ordeals-3rd-station-1"],
+			"E308600": ["mt-ordeals-7th-station-0"],
+			"E308700": ["mt-ordeals-summit-0"]
 		},
 		"nocw": {
-			0: ["watery-pass-south-b2f-save-room-0"],
-			1: ["watery-pass-south-b2f-1"],
-			2: ["watery-pass-south-b3f-0"],
-			3: ["watery-pass-north-b2f-0"],
-			4: ["watery-pass-north-b1f-0"],
-			5: ["overworld-kaipo-2"],
-			6: ["waterfalls-b1f-0"],
-			7: ["waterfalls-b2f-0"],
-			8: ["waterfalls-lake-0"],
-			9: ["waterfalls-lake-1"],
-			10: ["overworld-kaipo-3"],
-			11: ["overworld-damcyan-0"],
-			12: ["damcyan-0"],
-			13: ["antlion-b1f-0"],
-			14: ["antlion-b2f-choice-0"],
-			15: ["antlion-b2f-0", "antlion-b2f-1"],
-			16: ["antlion-b2f-charm-room-0"],
-			17: ["antlion-b2f-2"],
-			18: ["antlions-nest-0"],
-			19: ["antlions-nest-1"],
-			20: ["antlion-b2f-choice-1"],
-			21: ["antlion-b2f-4"],
-			22: ["antlion-b2f-charm-room-1"],
-			23: ["antlion-b2f-3", "antlion-b2f-5"],
-			24: ["antlion-b1f-1"],
-			25: ["mt-hobs-west-0"],
-			26: ["mt-hobs-summit-0"],
-			27: ["mt-hobs-summit-1"],
-			28: ["mt-hobs-east-0"],
-			29: ["overworld-fabul-0"],
-			30: ["fabul-0"],
-			31: ["overworld-fabul-1"],
-			32: ["overworld-mysidia-0"],
-			33: ["overworld-mysidia-1"],
-			34: ["overworld-mt-ordeals-0"],
-			35: ["mt-ordeals-0"],
-			36: ["mt-ordeals-3rd-station-0"],
-			37: ["mt-ordeals-3rd-station-1"],
-			38: ["mt-ordeals-7th-station-0"],
-			39: ["mt-ordeals-summit-0"],
-			40: ["mt-ordeals-summit-1"],
-			41: ["mt-ordeals-summit-2"],
-			42: ["mt-ordeals-7th-station-1"],
-			43: ["mt-ordeals-3rd-station-2"],
-			44: ["mt-ordeals-1"],
-			45: ["overworld-mt-ordeals-1"],
-			46: ["serpent-road-0"],
-			47: ["old-water-way-0"],
-			48: ["castle-baron-b3f-0"],
-			49: ["castle-baron-b2f-0"],
-			50: ["castle-baron-b1f-choice-0"],
-			51: ["castle-baron-b1f-1"],
-			52: ["castle-baron-b1f-save-room-0"],
-			53: ["castle-baron-b1f-0", "castle-baron-b1f-2"],
-			54: ["castle-baron-0"],
-			55: ["overworld-toroia-0"],
-			56: ["toroian-castle-1f-0"],
-			57: ["overworld-toroia-1"],
-			58: ["overworld-toroia-2"],
-			59: ["cave-magnes-b1f-0"],
-			60: ["cave-magnes-b2f-0"],
-			61: ["cave-magnes-b3f-choice-0"],
-			62: ["cave-magnes-b3f-1"],
-			63: ["cave-magnes-b3f-save-room-0"],
-			64: ["cave-magnes-b3f-0", "cave-magnes-b3f-2"],
-			65: ["cave-magnes-b3f-passage-0"],
-			66: ["cave-magnes-b4f-choice-0"],
-			67: ["cave-magnes-b4f-1"],
-			68: ["cave-magnes-b4f-save-room-0"],
-			69: ["cave-magnes-b4f-0", "cave-magnes-b4f-2"],
-			70: ["overworld-toroia-3"],
-			71: ["overworld-toroia-4"],
-			72: ["toroian-castle-1f-choice-0"],
-			73: ["toroian-castle-1f-1"],
-			74: ["overworld-toroia-5"],
-			75: ["tower-of-zot-1f-0"],
-			76: ["tower-of-zot-2f-0"],
-			77: ["tower-of-zot-3f-0"],
-			78: ["tower-of-zot-4f-0"],
-			79: ["tower-of-zot-5f-0"],
-			80: ["tower-of-zot-5f-1"],
-			81: ["tower-of-zot-6f-0"],
-			82: ["castle-baron-1"],
-			83: ["overworld-agart-0"]
+			"E305400": ["watery-pass-south-b2f-save-room-0"],
+			"E307000": ["watery-pass-south-b2f-1"],
+			"E307100": ["watery-pass-south-b3f-0"],
+			"E307200": ["watery-pass-north-b2f-0"],
+			"E307300": ["watery-pass-north-b1f-0"],
+			"E000200": ["overworld-kaipo-2"],
+			"E307400": ["waterfalls-b1f-0"],
+			"E307500": ["waterfalls-b2f-0"],
+			"E307600": ["waterfalls-lake-0"],
+			"E307601": ["waterfalls-lake-1"],
+			"E000201": ["overworld-kaipo-3"],
+			"E000300": ["overworld-damcyan-0"],
+			"E302500": ["damcyan-0"],
+			"E000301": ["overworld-damcyan-1"],
+			"E307700": ["antlion-b1f-0"],
+			"E307800": ["antlion-b2f-1"],
+			"C307800": ["antlion-b2f-choice-0"],
+			"E307B00": ["antlion-b2f-charm-room-0"],
+			"E307801": ["antlion-b2f-0", "antlion-b2f-2"],
+			"E307900": ["antlions-nest-0"],
+			"E307901": ["antlions-nest-1"],
+			"E307802": ["antlion-b2f-3", "antlion-b2f-4"],
+			"C307801": ["antlion-b2f-choice-1"],
+			"E307B01": ["antlion-b2f-charm-room-1"],
+			"E307803": ["antlion-b2f-5"],
+			"E307701": ["antlion-b1f-1"],
+			"E000302": ["overworld-damcyan-2"],
+			"E000202": ["overworld-kaipo-4"],
+			"E000203": ["overworld-kaipo-5"],
+			"E000304": ["overworld-damcyan-3"],
+			"E307E00": ["mt-hobs-west-0"],
+			"E307F00": ["mt-hobs-summit-0"],
+			"E307F01": ["mt-hobs-summit-1"],
+			"E308000": ["mt-hobs-east-0"],
+			"E000400": ["overworld-fabul-0"],
+			"E302600": ["fabul-0"],
+			"E000401": ["overworld-fabul-1"],
+			"E000500": ["overworld-mysidia-0"],
+			"E000501": ["overworld-mysidia-1"],
+			"E000600": ["overworld-mt-ordeals-0"],
+			"E308400": ["mt-ordeals-0"],
+			"E308500": ["mt-ordeals-3rd-station-0"],
+			"E308501": ["mt-ordeals-3rd-station-1"],
+			"E308600": ["mt-ordeals-7th-station-0"],
+			"E308700": ["mt-ordeals-summit-0"],
+			"E308701": ["mt-ordeals-summit-1"],
+			"E308702": ["mt-ordeals-summit-2"],
+			"E308601": ["mt-ordeals-7th-station-1"],
+			"E308502": ["mt-ordeals-3rd-station-2"],
+			"E308401": ["mt-ordeals-1"],
+			"E000601": ["overworld-mt-ordeals-1"],
+			"E000502": ["overworld-mysidia-2"],
+			"E309700": ["serpent-road-0"],
+			"E303A00": ["old-water-way-0"],
+			"E303B00": ["castle-baron-b3f-0"],
+			"E303E00": ["castle-baron-b2f-0"],
+			"E303C00": ["castle-baron-b1f-0", "castle-baron-b1f-1"],
+			"C303C00": ["castle-baron-b1f-choice-0"],
+			"E303D00": ["castle-baron-b1f-save-room-0"],
+			"E303C01": ["castle-baron-b1f-2"],
+			"E302400": ["castle-baron-0"],
+			"E000700": ["overworld-toroia-0"],
+			"E302700": ["toroian-castle-1f-0"],
+			"E000701": ["overworld-toroia-1"],
+			"E308C00": ["cave-magnes-b1f-0"],
+			"E308D00": ["cave-magnes-b2f-0"],
+			"E308F00": ["cave-magnes-b3f-0", "cave-magnes-b3f-1"],
+			"C308F00": ["cave-magnes-b3f-choice-0"],
+			"E309200": ["cave-magnes-b3f-save-room-0"],
+			"E308F01": ["cave-magnes-b3f-2"],
+			"E309100": ["cave-magnes-b3f-passage-0"],
+			"E309300": ["cave-magnes-b4f-0", "cave-magnes-b4f-1"],
+			"C309300": ["cave-magnes-b4f-choice-0"],
+			"E30A100": ["cave-magnes-b4f-save-room-0"],
+			"E309301": ["cave-magnes-b4f-2"],
+			"E000702": ["overworld-toroia-3"],
+			"C305500": ["toroian-castle-1f-choice-0"],
+			"E305500": ["toroian-castle-1f-1"],
+			"E000703": ["overworld-toroia-5"],
+			"E309800": ["tower-of-zot-1f-0"],
+			"E309900": ["tower-of-zot-2f-0"],
+			"E309901": ["tower-of-zot-2f-1"],
+			"E309A00": ["tower-of-zot-3f-0"],
+			"E309C00": ["tower-of-zot-4f-0"],
+			"E309D00": ["tower-of-zot-5f-0"],
+			"E309D01": ["tower-of-zot-5f-1"],
+			"E309E00": ["tower-of-zot-6f-0"],
+			"E302401": ["castle-baron-1"],
+			"E000A00": ["overworld-agart-0"]
 		},
 		"no64-excalbur": {
-			0: ["watery-pass-south-b2f-save-room-0"],
-			1: ["watery-pass-south-b2f-1"],
-			2: ["watery-pass-south-b3f-0"],
-			3: ["watery-pass-north-b2f-0"],
-			4: ["watery-pass-north-b1f-0"],
-			5: ["overworld-kaipo-2"],
-			6: ["waterfalls-b1f-0"],
-			7: ["waterfalls-b2f-0"],
-			8: ["waterfalls-lake-0"],
-			9: ["waterfalls-lake-1"],
-			10: ["overworld-kaipo-3"],
-			11: ["overworld-damcyan-0"],
-			12: ["damcyan-0"],
-			13: ["antlion-b1f-0"],
-			14: ["antlion-b2f-choice-0"],
-			15: ["antlion-b2f-0", "antlion-b2f-1"],
-			16: ["antlion-b2f-charm-room-0"],
-			17: ["antlion-b2f-2"],
-			18: ["antlions-nest-0"],
-			19: ["antlions-nest-1"],
-			20: ["antlion-b2f-choice-1"],
-			21: ["antlion-b2f-4"],
-			22: ["antlion-b2f-charm-room-1"],
-			23: ["antlion-b2f-3", "antlion-b2f-5"],
-			24: ["antlion-b1f-1"],
-			25: ["mt-hobs-west-0"],
-			26: ["mt-hobs-summit-0"],
-			27: ["mt-hobs-summit-1"],
-			28: ["mt-hobs-east-0"],
-			29: ["overworld-fabul-0"],
-			30: ["fabul-0"],
-			31: ["overworld-fabul-1"],
-			32: ["overworld-mysidia-0"],
-			33: ["overworld-mysidia-1"],
-			34: ["overworld-mt-ordeals-0"],
-			35: ["mt-ordeals-0"],
-			36: ["mt-ordeals-3rd-station-0"],
-			37: ["mt-ordeals-3rd-station-1"],
-			38: ["mt-ordeals-7th-station-0"],
-			39: ["mt-ordeals-summit-0"],
-			40: ["mt-ordeals-summit-1"],
-			41: ["mt-ordeals-summit-2"],
-			42: ["mt-ordeals-7th-station-1"],
-			43: ["mt-ordeals-3rd-station-2"],
-			44: ["mt-ordeals-1"],
-			45: ["overworld-mt-ordeals-1"],
-			46: ["serpent-road-0"],
-			47: ["old-water-way-0"],
-			48: ["castle-baron-b3f-0"],
-			49: ["castle-baron-b2f-0"],
-			50: ["castle-baron-b1f-choice-0"],
-			51: ["castle-baron-b1f-1"],
-			52: ["castle-baron-b1f-save-room-0"],
-			53: ["castle-baron-b1f-0", "castle-baron-b1f-2"],
-			54: ["castle-baron-0"],
-			55: ["overworld-toroia-0"],
-			56: ["toroian-castle-1f-0"],
-			57: ["overworld-toroia-1"],
-			58: ["overworld-toroia-2"],
-			59: ["cave-magnes-b1f-0"],
-			60: ["cave-magnes-b2f-0"],
-			61: ["cave-magnes-b3f-choice-0"],
-			62: ["cave-magnes-b3f-1"],
-			63: ["cave-magnes-b3f-save-room-0"],
-			64: ["cave-magnes-b3f-0", "cave-magnes-b3f-2"],
-			65: ["cave-magnes-b3f-passage-0"],
-			66: ["cave-magnes-b4f-choice-0"],
-			67: ["cave-magnes-b4f-1"],
-			68: ["cave-magnes-b4f-save-room-0"],
-			69: ["cave-magnes-b4f-0", "cave-magnes-b4f-2"],
-			70: ["overworld-toroia-3"],
-			71: ["toroian-castle-1f-choice-0"],
-			72: ["toroian-castle-1f-1"],
-			73: ["overworld-toroia-5"],
-			74: ["tower-of-zot-1f-0"],
-			75: ["tower-of-zot-2f-0"],
-			76: ["tower-of-zot-3f-0"],
-			77: ["tower-of-zot-4f-0"],
-			78: ["tower-of-zot-5f-0"],
-			79: ["tower-of-zot-5f-1"],
-			80: ["tower-of-zot-6f-0"],
-			81: ["castle-baron-1"],
-			82: ["overworld-agart-0"],
-			83: ["underworld-castle-of-dwarves-0"],
-			84: ["castle-of-dwarves-choice-0"],
-			85: ["castle-of-dwarves-0", "castle-of-dwarves-1"],
-			86: ["underworld-castle-of-dwarves-1"],
-			87: ["tower-of-babil-1f-0"],
-			88: ["tower-of-babil-2f-0"],
-			89: ["tower-of-babil-3f-0"],
-			90: ["tower-of-babil-4f-0"],
-			91: ["tower-of-babil-5f-0"],
-			92: ["tower-of-babil-6f-0"],
-			93: ["tower-of-babil-7f-0"],
-			94: ["tower-of-babil-8f-0"],
-			95: ["tower-of-babil-8f-1"],
-			96: ["tower-of-babil-7f-1"],
-			97: ["tower-of-babil-6f-1"],
-			98: ["tower-of-babil-5f-1"],
-			99: ["tower-of-babil-5f-2"],
-			100: ["tower-of-babil-4f-1"],
-			101: ["tower-of-babil-3f-1"],
-			102: ["tower-of-babil-2f-1"],
-			103: ["tower-of-babil-1f-1"],
-			104: ["castle-baron-2"],
-			105: ["overworld-eblan-0"],
-			106: ["cave-eblana-b1f-0"],
-			107: ["cave-eblana-b2f-0"],
-			108: ["pass-to-babil-south-0"],
-			109: ["pass-to-babil-north-0"],
-			110: ["pass-to-babil-south-1"],
-			111: ["pass-to-babil-north-choice-0"],
-			112: ["pass-to-babil-north-1", "pass-to-babil-north-2"],
-			113: ["pass-to-babil-north-save-room-0"],
-			114: ["pass-to-babil-north-3"],
-			115: ["pass-to-babil-north-choice-1"],
-			116: ["pass-to-babil-north-4", "pass-to-babil-north-5"],
-			117: ["tower-of-babil-1f-upper-0"],
-			118: ["tower-of-babil-b2f-0"],
-			119: ["tower-of-babil-b3f-0"],
-			120: ["tower-of-babil-b4f-0"],
-			121: ["tower-of-babil-b3f-1"],
-			122: ["tower-of-babil-b4f-1"],
-			123: ["tower-of-babil-b5f-0"],
-			124: ["tower-of-babil-b5f-choice-0"],
-			125: ["tower-of-babil-b5f-1"],
-			126: ["tower-of-babil-8f-revisit-0"],
-			127: ["tower-of-babil-7f-revisit-0"],
-			128: ["tower-of-babil-6f-revisit-0"],
-			129: ["castle-of-dwarves-2"],
-			130: ["underworld-castle-of-dwarves-2"],
-			131: ["land-of-monsters-b1f-0"],
-			132: ["land-of-monsters-b2f-0"],
-			133: ["land-of-monsters-b3f-choice-0"],
-			134: ["land-of-monsters-b3f-0"],
-			135: ["underworld-sealed-cave-0"],
-			136: ["sealed-cave-0"],
-			137: ["underworld-sealed-cave-1"],
-			138: ["castle-of-dwarves-3"],
-			139: ["underworld-castle-of-dwarves-3"],
-			140: ["overworld-eblan-1"],
-			141: ["overworld-silvera-0"],
-			142: ["grotto-adamant-0"],
-			143: ["overworld-silvera-1"],
-			144: ["underworld-kokkol-0"],
-			145: ["overworld-mysidia-2"],
-			146: ["lunar-overworld-choice-0"],
-			147: ["hummingway-cave-0-0", "lunar-overworld-5-1"],
-			148: ["lunar-overworld-3-0", "lunar-path-west-0-1"],
-			149: ["lunar-overworld-5-0", "lunar-overworld-6-1"],
-			150: ["lunar-path-west-0-0", "lunar-path-east-0-1"],
-			151: ["lunar-overworld-6-0", "lunar-overworld-7-1"],
-			152: ["lunar-path-east-0-0", "lunar-overworld-8-1"],
-			153: ["lunar-overworld-7-0", "lunar-path-east-1-1"],
-			154: ["lunar-overworld-8-0", "lunar-overworld-9-1"],
-			155: ["lunar-path-east-1-0", "lunar-path-west-1-1"],
-			156: ["lunar-overworld-9-0", "lunar-overworld-10-1"],
-			157: ["lunar-path-west-1-0", "hummingway-cave-0-1"],
-			158: ["lunar-overworld-10-0", "lunar-overworld-3-1"],
-			159: ["giant-of-babil-mouth-0"],
-			160: ["giant-of-babil-neck-0"],
-			161: ["giant-of-babil-chest-0"],
-			162: ["giant-of-babil-stomach-0"],
-			163: ["giant-of-babil-passage-0"],
-			164: ["giant-of-babil-lung-0"],
-			165: ["giant-of-babil-lung-1"],
-			166: ["giant-of-babil-cpu-0"],
-			167: ["lunar-overworld-choice-1"],
-			168: ["lunar-overworld-12-0"],
-			169: ["lunar-path-west-2"],
-			170: ["lunar-overworld-13-0"],
-			171: ["lunar-path-east-2"],
-			172: ["lunar-overworld-14-0"],
-			173: ["lunar-subterrane-b1-0"],
-			174: ["lunar-subterrane-b2-0"],
-			175: ["lunar-subterrane-b3-0"],
-			176: ["lunar-subterrane-b4-0"],
-			177: ["lunar-subterrane-b4-passage-0"],
-			178: ["lunar-subterrane-b4-1"],
-			179: ["lunar-subterrane-b5-0"],
-			180: ["lunar-subterrane-b5-passage-a-0"],
-			181: ["lunar-subterrane-b5-passage-a-choice-0"],
-			182: ["lunar-subterrane-b5-passage-a-1"],
-			183: ["lunar-subterrane-b5-1"],
-			184: ["lunar-subterrane-b5-passage-b-0"],
-			185: ["lunar-subterrane-b5-choice-0"],
-			186: ["lunar-subterrane-b5-2", "lunar-subterrane-b5-3"],
-			187: ["lunar-subterrane-b5-pink-puff-room-0"],
-			188: ["lunar-subterrane-b5-4"],
-			189: ["lunar-subterrane-b6-0"],
-			190: ["lunar-subterrane-b6-passage-0"],
-			191: ["lunar-subterrane-b7-choice-0"],
-			192: ["lunar-subterrane-b7-1"],
-			193: ["lunar-subterrane-b7-save-room-0"],
-			194: ["lunar-subterrane-b7-0", "lunar-subterrane-b7-2"],
-			195: ["lunar-core-b1-0"],
-			196: ["lunar-core-b2-0"],
-			197: ["lunar-core-b3-0"]
+			"E305400": ["watery-pass-south-b2f-save-room-0"],
+			"E307000": ["watery-pass-south-b2f-1"],
+			"E307100": ["watery-pass-south-b3f-0"],
+			"E307200": ["watery-pass-north-b2f-0"],
+			"E307300": ["watery-pass-north-b1f-0"],
+			"E000200": ["overworld-kaipo-2"],
+			"E307400": ["waterfalls-b1f-0"],
+			"E307500": ["waterfalls-b2f-0"],
+			"E307600": ["waterfalls-lake-0"],
+			"E307601": ["waterfalls-lake-1"],
+			"E000201": ["overworld-kaipo-3"],
+			"E000300": ["overworld-damcyan-0"],
+			"E302500": ["damcyan-0"],
+			"E000301": ["overworld-damcyan-1"],
+			"E307700": ["antlion-b1f-0"],
+			"E307800": ["antlion-b2f-1"],
+			"C307800": ["antlion-b2f-choice-0"],
+			"E307B00": ["antlion-b2f-charm-room-0"],
+			"E307801": ["antlion-b2f-0", "antlion-b2f-2"],
+			"E307900": ["antlions-nest-0"],
+			"E307901": ["antlions-nest-1"],
+			"E307802": ["antlion-b2f-3", "antlion-b2f-4"],
+			"C307801": ["antlion-b2f-choice-1"],
+			"E307B01": ["antlion-b2f-charm-room-1"],
+			"E307803": ["antlion-b2f-5"],
+			"E307701": ["antlion-b1f-1"],
+			"E000302": ["overworld-damcyan-2"],
+			"E000202": ["overworld-kaipo-4"],
+			"E000203": ["overworld-kaipo-5"],
+			"E000304": ["overworld-damcyan-3"],
+			"E307E00": ["mt-hobs-west-0"],
+			"E307F00": ["mt-hobs-summit-0"],
+			"E307F01": ["mt-hobs-summit-1"],
+			"E308000": ["mt-hobs-east-0"],
+			"E000400": ["overworld-fabul-0"],
+			"E302600": ["fabul-0"],
+			"E000401": ["overworld-fabul-1"],
+			"E000500": ["overworld-mysidia-0"],
+			"E000501": ["overworld-mysidia-1"],
+			"E000600": ["overworld-mt-ordeals-0"],
+			"E308400": ["mt-ordeals-0"],
+			"E308500": ["mt-ordeals-3rd-station-0"],
+			"E308501": ["mt-ordeals-3rd-station-1"],
+			"E308600": ["mt-ordeals-7th-station-0"],
+			"E308700": ["mt-ordeals-summit-0"],
+			"E308701": ["mt-ordeals-summit-1"],
+			"E308702": ["mt-ordeals-summit-2"],
+			"E308601": ["mt-ordeals-7th-station-1"],
+			"E308502": ["mt-ordeals-3rd-station-2"],
+			"E308401": ["mt-ordeals-1"],
+			"E000601": ["overworld-mt-ordeals-1"],
+			"E000502": ["overworld-mysidia-2"],
+			"E309700": ["serpent-road-0"],
+			"E303A00": ["old-water-way-0"],
+			"E303B00": ["castle-baron-b3f-0"],
+			"E303E00": ["castle-baron-b2f-0"],
+			"E303C00": ["castle-baron-b1f-0", "castle-baron-b1f-1"],
+			"C303C00": ["castle-baron-b1f-choice-0"],
+			"E303D00": ["castle-baron-b1f-save-room-0"],
+			"E303C01": ["castle-baron-b1f-2"],
+			"E302400": ["castle-baron-0"],
+			"E000700": ["overworld-toroia-0"],
+			"E302700": ["toroian-castle-1f-0"],
+			"E000701": ["overworld-toroia-1"],
+			"E308C00": ["cave-magnes-b1f-0"],
+			"E308D00": ["cave-magnes-b2f-0"],
+			"E308F00": ["cave-magnes-b3f-0", "cave-magnes-b3f-1"],
+			"C308F00": ["cave-magnes-b3f-choice-0"],
+			"E309200": ["cave-magnes-b3f-save-room-0"],
+			"E308F01": ["cave-magnes-b3f-2"],
+			"E309100": ["cave-magnes-b3f-passage-0"],
+			"E309300": ["cave-magnes-b4f-0", "cave-magnes-b4f-1"],
+			"C309300": ["cave-magnes-b4f-choice-0"],
+			"E30A100": ["cave-magnes-b4f-save-room-0"],
+			"E309301": ["cave-magnes-b4f-2"],
+			"E000702": ["overworld-toroia-3"],
+			"C305500": ["toroian-castle-1f-choice-0"],
+			"E305500": ["toroian-castle-1f-1"],
+			"E000703": ["overworld-toroia-5"],
+			"E309800": ["tower-of-zot-1f-0"],
+			"E309900": ["tower-of-zot-2f-0"],
+			"E309901": ["tower-of-zot-2f-1"],
+			"E309A00": ["tower-of-zot-3f-0"],
+			"E309C00": ["tower-of-zot-4f-0"],
+			"E309D00": ["tower-of-zot-5f-0"],
+			"E309D01": ["tower-of-zot-5f-1"],
+			"E309E00": ["tower-of-zot-6f-0"],
+			"E302401": ["castle-baron-1"],
+			"E000A00": ["overworld-agart-0"],
+			"E100000": ["underworld-castle-of-dwarves-0"],
+			"C310700": ["castle-of-dwarves-choice-0"],
+			"E310700": ["castle-of-dwarves-0", "castle-of-dwarves-1"],
+			"E100001": ["underworld-castle-of-dwarves-3"],
+			"E312100": ["tower-of-babil-1f-0"],
+			"E312200": ["tower-of-babil-2f-0"],
+			"E312300": ["tower-of-babil-3f-0"],
+			"E312400": ["tower-of-babil-4f-0"],
+			"E312500": ["tower-of-babil-5f-0"],
+			"E312600": ["tower-of-babil-6f-0"],
+			"E312700": ["tower-of-babil-7f-0"],
+			"E312800": ["tower-of-babil-8f-0"],
+			"E312801": ["tower-of-babil-8f-1"],
+			"E312701": ["tower-of-babil-7f-1"],
+			"E312601": ["tower-of-babil-6f-1"],
+			"E312501": ["tower-of-babil-5f-1"],
+			"E312502": ["tower-of-babil-5f-2"],
+			"E312401": ["tower-of-babil-4f-1"],
+			"E312301": ["tower-of-babil-3f-1"],
+			"E312201": ["tower-of-babil-2f-1"],
+			"E312101": ["tower-of-babil-1f-1"],
+			"E000000": ["overworld-baron-0"],
+			"E302402": ["castle-baron-2"],
+			"E000A01": ["overworld-eblan-0"],
+			"E30C700": ["cave-eblana-b1f-0"],
+			"E30C800": ["cave-eblana-b2f-0"],
+			"E30C900": ["pass-to-babil-south-0"],
+			"E30CA00": ["pass-to-babil-north-0"],
+			"E30C901": ["pass-to-babil-south-1"],
+			"E30CA01": ["pass-to-babil-north-1", "pass-to-babil-north-2"],
+			"C30CA00": ["pass-to-babil-north-choice-0"],
+			"E30CD00": ["pass-to-babil-north-save-room-0"],
+			"E30CA02": ["pass-to-babil-north-3"],
+			"C30CA01": ["pass-to-babil-north-choice-1"],
+			"E30CA03": ["pass-to-babil-north-4", "pass-to-babil-north-5"],
+			"E30A700": ["tower-of-babil-1f-upper-0"],
+			"E30A800": ["tower-of-babil-b2f-0"],
+			"E30A900": ["tower-of-babil-b3f-0"],
+			"E30AA00": ["tower-of-babil-b4f-0"],
+			"E30A901": ["tower-of-babil-b3f-1"],
+			"E30AA01": ["tower-of-babil-b4f-1"],
+			"E30AC00": ["tower-of-babil-b5f-0"],
+			"C30AC00": ["tower-of-babil-b5f-choice-0"],
+			"E30AC01": ["tower-of-babil-b5f-1"],
+			"E311D00": ["tower-of-babil-8f-revisit-0"],
+			"E311E00": ["tower-of-babil-7f-revisit-0"],
+			"E311F00": ["tower-of-babil-6f-revisit-0"],
+			"E100002": ["underworld-castle-of-dwarves-4"],
+			"E310701": ["castle-of-dwarves-2"],
+			"E100003": ["underworld-castle-of-dwarves-5"],
+			"E313600": ["land-of-monsters-b1f-0"],
+			"E313700": ["land-of-monsters-b2f-0"],
+			"C313800": ["land-of-monsters-b3f-choice-0"],
+			"E313800": ["land-of-monsters-b3f-0", "land-of-monsters-b3f-1", "land-of-monsters-b3f-2"],
+			"E100100": ["underworld-sealed-cave-0"],
+			"E314400": ["sealed-cave-0"],
+			"E100101": ["underworld-sealed-cave-1"],
+			"E310702": ["castle-of-dwarves-3"],
+			"E100004": ["underworld-castle-of-dwarves-7"],
+			"E000A02": ["overworld-eblan-1"],
+			"E000704": ["overworld-silvera-0"],
+			"E30A000": ["grotto-adamant-0"],
+			"E000705": ["overworld-silvera-1"],
+			"E100102": ["underworld-kokkol-0"],
+			"E000503": ["overworld-mysidia-3"],
+			"C200000": ["lunar-overworld-choice-0"],
+			"E316500": ["hummingway-cave-0-0", "hummingway-cave-0-1"],
+			"E200000": ["lunar-overworld-3-0", "lunar-overworld-3-1"],
+			"E200001": ["lunar-overworld-5-0", "lunar-overworld-5-1"],
+			"E316300": ["lunar-path-west-0-0", "lunar-path-west-0-1"],
+			"E200002": ["lunar-overworld-6-0", "lunar-overworld-6-1"],
+			"E316400": ["lunar-path-east-0-0", "lunar-path-east-0-1"],
+			"E200003": ["lunar-overworld-7-0", "lunar-overworld-7-1"],
+			"E200004": ["lunar-overworld-8-0", "lunar-overworld-8-1"],
+			"E316401": ["lunar-path-east-1-0", "lunar-path-east-1-1"],
+			"E200005": ["lunar-overworld-9-0", "lunar-overworld-9-1"],
+			"E316301": ["lunar-path-west-1-0", "lunar-path-west-1-1"],
+			"E200006": ["lunar-overworld-10-0", "lunar-overworld-10-1"],
+			"E30B500": ["giant-of-babil-mouth-0"],
+			"E30B600": ["giant-of-babil-neck-0"],
+			"E30B700": ["giant-of-babil-chest-0"],
+			"E30B900": ["giant-of-babil-stomach-0"],
+			"E30BA00": ["giant-of-babil-passage-0"],
+			"E30BC00": ["giant-of-babil-lung-0"],
+			"E30BC01": ["giant-of-babil-lung-1"],
+			"E30BD00": ["giant-of-babil-cpu-0"],
+			"C200001": ["lunar-overworld-choice-1"],
+			"E200007": ["lunar-overworld-12-0"],
+			"E316302": ["lunar-path-west-2"],
+			"E200008": ["lunar-overworld-13-0"],
+			"E316402": ["lunar-path-east-2"],
+			"E200009": ["lunar-overworld-14-0"],
+			"E316700": ["lunar-subterrane-b1-0"],
+			"E316800": ["lunar-subterrane-b2-0"],
+			"E316900": ["lunar-subterrane-b3-0"],
+			"E316A00": ["lunar-subterrane-b4-0"],
+			"E317400": ["lunar-subterrane-b4-passage-0"],
+			"E316A01": ["lunar-subterrane-b4-1"],
+			"E316B00": ["lunar-subterrane-b5-0"],
+			"E317500": ["lunar-subterrane-b5-passage-a-0"],
+			"C317500": ["lunar-subterrane-b5-passage-a-choice-0"],
+			"E317501": ["lunar-subterrane-b5-passage-a-1"],
+			"E316B01": ["lunar-subterrane-b5-1"],
+			"E317600": ["lunar-subterrane-b5-passage-b-0"],
+			"E316B02": ["lunar-subterrane-b5-2", "lunar-subterrane-b5-3"],
+			"C316B00": ["lunar-subterrane-b5-choice-0"],
+			"E317700": ["lunar-subterrane-b5-pink-puff-room-0"],
+			"E316B03": ["lunar-subterrane-b5-4"],
+			"E316C00": ["lunar-subterrane-b6-0"],
+			"E317900": ["lunar-subterrane-b6-passage-0"],
+			"E316D00": ["lunar-subterrane-b7-0", "lunar-subterrane-b7-1"],
+			"C316D00": ["lunar-subterrane-b7-choice-0"],
+			"E317B00": ["lunar-subterrane-b7-save-room-0"],
+			"E316D01": ["lunar-subterrane-b7-2"],
+			"E316E00": ["lunar-core-b1-0"],
+			"E316F00": ["lunar-core-b2-0"],
+			"E317000": ["lunar-core-b3-0"]
 		},
 		"no64-rosa": {
-			0: ["watery-pass-south-b2f-save-room-0"],
-			1: ["watery-pass-south-b2f-1"],
-			2: ["watery-pass-south-b3f-0"],
-			3: ["watery-pass-north-b2f-0"],
-			4: ["watery-pass-north-b1f-0"],
-			5: ["overworld-kaipo-2"],
-			6: ["waterfalls-b1f-0"],
-			7: ["waterfalls-b2f-0"],
-			8: ["waterfalls-lake-0"],
-			9: ["waterfalls-lake-1"],
-			10: ["overworld-kaipo-3"],
-			11: ["overworld-damcyan-0"],
-			12: ["damcyan-0"],
-			13: ["antlion-b1f-0"],
-			14: ["antlion-b2f-choice-0"],
-			15: ["antlion-b2f-0", "antlion-b2f-1"],
-			16: ["antlion-b2f-charm-room-0"],
-			17: ["antlion-b2f-2"],
-			18: ["antlions-nest-0"],
-			19: ["antlions-nest-1"],
-			20: ["antlion-b2f-choice-1"],
-			21: ["antlion-b2f-4"],
-			22: ["antlion-b2f-charm-room-1"],
-			23: ["antlion-b2f-3", "antlion-b2f-5"],
-			24: ["antlion-b1f-1"],
-			25: ["mt-hobs-west-0"],
-			26: ["mt-hobs-summit-0"],
-			27: ["mt-hobs-summit-1"],
-			28: ["mt-hobs-east-0"],
-			29: ["overworld-fabul-0"],
-			30: ["fabul-0"],
-			31: ["overworld-fabul-1"],
-			32: ["overworld-mysidia-0"],
-			33: ["overworld-mysidia-1"],
-			34: ["overworld-mt-ordeals-0"],
-			35: ["mt-ordeals-0"],
-			36: ["mt-ordeals-3rd-station-0"],
-			37: ["mt-ordeals-3rd-station-1"],
-			38: ["mt-ordeals-7th-station-0"],
-			39: ["mt-ordeals-summit-0"],
-			40: ["mt-ordeals-summit-1"],
-			41: ["mt-ordeals-summit-2"],
-			42: ["mt-ordeals-7th-station-1"],
-			43: ["mt-ordeals-3rd-station-2"],
-			44: ["mt-ordeals-1"],
-			45: ["overworld-mt-ordeals-1"],
-			46: ["serpent-road-0"],
-			47: ["old-water-way-0"],
-			48: ["castle-baron-b3f-0"],
-			49: ["castle-baron-b2f-0"],
-			50: ["castle-baron-b1f-choice-0"],
-			51: ["castle-baron-b1f-1"],
-			52: ["castle-baron-b1f-save-room-0"],
-			53: ["castle-baron-b1f-0", "castle-baron-b1f-2"],
-			54: ["castle-baron-0"],
-			55: ["overworld-toroia-0"],
-			56: ["toroian-castle-1f-0"],
-			57: ["overworld-toroia-1"],
-			58: ["overworld-toroia-2"],
-			59: ["cave-magnes-b1f-0"],
-			60: ["cave-magnes-b2f-0"],
-			61: ["cave-magnes-b3f-choice-0"],
-			62: ["cave-magnes-b3f-1"],
-			63: ["cave-magnes-b3f-save-room-0"],
-			64: ["cave-magnes-b3f-0", "cave-magnes-b3f-2"],
-			65: ["cave-magnes-b3f-passage-0"],
-			66: ["cave-magnes-b4f-choice-0"],
-			67: ["cave-magnes-b4f-1"],
-			68: ["cave-magnes-b4f-save-room-0"],
-			69: ["cave-magnes-b4f-0", "cave-magnes-b4f-2"],
-			70: ["overworld-toroia-3"],
-			71: ["toroian-castle-1f-choice-0"],
-			72: ["toroian-castle-1f-1"],
-			73: ["overworld-toroia-5"],
-			74: ["tower-of-zot-1f-0"],
-			75: ["tower-of-zot-2f-0"],
-			76: ["tower-of-zot-3f-0"],
-			77: ["tower-of-zot-4f-0"],
-			78: ["tower-of-zot-5f-0"],
-			79: ["tower-of-zot-5f-1"],
-			80: ["tower-of-zot-6f-0"],
-			81: ["castle-baron-1"],
-			82: ["overworld-agart-0"],
-			83: ["underworld-castle-of-dwarves-0"],
-			84: ["castle-of-dwarves-choice-0"],
-			85: ["castle-of-dwarves-0", "castle-of-dwarves-1"],
-			86: ["underworld-castle-of-dwarves-1"],
-			87: ["tower-of-babil-1f-0"],
-			88: ["tower-of-babil-2f-0"],
-			89: ["tower-of-babil-3f-0"],
-			90: ["tower-of-babil-4f-0"],
-			91: ["tower-of-babil-5f-0"],
-			92: ["tower-of-babil-6f-0"],
-			93: ["tower-of-babil-7f-0"],
-			94: ["tower-of-babil-8f-0"],
-			95: ["tower-of-babil-8f-1"],
-			96: ["tower-of-babil-7f-1"],
-			97: ["tower-of-babil-6f-1"],
-			98: ["tower-of-babil-5f-1"],
-			99: ["tower-of-babil-5f-2"],
-			100: ["tower-of-babil-4f-1"],
-			101: ["tower-of-babil-3f-1"],
-			102: ["tower-of-babil-2f-1"],
-			103: ["tower-of-babil-1f-1"],
-			104: ["castle-baron-2"],
-			105: ["overworld-eblan-0"],
-			106: ["cave-eblana-b1f-0"],
-			107: ["cave-eblana-b2f-0"],
-			108: ["pass-to-babil-south-0"],
-			109: ["pass-to-babil-north-0"],
-			110: ["pass-to-babil-south-1"],
-			111: ["pass-to-babil-north-choice-0"],
-			112: ["pass-to-babil-north-1", "pass-to-babil-north-2"],
-			113: ["pass-to-babil-north-save-room-0"],
-			114: ["pass-to-babil-north-3"],
-			115: ["pass-to-babil-north-choice-1"],
-			116: ["pass-to-babil-north-4", "pass-to-babil-north-5"],
-			117: ["tower-of-babil-1f-upper-0"],
-			118: ["tower-of-babil-b2f-0"],
-			119: ["tower-of-babil-b3f-0"],
-			120: ["tower-of-babil-b4f-0"],
-			121: ["tower-of-babil-b3f-1"],
-			122: ["tower-of-babil-b4f-1"],
-			123: ["tower-of-babil-b5f-0"],
-			124: ["tower-of-babil-b5f-1"],
-			125: ["tower-of-babil-8f-revisit-0"],
-			126: ["tower-of-babil-7f-revisit-0"],
-			127: ["tower-of-babil-6f-revisit-0"],
-			128: ["castle-of-dwarves-2"],
-			129: ["underworld-castle-of-dwarves-2"],
-			130: ["sealed-cave-0"],
-			131: ["underworld-sealed-cave-1"],
-			132: ["castle-of-dwarves-3"],
-			133: ["underworld-castle-of-dwarves-3"],
-			134: ["overworld-mysidia-4"],
-			135: ["lunar-overworld-5-0"],
-			136: ["lunar-path-west-0-0"],
-			137: ["lunar-overworld-6-0"],
-			138: ["lunar-path-east-0-0"],
-			139: ["lunar-overworld-7-0"],
-			140: ["lunar-overworld-8-0"],
-			141: ["lunar-path-east-1-0"],
-			142: ["lunar-overworld-9-0"],
-			143: ["lunar-path-west-1-0"],
-			144: ["lunar-overworld-10-0"],
-			145: ["giant-of-babil-mouth-0"],
-			146: ["giant-of-babil-neck-0"],
-			147: ["giant-of-babil-chest-0"],
-			148: ["giant-of-babil-stomach-0"],
-			149: ["giant-of-babil-passage-0"],
-			150: ["giant-of-babil-lung-0"],
-			151: ["giant-of-babil-lung-1"],
-			152: ["giant-of-babil-cpu-0"],
-			153: ["lunar-overworld-12-0"],
-			154: ["lunar-path-west-2"],
-			155: ["lunar-overworld-13-0"],
-			156: ["lunar-path-east-2"],
-			157: ["lunar-overworld-14-0"],
-			158: ["lunar-subterrane-b1-0"],
-			159: ["lunar-subterrane-b2-0"],
-			160: ["lunar-subterrane-b3-0"],
-			161: ["lunar-subterrane-b4-0"],
-			162: ["lunar-subterrane-b4-passage-0"],
-			163: ["lunar-subterrane-b4-1"],
-			164: ["lunar-subterrane-b5-0"],
-			165: ["lunar-subterrane-b5-passage-a-2"],
-			166: ["lunar-subterrane-b5-1"],
-			167: ["lunar-subterrane-b5-passage-b-1"],
-			168: ["lunar-subterrane-b5-choice-0"],
-			169: ["lunar-subterrane-b5-2", "lunar-subterrane-b5-3"],
-			170: ["lunar-subterrane-b5-pink-puff-room-0"],
-			171: ["lunar-subterrane-b5-4"],
-			172: ["lunar-subterrane-b6-0"],
-			173: ["lunar-subterrane-b6-passage-0"],
-			174: ["lunar-subterrane-b7-choice-0"],
-			175: ["lunar-subterrane-b7-1"],
-			176: ["lunar-subterrane-b7-save-room-0"],
-			177: ["lunar-subterrane-b7-0", "lunar-subterrane-b7-2"],
-			178: ["lunar-core-b1-0"],
-			179: ["lunar-core-b2-0"],
-			180: ["lunar-core-b3-1"]
+			"E305400": ["watery-pass-south-b2f-save-room-0"],
+			"E307000": ["watery-pass-south-b2f-1"],
+			"E307100": ["watery-pass-south-b3f-0"],
+			"E307200": ["watery-pass-north-b2f-0"],
+			"E307300": ["watery-pass-north-b1f-0"],
+			"E000200": ["overworld-kaipo-2"],
+			"E307400": ["waterfalls-b1f-0"],
+			"E307500": ["waterfalls-b2f-0"],
+			"E307600": ["waterfalls-lake-0"],
+			"E307601": ["waterfalls-lake-1"],
+			"E000201": ["overworld-kaipo-3"],
+			"E000300": ["overworld-damcyan-0"],
+			"E302500": ["damcyan-0"],
+			"E000301": ["overworld-damcyan-1"],
+			"E307700": ["antlion-b1f-0"],
+			"E307800": ["antlion-b2f-1"],
+			"C307800": ["antlion-b2f-choice-0"],
+			"E307B00": ["antlion-b2f-charm-room-0"],
+			"E307801": ["antlion-b2f-0", "antlion-b2f-2"],
+			"E307900": ["antlions-nest-0"],
+			"E307901": ["antlions-nest-1"],
+			"E307802": ["antlion-b2f-3", "antlion-b2f-4"],
+			"C307801": ["antlion-b2f-choice-1"],
+			"E307B01": ["antlion-b2f-charm-room-1"],
+			"E307803": ["antlion-b2f-5"],
+			"E307701": ["antlion-b1f-1"],
+			"E000302": ["overworld-damcyan-2"],
+			"E000202": ["overworld-kaipo-4"],
+			"E000203": ["overworld-kaipo-5"],
+			"E000304": ["overworld-damcyan-3"],
+			"E307E00": ["mt-hobs-west-0"],
+			"E307F00": ["mt-hobs-summit-0"],
+			"E307F01": ["mt-hobs-summit-1"],
+			"E308000": ["mt-hobs-east-0"],
+			"E000400": ["overworld-fabul-0"],
+			"E302600": ["fabul-0"],
+			"E000401": ["overworld-fabul-1"],
+			"E000500": ["overworld-mysidia-0"],
+			"E000501": ["overworld-mysidia-1"],
+			"E000600": ["overworld-mt-ordeals-0"],
+			"E308400": ["mt-ordeals-0"],
+			"E308500": ["mt-ordeals-3rd-station-0"],
+			"E308501": ["mt-ordeals-3rd-station-1"],
+			"E308600": ["mt-ordeals-7th-station-0"],
+			"E308700": ["mt-ordeals-summit-0"],
+			"E308701": ["mt-ordeals-summit-1"],
+			"E308702": ["mt-ordeals-summit-2"],
+			"E308601": ["mt-ordeals-7th-station-1"],
+			"E308502": ["mt-ordeals-3rd-station-2"],
+			"E308401": ["mt-ordeals-1"],
+			"E000601": ["overworld-mt-ordeals-1"],
+			"E000502": ["overworld-mysidia-2"],
+			"E309700": ["serpent-road-0"],
+			"E303A00": ["old-water-way-0"],
+			"E303B00": ["castle-baron-b3f-0"],
+			"E303E00": ["castle-baron-b2f-0"],
+			"E303C00": ["castle-baron-b1f-0", "castle-baron-b1f-1"],
+			"C303C00": ["castle-baron-b1f-choice-0"],
+			"E303D00": ["castle-baron-b1f-save-room-0"],
+			"E303C01": ["castle-baron-b1f-2"],
+			"E302400": ["castle-baron-0"],
+			"E000700": ["overworld-toroia-0"],
+			"E302700": ["toroian-castle-1f-0"],
+			"E000701": ["overworld-toroia-1"],
+			"E308C00": ["cave-magnes-b1f-0"],
+			"E308D00": ["cave-magnes-b2f-0"],
+			"E308F00": ["cave-magnes-b3f-0", "cave-magnes-b3f-1"],
+			"C308F00": ["cave-magnes-b3f-choice-0"],
+			"E309200": ["cave-magnes-b3f-save-room-0"],
+			"E308F01": ["cave-magnes-b3f-2"],
+			"E309100": ["cave-magnes-b3f-passage-0"],
+			"E309300": ["cave-magnes-b4f-0", "cave-magnes-b4f-1"],
+			"C309300": ["cave-magnes-b4f-choice-0"],
+			"E30A100": ["cave-magnes-b4f-save-room-0"],
+			"E309301": ["cave-magnes-b4f-2"],
+			"E000702": ["overworld-toroia-3"],
+			"C305500": ["toroian-castle-1f-choice-0"],
+			"E305500": ["toroian-castle-1f-1"],
+			"E000703": ["overworld-toroia-5"],
+			"E309800": ["tower-of-zot-1f-0"],
+			"E309900": ["tower-of-zot-2f-0"],
+			"E309901": ["tower-of-zot-2f-1"],
+			"E309A00": ["tower-of-zot-3f-0"],
+			"E309C00": ["tower-of-zot-4f-0"],
+			"E309D00": ["tower-of-zot-5f-0"],
+			"E309D01": ["tower-of-zot-5f-1"],
+			"E309E00": ["tower-of-zot-6f-0"],
+			"E302401": ["castle-baron-1"],
+			"E000A00": ["overworld-agart-0"],
+			"E100000": ["underworld-castle-of-dwarves-0"],
+			"C310700": ["castle-of-dwarves-choice-0"],
+			"E310700": ["castle-of-dwarves-0", "castle-of-dwarves-1"],
+			"E100001": ["underworld-castle-of-dwarves-3"],
+			"E312100": ["tower-of-babil-1f-0"],
+			"E312200": ["tower-of-babil-2f-0"],
+			"E312300": ["tower-of-babil-3f-0"],
+			"E312400": ["tower-of-babil-4f-0"],
+			"E312500": ["tower-of-babil-5f-0"],
+			"E312600": ["tower-of-babil-6f-0"],
+			"E312700": ["tower-of-babil-7f-0"],
+			"E312800": ["tower-of-babil-8f-0"],
+			"E312801": ["tower-of-babil-8f-1"],
+			"E312701": ["tower-of-babil-7f-1"],
+			"E312601": ["tower-of-babil-6f-1"],
+			"E312501": ["tower-of-babil-5f-1"],
+			"E312502": ["tower-of-babil-5f-2"],
+			"E312401": ["tower-of-babil-4f-1"],
+			"E312301": ["tower-of-babil-3f-1"],
+			"E312201": ["tower-of-babil-2f-1"],
+			"E312101": ["tower-of-babil-1f-1"],
+			"E000000": ["overworld-baron-0"],
+			"E302402": ["castle-baron-2"],
+			"E000A01": ["overworld-eblan-0"],
+			"E30C700": ["cave-eblana-b1f-0"],
+			"E30C800": ["cave-eblana-b2f-0"],
+			"E30C900": ["pass-to-babil-south-0"],
+			"E30CA00": ["pass-to-babil-north-0"],
+			"E30C901": ["pass-to-babil-south-1"],
+			"E30CA01": ["pass-to-babil-north-1", "pass-to-babil-north-2"],
+			"C30CA00": ["pass-to-babil-north-choice-0"],
+			"E30CD00": ["pass-to-babil-north-save-room-0"],
+			"E30CA02": ["pass-to-babil-north-3"],
+			"C30CA01": ["pass-to-babil-north-choice-1"],
+			"E30CA03": ["pass-to-babil-north-4", "pass-to-babil-north-5"],
+			"E30A700": ["tower-of-babil-1f-upper-0"],
+			"E30A800": ["tower-of-babil-b2f-0"],
+			"E30A900": ["tower-of-babil-b3f-0"],
+			"E30AA00": ["tower-of-babil-b4f-0"],
+			"E30A901": ["tower-of-babil-b3f-1"],
+			"E30AA01": ["tower-of-babil-b4f-1"],
+			"E30AC00": ["tower-of-babil-b5f-0"],
+			"C30AC00": ["tower-of-babil-b5f-choice-0"],
+			"E30AC01": ["tower-of-babil-b5f-1"],
+			"E311D00": ["tower-of-babil-8f-revisit-0"],
+			"E311E00": ["tower-of-babil-7f-revisit-0"],
+			"E311F00": ["tower-of-babil-6f-revisit-0"],
+			"E100002": ["underworld-castle-of-dwarves-4"],
+			"E310701": ["castle-of-dwarves-2"],
+			"E100003": ["underworld-castle-of-dwarves-5"],
+			"E314400": ["sealed-cave-0"],
+			"E100101": ["underworld-sealed-cave-1"],
+			"E310702": ["castle-of-dwarves-3"],
+			"E100004": ["underworld-castle-of-dwarves-7"],
+			"E000503": ["overworld-mysidia-4"],
+			"E200001": ["lunar-overworld-5-0"],
+			"E316300": ["lunar-path-west-0-0"],
+			"E200002": ["lunar-overworld-6-0"],
+			"E316400": ["lunar-path-east-0-0"],
+			"E200003": ["lunar-overworld-7-0"],
+			"E200004": ["lunar-overworld-8-0"],
+			"E316401": ["lunar-path-east-1-0"],
+			"E200005": ["lunar-overworld-9-0"],
+			"E316301": ["lunar-path-west-1-0"],
+			"E200006": ["lunar-overworld-10-0"],
+			"E30B500": ["giant-of-babil-mouth-0"],
+			"E30B600": ["giant-of-babil-neck-0"],
+			"E30B700": ["giant-of-babil-chest-0"],
+			"E30B900": ["giant-of-babil-stomach-0"],
+			"E30BA00": ["giant-of-babil-passage-0"],
+			"E30BC00": ["giant-of-babil-lung-0"],
+			"E30BC01": ["giant-of-babil-lung-1"],
+			"E30BD00": ["giant-of-babil-cpu-0"],
+			"E200007": ["lunar-overworld-12-0"],
+			"E316302": ["lunar-path-west-2"],
+			"E200008": ["lunar-overworld-13-0"],
+			"E316402": ["lunar-path-east-2"],
+			"E200009": ["lunar-overworld-14-0"],
+			"E316700": ["lunar-subterrane-b1-0"],
+			"E316800": ["lunar-subterrane-b2-0"],
+			"E316900": ["lunar-subterrane-b3-0"],
+			"E316A00": ["lunar-subterrane-b4-0"],
+			"E317400": ["lunar-subterrane-b4-passage-0"],
+			"E316A01": ["lunar-subterrane-b4-1"],
+			"E316B00": ["lunar-subterrane-b5-0"],
+			"E317500": ["lunar-subterrane-b5-passage-a-2"],
+			"E316B01": ["lunar-subterrane-b5-1"],
+			"E317600": ["lunar-subterrane-b5-passage-b-1"],
+			"E316B02": ["lunar-subterrane-b5-2", "lunar-subterrane-b5-3"],
+			"C316B00": ["lunar-subterrane-b5-choice-0"],
+			"E317700": ["lunar-subterrane-b5-pink-puff-room-0"],
+			"E316B03": ["lunar-subterrane-b5-4"],
+			"E316C00": ["lunar-subterrane-b6-0"],
+			"E317900": ["lunar-subterrane-b6-passage-0"],
+			"E316D00": ["lunar-subterrane-b7-0", "lunar-subterrane-b7-1"],
+			"C316D00": ["lunar-subterrane-b7-choice-0"],
+			"E317B00": ["lunar-subterrane-b7-save-room-0"],
+			"E316D01": ["lunar-subterrane-b7-2"],
+			"E316E00": ["lunar-core-b1-0"],
+			"E316F00": ["lunar-core-b2-0"],
+			"E317000": ["lunar-core-b3-1"]
 		}
 	};
 
@@ -5023,9 +5156,13 @@ com.aexoden.ff4 = function()
 					[14, 23, SegmentFlags.NONE],
 					[14, 29, SegmentFlags.END]
 				],
+				"extra-1-0": [
+					[22, 28, SegmentFlags.NONE],
+					[22, 29, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
 				"extra-2-0": [
-					[29, 13, SegmentFlags.NONE],
-					[30, 13, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+					[14, 27, SegmentFlags.NONE],
+					[15, 27, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -5070,6 +5207,10 @@ com.aexoden.ff4 = function()
 					[14, 23, SegmentFlags.NONE],
 					[14, 29, SegmentFlags.END]
 				],
+				"extra-1-0": [
+					[22, 28, SegmentFlags.NONE],
+					[22, 29, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
 				"extra-2-0": [
 					[14, 27, SegmentFlags.NONE],
 					[15, 27, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
@@ -5100,6 +5241,10 @@ com.aexoden.ff4 = function()
 					[27, 4, SegmentFlags.NONE],
 					[27, 2, SegmentFlags.END]
 				],
+				"extra-1-0": [
+					[22, 28, SegmentFlags.NONE],
+					[22, 29, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
 				"extra-2-0": [
 					[29, 13, SegmentFlags.NONE],
 					[30, 13, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
@@ -5124,9 +5269,13 @@ com.aexoden.ff4 = function()
 					[25, 26, SegmentFlags.NONE],
 					[25, 23, SegmentFlags.END]
 				],
+				"extra-1-0": [
+					[22, 28, SegmentFlags.NONE],
+					[22, 29, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
 				"extra-2-0": [
-					[29, 13, SegmentFlags.NONE],
-					[30, 13, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+					[25, 24, SegmentFlags.NONE],
+					[26, 24, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -5203,6 +5352,10 @@ com.aexoden.ff4 = function()
 				"base-0": [
 					[14, 20, SegmentFlags.START],
 					[14, 3, SegmentFlags.END],
+				],
+				"extra-1-0": [
+					[14, 19, SegmentFlags.NONE],
+					[15, 19, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				],
 				"extra-2-0": [
 					[14, 17, SegmentFlags.NONE],
@@ -6376,7 +6529,7 @@ com.aexoden.ff4 = function()
 				],
 				"extra-2-0": [
 					[3, 28, SegmentFlags.NONE],
-					[2, 28, SegmentFlags.RETURN | SegmentFlags.VERTICAL]
+					[2, 28, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
 				]
 			}
 		},
@@ -6456,12 +6609,12 @@ com.aexoden.ff4 = function()
 					[6, 19, SegmentFlags.END]
 				],
 				"extra-1-0": [
-					[24, 24, SegmentFlags.NONE],
-					[25, 24, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+					[5, 8, SegmentFlags.NONE],
+					[5, 9, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				],
 				"extra-2-0": [
-					[16, 5, SegmentFlags.NONE],
-					[17, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+					[6, 18, SegmentFlags.NONE],
+					[5, 18, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
 				]
 			}
 		},
@@ -6484,8 +6637,8 @@ com.aexoden.ff4 = function()
 					[27, 26, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				],
 				"extra-2-0": [
-					[18, 18, SegmentFlags.NONE],
-					[19, 18, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+					[5, 9, SegmentFlags.NONE],
+					[5, 8, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -6507,8 +6660,8 @@ com.aexoden.ff4 = function()
 					[8, 5, SegmentFlags.END]
 				],
 				"extra-1-0": [
-					[28, 20, SegmentFlags.NONE],
-					[29, 20, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+					[29, 20, SegmentFlags.NONE],
+					[30, 20, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				],
 				"extra-2-0": [
 					[22, 12, SegmentFlags.NONE],
@@ -6556,8 +6709,8 @@ com.aexoden.ff4 = function()
 					[8, 5, SegmentFlags.END]
 				],
 				"extra-1-0": [
-					[28, 20, SegmentFlags.NONE],
-					[29, 20, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+					[29, 20, SegmentFlags.NONE],
+					[30, 20, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				],
 				"extra-2-0": [
 					[22, 12, SegmentFlags.NONE],
@@ -6576,8 +6729,8 @@ com.aexoden.ff4 = function()
 					[5, 14, SegmentFlags.END]
 				],
 				"extra-2-0": [
-					[14, 12, SegmentFlags.NONE],
-					[15, 12, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+					[5, 13, SegmentFlags.NONE],
+					[6, 13, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -7060,6 +7213,7 @@ com.aexoden.ff4 = function()
 			}
 		},
 		"giant-of-babil-lung-0": {
+			"description": "Giant of Bab-il Lung",
 			"flags": PathFlags.STEPS,
 			"map": "30BC-0",
 			"segments": {
@@ -7129,6 +7283,7 @@ com.aexoden.ff4 = function()
 			}
 		},
 		"giant-of-babil-passage-0": {
+			"description": "Giant of Bab-il Passage",
 			"flags": PathFlags.STEPS,
 			"map": "30BA-0",
 			"segments": {
@@ -7519,6 +7674,10 @@ com.aexoden.ff4 = function()
 					[18, 22, SegmentFlags.NONE],
 					[18, 14, SegmentFlags.END]
 				],
+				"extra-1-0": [
+					[27, 22, SegmentFlags.NONE],
+					[28, 22, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				],
 				"extra-2-0": [
 					[18, 15, SegmentFlags.NONE],
 					[19, 15, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
@@ -7543,9 +7702,13 @@ com.aexoden.ff4 = function()
 					[29, 14, SegmentFlags.NONE],
 					[18, 14, SegmentFlags.END]
 				],
+				"extra-1-0": [
+					[27, 14, SegmentFlags.NONE],
+					[28, 14, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				],
 				"extra-2-0": [
 					[19, 14, SegmentFlags.NONE],
-					[18, 14, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+					[19, 13, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -7581,6 +7744,7 @@ com.aexoden.ff4 = function()
 			}
 		},
 		"lunar-core-b1-0": {
+			"description": "Lunar Core B1",
 			"flags": PathFlags.STEPS,
 			"map": "316E-0",
 			"segments": {
@@ -7621,6 +7785,7 @@ com.aexoden.ff4 = function()
 			}
 		},
 		"lunar-core-b2-0": {
+			"description": "Lunar Core B2",
 			"flags": PathFlags.STEPS,
 			"map": "316F-0",
 			"segments": {
@@ -7647,6 +7812,7 @@ com.aexoden.ff4 = function()
 			}
 		},
 		"lunar-core-b3-0": {
+			"description": "Lunar Core B3",
 			"flags": PathFlags.STEPS,
 			"map": "3170-0",
 			"segments": {
@@ -7677,6 +7843,7 @@ com.aexoden.ff4 = function()
 			}
 		},
 		"lunar-core-b3-1": {
+			"description": "Lunar Core B3",
 			"flags": PathFlags.STEPS,
 			"map": "3170-0",
 			"segments": {
@@ -7709,6 +7876,7 @@ com.aexoden.ff4 = function()
 			}
 		},
 		"lunar-core-b4-0": {
+			"description": "Lunar Core B4",
 			"flags": PathFlags.STEPS,
 			"map": "3171-0",
 			"segments": {
@@ -8660,6 +8828,7 @@ com.aexoden.ff4 = function()
 			}
 		},
 		"lunar-subterrane-b6-0": {
+			"description": "Lunar Subterrane B6",
 			"flags": PathFlags.STEPS,
 			"map": "316C-0",
 			"segments": {
@@ -8911,8 +9080,8 @@ com.aexoden.ff4 = function()
 					[15, 26, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				],
 				"extra-2-0": [
-					[15, 25, SegmentFlags.NONE],
-					[16, 25, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+					[22, 8, SegmentFlags.NONE],
+					[23, 8, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -8966,8 +9135,8 @@ com.aexoden.ff4 = function()
 					[20, 31, SegmentFlags.END]
 				],
 				"extra-1-0": [
-					[10, 28, SegmentFlags.NONE],
-					[10, 27, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+					[11, 28, SegmentFlags.NONE],
+					[11, 27, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				],
 				"extra-2-0": [
 					[17, 23, SegmentFlags.NONE],
@@ -9014,6 +9183,10 @@ com.aexoden.ff4 = function()
 					[8, 24, SegmentFlags.NONE],
 					[10, 24, SegmentFlags.NONE],
 					[10, 23, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[18, 12, SegmentFlags.NONE],
+					[18, 11, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				],
 				"extra-2-0": [
 					[18, 16, SegmentFlags.NONE],
@@ -9332,7 +9505,8 @@ com.aexoden.ff4 = function()
 			"segments": {
 				"base-0": [
 					[102, 155, SegmentFlags.START | SegmentFlags.VEHICLE],
-					[102, 127, SegmentFlags.END | SegmentFlags.VEHICLE]
+					[102, 127, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[102, 126, SegmentFlags.VEHICLE]
 				]
 			}
 		},
@@ -9342,8 +9516,10 @@ com.aexoden.ff4 = function()
 			"mapRange": [86, 96, 32, 32],
 			"segments": {
 				"base-0": [
-					[102, 127, SegmentFlags.START | SegmentFlags.VEHICLE],
-					[102, 96, SegmentFlags.END | SegmentFlags.VEHICLE]
+					[102, 128, SegmentFlags.VEHICLE],
+					[102, 127, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[102, 96, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[102, 95, SegmentFlags.VEHICLE]
 				]
 			}
 		},
@@ -9353,9 +9529,11 @@ com.aexoden.ff4 = function()
 			"mapRange": [86, 66, 32, 32],
 			"segments": {
 				"base-0": [
-					[102, 96, SegmentFlags.START | SegmentFlags.VEHICLE],
-					[102, 83, SegmentFlags.NONE | SegmentFlags.VEHICLE],
-					[86, 83, SegmentFlags.END | SegmentFlags.VEHICLE]
+					[102, 97, SegmentFlags.VEHICLE],
+					[102, 96, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[102, 83, SegmentFlags.VEHICLE],
+					[86, 83, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[85, 83, SegmentFlags.VEHICLE],
 				]
 			}
 		},
@@ -9365,8 +9543,10 @@ com.aexoden.ff4 = function()
 			"mapRange": [55, 66, 32, 32],
 			"segments": {
 				"base-0": [
-					[86, 83, SegmentFlags.START | SegmentFlags.VEHICLE],
-					[55, 83, SegmentFlags.END | SegmentFlags.VEHICLE]
+					[87, 83, SegmentFlags.VEHICLE],
+					[86, 83, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[55, 83, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[54, 83, SegmentFlags.VEHICLE]
 				]
 			}
 		},
@@ -9736,6 +9916,10 @@ com.aexoden.ff4 = function()
 					[102, 184, SegmentFlags.END | SegmentFlags.VEHICLE],
 					[102, 158, SegmentFlags.VEHICLE],
 					[102, 157, SegmentFlags.START | SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[102, 158, SegmentFlags.NONE],
+					[101, 158, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
 				]
 			}
 		},
@@ -9781,10 +9965,10 @@ com.aexoden.ff4 = function()
 					[132, 57, SegmentFlags.VEHICLE],
 					[136, 57, SegmentFlags.VEHICLE],
 					[136, 56, SegmentFlags.START | SegmentFlags.END]
-				/*],
+				],
 				"extra-2-0": [
 					[136, 57, SegmentFlags.NONE],
-					[137, 57, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]*/
+					[137, 57, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -9805,7 +9989,12 @@ com.aexoden.ff4 = function()
 					[122, 62, SegmentFlags.VEHICLE],
 					[115, 62, SegmentFlags.VEHICLE],
 					[115, 68, SegmentFlags.VEHICLE],
-					[107, 68, SegmentFlags.VEHICLE | SegmentFlags.END]
+					[107, 68, SegmentFlags.VEHICLE | SegmentFlags.END],
+					[106, 68, SegmentFlags.VEHICLE]
+				],
+				"extra-2-0": [
+					[136, 57, SegmentFlags.NONE],
+					[137, 57, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -9815,7 +10004,8 @@ com.aexoden.ff4 = function()
 			"mapRange": [98, 44, 32, 32],
 			"segments": {
 				"base-0": [
-					[99, 74, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[99, 76, SegmentFlags.VEHICLE],
+					[99, 74, SegmentFlags.END | SegmentFlags.VEHICLE],
 					[99, 68, SegmentFlags.VEHICLE],
 					[115, 68, SegmentFlags.VEHICLE],
 					[115, 62, SegmentFlags.VEHICLE],
@@ -9823,7 +10013,8 @@ com.aexoden.ff4 = function()
 					[124, 48, SegmentFlags.VEHICLE],
 					[127, 48, SegmentFlags.VEHICLE],
 					[127, 46, SegmentFlags.VEHICLE],
-					[129, 46, SegmentFlags.END | SegmentFlags.VEHICLE]
+					[129, 46, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[130, 46, SegmentFlags.VEHICLE]
 				]
 			}
 		},
@@ -9833,7 +10024,12 @@ com.aexoden.ff4 = function()
 			"mapRange": [124, 31, 32, 32],
 			"segments": {
 				"base-0": [
-					[129, 46, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[115, 62, SegmentFlags.VEHICLE],
+					[124, 62, SegmentFlags.VEHICLE],
+					[124, 48, SegmentFlags.VEHICLE],
+					[127, 48, SegmentFlags.VEHICLE],
+					[127, 46, SegmentFlags.VEHICLE],
+					[129, 46, SegmentFlags.END | SegmentFlags.VEHICLE],
 					[131, 46, SegmentFlags.VEHICLE],
 					[131, 49, SegmentFlags.VEHICLE],
 					[143, 49, SegmentFlags.VEHICLE],
@@ -9842,6 +10038,10 @@ com.aexoden.ff4 = function()
 					[150, 49, SegmentFlags.VEHICLE],
 					[151, 49, SegmentFlags.VEHICLE],
 					[152, 49, SegmentFlags.START | SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[151, 49, SegmentFlags.NONE],
+					[151, 50, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -9901,7 +10101,8 @@ com.aexoden.ff4 = function()
 					[171, 38, SegmentFlags.NONE],
 					[185, 38, SegmentFlags.NONE],
 					[185, 45, SegmentFlags.NONE],
-					[190, 45, SegmentFlags.END]
+					[190, 45, SegmentFlags.END],
+					[191, 45, SegmentFlags.NONE]
 				]
 			}
 		},
@@ -9911,7 +10112,8 @@ com.aexoden.ff4 = function()
 			"mapRange": [186, 35, 32, 32],
 			"segments": {
 				"base-0": [
-					[190, 45, SegmentFlags.START],
+					[185, 45, SegmentFlags.NONE],
+					[190, 45, SegmentFlags.END],
 					[200, 45, SegmentFlags.NONE],
 					[200, 48, SegmentFlags.NONE],
 					[207, 48, SegmentFlags.NONE],
@@ -9920,11 +10122,11 @@ com.aexoden.ff4 = function()
 				],
 				"extra-1-0": [
 					[212, 58, SegmentFlags.NONE],
-					[213, 58, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+					[213, 58, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
 				],
 				"extra-2-0": [
-					[208, 58, SegmentFlags.NONE],
-					[207, 58, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+					[213, 58, SegmentFlags.NONE],
+					[213, 59, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -9947,7 +10149,7 @@ com.aexoden.ff4 = function()
 				],
 				"extra-2-0": [
 					[220, 58, SegmentFlags.NONE],
-					[220, 57, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+					[221, 58, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -10006,7 +10208,9 @@ com.aexoden.ff4 = function()
 			"mapRange": [92, 67, 32, 32],
 			"segments": {
 				"base-0": [
-					[107, 68, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[115, 66, SegmentFlags.VEHICLE],
+					[115, 68, SegmentFlags.VEHICLE],
+					[107, 68, SegmentFlags.END | SegmentFlags.VEHICLE],
 					[99, 68, SegmentFlags.VEHICLE],
 					[99, 77, SegmentFlags.VEHICLE],
 					[98, 77, SegmentFlags.VEHICLE],
@@ -10014,7 +10218,8 @@ com.aexoden.ff4 = function()
 					[100, 80, SegmentFlags.VEHICLE],
 					[100, 83, SegmentFlags.VEHICLE],
 					[118, 83, SegmentFlags.VEHICLE],
-					[118, 98, SegmentFlags.VEHICLE | SegmentFlags.END]
+					[118, 98, SegmentFlags.VEHICLE | SegmentFlags.END],
+					[118, 99, SegmentFlags.VEHICLE]
 				]
 			}
 		},
@@ -10024,10 +10229,15 @@ com.aexoden.ff4 = function()
 			"mapRange": [105, 85, 32, 32],
 			"segments": {
 				"base-0": [
-					[118, 98, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[118, 83, SegmentFlags.VEHICLE],
+					[118, 98, SegmentFlags.END | SegmentFlags.VEHICLE],
 					[118, 104, SegmentFlags.VEHICLE],
 					[124, 104, SegmentFlags.VEHICLE],
 					[125, 104, SegmentFlags.START | SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[124, 104, SegmentFlags.NONE],
+					[124, 105, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -10046,6 +10256,11 @@ com.aexoden.ff4 = function()
 					[98, 76, SegmentFlags.VEHICLE],
 					[99, 76, SegmentFlags.VEHICLE],
 					[99, 74, SegmentFlags.VEHICLE | SegmentFlags.END],
+					[99, 73, SegmentFlags.VEHICLE]
+				],
+				"extra-2-0": [
+					[124, 104, SegmentFlags.NONE],
+					[124, 105, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -10067,12 +10282,14 @@ com.aexoden.ff4 = function()
 			"mapRange": [159, 185, 32, 32],
 			"segments": {
 				"base-0": [
-					[160, 205, SegmentFlags.START],
+					[158, 205, SegmentFlags.NONE],
+					[160, 205, SegmentFlags.END],
 					[175, 205, SegmentFlags.NONE],
 					[175, 211, SegmentFlags.NONE],
 					[182, 211, SegmentFlags.NONE],
 					[182, 192, SegmentFlags.NONE],
-					[190, 192, SegmentFlags.END]
+					[190, 192, SegmentFlags.END],
+					[191, 192, SegmentFlags.NONE]
 				],
 				"boundary-0": [
 					[160, 185, SegmentFlags.NONE],
@@ -10086,7 +10303,8 @@ com.aexoden.ff4 = function()
 			"mapRange": [189, 180, 32, 32],
 			"segments": {
 				"base-0": [
-					[190, 192, SegmentFlags.START],
+					[188, 192, SegmentFlags.NONE],
+					[190, 192, SegmentFlags.END],
 					[211, 192, SegmentFlags.NONE],
 					[211, 201, SegmentFlags.NONE],
 					[218, 201, SegmentFlags.NONE],
@@ -10117,14 +10335,15 @@ com.aexoden.ff4 = function()
 		"overworld-mt-ordeals-3": {
 			"flags": PathFlags.STEPS,
 			"map": "0000-0",
-			"mapRange": [182, 184, 32, 32],
+			"mapRange": [183, 184, 32, 32],
 			"segments": {
 				"base-0": [
 					[213, 209, SegmentFlags.START | SegmentFlags.VEHICLE],
 					[213, 200, SegmentFlags.VEHICLE],
 					[201, 200, SegmentFlags.VEHICLE],
 					[201, 192, SegmentFlags.VEHICLE],
-					[182, 192, SegmentFlags.VEHICLE | SegmentFlags.END]
+					[183, 192, SegmentFlags.VEHICLE | SegmentFlags.END],
+					[182, 192, SegmentFlags.VEHICLE]
 				]
 			}
 		},
@@ -10139,8 +10358,8 @@ com.aexoden.ff4 = function()
 					[154, 199, SegmentFlags.END]
 				],
 				"extra-2-0": [
-					[150, 199, SegmentFlags.NONE],
-					[150, 198, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+					[153, 199, SegmentFlags.NONE],
+					[153, 198, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -10154,6 +10373,7 @@ com.aexoden.ff4 = function()
 					[157, 200, SegmentFlags.NONE],
 					[157, 205, SegmentFlags.NONE],
 					[160, 205, SegmentFlags.END],
+					[173, 205, SegmentFlags.NONE]
 				],
 				"extra-2-0": [
 					[157, 200, SegmentFlags.NONE],
@@ -10171,7 +10391,9 @@ com.aexoden.ff4 = function()
 			"mapRange": [152, 185, 32, 32],
 			"segments": {
 				"base-0": [
-					[182, 192, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[184, 192, SegmentFlags.VEHICLE],
+					[183, 192, SegmentFlags.END | SegmentFlags.VEHICLE],
+					[182, 192, SegmentFlags.VEHICLE],
 					[182, 211, SegmentFlags.VEHICLE],
 					[175, 211, SegmentFlags.VEHICLE],
 					[175, 203, SegmentFlags.VEHICLE],
@@ -10179,6 +10401,10 @@ com.aexoden.ff4 = function()
 					[157, 199, SegmentFlags.VEHICLE],
 					[156, 199, SegmentFlags.VEHICLE],
 					[155, 199, SegmentFlags.START | SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[156, 199, SegmentFlags.NONE],
+					[156, 198, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				],
 				"boundary-0": [
 					[160, 185, SegmentFlags.NONE],
@@ -10277,7 +10503,8 @@ com.aexoden.ff4 = function()
 			"mapRange": [24, 66, 32, 32],
 			"segments": {
 				"base-0": [
-					[55, 83, SegmentFlags.START | SegmentFlags.VEHICLE],
+					[56, 83, SegmentFlags.VEHICLE],
+					[55, 83, SegmentFlags.END | SegmentFlags.VEHICLE],
 					[36, 83, SegmentFlags.VEHICLE],
 					[36, 82, SegmentFlags.START],
 					[35, 82, SegmentFlags.END]
@@ -10353,7 +10580,8 @@ com.aexoden.ff4 = function()
 				"base-0": [
 					[74, 53, SegmentFlags.START],
 					[74, 55, SegmentFlags.NONE],
-					[58, 55, SegmentFlags.VEHICLE | SegmentFlags.START | SegmentFlags.END]
+					[58, 55, SegmentFlags.VEHICLE | SegmentFlags.START | SegmentFlags.END],
+					[57, 55, SegmentFlags.VEHICLE]
 				],
 				"extra-2-0": [
 					[74, 54, SegmentFlags.NONE],
@@ -10391,7 +10619,7 @@ com.aexoden.ff4 = function()
 				],
 				"optional-1-0": [
 					[35, 82, SegmentFlags.NONE],
-					[36, 82, SegmentFlags.ANNOTATE],
+					[36, 82, SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
 					[36, 83, SegmentFlags.NONE]
 				],
 				"optional-2-0": [
@@ -11078,7 +11306,7 @@ com.aexoden.ff4 = function()
 				],
 				"extra-2-0": [
 					[18, 27, SegmentFlags.NONE],
-					[17, 27, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+					[18, 26, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -11360,8 +11588,8 @@ com.aexoden.ff4 = function()
 					[26, 4, SegmentFlags.END]
 				],
 				"extra-2-0": [
-					[17, 24, SegmentFlags.NONE],
-					[17, 23, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+					[26, 5, SegmentFlags.NONE],
+					[26, 6, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -11377,14 +11605,21 @@ com.aexoden.ff4 = function()
 					[17, 21, SegmentFlags.NONE],
 					[17, 27, SegmentFlags.NONE],
 					[8, 27, SegmentFlags.NONE],
-					[8, 15, SegmentFlags.RETURN],
+					[8, 15, SegmentFlags.RETURN]
+				],
+				"base-1": [
+					[8, 15, SegmentFlags.NONE],
 					[8, 20, SegmentFlags.NONE],
 					[2, 20, SegmentFlags.NONE],
 					[2, 13, SegmentFlags.END]
 				],
 				"extra-2-0": [
-					[26, 5, SegmentFlags.NONE],
-					[27, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+					[8, 19, SegmentFlags.NONE],
+					[9, 19, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-1": [
+					[2, 18, SegmentFlags.NONE],
+					[1, 18, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
 				]
 			}
 		},
@@ -11420,8 +11655,8 @@ com.aexoden.ff4 = function()
 					[2, 7, SegmentFlags.END]
 				],
 				"extra-2-0": [
-					[2, 14, SegmentFlags.START],
-					[3, 14, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+					[2, 8, SegmentFlags.NONE],
+					[1, 8, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
 				]
 			}
 		},
@@ -11474,8 +11709,12 @@ com.aexoden.ff4 = function()
 					[15, 15, SegmentFlags.END]
 				],
 				"extra-2-0": [
-					[24, 14, SegmentFlags.NONE],
-					[23, 13, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+					[15, 19, SegmentFlags.NONE],
+					[15, 20, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				],
+				"extra-1-1": [
+					[15, 17, SegmentFlags.NONE],
+					[16, 17, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				],
 				"extra-2-1": [
 					[15, 16, SegmentFlags.NONE],
@@ -11756,6 +11995,10 @@ com.aexoden.ff4 = function()
 					[86, 82, SegmentFlags.VEHICLE],
 					[98, 82, SegmentFlags.VEHICLE],
 					[99, 82, SegmentFlags.START | SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[98, 82, SegmentFlags.NONE],
+					[98, 83, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				]
 			}
 		},
@@ -12048,7 +12291,7 @@ com.aexoden.ff4 = function()
 			}
 		},
 		"waterfalls-lake-1": {
-			"flags": PathFlags.STEPS,
+			"flags": PathFlags.STEPS | PathFlags.SINGLE,
 			"map": "3076-1",
 			"segments": {
 				"base-0": [
@@ -12402,7 +12645,7 @@ com.aexoden.ff4 = function()
 												draw = true;
 											} else if (fields[0] == "extra" && fields[1] == "2" && delta - delta % 2 > 0) {
 												draw = true;
-											} else if (fields[0] == "extra" && fields[1] == "1" && delta % 2 == 1) {
+											} else if (fields[0] == "extra" && fields[1] == "1" && (delta % 2 == 1 || (data.paths[path].flags & PathFlags.SINGLE) > 0)) {
 												draw = true;
 											}
 										}
@@ -12487,7 +12730,7 @@ com.aexoden.ff4 = function()
 		}
 	};
 
-	var drawMaps = function(parent, route, vars, repaint) {
+	var drawMaps = function(parent, route, vars, battles, repaint) {
 		var drawAll = document.getElementById("option-show-all").checked;
 		var container = document.createDocumentFragment();
 
@@ -12522,7 +12765,7 @@ com.aexoden.ff4 = function()
 
 						Object.entries(entries).forEach(
 							([path, pathData]) => {
-								if (varData.type == VariableFlags.CHOICE && pathData.enabled || varData.type == VariableFlags.EXTRA && value > 0) {
+								if (varData.type == VariableFlags.CHOICE && pathData.enabled || varData.type == VariableFlags.EXTRA && value > 0 || data.paths[path].description in battles) {
 									if (!(path in activeMaps)) {
 										activeMaps[path] = [];
 									}
@@ -12637,7 +12880,7 @@ com.aexoden.ff4 = function()
 												value += delta % 2;
 											}
 										} else {
-											if (!extraEven) {
+											if (!extraEven && (data.paths[path].flags & PathFlags.SINGLE) == 0) {
 												value = value % 2;
 											}
 
@@ -12663,6 +12906,19 @@ com.aexoden.ff4 = function()
 						caption.innerHTML += "</dl>";
 					}
 
+					if (data.paths[path].description in battles) {
+						let battleText = "<h5>Important Battles</h5><ul>";
+
+						for (const [step, style, formation] of battles[data.paths[path].description]) {
+							battleText += '<li class="' + style + '">Step ' + step + ": " + formation + "</li>";
+						}
+
+						battleText += "</ul>";
+
+						caption.innerHTML += battleText;
+						cancelPath = false;
+					}
+
 					if (!cancelPath) {
 						canvas_container.appendChild(canvas);
 						row.appendChild(canvas_container);
@@ -12683,8 +12939,8 @@ com.aexoden.ff4 = function()
 	};
 
 	var printSummary = function(target, route, vars, battles) {
-		target.innerHTML += '<div class="bs-callout bs-callout-info"><span class="fas fa-info-circle"></span><h4>Information</h4><p>This summary should include all critical information needed to follow the route. If you have any problems, please contact me.</p></div>';
-		target.innerHTML += '<h3>Instructions</h3>';
+		target.innerHTML += '<div class="bs-callout bs-callout-info"><span class="fas fa-info-circle"></span><h4>Information</h4><p>This summary should include all critical information needed to follow the route. The encounter information might be a little useless if it refers to a map you visit multiple times. This is a known issue that may or may not ever be fixed. If you have any other problems, please contact me.</p></div>';
+		target.innerHTML += "<h3>Instructions</h3>";
 
 		if (Object.keys(vars).length == 0) {
 			target.innerHTML = '<div class="bs-callout bs-callout-success"><span class="fas fa-thumbs-up"></span><h4>Easy!</h4><p>There are no extra steps to take!</p></div>';
@@ -12726,11 +12982,11 @@ com.aexoden.ff4 = function()
 				}
 			);
 
-			Object.entries(vars).forEach(
-				([index, value]) => {
-					var varKeys = data.variables[route][index];
+			Object.entries(data.variables[route]).forEach(
+				([index, varKeys]) => {
+					if (index in vars) {
+						var value = vars[index];
 
-					if (varKeys) {
 						for (var k = 0; k < varKeys.length; k++) {
 							var varKey = varKeys[k];
 							var varData = data.variableData[varKey];
@@ -12771,13 +13027,10 @@ com.aexoden.ff4 = function()
 		}
 
 		if (Object.keys(battles).length > 0) {
-			target.innerHTML += '<h3>Important Battles</h3>';
+			target.innerHTML += "<h3>Important Battles</h3>";
 			let list = "";
 
-			console.log(battles);
-
 			for (const [room, data] of Object.entries(battles)) {
-				console.log(data);
 				list += "<h4>" + room + "</h4>";
 
 				list += "<ul>";
