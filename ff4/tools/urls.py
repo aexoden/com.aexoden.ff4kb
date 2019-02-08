@@ -1,5 +1,5 @@
 from django.urls import path
-from django.views.generic import TemplateView
+from django.views.generic import RedirectView, TemplateView
 
 from . import views
 
@@ -12,4 +12,7 @@ urlpatterns = [
 	path('nocw-igt-calculator/', TemplateView.as_view(template_name='tools/nocw-igt-calculator.html'), name='nocw-igt-calculator'),
 	path('seed-finder/', views.seed_finder, name='seed-finder'),
 	path('treasure-checker/', TemplateView.as_view(template_name='tools/treasure-checker.html'), name='treasure-checker'),
+
+	path('nocw-gp/', RedirectView.as_view(pattern_name='tools:nocw-gp-calculator', permanent=True)),
+	path('nocw-igt/', RedirectView.as_view(pattern_name='tools:nocw-igt-calculator', permanent=True)),
 ]
