@@ -125,7 +125,10 @@ class RouteDetail(object):
 					elif tokens[0] == 'VERSION':
 						self._route_version = int(tokens[1])
 					elif tokens[0] == 'FRAMES':
-						self._frames = float(tokens[1]) * 1000
+						if '.' in tokens[1]:
+							self._frames = float(tokens[1]) * 1000
+						else:
+							self._frames = float(tokens[1])
 					elif tokens[0] == 'VARS':
 						self._parse_variables(tokens[1])
 				elif phase == 2 and len(line) > 1:

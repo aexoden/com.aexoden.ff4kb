@@ -10,6 +10,11 @@
 {% block subtitle %}{{ route_data.name }}{% endblock %}
 
 {% block content %}				<h1>{{ route_data.name }} Step Routes</h1>
+				<h2 id="description">Route Description</h2>
+				<p>{{ route_data.description }}</p>
+{% if route_data.group != "standard" %}
+				<div class="bs-callout bs-callout-info"><span class="fas fa-info-circle"></span><h4>Archived Route</h4><p>This route is currently archived. This means that it has not been updated to work with the latest optimizer. This could be for a couple of reasons. Either it's deprecated or silly, or I simply haven't gotten around to it. Either way, the result is that not everything will work. Use at your own risk.</p></div>
+{% endif %}
 				<h2 id="statistics">Statistics</h2>
 				<table class="table table-striped">
 					<thead>

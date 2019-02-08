@@ -12,22 +12,25 @@
 			<h2>Introduction</h2>
 			<p>One of the potentially most annoying parts of any attempted speedrun of <em>Final Fantasy IV</em> is the prospect of random encounters. They are rarely actually fought, and the potential for a back attack or surprise attack means precious seconds lost. The routes listed on this page serve to minimize the amount of time wasted on random encounters.</p>
 			<p>Essentially, a step route is a series of extra steps or alternate paths taken while running the game with the goal of decreasing the total amount of time the run takes. This page provides ready-to-use step routes for the original US SNES release of <em>Final Fantasy IV</em> (originally released as <em>Final Fantasy II</em>). Routes for other releases may also be available at some point.</p>
+			<p>If you use any of the routes and something goes wrong, please let me know and link me to a video so I can attempt to investigate the problem. It could simply be a mistake in execution or a misinterpretation of the instructions, but it could also be a problem with the route generation or with this site.</p>
 			<h2>Tutorial</h2>
 			<p>For an introduction to step routing, I recommend reading the <a href="{% url 'guides:mini-step-routing' %}">Step Routing Basics</a> guide. If you have suggestions or comments regarding that guide, please contact me.</p>
 			<p>In addition, each route has its own individual <em>Tutorial</em> tab which should help newcomers.</p>
 			<p>In order to find your seed during a run, I recommend using my <a href="{% url 'tools:seed-finder' %}">Seed Finder tool</a>.</p>
-			<h2>Standard Routes</h2>
 			<div class="bs-callout bs-callout-warning">
-					<span class="fas fa-flask"></span>
-					<h4>Step Routes Incomplete</h4>
-					<p>My computers are working overtime to finish optimizing the routes, but it's a time-consuming process, so not everything is done yet. Optimizing for fewer steps per segment is faster, so I'm increasing the limit incrementally to get something on here. Research indicates that 83% of the potential gain is done by only 16 steps (and 98% by 64 steps), but a few seeds will need 128+ to be completely optimized.</p>
-				</div>
+				<span class="fas fa-flask"></span>
+				<h4>Step Routes Incomplete</h4>
+				<p>My computers are working overtime to finish optimizing the routes, but it's a time-consuming process, so not everything is done yet. Optimizing for fewer steps per segment is faster, so I'm increasing the limit incrementally to get something on here. Research indicates that 83% of the potential gain is done by only 16 steps (and 98% by 64 steps), but a few seeds will need 128+ to be completely optimized.</p>
+			</div>
+{% for group, group_data in routes.items %}
+			<h2>{{ group_data.name }}</h2>
+			<p>{{ group_data.description }}</p>
 			<table class="table table-striped">
 				<thead>
 					<tr><th>Route</th><th>Status</th><th>Maximum Steps per Segment</th></tr>
 				</thead>
 				<tbody>
-{% for route, route_data in routes.items %}
+{% for route, route_data in group_data.routes.items %}
 {% if route_data.enabled %}
 				<tr><td><a href="{% url "routes:route" route %}">{{ route_data.name }}</a></td><td>{{ route_data.status }}</td><td>{{ route_data.steps }}</td></tr>
 {% else %}
@@ -36,7 +39,7 @@
 {% endfor %}
 				</tbody>
 			</table>
-			<p>If you use any of the routes and something goes wrong, please let me know and link me to a video so I can attempt to investigate the problem. It could simply be a mistake in execution or a misinterpretation of the instructions, but it could also be a problem with the route generation or with this site.</p>
+{% endfor %}
 			<h2>Theory</h2>
 			<p><i>Final Fantasy IV</i> uses a relatively simple system for determining when encounters occur. There are 256 possible seeds. For any given seed and encounter rate, the step numbers where encounters occur is fixed. By following the path through the game, we can determine exactly when encounters will occur and what formations they will be.</p>
 			<p>There are two ways we can adjust our route:</p>

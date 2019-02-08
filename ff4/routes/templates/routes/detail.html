@@ -21,6 +21,14 @@
 {% endfor %}
 				</dl>
 				<h2 id="detail">Route Description</h2>
+{% if route_data.group == "alternate" %}
+				<div class="bs-callout bs-callout-info"><span class="fas fa-info-circle"></span><h4>Archived Route</h4><p>This route is currently archived. This means that it has not been updated to work with the latest optimizer. This could be for a couple of reasons. Either it's deprecated or silly, or I simply haven't gotten around to it. Either way, the result is that the only tab that works here is the <i>Detail</i> tab. If you're using one of these routes, I presume you know what you're doing.</p></div>
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a class="nav-link active" id="tab-detail" data-toggle="tab" href="#tab-route-detail">Detail</a>
+					</li>
+				</ul>
+{% else %}
 				<ul class="nav nav-tabs">
 					<li class="nav-item">
 						<a class="nav-link active" id="tab-summary" data-toggle="tab" href="#tab-route-summary">Summary</a>
@@ -32,12 +40,18 @@
 						<a class="nav-link" id="tab-tutorial" data-toggle="tab" href="#tab-route-tutorial">Tutorial</a>
 					</li>
 				</ul>
+{% endif %}
 				<div class="tab-content">
+{% if route_data.group == "standard" %}
 					<div class="tab-pane fade show active" id="tab-route-summary"></div>
 					<div class="tab-pane fade" id="tab-route-detail">
+{% else %}
+					<div class="tab-pane fade show active" id="tab-route-detail">
+{% endif %}
 						<pre style="padding: 10px;">{% for line in detail %}{{ line|safe }}
 {% endfor %}</pre>
 					</div>
+{% if route_data.group == "standard" %}
 					<div class="tab-pane fade" id="tab-route-tutorial">
 						<div class="btn-group-toggle my-3" data-toggle="buttons">
 							<label class="btn btn-primary active">
@@ -51,6 +65,7 @@
 						<div id="tutorial-map-wrapper" class="container mx-0">
 						</div>
 					</div>
+{% endif %}
 				</div>
 				<script src="{% static "js/ff4.js" %}"></script>
 				<script>
