@@ -26,7 +26,7 @@
 				<h3>Route Selection</h3>
 				<select class="custom-select" id="route-select" style="margin-bottom: 1em;">
 {% for route, data in routes.items %}
-{% if data.enabled %}
+{% if data.enabled and data.group == "standard" %}
 					<option value="{{ route }}">{{ data.name }}</option>
 {% endif %}
 {% endfor %}

@@ -50,9 +50,9 @@ ROUTES = {
 
 	'premist': {
 		'name': 'Pre-Mist Clip',
-		'description': 'From the beginning of the game until the Mist Clip.',
+		'description': 'From the beginning of the game until the Mist Clip. Primarily useful for demonstrating that seed 92 is optimal.',
 		'group': 'alternate',
-		'enabled': False,
+		'enabled': True,
 	},
 	'sfc-nocw': {
 		'name': 'SFC Any% NoCW',
