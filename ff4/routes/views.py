@@ -100,7 +100,7 @@ ROUTES = {
 		'name': 'Any% No64 (Edge+Drain) Marathon Safe (AGDQ 2016)',
 		'description': 'From the beginning of the game until Zeromus is defeated, without using the 64-door glitch. The game must be completed in a single run without reloading a save. Edge is the primary endgame damage dealer. This route has additional save points routed in and was designed specifically for AGDQ 2016.',
 		'group': 'alternate',
-		'enabled': False,
+		'enabled': True,
 	},
 	'marathon-no64-excalbur': {
 		'name': 'Any% No64 (Edge+Excalbur) Marathon Safe (AGDQ 2016)',
