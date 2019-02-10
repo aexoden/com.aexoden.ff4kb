@@ -64,7 +64,7 @@ ROUTES = {
 		'name': 'SFC Any% NoCW (Toru_1988)',
 		'description': 'This is the Any% NoCW route for the SFC version of the game. The actual speedrun is not completely optimized yet, so the step routes are in flux. This route is used by Toru_1988.',
 		'group': 'alternate',
-		'enabled': False,
+		'enabled': True,
 	},
 	'no64-drain': {
 		'name': 'Any% No64 (Edge+Drain)',
