@@ -76,7 +76,7 @@ ROUTES = {
 		'name': 'Octomamm% (Cecil+Kain+Darkness)',
 		'description': 'From the beginning of the game until Octomamm is defeated, using only Kain and Cecil, while picking up the Darkness sword.',
 		'group': 'alternate',
-		'enabled': False,
+		'enabled': True,
 	},
 	'ss-paladin': {
 		'name': 'Paladin% Single Segment',
