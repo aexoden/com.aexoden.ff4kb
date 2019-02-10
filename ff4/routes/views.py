@@ -130,7 +130,7 @@ ROUTES = {
 		'name': 'The Darkness Within v1.07b Any%',
 		'description': 'This is a run of the The Darkness Within romhack.',
 		'group': 'alternate',
-		'enabled': False,
+		'enabled': True,
 	},
 }
 
