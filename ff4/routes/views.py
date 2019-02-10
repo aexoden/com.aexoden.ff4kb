@@ -58,7 +58,7 @@ ROUTES = {
 		'name': 'SFC Any% NoCW',
 		'description': 'This is the Any% NoCW route for the SFC version of the game. The actual speedrun is not completely optimized yet, so the step routes are in flux. This route follows my guide.',
 		'group': 'alternate',
-		'enabled': False,
+		'enabled': True,
 	},
 	'sfc-nocw-toru': {
 		'name': 'SFC Any% NoCW (Toru_1988)',
