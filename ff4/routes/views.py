@@ -88,7 +88,7 @@ ROUTES = {
 		'name': 'Any% No64 Single Segment (Edge+Excalbur)',
 		'description': 'From the beginning of the game until Zeromus is defeated, without using the 64-door glitch. The game must be completed in a single run without reloading a save. Edge is the primary endgame damage dealer.',
 		'group': 'alternate',
-		'enabled': False,
+		'enabled': True,
 	},
 	'ss-no64-rosa': {
 		'name': 'Any% No64 Single Segment (Rosa)',
