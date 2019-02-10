@@ -12,8 +12,12 @@ GROUPS = {
 		'description': 'These are the standard routes people are most likely to use.',
 	},
 	'alternate': {
-		'name': 'Alternate (and Meme) Routes',
-		'description': 'These routes are generally archived routes from the old version of the site. They generally fall into three classes: specialized routes (e.g. for a marathon), meme routes and routes for romhacks. They are not necessarily fully optimized, are not updated to the new variable structure, and have no tutorial information available. They are here primarily for archival purposes (or I have not yet bothered to convert them).',
+		'name': 'Alternate Routes',
+		'description': 'These routes are uncommon alternate routes that are unlikely to be used during a run. They currently have no summary or tutorial data.'
+	},
+	'archive': {
+		'name': 'Archived Routes',
+		'description': 'These routes are archived from the old version of the site. They have not been updated to the new data structure, and their optimization status is unknown (though they should be near optimal relative to their input data). There is no associated tutorial or summary data. Eventually, I would like to convert them to the new structure, but this is not a high priority.',
 	}
 }
 
@@ -54,82 +58,83 @@ ROUTES = {
 		'group': 'alternate',
 		'enabled': True,
 	},
+
 	'sfc-nocw': {
 		'name': 'SFC Any% NoCW',
 		'description': 'This is the Any% NoCW route for the SFC version of the game. The actual speedrun is not completely optimized yet, so the step routes are in flux. This route follows my guide.',
-		'group': 'alternate',
+		'group': 'archive',
 		'enabled': True,
 	},
 	'sfc-nocw-toru': {
 		'name': 'SFC Any% NoCW (Toru_1988)',
 		'description': 'This is the Any% NoCW route for the SFC version of the game. The actual speedrun is not completely optimized yet, so the step routes are in flux. This route is used by Toru_1988.',
-		'group': 'alternate',
+		'group': 'archive',
 		'enabled': True,
 	},
 	'no64-drain': {
 		'name': 'Any% No64 (Edge+Drain)',
 		'description': 'This route runs from the beginning of the game until Zeromus is defeated. Use of the 64-door glitch is banned. The step route begins after the Mist Clip. This particular version of the route relies on Edge as the primary damage dealer at the end of the game. This has largely been deprecated in favor of either Edge+Excalbur or Rosa.',
-		'group': 'alternate',
+		'group': 'archive',
 		'enabled': True,
 	},
 	'octomamm-cecil-kain-darkness': {
 		'name': 'Octomamm% (Cecil+Kain+Darkness)',
 		'description': 'From the beginning of the game until Octomamm is defeated, using only Kain and Cecil, while picking up the Darkness sword.',
-		'group': 'alternate',
+		'group': 'archive',
 		'enabled': True,
 	},
 	'ss-paladin': {
 		'name': 'Paladin% Single Segment',
 		'description': 'From the beginning of the game until Cecil becomes a paladin. The game must be completed in a single run without reloading a save.',
-		'group': 'alternate',
+		'group': 'archive',
 		'enabled': True,
 	},
 	'ss-no64-excalbur': {
 		'name': 'Any% No64 Single Segment (Edge+Excalbur)',
 		'description': 'From the beginning of the game until Zeromus is defeated, without using the 64-door glitch. The game must be completed in a single run without reloading a save. Edge is the primary endgame damage dealer.',
-		'group': 'alternate',
+		'group': 'archive',
 		'enabled': True,
 	},
 	'marathon-no64-drain': {
 		'name': 'Any% No64 (Edge+Drain) Marathon Safe (AGDQ 2016)',
 		'description': 'From the beginning of the game until Zeromus is defeated, without using the 64-door glitch. The game must be completed in a single run without reloading a save. Edge is the primary endgame damage dealer. This route has additional save points routed in and was designed specifically for AGDQ 2016.',
-		'group': 'alternate',
+		'group': 'archive',
 		'enabled': True,
 	},
 	'marathon-no64-excalbur': {
 		'name': 'Any% No64 (Edge+Excalbur) Marathon Safe (AGDQ 2016)',
 		'description': 'From the beginning of the game until Zeromus is defeated, without using the 64-door glitch. The game must be completed in a single run without reloading a save. Edge is the primary endgame damage dealer. This route has additional save points routed in and was designed specifically for AGDQ 2016.',
-		'group': 'alternate',
+		'group': 'archive',
 		'enabled': True,
 	},
 	'marathon-no64-excalbur-bosses': {
 		'name': 'Any% No64 (Edge+Excalbur) Extra Bosses Marathon Safe (AGDQ 2016)',
 		'description': 'From the beginning of the game until Zeromus is defeated, without using the 64-door glitch. The game must be completed in a single run without reloading a save. Edge is the primary endgame damage dealer. This route has additional save points routed in and was designed specifically for AGDQ 2016. This route has extra bosses as well.',
-		'group': 'alternate',
+		'group': 'archive',
 		'enabled': True,
 	},
 	'uc': {
 		'name': 'Unprecedented Crisis v2.1 Any% No Major Skips',
 		'description': 'This is a run of the Unprecedented Crisis romhack.',
-		'group': 'alternate',
+		'group': 'archive',
 		'enabled': True,
 	},
 	'uc-riversmccown': {
 		'name': 'Unprecedented Crisis v3.1 Any% No Major Skips (riversmccown)',
 		'description': 'This is a run of the Unprecedented Crisis romhack.',
-		'group': 'alternate',
+		'group': 'archive',
 		'enabled': True,
 	},
 	'uc-mist': {
 		'name': 'Unprecedented Crisis v3.1 Any% (Mist Clip%)',
 		'description': 'This is a run of the Unprecedented Crisis romhack.',
-		'group': 'alternate',
+		'group': 'archive',
 		'enabled': True,
 	},
 	'tdw': {
 		'name': 'The Darkness Within v1.07b Any%',
 		'description': 'This is a run of the The Darkness Within romhack.',
-		'group': 'alternate',
+		'group': 'archive',
 		'enabled': True,
 	},
 }
