@@ -112,19 +112,19 @@ ROUTES = {
 		'name': 'Unprecedented Crisis v2.1 Any% No Major Skips',
 		'description': 'This is a run of the Unprecedented Crisis romhack.',
 		'group': 'alternate',
-		'enabled': False,
+		'enabled': True,
 	},
 	'uc-riversmccown': {
 		'name': 'Unprecedented Crisis v3.1 Any% No Major Skips (riversmccown)',
 		'description': 'This is a run of the Unprecedented Crisis romhack.',
 		'group': 'alternate',
-		'enabled': False,
+		'enabled': True,
 	},
 	'uc-mist': {
 		'name': 'Unprecedented Crisis v3.1 Any% (Mist Clip%)',
 		'description': 'This is a run of the Unprecedented Crisis romhack.',
 		'group': 'alternate',
-		'enabled': False,
+		'enabled': True,
 	},
 	'tdw': {
 		'name': 'The Darkness Within v1.07b Any%',
