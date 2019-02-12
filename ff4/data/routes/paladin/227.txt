@@ -1,11 +1,13 @@
 ROUTE	Final Fantasy IV Paladin%
 VERSION	20
-ROSA	v1.1.0-1-gc4f29fa
+ROSA	v1.1.0-13-g6984184
 SEED	227
 MAXSTEP	256
+MAXSEG	7
 TASMODE	0
+MINIMUM	1
 FRAMES	41546943
-VARS	E302500:1 E307400:2 C307800:1 E307300:1 E302600:7 E307B00:10 E307701:2
+VARS	E302500:1 C307800:1 E307300:3 E302600:7 E307B00:12
 
 Overworld (Kaipo)                                         Seed: 227   Index:   0
 Overworld (Kaipo)                                         Seed: 227   Index:   1
@@ -27,13 +29,12 @@ Watery Pass-South B2F                                     Seed: 227   Index: 215
 Watery Pass-South B3F                                     Seed: 227   Index: 254
 Watery Pass-North B2F                                     Seed: 244   Index:  32
 Watery Pass-North B1F                                     Seed: 244   Index:  53
-  Extra Steps: 1
+  Extra Steps: 3
   Step   4: 8 / CaveToad x4 (7.163s)
   Step  12: 9 / Jelly x4 (7.324s)
   Step  60: 10 / Zombie x4 (7.148s)
-Overworld (Kaipo)                                         Seed: 244   Index: 114
-Waterfalls B1F                                            Seed: 244   Index: 123
-  Extra Steps: 2
+Overworld (Kaipo)                                         Seed: 244   Index: 116
+Waterfalls B1F                                            Seed: 244   Index: 125
 Waterfalls B2F                                            Seed: 244   Index: 126
   Step  36: 11 / TinyMage x2, WaterHag x4 (8.120s)
 Waterfalls Lake                                           Seed: 244   Index: 171
@@ -51,23 +52,22 @@ Antlion B1F                                               Seed: 244   Index: 232
 Antlion B2F Inward Charm Room Steps                       Seed:   5   Index:  14
   Antlion B2F                                             Seed:   5   Index:  14
   Antlion B2F Treasure Room                               Seed:   5   Index:  47
-    Extra Steps: 10
-  Antlion B2F                                             Seed:   5   Index:  57
-    Step  24: 15 / Basilisk x1, Imp x3 (6.775s)
-    Step  30: 16 / Weeper x1, Turtle x1, Basilisk x1 (7.385s)
-Antlion's Nest                                            Seed:   5   Index: 109
-Battle: Antlion                                           Seed:   5   Index: 123
-Antlion's Nest                                            Seed:   5   Index: 123
-  Step   7: 17 / Cream x4 (7.523s)
-Antlion B2F Outward Direct                                Seed:   5   Index: 138
-  Antlion B2F                                             Seed:   5   Index: 138
-    Step   6: 18 / Basilisk x1, Imp x3 (6.783s)
-    Step   8: 19 / Cream x4 (7.523s)
-    Step  21: 20 / Cream x4 (7.523s)
-    Step  44: 21 / Turtle x2 (7.464s)
-Antlion B1F                                               Seed:   5   Index: 218
-  Extra Steps: 2
-  Step  40: 22 / Imp x3 (6.648s)
+    Extra Steps: 12
+  Antlion B2F                                             Seed:   5   Index:  59
+    Step  22: 15 / Basilisk x1, Imp x3 (6.775s)
+    Step  28: 16 / Weeper x1, Turtle x1, Basilisk x1 (7.385s)
+Antlion's Nest                                            Seed:   5   Index: 111
+Battle: Antlion                                           Seed:   5   Index: 125
+Antlion's Nest                                            Seed:   5   Index: 125
+  Step   5: 17 / Cream x4 (7.523s)
+Antlion B2F Outward Direct                                Seed:   5   Index: 140
+  Antlion B2F                                             Seed:   5   Index: 140
+    Step   4: 18 / Basilisk x1, Imp x3 (6.783s)
+    Step   6: 19 / Cream x4 (7.523s)
+    Step  19: 20 / Cream x4 (7.523s)
+    Step  42: 21 / Turtle x2 (7.464s)
+Antlion B1F                                               Seed:   5   Index: 220
+  Step  38: 22 / Imp x3 (6.648s)
 Overworld (Damcyan)                                       Seed:  22   Index:   2
 Overworld (Kaipo)                                         Seed:  22   Index:   2
 Kaipo Revisited                                           Seed:  22   Index:   2

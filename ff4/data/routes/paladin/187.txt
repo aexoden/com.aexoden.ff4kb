@@ -1,11 +1,13 @@
 ROUTE	Final Fantasy IV Paladin%
 VERSION	20
-ROSA	v1.1.0-1-gc4f29fa
+ROSA	v1.1.0-13-g6984184
 SEED	187
 MAXSTEP	256
+MAXSEG	7
 TASMODE	0
+MINIMUM	1
 FRAMES	42217178
-VARS	E305400:112 E302500:6 E307400:10 C307800:1 E302600:24 E307B00:30 E307802:8 E307701:10
+VARS	E305400:112 E302500:6 E307400:10 C307800:1 E302600:24 E307B00:48
 
 Overworld (Kaipo)                                         Seed: 187   Index:   0
 Overworld (Kaipo)                                         Seed: 187   Index:   1
@@ -51,22 +53,20 @@ Antlion B1F                                               Seed: 221   Index: 100
 Antlion B2F Inward Charm Room Steps                       Seed: 221   Index: 138
   Antlion B2F                                             Seed: 221   Index: 138
   Antlion B2F Treasure Room                               Seed: 221   Index: 171
-    Extra Steps: 30
-  Antlion B2F                                             Seed: 221   Index: 201
-Antlion's Nest                                            Seed: 221   Index: 253
-Battle: Antlion                                           Seed: 238   Index:  11
-Antlion's Nest                                            Seed: 238   Index:  11
-Antlion B2F Outward Direct                                Seed: 238   Index:  26
-  Antlion B2F                                             Seed: 238   Index:  26
-    Extra Steps: 8
-    Step   8: 14 / Turtle x2 (7.464s)
-    Step  40: 15 / SandWorm x2 (6.858s)
-    Step  72: 16 / Basilisk x1, Imp x3 (6.783s)
-    Step  87: 17 / Weeper x2 (7.132s)
-Antlion B1F                                               Seed: 238   Index: 114
-  Extra Steps: 10
-  Step  36: 18 / Imp x3 (6.648s)
-  Step  48: 19 / Basilisk x1, Imp x3 (6.783s)
+    Extra Steps: 48
+  Antlion B2F                                             Seed: 221   Index: 219
+Antlion's Nest                                            Seed: 238   Index:  15
+Battle: Antlion                                           Seed: 238   Index:  29
+Antlion's Nest                                            Seed: 238   Index:  29
+  Step   5: 14 / Turtle x2 (7.464s)
+Antlion B2F Outward Direct                                Seed: 238   Index:  44
+  Antlion B2F                                             Seed: 238   Index:  44
+    Step  22: 15 / SandWorm x2 (6.858s)
+    Step  54: 16 / Basilisk x1, Imp x3 (6.783s)
+    Step  69: 17 / Weeper x2 (7.132s)
+Antlion B1F                                               Seed: 238   Index: 124
+  Step  26: 18 / Imp x3 (6.648s)
+  Step  38: 19 / Basilisk x1, Imp x3 (6.783s)
 Overworld (Damcyan)                                       Seed: 238   Index: 162
 Overworld (Kaipo)                                         Seed: 238   Index: 162
 Kaipo Revisited                                           Seed: 238   Index: 162

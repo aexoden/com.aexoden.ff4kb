@@ -1,11 +1,13 @@
 ROUTE	Final Fantasy IV Paladin%
 VERSION	20
-ROSA	v1.0.0-2-ga3b8f36
+ROSA	v1.1.0-13-g6984184
 SEED	24
 MAXSTEP	256
+MAXSEG	7
 TASMODE	0
+MINIMUM	1
 FRAMES	41178292
-VARS	E305400:38 E302500:2 C307800:1 E307200:4 C307801:1 E302600:10 E000501:6 E307B00:12 E307B01:2
+VARS	E305400:44 C307800:1 C307801:1 E302600:16 E307B00:12 E307B01:2
 
 Overworld (Kaipo)                                         Seed:  24   Index:   0
 Overworld (Kaipo)                                         Seed:  24   Index:   1
@@ -19,31 +21,29 @@ Watery Pass-South B1F                                     Seed:  24   Index: 101
 Watery Pass-South B2F                                     Seed:  24   Index: 121
   Step  85: 3 / EvilShel x3, WaterBug x1 (7.081s)
 Watery Pass-South B2F Save Room                           Seed:  24   Index: 211
-  Extra Steps: 38
-Watery Pass-South B2F                                     Seed:  24   Index: 253
-  Step  29: 4 / Pike x3 (7.152s)
-  Step  34: 5 / Pike x2, EvilShel x2 (7.149s)
-Watery Pass-South B3F                                     Seed:  41   Index:  36
-Watery Pass-North B2F                                     Seed:  41   Index:  70
-  Extra Steps: 4
-  Step   3: 6 / Zombie x4 (7.148s)
-  Step  24: 7 / Pike x2, EvilShel x2 (7.149s)
-Watery Pass-North B1F                                     Seed:  41   Index:  95
-  Step  26: 8 / Zombie x4 (7.148s)
-  Step  28: 9 / Aligator x1, Pike x2 (7.368s)
-  Step  30: 10 / Jelly x4 (7.324s)
-Overworld (Kaipo)                                         Seed:  41   Index: 155
-Waterfalls B1F                                            Seed:  41   Index: 164
-Waterfalls B2F                                            Seed:  41   Index: 165
-  Step  38: 11 / Aligator x1, WaterBug x2 (7.292s)
-Waterfalls Lake                                           Seed:  41   Index: 210
-Battle: Octomamm                                          Seed:  41   Index: 247
-Waterfalls Lake                                           Seed:  41   Index: 247
-Overworld (Kaipo)                                         Seed:  41   Index: 248
-Overworld (Damcyan)                                       Seed:  58   Index:   3
-Damcyan                                                   Seed:  58   Index:   7
+  Extra Steps: 44
+Watery Pass-South B2F                                     Seed:  41   Index:   3
+  Step  23: 4 / Pike x3 (7.152s)
+  Step  28: 5 / Pike x2, EvilShel x2 (7.149s)
+Watery Pass-South B3F                                     Seed:  41   Index:  42
+  Step  31: 6 / Zombie x4 (7.148s)
+Watery Pass-North B2F                                     Seed:  41   Index:  76
+  Step  18: 7 / Pike x2, EvilShel x2 (7.149s)
+Watery Pass-North B1F                                     Seed:  41   Index:  97
+  Step  24: 8 / Zombie x4 (7.148s)
+  Step  26: 9 / Aligator x1, Pike x2 (7.368s)
+  Step  28: 10 / Jelly x4 (7.324s)
+Overworld (Kaipo)                                         Seed:  41   Index: 157
+Waterfalls B1F                                            Seed:  41   Index: 166
+Waterfalls B2F                                            Seed:  41   Index: 167
+  Step  36: 11 / Aligator x1, WaterBug x2 (7.292s)
+Waterfalls Lake                                           Seed:  41   Index: 212
+Battle: Octomamm                                          Seed:  41   Index: 249
+Waterfalls Lake                                           Seed:  41   Index: 249
+Overworld (Kaipo)                                         Seed:  41   Index: 250
+Overworld (Damcyan)                                       Seed:  58   Index:   5
+Damcyan                                                   Seed:  58   Index:   9
   Optional Steps: 0
-  Extra Steps: 2
 Overworld (Damcyan)                                       Seed:  58   Index:  16
 Antlion B1F                                               Seed:  58   Index:  16
   Step   8: 12 / Cream x4 (7.552s)
@@ -84,13 +84,13 @@ Overworld (Fabul)                                         Seed:  75   Index: 155
   Step  76: 22 / Imp Cap. x4, Imp x2 (8.467s)
 Fabul                                                     Seed:  75   Index: 239
   Optional Steps: 10
-Overworld (Fabul)                                         Seed:  92   Index:  53
-Fabul Boat and Leviatan                                   Seed:  92   Index:  60
-Overworld (Mysidia)                                       Seed:  92   Index:  60
-Mysidia                                                   Seed:  92   Index:  69
-Overworld (Mysidia)                                       Seed:  92   Index:  69
   Extra Steps: 6
-  Step   7: 23 / Imp Cap. x3, Needler x1 (7.932s)
+Overworld (Fabul)                                         Seed:  92   Index:  59
+Fabul Boat and Leviatan                                   Seed:  92   Index:  66
+Overworld (Mysidia)                                       Seed:  92   Index:  66
+Mysidia                                                   Seed:  92   Index:  75
+Overworld (Mysidia)                                       Seed:  92   Index:  75
+  Step   1: 23 / Imp Cap. x3, Needler x1 (7.932s)
 Overworld (Mt.Ordeals)                                    Seed:  92   Index:  85
   Step  32: 24 / Raven x1 (8.356s)
 Mt.Ordeals                                                Seed:  92   Index: 179
@@ -125,4 +125,3 @@ Base Encounters:     37
 Encounters Saved:    7
 
 Number of Variables: 45
-Number of States:    23923113

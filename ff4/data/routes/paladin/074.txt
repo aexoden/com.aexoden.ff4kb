@@ -1,11 +1,13 @@
 ROUTE	Final Fantasy IV Paladin%
 VERSION	20
-ROSA	v1.1.0-1-gc4f29fa
+ROSA	v1.1.0-13-g6984184
 SEED	74
 MAXSTEP	256
+MAXSEG	7
 TASMODE	0
+MINIMUM	1
 FRAMES	40912744
-VARS	E305400:74 E302500:18 E307400:68 E307000:4 C307801:1 E307B01:8 E307701:2
+VARS	E305400:78 E302500:18 E307400:68 C307801:1 E307B01:10
 
 Overworld (Kaipo)                                         Seed:  74   Index:   0
   Step   1: 1 / Imp x4 (6.962s)
@@ -21,10 +23,9 @@ Watery Pass-South B1F                                     Seed:  74   Index: 101
 Watery Pass-South B2F                                     Seed:  74   Index: 121
   Step   6: 5 / Pike x3 (7.152s)
 Watery Pass-South B2F Save Room                           Seed:  74   Index: 211
-  Extra Steps: 74
-Watery Pass-South B2F                                     Seed:  91   Index:  33
-  Extra Steps: 4
-  Step  43: 6 / Zombie x4 (7.148s)
+  Extra Steps: 78
+Watery Pass-South B2F                                     Seed:  91   Index:  37
+  Step  39: 6 / Zombie x4 (7.148s)
 Watery Pass-South B3F                                     Seed:  91   Index:  76
 Watery Pass-North B2F                                     Seed:  91   Index: 110
   Step   7: 7 / Pike x2, EvilShel x2, WaterBug x2 (7.266s)
@@ -56,13 +57,12 @@ Antlion's Nest                                            Seed: 125   Index:  12
 Antlion B2F Outward Charm Room Steps                      Seed: 125   Index:  27
   Antlion B2F                                             Seed: 125   Index:  27
   Antlion B2F Treasure Room                               Seed: 125   Index:  78
-    Extra Steps: 8
-  Antlion B2F                                             Seed: 125   Index:  86
-    Step  26: 13 / Basilisk x1, Imp x3 (6.783s)
-Antlion B1F                                               Seed: 125   Index: 120
-  Extra Steps: 2
-  Step  35: 14 / Cream x4 (7.523s)
-  Step  40: 15 / Imp x3 (6.648s)
+    Extra Steps: 10
+  Antlion B2F                                             Seed: 125   Index:  88
+    Step  24: 13 / Basilisk x1, Imp x3 (6.783s)
+Antlion B1F                                               Seed: 125   Index: 122
+  Step  33: 14 / Cream x4 (7.523s)
+  Step  38: 15 / Imp x3 (6.648s)
 Overworld (Damcyan)                                       Seed: 125   Index: 160
 Overworld (Kaipo)                                         Seed: 125   Index: 160
 Kaipo Revisited                                           Seed: 125   Index: 160

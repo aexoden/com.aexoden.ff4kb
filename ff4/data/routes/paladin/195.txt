@@ -1,11 +1,13 @@
 ROUTE	Final Fantasy IV Paladin%
 VERSION	20
-ROSA	v1.1.0-1-gc4f29fa
+ROSA	v1.1.0-13-g6984184
 SEED	195
 MAXSTEP	256
+MAXSEG	7
 TASMODE	0
+MINIMUM	1
 FRAMES	40300896
-VARS	E308400:6 E305400:6 E302500:67 E307400:10 C307800:1 E302600:48 E307B00:66 E307E00:6
+VARS	E305400:6 E302500:67 E307400:10 C307800:1 E302600:54 E307B00:72
 
 Overworld (Kaipo)                                         Seed: 195   Index:   0
 Overworld (Kaipo)                                         Seed: 195   Index:   1
@@ -48,28 +50,27 @@ Antlion B1F                                               Seed: 229   Index:  55
 Antlion B2F Inward Charm Room Steps                       Seed: 229   Index:  93
   Antlion B2F                                             Seed: 229   Index:  93
   Antlion B2F Treasure Room                               Seed: 229   Index: 126
-    Extra Steps: 66
-  Antlion B2F                                             Seed: 229   Index: 192
-    Step  36: 11 / Basilisk x1, Imp x3 (6.775s)
-Antlion's Nest                                            Seed: 229   Index: 244
-Battle: Antlion                                           Seed: 246   Index:   2
-Antlion's Nest                                            Seed: 246   Index:   2
-Antlion B2F Outward Direct                                Seed: 246   Index:  17
-  Antlion B2F                                             Seed: 246   Index:  17
-    Step  40: 12 / Weeper x2 (7.132s)
-    Step  48: 13 / Cream x4 (7.523s)
-Antlion B1F                                               Seed: 246   Index:  97
-  Step  29: 14 / Turtle x1, Imp x2 (7.009s)
-  Step  32: 15 / Weeper x1, Turtle x1, Basilisk x1 (7.339s)
-Overworld (Damcyan)                                       Seed: 246   Index: 135
-Overworld (Kaipo)                                         Seed: 246   Index: 135
-Kaipo Revisited                                           Seed: 246   Index: 135
-Overworld (Kaipo)                                         Seed: 246   Index: 135
-Overworld (Damcyan)                                       Seed: 246   Index: 135
-Mt.Hobs-West                                              Seed: 246   Index: 135
-  Extra Steps: 6
-  Step  26: 16 / Spirit x2 (7.616s)
-  Step  44: 17 / Gargoyle x2 (7.628s)
+    Extra Steps: 72
+  Antlion B2F                                             Seed: 229   Index: 198
+    Step  30: 11 / Basilisk x1, Imp x3 (6.775s)
+Antlion's Nest                                            Seed: 229   Index: 250
+Battle: Antlion                                           Seed: 246   Index:   8
+Antlion's Nest                                            Seed: 246   Index:   8
+Antlion B2F Outward Direct                                Seed: 246   Index:  23
+  Antlion B2F                                             Seed: 246   Index:  23
+    Step  34: 12 / Weeper x2 (7.132s)
+    Step  42: 13 / Cream x4 (7.523s)
+Antlion B1F                                               Seed: 246   Index: 103
+  Step  23: 14 / Turtle x1, Imp x2 (7.009s)
+  Step  26: 15 / Weeper x1, Turtle x1, Basilisk x1 (7.339s)
+Overworld (Damcyan)                                       Seed: 246   Index: 141
+Overworld (Kaipo)                                         Seed: 246   Index: 141
+Kaipo Revisited                                           Seed: 246   Index: 141
+Overworld (Kaipo)                                         Seed: 246   Index: 141
+Overworld (Damcyan)                                       Seed: 246   Index: 141
+Mt.Hobs-West                                              Seed: 246   Index: 141
+  Step  20: 16 / Spirit x2 (7.616s)
+  Step  38: 17 / Gargoyle x2 (7.628s)
 Mt.Hobs Summit                                            Seed: 246   Index: 180
   Step  14: 18 / Gargoyle x1, Cocktric x2 (7.915s)
 Battle: MomBomb                                           Seed: 246   Index: 195
@@ -80,20 +81,19 @@ Overworld (Fabul)                                         Seed: 246   Index: 247
   Step  65: 20 / Gargoyle x1, Cocktric x2 (8.254s)
 Fabul                                                     Seed:   7   Index:  75
   Optional Steps: 10
-  Extra Steps: 38
-Overworld (Fabul)                                         Seed:   7   Index: 183
-Fabul Boat and Leviatan                                   Seed:   7   Index: 190
-Overworld (Mysidia)                                       Seed:   7   Index: 190
-Mysidia                                                   Seed:   7   Index: 199
-Overworld (Mysidia)                                       Seed:   7   Index: 199
-Overworld (Mt.Ordeals)                                    Seed:   7   Index: 209
-  Step  14: 21 / SwordRat x2, Imp x2, TinyMage x2 (7.401s)
-  Step  49: 22 / Needler x2, SwordRat x2 (8.097s)
-Mt.Ordeals                                                Seed:  24   Index:  47
-  Extra Steps: 6
-  Step  20: 23 / Soul x2, Red Bone x2 (9.583s)
-  Step  46: 24 / Spirit x2, Skelton x2 (8.285s)
-  Step  49: 25 / Red Bone x1, Skelton x3 (8.067s)
+  Extra Steps: 44
+Overworld (Fabul)                                         Seed:   7   Index: 189
+Fabul Boat and Leviatan                                   Seed:   7   Index: 196
+Overworld (Mysidia)                                       Seed:   7   Index: 196
+Mysidia                                                   Seed:   7   Index: 205
+Overworld (Mysidia)                                       Seed:   7   Index: 205
+Overworld (Mt.Ordeals)                                    Seed:   7   Index: 215
+  Step   8: 21 / SwordRat x2, Imp x2, TinyMage x2 (7.401s)
+  Step  43: 22 / Needler x2, SwordRat x2 (8.097s)
+Mt.Ordeals                                                Seed:  24   Index:  53
+  Step  14: 23 / Soul x2, Red Bone x2 (9.583s)
+  Step  40: 24 / Spirit x2, Skelton x2 (8.285s)
+  Step  43: 25 / Red Bone x1, Skelton x3 (8.067s)
 Mt.Ordeals-3rd station                                    Seed:  24   Index:  96
 Recruit Tellah                                            Seed:  24   Index: 119
 Mt.Ordeals-3rd station                                    Seed:  24   Index: 119

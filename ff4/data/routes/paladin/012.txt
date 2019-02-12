@@ -1,11 +1,13 @@
 ROUTE	Final Fantasy IV Paladin%
 VERSION	20
-ROSA	v1.0.0-2-ga3b8f36
+ROSA	v1.1.0-13-g6984184
 SEED	12
 MAXSTEP	256
+MAXSEG	7
 TASMODE	0
+MINIMUM	1
 FRAMES	40046612
-VARS	E305400:8 E302500:44 E307000:2 E302600:20 E000501:2
+VARS	E305400:10 E302500:44 E302600:22
 
 Overworld (Kaipo)                                         Seed:  12   Index:   0
 Overworld (Kaipo)                                         Seed:  12   Index:   1
@@ -20,11 +22,10 @@ Watery Pass-South B1F                                     Seed:  12   Index: 101
 Watery Pass-South B2F                                     Seed:  12   Index: 121
   Step  62: 4 / Pike x3 (7.152s)
 Watery Pass-South B2F Save Room                           Seed:  12   Index: 211
-  Extra Steps: 8
-Watery Pass-South B2F                                     Seed:  12   Index: 223
-  Extra Steps: 2
-  Step  32: 5 / CaveToad x3 (7.014s)
-  Step  40: 6 / CaveToad x3 (7.014s)
+  Extra Steps: 10
+Watery Pass-South B2F                                     Seed:  12   Index: 225
+  Step  30: 5 / CaveToad x3 (7.014s)
+  Step  38: 6 / CaveToad x3 (7.014s)
 Watery Pass-South B3F                                     Seed:  29   Index:   8
 Watery Pass-North B2F                                     Seed:  29   Index:  42
   Step  10: 7 / CaveToad x3 (7.014s)
@@ -80,13 +81,12 @@ Mt.Hobs-East                                              Seed:  63   Index:  95
 Overworld (Fabul)                                         Seed:  63   Index: 141
 Fabul                                                     Seed:  63   Index: 225
   Optional Steps: 10
-  Extra Steps: 10
-Overworld (Fabul)                                         Seed:  80   Index:  49
-Fabul Boat and Leviatan                                   Seed:  80   Index:  56
-Overworld (Mysidia)                                       Seed:  80   Index:  56
-Mysidia                                                   Seed:  80   Index:  65
-Overworld (Mysidia)                                       Seed:  80   Index:  65
-  Extra Steps: 2
+  Extra Steps: 12
+Overworld (Fabul)                                         Seed:  80   Index:  51
+Fabul Boat and Leviatan                                   Seed:  80   Index:  58
+Overworld (Mysidia)                                       Seed:  80   Index:  58
+Mysidia                                                   Seed:  80   Index:  67
+Overworld (Mysidia)                                       Seed:  80   Index:  67
 Overworld (Mt.Ordeals)                                    Seed:  80   Index:  77
   Step  41: 25 / Needler x2, SwordRat x2 (8.097s)
   Step  50: 26 / Imp Cap. x3, Needler x1 (7.932s)
@@ -120,4 +120,3 @@ Base Encounters:     40
 Encounters Saved:    10
 
 Number of Variables: 45
-Number of States:    22515482

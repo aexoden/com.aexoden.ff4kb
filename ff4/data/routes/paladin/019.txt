@@ -1,11 +1,13 @@
 ROUTE	Final Fantasy IV Paladin%
 VERSION	20
-ROSA	v1.0.0-2-ga3b8f36
+ROSA	v1.1.0-13-g6984184
 SEED	19
 MAXSTEP	256
+MAXSEG	7
 TASMODE	0
+MINIMUM	1
 FRAMES	40309562
-VARS	E305400:10 E302500:37 E307400:8 E302600:7
+VARS	E305400:18 E302500:37 E302600:7
 
 Overworld (Kaipo)                                         Seed:  19   Index:   0
 Overworld (Kaipo)                                         Seed:  19   Index:   1
@@ -22,17 +24,16 @@ Watery Pass-South B1F                                     Seed:  19   Index: 101
 Watery Pass-South B2F                                     Seed:  19   Index: 121
   Step  37: 6 / Pike x2, EvilShel x2 (7.149s)
 Watery Pass-South B2F Save Room                           Seed:  19   Index: 211
-  Extra Steps: 10
-Watery Pass-South B2F                                     Seed:  19   Index: 225
-Watery Pass-South B3F                                     Seed:  36   Index:   8
-  Step  23: 7 / Pike x2, EvilShel x2 (7.149s)
-Watery Pass-North B2F                                     Seed:  36   Index:  42
-Watery Pass-North B1F                                     Seed:  36   Index:  63
-  Step  58: 8 / Zombie x4 (7.148s)
-  Step  60: 9 / Aligator x1, Pike x2 (7.368s)
-Overworld (Kaipo)                                         Seed:  36   Index: 123
-Waterfalls B1F                                            Seed:  36   Index: 132
-  Extra Steps: 8
+  Extra Steps: 18
+Watery Pass-South B2F                                     Seed:  19   Index: 233
+Watery Pass-South B3F                                     Seed:  36   Index:  16
+  Step  15: 7 / Pike x2, EvilShel x2 (7.149s)
+Watery Pass-North B2F                                     Seed:  36   Index:  50
+Watery Pass-North B1F                                     Seed:  36   Index:  71
+  Step  50: 8 / Zombie x4 (7.148s)
+  Step  52: 9 / Aligator x1, Pike x2 (7.368s)
+Overworld (Kaipo)                                         Seed:  36   Index: 131
+Waterfalls B1F                                            Seed:  36   Index: 140
 Waterfalls B2F                                            Seed:  36   Index: 141
 Waterfalls Lake                                           Seed:  36   Index: 186
   Step   2: 10 / TinyMage x2, WaterHag x4 (8.120s)
@@ -118,4 +119,3 @@ Base Encounters:     37
 Encounters Saved:    7
 
 Number of Variables: 45
-Number of States:    21578735

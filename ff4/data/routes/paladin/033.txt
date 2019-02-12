@@ -1,11 +1,13 @@
 ROUTE	Final Fantasy IV Paladin%
 VERSION	20
-ROSA	v1.0.0-2-ga3b8f36
+ROSA	v1.1.0-13-g6984184
 SEED	33
 MAXSTEP	256
+MAXSEG	7
 TASMODE	0
+MINIMUM	1
 FRAMES	41162648
-VARS	E308400:4 E305400:26 E302500:7 E307400:34 E307000:4 C307801:1 E302600:66 E000202:2 E307B01:26 E307F00:2 E308000:2
+VARS	E308400:4 E305400:30 E302500:7 E307400:34 C307801:1 E302600:66 E000202:6 E307B01:26
 
 Overworld (Kaipo)                                         Seed:  33   Index:   0
 Overworld (Kaipo)                                         Seed:  33   Index:   1
@@ -22,10 +24,9 @@ Watery Pass-South B2F                                     Seed:  33   Index: 121
   Step  20: 5 / Pike x2, EvilShel x2 (7.149s)
   Step  67: 6 / Pike x2, EvilShel x2 (7.149s)
 Watery Pass-South B2F Save Room                           Seed:  33   Index: 211
-  Extra Steps: 26
-Watery Pass-South B2F                                     Seed:  33   Index: 241
-  Extra Steps: 4
-  Step  42: 7 / CaveToad x3 (7.014s)
+  Extra Steps: 30
+Watery Pass-South B2F                                     Seed:  33   Index: 245
+  Step  38: 7 / CaveToad x3 (7.014s)
 Watery Pass-South B3F                                     Seed:  50   Index:  28
   Step  26: 8 / Pike x3 (7.152s)
   Step  30: 9 / TinyMage x2, WaterHag x4 (8.120s)
@@ -65,22 +66,20 @@ Antlion B2F Outward Charm Room Steps                      Seed:  67   Index: 190
 Antlion B1F                                               Seed:  84   Index:  45
 Overworld (Damcyan)                                       Seed:  84   Index:  83
 Overworld (Kaipo)                                         Seed:  84   Index:  83
-  Extra Steps: 2
+  Extra Steps: 6
   Step   2: 17 / Imp x4 (7.024s)
-Kaipo Revisited                                           Seed:  84   Index:  85
-Overworld (Kaipo)                                         Seed:  84   Index:  85
-Overworld (Damcyan)                                       Seed:  84   Index:  85
-Mt.Hobs-West                                              Seed:  84   Index:  85
-  Step  32: 18 / Gargoyle x2 (7.628s)
-Mt.Hobs Summit                                            Seed:  84   Index: 124
-  Extra Steps: 2
-  Step  16: 19 / Skelton x4 (7.795s)
-Battle: MomBomb                                           Seed:  84   Index: 141
-Mt.Hobs Summit                                            Seed:  84   Index: 141
-Mt.Hobs-East                                              Seed:  84   Index: 147
-  Extra Steps: 2
-  Step  10: 20 / GrayBomb x2, Bomb x2 (8.430s)
-  Step  48: 21 / Turtle x2 (7.432s)
+Kaipo Revisited                                           Seed:  84   Index:  89
+Overworld (Kaipo)                                         Seed:  84   Index:  89
+Overworld (Damcyan)                                       Seed:  84   Index:  89
+Mt.Hobs-West                                              Seed:  84   Index:  89
+  Step  28: 18 / Gargoyle x2 (7.628s)
+Mt.Hobs Summit                                            Seed:  84   Index: 128
+  Step  12: 19 / Skelton x4 (7.795s)
+Battle: MomBomb                                           Seed:  84   Index: 143
+Mt.Hobs Summit                                            Seed:  84   Index: 143
+Mt.Hobs-East                                              Seed:  84   Index: 149
+  Step   8: 20 / GrayBomb x2, Bomb x2 (8.430s)
+  Step  46: 21 / Turtle x2 (7.432s)
 Overworld (Fabul)                                         Seed:  84   Index: 195
   Step  34: 22 / Cocktric x3 (8.241s)
 Fabul                                                     Seed: 101   Index:  23
@@ -125,4 +124,3 @@ Base Encounters:     40
 Encounters Saved:    12
 
 Number of Variables: 45
-Number of States:    22738408

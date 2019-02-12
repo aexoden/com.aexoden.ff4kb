@@ -1,11 +1,13 @@
 ROUTE	Final Fantasy IV Paladin%
 VERSION	20
-ROSA	v1.0.0-2-ga3b8f36
+ROSA	v1.1.0-13-g6984184
 SEED	31
 MAXSTEP	256
+MAXSEG	7
 TASMODE	0
+MINIMUM	1
 FRAMES	41182181
-VARS	E305400:6 E302500:11 C307800:1 E307200:2 E307B00:16
+VARS	E305400:8 E302500:11 C307800:1 E307B00:16
 
 Overworld (Kaipo)                                         Seed:  31   Index:   0
 Overworld (Kaipo)                                         Seed:  31   Index:   1
@@ -22,15 +24,14 @@ Watery Pass-South B1F                                     Seed:  31   Index: 101
 Watery Pass-South B2F                                     Seed:  31   Index: 121
   Step  67: 6 / Pike x2, EvilShel x2 (7.149s)
 Watery Pass-South B2F Save Room                           Seed:  31   Index: 211
-  Extra Steps: 6
-Watery Pass-South B2F                                     Seed:  31   Index: 221
-Watery Pass-South B3F                                     Seed:  48   Index:   4
-  Step  23: 7 / Pike x2, EvilShel x2 (7.149s)
-Watery Pass-North B2F                                     Seed:  48   Index:  38
-  Extra Steps: 2
-  Step   9: 8 / Pike x3 (7.152s)
-  Step  20: 9 / TinyMage x2, WaterHag x4 (8.120s)
-  Step  23: 10 / Zombie x4 (7.148s)
+  Extra Steps: 8
+Watery Pass-South B2F                                     Seed:  31   Index: 223
+Watery Pass-South B3F                                     Seed:  48   Index:   6
+  Step  21: 7 / Pike x2, EvilShel x2 (7.149s)
+Watery Pass-North B2F                                     Seed:  48   Index:  40
+  Step   7: 8 / Pike x3 (7.152s)
+  Step  18: 9 / TinyMage x2, WaterHag x4 (8.120s)
+  Step  21: 10 / Zombie x4 (7.148s)
 Watery Pass-North B1F                                     Seed:  48   Index:  61
 Overworld (Kaipo)                                         Seed:  48   Index: 121
 Waterfalls B1F                                            Seed:  48   Index: 130
@@ -123,4 +124,3 @@ Base Encounters:     37
 Encounters Saved:    5
 
 Number of Variables: 45
-Number of States:    21504759

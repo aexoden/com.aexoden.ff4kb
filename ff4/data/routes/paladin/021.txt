@@ -1,11 +1,13 @@
 ROUTE	Final Fantasy IV Paladin%
 VERSION	20
-ROSA	v1.0.0-2-ga3b8f36
+ROSA	v1.1.0-13-g6984184
 SEED	21
 MAXSTEP	256
+MAXSEG	7
 TASMODE	0
+MINIMUM	1
 FRAMES	40929294
-VARS	E305400:10 E307700:2 E302500:25 E307400:8 C307800:1 E302600:5 E307B00:2
+VARS	E305400:18 E302500:27 C307800:1 E302600:5 E307B00:2
 
 Overworld (Kaipo)                                         Seed:  21   Index:   0
 Overworld (Kaipo)                                         Seed:  21   Index:   1
@@ -21,20 +23,19 @@ Recruit Tellah                                            Seed:  21   Index: 101
 Watery Pass-South B1F                                     Seed:  21   Index: 101
 Watery Pass-South B2F                                     Seed:  21   Index: 121
 Watery Pass-South B2F Save Room                           Seed:  21   Index: 211
-  Extra Steps: 10
-Watery Pass-South B2F                                     Seed:  21   Index: 225
-  Step  26: 6 / Pike x2, EvilShel x2 (7.149s)
-Watery Pass-South B3F                                     Seed:  38   Index:   8
-  Step  23: 7 / Pike x2, EvilShel x2 (7.149s)
-Watery Pass-North B2F                                     Seed:  38   Index:  42
-Watery Pass-North B1F                                     Seed:  38   Index:  63
-  Step  10: 8 / Zombie x4 (7.148s)
-  Step  31: 9 / Aligator x1, Pike x2 (7.368s)
-  Step  58: 10 / Jelly x4 (7.324s)
-  Step  60: 11 / Aligator x1, Pike x2 (7.368s)
-Overworld (Kaipo)                                         Seed:  38   Index: 123
-Waterfalls B1F                                            Seed:  38   Index: 132
-  Extra Steps: 8
+  Extra Steps: 18
+Watery Pass-South B2F                                     Seed:  21   Index: 233
+  Step  18: 6 / Pike x2, EvilShel x2 (7.149s)
+Watery Pass-South B3F                                     Seed:  38   Index:  16
+  Step  15: 7 / Pike x2, EvilShel x2 (7.149s)
+Watery Pass-North B2F                                     Seed:  38   Index:  50
+Watery Pass-North B1F                                     Seed:  38   Index:  71
+  Step   2: 8 / Zombie x4 (7.148s)
+  Step  23: 9 / Aligator x1, Pike x2 (7.368s)
+  Step  50: 10 / Jelly x4 (7.324s)
+  Step  52: 11 / Aligator x1, Pike x2 (7.368s)
+Overworld (Kaipo)                                         Seed:  38   Index: 131
+Waterfalls B1F                                            Seed:  38   Index: 140
 Waterfalls B2F                                            Seed:  38   Index: 141
 Waterfalls Lake                                           Seed:  38   Index: 186
   Step  34: 12 / Zombie x6 (7.489s)
@@ -44,12 +45,11 @@ Overworld (Kaipo)                                         Seed:  38   Index: 224
 Overworld (Damcyan)                                       Seed:  38   Index: 235
 Damcyan                                                   Seed:  38   Index: 239
   Optional Steps: 1
-  Extra Steps: 24
-Overworld (Damcyan)                                       Seed:  55   Index:  15
-Antlion B1F                                               Seed:  55   Index:  15
-  Extra Steps: 2
-  Step  38: 13 / Basilisk x1, Imp x3 (6.775s)
-  Step  39: 14 / Imp x3 (6.649s)
+  Extra Steps: 26
+Overworld (Damcyan)                                       Seed:  55   Index:  17
+Antlion B1F                                               Seed:  55   Index:  17
+  Step  36: 13 / Basilisk x1, Imp x3 (6.775s)
+  Step  37: 14 / Imp x3 (6.649s)
 Antlion B2F Inward Charm Room Steps                       Seed:  55   Index:  55
   Antlion B2F                                             Seed:  55   Index:  55
   Antlion B2F Treasure Room                               Seed:  55   Index:  88
@@ -123,4 +123,3 @@ Base Encounters:     36
 Encounters Saved:    5
 
 Number of Variables: 45
-Number of States:    23127014

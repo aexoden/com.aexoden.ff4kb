@@ -1,11 +1,13 @@
 ROUTE	Final Fantasy IV Paladin%
 VERSION	20
-ROSA	v1.0.0-2-ga3b8f36
+ROSA	v1.1.0-13-g6984184
 SEED	7
 MAXSTEP	256
+MAXSEG	7
 TASMODE	0
+MINIMUM	1
 FRAMES	40522651
-VARS	E307700:4 E302500:57 C307800:1 E307600:2 C307801:1 E302600:33 E307B00:20 E307B01:22 E307701:4
+VARS	E302500:61 C307800:1 E307600:2 C307801:1 E302600:33 E307B00:20 E307B01:26
 
 Overworld (Kaipo)                                         Seed:   7   Index:   0
 Overworld (Kaipo)                                         Seed:   7   Index:   1
@@ -42,11 +44,10 @@ Overworld (Kaipo)                                         Seed:  24   Index: 208
 Overworld (Damcyan)                                       Seed:  24   Index: 219
 Damcyan                                                   Seed:  24   Index: 223
   Optional Steps: 1
-  Extra Steps: 56
-Overworld (Damcyan)                                       Seed:  41   Index:  31
-Antlion B1F                                               Seed:  41   Index:  31
-  Extra Steps: 4
-  Step  42: 12 / Turtle x1, Imp x2 (7.044s)
+  Extra Steps: 60
+Overworld (Damcyan)                                       Seed:  41   Index:  35
+Antlion B1F                                               Seed:  41   Index:  35
+  Step  38: 12 / Turtle x1, Imp x2 (7.044s)
 Antlion B2F Inward Charm Room Steps                       Seed:  41   Index:  73
   Antlion B2F                                             Seed:  41   Index:  73
     Step  21: 13 / Weeper x1, Turtle x1, Basilisk x1 (7.385s)
@@ -60,13 +61,12 @@ Antlion's Nest                                            Seed:  41   Index: 192
 Antlion B2F Outward Charm Room Steps                      Seed:  41   Index: 207
   Antlion B2F                                             Seed:  41   Index: 207
   Antlion B2F Treasure Room                               Seed:  58   Index:   2
-    Extra Steps: 22
-  Antlion B2F                                             Seed:  58   Index:  24
-    Step  29: 15 / Weeper x1, Turtle x1, Basilisk x1 (7.339s)
-Antlion B1F                                               Seed:  58   Index:  58
-  Extra Steps: 4
-  Step  31: 16 / Turtle x2 (7.464s)
-  Step  41: 17 / Turtle x1, Imp x2 (7.009s)
+    Extra Steps: 26
+  Antlion B2F                                             Seed:  58   Index:  28
+    Step  25: 15 / Weeper x1, Turtle x1, Basilisk x1 (7.339s)
+Antlion B1F                                               Seed:  58   Index:  62
+  Step  27: 16 / Turtle x2 (7.464s)
+  Step  37: 17 / Turtle x1, Imp x2 (7.009s)
 Overworld (Damcyan)                                       Seed:  58   Index: 100
 Overworld (Kaipo)                                         Seed:  58   Index: 100
 Kaipo Revisited                                           Seed:  58   Index: 100
@@ -123,4 +123,3 @@ Base Encounters:     38
 Encounters Saved:    11
 
 Number of Variables: 45
-Number of States:    21421609

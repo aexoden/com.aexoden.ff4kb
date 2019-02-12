@@ -1,11 +1,13 @@
 ROUTE	Final Fantasy IV Paladin%
 VERSION	20
-ROSA	v1.1.0-1-gc4f29fa
+ROSA	v1.1.0-13-g6984184
 SEED	41
 MAXSTEP	256
+MAXSEG	7
 TASMODE	0
+MINIMUM	1
 FRAMES	40490701
-VARS	E302500:9 E307400:20 E302600:7 E307E00:1
+VARS	E302500:10 E307400:20 E302600:7
 
 Overworld (Kaipo)                                         Seed:  41   Index:   0
 Overworld (Kaipo)                                         Seed:  41   Index:   1
@@ -43,35 +45,34 @@ Overworld (Kaipo)                                         Seed:  58   Index: 226
   Step   6: 13 / SandMoth x2, Larva x2 (7.188s)
 Overworld (Damcyan)                                       Seed:  58   Index: 237
 Damcyan                                                   Seed:  58   Index: 241
-  Optional Steps: 1
-  Extra Steps: 8
-Overworld (Damcyan)                                       Seed:  75   Index:   1
-Antlion B1F                                               Seed:  75   Index:   1
-Antlion B2F Inward Direct                                 Seed:  75   Index:  39
-  Antlion B2F                                             Seed:  75   Index:  39
-    Step   9: 14 / Basilisk x1, Imp x3 (6.775s)
-    Step  33: 15 / Basilisk x1, Turtle x1 (7.110s)
-    Step  38: 16 / Cream x4 (7.552s)
-    Step  80: 17 / Basilisk x1, Turtle x1 (7.110s)
-Antlion's Nest                                            Seed:  75   Index: 119
-  Step   8: 18 / Weeper x2 (7.114s)
-Battle: Antlion                                           Seed:  75   Index: 133
-Antlion's Nest                                            Seed:  75   Index: 133
-Antlion B2F Outward Direct                                Seed:  75   Index: 148
-  Antlion B2F                                             Seed:  75   Index: 148
-Antlion B1F                                               Seed:  75   Index: 228
-  Step   3: 19 / Cream x4 (7.523s)
-  Step  19: 20 / Cream x4 (7.523s)
-Overworld (Damcyan)                                       Seed:  92   Index:  10
-Overworld (Kaipo)                                         Seed:  92   Index:  10
-Kaipo Revisited                                           Seed:  92   Index:  10
-Overworld (Kaipo)                                         Seed:  92   Index:  10
-Overworld (Damcyan)                                       Seed:  92   Index:  10
-Mt.Hobs-West                                              Seed:  92   Index:  10
-  Extra Steps: 1
-  Step  10: 21 / GrayBomb x2, Bomb x2 (8.609s)
-  Step  22: 22 / Bomb x3 (7.915s)
-  Step  40: 23 / Gargoyle x1, Cocktric x2 (7.915s)
+  Optional Steps: 0
+  Extra Steps: 10
+Overworld (Damcyan)                                       Seed:  75   Index:   2
+Antlion B1F                                               Seed:  75   Index:   2
+Antlion B2F Inward Direct                                 Seed:  75   Index:  40
+  Antlion B2F                                             Seed:  75   Index:  40
+    Step   8: 14 / Basilisk x1, Imp x3 (6.775s)
+    Step  32: 15 / Basilisk x1, Turtle x1 (7.110s)
+    Step  37: 16 / Cream x4 (7.552s)
+    Step  79: 17 / Basilisk x1, Turtle x1 (7.110s)
+Antlion's Nest                                            Seed:  75   Index: 120
+  Step   7: 18 / Weeper x2 (7.114s)
+Battle: Antlion                                           Seed:  75   Index: 134
+Antlion's Nest                                            Seed:  75   Index: 134
+Antlion B2F Outward Direct                                Seed:  75   Index: 149
+  Antlion B2F                                             Seed:  75   Index: 149
+Antlion B1F                                               Seed:  75   Index: 229
+  Step   2: 19 / Cream x4 (7.523s)
+  Step  18: 20 / Cream x4 (7.523s)
+Overworld (Damcyan)                                       Seed:  92   Index:  11
+Overworld (Kaipo)                                         Seed:  92   Index:  11
+Kaipo Revisited                                           Seed:  92   Index:  11
+Overworld (Kaipo)                                         Seed:  92   Index:  11
+Overworld (Damcyan)                                       Seed:  92   Index:  11
+Mt.Hobs-West                                              Seed:  92   Index:  11
+  Step   9: 21 / GrayBomb x2, Bomb x2 (8.609s)
+  Step  21: 22 / Bomb x3 (7.915s)
+  Step  39: 23 / Gargoyle x1, Cocktric x2 (7.915s)
 Mt.Hobs Summit                                            Seed:  92   Index:  50
 Battle: MomBomb                                           Seed:  92   Index:  65
 Mt.Hobs Summit                                            Seed:  92   Index:  65
@@ -112,8 +113,8 @@ Total Time:          673.735s
 Base Total Time:     694.072s
 Time Saved:          20.337s
 
-Optional Steps:      8
-Extra Steps:         29
+Optional Steps:      7
+Extra Steps:         30
 Encounters:          32
 
 Base Encounters:     36

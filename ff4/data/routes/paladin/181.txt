@@ -1,11 +1,13 @@
 ROUTE	Final Fantasy IV Paladin%
 VERSION	20
-ROSA	v1.1.0-1-gc4f29fa
+ROSA	v1.1.0-13-g6984184
 SEED	181
 MAXSTEP	256
+MAXSEG	7
 TASMODE	0
+MINIMUM	1
 FRAMES	41698736
-VARS	E000600:6 E302500:1 E307400:12 E302600:12
+VARS	E302500:1 E307400:12 E302600:18
 
 Overworld (Kaipo)                                         Seed: 181   Index:   0
 Overworld (Kaipo)                                         Seed: 181   Index:   1
@@ -81,17 +83,16 @@ Overworld (Fabul)                                         Seed: 232   Index: 100
   Step  63: 27 / Imp Cap. x3, Needler x3 (8.555s)
 Fabul                                                     Seed: 232   Index: 184
   Optional Steps: 10
-  Extra Steps: 2
-Overworld (Fabul)                                         Seed: 249   Index:   0
-Fabul Boat and Leviatan                                   Seed: 249   Index:   7
-Overworld (Mysidia)                                       Seed: 249   Index:   7
-Mysidia                                                   Seed: 249   Index:  16
-Overworld (Mysidia)                                       Seed: 249   Index:  16
-Overworld (Mt.Ordeals)                                    Seed: 249   Index:  26
-  Extra Steps: 6
-  Step  31: 28 / SwordRat x2, Imp x2, TinyMage x2 (7.401s)
-  Step  39: 29 / SwordRat x2, Imp x2, TinyMage x2 (7.401s)
-  Step 100: 30 / Imp Cap. x3, Needler x1 (7.932s)
+  Extra Steps: 8
+Overworld (Fabul)                                         Seed: 249   Index:   6
+Fabul Boat and Leviatan                                   Seed: 249   Index:  13
+Overworld (Mysidia)                                       Seed: 249   Index:  13
+Mysidia                                                   Seed: 249   Index:  22
+Overworld (Mysidia)                                       Seed: 249   Index:  22
+Overworld (Mt.Ordeals)                                    Seed: 249   Index:  32
+  Step  25: 28 / SwordRat x2, Imp x2, TinyMage x2 (7.401s)
+  Step  33: 29 / SwordRat x2, Imp x2, TinyMage x2 (7.401s)
+  Step  94: 30 / Imp Cap. x3, Needler x1 (7.932s)
 Mt.Ordeals                                                Seed: 249   Index: 126
   Step   3: 31 / Red Bone x1, Skelton x3 (8.067s)
   Step  35: 32 / Red Bone x1, Skelton x3 (8.067s)

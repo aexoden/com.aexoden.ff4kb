@@ -1,12 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa)
-VERSION	13
-SPOONY	v0.0.8-31-g5148b94-dirty
+VERSION	22
+ROSA	v1.1.0-13-g6984184
 SEED	211
-METHOD	none
 MAXSTEP	256
-FRAMES	170242795
-SCORE	-6999.70499999999992724042
-VARS	73:1 85:6 115:1
+MAXSEG	2
+TASMODE	0
+MINIMUM	1
+FRAMES	170667992
+VARS	C30CA01:1 E000703:1 E310700:6
 
 Overworld (Kaipo)                                         Seed: 211   Index:   0
 Overworld (Kaipo)                                         Seed: 211   Index:   1
@@ -45,6 +46,7 @@ Overworld (Kaipo)                                         Seed: 228   Index: 206
 Overworld (Damcyan)                                       Seed: 228   Index: 217
 Damcyan                                                   Seed: 228   Index: 221
   Optional Steps: 0
+Overworld (Damcyan)                                       Seed: 228   Index: 228
 Antlion B1F                                               Seed: 228   Index: 228
 Antlion B2F Inward Direct                                 Seed: 245   Index:  10
   Antlion B2F                                             Seed: 245   Index:  10
@@ -62,7 +64,11 @@ Antlion B2F Outward Direct                                Seed: 245   Index: 119
     Step  75: 21 / Basilisk x1, Imp x3 (6.783s)
 Antlion B1F                                               Seed: 245   Index: 199
   Step  11: 22 / Weeper x1, Turtle x1, Basilisk x1 (7.339s)
+Overworld (Damcyan)                                       Seed: 245   Index: 237
+Overworld (Kaipo)                                         Seed: 245   Index: 237
 Kaipo Revisited                                           Seed: 245   Index: 237
+Overworld (Kaipo)                                         Seed: 245   Index: 237
+Overworld (Damcyan)                                       Seed: 245   Index: 237
 Mt.Hobs-West                                              Seed: 245   Index: 237
 Mt.Hobs Summit                                            Seed:   6   Index:  20
 Battle: MomBomb                                           Seed:   6   Index:  35
@@ -116,6 +122,7 @@ Overworld (Mt.Ordeals)                                    Seed:  40   Index: 111
   Step  10: 43 / Raven x1, Cocktric x3 (8.790s)
   Step  12: 44 / Imp Cap. x3, Needler x1 (7.897s)
 Take Chocobo to Mysidia                                   Seed:  40   Index: 124
+Overworld (Mysidia)                                       Seed:  40   Index: 124
 Town of Baron Serpent Road                                Seed:  40   Index: 124
 Old Water-way                                             Seed:  40   Index: 128
   Step  75: 45 / Piranha x2, FangShel x1, EvilShel x1 (9.096s)
@@ -162,6 +169,8 @@ Tower of Zot 1F                                           Seed:  74   Index:  95
   Step  32: 58 / Gremlin x2, Ice Liz x2 (9.444s)
 Tower of Zot 2F                                           Seed:  74   Index: 133
   Step  20: 59 / Centaur x3 (8.469s)
+Battle: FlameDog                                          Seed:  74   Index: 185
+Tower of Zot 2F                                           Seed:  74   Index: 185
 Tower of Zot 3F                                           Seed:  74   Index: 202
   Step  29: 60 / Centaur x2, IceBeast x2 (10.289s)
   Step  45: 61 / SwordMan x2 (12.756s)
@@ -222,6 +231,7 @@ Tower of Bab-il 2F                                        Seed: 142   Index: 217
   Step  23: 84 / Marion (summons EvilDoll) x1, EvilDoll x2 (9.160s)
 Tower of Bab-il 1F                                        Seed: 142   Index: 255
 Travel to Baron                                           Seed: 159   Index:  14
+Overworld (Baron)                                         Seed: 159   Index:  14
 Castle Baron                                              Seed: 159   Index:  14
 Airship Hook                                              Seed: 159   Index:  27
 Overworld (Eblan)                                         Seed: 159   Index:  27
@@ -240,7 +250,7 @@ Pass to Bab-il (north) Inward Direct                      Seed: 159   Index: 254
   Pass to Bab-il (north)                                  Seed: 159   Index: 254
     Step   6: 90 / Red Bone x3, Skull x2 (7.180s)
 Recruit Edge                                              Seed: 176   Index:  20
-Remove Dwarf Axe before Rubicant                          Seed: 176   Index:  20
+Remove Dwarf Axe before Q.Eblan/K.Eblan                   Seed: 176   Index:  20
 Pass to Bab-il (north)                                    Seed: 176   Index:  20
 Tower of Bab-il 1F                                        Seed: 176   Index:  23
   Step  19: 91 / Mad Ogre x2 (7.060s)
@@ -259,14 +269,16 @@ Tower of Bab-il B3F                                       Seed: 193   Index:   3
 Tower of Bab-il B4F                                       Seed: 193   Index:  45
 Tower of Bab-il B5F                                       Seed: 193   Index:  48
 Battle: Rubicant                                          Seed: 193   Index:  75
+Equip Dwarf Axe When Removing Strength Ring               Seed: 193   Index:  75
 Tower of Bab-il B5F                                       Seed: 193   Index:  75
 Tower of Bab-il 8F (revisit)                              Seed: 193   Index:  76
 Tower of Bab-il 7F (revisit)                              Seed: 193   Index:  92
   Step  12: 100 / Q.Lamia x1, Egg (Lamia) x1, BlackCat x2 (7.857s)
-  Step  14: 101 / Grudger x1, BlackCat x2, BladeMan x1 (7.306s)
+  Step  14: 101 / Grudger x1, BlackCat x2, BladeMan x1 (7.305s)
 Tower of Bab-il 6F (revisit)                              Seed: 193   Index: 116
-  Step  40: 102 / Ironman x1, BlackCat x2 (7.213s)
+  Step  40: 102 / Ironman x1, BlackCat x2 (7.210s)
 Fly to Castle of Dwarves                                  Seed: 193   Index: 166
+Underworld (Castle of Dwarves)                            Seed: 193   Index: 166
 Castle of Dwarves                                         Seed: 193   Index: 166
   Optional Steps: 0
 Underworld (Castle of Dwarves)                            Seed: 193   Index: 189
@@ -309,7 +321,7 @@ Grind Fight Search                                        Seed: 227   Index:  95
   Giant of Bab-il Passage                                 Seed: 227   Index:  95
     Step   5: 114 / MacGiant x1 (7.506s)
     Step  33: 115 / Searcher (summons D.Machin) x1, Beamer x2 (7.658s)
-    Step  37: 116 / Searcher (summons D.Machin) x1, Beamer x2 (7.658s)
+    Step  37: 116 / Searcher (summons D.Machin) x1, Beamer x2 (7.634s)
    (Step  69: 117 / Searcher (summons D.Machin) x1, Beamer x2)
    (Step  95: 118 / Searcher (summons D.Machin) x1, Beamer x2)
    (Step  97: 119 / Horseman x1, Machine x2)
@@ -318,14 +330,6 @@ Grind Fight Search                                        Seed: 227   Index:  95
    (Step 226: 122 / MacGiant x1, Machine x1, Beamer x1)
   Giant of Bab-il Lung                                    Seed: 227   Index: 156
     Step   8: 117 / Beamer x1, Machine x2, Horseman x1 (7.879s)
-   (Step  34: 118 / Beamer x1, Machine x2, Horseman x1)
-   (Step  36: 119 / Searcher (summons Horseman) x1, Beamer x2)
-   (Step  72: 120 / Searcher (summons Horseman) x1, Beamer x2)
-   (Step 157: 121 / Searcher (summons D.Machin) x1, Beamer x2)
-   (Step 165: 122 / Searcher (summons D.Machin) x1, Beamer x2)
-   (Step 198: 123 / MacGiant x1, Horseman x1, Beamer x1)
-   (Step 213: 124 / Searcher (summons D.Machin) x1, Beamer x2)
-   (Step 226: 125 / Searcher (summons Horseman) x1, Beamer x2)
 Battle: Elements                                          Seed: 227   Index: 164
 Giant of Bab-il Lung                                      Seed: 227   Index: 164
 Giant of Bab-il CPU                                       Seed: 227   Index: 171
@@ -379,16 +383,18 @@ Lunar Core B3                                             Seed:  22   Index:  63
   Step  33: 140 / Behemoth x2 (7.516s)
 Lunar Core B4                                             Seed:  22   Index: 119
 
-Encounter Time:    1109.353s
-Other Time:        1723.362s
-Total Time:        2832.715s
+Encounter Time:      1155.495s
+Other Time:          1684.295s
+Total Time:          2839.790s
 
-Base Total Time:   2879.023s
-Time Saved:        46.308s
+Base Total Time:     2886.098s
+Time Saved:          46.308s
 
-Optional Steps:    7
-Extra Steps:       0
-Encounters:        140
+Optional Steps:      7
+Extra Steps:         0
+Encounters:          146
 
-Base Encounters:   144
-Encounters Saved:  4
+Base Encounters:     150
+Encounters Saved:    4
+
+Number of Variables: 190

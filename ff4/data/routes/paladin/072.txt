@@ -1,11 +1,13 @@
 ROUTE	Final Fantasy IV Paladin%
 VERSION	20
-ROSA	v1.1.0-1-gc4f29fa
+ROSA	v1.1.0-13-g6984184
 SEED	72
 MAXSTEP	256
+MAXSEG	7
 TASMODE	0
+MINIMUM	1
 FRAMES	41064682
-VARS	E305400:74 E302500:1 E307400:2 E307000:14 C307800:1 E302600:10 E000501:2 E307B00:2
+VARS	E305400:90 E302500:1 C307800:1 E302600:12 E307B00:2
 
 Overworld (Kaipo)                                         Seed:  72   Index:   0
 Overworld (Kaipo)                                         Seed:  72   Index:   1
@@ -21,18 +23,16 @@ Watery Pass-South B1F                                     Seed:  72   Index: 101
 Watery Pass-South B2F                                     Seed:  72   Index: 121
   Step  32: 5 / Pike x3 (7.152s)
 Watery Pass-South B2F Save Room                           Seed:  72   Index: 211
-  Extra Steps: 74
-Watery Pass-South B2F                                     Seed:  89   Index:  33
-  Extra Steps: 14
-  Step  43: 6 / Pike x3 (7.152s)
-  Step  52: 7 / EvilShel x3, WaterBug x1 (7.081s)
-Watery Pass-South B3F                                     Seed:  89   Index:  86
-  Step  31: 8 / Pike x2, EvilShel x2 (7.149s)
-Watery Pass-North B2F                                     Seed:  89   Index: 120
-Watery Pass-North B1F                                     Seed:  89   Index: 141
-Overworld (Kaipo)                                         Seed:  89   Index: 201
-Waterfalls B1F                                            Seed:  89   Index: 210
-  Extra Steps: 2
+  Extra Steps: 90
+Watery Pass-South B2F                                     Seed:  89   Index:  49
+  Step  27: 6 / Pike x3 (7.152s)
+  Step  36: 7 / EvilShel x3, WaterBug x1 (7.081s)
+Watery Pass-South B3F                                     Seed:  89   Index:  88
+  Step  29: 8 / Pike x2, EvilShel x2 (7.149s)
+Watery Pass-North B2F                                     Seed:  89   Index: 122
+Watery Pass-North B1F                                     Seed:  89   Index: 143
+Overworld (Kaipo)                                         Seed:  89   Index: 203
+Waterfalls B1F                                            Seed:  89   Index: 212
 Waterfalls B2F                                            Seed:  89   Index: 213
   Step  32: 9 / Aligator x1, Pike x2 (7.368s)
 Waterfalls Lake                                           Seed: 106   Index:   2
@@ -82,13 +82,13 @@ Overworld (Fabul)                                         Seed: 123   Index: 185
   Step  24: 23 / Gargoyle x1, Cocktric x2 (8.254s)
 Fabul                                                     Seed: 140   Index:  13
   Optional Steps: 10
-Overworld (Fabul)                                         Seed: 140   Index:  83
-Fabul Boat and Leviatan                                   Seed: 140   Index:  90
-Overworld (Mysidia)                                       Seed: 140   Index:  90
-Mysidia                                                   Seed: 140   Index:  99
-Overworld (Mysidia)                                       Seed: 140   Index:  99
   Extra Steps: 2
-  Step  11: 24 / Raven x1 (8.356s)
+Overworld (Fabul)                                         Seed: 140   Index:  85
+Fabul Boat and Leviatan                                   Seed: 140   Index:  92
+Overworld (Mysidia)                                       Seed: 140   Index:  92
+Mysidia                                                   Seed: 140   Index: 101
+Overworld (Mysidia)                                       Seed: 140   Index: 101
+  Step   9: 24 / Raven x1 (8.356s)
 Overworld (Mt.Ordeals)                                    Seed: 140   Index: 111
   Step  41: 25 / Imp Cap. x3, Needler x1 (7.932s)
   Step  57: 26 / Raven x1, Cocktric x3 (9.100s)

@@ -33,6 +33,8 @@
 				<tr><td><a href="{% url "routes:route" route %}">{{ route_data.name }}</a></td><td>{% if route_data.twin_safe %}✓{% endif %}</td><td>Up to {{ route_data.steps }} steps each at up to {{ route_data.locations }} locations</td></tr>
 {% elif route_data.steps %}
 				<tr><td><a href="{% url "routes:route" route %}">{{ route_data.name }}</a></td><td>{% if route_data.twin_safe %}✓{% endif %}</td><td>Up to {{ route_data.steps }} steps at each location</td></tr>
+{% elif route_data.steps == 0 %}
+				<tr><td><a href="{% url "routes:route" route %}">{{ route_data.name }}</a></td><td></td><td>Unoptimized</td></tr>
 {% else %}
 				<tr><td><a href="{% url "routes:route" route %}">{{ route_data.name }}</a></td><td></td><td>Unknown</td></tr>
 {% endif %}

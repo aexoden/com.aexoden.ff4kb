@@ -1,11 +1,13 @@
 ROUTE	Final Fantasy IV Paladin%
 VERSION	20
-ROSA	v1.0.0-2-ga3b8f36
+ROSA	v1.1.0-13-g6984184
 SEED	39
 MAXSTEP	256
+MAXSEG	7
 TASMODE	0
+MINIMUM	1
 FRAMES	41804728
-VARS	E302500:1 E307400:18 C307800:1 E307200:2 E302600:10 E307B00:64
+VARS	E302500:1 C307800:1 E307200:20 E302600:10 E307B00:64
 
 Overworld (Kaipo)                                         Seed:  39   Index:   0
 Overworld (Kaipo)                                         Seed:  39   Index:   1
@@ -27,15 +29,14 @@ Watery Pass-South B2F                                     Seed:  39   Index: 215
 Watery Pass-South B3F                                     Seed:  39   Index: 254
   Step  17: 8 / CaveToad x3 (7.014s)
 Watery Pass-North B2F                                     Seed:  56   Index:  32
-  Extra Steps: 2
+  Extra Steps: 20
   Step  21: 9 / TinyMage x2, WaterHag x4 (8.120s)
   Step  22: 10 / Zombie x4 (7.148s)
-Watery Pass-North B1F                                     Seed:  56   Index:  55
-  Step  34: 11 / Zombie x4 (7.148s)
-  Step  44: 12 / CaveToad x2, Mad Toad x2 (7.163s)
-Overworld (Kaipo)                                         Seed:  56   Index: 115
-Waterfalls B1F                                            Seed:  56   Index: 124
-  Extra Steps: 18
+Watery Pass-North B1F                                     Seed:  56   Index:  73
+  Step  16: 11 / Zombie x4 (7.148s)
+  Step  26: 12 / CaveToad x2, Mad Toad x2 (7.163s)
+Overworld (Kaipo)                                         Seed:  56   Index: 133
+Waterfalls B1F                                            Seed:  56   Index: 142
 Waterfalls B2F                                            Seed:  56   Index: 143
   Step  24: 13 / Aligator x1, WaterBug x2 (7.292s)
 Waterfalls Lake                                           Seed:  56   Index: 188
@@ -122,4 +123,3 @@ Base Encounters:     38
 Encounters Saved:    6
 
 Number of Variables: 45
-Number of States:    22167562

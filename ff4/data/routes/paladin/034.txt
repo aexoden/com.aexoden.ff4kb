@@ -1,11 +1,13 @@
 ROUTE	Final Fantasy IV Paladin%
 VERSION	20
-ROSA	v1.0.0-2-ga3b8f36
+ROSA	v1.1.0-13-g6984184
 SEED	34
 MAXSTEP	256
+MAXSEG	7
 TASMODE	0
+MINIMUM	1
 FRAMES	40767210
-VARS	E305400:26 E307900:4 E302500:27 E307400:18 C307801:1 E302600:52 E000501:6 E000202:2 E307B01:22 E307F00:18
+VARS	E305400:26 E302500:31 E307400:18 C307801:1 E302600:58 E000202:2 E307B01:22 E307F00:18
 
 Overworld (Kaipo)                                         Seed:  34   Index:   0
 Overworld (Kaipo)                                         Seed:  34   Index:   1
@@ -43,17 +45,16 @@ Overworld (Kaipo)                                         Seed:  51   Index: 250
 Overworld (Damcyan)                                       Seed:  68   Index:   5
 Damcyan                                                   Seed:  68   Index:   9
   Optional Steps: 1
-  Extra Steps: 26
-Overworld (Damcyan)                                       Seed:  68   Index:  43
-Antlion B1F                                               Seed:  68   Index:  43
-  Step  35: 12 / Cream x4 (7.552s)
-Antlion B2F Inward Direct                                 Seed:  68   Index:  81
-  Antlion B2F                                             Seed:  68   Index:  81
-    Step  38: 13 / Weeper x2 (7.114s)
-    Step  72: 14 / Basilisk x1, Imp x3 (6.775s)
-Antlion's Nest                                            Seed:  68   Index: 161
-  Extra Steps: 4
-  Step  17: 15 / Basilisk x1, Turtle x1 (7.110s)
+  Extra Steps: 30
+Overworld (Damcyan)                                       Seed:  68   Index:  47
+Antlion B1F                                               Seed:  68   Index:  47
+  Step  31: 12 / Cream x4 (7.552s)
+Antlion B2F Inward Direct                                 Seed:  68   Index:  85
+  Antlion B2F                                             Seed:  68   Index:  85
+    Step  34: 13 / Weeper x2 (7.114s)
+    Step  68: 14 / Basilisk x1, Imp x3 (6.775s)
+Antlion's Nest                                            Seed:  68   Index: 165
+  Step  13: 15 / Basilisk x1, Turtle x1 (7.110s)
 Battle: Antlion                                           Seed:  68   Index: 179
 Antlion's Nest                                            Seed:  68   Index: 179
 Antlion B2F Outward Charm Room Steps                      Seed:  68   Index: 194
@@ -83,13 +84,12 @@ Overworld (Fabul)                                         Seed:  85   Index: 209
   Step  20: 21 / GrayBomb x2, Bomb x2 (8.808s)
 Fabul                                                     Seed: 102   Index:  37
   Optional Steps: 10
-  Extra Steps: 42
-Overworld (Fabul)                                         Seed: 102   Index: 149
-Fabul Boat and Leviatan                                   Seed: 102   Index: 156
-Overworld (Mysidia)                                       Seed: 102   Index: 156
-Mysidia                                                   Seed: 102   Index: 165
-Overworld (Mysidia)                                       Seed: 102   Index: 165
-  Extra Steps: 6
+  Extra Steps: 48
+Overworld (Fabul)                                         Seed: 102   Index: 155
+Fabul Boat and Leviatan                                   Seed: 102   Index: 162
+Overworld (Mysidia)                                       Seed: 102   Index: 162
+Mysidia                                                   Seed: 102   Index: 171
+Overworld (Mysidia)                                       Seed: 102   Index: 171
 Overworld (Mt.Ordeals)                                    Seed: 102   Index: 181
   Step  36: 22 / Imp Cap. x4, Imp x2 (8.344s)
   Step  54: 23 / Imp Cap. x3, Needler x1 (7.932s)
@@ -123,4 +123,3 @@ Base Encounters:     38
 Encounters Saved:    11
 
 Number of Variables: 45
-Number of States:    22841720

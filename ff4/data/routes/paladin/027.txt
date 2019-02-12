@@ -1,11 +1,13 @@
 ROUTE	Final Fantasy IV Paladin%
 VERSION	20
-ROSA	v1.0.0-2-ga3b8f36
+ROSA	v1.1.0-13-g6984184
 SEED	27
 MAXSTEP	256
+MAXSEG	7
 TASMODE	0
+MINIMUM	1
 FRAMES	40452817
-VARS	E302500:6 E307400:2 C307800:1 C307801:1 E302600:5 E307B00:48 E307B01:36
+VARS	E307400:8 C307800:1 C307801:1 E302600:5 E307B00:48 E307B01:36
 
 Overworld (Kaipo)                                         Seed:  27   Index:   0
 Overworld (Kaipo)                                         Seed:  27   Index:   1
@@ -34,17 +36,16 @@ Watery Pass-North B1F                                     Seed:  44   Index:  53
   Step  41: 12 / CaveToad x4 (7.163s)
 Overworld (Kaipo)                                         Seed:  44   Index: 113
 Waterfalls B1F                                            Seed:  44   Index: 122
-  Extra Steps: 2
-Waterfalls B2F                                            Seed:  44   Index: 125
-Waterfalls Lake                                           Seed:  44   Index: 170
-  Step  33: 13 / Aligator x1, WaterBug x2 (7.292s)
-Battle: Octomamm                                          Seed:  44   Index: 207
-Waterfalls Lake                                           Seed:  44   Index: 207
-Overworld (Kaipo)                                         Seed:  44   Index: 208
-Overworld (Damcyan)                                       Seed:  44   Index: 219
-Damcyan                                                   Seed:  44   Index: 223
+  Extra Steps: 8
+Waterfalls B2F                                            Seed:  44   Index: 131
+Waterfalls Lake                                           Seed:  44   Index: 176
+  Step  27: 13 / Aligator x1, WaterBug x2 (7.292s)
+Battle: Octomamm                                          Seed:  44   Index: 213
+Waterfalls Lake                                           Seed:  44   Index: 213
+Overworld (Kaipo)                                         Seed:  44   Index: 214
+Overworld (Damcyan)                                       Seed:  44   Index: 225
+Damcyan                                                   Seed:  44   Index: 229
   Optional Steps: 0
-  Extra Steps: 6
 Overworld (Damcyan)                                       Seed:  44   Index: 236
 Antlion B1F                                               Seed:  44   Index: 236
 Antlion B2F Inward Charm Room Steps                       Seed:  61   Index:  18
@@ -121,4 +122,3 @@ Base Encounters:     37
 Encounters Saved:    9
 
 Number of Variables: 45
-Number of States:    22777489

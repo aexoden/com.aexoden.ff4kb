@@ -1,11 +1,13 @@
 ROUTE	Final Fantasy IV Paladin%
 VERSION	20
-ROSA	v1.0.0-2-ga3b8f36
+ROSA	v1.1.0-13-g6984184
 SEED	35
 MAXSTEP	256
+MAXSEG	7
 TASMODE	0
+MINIMUM	1
 FRAMES	42022991
-VARS	E305400:6 E307400:12 E307200:2 E302600:18
+VARS	E305400:20 E302600:18
 
 Overworld (Kaipo)                                         Seed:  35   Index:   0
 Overworld (Kaipo)                                         Seed:  35   Index:   1
@@ -22,20 +24,18 @@ Watery Pass-South B2F                                     Seed:  35   Index: 121
   Step  20: 5 / Pike x2, EvilShel x2 (7.149s)
   Step  67: 6 / Pike x2, EvilShel x2 (7.149s)
 Watery Pass-South B2F Save Room                           Seed:  35   Index: 211
-  Extra Steps: 6
-Watery Pass-South B2F                                     Seed:  35   Index: 221
-  Step  20: 7 / CaveToad x3 (7.014s)
-Watery Pass-South B3F                                     Seed:  52   Index:   4
-  Step  23: 8 / Pike x3 (7.152s)
-Watery Pass-North B2F                                     Seed:  52   Index:  38
-  Extra Steps: 2
-  Step  16: 9 / TinyMage x2, WaterHag x4 (8.120s)
-  Step  23: 10 / Zombie x4 (7.148s)
-Watery Pass-North B1F                                     Seed:  52   Index:  61
-  Step  28: 11 / TinyMage x2, WaterHag x4 (8.120s)
-Overworld (Kaipo)                                         Seed:  52   Index: 121
-Waterfalls B1F                                            Seed:  52   Index: 130
-  Extra Steps: 12
+  Extra Steps: 20
+Watery Pass-South B2F                                     Seed:  35   Index: 235
+  Step   6: 7 / CaveToad x3 (7.014s)
+Watery Pass-South B3F                                     Seed:  52   Index:  18
+  Step   9: 8 / Pike x3 (7.152s)
+Watery Pass-North B2F                                     Seed:  52   Index:  52
+  Step   2: 9 / TinyMage x2, WaterHag x4 (8.120s)
+  Step   9: 10 / Zombie x4 (7.148s)
+Watery Pass-North B1F                                     Seed:  52   Index:  73
+  Step  16: 11 / TinyMage x2, WaterHag x4 (8.120s)
+Overworld (Kaipo)                                         Seed:  52   Index: 133
+Waterfalls B1F                                            Seed:  52   Index: 142
 Waterfalls B2F                                            Seed:  52   Index: 143
   Step  24: 12 / Zombie x6 (7.489s)
   Step  43: 13 / Aligator x1, WaterBug x2 (7.292s)
@@ -124,4 +124,3 @@ Base Encounters:     39
 Encounters Saved:    4
 
 Number of Variables: 45
-Number of States:    22783173
