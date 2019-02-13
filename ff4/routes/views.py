@@ -51,8 +51,8 @@ ROUTES = {
 		'description': 'This route runs from the beginning of the game until Zeromus is defeated. Use of the 64-door glitch is banned. The step route begins after the Mist Clip. This particular version of the route relies on Edge as the primary damage dealer at the end of the game.',
 		'group': 'standard',
 		'enabled': True,
-		'steps': 0,
-		'locations': 0,
+		'steps': 256,
+		'locations': 1,
 	},
 
 	'premist': {
