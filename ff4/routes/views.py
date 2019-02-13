@@ -35,8 +35,8 @@ ROUTES = {
 		'description': 'Any% NoCW is from the beginning of the game until Zeromus is defeated by any means. The step route begins after the Mist Clip. Typically, this means using the 64-door glitch to defeat Zeromus using the upt Co spell. However, it is technically a superset of Any% No64, as any valid No64 run is also a valid NoCW run (albeit slower).',
 		'group': 'standard',
 		'enabled': True,
-		'steps': 0,
-		'locations': 0,
+		'steps': 256,
+		'locations': 2,
 	},
 	'no64-rosa': {
 		'name': 'Any% No64 (Rosa)',

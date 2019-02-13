@@ -2,12 +2,12 @@ ROUTE	Final Fantasy IV Any% NoCW
 VERSION	21
 ROSA	v1.1.0-13-g6984184
 SEED	55
-MAXSTEP	0
-MAXSEG	-1
+MAXSTEP	256
+MAXSEG	2
 TASMODE	0
-MINIMUM	0
-FRAMES	80620814
-VARS	
+MINIMUM	1
+FRAMES	76098722
+VARS	E302500:40 E305500:23 C305500:1
 
 Overworld (Kaipo)                                         Seed:  55   Index:   0
 Overworld (Kaipo)                                         Seed:  55   Index:   1
@@ -45,167 +45,161 @@ Overworld (Kaipo)                                         Seed:  72   Index: 206
 Overworld (Damcyan)                                       Seed:  72   Index: 217
 Damcyan                                                   Seed:  72   Index: 221
   Optional Steps: 0
-Overworld (Damcyan)                                       Seed:  72   Index: 228
-Antlion B1F                                               Seed:  72   Index: 228
-  Step   3: 14 / Turtle x1, Imp x2 (7.044s)
-  Step  19: 15 / Turtle x2 (7.487s)
-  Step  36: 16 / Imp x3, Imp Cap. x1 (6.755s)
-Antlion B2F Inward Direct                                 Seed:  89   Index:  10
-  Antlion B2F                                             Seed:  89   Index:  10
-    Step  10: 17 / Weeper x2 (7.114s)
-    Step  22: 18 / SandWorm x1, Sandpede x1 (6.829s)
-    Step  66: 19 / Basilisk x1, Turtle x1 (7.110s)
-    Step  75: 20 / Basilisk x1, Turtle x1 (7.110s)
-Antlion's Nest                                            Seed:  89   Index:  90
-Battle: Antlion                                           Seed:  89   Index: 104
-Antlion's Nest                                            Seed:  89   Index: 104
-  Step  13: 21 / Cream x4 (7.523s)
-Antlion B2F Outward Direct                                Seed:  89   Index: 119
-  Antlion B2F                                             Seed:  89   Index: 119
-Antlion B1F                                               Seed:  89   Index: 199
-  Step  14: 22 / Basilisk x1, Imp x3 (6.783s)
-Overworld (Damcyan)                                       Seed:  89   Index: 237
-Overworld (Kaipo)                                         Seed:  89   Index: 237
-Kaipo Revisited                                           Seed:  89   Index: 237
-Overworld (Kaipo)                                         Seed:  89   Index: 237
-Overworld (Damcyan)                                       Seed:  89   Index: 237
-Mt.Hobs-West                                              Seed:  89   Index: 237
-  Step   8: 23 / Bomb x3 (7.915s)
-  Step  31: 24 / GrayBomb x2, Bomb x2 (8.609s)
-Mt.Hobs Summit                                            Seed: 106   Index:  20
-Battle: MomBomb                                           Seed: 106   Index:  35
-Mt.Hobs Summit                                            Seed: 106   Index:  35
-Mt.Hobs-East                                              Seed: 106   Index:  41
-  Step  21: 25 / Gargoyle x2 (7.630s)
-Overworld (Fabul)                                         Seed: 106   Index:  87
-  Step   4: 26 / GrayBomb x2, Bomb x2 (8.808s)
-  Step  28: 27 / Imp Cap. x3, Needler x3 (8.555s)
-  Step  29: 28 / Imp Cap. x3, Needler x3 (8.555s)
-  Step  49: 29 / Imp Cap. x3, Needler x3 (8.555s)
-  Step  60: 30 / Imp Cap. x4, Imp x2 (8.467s)
-Fabul                                                     Seed: 106   Index: 171
+  Extra Steps: 40
+Overworld (Damcyan)                                       Seed:  89   Index:  12
+Antlion B1F                                               Seed:  89   Index:  12
+  Step   8: 14 / Turtle x1, Imp x2 (7.044s)
+  Step  20: 15 / Turtle x2 (7.487s)
+Antlion B2F Inward Direct                                 Seed:  89   Index:  50
+  Antlion B2F                                             Seed:  89   Index:  50
+    Step  26: 16 / Basilisk x1, Imp x3 (6.775s)
+    Step  35: 17 / Weeper x2 (7.114s)
+    Step  67: 18 / SandWorm x1, Sandpede x1 (6.829s)
+Antlion's Nest                                            Seed:  89   Index: 130
+Battle: Antlion                                           Seed:  89   Index: 144
+Antlion's Nest                                            Seed:  89   Index: 144
+Antlion B2F Outward Direct                                Seed:  89   Index: 159
+  Antlion B2F                                             Seed:  89   Index: 159
+    Step  54: 19 / Basilisk x1, Turtle x1 (7.124s)
+Antlion B1F                                               Seed:  89   Index: 239
+  Step   6: 20 / Basilisk x1, Imp x3 (6.783s)
+  Step  29: 21 / Imp x3 (6.648s)
+Overworld (Damcyan)                                       Seed: 106   Index:  21
+Overworld (Kaipo)                                         Seed: 106   Index:  21
+Kaipo Revisited                                           Seed: 106   Index:  21
+Overworld (Kaipo)                                         Seed: 106   Index:  21
+Overworld (Damcyan)                                       Seed: 106   Index:  21
+Mt.Hobs-West                                              Seed: 106   Index:  21
+Mt.Hobs Summit                                            Seed: 106   Index:  60
+  Step   2: 22 / Cocktric x3 (7.813s)
+Battle: MomBomb                                           Seed: 106   Index:  75
+Mt.Hobs Summit                                            Seed: 106   Index:  75
+Mt.Hobs-East                                              Seed: 106   Index:  81
+  Step  34: 23 / Gargoyle x1, Cocktric x2 (7.868s)
+  Step  35: 24 / Gargoyle x2 (7.630s)
+Overworld (Fabul)                                         Seed: 106   Index: 127
+  Step   9: 25 / Imp Cap. x3, Needler x3 (8.555s)
+  Step  20: 26 / GrayBomb x2, Bomb x2 (8.808s)
+Fabul                                                     Seed: 106   Index: 211
   Optional Steps: 0
-Overworld (Fabul)                                         Seed: 106   Index: 231
-  Step   4: 31 / Imp Cap. x3, Needler x3 (8.499s)
-Fabul Boat and Leviatan                                   Seed: 106   Index: 238
-Overworld (Mysidia)                                       Seed: 106   Index: 238
-Mysidia                                                   Seed: 106   Index: 247
-Overworld (Mysidia)                                       Seed: 106   Index: 247
-Overworld (Mt.Ordeals)                                    Seed: 123   Index:   1
-  Step  22: 32 / SwordRat x2, Imp x2, TinyMage x2 (7.401s)
-  Step  48: 33 / Raven x1 (8.356s)
-  Step  58: 34 / Raven x1 (8.356s)
-  Step  79: 35 / Imp Cap. x4, Imp x2 (8.344s)
-  Step  85: 36 / Imp Cap. x3, Needler x1 (7.932s)
-  Step  87: 37 / Imp Cap. x4, Imp x2 (8.344s)
-Mt.Ordeals                                                Seed: 123   Index:  95
-Mt.Ordeals-3rd station                                    Seed: 123   Index: 138
-  Step  17: 38 / Zombie x2, Ghoul x2 (7.661s)
-Recruit Tellah                                            Seed: 123   Index: 161
-Mt.Ordeals-3rd station                                    Seed: 123   Index: 161
-Mt.Ordeals-7th station                                    Seed: 123   Index: 166
-  Step   3: 39 / Soul x2, Ghoul x2, Revenant x2 (10.367s)
-  Step  11: 40 / Ghoul x2, Soul x2 (9.197s)
-Mt.Ordeals Summit                                         Seed: 123   Index: 208
+Overworld (Fabul)                                         Seed: 123   Index:  15
+Fabul Boat and Leviatan                                   Seed: 123   Index:  22
+Overworld (Mysidia)                                       Seed: 123   Index:  22
+  Step   1: 27 / SwordRat x2, Imp x2, TinyMage x2 (7.462s)
+Mysidia                                                   Seed: 123   Index:  31
+Overworld (Mysidia)                                       Seed: 123   Index:  31
+Overworld (Mt.Ordeals)                                    Seed: 123   Index:  41
+  Step   8: 28 / SwordRat x2, Imp x2, TinyMage x2 (7.401s)
+  Step  18: 29 / SwordRat x2, Imp x2, TinyMage x2 (7.401s)
+  Step  39: 30 / Imp Cap. x3, Needler x1 (7.932s)
+  Step  45: 31 / SwordRat x2, Imp x2, TinyMage x2 (7.401s)
+  Step  47: 32 / SwordRat x2, Imp x2, TinyMage x2 (7.401s)
+Mt.Ordeals                                                Seed: 123   Index: 135
+  Step  20: 33 / Spirit x2, Skelton x2 (8.285s)
+  Step  34: 34 / Spirit x2, Skelton x2 (8.285s)
+  Step  42: 35 / Spirit x3, Soul x1 (8.687s)
+Mt.Ordeals-3rd station                                    Seed: 123   Index: 178
+Recruit Tellah                                            Seed: 123   Index: 201
+Mt.Ordeals-3rd station                                    Seed: 123   Index: 201
+Mt.Ordeals-7th station                                    Seed: 123   Index: 206
+  Step   3: 36 / Zombie x3, Ghoul x2, Revenant x2 (7.869s)
+Mt.Ordeals Summit                                         Seed: 123   Index: 248
   Optional Steps: 0
-  Step   1: 41 / Lilith x1, Red Bone x2 (8.912s)
-Battle: Milon and Milon Z                                 Seed: 123   Index: 225
-Mt.Ordeals Summit                                         Seed: 123   Index: 225
-Paladin                                                   Seed: 123   Index: 229
-Mt.Ordeals Summit                                         Seed: 123   Index: 229
+Battle: Milon and Milon Z                                 Seed: 140   Index:   9
+Mt.Ordeals Summit                                         Seed: 140   Index:   9
+Paladin                                                   Seed: 140   Index:  13
+Mt.Ordeals Summit                                         Seed: 140   Index:  13
   Optional Steps: 0
-Mt.Ordeals-7th station                                    Seed: 123   Index: 251
-  Step  19: 42 / Lilith x1, Red Bone x2 (8.437s)
-Mt.Ordeals-3rd station                                    Seed: 140   Index:  37
-Mt.Ordeals                                                Seed: 140   Index:  67
-  Step   4: 43 / Soul x2, Red Bone x2 (8.881s)
-  Step  43: 44 / Red Bone x1, Skelton x3 (7.844s)
-Overworld (Mt.Ordeals)                                    Seed: 140   Index: 111
-Take Chocobo to Mysidia                                   Seed: 140   Index: 124
-Overworld (Mysidia)                                       Seed: 140   Index: 124
-Town of Baron Serpent Road                                Seed: 140   Index: 124
-Old Water-way                                             Seed: 140   Index: 128
-  Step  24: 45 / Crocdile x1, ElecFish x3 (10.343s)
-  Step  40: 46 / Crocdile x1, ElecFish x3 (10.343s)
-  Step  70: 47 / AquaWorm x1, Piranha x3 (9.542s)
-Castle Baron B3F                                          Seed: 140   Index: 218
-  Step  20: 48 / FangShel x3, Aligator x1, Crocdile x1 (14.265s)
-  Step  22: 49 / Hydra x2 (7.986s)
-Castle Baron B2F                                          Seed: 157   Index:  16
-  Step   9: 50 / AquaWorm x2 (8.305s)
-Castle Baron B1F Inward Direct                            Seed: 157   Index:  42
-  Castle Baron B1F                                        Seed: 157   Index:  42
-Castle Baron                                              Seed: 157   Index:  63
-Battle: Kainazzo                                          Seed: 157   Index:  77
-Overworld (Toroia)                                        Seed: 157   Index:  77
-Toroian Castle                                            Seed: 157   Index:  78
+  Step   1: 37 / Soul x2, Ghoul x2, Revenant x2 (9.991s)
+Mt.Ordeals-7th station                                    Seed: 140   Index:  35
+  Step  36: 38 / Zombie x3, Ghoul x2, Revenant x2 (7.923s)
+Mt.Ordeals-3rd station                                    Seed: 140   Index:  77
+Mt.Ordeals                                                Seed: 140   Index: 107
+  Step   3: 39 / Spirit x3, Soul x1 (8.429s)
+Overworld (Mt.Ordeals)                                    Seed: 140   Index: 151
+  Step   1: 40 / Raven x1 (8.065s)
+Take Chocobo to Mysidia                                   Seed: 140   Index: 164
+Overworld (Mysidia)                                       Seed: 140   Index: 164
+Town of Baron Serpent Road                                Seed: 140   Index: 164
+Old Water-way                                             Seed: 140   Index: 168
+  Step  30: 41 / Piranha x2, ElecFish x2 (8.877s)
+  Step  70: 42 / Piranha x2, ElecFish x2 (8.877s)
+  Step  72: 43 / Piranha x2, ElecFish x2 (8.877s)
+Castle Baron B3F                                          Seed: 157   Index:   2
+  Step  23: 44 / FangShel x3, Aligator x1, Crocdile x1 (14.265s)
+Castle Baron B2F                                          Seed: 157   Index:  56
+Castle Baron B1F Inward Direct                            Seed: 157   Index:  82
+  Castle Baron B1F                                        Seed: 157   Index:  82
+Castle Baron                                              Seed: 157   Index: 103
+Battle: Kainazzo                                          Seed: 157   Index: 117
+Overworld (Toroia)                                        Seed: 157   Index: 117
+Toroian Castle                                            Seed: 157   Index: 118
   Optional Steps: 0
-Overworld (Toroia)                                        Seed: 157   Index:  89
+Overworld (Toroia)                                        Seed: 157   Index: 129
   Optional Steps: 0
-  Step  16: 51 / StingRat x3, Treant x2 (9.825s)
-  Step  19: 52 / StingRat x3, Treant x2 (9.825s)
-Black Chocobo to Cave Magnes                              Seed: 157   Index: 126
-Overworld (Toroia)                                        Seed: 157   Index: 126
-Cave Magnes B1F                                           Seed: 157   Index: 127
-  Step  27: 53 / Python x1, StingRat x2 (8.525s)
-  Step  46: 54 / Python x1, StingRat x2 (8.525s)
-  Step  58: 55 / Python x1, StingRat x2 (8.525s)
-Cave Magnes B2F                                           Seed: 157   Index: 195
-  Step  16: 56 / Ogre x3 (8.586s)
-Cave Magnes B3F Inward Direct                             Seed: 157   Index: 236
-  Cave Magnes B3F                                         Seed: 157   Index: 236
-    Step  12: 57 / Panther x2 (8.033s)
-    Step  24: 58 / Panther x2 (8.033s)
-    Step  62: 59 / Ogre x3 (8.586s)
-Cave Magnes B3F Passage                                   Seed: 174   Index:  50
-Cave Magnes B4F Inward Direct                             Seed: 174   Index:  61
-  Cave Magnes B4F                                         Seed: 174   Index:  61
-Battle: Dark Elf                                          Seed: 174   Index:  91
-Overworld (Toroia)                                        Seed: 174   Index:  91
-Black Chocobo to Toroia                                   Seed: 174   Index:  93
-Overworld (Toroia)                                        Seed: 174   Index:  93
-  Step   2: 60 / Cannibal x1, Treant x2 (8.738s)
-Toroian Castle 1F Inward Direct                           Seed: 174   Index: 114
-  Toroian Castle 1F                                       Seed: 174   Index: 114
-Overworld (Toroia)                                        Seed: 174   Index: 114
+  Step  25: 45 / Panther x1, StingRat x3 (9.204s)
+Black Chocobo to Cave Magnes                              Seed: 157   Index: 166
+Overworld (Toroia)                                        Seed: 157   Index: 166
+Cave Magnes B1F                                           Seed: 157   Index: 167
+  Step   6: 46 / Panther x2 (8.033s)
+  Step  18: 47 / Mage x2 (8.585s)
+  Step  44: 48 / Python x1, StingRat x2 (8.525s)
+Cave Magnes B2F                                           Seed: 157   Index: 235
+  Step  13: 49 / Ogre x1, Panther x2 (8.591s)
+  Step  25: 50 / Mage x2 (8.585s)
+Cave Magnes B3F Inward Direct                             Seed: 174   Index:  20
+  Cave Magnes B3F                                         Seed: 174   Index:  20
+    Step  22: 51 / CaveNaga x1, Python x2 (8.779s)
+Cave Magnes B3F Passage                                   Seed: 174   Index:  90
+  Step   5: 52 / Panther x2, Ogre x2 (8.977s)
+Cave Magnes B4F Inward Direct                             Seed: 174   Index: 101
+  Cave Magnes B4F                                         Seed: 174   Index: 101
+    Step  21: 53 / VampGirl x1, Cave Bat x3 (9.492s)
+Battle: Dark Elf                                          Seed: 174   Index: 131
+Overworld (Toroia)                                        Seed: 174   Index: 131
+Black Chocobo to Toroia                                   Seed: 174   Index: 133
+Overworld (Toroia)                                        Seed: 174   Index: 133
+Toroian Castle 1F Inward Extra Steps Area Steps           Seed: 174   Index: 154
+  Toroian Castle 1F                                       Seed: 174   Index: 154
+    Optional Steps: 3
+    Extra Steps: 20
+Overworld (Toroia)                                        Seed: 174   Index: 178
   Optional Steps: 0
-Tower of Zot 1F                                           Seed: 174   Index: 115
-  Step   7: 61 / Centaur x1, IceBeast x2 (10.314s)
-Tower of Zot 2F                                           Seed: 174   Index: 153
-  Step  12: 62 / Centaur x1, IceBeast x2 (10.314s)
-  Step  17: 63 / Marion (summons Puppet) x1, Puppet x2 (9.023s)
-  Step  23: 64 / Ice Liz x1, Slime x3 (9.423s)
-Battle: FlameDog                                          Seed: 174   Index: 205
-Tower of Zot 2F                                           Seed: 174   Index: 205
-  Step  14: 65 / Centaur x3 (8.469s)
-Tower of Zot 3F                                           Seed: 174   Index: 222
-  Step  52: 66 / Ice Liz x1, Slime x3 (9.423s)
-  Step  74: 67 / SwordMan x2 (12.756s)
-Tower of Zot 4F                                           Seed: 191   Index:  52
-  Step  11: 68 / Centaur x2, IceBeast x2 (10.289s)
-  Step  52: 69 / EpeeGirl x2, SwordMan x2 (13.284s)
-Tower of Zot 5F                                           Seed: 191   Index: 112
-Battle: Magus Sisters                                     Seed: 191   Index: 135
-Tower of Zot 5F                                           Seed: 191   Index: 135
-Tower of Zot 6F                                           Seed: 191   Index: 136
-Battle: Valvalis                                          Seed: 191   Index: 150
-Castle Baron                                              Seed: 191   Index: 150
-Fly to Agart                                              Seed: 191   Index: 169
-Overworld (Eblan)                                         Seed: 191   Index: 169
-Underworld (Castle of Dwarves)                            Seed: 191   Index: 170
+Tower of Zot 1F                                           Seed: 174   Index: 179
+Tower of Zot 2F                                           Seed: 174   Index: 217
+  Step   2: 54 / Centaur x1, IceBeast x2 (10.314s)
+Battle: FlameDog                                          Seed: 191   Index:  13
+Tower of Zot 2F                                           Seed: 191   Index:  13
+  Step   5: 55 / Centaur x1, IceBeast x2 (10.314s)
+Tower of Zot 3F                                           Seed: 191   Index:  30
+  Step  10: 56 / SwordMan x2 (12.756s)
+  Step  33: 57 / Ice Liz x1, Slime x3 (9.423s)
+  Step  74: 58 / Ice Liz x1, Slime x3 (9.423s)
+Tower of Zot 4F                                           Seed: 191   Index: 116
+Tower of Zot 5F                                           Seed: 191   Index: 176
+  Step   8: 59 / Witch x1, EpeeGirl x2 (9.664s)
+  Step  15: 60 / Jelly x1, Slime x2, Cream x1 (7.808s)
+Battle: Magus Sisters                                     Seed: 191   Index: 199
+Tower of Zot 5F                                           Seed: 191   Index: 199
+Tower of Zot 6F                                           Seed: 191   Index: 200
+Battle: Valvalis                                          Seed: 191   Index: 214
+Castle Baron                                              Seed: 191   Index: 214
+Fly to Agart                                              Seed: 191   Index: 233
+Overworld (Eblan)                                         Seed: 191   Index: 233
+Underworld (Castle of Dwarves)                            Seed: 191   Index: 234
 
-Encounter Time:      582.987s
-Other Time:          758.484s
-Total Time:          1341.471s
+Encounter Time:      490.704s
+Other Time:          775.523s
+Total Time:          1266.227s
 
 Base Total Time:     1341.471s
-Time Saved:          0.000s
+Time Saved:          75.244s
 
-Optional Steps:      0
-Extra Steps:         0
-Encounters:          69
+Optional Steps:      3
+Extra Steps:         60
+Encounters:          60
 
 Base Encounters:     69
-Encounters Saved:    0
+Encounters Saved:    9
 
 Number of Variables: 89

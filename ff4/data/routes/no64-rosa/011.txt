@@ -3,11 +3,11 @@ VERSION	22
 ROSA	v1.1.0-13-g6984184
 SEED	11
 MAXSTEP	256
-MAXSEG	2
+MAXSEG	3
 TASMODE	0
 MINIMUM	1
-FRAMES	171305811
-VARS	C310700:1 E302500:76 C30CA01:1 C303C00:1 E30BD00:1
+FRAMES	170686720
+VARS	C310700:1 C307800:1 E302600:18 C30CA01:1 C303C00:1 E30BD00:110 E307B00:54
 
 Overworld (Kaipo)                                         Seed:  11   Index:   0
 Overworld (Kaipo)                                         Seed:  11   Index:   1
@@ -44,361 +44,369 @@ Overworld (Kaipo)                                         Seed:  28   Index: 206
 Overworld (Damcyan)                                       Seed:  28   Index: 217
 Damcyan                                                   Seed:  28   Index: 221
   Optional Steps: 0
-  Extra Steps: 76
-Overworld (Damcyan)                                       Seed:  45   Index:  48
-Antlion B1F                                               Seed:  45   Index:  48
-  Step  10: 13 / Basilisk x1, Imp x3 (6.775s)
-  Step  13: 14 / Imp x3 (6.649s)
-  Step  25: 15 / Cream x4 (7.552s)
-Antlion B2F Inward Direct                                 Seed:  45   Index:  86
-  Antlion B2F                                             Seed:  45   Index:  86
-    Step  39: 16 / Weeper x2 (7.114s)
-Antlion's Nest                                            Seed:  45   Index: 166
-Battle: Antlion                                           Seed:  45   Index: 180
-Antlion's Nest                                            Seed:  45   Index: 180
-Antlion B2F Outward Direct                                Seed:  45   Index: 195
-  Antlion B2F                                             Seed:  45   Index: 195
-    Step   8: 17 / Turtle x2 (7.464s)
-    Step  41: 18 / Weeper x1, Turtle x1, Basilisk x1 (7.339s)
-Antlion B1F                                               Seed:  62   Index:  19
-  Step   5: 19 / Turtle x1, Imp x2 (7.009s)
-  Step   9: 20 / Imp x3, Imp Cap. x1 (6.753s)
-Overworld (Damcyan)                                       Seed:  62   Index:  57
-Overworld (Kaipo)                                         Seed:  62   Index:  57
-Kaipo Revisited                                           Seed:  62   Index:  57
-Overworld (Kaipo)                                         Seed:  62   Index:  57
-Overworld (Damcyan)                                       Seed:  62   Index:  57
-Mt.Hobs-West                                              Seed:  62   Index:  57
-  Step  11: 21 / Cocktric x3 (7.813s)
-  Step  21: 22 / Gargoyle x1, Cocktric x2 (7.915s)
-Mt.Hobs Summit                                            Seed:  62   Index:  96
-  Step   3: 23 / Spirit x2 (7.616s)
-Battle: MomBomb                                           Seed:  62   Index: 111
-Mt.Hobs Summit                                            Seed:  62   Index: 111
-Mt.Hobs-East                                              Seed:  62   Index: 117
-  Step   7: 24 / Gargoyle x1, Cocktric x2 (7.868s)
-Overworld (Fabul)                                         Seed:  62   Index: 163
-  Step  69: 25 / GrayBomb x2, Bomb x2 (8.808s)
-Fabul                                                     Seed:  62   Index: 247
+Overworld (Damcyan)                                       Seed:  28   Index: 228
+Antlion B1F                                               Seed:  28   Index: 228
+  Step  11: 13 / Basilisk x1, Imp x3 (6.775s)
+  Step  25: 14 / Imp x3 (6.649s)
+Antlion B2F Inward Charm Room Steps                       Seed:  45   Index:  10
+  Antlion B2F                                             Seed:  45   Index:  10
+    Step  16: 15 / Weeper x1, Turtle x1, Basilisk x1 (7.385s)
+  Antlion B2F Treasure Room                               Seed:  45   Index:  43
+    Extra Steps: 54
+  Antlion B2F                                             Seed:  45   Index:  97
+    Step  28: 16 / Weeper x2 (7.114s)
+Antlion's Nest                                            Seed:  45   Index: 149
+Battle: Antlion                                           Seed:  45   Index: 163
+Antlion's Nest                                            Seed:  45   Index: 163
+Antlion B2F Outward Direct                                Seed:  45   Index: 178
+  Antlion B2F                                             Seed:  45   Index: 178
+    Step  25: 17 / Turtle x2 (7.464s)
+    Step  58: 18 / Weeper x1, Turtle x1, Basilisk x1 (7.339s)
+Antlion B1F                                               Seed:  62   Index:   2
+  Step  22: 19 / Turtle x1, Imp x2 (7.009s)
+  Step  26: 20 / Imp x3, Imp Cap. x1 (6.753s)
+Overworld (Damcyan)                                       Seed:  62   Index:  40
+Overworld (Kaipo)                                         Seed:  62   Index:  40
+Kaipo Revisited                                           Seed:  62   Index:  40
+Overworld (Kaipo)                                         Seed:  62   Index:  40
+Overworld (Damcyan)                                       Seed:  62   Index:  40
+Mt.Hobs-West                                              Seed:  62   Index:  40
+  Step  28: 21 / Cocktric x3 (7.813s)
+  Step  38: 22 / Gargoyle x1, Cocktric x2 (7.915s)
+Mt.Hobs Summit                                            Seed:  62   Index:  79
+Battle: MomBomb                                           Seed:  62   Index:  94
+Mt.Hobs Summit                                            Seed:  62   Index:  94
+  Step   5: 23 / Spirit x2 (7.652s)
+Mt.Hobs-East                                              Seed:  62   Index: 100
+  Step  24: 24 / Gargoyle x1, Cocktric x2 (7.868s)
+Overworld (Fabul)                                         Seed:  62   Index: 146
+Fabul                                                     Seed:  62   Index: 230
+  Optional Steps: 10
+  Extra Steps: 8
+Overworld (Fabul)                                         Seed:  79   Index:  52
+Fabul Boat and Leviatan                                   Seed:  79   Index:  59
+Overworld (Mysidia)                                       Seed:  79   Index:  59
+Mysidia                                                   Seed:  79   Index:  68
+Overworld (Mysidia)                                       Seed:  79   Index:  68
+Overworld (Mt.Ordeals)                                    Seed:  79   Index:  78
+  Step  40: 25 / Needler x2, SwordRat x2 (8.097s)
+  Step  49: 26 / Imp Cap. x3, Needler x1 (7.932s)
+Mt.Ordeals                                                Seed:  79   Index: 172
+  Step  23: 27 / Lilith x1, Red Bone x2 (9.259s)
+Mt.Ordeals-3rd station                                    Seed:  79   Index: 215
+  Step  14: 28 / Zombie x3, Ghoul x2, Revenant x2 (8.005s)
+Recruit Tellah                                            Seed:  79   Index: 238
+Mt.Ordeals-3rd station                                    Seed:  79   Index: 238
+Mt.Ordeals-7th station                                    Seed:  79   Index: 243
+  Step   4: 29 / Lilith x1 (8.745s)
+  Step  33: 30 / Ghoul x2, Soul x2 (9.197s)
+Mt.Ordeals Summit                                         Seed:  96   Index:  29
   Optional Steps: 0
-Overworld (Fabul)                                         Seed:  79   Index:  51
-Fabul Boat and Leviatan                                   Seed:  79   Index:  58
-Overworld (Mysidia)                                       Seed:  79   Index:  58
-Mysidia                                                   Seed:  79   Index:  67
-Overworld (Mysidia)                                       Seed:  79   Index:  67
-Overworld (Mt.Ordeals)                                    Seed:  79   Index:  77
-  Step  41: 26 / Imp Cap. x3, Needler x1 (7.932s)
-  Step  50: 27 / Raven x1, Cocktric x3 (9.100s)
-Mt.Ordeals                                                Seed:  79   Index: 171
-  Step  24: 28 / Skelton x3, Red Bone x2 (8.244s)
-Mt.Ordeals-3rd station                                    Seed:  79   Index: 214
-  Step  15: 29 / Zombie x3, Ghoul x2, Revenant x2 (8.005s)
-Recruit Tellah                                            Seed:  79   Index: 237
-Mt.Ordeals-3rd station                                    Seed:  79   Index: 237
-Mt.Ordeals-7th station                                    Seed:  79   Index: 242
-  Step   5: 30 / Ghoul x2, Soul x2 (9.197s)
-  Step  34: 31 / Lilith x1 (8.745s)
-Mt.Ordeals Summit                                         Seed:  96   Index:  28
+  Step  10: 31 / Lilith x1 (8.745s)
+Battle: Milon and Milon Z                                 Seed:  96   Index:  46
+Mt.Ordeals Summit                                         Seed:  96   Index:  46
+  Step   4: 32 / Soul x3, Ghoul x1, Revenant x1 (9.512s)
+Paladin                                                   Seed:  96   Index:  50
+Mt.Ordeals Summit                                         Seed:  96   Index:  50
   Optional Steps: 0
-  Step  11: 32 / Soul x3, Ghoul x1, Revenant x1 (9.933s)
-Battle: Milon and Milon Z                                 Seed:  96   Index:  45
-Mt.Ordeals Summit                                         Seed:  96   Index:  45
-Paladin                                                   Seed:  96   Index:  49
-Mt.Ordeals Summit                                         Seed:  96   Index:  49
+Mt.Ordeals-7th station                                    Seed:  96   Index:  72
+  Step  30: 33 / Lilith x1, Red Bone x2 (8.437s)
+Mt.Ordeals-3rd station                                    Seed:  96   Index: 114
+Mt.Ordeals                                                Seed:  96   Index: 144
+  Step   4: 34 / Spirit x3, Soul x1 (8.429s)
+  Step  37: 35 / Red Bone x1, Skelton x3 (7.844s)
+Overworld (Mt.Ordeals)                                    Seed:  96   Index: 188
+Take Chocobo to Mysidia                                   Seed:  96   Index: 201
+Overworld (Mysidia)                                       Seed:  96   Index: 201
+Town of Baron Serpent Road                                Seed:  96   Index: 201
+Old Water-way                                             Seed:  96   Index: 205
+  Step  25: 36 / Piranha x2, FangShel x1, EvilShel x1 (9.096s)
+  Step  68: 37 / Pike x3, Piranha x3 (8.025s)
+  Step  84: 38 / Piranha x2, FangShel x1, EvilShel x1 (9.096s)
+Castle Baron B3F                                          Seed: 113   Index:  39
+  Step  43: 39 / FangShel x3, Aligator x1, Crocdile x1 (14.265s)
+Castle Baron B2F                                          Seed: 113   Index:  93
+  Step  21: 40 / AquaWorm x1, Hydra x1, Crocdile x1 (10.151s)
+  Step  23: 41 / Hydra x2 (7.986s)
+Castle Baron B1F Inward Save Room Steps                   Seed: 113   Index: 119
+  Castle Baron B1F                                        Seed: 113   Index: 119
+  Castle Baron B1F Save Room                              Seed: 113   Index: 129
+  Castle Baron B1F                                        Seed: 113   Index: 129
+Castle Baron                                              Seed: 113   Index: 153
+Battle: Kainazzo                                          Seed: 113   Index: 167
+Overworld (Toroia)                                        Seed: 113   Index: 167
+Toroian Castle                                            Seed: 113   Index: 168
   Optional Steps: 0
-  Step   1: 33 / Lilith x1, Red Bone x2 (8.437s)
-Mt.Ordeals-7th station                                    Seed:  96   Index:  71
-  Step  31: 34 / Soul x2, Ghoul x2, Revenant x2 (9.991s)
-Mt.Ordeals-3rd station                                    Seed:  96   Index: 113
-Mt.Ordeals                                                Seed:  96   Index: 143
-  Step   5: 35 / Red Bone x1, Skelton x3 (7.844s)
-  Step  38: 36 / Spirit x2, Skelton x2 (8.065s)
-Overworld (Mt.Ordeals)                                    Seed:  96   Index: 187
-Take Chocobo to Mysidia                                   Seed:  96   Index: 200
-Overworld (Mysidia)                                       Seed:  96   Index: 200
-Town of Baron Serpent Road                                Seed:  96   Index: 200
-Old Water-way                                             Seed:  96   Index: 204
-  Step   1: 37 / Pike x3, Piranha x3 (8.025s)
-  Step  26: 38 / Piranha x2, FangShel x1, EvilShel x1 (9.096s)
-  Step  69: 39 / Pike x3, Piranha x3 (8.025s)
-  Step  85: 40 / Piranha x2, ElecFish x2 (8.877s)
-Castle Baron B3F                                          Seed: 113   Index:  38
-  Step  44: 41 / Crocdile x1, ElecFish x3 (10.343s)
-Castle Baron B2F                                          Seed: 113   Index:  92
-  Step  22: 42 / Hydra x2 (7.986s)
-  Step  24: 43 / Hydra x2 (7.986s)
-Castle Baron B1F Inward Save Room Steps                   Seed: 113   Index: 118
-  Castle Baron B1F                                        Seed: 113   Index: 118
-  Castle Baron B1F Save Room                              Seed: 113   Index: 128
-  Castle Baron B1F                                        Seed: 113   Index: 128
-Castle Baron                                              Seed: 113   Index: 152
-Battle: Kainazzo                                          Seed: 113   Index: 166
-Overworld (Toroia)                                        Seed: 113   Index: 166
-Toroian Castle                                            Seed: 113   Index: 167
+Overworld (Toroia)                                        Seed: 113   Index: 179
   Optional Steps: 0
-Overworld (Toroia)                                        Seed: 113   Index: 178
+Black Chocobo to Cave Magnes                              Seed: 113   Index: 216
+Overworld (Toroia)                                        Seed: 113   Index: 216
+Cave Magnes B1F                                           Seed: 113   Index: 217
+  Step   1: 42 / Ogre x1, Panther x2 (8.591s)
+  Step   9: 43 / Ogre x1, Panther x2 (8.591s)
+Cave Magnes B2F                                           Seed: 130   Index:  29
+  Step  17: 44 / Panther x2 (8.033s)
+Cave Magnes B3F Inward Direct                             Seed: 130   Index:  70
+  Cave Magnes B3F                                         Seed: 130   Index:  70
+    Step  10: 45 / Mage x2 (8.585s)
+    Step  20: 46 / Mage x2 (8.585s)
+    Step  42: 47 / Mage x2 (8.585s)
+Cave Magnes B3F Passage                                   Seed: 130   Index: 140
+Cave Magnes B4F Inward Direct                             Seed: 130   Index: 151
+  Cave Magnes B4F                                         Seed: 130   Index: 151
+    Step   9: 48 / VampGirl x1, Cave Bat x6 (11.715s)
+Battle: Dark Elf                                          Seed: 130   Index: 181
+Overworld (Toroia)                                        Seed: 130   Index: 181
+Black Chocobo to Toroia                                   Seed: 130   Index: 183
+Toroian Castle 1F Inward Direct                           Seed: 130   Index: 183
+  Toroian Castle 1F                                       Seed: 130   Index: 183
+Overworld (Toroia)                                        Seed: 130   Index: 183
   Optional Steps: 0
-Black Chocobo to Cave Magnes                              Seed: 113   Index: 215
-Overworld (Toroia)                                        Seed: 113   Index: 215
-Cave Magnes B1F                                           Seed: 113   Index: 216
-  Step   2: 44 / Panther x2 (8.033s)
-  Step  10: 45 / Ogre x2 (8.223s)
-Cave Magnes B2F                                           Seed: 130   Index:  28
-  Step  18: 46 / Ogre x3 (8.586s)
-Cave Magnes B3F Inward Direct                             Seed: 130   Index:  69
-  Cave Magnes B3F                                         Seed: 130   Index:  69
-    Step  11: 47 / Mage x2 (8.585s)
-    Step  21: 48 / VampGirl x1, Cave Bat x3 (9.492s)
-    Step  43: 49 / Cave Bat x3 (9.265s)
-Cave Magnes B3F Passage                                   Seed: 130   Index: 139
-Cave Magnes B4F Inward Direct                             Seed: 130   Index: 150
-  Cave Magnes B4F                                         Seed: 130   Index: 150
-    Step  10: 50 / VampGirl x2, Cave Bat x3 (10.064s)
-Battle: Dark Elf                                          Seed: 130   Index: 180
-Overworld (Toroia)                                        Seed: 130   Index: 180
-Black Chocobo to Toroia                                   Seed: 130   Index: 182
-Toroian Castle 1F Inward Direct                           Seed: 130   Index: 182
-  Toroian Castle 1F                                       Seed: 130   Index: 182
-Overworld (Toroia)                                        Seed: 130   Index: 182
-  Optional Steps: 0
-Tower of Zot 1F                                           Seed: 130   Index: 183
-  Step  25: 51 / Gremlin x2, Ice Liz x2 (9.444s)
-  Step  32: 52 / Gremlin x2, Ice Liz x2 (9.444s)
-Tower of Zot 2F                                           Seed: 130   Index: 221
-  Step  16: 53 / Jelly x1, Slime x2, Cream x1 (7.808s)
-Battle: FlameDog                                          Seed: 147   Index:  17
-Tower of Zot 2F                                           Seed: 147   Index:  17
-Tower of Zot 3F                                           Seed: 147   Index:  34
-  Step  11: 54 / SwordMan x1, Ice Liz x2 (10.462s)
-  Step  73: 55 / SwordMan x1, Ice Liz x2 (10.462s)
-  Step  76: 56 / Centaur x2, IceBeast x2 (10.289s)
-Tower of Zot 4F                                           Seed: 147   Index: 120
-  Step  22: 57 / Marion (summons Puppet) x1, Puppet x3 (9.426s)
-  Step  29: 58 / Marion (summons Puppet) x1, Puppet x3 (9.426s)
-  Step  54: 59 / Gremlin x2, Ice Liz x2 (9.444s)
-Tower of Zot 5F                                           Seed: 147   Index: 180
-Battle: Magus Sisters                                     Seed: 147   Index: 203
-Tower of Zot 5F                                           Seed: 147   Index: 203
-Tower of Zot 6F                                           Seed: 147   Index: 204
-Battle: Valvalis                                          Seed: 147   Index: 218
-Castle Baron                                              Seed: 147   Index: 218
-Fly to Agart                                              Seed: 147   Index: 237
-Overworld (Eblan)                                         Seed: 147   Index: 237
-Underworld (Castle of Dwarves)                            Seed: 147   Index: 238
-Castle of Dwarves Warp                                    Seed: 147   Index: 239
-  Castle of Dwarves                                       Seed: 147   Index: 239
+Tower of Zot 1F                                           Seed: 130   Index: 184
+  Step  24: 49 / Gremlin x2, Ice Liz x2 (9.444s)
+  Step  31: 50 / Centaur x3 (8.469s)
+Tower of Zot 2F                                           Seed: 130   Index: 222
+  Step  15: 51 / Ice Liz x1, Slime x3 (9.423s)
+Battle: FlameDog                                          Seed: 147   Index:  18
+Tower of Zot 2F                                           Seed: 147   Index:  18
+Tower of Zot 3F                                           Seed: 147   Index:  35
+  Step  10: 52 / Marion (summons Puppet) x1, Puppet x3 (9.426s)
+  Step  72: 53 / Witch x1, IceBeast x2, EpeeGirl x1 (11.309s)
+  Step  75: 54 / SwordMan x1, Ice Liz x2 (10.462s)
+Tower of Zot 4F                                           Seed: 147   Index: 121
+  Step  21: 55 / Gremlin x2, Ice Liz x2 (9.444s)
+  Step  28: 56 / EpeeGirl x2, SwordMan x2 (13.284s)
+  Step  53: 57 / Marion (summons Puppet) x1, Puppet x3 (9.426s)
+Tower of Zot 5F                                           Seed: 147   Index: 181
+Battle: Magus Sisters                                     Seed: 147   Index: 204
+Tower of Zot 5F                                           Seed: 147   Index: 204
+Tower of Zot 6F                                           Seed: 147   Index: 205
+Battle: Valvalis                                          Seed: 147   Index: 219
+Castle Baron                                              Seed: 147   Index: 219
+Fly to Agart                                              Seed: 147   Index: 238
+Overworld (Eblan)                                         Seed: 147   Index: 238
+Underworld (Castle of Dwarves)                            Seed: 147   Index: 239
+Castle of Dwarves Warp                                    Seed: 147   Index: 240
+  Castle of Dwarves                                       Seed: 147   Index: 240
     Optional Steps: 0
-Underworld (Castle of Dwarves)                            Seed: 164   Index:  91
-  Step  47: 60 / Dark Imp x4 (6.679s)
-  Step  98: 61 / BlackLiz x3 (6.787s)
-  Step 105: 62 / Tortoise x2, Armadilo x1, BlackLiz x1 (6.876s)
-  Step 113: 63 / Tortoise x1, Dark Imp x2 (6.727s)
-Tower of Bab-il 1F                                        Seed: 164   Index: 214
-Tower of Bab-il 2F                                        Seed: 164   Index: 232
-  Step  33: 64 / FlameMan x1, FlameDog x2 (7.375s)
-Tower of Bab-il 3F                                        Seed: 181   Index:  14
-  Step   7: 65 / FlameMan x1, FlameDog x2 (7.375s)
-  Step  27: 66 / FlameMan x1, FlameDog x2 (7.375s)
-Tower of Bab-il 4F                                        Seed: 181   Index:  72
-Tower of Bab-il 5F                                        Seed: 181   Index: 134
-  Step  53: 67 / Chimera x1 (9.065s)
-Tower of Bab-il 6F                                        Seed: 181   Index: 191
-  Step  11: 68 / Alert (summons Naga) x1 (7.238s)
-Tower of Bab-il 7F                                        Seed: 181   Index: 203
-  Step  31: 69 / Alert (summons Chimera) x1 (7.249s)
-Tower of Bab-il 8F                                        Seed: 181   Index: 246
-  Step   6: 70 / Tofu x4 (7.078s)
-Battle: Dr.Lugae                                          Seed: 198   Index:  15
-Tower of Bab-il 8F                                        Seed: 198   Index:  15
-  Step   4: 71 / Chimera x1, FlameDog x2 (6.996s)
-Tower of Bab-il 7F                                        Seed: 198   Index:  41
-Tower of Bab-il 6F                                        Seed: 198   Index:  85
-Tower of Bab-il 5F                                        Seed: 198   Index:  98
-  Step   5: 72 / Chimera x1, FlameMan x1 (8.594s)
-  Step   8: 73 / Chimera x1, FlameDog x2 (6.996s)
-  Step  11: 74 / BlackLiz x3 (6.947s)
-  Step  37: 75 / Chimera x1 (8.946s)
-Battle: Dark Imps                                         Seed: 198   Index: 140
-Tower of Bab-il 5F                                        Seed: 198   Index: 140
-  Step  16: 76 / Chimera x2 (8.882s)
-Tower of Bab-il 4F                                        Seed: 198   Index: 184
-  Step  37: 77 / Chimera x1 (10.965s)
-Tower of Bab-il 3F                                        Seed: 198   Index: 246
-  Step  32: 78 / Tortoise x2, BlackLiz x2 (10.078s)
-Tower of Bab-il 2F                                        Seed: 215   Index:  40
-Tower of Bab-il 1F                                        Seed: 215   Index:  78
-Travel to Baron                                           Seed: 215   Index:  93
-Overworld (Baron)                                         Seed: 215   Index:  93
-Castle Baron                                              Seed: 215   Index:  93
-Airship Hook                                              Seed: 215   Index: 106
-Overworld (Eblan)                                         Seed: 215   Index: 106
-Cave Eblana B1F                                           Seed: 215   Index: 107
-  Step  26: 79 / GiantBat x3, Cave Bat x3 (8.043s)
-  Step  32: 80 / Ironback x2, BlackLiz x2 (10.193s)
-Cave Eblana B2F                                           Seed: 215   Index: 149
+Underworld (Castle of Dwarves)                            Seed: 164   Index:  92
+  Step  46: 58 / Armadilo x2 (8.100s)
+  Step  97: 59 / Tortoise x2, Armadilo x1, BlackLiz x1 (6.876s)
+  Step 104: 60 / Dark Imp x4 (6.679s)
+  Step 112: 61 / BlackLiz x3 (6.787s)
+Tower of Bab-il 1F                                        Seed: 164   Index: 215
+Tower of Bab-il 2F                                        Seed: 164   Index: 233
+  Step  32: 62 / BlackLiz x3 (6.973s)
+Tower of Bab-il 3F                                        Seed: 181   Index:  15
+  Step   6: 63 / Tortoise x2, BlackLiz x1 (7.003s)
+  Step  26: 64 / BlackLiz x3 (6.973s)
+Tower of Bab-il 4F                                        Seed: 181   Index:  73
+Tower of Bab-il 5F                                        Seed: 181   Index: 135
+  Step  52: 65 / Chimera x1, Tofu x3 (7.080s)
+Tower of Bab-il 6F                                        Seed: 181   Index: 192
+  Step  10: 66 / Alert (summons Naga) x1 (7.238s)
+Tower of Bab-il 7F                                        Seed: 181   Index: 204
+  Step  30: 67 / Medusa x2 (8.230s)
+Tower of Bab-il 8F                                        Seed: 181   Index: 247
+  Step   5: 68 / Alert (summons Naga) x1 (7.238s)
+Battle: Dr.Lugae                                          Seed: 198   Index:  16
+Tower of Bab-il 8F                                        Seed: 198   Index:  16
+  Step   3: 69 / Alert (summons Chimera) x1 (7.188s)
+Tower of Bab-il 7F                                        Seed: 198   Index:  42
+Tower of Bab-il 6F                                        Seed: 198   Index:  86
+Tower of Bab-il 5F                                        Seed: 198   Index:  99
+  Step   4: 70 / BlackLiz x3 (6.947s)
+  Step   7: 71 / Chimera x1 (8.946s)
+  Step  10: 72 / Chimera x1, FlameMan x1 (8.594s)
+  Step  36: 73 / Chimera x1, FlameDog x2 (6.996s)
+Battle: Dark Imps                                         Seed: 198   Index: 141
+Tower of Bab-il 5F                                        Seed: 198   Index: 141
+  Step  15: 74 / BlackLiz x3 (9.244s)
+Tower of Bab-il 4F                                        Seed: 198   Index: 185
+  Step  36: 75 / Tortoise x2, BlackLiz x1 (9.348s)
+Tower of Bab-il 3F                                        Seed: 198   Index: 247
+  Step  31: 76 / BlackLiz x3 (9.086s)
+Tower of Bab-il 2F                                        Seed: 215   Index:  41
+Tower of Bab-il 1F                                        Seed: 215   Index:  79
+Travel to Baron                                           Seed: 215   Index:  94
+Overworld (Baron)                                         Seed: 215   Index:  94
+Castle Baron                                              Seed: 215   Index:  94
+Airship Hook                                              Seed: 215   Index: 107
+Overworld (Eblan)                                         Seed: 215   Index: 107
+Cave Eblana B1F                                           Seed: 215   Index: 108
+  Step  25: 77 / Skull x4 (10.637s)
+  Step  31: 78 / GiantBat x3, Cave Bat x3 (8.043s)
+Cave Eblana B2F                                           Seed: 215   Index: 150
   Optional Steps: 0
-Pass to Bab-il (south)                                    Seed: 215   Index: 205
-Pass to Bab-il (north)                                    Seed: 215   Index: 236
-  Step  23: 81 / Egg (Lamia) x1 (8.155s)
-Pass to Bab-il (south)                                    Seed: 232   Index:  13
-Pass to Bab-il (north) Inward Direct                      Seed: 232   Index:  77
-  Pass to Bab-il (north)                                  Seed: 232   Index:  77
-Recruit Edge                                              Seed: 232   Index:  99
-Remove Dwarf Axe before Q.Eblan/K.Eblan                   Seed: 232   Index:  99
-Pass to Bab-il (north)                                    Seed: 232   Index:  99
-Tower of Bab-il 1F                                        Seed: 232   Index: 102
-  Step  29: 82 / Mad Ogre x2 (7.060s)
-  Step  35: 83 / Balloon x3 (7.107s)
-  Step  48: 84 / Balloon x3 (7.107s)
-  Step  61: 85 / Sorcerer (summons Mad Ogre) x1, BladeMan x2 (7.158s)
-Tower of Bab-il B2F                                       Seed: 232   Index: 184
-  Step   6: 86 / Mad Ogre x1, BlackCat x1, Balloon x2 (7.166s)
-  Step   8: 87 / Egg (Lamia) x1 (7.601s)
-  Step  43: 88 / Sorcerer (summons BlackCat) x1, BladeMan x2 (7.153s)
-  Step  72: 89 / Egg (Lamia) x1 (7.601s)
-Tower of Bab-il B3F                                       Seed: 249   Index:   2
-Tower of Bab-il B4F                                       Seed: 249   Index:  15
-  Step  50: 90 / Balloon x3 (7.107s)
-Tower of Bab-il B3F                                       Seed: 249   Index:  82
-Tower of Bab-il B4F                                       Seed: 249   Index: 124
-  Step   2: 91 / Egg (Lamia) x1 (7.601s)
-Tower of Bab-il B5F                                       Seed: 249   Index: 127
-  Step   2: 92 / BladeMan x3 (7.162s)
-Battle: Rubicant                                          Seed: 249   Index: 154
-Equip Dwarf Axe When Removing Strength Ring               Seed: 249   Index: 154
-Tower of Bab-il B5F                                       Seed: 249   Index: 154
-Tower of Bab-il 8F (revisit)                              Seed: 249   Index: 155
-  Step   6: 93 / Sorcerer (summons Q.Lamia) x1, BlackCat x2 (7.202s)
-Tower of Bab-il 7F (revisit)                              Seed: 249   Index: 171
-  Step   8: 94 / Sorcerer (summons Ironman) x1, BlackCat x2 (7.232s)
-  Step  22: 95 / Sorcerer (summons Q.Lamia) x1, BlackCat x2 (7.202s)
-Tower of Bab-il 6F (revisit)                              Seed: 249   Index: 195
-  Step  30: 96 / Grudger x1, BlackCat x2, BladeMan x1 (7.305s)
-Fly to Castle of Dwarves                                  Seed: 249   Index: 245
-Underworld (Castle of Dwarves)                            Seed: 249   Index: 245
-Castle of Dwarves                                         Seed: 249   Index: 245
+Pass to Bab-il (south)                                    Seed: 215   Index: 206
+Pass to Bab-il (north)                                    Seed: 215   Index: 237
+  Step  22: 79 / Ironback x2, BlackLiz x2 (10.193s)
+Pass to Bab-il (south)                                    Seed: 232   Index:  14
+Pass to Bab-il (north) Inward Direct                      Seed: 232   Index:  78
+  Pass to Bab-il (north)                                  Seed: 232   Index:  78
+Recruit Edge                                              Seed: 232   Index: 100
+Remove Dwarf Axe before Q.Eblan/K.Eblan                   Seed: 232   Index: 100
+Pass to Bab-il (north)                                    Seed: 232   Index: 100
+Tower of Bab-il 1F                                        Seed: 232   Index: 103
+  Step  28: 80 / Balloon x3 (7.107s)
+  Step  34: 81 / Balloon x3 (7.107s)
+  Step  47: 82 / Mad Ogre x2 (7.060s)
+  Step  60: 83 / Balloon x3 (7.107s)
+Tower of Bab-il B2F                                       Seed: 232   Index: 185
+  Step   5: 84 / Egg (Lamia) x1 (7.601s)
+  Step   7: 85 / Balloon x4 (7.170s)
+  Step  42: 86 / Mad Ogre x1, BlackCat x1, Balloon x2 (7.166s)
+  Step  71: 87 / Egg (Lamia) x1 (7.601s)
+Tower of Bab-il B3F                                       Seed: 249   Index:   3
+Tower of Bab-il B4F                                       Seed: 249   Index:  16
+  Step  49: 88 / Sorcerer (summons Mad Ogre) x1, BladeMan x2 (7.158s)
+Tower of Bab-il B3F                                       Seed: 249   Index:  83
+Tower of Bab-il B4F                                       Seed: 249   Index: 125
+  Step   1: 89 / Egg (Lamia) x1 (7.601s)
+Tower of Bab-il B5F                                       Seed: 249   Index: 128
+  Step   1: 90 / Grudger x2 (7.073s)
+Battle: Rubicant                                          Seed: 249   Index: 155
+Equip Dwarf Axe When Removing Strength Ring               Seed: 249   Index: 155
+Tower of Bab-il B5F                                       Seed: 249   Index: 155
+Tower of Bab-il 8F (revisit)                              Seed: 249   Index: 156
+  Step   5: 91 / Egg (Lamia) x3, Q.Lamia x1 (7.867s)
+Tower of Bab-il 7F (revisit)                              Seed: 249   Index: 172
+  Step   7: 92 / Grudger x1, BlackCat x2, BladeMan x1 (7.305s)
+  Step  21: 93 / Sorcerer (summons Q.Lamia) x1, BlackCat x2 (7.202s)
+Tower of Bab-il 6F (revisit)                              Seed: 249   Index: 196
+  Step  29: 94 / Sorcerer (summons Ironman) x1, BlackCat x2 (7.232s)
+Fly to Castle of Dwarves                                  Seed: 249   Index: 246
+Underworld (Castle of Dwarves)                            Seed: 249   Index: 246
+Castle of Dwarves                                         Seed: 249   Index: 246
   Optional Steps: 0
-Underworld (Castle of Dwarves)                            Seed:  10   Index:  12
-  Step   1: 97 / Armadilo x2 (6.859s)
-Sealed Cave                                               Seed:  10   Index:  13
-Underworld (Tomra)                                        Seed:  10   Index:  20
-Return to Castle of Dwarves                               Seed:  10   Index:  21
-Castle of Dwarves                                         Seed:  10   Index:  21
-Underworld (Castle of Dwarves)                            Seed:  10   Index:  22
-Return to Mysidia                                         Seed:  10   Index:  23
-Overworld (Mysidia)                                       Seed:  10   Index:  23
-Fly to Lunar Path                                         Seed:  10   Index:  26
-Lunar Overworld                                           Seed:  10   Index:  26
-Lunar Path (west)                                         Seed:  10   Index:  31
-  Step   4: 98 / Red Worm x1, Procyote x1, Juclyote x1 (7.764s)
-Lunar Overworld                                           Seed:  10   Index:  69
-  Step  12: 99 / MoonCell x2, Pudding x2 (7.782s)
-Lunar Path (east)                                         Seed:  10   Index: 104
-Lunar Overworld                                           Seed:  10   Index: 135
-Recruit FuSoYa                                            Seed:  10   Index: 152
-Lunar Overworld                                           Seed:  10   Index: 152
-  Step   7: 100 / Juclyote x2, MoonCell x2, Grenade x1 (8.044s)
-Lunar Path (east)                                         Seed:  10   Index: 170
-  Step  12: 101 / Pudding x4 (7.951s)
-  Step  13: 102 / Pudding x4 (7.951s)
-Lunar Overworld                                           Seed:  10   Index: 201
-  Step  22: 103 / Procyote x1, Juclyote x2 (7.897s)
-Lunar Path (west)                                         Seed:  10   Index: 236
-  Step  19: 104 / Red Worm x1, Grenade x3 (7.786s)
-Lunar Overworld                                           Seed:  27   Index:  18
-Giant of Bab-il Mouth                                     Seed:  27   Index:  23
+Underworld (Castle of Dwarves)                            Seed:  10   Index:  13
+Sealed Cave                                               Seed:  10   Index:  14
+Underworld (Tomra)                                        Seed:  10   Index:  21
+Return to Castle of Dwarves                               Seed:  10   Index:  22
+Castle of Dwarves                                         Seed:  10   Index:  22
+Underworld (Castle of Dwarves)                            Seed:  10   Index:  23
+Return to Mysidia                                         Seed:  10   Index:  24
+Overworld (Mysidia)                                       Seed:  10   Index:  24
+Fly to Lunar Path                                         Seed:  10   Index:  27
+Lunar Overworld                                           Seed:  10   Index:  27
+Lunar Path (west)                                         Seed:  10   Index:  32
+  Step   3: 95 / Red Worm x2 (7.506s)
+Lunar Overworld                                           Seed:  10   Index:  70
+  Step  11: 96 / Slime x1, Tofu x1, Pudding x1 (7.440s)
+Lunar Path (east)                                         Seed:  10   Index: 105
+Lunar Overworld                                           Seed:  10   Index: 136
+Recruit FuSoYa                                            Seed:  10   Index: 153
+Lunar Overworld                                           Seed:  10   Index: 153
+  Step   6: 97 / MoonCell x2, Pudding x2 (7.923s)
+Lunar Path (east)                                         Seed:  10   Index: 171
+  Step  11: 98 / Pudding x2, Grenade x2 (7.914s)
+  Step  12: 99 / Pudding x2, Grenade x2 (7.914s)
+Lunar Overworld                                           Seed:  10   Index: 202
+  Step  21: 100 / Juclyote x2, MoonCell x2, Grenade x1 (8.044s)
+Lunar Path (west)                                         Seed:  10   Index: 237
+  Step  18: 101 / Red Worm x1, Grenade x3 (7.786s)
+Lunar Overworld                                           Seed:  27   Index:  19
+Giant of Bab-il Mouth                                     Seed:  27   Index:  24
   Optional Steps: 0
-Giant of Bab-il Neck                                      Seed:  27   Index:  41
-Giant of Bab-il Chest                                     Seed:  27   Index:  43
-  Step   9: 105 / Horseman x1, Beamer x2 (7.663s)
-  Step  17: 106 / Horseman x1, Beamer x2 (7.663s)
-  Step  24: 107 / Horseman x1, Beamer x2 (7.663s)
-  Step  49: 108 / Horseman x1, Beamer x1, Machine x1 (7.709s)
-  Step  53: 109 / Horseman x1, Beamer x2 (7.663s)
-Giant of Bab-il Stomach                                   Seed:  27   Index: 125
-Grind Fight Search                                        Seed:  27   Index: 174
-  Giant of Bab-il Passage                                 Seed:  27   Index: 174
-    Step  32: 110 / Searcher (summons D.Machin) x1, Beamer x2 (7.658s)
-   (Step  65: 111 / MacGiant x1, Machine x1, Beamer x1)
-   (Step  77: 112 / MacGiant x1, Machine x1, Beamer x1)
-   (Step  79: 113 / MacGiant x1, Machine x1, Beamer x1)
-   (Step 108: 114 / Searcher (summons Horseman) x1, Beamer x2)
-   (Step 129: 115 / MacGiant x1, Machine x1, Beamer x1)
-   (Step 140: 116 / MacGiant x1)
-   (Step 155: 117 / MacGiant x1)
-   (Step 176: 118 / MacGiant x1)
-   (Step 205: 119 / MacGiant x1)
-   (Step 207: 120 / MacGiant x1, Horseman x1, Beamer x1)
-  Giant of Bab-il Lung                                    Seed:  27   Index: 235
-    Step   4: 111 / Searcher (summons D.Machin) x1, Beamer x2 (7.634s)
-Battle: Elements                                          Seed:  27   Index: 243
-Giant of Bab-il Lung                                      Seed:  27   Index: 243
-Giant of Bab-il CPU                                       Seed:  27   Index: 250
-  Extra Steps: 1
-Return to Moon                                            Seed:  27   Index: 253
-Lunar Overworld                                           Seed:  27   Index: 253
-Lunar Path (west)                                         Seed:  44   Index:   2
-  Step  24: 112 / Balloon x2, Grenade x2 (7.736s)
-Lunar Overworld                                           Seed:  44   Index:  40
-  Step   7: 113 / Balloon x2, Grenade x2 (7.664s)
-  Step  18: 114 / MoonCell x2, Pudding x2 (7.792s)
-  Step  33: 115 / Balloon x2, Grenade x2 (7.664s)
-Lunar Path (east)                                         Seed:  44   Index:  75
-  Step  19: 116 / Red Worm x1, Procyote x1, Juclyote x1 (7.796s)
-Lunar Overworld                                           Seed:  44   Index: 106
-Lunar Subterrane B1                                       Seed:  44   Index: 123
-  Step   2: 117 / Warlock x1, Kary x1 (6.230s)
-Lunar Subterrane B2                                       Seed:  44   Index: 156
-Lunar Subterrane B3                                       Seed:  44   Index: 185
-Lunar Subterrane B4                                       Seed:  44   Index: 199
-  Step   4: 118 / King-Ryu x2 (6.597s)
-  Step  37: 119 / King-Ryu x2 (6.597s)
-Lunar Subterrane B4 Passage                               Seed:  44   Index: 255
-  Step  16: 120 / King-Ryu x1, Ging-Ryu x1 (6.611s)
-  Step  25: 121 / D.Fossil x1 (6.210s)
-Lunar Subterrane B4                                       Seed:  61   Index:  28
-Lunar Subterrane B5                                       Seed:  61   Index:  43
-  Step  10: 122 / Blue D. x2 (7.348s)
-Lunar Subterrane B5 Passage A                             Seed:  61   Index:  60
-  Step   8: 123 / King-Ryu x1 (6.565s)
-  Step  18: 124 / Tricker x1 (6.647s)
-Lunar Subterrane B5                                       Seed:  61   Index:  93
-  Step   6: 125 / King-Ryu x2 (6.597s)
-Lunar Subterrane B5 Passage B                             Seed:  61   Index: 102
-  Step  22: 126 / Tricker x1 (6.646s)
-Lunar Subterrane B5 Inward Direct                         Seed:  61   Index: 134
-  Lunar Subterrane B5                                     Seed:  61   Index: 134
-Lunar Subterrane B6                                       Seed:  61   Index: 146
-Lunar Subterrane B6 Passage                               Seed:  61   Index: 183
-Lunar Subterrane B7 Inward Direct                         Seed:  61   Index: 196
-  Lunar Subterrane B7                                     Seed:  61   Index: 196
-    Step  36: 127 / D.Fossil x1 (6.210s)
-    Step  53: 128 / King-Ryu x1, Ging-Ryu x1 (6.611s)
-    Step  61: 129 / D.Fossil x1 (6.210s)
-    Step  70: 130 / D.Fossil x1 (6.210s)
-Lunar Core B1                                             Seed:  78   Index:  20
-  Step  28: 131 / EvilMask x1 (12.170s)
-  Step  57: 132 / EvilMask x1 (12.170s)
-Lunar Core B2                                             Seed:  78   Index:  88
-  Step  30: 133 / EvilMask x1 (12.170s)
-  Step  39: 134 / EvilMask x1 (12.170s)
-Lunar Core B3                                             Seed:  78   Index: 143
-  Step  52: 135 / Red D. x3 (14.544s)
-Lunar Core B4                                             Seed:  78   Index: 199
-  Step  48: 136 / Breath x1 (11.914s)
+Giant of Bab-il Neck                                      Seed:  27   Index:  42
+Giant of Bab-il Chest                                     Seed:  27   Index:  44
+  Step   8: 102 / Machine x2, Beamer x2 (7.818s)
+  Step  16: 103 / Searcher (summons MacGiant) x1 (7.400s)
+  Step  23: 104 / Machine x2, Beamer x2 (7.818s)
+  Step  48: 105 / Horseman x1, Beamer x2 (7.663s)
+  Step  52: 106 / Horseman x1, Beamer x2 (7.663s)
+Giant of Bab-il Stomach                                   Seed:  27   Index: 126
+Grind Fight Search                                        Seed:  27   Index: 175
+  Giant of Bab-il Passage                                 Seed:  27   Index: 175
+    Step  31: 107 / Horseman x1, Machine x2 (7.724s)
+   (Step  64: 108 / MacGiant x1, Machine x1, Beamer x1)
+   (Step  76: 109 / Horseman x1, Machine x2)
+   (Step  78: 110 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 107: 111 / MacGiant x1, Machine x1, Beamer x1)
+   (Step 128: 112 / MacGiant x1, Machine x1, Beamer x1)
+   (Step 139: 113 / MacGiant x1, Machine x1, Beamer x1)
+   (Step 154: 114 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 175: 115 / MacGiant x1, Machine x1, Beamer x1)
+   (Step 204: 116 / MacGiant x1)
+   (Step 206: 117 / MacGiant x1)
+  Giant of Bab-il Lung                                    Seed:  27   Index: 236
+    Step   3: 108 / Searcher (summons D.Machin) x1, Beamer x2 (7.658s)
+   (Step  15: 109 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step  17: 110 / Beamer x1, Machine x2, Horseman x1)
+   (Step  46: 111 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step  67: 112 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step  78: 113 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step  93: 114 / Machine x3, Beamer x2)
+   (Step 114: 115 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 143: 116 / MacGiant x2)
+   (Step 145: 117 / MacGiant x2)
+   (Step 223: 118 / MacGiant x2)
+   (Step 256: 119 / MacGiant x2)
+Battle: Elements                                          Seed:  27   Index: 244
+Giant of Bab-il Lung                                      Seed:  27   Index: 244
+  Step   7: 109 / Searcher (summons Horseman) x1, Beamer x2 (7.625s)
+Giant of Bab-il CPU                                       Seed:  27   Index: 251
+  Extra Steps: 110
+Return to Moon                                            Seed:  44   Index: 107
+Lunar Overworld                                           Seed:  44   Index: 107
+Lunar Path (west)                                         Seed:  44   Index: 112
+  Step  13: 110 / Red Worm x1, Grenade x3 (7.746s)
+Lunar Overworld                                           Seed:  44   Index: 150
+Lunar Path (east)                                         Seed:  44   Index: 185
+  Step  18: 111 / Juclyote x1, Procyote x2 (7.797s)
+Lunar Overworld                                           Seed:  44   Index: 216
+Lunar Subterrane B1                                       Seed:  44   Index: 233
+  Step   3: 112 / RedGiant x1 (6.566s)
+Lunar Subterrane B2                                       Seed:  61   Index:  10
+  Step  14: 113 / Warlock x1, Kary x1, RedGiant x1 (6.293s)
+Lunar Subterrane B3                                       Seed:  61   Index:  39
+Lunar Subterrane B4                                       Seed:  61   Index:  53
+  Step  15: 114 / D.Bone x1 (6.178s)
+  Step  25: 115 / D.Bone x1, Warlock x1 (6.199s)
+  Step  46: 116 / King-Ryu x2 (6.597s)
+Lunar Subterrane B4 Passage                               Seed:  61   Index: 109
+  Step  15: 117 / King-Ryu x1, Ging-Ryu x1 (6.611s)
+Lunar Subterrane B4                                       Seed:  61   Index: 138
+Lunar Subterrane B5                                       Seed:  61   Index: 153
+Lunar Subterrane B5 Passage A                             Seed:  61   Index: 170
+Lunar Subterrane B5                                       Seed:  61   Index: 203
+Lunar Subterrane B5 Passage B                             Seed:  61   Index: 212
+  Step  20: 118 / King-Ryu x1, Ging-Ryu x1 (6.611s)
+Lunar Subterrane B5 Inward Direct                         Seed:  61   Index: 244
+  Lunar Subterrane B5                                     Seed:  61   Index: 244
+    Step   5: 119 / Warlock x3 (6.253s)
+Lunar Subterrane B6                                       Seed:  78   Index:   0
+  Step   1: 120 / Ging-Ryu x1, RedGiant x1 (6.614s)
+  Step  10: 121 / Warlock x3 (6.253s)
+Lunar Subterrane B6 Passage                               Seed:  78   Index:  37
+  Step  11: 122 / Tricker x1 (6.646s)
+Lunar Subterrane B7 Inward Direct                         Seed:  78   Index:  50
+  Lunar Subterrane B7                                     Seed:  78   Index:  50
+    Step  27: 123 / King-Ryu x1 (6.565s)
+    Step  68: 124 / Tricker x1 (6.647s)
+    Step  77: 125 / King-Ryu x1, Ging-Ryu x1 (6.611s)
+Lunar Core B1                                             Seed:  78   Index: 130
+  Step  65: 126 / Red D. x1 (23.730s)
+Lunar Core B2                                             Seed:  78   Index: 198
+  Step  49: 127 / EvilMask x1 (12.170s)
+Lunar Core B3                                             Seed:  78   Index: 253
+  Step  23: 128 / Behemoth x2 (7.516s)
+  Step  42: 129 / Red D. x3 (14.544s)
+  Step  53: 130 / Behemoth x1 (7.463s)
+Lunar Core B4                                             Seed:  95   Index:  53
 
-Encounter Time:      1187.442s
-Other Time:          1662.961s
-Total Time:          2850.403s
+Encounter Time:      1250.866s
+Other Time:          1589.236s
+Total Time:          2840.101s
 
 Base Total Time:     3269.074s
-Time Saved:          418.671s
+Time Saved:          428.973s
 
-Optional Steps:      0
-Extra Steps:         77
-Encounters:          146
+Optional Steps:      10
+Extra Steps:         172
+Encounters:          151
 
 Base Encounters:     175
-Encounters Saved:    29
+Encounters Saved:    24
 
 Number of Variables: 190

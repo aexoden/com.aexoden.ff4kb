@@ -2,12 +2,12 @@ ROUTE	Final Fantasy IV Any% NoCW
 VERSION	21
 ROSA	v1.1.0-13-g6984184
 SEED	148
-MAXSTEP	0
-MAXSEG	-1
+MAXSTEP	256
+MAXSEG	2
 TASMODE	0
-MINIMUM	0
-FRAMES	79026434
-VARS	
+MINIMUM	1
+FRAMES	75336796
+VARS	C303C00:1 E309700:64 E303D00:20 C305500:1
 
 Overworld (Kaipo)                                         Seed: 148   Index:   0
 Overworld (Kaipo)                                         Seed: 148   Index:   1
@@ -118,91 +118,87 @@ Overworld (Mt.Ordeals)                                    Seed: 233   Index: 111
 Take Chocobo to Mysidia                                   Seed: 233   Index: 124
 Overworld (Mysidia)                                       Seed: 233   Index: 124
 Town of Baron Serpent Road                                Seed: 233   Index: 124
-Old Water-way                                             Seed: 233   Index: 128
-  Step   3: 39 / Crocdile x1, Piranha x2 (9.538s)
-  Step   9: 40 / Piranha x2, ElecFish x2 (8.877s)
-  Step  22: 41 / Crocdile x1, Piranha x2 (9.538s)
-  Step  35: 42 / Crocdile x1, Piranha x2 (9.538s)
-  Step  62: 43 / Crocdile x1, Piranha x2 (9.538s)
-  Step  64: 44 / Crocdile x1, ElecFish x3 (10.343s)
-Castle Baron B3F                                          Seed: 233   Index: 218
-  Step   9: 45 / Crocdile x2 (10.769s)
-  Step  36: 46 / Crocdile x2 (10.769s)
-  Step  38: 47 / Crocdile x2 (10.769s)
-Castle Baron B2F                                          Seed: 250   Index:  16
-Castle Baron B1F Inward Direct                            Seed: 250   Index:  42
-  Castle Baron B1F                                        Seed: 250   Index:  42
-Castle Baron                                              Seed: 250   Index:  63
-Battle: Kainazzo                                          Seed: 250   Index:  77
-Overworld (Toroia)                                        Seed: 250   Index:  77
-Toroian Castle                                            Seed: 250   Index:  78
+  Extra Steps: 64
+Old Water-way                                             Seed: 233   Index: 192
+  Step  35: 39 / Crocdile x1, Piranha x2 (9.538s)
+  Step  62: 40 / Piranha x2, ElecFish x2 (8.877s)
+  Step  64: 41 / Crocdile x1, Piranha x2 (9.538s)
+Castle Baron B3F                                          Seed: 250   Index:  26
+  Step  39: 42 / Crocdile x1, ElecFish x3 (10.343s)
+Castle Baron B2F                                          Seed: 250   Index:  80
+Castle Baron B1F Inward Save Room Steps                   Seed: 250   Index: 106
+  Castle Baron B1F                                        Seed: 250   Index: 106
+  Castle Baron B1F Save Room                              Seed: 250   Index: 116
+    Extra Steps: 20
+  Castle Baron B1F                                        Seed: 250   Index: 136
+Castle Baron                                              Seed: 250   Index: 160
+Battle: Kainazzo                                          Seed: 250   Index: 174
+Overworld (Toroia)                                        Seed: 250   Index: 174
+Toroian Castle                                            Seed: 250   Index: 175
   Optional Steps: 0
-Overworld (Toroia)                                        Seed: 250   Index:  89
+Overworld (Toroia)                                        Seed: 250   Index: 186
   Optional Steps: 0
-  Step  37: 48 / Python x1, StingRat x2 (8.701s)
-Black Chocobo to Cave Magnes                              Seed: 250   Index: 126
-Overworld (Toroia)                                        Seed: 250   Index: 126
-Cave Magnes B1F                                           Seed: 250   Index: 127
-  Step   2: 49 / Panther x2 (8.033s)
-  Step  34: 50 / Cave Bat x3 (9.265s)
-  Step  53: 51 / Panther x2 (8.033s)
-  Step  66: 52 / Cave Bat x3 (9.265s)
-Cave Magnes B2F                                           Seed: 250   Index: 195
-  Step  30: 53 / Ogre x1, Panther x2 (8.591s)
-Cave Magnes B3F Inward Direct                             Seed: 250   Index: 236
-  Cave Magnes B3F                                         Seed: 250   Index: 236
-    Step  33: 54 / Mage x1, Panther x1, Ogre x1 (8.285s)
-    Step  55: 55 / Mage x1, Panther x1, Ogre x1 (8.285s)
-Cave Magnes B3F Passage                                   Seed:  11   Index:  50
-Cave Magnes B4F Inward Direct                             Seed:  11   Index:  61
-  Cave Magnes B4F                                         Seed:  11   Index:  61
-    Step  20: 56 / VampGirl x1, Cave Bat x3 (9.492s)
-Battle: Dark Elf                                          Seed:  11   Index:  91
-Overworld (Toroia)                                        Seed:  11   Index:  91
-Black Chocobo to Toroia                                   Seed:  11   Index:  93
-Overworld (Toroia)                                        Seed:  11   Index:  93
-Toroian Castle 1F Inward Direct                           Seed:  11   Index: 114
-  Toroian Castle 1F                                       Seed:  11   Index: 114
-Overworld (Toroia)                                        Seed:  11   Index: 114
+  Step   7: 43 / Cannibal x1, Treant x2 (8.740s)
+Black Chocobo to Cave Magnes                              Seed: 250   Index: 223
+Overworld (Toroia)                                        Seed: 250   Index: 223
+Cave Magnes B1F                                           Seed: 250   Index: 224
+  Step   1: 44 / Panther x2 (8.033s)
+  Step  45: 45 / Ogre x2 (8.223s)
+  Step  67: 46 / Ogre x2 (8.223s)
+Cave Magnes B2F                                           Seed:  11   Index:  36
+Cave Magnes B3F Inward Direct                             Seed:  11   Index:  77
+  Cave Magnes B3F                                         Seed:  11   Index:  77
+    Step   4: 47 / Mage x2 (8.585s)
+Cave Magnes B3F Passage                                   Seed:  11   Index: 147
+Cave Magnes B4F Inward Direct                             Seed:  11   Index: 158
+  Cave Magnes B4F                                         Seed:  11   Index: 158
+    Step   1: 48 / Mage x1, Panther x1, Ogre x1 (8.285s)
+    Step  25: 49 / VampGirl x1, Cave Bat x6 (11.715s)
+Battle: Dark Elf                                          Seed:  11   Index: 188
+Overworld (Toroia)                                        Seed:  11   Index: 188
+Black Chocobo to Toroia                                   Seed:  11   Index: 190
+Overworld (Toroia)                                        Seed:  11   Index: 190
+Toroian Castle 1F Inward Extra Steps Area Steps           Seed:  11   Index: 211
+  Toroian Castle 1F                                       Seed:  11   Index: 211
+    Optional Steps: 0
+Overworld (Toroia)                                        Seed:  11   Index: 212
   Optional Steps: 0
-Tower of Zot 1F                                           Seed:  11   Index: 115
-Tower of Zot 2F                                           Seed:  11   Index: 153
-  Step   6: 57 / Marion (summons Puppet) x1, Puppet x2 (9.023s)
-  Step  30: 58 / Centaur x1, IceBeast x2 (10.314s)
-Battle: FlameDog                                          Seed:  11   Index: 205
-Tower of Zot 2F                                           Seed:  11   Index: 205
-  Step   7: 59 / Jelly x1, Slime x2, Cream x1 (7.808s)
-Tower of Zot 3F                                           Seed:  11   Index: 222
-  Step   1: 60 / Marion (summons Puppet) x1, Puppet x3 (9.426s)
-  Step  33: 61 / Marion (summons Puppet) x1, Puppet x2 (9.023s)
-  Step  86: 62 / Jelly x1, Slime x2, Cream x1 (7.808s)
-Tower of Zot 4F                                           Seed:  28   Index:  52
-  Step   8: 63 / EpeeGirl x3 (9.306s)
-  Step  17: 64 / Centaur x2, IceBeast x2 (10.289s)
-  Step  40: 65 / Marion (summons Puppet) x1, Puppet x3 (9.426s)
-  Step  44: 66 / EpeeGirl x2, SwordMan x2 (13.284s)
-Tower of Zot 5F                                           Seed:  28   Index: 112
-Battle: Magus Sisters                                     Seed:  28   Index: 135
-Tower of Zot 5F                                           Seed:  28   Index: 135
-Tower of Zot 6F                                           Seed:  28   Index: 136
-Battle: Valvalis                                          Seed:  28   Index: 150
-Castle Baron                                              Seed:  28   Index: 150
-Fly to Agart                                              Seed:  28   Index: 169
-Overworld (Eblan)                                         Seed:  28   Index: 169
-Underworld (Castle of Dwarves)                            Seed:  28   Index: 170
+Tower of Zot 1F                                           Seed:  11   Index: 213
+  Step  10: 50 / Gremlin x2, Ice Liz x2 (9.444s)
+Tower of Zot 2F                                           Seed:  11   Index: 251
+  Step   4: 51 / Centaur x1, Gremlin x2 (8.473s)
+Battle: FlameDog                                          Seed:  28   Index:  47
+Tower of Zot 2F                                           Seed:  28   Index:  47
+  Step   5: 52 / Ice Liz x1, Slime x3 (9.423s)
+  Step  13: 53 / Marion (summons Puppet) x1, Puppet x2 (9.023s)
+Tower of Zot 3F                                           Seed:  28   Index:  64
+  Step   5: 54 / Jelly x1, Slime x2, Cream x1 (7.808s)
+  Step  28: 55 / Jelly x1, Slime x2, Cream x1 (7.808s)
+  Step  32: 56 / Centaur x2, IceBeast x2 (10.289s)
+Tower of Zot 4F                                           Seed:  28   Index: 150
+  Step  56: 57 / Marion (summons Puppet) x1, Puppet x3 (9.426s)
+Tower of Zot 5F                                           Seed:  28   Index: 210
+Battle: Magus Sisters                                     Seed:  28   Index: 233
+Tower of Zot 5F                                           Seed:  28   Index: 233
+Tower of Zot 6F                                           Seed:  28   Index: 234
+Battle: Valvalis                                          Seed:  28   Index: 248
+Castle Baron                                              Seed:  28   Index: 248
+Fly to Agart                                              Seed:  45   Index:  11
+Overworld (Eblan)                                         Seed:  45   Index:  11
+Underworld (Castle of Dwarves)                            Seed:  45   Index:  12
 
-Encounter Time:      556.457s
-Other Time:          758.484s
-Total Time:          1314.942s
+Encounter Time:      464.914s
+Other Time:          788.635s
+Total Time:          1253.549s
 
 Base Total Time:     1314.942s
-Time Saved:          0.000s
+Time Saved:          61.393s
 
 Optional Steps:      0
-Extra Steps:         0
-Encounters:          66
+Extra Steps:         84
+Encounters:          57
 
 Base Encounters:     66
-Encounters Saved:    0
+Encounters Saved:    9
 
 Number of Variables: 89

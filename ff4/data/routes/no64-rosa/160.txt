@@ -3,11 +3,11 @@ VERSION	22
 ROSA	v1.1.0-13-g6984184
 SEED	160
 MAXSTEP	256
-MAXSEG	2
+MAXSEG	3
 TASMODE	0
 MINIMUM	1
-FRAMES	171600372
-VARS	C307801:1 C30CA00:1 C30CA01:1 E310700:44 E30BD00:82
+FRAMES	171180624
+VARS	C307801:1 C30CA01:1 E310700:44 E30C800:5 E30BD00:82
 
 Overworld (Kaipo)                                         Seed: 160   Index:   0
 Overworld (Kaipo)                                         Seed: 160   Index:   1
@@ -240,16 +240,15 @@ Overworld (Eblan)                                         Seed: 108   Index:  69
 Cave Eblana B1F                                           Seed: 108   Index:  70
   Step  12: 84 / Ironback x2, BlackLiz x2 (10.193s)
 Cave Eblana B2F                                           Seed: 108   Index: 112
-  Optional Steps: 0
-Pass to Bab-il (south)                                    Seed: 108   Index: 168
-Pass to Bab-il (north)                                    Seed: 108   Index: 199
-Pass to Bab-il (south)                                    Seed: 108   Index: 232
-  Step   3: 85 / Skull x4 (10.637s)
-  Step  47: 86 / Staleman x1, Skull x2 (10.023s)
-Pass to Bab-il (north) Inward Save Room Steps             Seed: 125   Index:  40
-  Pass to Bab-il (north)                                  Seed: 125   Index:  40
-  Pass to Bab-il (north) Save Room                        Seed: 125   Index:  44
-  Pass to Bab-il (north)                                  Seed: 125   Index:  44
+  Optional Steps: 1
+  Extra Steps: 4
+Pass to Bab-il (south)                                    Seed: 108   Index: 173
+Pass to Bab-il (north)                                    Seed: 108   Index: 204
+  Step  31: 85 / Red Bone x3, Skull x2 (7.180s)
+Pass to Bab-il (south)                                    Seed: 108   Index: 237
+  Step  42: 86 / Staleman x1, Skull x2 (10.023s)
+Pass to Bab-il (north) Inward Direct                      Seed: 125   Index:  45
+  Pass to Bab-il (north)                                  Seed: 125   Index:  45
 Recruit Edge                                              Seed: 125   Index:  67
 Remove Dwarf Axe before Q.Eblan/K.Eblan                   Seed: 125   Index:  67
 Pass to Bab-il (north)                                    Seed: 125   Index:  67
@@ -388,15 +387,15 @@ Lunar Core B3                                             Seed: 227   Index: 192
 Lunar Core B4                                             Seed: 227   Index: 248
   Step  65: 138 / Breath x1 (11.914s)
 
-Encounter Time:      1154.969s
-Other Time:          1700.335s
-Total Time:          2855.304s
+Encounter Time:      1151.512s
+Other Time:          1696.807s
+Total Time:          2848.320s
 
 Base Total Time:     3008.464s
-Time Saved:          153.160s
+Time Saved:          160.145s
 
-Optional Steps:      20
-Extra Steps:         106
+Optional Steps:      21
+Extra Steps:         110
 Encounters:          145
 
 Base Encounters:     159
