@@ -13,11 +13,11 @@ GROUPS = {
 	},
 	'alternate': {
 		'name': 'Alternate Routes',
-		'description': 'These routes are uncommon alternate routes that are unlikely to be used during a run. They currently have no summary or tutorial data.'
+		'description': 'These routes are uncommon alternate routes that are unlikely to be used during a run. They currently have no summary or tutorial data. None of these routes is twin seed safe.'
 	},
 	'archive': {
 		'name': 'Archived Routes',
-		'description': 'These routes are archived from the old version of the site. They have not been updated to the new data structure, and their optimization status is unknown (though they should be near optimal relative to their input data). There is no associated tutorial or summary data. Eventually, I would like to convert them to the new structure, but this is not a high priority.',
+		'description': 'These routes are archived from the old version of the site. They have not been updated to the new data structure, and their optimization status is unknown (though they should be near optimal relative to their input data). There is no associated tutorial or summary data. Eventually, I would like to convert them to the new structure, but this is not a high priority. These routes are not guaranteed to be twin seed safe (though some of them may be).',
 	}
 }
 
@@ -60,6 +60,8 @@ ROUTES = {
 		'description': 'From the beginning of the game until the Mist Clip. Primarily useful for demonstrating that seed 92 is optimal.',
 		'group': 'alternate',
 		'enabled': True,
+		'steps': 256,
+		'locations': 0,
 	},
 
 	'sfc-nocw': {
