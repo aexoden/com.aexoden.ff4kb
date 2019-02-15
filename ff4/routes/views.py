@@ -52,7 +52,7 @@ ROUTES = {
 		'group': 'standard',
 		'enabled': True,
 		'steps': 256,
-		'locations': 1,
+		'locations': 2,
 	},
 
 	'premist': {

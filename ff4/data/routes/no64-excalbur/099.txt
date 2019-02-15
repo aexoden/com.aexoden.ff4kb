@@ -3,11 +3,11 @@ VERSION	22
 ROSA	v1.1.0-13-g6984184
 SEED	99
 MAXSTEP	256
-MAXSEG	1
+MAXSEG	2
 TASMODE	0
 MINIMUM	1
-FRAMES	177614910
-VARS	C310700:1 C307801:1 E302600:16 C200000:1
+FRAMES	177402910
+VARS	C310700:1 E302500:5 E302600:16 C200000:1
 
 Overworld (Kaipo)                                         Seed:  99   Index:   0
 Overworld (Kaipo)                                         Seed:  99   Index:   1
@@ -46,22 +46,21 @@ Overworld (Kaipo)                                         Seed: 116   Index: 206
 Overworld (Damcyan)                                       Seed: 116   Index: 217
   Step   1: 15 / Imp x8 (7.464s)
 Damcyan                                                   Seed: 116   Index: 221
-  Optional Steps: 0
-Overworld (Damcyan)                                       Seed: 116   Index: 228
-Antlion B1F                                               Seed: 116   Index: 228
-Antlion B2F Inward Direct                                 Seed: 133   Index:  10
-  Antlion B2F                                             Seed: 133   Index:  10
-    Step  36: 16 / Weeper x1, Turtle x1, Basilisk x1 (7.385s)
-    Step  69: 17 / Cream x4 (7.552s)
-    Step  80: 18 / Basilisk x1, Imp x3 (6.775s)
-Antlion's Nest                                            Seed: 133   Index:  90
-Battle: Antlion                                           Seed: 133   Index: 104
-Antlion's Nest                                            Seed: 133   Index: 104
-  Step   7: 19 / Cream x4 (7.523s)
-Antlion B2F Outward Charm Room Steps                      Seed: 133   Index: 119
-  Antlion B2F                                             Seed: 133   Index: 119
-  Antlion B2F Treasure Room                               Seed: 133   Index: 170
-  Antlion B2F                                             Seed: 133   Index: 170
+  Optional Steps: 1
+  Extra Steps: 4
+Overworld (Damcyan)                                       Seed: 116   Index: 233
+Antlion B1F                                               Seed: 116   Index: 233
+Antlion B2F Inward Direct                                 Seed: 133   Index:  15
+  Antlion B2F                                             Seed: 133   Index:  15
+    Step  31: 16 / Weeper x1, Turtle x1, Basilisk x1 (7.385s)
+    Step  64: 17 / Cream x4 (7.552s)
+    Step  75: 18 / Basilisk x1, Imp x3 (6.775s)
+Antlion's Nest                                            Seed: 133   Index:  95
+Battle: Antlion                                           Seed: 133   Index: 109
+Antlion's Nest                                            Seed: 133   Index: 109
+  Step   2: 19 / Cream x4 (7.523s)
+Antlion B2F Outward Direct                                Seed: 133   Index: 124
+  Antlion B2F                                             Seed: 133   Index: 124
 Antlion B1F                                               Seed: 133   Index: 204
   Step   4: 20 / Imp x3 (6.648s)
   Step  11: 21 / Turtle x1, Imp x2 (7.009s)
@@ -424,14 +423,14 @@ Lunar Core B4                                             Seed: 183   Index:  14
   Step  27: 147 / Breath x1 (12.059s)
 
 Encounter Time:      1302.528s
-Other Time:          1652.853s
-Total Time:          2955.381s
+Other Time:          1649.325s
+Total Time:          2951.854s
 
 Base Total Time:     3247.324s
-Time Saved:          291.942s
+Time Saved:          295.470s
 
-Optional Steps:      10
-Extra Steps:         6
+Optional Steps:      11
+Extra Steps:         10
 Encounters:          164
 
 Base Encounters:     174
