@@ -44,7 +44,7 @@ ROUTES = {
 		'group': 'standard',
 		'enabled': True,
 		'steps': 256,
-		'locations': 2,
+		'locations': 3,
 	},
 	'no64-excalbur': {
 		'name': 'Any% No64 (Edge+Excalbur)',
