@@ -3,11 +3,11 @@ VERSION	21
 ROSA	v1.1.0-13-g6984184
 SEED	251
 MAXSTEP	256
-MAXSEG	3
+MAXSEG	4
 TASMODE	0
 MINIMUM	1
-FRAMES	75277695
-VARS	E302700:13 E302500:104 C309300:1 E30A100:10
+FRAMES	75193802
+VARS	E302600:5 E302700:13 E302500:99 C309300:1 E30A100:10
 
 Overworld (Kaipo)                                         Seed: 251   Index:   0
 Overworld (Kaipo)                                         Seed: 251   Index:   1
@@ -43,43 +43,43 @@ Overworld (Kaipo)                                         Seed:  12   Index: 206
   Step   6: 12 / Sand Man x4 (7.347s)
 Overworld (Damcyan)                                       Seed:  12   Index: 217
 Damcyan                                                   Seed:  12   Index: 221
-  Optional Steps: 0
-  Extra Steps: 104
-Overworld (Damcyan)                                       Seed:  29   Index:  76
-Antlion B1F                                               Seed:  29   Index:  76
-  Step  16: 13 / Cream x4 (7.552s)
-Antlion B2F Inward Direct                                 Seed:  29   Index: 114
-  Antlion B2F                                             Seed:  29   Index: 114
-Antlion's Nest                                            Seed:  29   Index: 194
-  Step  12: 14 / SandWorm x2 (6.841s)
-Battle: Antlion                                           Seed:  29   Index: 208
-Antlion's Nest                                            Seed:  29   Index: 208
-Antlion B2F Outward Direct                                Seed:  29   Index: 223
-  Antlion B2F                                             Seed:  29   Index: 223
-    Step  16: 15 / Turtle x2 (7.464s)
-    Step  30: 16 / Basilisk x1, Turtle x1 (7.124s)
-    Step  59: 17 / Turtle x2 (7.464s)
-    Step  80: 18 / Weeper x1, Turtle x1, Basilisk x1 (7.339s)
-Antlion B1F                                               Seed:  46   Index:  47
-  Step  11: 19 / Imp x3, Imp Cap. x1 (6.753s)
-  Step  14: 20 / Imp x3, Imp Cap. x1 (6.753s)
-Overworld (Damcyan)                                       Seed:  46   Index:  85
-Overworld (Kaipo)                                         Seed:  46   Index:  85
-Kaipo Revisited                                           Seed:  46   Index:  85
-Overworld (Kaipo)                                         Seed:  46   Index:  85
-Overworld (Damcyan)                                       Seed:  46   Index:  85
-Mt.Hobs-West                                              Seed:  46   Index:  85
-Mt.Hobs Summit                                            Seed:  46   Index: 124
-  Step   1: 21 / Skelton x4 (7.795s)
-Battle: MomBomb                                           Seed:  46   Index: 139
-Mt.Hobs Summit                                            Seed:  46   Index: 139
-Mt.Hobs-East                                              Seed:  46   Index: 145
-  Step  41: 22 / Gargoyle x2 (7.630s)
-Overworld (Fabul)                                         Seed:  46   Index: 191
-  Step  12: 23 / Imp Cap. x3, Needler x1 (8.023s)
-  Step  45: 24 / Imp Cap. x4, Imp x2 (8.467s)
-Fabul                                                     Seed:  63   Index:  19
-  Optional Steps: 0
+  Optional Steps: 1
+  Extra Steps: 98
+Overworld (Damcyan)                                       Seed:  29   Index:  71
+Antlion B1F                                               Seed:  29   Index:  71
+  Step  21: 13 / Cream x4 (7.552s)
+Antlion B2F Inward Direct                                 Seed:  29   Index: 109
+  Antlion B2F                                             Seed:  29   Index: 109
+Antlion's Nest                                            Seed:  29   Index: 189
+Battle: Antlion                                           Seed:  29   Index: 203
+Antlion's Nest                                            Seed:  29   Index: 203
+  Step   3: 14 / SandWorm x2 (6.858s)
+Antlion B2F Outward Direct                                Seed:  29   Index: 218
+  Antlion B2F                                             Seed:  29   Index: 218
+    Step  21: 15 / Turtle x2 (7.464s)
+    Step  35: 16 / Basilisk x1, Turtle x1 (7.124s)
+    Step  64: 17 / Turtle x2 (7.464s)
+Antlion B1F                                               Seed:  46   Index:  42
+  Step   5: 18 / Cream x4 (7.523s)
+  Step  16: 19 / Imp x3, Imp Cap. x1 (6.753s)
+  Step  19: 20 / Imp x3, Imp Cap. x1 (6.753s)
+Overworld (Damcyan)                                       Seed:  46   Index:  80
+Overworld (Kaipo)                                         Seed:  46   Index:  80
+Kaipo Revisited                                           Seed:  46   Index:  80
+Overworld (Kaipo)                                         Seed:  46   Index:  80
+Overworld (Damcyan)                                       Seed:  46   Index:  80
+Mt.Hobs-West                                              Seed:  46   Index:  80
+Mt.Hobs Summit                                            Seed:  46   Index: 119
+  Step   6: 21 / Skelton x4 (7.795s)
+Battle: MomBomb                                           Seed:  46   Index: 134
+Mt.Hobs Summit                                            Seed:  46   Index: 134
+Mt.Hobs-East                                              Seed:  46   Index: 140
+  Step  46: 22 / Gargoyle x2 (7.630s)
+Overworld (Fabul)                                         Seed:  46   Index: 186
+  Step  17: 23 / Imp Cap. x3, Needler x1 (8.023s)
+  Step  50: 24 / Imp Cap. x4, Imp x2 (8.467s)
+Fabul                                                     Seed:  63   Index:  14
+  Optional Steps: 5
 Overworld (Fabul)                                         Seed:  63   Index:  79
 Fabul Boat and Leviatan                                   Seed:  63   Index:  86
 Overworld (Mysidia)                                       Seed:  63   Index:  86
@@ -184,15 +184,15 @@ Fly to Agart                                              Seed: 148   Index:  71
 Overworld (Eblan)                                         Seed: 148   Index:  71
 Underworld (Castle of Dwarves)                            Seed: 148   Index:  72
 
-Encounter Time:      449.555s
-Other Time:          803.011s
-Total Time:          1252.565s
+Encounter Time:      449.756s
+Other Time:          801.413s
+Total Time:          1251.169s
 
 Base Total Time:     1292.557s
-Time Saved:          39.991s
+Time Saved:          41.387s
 
-Optional Steps:      3
-Extra Steps:         124
+Optional Steps:      9
+Extra Steps:         118
 Encounters:          54
 
 Base Encounters:     64

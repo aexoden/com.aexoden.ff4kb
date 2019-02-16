@@ -3,11 +3,11 @@ VERSION	21
 ROSA	v1.1.0-13-g6984184
 SEED	246
 MAXSTEP	256
-MAXSEG	3
+MAXSEG	4
 TASMODE	0
 MINIMUM	1
-FRAMES	76441018
-VARS	E302600:10 C307801:1 E307400:60 E307B01:104
+FRAMES	76384132
+VARS	E000703:10 E302600:10 C307801:1 E307400:60 E307B01:104
 
 Overworld (Kaipo)                                         Seed: 246   Index:   0
 Overworld (Kaipo)                                         Seed: 246   Index:   1
@@ -161,40 +161,41 @@ Overworld (Toroia)                                        Seed: 126   Index:  16
 Toroian Castle 1F Inward Direct                           Seed: 126   Index:  37
   Toroian Castle 1F                                       Seed: 126   Index:  37
 Overworld (Toroia)                                        Seed: 126   Index:  37
-  Optional Steps: 0
-Tower of Zot 1F                                           Seed: 126   Index:  38
-Tower of Zot 2F                                           Seed: 126   Index:  76
-  Step   4: 50 / Centaur x3 (8.469s)
-  Step  10: 51 / Carapace x2, Ice Liz x2 (9.635s)
-  Step  36: 52 / Carapace x2, Ice Liz x2 (9.635s)
-Battle: FlameDog                                          Seed: 126   Index: 128
-Tower of Zot 2F                                           Seed: 126   Index: 128
-Tower of Zot 3F                                           Seed: 126   Index: 145
-  Step  10: 53 / SwordMan x1, Ice Liz x2 (10.462s)
-  Step  15: 54 / Marion (summons Puppet) x1, Puppet x3 (9.426s)
-  Step  64: 55 / Marion (summons Puppet) x1, Puppet x3 (9.426s)
-  Step  70: 56 / Marion (summons Puppet) x1, Puppet x2 (9.023s)
-Tower of Zot 4F                                           Seed: 126   Index: 231
-  Step  39: 57 / Gremlin x2, Ice Liz x2 (9.444s)
-Tower of Zot 5F                                           Seed: 143   Index:  35
-Battle: Magus Sisters                                     Seed: 143   Index:  58
-Tower of Zot 5F                                           Seed: 143   Index:  58
-Tower of Zot 6F                                           Seed: 143   Index:  59
-Battle: Valvalis                                          Seed: 143   Index:  73
-Castle Baron                                              Seed: 143   Index:  73
-Fly to Agart                                              Seed: 143   Index:  92
-Overworld (Eblan)                                         Seed: 143   Index:  92
-Underworld (Castle of Dwarves)                            Seed: 143   Index:  93
+  Optional Steps: 2
+  Extra Steps: 8
+Tower of Zot 1F                                           Seed: 126   Index:  48
+  Step  32: 50 / Slime x4 (8.548s)
+  Step  38: 51 / Centaur x3 (8.469s)
+Tower of Zot 2F                                           Seed: 126   Index:  86
+  Step  26: 52 / Carapace x2, Ice Liz x2 (9.635s)
+Battle: FlameDog                                          Seed: 126   Index: 138
+Tower of Zot 2F                                           Seed: 126   Index: 138
+  Step  17: 53 / Centaur x1, Gremlin x2 (8.473s)
+Tower of Zot 3F                                           Seed: 126   Index: 155
+  Step   5: 54 / Marion (summons Puppet) x1, Puppet x3 (9.426s)
+  Step  54: 55 / Marion (summons Puppet) x1, Puppet x3 (9.426s)
+  Step  60: 56 / Marion (summons Puppet) x1, Puppet x2 (9.023s)
+Tower of Zot 4F                                           Seed: 126   Index: 241
+  Step  29: 57 / Gremlin x2, Ice Liz x2 (9.444s)
+Tower of Zot 5F                                           Seed: 143   Index:  45
+Battle: Magus Sisters                                     Seed: 143   Index:  68
+Tower of Zot 5F                                           Seed: 143   Index:  68
+Tower of Zot 6F                                           Seed: 143   Index:  69
+Battle: Valvalis                                          Seed: 143   Index:  83
+Castle Baron                                              Seed: 143   Index:  83
+Fly to Agart                                              Seed: 143   Index: 102
+Overworld (Eblan)                                         Seed: 143   Index: 102
+Underworld (Castle of Dwarves)                            Seed: 143   Index: 103
 
-Encounter Time:      465.184s
-Other Time:          806.738s
-Total Time:          1271.922s
+Encounter Time:      462.108s
+Other Time:          808.868s
+Total Time:          1270.976s
 
 Base Total Time:     1324.768s
-Time Saved:          52.845s
+Time Saved:          53.792s
 
-Optional Steps:      10
-Extra Steps:         164
+Optional Steps:      12
+Extra Steps:         172
 Encounters:          57
 
 Base Encounters:     67
