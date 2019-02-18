@@ -3,11 +3,11 @@ VERSION	22
 ROSA	v1.1.0-13-g6984184
 SEED	53
 MAXSTEP	256
-MAXSEG	2
+MAXSEG	3
 TASMODE	0
 MINIMUM	1
-FRAMES	176074300
-VARS	C310700:1 E302500:4 C30CA01:1 E310702:3 C200000:1
+FRAMES	176029633
+VARS	C310700:1 E302500:4 C30CA01:1 E310701:1 E000503:2 C200000:1
 
 Overworld (Kaipo)                                         Seed:  53   Index:   0
 Overworld (Kaipo)                                         Seed:  53   Index:   1
@@ -281,34 +281,34 @@ Tower of Bab-il 6F (revisit)                              Seed:  35   Index: 110
 Fly to Castle of Dwarves                                  Seed:  35   Index: 160
 Underworld (Castle of Dwarves)                            Seed:  35   Index: 160
 Castle of Dwarves                                         Seed:  35   Index: 160
-  Optional Steps: 0
-Underworld (Castle of Dwarves)                            Seed:  35   Index: 183
-Land of Monsters B1F                                      Seed:  35   Index: 184
-  Step   4: 103 / Red Eye x2 (7.416s)
-Land of Monsters B2F                                      Seed:  35   Index: 219
-  Step   1: 104 / Conjurer (summons RockMoth) x1 (7.186s)
-  Step  22: 105 / Conjurer (summons Arachne) x1 (7.301s)
-Land of Monsters B3F Inward Direct                        Seed:  52   Index:   7
-  Land of Monsters B3F                                    Seed:  52   Index:   7
-    Step  20: 106 / Conjurer (summons HugeNaga) x1 (7.173s)
-    Step  47: 107 / Hooligan x2 (7.473s)
-Underworld (Tomra)                                        Seed:  52   Index:  55
-Sealed Cave                                               Seed:  52   Index:  56
-Underworld (Tomra)                                        Seed:  52   Index:  63
-Return to Castle of Dwarves                               Seed:  52   Index:  64
-Castle of Dwarves                                         Seed:  52   Index:  64
-  Extra Steps: 3
-Underworld (Castle of Dwarves)                            Seed:  52   Index:  68
-Overworld (Eblan)                                         Seed:  52   Index:  69
-Overworld (Toroia)                                        Seed:  52   Index:  70
-Grotto Adamant                                            Seed:  52   Index:  71
-Overworld (Toroia)                                        Seed:  52   Index:  85
-Return to Mysidia                                         Seed:  52   Index:  87
-Go to Kokkol in the Underworld                            Seed:  52   Index:  87
-Underworld (Tomra)                                        Seed:  52   Index:  87
-Return to Mysidia                                         Seed:  52   Index:  88
-Overworld (Mysidia)                                       Seed:  52   Index:  88
-  Step   1: 108 / Needler x2, SwordRat x2 (7.153s)
+  Optional Steps: 1
+Underworld (Castle of Dwarves)                            Seed:  35   Index: 184
+Land of Monsters B1F                                      Seed:  35   Index: 185
+  Step   3: 103 / Red Eye x2 (7.416s)
+  Step  35: 104 / Conjurer (summons Imp) x1 (6.976s)
+Land of Monsters B2F                                      Seed:  35   Index: 220
+  Step  21: 105 / Conjurer (summons Arachne) x1 (7.301s)
+Land of Monsters B3F Inward Direct                        Seed:  52   Index:   8
+  Land of Monsters B3F                                    Seed:  52   Index:   8
+    Step  19: 106 / Conjurer (summons HugeNaga) x1 (7.173s)
+    Step  46: 107 / Hooligan x2 (7.473s)
+Underworld (Tomra)                                        Seed:  52   Index:  56
+Sealed Cave                                               Seed:  52   Index:  57
+Underworld (Tomra)                                        Seed:  52   Index:  64
+Return to Castle of Dwarves                               Seed:  52   Index:  65
+Castle of Dwarves                                         Seed:  52   Index:  65
+Underworld (Castle of Dwarves)                            Seed:  52   Index:  66
+Overworld (Eblan)                                         Seed:  52   Index:  67
+Overworld (Toroia)                                        Seed:  52   Index:  68
+Grotto Adamant                                            Seed:  52   Index:  69
+Overworld (Toroia)                                        Seed:  52   Index:  83
+Return to Mysidia                                         Seed:  52   Index:  85
+Go to Kokkol in the Underworld                            Seed:  52   Index:  85
+Underworld (Tomra)                                        Seed:  52   Index:  85
+Return to Mysidia                                         Seed:  52   Index:  86
+Overworld (Mysidia)                                       Seed:  52   Index:  86
+  Extra Steps: 2
+  Step   3: 108 / Needler x2, SwordRat x2 (7.153s)
 Recruit FuSoYa First                                      Seed:  52   Index:  89
   Fly to Lunar Path                                       Seed:  52   Index:  89
   Lunar Overworld                                         Seed:  52   Index:  89
@@ -408,15 +408,15 @@ Lunar Core B3                                             Seed: 120   Index: 204
 Lunar Core B4                                             Seed: 137   Index:   0
   Step  14: 144 / Breath x1 (12.059s)
 
-Encounter Time:      1195.602s
-Other Time:          1734.144s
-Total Time:          2929.747s
+Encounter Time:      1195.391s
+Other Time:          1733.612s
+Total Time:          2929.003s
 
 Base Total Time:     2967.709s
-Time Saved:          37.963s
+Time Saved:          38.706s
 
-Optional Steps:      0
-Extra Steps:         7
+Optional Steps:      1
+Extra Steps:         6
 Encounters:          150
 
 Base Encounters:     155

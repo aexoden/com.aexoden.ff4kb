@@ -3,11 +3,11 @@ VERSION	22
 ROSA	v1.1.0-13-g6984184
 SEED	199
 MAXSTEP	256
-MAXSEG	2
+MAXSEG	3
 TASMODE	0
 MINIMUM	1
-FRAMES	174771774
-VARS	C305500:1 C317500:1 C307801:1 E310700:30 E310702:70 C200000:1
+FRAMES	174495774
+VARS	C305500:1 C317500:1 E302600:5 E310700:30 E310702:70 C200000:1
 
 Overworld (Kaipo)                                         Seed: 199   Index:   0
 Overworld (Kaipo)                                         Seed: 199   Index:   1
@@ -54,37 +54,35 @@ Antlion B2F Inward Direct                                 Seed: 233   Index:  10
 Antlion's Nest                                            Seed: 233   Index:  90
 Battle: Antlion                                           Seed: 233   Index: 104
 Antlion's Nest                                            Seed: 233   Index: 104
-Antlion B2F Outward Charm Room Steps                      Seed: 233   Index: 119
+Antlion B2F Outward Direct                                Seed: 233   Index: 119
   Antlion B2F                                             Seed: 233   Index: 119
     Step  12: 16 / Turtle x2 (7.464s)
     Step  18: 17 / SandWorm x2 (6.858s)
     Step  31: 18 / Cream x4 (7.523s)
     Step  44: 19 / Weeper x2 (7.132s)
-  Antlion B2F Treasure Room                               Seed: 233   Index: 170
-  Antlion B2F                                             Seed: 233   Index: 170
-    Step  20: 20 / Weeper x2 (7.132s)
-    Step  22: 21 / Basilisk x1, Imp x3 (6.783s)
-Antlion B1F                                               Seed: 233   Index: 204
-  Step  23: 22 / Turtle x2 (7.464s)
-Overworld (Damcyan)                                       Seed: 233   Index: 242
-Overworld (Kaipo)                                         Seed: 233   Index: 242
-Kaipo Revisited                                           Seed: 233   Index: 242
-Overworld (Kaipo)                                         Seed: 233   Index: 242
-Overworld (Damcyan)                                       Seed: 233   Index: 242
-Mt.Hobs-West                                              Seed: 233   Index: 242
-  Step  12: 23 / Cocktric x3 (7.813s)
-  Step  14: 24 / Skelton x4 (7.795s)
-Mt.Hobs Summit                                            Seed: 250   Index:  25
-Battle: MomBomb                                           Seed: 250   Index:  40
-Mt.Hobs Summit                                            Seed: 250   Index:  40
-Mt.Hobs-East                                              Seed: 250   Index:  46
-  Step  19: 25 / Gargoyle x2 (7.630s)
-Overworld (Fabul)                                         Seed: 250   Index:  92
-  Step  34: 26 / SwordRat x3, Needler x3 (7.663s)
-  Step  37: 27 / Imp Cap. x4, Imp x2 (8.467s)
-  Step  69: 28 / Imp Cap. x4, Imp x2 (8.467s)
-Fabul                                                     Seed: 250   Index: 176
-  Optional Steps: 0
+    Step  71: 20 / Weeper x2 (7.132s)
+    Step  73: 21 / Basilisk x1, Imp x3 (6.783s)
+Antlion B1F                                               Seed: 233   Index: 199
+  Step  28: 22 / Turtle x2 (7.464s)
+Overworld (Damcyan)                                       Seed: 233   Index: 237
+Overworld (Kaipo)                                         Seed: 233   Index: 237
+Kaipo Revisited                                           Seed: 233   Index: 237
+Overworld (Kaipo)                                         Seed: 233   Index: 237
+Overworld (Damcyan)                                       Seed: 233   Index: 237
+Mt.Hobs-West                                              Seed: 233   Index: 237
+  Step  17: 23 / Cocktric x3 (7.813s)
+  Step  19: 24 / Skelton x4 (7.795s)
+Mt.Hobs Summit                                            Seed: 250   Index:  20
+Battle: MomBomb                                           Seed: 250   Index:  35
+Mt.Hobs Summit                                            Seed: 250   Index:  35
+Mt.Hobs-East                                              Seed: 250   Index:  41
+  Step  24: 25 / Gargoyle x2 (7.630s)
+Overworld (Fabul)                                         Seed: 250   Index:  87
+  Step  39: 26 / SwordRat x3, Needler x3 (7.663s)
+  Step  42: 27 / Imp Cap. x4, Imp x2 (8.467s)
+  Step  74: 28 / Imp Cap. x4, Imp x2 (8.467s)
+Fabul                                                     Seed: 250   Index: 171
+  Optional Steps: 5
 Overworld (Fabul)                                         Seed: 250   Index: 236
 Fabul Boat and Leviatan                                   Seed: 250   Index: 243
 Overworld (Mysidia)                                       Seed: 250   Index: 243
@@ -417,13 +415,13 @@ Lunar Core B3                                             Seed:  27   Index:  50
 Lunar Core B4                                             Seed:  27   Index: 102
 
 Encounter Time:      1242.167s
-Other Time:          1665.906s
-Total Time:          2908.074s
+Other Time:          1661.314s
+Total Time:          2903.481s
 
 Base Total Time:     2996.627s
-Time Saved:          88.554s
+Time Saved:          93.146s
 
-Optional Steps:      20
+Optional Steps:      25
 Extra Steps:         80
 Encounters:          155
 
