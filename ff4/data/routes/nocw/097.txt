@@ -3,11 +3,11 @@ VERSION	21
 ROSA	v1.1.0-13-g6984184
 SEED	97
 MAXSTEP	256
-MAXSEG	4
+MAXSEG	5
 TASMODE	0
 MINIMUM	1
-FRAMES	74920498
-VARS	E302600:12 E302700:3 E309700:6 E305500:3 C305500:1
+FRAMES	74888498
+VARS	E302600:12 E302700:3 E308702:5 E305500:3 E000701:1 C305500:1
 
 Overworld (Kaipo)                                         Seed:  97   Index:   0
 Overworld (Kaipo)                                         Seed:  97   Index:   1
@@ -110,36 +110,36 @@ Battle: Milon and Milon Z                                 Seed: 165   Index: 237
 Mt.Ordeals Summit                                         Seed: 165   Index: 237
 Paladin                                                   Seed: 165   Index: 241
 Mt.Ordeals Summit                                         Seed: 165   Index: 241
-  Optional Steps: 0
-Mt.Ordeals-7th station                                    Seed: 182   Index:   7
-  Step   2: 38 / Lilith x1, Red Bone x2 (8.437s)
-  Step  14: 39 / Soul x3, Ghoul x1, Revenant x1 (9.621s)
-  Step  34: 40 / Zombie x3, Ghoul x2, Revenant x2 (7.923s)
-Mt.Ordeals-3rd station                                    Seed: 182   Index:  49
-Mt.Ordeals                                                Seed: 182   Index:  79
-Overworld (Mt.Ordeals)                                    Seed: 182   Index: 123
-Take Chocobo to Mysidia                                   Seed: 182   Index: 136
-Overworld (Mysidia)                                       Seed: 182   Index: 136
-Town of Baron Serpent Road                                Seed: 182   Index: 136
-  Extra Steps: 6
-Old Water-way                                             Seed: 182   Index: 146
-  Step  41: 41 / Piranha x2, FangShel x1, EvilShel x1 (9.096s)
-  Step  56: 42 / Piranha x2, FangShel x1, EvilShel x1 (9.096s)
-  Step  88: 43 / Piranha x2, FangShel x1, EvilShel x1 (9.096s)
-Castle Baron B3F                                          Seed: 182   Index: 236
-  Step  16: 44 / Crocdile x1, ElecFish x3 (10.343s)
-  Step  39: 45 / FangShel x3, Aligator x1, Crocdile x1 (14.265s)
-Castle Baron B2F                                          Seed: 199   Index:  34
-Castle Baron B1F Inward Direct                            Seed: 199   Index:  60
-  Castle Baron B1F                                        Seed: 199   Index:  60
-Castle Baron                                              Seed: 199   Index:  81
-Battle: Kainazzo                                          Seed: 199   Index:  95
-Overworld (Toroia)                                        Seed: 199   Index:  95
-Toroian Castle                                            Seed: 199   Index:  96
+  Optional Steps: 1
+  Extra Steps: 4
+  Step  24: 38 / Lilith x1, Red Bone x2 (8.437s)
+Mt.Ordeals-7th station                                    Seed: 182   Index:  12
+  Step   9: 39 / Soul x3, Ghoul x1, Revenant x1 (9.621s)
+  Step  29: 40 / Zombie x3, Ghoul x2, Revenant x2 (7.923s)
+Mt.Ordeals-3rd station                                    Seed: 182   Index:  54
+Mt.Ordeals                                                Seed: 182   Index:  84
+Overworld (Mt.Ordeals)                                    Seed: 182   Index: 128
+Take Chocobo to Mysidia                                   Seed: 182   Index: 141
+Overworld (Mysidia)                                       Seed: 182   Index: 141
+Town of Baron Serpent Road                                Seed: 182   Index: 141
+Old Water-way                                             Seed: 182   Index: 145
+  Step  42: 41 / Piranha x2, FangShel x1, EvilShel x1 (9.096s)
+  Step  57: 42 / Piranha x2, FangShel x1, EvilShel x1 (9.096s)
+  Step  89: 43 / Piranha x2, FangShel x1, EvilShel x1 (9.096s)
+Castle Baron B3F                                          Seed: 182   Index: 235
+  Step  17: 44 / Crocdile x1, ElecFish x3 (10.343s)
+  Step  40: 45 / FangShel x3, Aligator x1, Crocdile x1 (14.265s)
+Castle Baron B2F                                          Seed: 199   Index:  33
+Castle Baron B1F Inward Direct                            Seed: 199   Index:  59
+  Castle Baron B1F                                        Seed: 199   Index:  59
+Castle Baron                                              Seed: 199   Index:  80
+Battle: Kainazzo                                          Seed: 199   Index:  94
+Overworld (Toroia)                                        Seed: 199   Index:  94
+Toroian Castle                                            Seed: 199   Index:  95
   Optional Steps: 3
-Overworld (Toroia)                                        Seed: 199   Index: 110
-  Optional Steps: 0
-  Step  25: 46 / Panther x1, StingRat x3 (9.204s)
+Overworld (Toroia)                                        Seed: 199   Index: 109
+  Optional Steps: 1
+  Step  26: 46 / Panther x1, StingRat x3 (9.204s)
 Black Chocobo to Cave Magnes                              Seed: 199   Index: 147
 Overworld (Toroia)                                        Seed: 199   Index: 147
 Cave Magnes B1F                                           Seed: 199   Index: 148
@@ -188,14 +188,14 @@ Overworld (Eblan)                                         Seed: 233   Index: 194
 Underworld (Castle of Dwarves)                            Seed: 233   Index: 195
 
 Encounter Time:      484.943s
-Other Time:          761.679s
-Total Time:          1246.622s
+Other Time:          761.146s
+Total Time:          1246.089s
 
 Base Total Time:     1284.317s
-Time Saved:          37.695s
+Time Saved:          38.228s
 
-Optional Steps:      16
-Extra Steps:         8
+Optional Steps:      18
+Extra Steps:         6
 Encounters:          59
 
 Base Encounters:     63

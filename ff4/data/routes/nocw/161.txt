@@ -3,11 +3,11 @@ VERSION	21
 ROSA	v1.1.0-13-g6984184
 SEED	161
 MAXSTEP	256
-MAXSEG	4
+MAXSEG	5
 TASMODE	0
 MINIMUM	1
-FRAMES	75060190
-VARS	E302700:12 E302500:28 E309700:54 E305500:45 C305500:1
+FRAMES	74828197
+VARS	E309200:10 E302700:13 E302500:28 C308F00:1 E309700:54 E305500:33 C305500:1
 
 Overworld (Kaipo)                                         Seed: 161   Index:   0
 Overworld (Kaipo)                                         Seed: 161   Index:   1
@@ -132,50 +132,52 @@ Castle Baron                                              Seed:   7   Index: 145
 Battle: Kainazzo                                          Seed:   7   Index: 159
 Overworld (Toroia)                                        Seed:   7   Index: 159
 Toroian Castle                                            Seed:   7   Index: 160
-  Optional Steps: 2
+  Optional Steps: 3
   Extra Steps: 10
-Overworld (Toroia)                                        Seed:   7   Index: 183
+Overworld (Toroia)                                        Seed:   7   Index: 184
   Optional Steps: 0
-Black Chocobo to Cave Magnes                              Seed:   7   Index: 220
-Overworld (Toroia)                                        Seed:   7   Index: 220
-Cave Magnes B1F                                           Seed:   7   Index: 221
-  Step   2: 42 / Ogre x2 (8.223s)
-Cave Magnes B2F                                           Seed:  24   Index:  33
-  Step  34: 43 / Ogre x3 (8.586s)
-Cave Magnes B3F Inward Direct                             Seed:  24   Index:  74
-  Cave Magnes B3F                                         Seed:  24   Index:  74
-    Step  19: 44 / CaveNaga x1, Python x2 (8.779s)
-    Step  22: 45 / Cave Bat x3 (9.265s)
-Cave Magnes B3F Passage                                   Seed:  24   Index: 144
-Cave Magnes B4F Inward Direct                             Seed:  24   Index: 155
-  Cave Magnes B4F                                         Seed:  24   Index: 155
-Battle: Dark Elf                                          Seed:  24   Index: 185
-Overworld (Toroia)                                        Seed:  24   Index: 185
-Black Chocobo to Toroia                                   Seed:  24   Index: 187
-Overworld (Toroia)                                        Seed:  24   Index: 187
-  Step  19: 46 / StingRat x3, Treant x2 (9.677s)
-Toroian Castle 1F Inward Extra Steps Area Steps           Seed:  24   Index: 208
-  Toroian Castle 1F                                       Seed:  24   Index: 208
+Black Chocobo to Cave Magnes                              Seed:   7   Index: 221
+Overworld (Toroia)                                        Seed:   7   Index: 221
+Cave Magnes B1F                                           Seed:   7   Index: 222
+  Step   1: 42 / Ogre x2 (8.223s)
+Cave Magnes B2F                                           Seed:  24   Index:  34
+  Step  33: 43 / Ogre x3 (8.586s)
+Cave Magnes B3F Inward Save Room Steps                    Seed:  24   Index:  75
+  Cave Magnes B3F                                         Seed:  24   Index:  75
+  Cave Magnes B3F Save Room                               Seed:  24   Index:  83
+    Extra Steps: 10
+  Cave Magnes B3F                                         Seed:  24   Index:  93
+    Step   3: 44 / CaveNaga x1, Python x2 (8.779s)
+Cave Magnes B3F Passage                                   Seed:  24   Index: 156
+Cave Magnes B4F Inward Direct                             Seed:  24   Index: 167
+  Cave Magnes B4F                                         Seed:  24   Index: 167
+Battle: Dark Elf                                          Seed:  24   Index: 197
+Overworld (Toroia)                                        Seed:  24   Index: 197
+Black Chocobo to Toroia                                   Seed:  24   Index: 199
+Overworld (Toroia)                                        Seed:  24   Index: 199
+  Step   7: 45 / StingRat x3, Treant x2 (9.677s)
+Toroian Castle 1F Inward Extra Steps Area Steps           Seed:  24   Index: 220
+  Toroian Castle 1F                                       Seed:  24   Index: 220
     Optional Steps: 3
-    Extra Steps: 42
+    Extra Steps: 30
 Overworld (Toroia)                                        Seed:  24   Index: 254
   Optional Steps: 0
 Tower of Zot 1F                                           Seed:  24   Index: 255
-  Step  27: 47 / Gremlin x2, Ice Liz x2 (9.444s)
-  Step  32: 48 / Marion (summons Puppet) x1, Puppet x2 (9.023s)
+  Step  27: 46 / Gremlin x2, Ice Liz x2 (9.444s)
+  Step  32: 47 / Gremlin x2, Ice Liz x2 (9.444s)
 Tower of Zot 2F                                           Seed:  41   Index:  37
-  Step  36: 49 / Marion (summons Puppet) x1, Puppet x3 (9.426s)
+  Step  36: 48 / Marion (summons Puppet) x1, Puppet x2 (9.023s)
 Battle: FlameDog                                          Seed:  41   Index:  89
 Tower of Zot 2F                                           Seed:  41   Index:  89
-  Step   5: 50 / Centaur x1, Gremlin x2 (8.473s)
+  Step   5: 49 / Marion (summons Puppet) x1, Puppet x3 (9.426s)
 Tower of Zot 3F                                           Seed:  41   Index: 106
-  Step  15: 51 / SwordMan x1, Ice Liz x2 (10.462s)
-  Step  17: 52 / SwordMan x1, Ice Liz x2 (10.462s)
-  Step  19: 53 / Marion (summons Puppet) x1, Puppet x2 (9.023s)
+  Step  15: 50 / SwordMan x1, Ice Liz x2 (10.462s)
+  Step  17: 51 / SwordMan x1, Ice Liz x2 (10.462s)
+  Step  19: 52 / SwordMan x1, Ice Liz x2 (10.462s)
 Tower of Zot 4F                                           Seed:  41   Index: 192
-  Step  11: 54 / Marion (summons Puppet) x1, Puppet x3 (9.426s)
+  Step  11: 53 / Marion (summons Puppet) x1, Puppet x3 (9.426s)
 Tower of Zot 5F                                           Seed:  41   Index: 252
-  Step  19: 55 / Marion (summons Puppet) x1, Puppet x3 (9.426s)
+  Step  19: 54 / Marion (summons Puppet) x1, Puppet x3 (9.426s)
 Battle: Magus Sisters                                     Seed:  58   Index:  19
 Tower of Zot 5F                                           Seed:  58   Index:  19
 Tower of Zot 6F                                           Seed:  58   Index:  20
@@ -185,18 +187,18 @@ Fly to Agart                                              Seed:  58   Index:  53
 Overworld (Eblan)                                         Seed:  58   Index:  53
 Underworld (Castle of Dwarves)                            Seed:  58   Index:  54
 
-Encounter Time:      453.723s
-Other Time:          795.224s
-Total Time:          1248.946s
+Encounter Time:      446.867s
+Other Time:          798.219s
+Total Time:          1245.086s
 
 Base Total Time:     1322.903s
-Time Saved:          73.957s
+Time Saved:          77.817s
 
-Optional Steps:      5
-Extra Steps:         134
-Encounters:          55
+Optional Steps:      6
+Extra Steps:         132
+Encounters:          54
 
 Base Encounters:     65
-Encounters Saved:    10
+Encounters Saved:    11
 
 Number of Variables: 89

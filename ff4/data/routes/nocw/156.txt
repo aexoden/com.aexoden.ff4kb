@@ -3,11 +3,11 @@ VERSION	21
 ROSA	v1.1.0-13-g6984184
 SEED	156
 MAXSTEP	256
-MAXSEG	4
+MAXSEG	5
 TASMODE	0
 MINIMUM	1
-FRAMES	75748029
-VARS	C303C00:1 E309200:16 E302600:7 C307801:1 C308F00:1 E303D00:16 E307B01:22
+FRAMES	75716029
+VARS	C303C00:1 E309200:16 E302600:7 C307801:1 E302700:14 C308F00:1 E303D00:2 E307B01:22
 
 Overworld (Kaipo)                                         Seed: 156   Index:   0
 Overworld (Kaipo)                                         Seed: 156   Index:   1
@@ -132,14 +132,15 @@ Castle Baron B2F                                          Seed:   2   Index:  50
 Castle Baron B1F Inward Save Room Steps                   Seed:   2   Index:  76
   Castle Baron B1F                                        Seed:   2   Index:  76
   Castle Baron B1F Save Room                              Seed:   2   Index:  86
-    Extra Steps: 16
-  Castle Baron B1F                                        Seed:   2   Index: 102
-    Step  18: 44 / AquaWorm x2 (8.305s)
-Castle Baron                                              Seed:   2   Index: 126
-Battle: Kainazzo                                          Seed:   2   Index: 140
-Overworld (Toroia)                                        Seed:   2   Index: 140
-Toroian Castle                                            Seed:   2   Index: 141
-  Optional Steps: 0
+    Extra Steps: 2
+  Castle Baron B1F                                        Seed:   2   Index:  88
+    Step   9: 44 / AquaWorm x2 (8.305s)
+Castle Baron                                              Seed:   2   Index: 112
+Battle: Kainazzo                                          Seed:   2   Index: 126
+Overworld (Toroia)                                        Seed:   2   Index: 126
+Toroian Castle                                            Seed:   2   Index: 127
+  Optional Steps: 2
+  Extra Steps: 12
 Overworld (Toroia)                                        Seed:   2   Index: 152
   Optional Steps: 0
   Step  28: 45 / Python x1, StingRat x2 (8.701s)
@@ -192,14 +193,14 @@ Overworld (Eblan)                                         Seed:  36   Index: 249
 Underworld (Castle of Dwarves)                            Seed:  36   Index: 250
 
 Encounter Time:      472.689s
-Other Time:          787.703s
-Total Time:          1260.391s
+Other Time:          787.170s
+Total Time:          1259.859s
 
 Base Total Time:     1312.301s
-Time Saved:          51.910s
+Time Saved:          52.442s
 
-Optional Steps:      7
-Extra Steps:         54
+Optional Steps:      9
+Extra Steps:         52
 Encounters:          57
 
 Base Encounters:     66
