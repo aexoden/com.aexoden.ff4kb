@@ -3,11 +3,11 @@ VERSION	22
 ROSA	v1.1.0-13-g6984184
 SEED	89
 MAXSTEP	256
-MAXSEG	3
+MAXSEG	4
 TASMODE	0
 MINIMUM	1
-FRAMES	177073803
-VARS	C305500:1 E305500:59 C317500:1 E307400:24 E302600:122 C200001:1 C313800:1 C200000:1
+FRAMES	176667860
+VARS	C305500:1 E305500:40 C317500:1 E307400:24 E302600:122 E310700:19 C200001:1 C313800:1 C200000:1
 
 Overworld (Kaipo)                                         Seed:  89   Index:   0
 Overworld (Kaipo)                                         Seed:  89   Index:   1
@@ -158,35 +158,35 @@ Overworld (Toroia)                                        Seed: 208   Index: 237
 Black Chocobo to Toroia                                   Seed: 208   Index: 239
 Toroian Castle 1F Inward Extra Steps Area Steps           Seed: 208   Index: 239
   Toroian Castle 1F                                       Seed: 208   Index: 239
-    Optional Steps: 3
-    Extra Steps: 56
-Overworld (Toroia)                                        Seed: 225   Index:  43
+    Optional Steps: 2
+    Extra Steps: 38
+Overworld (Toroia)                                        Seed: 225   Index:  24
   Optional Steps: 0
-Tower of Zot 1F                                           Seed: 225   Index:  44
+Tower of Zot 1F                                           Seed: 225   Index:  25
   Step  11: 51 / Slime x4 (8.548s)
-Tower of Zot 2F                                           Seed: 225   Index:  82
-  Step  18: 52 / Centaur x1, IceBeast x2 (10.314s)
-  Step  46: 53 / Carapace x2, Ice Liz x2 (9.635s)
-  Step  50: 54 / Centaur x3 (8.469s)
-Battle: FlameDog                                          Seed: 225   Index: 134
-Tower of Zot 2F                                           Seed: 225   Index: 134
-Tower of Zot 3F                                           Seed: 225   Index: 151
-  Step  13: 55 / Ice Liz x1, Slime x3 (9.423s)
-  Step  77: 56 / SwordMan x1, Ice Liz x2 (10.462s)
-Tower of Zot 4F                                           Seed: 225   Index: 237
-Tower of Zot 5F                                           Seed: 242   Index:  41
-  Step  16: 57 / Centaur x1, IceBeast x2 (10.314s)
-Battle: Magus Sisters                                     Seed: 242   Index:  64
-Tower of Zot 5F                                           Seed: 242   Index:  64
-Tower of Zot 6F                                           Seed: 242   Index:  65
-Battle: Valvalis                                          Seed: 242   Index:  79
-Castle Baron                                              Seed: 242   Index:  79
-Fly to Agart                                              Seed: 242   Index:  98
-Overworld (Eblan)                                         Seed: 242   Index:  98
-Underworld (Castle of Dwarves)                            Seed: 242   Index:  99
-Castle of Dwarves Walk                                    Seed: 242   Index: 100
-  Castle of Dwarves                                       Seed: 242   Index: 100
-    Optional Steps: 0
+  Step  30: 52 / Centaur x1, IceBeast x2 (10.314s)
+Tower of Zot 2F                                           Seed: 225   Index:  63
+  Step  37: 53 / Carapace x2, Ice Liz x2 (9.635s)
+Battle: FlameDog                                          Seed: 225   Index: 115
+Tower of Zot 2F                                           Seed: 225   Index: 115
+  Step  13: 54 / Centaur x3 (8.469s)
+  Step  17: 55 / Centaur x3 (8.469s)
+Tower of Zot 3F                                           Seed: 225   Index: 132
+  Step  32: 56 / SwordMan x1, Ice Liz x2 (10.462s)
+Tower of Zot 4F                                           Seed: 225   Index: 218
+  Step  10: 57 / EpeeGirl x3 (9.306s)
+Tower of Zot 5F                                           Seed: 242   Index:  22
+Battle: Magus Sisters                                     Seed: 242   Index:  45
+Tower of Zot 5F                                           Seed: 242   Index:  45
+Tower of Zot 6F                                           Seed: 242   Index:  46
+Battle: Valvalis                                          Seed: 242   Index:  60
+Castle Baron                                              Seed: 242   Index:  60
+Fly to Agart                                              Seed: 242   Index:  79
+Overworld (Eblan)                                         Seed: 242   Index:  79
+Underworld (Castle of Dwarves)                            Seed: 242   Index:  80
+Castle of Dwarves Walk                                    Seed: 242   Index:  81
+  Castle of Dwarves                                       Seed: 242   Index:  81
+    Optional Steps: 19
 Underworld (Castle of Dwarves)                            Seed: 242   Index: 211
   Step  82: 58 / Tortoise x1, Dark Imp x2 (6.727s)
   Step 101: 59 / Dark Imp x4 (6.679s)
@@ -403,15 +403,15 @@ Lunar Core B3                                             Seed: 173   Index: 140
 Lunar Core B4                                             Seed: 173   Index: 192
   Step  27: 137 / Breath x1 (12.011s)
 
-Encounter Time:      1148.433s
-Other Time:          1797.945s
-Total Time:          2946.378s
+Encounter Time:      1146.471s
+Other Time:          1793.152s
+Total Time:          2939.623s
 
 Base Total Time:     3243.918s
-Time Saved:          297.540s
+Time Saved:          304.295s
 
-Optional Steps:      13
-Extra Steps:         192
+Optional Steps:      31
+Extra Steps:         174
 Encounters:          143
 
 Base Encounters:     172

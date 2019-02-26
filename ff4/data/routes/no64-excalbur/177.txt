@@ -3,11 +3,11 @@ VERSION	22
 ROSA	v1.1.0-13-g6984184
 SEED	177
 MAXSTEP	256
-MAXSEG	3
+MAXSEG	4
 TASMODE	0
 MINIMUM	1
-FRAMES	178894761
-VARS	C317500:1 C310700:1 E302700:7 E30AC01:2 E310701:6 C200000:1
+FRAMES	178779764
+VARS	E317B00:22 C316D00:1 E316A01:14 C317500:1 C310700:1 E302700:7 E310701:8 C200000:1
 
 Overworld (Kaipo)                                         Seed: 177   Index:   0
 Overworld (Kaipo)                                         Seed: 177   Index:   1
@@ -273,19 +273,18 @@ Tower of Bab-il B5F                                       Seed: 159   Index:  45
 Battle: Rubicant                                          Seed: 159   Index:  72
 Equip Dwarf Axe When Removing Strength Ring               Seed: 159   Index:  72
 Tower of Bab-il B5F                                       Seed: 159   Index:  72
-  Extra Steps: 2
-  Step   3: 101 / Egg (Lamia) x1 (7.780s)
-Tower of Bab-il 8F (revisit)                              Seed: 159   Index:  75
-Tower of Bab-il 7F (revisit)                              Seed: 159   Index:  91
-  Step  17: 102 / Q.Lamia x1, Egg (Lamia) x3 (7.867s)
-Tower of Bab-il 6F (revisit)                              Seed: 159   Index: 115
-  Step  23: 103 / Sorcerer (summons Ironman) x1, BlackCat x2 (7.232s)
-  Step  39: 104 / Grudger x2, BladeMan x2 (7.291s)
-Fly to Castle of Dwarves                                  Seed: 159   Index: 165
-Underworld (Castle of Dwarves)                            Seed: 159   Index: 165
-Castle of Dwarves                                         Seed: 159   Index: 165
+Tower of Bab-il 8F (revisit)                              Seed: 159   Index:  73
+  Step   2: 101 / Egg (Lamia) x3, Q.Lamia x1 (7.867s)
+Tower of Bab-il 7F (revisit)                              Seed: 159   Index:  89
+  Step  19: 102 / Q.Lamia x1, Egg (Lamia) x3 (7.867s)
+Tower of Bab-il 6F (revisit)                              Seed: 159   Index: 113
+  Step  25: 103 / Sorcerer (summons Ironman) x1, BlackCat x2 (7.232s)
+  Step  41: 104 / Grudger x2, BladeMan x2 (7.291s)
+Fly to Castle of Dwarves                                  Seed: 159   Index: 163
+Underworld (Castle of Dwarves)                            Seed: 159   Index: 163
+Castle of Dwarves                                         Seed: 159   Index: 163
   Optional Steps: 4
-  Extra Steps: 2
+  Extra Steps: 4
 Underworld (Castle of Dwarves)                            Seed: 159   Index: 194
 Land of Monsters B1F                                      Seed: 159   Index: 195
   Step  16: 105 / Conjurer (summons Imp) x1 (6.976s)
@@ -382,47 +381,51 @@ Lunar Subterrane B4                                       Seed: 227   Index:  30
 Lunar Subterrane B4 Passage                               Seed: 227   Index:  86
   Step  14: 132 / King-Ryu x1 (6.621s)
 Lunar Subterrane B4                                       Seed: 227   Index: 115
-Lunar Subterrane B5                                       Seed: 227   Index: 130
-  Step   2: 133 / FatalEye x1 (16.550s)
-Lunar Subterrane B5 Passage A                             Seed: 227   Index: 147
-  Step  17: 134 / King-Ryu x1 (6.621s)
-Protect Ring Chest                                        Seed: 227   Index: 165
-Zeromus Menu Before Zeromus                               Seed: 227   Index: 165
-Lunar Subterrane B5 Passage A                             Seed: 227   Index: 165
-Lunar Subterrane B5                                       Seed: 227   Index: 180
-Lunar Subterrane B5 Passage B                             Seed: 227   Index: 189
-  Step   1: 135 / Tricker x1 (6.671s)
-  Step   3: 136 / Tricker x1 (6.671s)
-Lunar Subterrane B5 Inward Direct                         Seed: 227   Index: 203
-  Lunar Subterrane B5                                     Seed: 227   Index: 203
-Lunar Subterrane B6                                       Seed: 227   Index: 215
-  Step  13: 137 / FatalEye x2 (16.584s)
-Lunar Subterrane B6 Passage                               Seed: 227   Index: 252
-Lunar Subterrane B7 Inward Direct                         Seed: 244   Index:   9
-  Lunar Subterrane B7                                     Seed: 244   Index:   9
-    Step  48: 138 / King-Ryu x1 (6.621s)
-    Step  56: 139 / King-Ryu x1, Ging-Ryu x1 (6.656s)
-Lunar Core B1                                             Seed: 244   Index:  89
-  Step  24: 140 / Behemoth x1 (7.494s)
-  Step  37: 141 / EvilMask x1 (12.202s)
-Lunar Core B2                                             Seed: 244   Index: 157
-  Step   5: 142 / EvilMask x1 (12.202s)
-  Step  22: 143 / Red D. x1 (17.642s)
-  Step  37: 144 / EvilMask x1 (12.202s)
-  Step  53: 145 / Behemoth x1 (7.494s)
-Lunar Core B3                                             Seed: 244   Index: 212
-Lunar Core B4                                             Seed:   5   Index:   8
-  Step  48: 146 / Breath x1 (12.095s)
+  Extra Steps: 14
+  Step  17: 133 / D.Bone x1, Warlock x1 (6.272s)
+Lunar Subterrane B5                                       Seed: 227   Index: 144
+Lunar Subterrane B5 Passage A                             Seed: 227   Index: 161
+  Step   3: 134 / King-Ryu x1 (6.621s)
+Protect Ring Chest                                        Seed: 227   Index: 179
+Zeromus Menu Before Zeromus                               Seed: 227   Index: 179
+Lunar Subterrane B5 Passage A                             Seed: 227   Index: 179
+  Step  11: 135 / King-Ryu x1 (6.621s)
+  Step  13: 136 / King-Ryu x1 (6.621s)
+Lunar Subterrane B5                                       Seed: 227   Index: 194
+Lunar Subterrane B5 Passage B                             Seed: 227   Index: 203
+Lunar Subterrane B5 Inward Direct                         Seed: 227   Index: 217
+  Lunar Subterrane B5                                     Seed: 227   Index: 217
+    Step  11: 137 / Blue D. x2 (7.358s)
+Lunar Subterrane B6                                       Seed: 227   Index: 229
+Lunar Subterrane B6 Passage                               Seed: 244   Index:  10
+Lunar Subterrane B7 Inward Save Room Steps                Seed: 244   Index:  23
+  Lunar Subterrane B7                                     Seed: 244   Index:  23
+  Lunar Subterrane B7 Save Room                           Seed: 244   Index:  46
+    Extra Steps: 22
+  Lunar Subterrane B7                                     Seed: 244   Index:  68
+    Step  45: 138 / King-Ryu x1 (6.621s)
+    Step  58: 139 / King-Ryu x1, Ging-Ryu x1 (6.656s)
+Lunar Core B1                                             Seed: 244   Index: 126
+  Step  36: 140 / Behemoth x1 (7.494s)
+  Step  53: 141 / EvilMask x1 (12.202s)
+  Step  68: 142 / EvilMask x1 (12.202s)
+Lunar Core B2                                             Seed: 244   Index: 194
+  Step  16: 143 / Red D. x1 (17.642s)
+Lunar Core B3                                             Seed: 244   Index: 249
+Lunar Core B4                                             Seed:   5   Index:  45
+  Step  11: 144 / Breath x1 (12.095s)
+  Step  36: 145 / Breath x1 (12.095s)
+  Step  42: 146 / Breath x1 (12.095s)
 
-Encounter Time:      1266.747s
-Other Time:          1709.930s
-Total Time:          2976.677s
+Encounter Time:      1251.722s
+Other Time:          1723.042s
+Total Time:          2974.764s
 
 Base Total Time:     3067.900s
-Time Saved:          91.223s
+Time Saved:          93.136s
 
 Optional Steps:      7
-Extra Steps:         8
+Extra Steps:         44
 Encounters:          155
 
 Base Encounters:     170

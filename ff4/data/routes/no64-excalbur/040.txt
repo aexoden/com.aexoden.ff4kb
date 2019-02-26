@@ -3,11 +3,11 @@ VERSION	22
 ROSA	v1.1.0-13-g6984184
 SEED	40
 MAXSTEP	256
-MAXSEG	3
+MAXSEG	4
 TASMODE	0
 MINIMUM	1
-FRAMES	173874211
-VARS	C305500:1 E30BC00:12 E309700:7 E307000:26 E309200:10 C30CA01:1 C308F00:1 C200000:1
+FRAMES	172706340
+VARS	C305500:1 E30BC00:42 C317500:1 E309700:7 E307000:26 E309200:10 C30CA01:1 C308F00:1 C200000:1
 
 Overworld (Kaipo)                                         Seed:  40   Index:   0
 Overworld (Kaipo)                                         Seed:  40   Index:   1
@@ -346,9 +346,9 @@ Grind Fight Search                                        Seed:  73   Index:  39
    (Step 237: 117 / MacGiant x1, Horseman x1, Beamer x1)
    (Step 249: 118 / MacGiant x2)
   Giant of Bab-il Lung                                    Seed:  73   Index: 100
-    Extra Steps: 12
+    Extra Steps: 42
     Step  19: 110 / Searcher (summons D.Machin) x1, Beamer x2 (7.658s)
-   (Step  27: 111 / MacGiant x2)
+    Step  27: 111 / MacGiant x2 (7.347s)
    (Step  53: 112 / D.Machin x1)
    (Step  78: 113 / D.Machin x1)
    (Step 131: 114 / Searcher (summons Horseman) x1, Beamer x2)
@@ -358,78 +358,74 @@ Grind Fight Search                                        Seed:  73   Index:  39
    (Step 188: 118 / MacGiant x2)
    (Step 232: 119 / Machine x3, Beamer x2)
    (Step 241: 120 / Machine x3, Beamer x2)
-Battle: Elements                                          Seed:  73   Index: 120
-Giant of Bab-il Lung                                      Seed:  73   Index: 120
-  Step   7: 111 / MacGiant x2 (7.511s)
-Giant of Bab-il CPU                                       Seed:  73   Index: 127
-Return to Moon                                            Seed:  73   Index: 129
-Skip Dwarf Axe                                            Seed:  73   Index: 129
-  Lunar Overworld                                         Seed:  73   Index: 129
-  Lunar Path (west)                                       Seed:  73   Index: 134
-    Step  19: 112 / Procyote x1, Juclyote x2 (7.861s)
-  Lunar Overworld                                         Seed:  73   Index: 172
-  Lunar Path (east)                                       Seed:  73   Index: 207
-    Step  24: 113 / Red Worm x2 (9.065s)
-  Lunar Overworld                                         Seed:  73   Index: 238
-    Step   9: 114 / Slime x1, Tofu x1, Pudding x1 (7.607s)
-Lunar Subterrane B1                                       Seed:  73   Index: 255
-  Step  21: 115 / Warlock x1, Kary x2 (6.302s)
-  Step  33: 116 / Warlock x1, Kary x1, RedGiant x1 (6.307s)
-Lunar Subterrane B2                                       Seed:  90   Index:  32
-Lunar Subterrane B3                                       Seed:  90   Index:  61
-Lunar Subterrane B4                                       Seed:  90   Index:  75
-  Step   1: 117 / King-Ryu x2 (6.657s)
-  Step  10: 118 / Warlock x3 (6.275s)
-  Step  42: 119 / D.Bone x1 (6.252s)
-Lunar Subterrane B4 Passage                               Seed:  90   Index: 131
-  Step  26: 120 / D.Fossil x1 (6.253s)
-Lunar Subterrane B4                                       Seed:  90   Index: 160
-Lunar Subterrane B5                                       Seed:  90   Index: 175
-Lunar Subterrane B5 Passage A                             Seed:  90   Index: 192
-  Step  13: 121 / D.Fossil x1 (6.253s)
-Protect Ring Chest                                        Seed:  90   Index: 210
-Zeromus Menu Immediately                                  Seed:  90   Index: 210
-Lunar Subterrane B5 Passage A                             Seed:  90   Index: 210
-  Step   3: 122 / D.Fossil x1 (6.246s)
-Lunar Subterrane B5                                       Seed:  90   Index: 225
-Lunar Subterrane B5 Passage B                             Seed:  90   Index: 234
-  Step  11: 123 / Tricker x1 (6.661s)
-Lunar Subterrane B5 Inward Direct                         Seed:  90   Index: 248
-  Lunar Subterrane B5                                     Seed:  90   Index: 248
-Lunar Subterrane B6                                       Seed: 107   Index:   4
-  Step   8: 124 / Blue D. x1 (10.961s)
-Lunar Subterrane B6 Passage                               Seed: 107   Index:  41
-  Step  10: 125 / D.Fossil x1 (6.246s)
-Lunar Subterrane B7 Inward Direct                         Seed: 107   Index:  54
-  Lunar Subterrane B7                                     Seed: 107   Index:  54
-    Step   8: 126 / D.Fossil x1 (6.246s)
-    Step  28: 127 / King-Ryu x1 (6.591s)
-    Step  61: 128 / D.Fossil x1 (6.246s)
-    Step  62: 129 / King-Ryu x1 (6.591s)
-Lunar Core B1                                             Seed: 107   Index: 134
-  Step   2: 130 / Behemoth x1 (7.420s)
-  Step  13: 131 / EvilMask x1 (12.163s)
-Lunar Core B2                                             Seed: 107   Index: 202
-  Step  33: 132 / Behemoth x1 (7.420s)
-Lunar Core B3                                             Seed: 124   Index:   1
-  Step  22: 133 / Red D. x1, Behemoth x1 (15.366s)
-Lunar Core B4                                             Seed: 124   Index:  53
-  Step  27: 134 / Breath x1 (12.059s)
-  Step  33: 135 / Mind x1 (10.262s)
-  Step  59: 136 / Mind x1 (10.262s)
+Battle: Elements                                          Seed:  73   Index: 150
+Giant of Bab-il Lung                                      Seed:  73   Index: 150
+  Step   3: 112 / D.Machin x1 (7.465s)
+Giant of Bab-il CPU                                       Seed:  73   Index: 157
+Return to Moon                                            Seed:  73   Index: 159
+Skip Dwarf Axe                                            Seed:  73   Index: 159
+  Lunar Overworld                                         Seed:  73   Index: 159
+  Lunar Path (west)                                       Seed:  73   Index: 164
+  Lunar Overworld                                         Seed:  73   Index: 202
+    Step  29: 113 / Juclyote x2, MoonCell x2, Grenade x1 (7.920s)
+  Lunar Path (east)                                       Seed:  73   Index: 237
+    Step  10: 114 / Juclyote x1, Procyote x2 (7.882s)
+  Lunar Overworld                                         Seed:  90   Index:  12
+    Step   8: 115 / Juclyote x2, MoonCell x2, Grenade x1 (7.920s)
+Lunar Subterrane B1                                       Seed:  90   Index:  29
+  Step   3: 116 / Warlock x1, Kary x1, RedGiant x1 (6.307s)
+Lunar Subterrane B2                                       Seed:  90   Index:  62
+  Step  14: 117 / RedGiant x2 (6.652s)
+Lunar Subterrane B3                                       Seed:  90   Index:  91
+Lunar Subterrane B4                                       Seed:  90   Index: 105
+  Step  12: 118 / Warlock x3 (6.275s)
+Lunar Subterrane B4 Passage                               Seed:  90   Index: 161
+Lunar Subterrane B4                                       Seed:  90   Index: 190
+  Step  15: 119 / D.Bone x1 (6.252s)
+Lunar Subterrane B5                                       Seed:  90   Index: 205
+  Step   8: 120 / Blue D. x1 (11.072s)
+Lunar Subterrane B5 Passage A                             Seed:  90   Index: 222
+Protect Ring Chest                                        Seed:  90   Index: 240
+Zeromus Menu Before Zeromus                               Seed:  90   Index: 240
+Lunar Subterrane B5 Passage A                             Seed:  90   Index: 240
+  Step   5: 121 / D.Fossil x1 (6.253s)
+Lunar Subterrane B5                                       Seed:  90   Index: 255
+Lunar Subterrane B5 Passage B                             Seed: 107   Index:   8
+  Step   4: 122 / King-Ryu x1 (6.621s)
+Lunar Subterrane B5 Inward Direct                         Seed: 107   Index:  22
+  Lunar Subterrane B5                                     Seed: 107   Index:  22
+Lunar Subterrane B6                                       Seed: 107   Index:  34
+  Step  28: 123 / Ging-Ryu x1, RedGiant x1 (6.658s)
+Lunar Subterrane B6 Passage                               Seed: 107   Index:  71
+  Step  11: 124 / King-Ryu x1 (6.621s)
+Lunar Subterrane B7 Inward Direct                         Seed: 107   Index:  84
+  Lunar Subterrane B7                                     Seed: 107   Index:  84
+    Step  31: 125 / D.Fossil x1 (6.253s)
+    Step  32: 126 / D.Fossil x1 (6.253s)
+    Step  52: 127 / King-Ryu x1 (6.621s)
+    Step  63: 128 / D.Fossil x1 (6.253s)
+Lunar Core B1                                             Seed: 107   Index: 164
+Lunar Core B2                                             Seed: 107   Index: 232
+  Step   3: 129 / Behemoth x1 (7.494s)
+  Step  47: 130 / Behemoth x1 (7.494s)
+Lunar Core B3                                             Seed: 124   Index:  31
+  Step  49: 131 / Red D. x3 (13.859s)
+Lunar Core B4                                             Seed: 124   Index:  83
+  Step   3: 132 / Breath x1 (12.095s)
+  Step  29: 133 / Breath x1 (12.095s)
 
-Encounter Time:      1239.792s
-Other Time:          1653.347s
-Total Time:          2893.139s
+Encounter Time:      1205.025s
+Other Time:          1668.681s
+Total Time:          2873.706s
 
 Base Total Time:     2988.350s
-Time Saved:          95.211s
+Time Saved:          114.644s
 
 Optional Steps:      0
-Extra Steps:         55
-Encounters:          155
+Extra Steps:         85
+Encounters:          151
 
 Base Encounters:     153
-Encounters Saved:    -2
+Encounters Saved:    2
 
 Number of Variables: 206
