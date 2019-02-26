@@ -3,11 +3,11 @@ VERSION	22
 ROSA	v1.1.0-13-g6984184
 SEED	245
 MAXSTEP	256
-MAXSEG	3
+MAXSEG	4
 TASMODE	0
 MINIMUM	1
-FRAMES	172628548
-VARS	C310700:1 E307400:42 E30CD00:22 C30CA00:1 C305500:1 E30BC00:2 E30C800:32
+FRAMES	172075555
+VARS	E307400:42 E312801:20 C305500:1 E30BC00:2 E310700:24 E30C800:12
 
 Overworld (Kaipo)                                         Seed: 245   Index:   0
 Overworld (Kaipo)                                         Seed: 245   Index:   1
@@ -187,68 +187,67 @@ Castle Baron                                              Seed: 125   Index: 172
 Fly to Agart                                              Seed: 125   Index: 191
 Overworld (Eblan)                                         Seed: 125   Index: 191
 Underworld (Castle of Dwarves)                            Seed: 125   Index: 192
-Castle of Dwarves Warp                                    Seed: 125   Index: 193
+Castle of Dwarves Walk                                    Seed: 125   Index: 193
   Castle of Dwarves                                       Seed: 125   Index: 193
-    Optional Steps: 0
-Underworld (Castle of Dwarves)                            Seed: 142   Index:  45
-  Step  26: 63 / Dark Imp x4 (6.679s)
-  Step  65: 64 / Dark Imp x3, Armadilo x1, BlackLiz x1 (6.753s)
-  Step  97: 65 / Tortoise x2, Armadilo x1, BlackLiz x1 (6.876s)
-  Step 107: 66 / BlackLiz x3 (6.787s)
-Tower of Bab-il 1F                                        Seed: 142   Index: 168
-  Step   6: 67 / BlackLiz x3 (6.963s)
-Tower of Bab-il 2F                                        Seed: 142   Index: 186
-Tower of Bab-il 3F                                        Seed: 142   Index: 224
-  Step  16: 68 / Tortoise x2, BlackLiz x2 (7.069s)
-Tower of Bab-il 4F                                        Seed: 159   Index:  26
-  Step  49: 69 / Chimera x1 (9.065s)
-Tower of Bab-il 5F                                        Seed: 159   Index:  88
-  Step  20: 70 / Chimera x1, FlameDog x2 (7.034s)
-  Step  50: 71 / Chimera x1, Tofu x3 (7.080s)
-Tower of Bab-il 6F                                        Seed: 159   Index: 145
-  Step   9: 72 / Chimera x2 (8.558s)
-Tower of Bab-il 7F                                        Seed: 159   Index: 157
-  Step  28: 73 / Alert (summons FlameDog) x1 (7.259s)
-Tower of Bab-il 8F                                        Seed: 159   Index: 200
-  Step  11: 74 / Alert (summons Stoneman) x1 (7.308s)
-Battle: Dr.Lugae                                          Seed: 159   Index: 225
-Tower of Bab-il 8F                                        Seed: 159   Index: 225
-  Step  23: 75 / Alert (summons Naga) x1 (7.143s)
-Tower of Bab-il 7F                                        Seed: 159   Index: 251
-  Step   9: 76 / Medusa x2 (8.181s)
-Tower of Bab-il 6F                                        Seed: 176   Index:  39
-  Step   3: 77 / Stoneman x1, Medusa x1 (8.328s)
-Tower of Bab-il 5F                                        Seed: 176   Index:  52
-Battle: Dark Imps                                         Seed: 176   Index:  94
-Tower of Bab-il 5F                                        Seed: 176   Index:  94
-  Step  28: 78 / Chimera x1, FlameMan x1 (10.641s)
-Tower of Bab-il 4F                                        Seed: 176   Index: 138
-  Step  27: 79 / Chimera x1 (10.965s)
-  Step  32: 80 / Tortoise x2, BlackLiz x2 (10.078s)
-Tower of Bab-il 3F                                        Seed: 176   Index: 200
-  Step   2: 81 / BlackLiz x3 (9.086s)
-  Step  34: 82 / Tortoise x2, BlackLiz x2 (10.078s)
-Tower of Bab-il 2F                                        Seed: 176   Index: 250
-  Step  24: 83 / FlameMan x1, FlameDog x2 (9.460s)
-Tower of Bab-il 1F                                        Seed: 193   Index:  32
-Travel to Baron                                           Seed: 193   Index:  47
-Overworld (Baron)                                         Seed: 193   Index:  47
-Castle Baron                                              Seed: 193   Index:  47
-Airship Hook                                              Seed: 193   Index:  60
-Overworld (Eblan)                                         Seed: 193   Index:  60
-Cave Eblana B1F                                           Seed: 193   Index:  61
-Cave Eblana B2F                                           Seed: 193   Index: 103
+    Optional Steps: 20
+    Extra Steps: 4
+Underworld (Castle of Dwarves)                            Seed: 142   Index:  72
+  Step  38: 63 / Dark Imp x4 (6.679s)
+  Step  70: 64 / Dark Imp x3, Armadilo x1, BlackLiz x1 (6.753s)
+  Step  80: 65 / Tortoise x2, Armadilo x1, BlackLiz x1 (6.876s)
+  Step 102: 66 / BlackLiz x3 (6.787s)
+Tower of Bab-il 1F                                        Seed: 142   Index: 195
+Tower of Bab-il 2F                                        Seed: 142   Index: 213
+  Step  27: 67 / BlackLiz x3 (6.963s)
+Tower of Bab-il 3F                                        Seed: 142   Index: 251
+Tower of Bab-il 4F                                        Seed: 159   Index:  53
+  Step  22: 68 / Chimera x2 (8.558s)
+  Step  55: 69 / Chimera x1 (9.065s)
+Tower of Bab-il 5F                                        Seed: 159   Index: 115
+  Step  23: 70 / Chimera x1, FlameDog x2 (7.034s)
+  Step  39: 71 / Chimera x1, Tofu x3 (7.080s)
+Tower of Bab-il 6F                                        Seed: 159   Index: 172
+Tower of Bab-il 7F                                        Seed: 159   Index: 184
+  Step   1: 72 / Alert (summons Naga) x1 (7.238s)
+  Step  27: 73 / Alert (summons FlameDog) x1 (7.259s)
+Tower of Bab-il 8F                                        Seed: 159   Index: 227
+  Step  21: 74 / Alert (summons Stoneman) x1 (7.308s)
+Battle: Dr.Lugae                                          Seed: 159   Index: 252
+Tower of Bab-il 8F                                        Seed: 159   Index: 252
+  Extra Steps: 20
+  Step   8: 75 / Alert (summons Naga) x1 (7.143s)
+  Step  46: 76 / Chimera x1, FlameDog x2 (6.996s)
+Tower of Bab-il 7F                                        Seed: 176   Index:  42
+Tower of Bab-il 6F                                        Seed: 176   Index:  86
+Tower of Bab-il 5F                                        Seed: 176   Index:  99
+  Step  23: 77 / Chimera x1, FlameMan x1 (8.594s)
+Battle: Dark Imps                                         Seed: 176   Index: 141
+Tower of Bab-il 5F                                        Seed: 176   Index: 141
+  Step  24: 78 / Chimera x1, FlameMan x1 (10.641s)
+  Step  29: 79 / Chimera x1, FlameMan x2 (9.730s)
+Tower of Bab-il 4F                                        Seed: 176   Index: 185
+  Step  17: 80 / Tortoise x2, BlackLiz x2 (10.078s)
+  Step  49: 81 / Tortoise x2, BlackLiz x2 (10.078s)
+Tower of Bab-il 3F                                        Seed: 176   Index: 247
+  Step  27: 82 / Tortoise x2, BlackLiz x2 (10.078s)
+Tower of Bab-il 2F                                        Seed: 193   Index:  41
+Tower of Bab-il 1F                                        Seed: 193   Index:  79
+Travel to Baron                                           Seed: 193   Index:  94
+Overworld (Baron)                                         Seed: 193   Index:  94
+Castle Baron                                              Seed: 193   Index:  94
+Airship Hook                                              Seed: 193   Index: 107
+Overworld (Eblan)                                         Seed: 193   Index: 107
+Cave Eblana B1F                                           Seed: 193   Index: 108
+Cave Eblana B2F                                           Seed: 193   Index: 150
   Optional Steps: 2
-  Extra Steps: 30
-Pass to Bab-il (south)                                    Seed: 193   Index: 191
-  Step  23: 84 / Ironback x1, Armadilo x1, BlackLiz x1 (9.426s)
-Pass to Bab-il (north)                                    Seed: 193   Index: 222
-Pass to Bab-il (south)                                    Seed: 193   Index: 255
-Pass to Bab-il (north) Inward Save Room Steps             Seed: 210   Index:  63
-  Pass to Bab-il (north)                                  Seed: 210   Index:  63
-  Pass to Bab-il (north) Save Room                        Seed: 210   Index:  67
-    Extra Steps: 22
-  Pass to Bab-il (north)                                  Seed: 210   Index:  89
+  Extra Steps: 10
+Pass to Bab-il (south)                                    Seed: 193   Index: 218
+Pass to Bab-il (north)                                    Seed: 193   Index: 249
+Pass to Bab-il (south)                                    Seed: 210   Index:  26
+  Step  44: 83 / Skull x4 (10.637s)
+  Step  58: 84 / Ironback x1, Armadilo x1, BlackLiz x1 (9.426s)
+Pass to Bab-il (north) Inward Direct                      Seed: 210   Index:  90
+  Pass to Bab-il (north)                                  Seed: 210   Index:  90
 Recruit Edge                                              Seed: 210   Index: 112
 Remove Dwarf Axe in Edge Menu                             Seed: 210   Index: 112
 Pass to Bab-il (north)                                    Seed: 210   Index: 112
@@ -395,15 +394,15 @@ Lunar Core B3                                             Seed:  56   Index: 157
 Lunar Core B4                                             Seed:  56   Index: 213
   Step  36: 139 / Breath x1 (11.914s)
 
-Encounter Time:      1211.926s
-Other Time:          1660.485s
-Total Time:          2872.412s
+Encounter Time:      1212.110s
+Other Time:          1651.101s
+Total Time:          2863.211s
 
 Base Total Time:     2928.183s
-Time Saved:          55.771s
+Time Saved:          64.972s
 
-Optional Steps:      2
-Extra Steps:         96
+Optional Steps:      22
+Extra Steps:         78
 Encounters:          151
 
 Base Encounters:     155
