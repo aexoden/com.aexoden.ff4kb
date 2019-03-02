@@ -28,6 +28,7 @@ ROUTES = {
 		'group': 'standard',
 		'enabled': True,
 		'steps': 256,
+		'twin_safe': True,
 		'locations': 7,
 	},
 	'nocw': {

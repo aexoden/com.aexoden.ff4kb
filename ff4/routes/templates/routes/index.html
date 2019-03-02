@@ -30,9 +30,9 @@
 {% for route, route_data in group_data.routes.items %}
 {% if route_data.enabled %}
 {% if route_data.locations %}
-				<tr><td><a href="{% url "routes:route" route %}">{{ route_data.name }}</a></td><td>{% if route_data.twin_safe %}✓{% endif %}</td><td>Up to {{ route_data.steps }} steps each at up to {{ route_data.locations }} locations</td></tr>
+				<tr><td><a href="{% url "routes:route" route %}">{{ route_data.name }}</a></td><td class="text-center">{% if route_data.twin_safe %}✓{% endif %}</td><td>Up to {{ route_data.steps }} steps each at up to {{ route_data.locations }} locations</td></tr>
 {% elif route_data.steps %}
-				<tr><td><a href="{% url "routes:route" route %}">{{ route_data.name }}</a></td><td>{% if route_data.twin_safe %}✓{% endif %}</td><td>Up to {{ route_data.steps }} steps at each location</td></tr>
+				<tr><td><a href="{% url "routes:route" route %}">{{ route_data.name }}</a></td><td class="text-center">{% if route_data.twin_safe %}✓{% endif %}</td><td>Up to {{ route_data.steps }} steps at each location</td></tr>
 {% elif route_data.steps == 0 %}
 				<tr><td><a href="{% url "routes:route" route %}">{{ route_data.name }}</a></td><td></td><td>Unoptimized</td></tr>
 {% else %}

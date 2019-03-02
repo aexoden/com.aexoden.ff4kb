@@ -2316,7 +2316,77 @@ com.aexoden.ff4 = function()
 		209: [3, 19],
 		210: [2, 19],
 		211: [2, 18]
-	}
+	};
+
+	var _twinSeedData = {
+		"paladin": {
+			14: {
+				"instruction": "Take <strong>48</strong> extra steps in the save room. Determine your seed based on the next room:",
+				14: "One encounter with CaveToad x3. Take <strong>6</strong> extra steps before leaving the room.",
+				15: "No encounters. Don't take any extra steps before leaving the room."
+			},
+			22: {
+				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+				22: "Two encounters.",
+				23: "3 encounters."
+			},
+			30: {
+				"instruction": "Take <strong>8</strong> extra steps in the save room. Determine your seed based on the next room:",
+				30: "One encounter with CaveToad x3.",
+				31: "No encounters."
+			},
+			41: {
+				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+				41: "No encounters.",
+				42: "One encounter with Pike x3."
+			},
+			47: {
+				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+				47: "One encounter.",
+				48: "Two encounters."
+			},
+			63: {
+				"instruction": "Take <strong>72</strong> extra steps in the save room. Determine your seed based on the room where you get <i>Darkness</i> (sword):",
+				63: "Encounters on steps 2 and 15.",
+				64: "Encounters on steps 15 and 32."
+			},
+			68: {
+				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+				68: "One encounter.",
+				69: "Two encounters."
+			},
+			78: {
+				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+				78: "One encounter.",
+				79: "No encounters."
+			},
+			132: {
+				"instruction": "Take <strong>26</strong> extra steps in the save room. Determine your seed based on the room where you get <i>Darkness</i> (sword):",
+				132: "First encounter is Aligator x1, Pike x2.",
+				133: "First encounter is TinyMage x2, WaterHag x4."
+			},
+			143: {
+				"instruction": "Take <strong>2</strong> extra steps in the save room. Determine your seed based on the next room:",
+				143: "Encounter with Pike x3.",
+				144: "Encounter with CaveToad x3."
+			},
+			175: {
+				"instruction": "Take <strong>60</strong> extra steps in the save room. Determine your seed based on the next room:",
+				175: "One encounter.",
+				176: "No encounters."
+			},
+			183: {
+				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+				183: "One encounter. Don't take any extra steps.",
+				184: "Three encounters. Take <strong>12</strong> extra steps before leaving the room."
+			},
+			247: {
+				"instruction": "Take <strong>10</strong> extra steps in the save room. Determine your seed based on the next room:",
+				247: "No encounters. Take <strong>18</strong> extra steps before leaving the room.",
+				248: "One encounter with Jelly x4. Don't take any extra steps."
+			}
+		}
+	};
 
     /*
      * Global Variables
@@ -2588,7 +2658,21 @@ com.aexoden.ff4 = function()
 		if (possibleSeeds.size == 2) {
 			for (seed of twinSeeds) {
 				if (possibleSeeds.has(seed.toString()) && possibleSeeds.has((seed + 1).toString())) {
-					e.innerHTML += '<div class="bs-callout bs-callout-danger"><span class="fas fa-exclamation-triangle"></span><h4>Twin Seed Alert</h4><p>The following two seeds are twin seeds. You may be able to distinguish them by selecting formations. Otherwise, load both seeds and keep following one until you are either missing an encounter or have an extra encounter. At that point, switch to the other. (For now, this may not work. Eventually, the routes will be fixed to make this safe.)</p></div>';
+					if (route in _twinSeedData) {
+						if (seed in _twinSeedData[route]) {
+							let txt = '<div class="bs-callout bs-callout-info"><span class="fas fa-exclamation-triangle"></span><h4>Twin Seed Alert</h4><p>The following two seeds are twin seeds. ' + _twinSeedData[route][seed]['instruction'] + '</p>'
+							txt += '<dl class="row">'
+							txt += '<dt class="col-md-1">' + seed.toString() + '</dt><dd class="col-md-11">' + _twinSeedData[route][seed][seed] + '</dd>';
+							txt += '<dt class="col-md-1">' + (seed + 1).toString() + '</dt><dd class="col-md-11">' + _twinSeedData[route][seed][seed + 1] + '</dd>';
+							txt += '</dl></div>'
+
+							e.innerHTML = txt;
+						} else {
+							e.innerHTML += '<div class="bs-callout bs-callout-danger"><span class="fas fa-exclamation-triangle"></span><h4>Twin Seed Alert</h4><p>The following two seeds are twin seeds, but they are distinguishable by formation. Twin seed safety is only guaranteed if you select all formations. At this point, either reset or pick one of the seeds and hope you guessed right.</p></div>';
+						}
+					} else {
+						e.innerHTML += '<div class="bs-callout bs-callout-danger"><span class="fas fa-exclamation-triangle"></span><h4>Twin Seed Alert</h4><p>The following two seeds are twin seeds. You may be able to distinguish them by selecting formations. Otherwise, load both seeds and keep following one until you are either missing an encounter or have an extra encounter. At that point, switch to the other. (For now, this may not work. Eventually, the routes will be fixed to make this safe.)</p></div>';
+					}
 				}
 			}
 		}
