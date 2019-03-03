@@ -3,11 +3,11 @@ VERSION	21
 ROSA	v1.1.0-13-g6984184
 SEED	132
 MAXSTEP	256
-MAXSEG	6
+MAXSEG	7
 TASMODE	0
 MINIMUM	1
-FRAMES	74290615
-VARS	E309200:6 E302600:5 E302700:30 E302500:18 E305400:26 C308F00:1 E309700:24 C305500:1
+FRAMES	74258615
+VARS	E309200:4 E302600:5 E302700:31 E302500:18 E305400:26 C308F00:1 E309700:24 E000701:1 C305500:1
 
 Overworld (Kaipo)                                         Seed: 132   Index:   0
 Overworld (Kaipo)                                         Seed: 132   Index:   1
@@ -131,21 +131,21 @@ Castle Baron                                              Seed: 234   Index: 136
 Battle: Kainazzo                                          Seed: 234   Index: 150
 Overworld (Toroia)                                        Seed: 234   Index: 150
 Toroian Castle                                            Seed: 234   Index: 151
-  Optional Steps: 2
+  Optional Steps: 3
   Extra Steps: 28
-Overworld (Toroia)                                        Seed: 234   Index: 192
-  Optional Steps: 0
-  Step  35: 40 / Python x1, StingRat x2 (8.701s)
-Black Chocobo to Cave Magnes                              Seed: 234   Index: 229
-Overworld (Toroia)                                        Seed: 234   Index: 229
-Cave Magnes B1F                                           Seed: 234   Index: 230
-  Step  24: 41 / Python x1, StingRat x2 (8.525s)
-  Step  26: 42 / Ogre x1, Panther x2 (8.591s)
-Cave Magnes B2F                                           Seed: 251   Index:  42
-Cave Magnes B3F Inward Save Room Steps                    Seed: 251   Index:  83
-  Cave Magnes B3F                                         Seed: 251   Index:  83
-  Cave Magnes B3F Save Room                               Seed: 251   Index:  91
-    Extra Steps: 6
+Overworld (Toroia)                                        Seed: 234   Index: 193
+  Optional Steps: 1
+  Step  34: 40 / Python x1, StingRat x2 (8.701s)
+Black Chocobo to Cave Magnes                              Seed: 234   Index: 231
+Overworld (Toroia)                                        Seed: 234   Index: 231
+Cave Magnes B1F                                           Seed: 234   Index: 232
+  Step  22: 41 / Python x1, StingRat x2 (8.525s)
+  Step  24: 42 / Ogre x1, Panther x2 (8.591s)
+Cave Magnes B2F                                           Seed: 251   Index:  44
+Cave Magnes B3F Inward Save Room Steps                    Seed: 251   Index:  85
+  Cave Magnes B3F                                         Seed: 251   Index:  85
+  Cave Magnes B3F Save Room                               Seed: 251   Index:  93
+    Extra Steps: 4
   Cave Magnes B3F                                         Seed: 251   Index:  97
     Step  29: 43 / Panther x2 (8.033s)
     Step  32: 44 / Cave Bat x3 (9.265s)
@@ -188,14 +188,14 @@ Overworld (Eblan)                                         Seed:  29   Index:  24
 Underworld (Castle of Dwarves)                            Seed:  29   Index:  25
 
 Encounter Time:      445.909s
-Other Time:          790.232s
-Total Time:          1236.141s
+Other Time:          789.699s
+Total Time:          1235.609s
 
 Base Total Time:     1294.360s
-Time Saved:          58.219s
+Time Saved:          58.751s
 
-Optional Steps:      7
-Extra Steps:         102
+Optional Steps:      9
+Extra Steps:         100
 Encounters:          54
 
 Base Encounters:     64
