@@ -64,6 +64,47 @@
 				<dd>In certain cases, we actually want to have a particular encounter. (The primary example of this is searching for the grind fight in the <i>No64</i> run.) By manipulating our encounters throughout the game, we can ensure that this formation appears exactly when we need it to. This saves us from a potentially lengthy save and reset cycle or from walking around aimlessly searching for the required formation.</dd>
 			</dl>
 			<p>All of this sounds wonderful, of course, but as I'm sure you can imagine, trying to figure this all out in your head would probably be a fool's errand. Instead, we use a computer to solve the problem. Specifically, I use a tool I've written called <a href="https://github.com/aexoden/rosa">Rosa</a> to generate the routes.</p>
+			<h2>Twin Seeds</h2>
+			<h3>Definition</h3>
+			<p>For the standard routes, the first place there is an option to take extra steps is the Watery Pass-South Save Room. In most cases, any two seeds can be told apart by the time you reach this room. However, there are several pairs that cannot. These pairs have been named twin seeds. These can roughly be divided into two groups:</p>
+			<h4>Seeds Distinguished by Formation</h4>
+			<p>The following pairs, while indistinguishable solely by encounter steps, can be distinguished by the encountered formations. For this reason, when using the <a href="{% url "tools:seed-finder" %}">Seed Finder</a>, it is highly recommended to choose formations as you go. In fact, twin seed-safety is only guaranteed if you do select formations.</p>
+			<ul>
+				<li>7 and 8</li>
+				<li>98 and 99</li>
+				<li>101 and 102</li>
+				<li>109 and 110</li>
+				<li>168 and 169</li>
+				<li>231 and 232</li>
+			</ul>
+			<h4>Indistinguishable Seeds</h4>
+			<p>The follow pairs of seeds are completely indistinguishable by the time you reach the Save Room. If using the Seed Finder with a twin seed-safe route, if you get one of these pairs, you will be given instructions on how to proceed to identify your seed. Alternately, you can load both routes, and follow one as long as encounters match exactly. If at some point it doesn't match, you switch to the other. That said, this option produces a much higher workload.</p>
+			<ul>
+				<li>14 and 15</li>
+				<li>22 and 23</li>
+				<li>30 and 31</li>
+				<li>41 and 42</li>
+				<li>47 and 48</li>
+				<li>63 and 64</li>
+				<li>68 and 69</li>
+				<li>78 and 79</li>
+				<li>132 and 133</li>
+				<li>143 and 144</li>
+				<li>175 and 176</li>
+				<li>183 and 184</li>
+				<li>247 and 248</li>
+			</ul>
+			<h3>Adjustment Notes</h3>
+			<p>This section documents the effects of changes made to routes to ensure twin safety. Any unlisted pairs required no adjustment and were safe by default.</p>
+			<h4>Paladin%</h4>
+			<dl class="dl-horizontal">
+				<dt>14 and 15</dt><dd>Relocated steps on route 14 with no time loss.</dd>
+				<dt>30 and 31</dt><dd>Recalculated seed 30 with a 6.6 second time loss.</dd>
+				<dt>68 and 69</dt><dd>Recalculated seed 69 with a 9.2 second time loss.</dd>
+				<dt>132 and 133</dt><dd>Recalculated route 132 with a 0.135 second time loss.</dd>
+				<dt>143 and 144</dt><dd>Recalculated route 143 with a 1.204 second time loss.</dd>
+				<dt>247 and 248</dt><dd>Recalculated route 247 with a 2.379 second time loss.</dd>
+			</dl>
 			<h2>Acknowledgements</h2>
 			<p>I don't know exactly what his contribution was, but some early work on the concepts of step routing was done by <a href="https://www.twitch.tv/the_roth">the_roth</a>, who is one of the top runners of FF4 in the world.</p>
 			<p>I'd also like to thank <a href="https://www.twitch.tv/myself086">Myself086</a> for his instrumental work in the development of FF4 step routes. His pioneering work used a truly optimal solver, though it operated on a simplified model that didn't take individual encounter times into account and did not optimize the final descent. His routes were originally used to seed the generation of my own.</p>
