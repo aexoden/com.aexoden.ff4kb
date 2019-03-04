@@ -2,12 +2,12 @@ ROUTE	Final Fantasy IV Any% No64 (Rosa)
 VERSION	22
 ROSA	v1.1.0-13-g6984184
 SEED	116
-MAXSTEP	256
-MAXSEG	4
+MAXSTEP	128
+MAXSEG	5
 TASMODE	0
 MINIMUM	1
-FRAMES	169486497
-VARS	E317B00:16 C316D00:1 E305400:10 E30CD00:6 C30CA00:1 E30BD00:50
+FRAMES	169454497
+VARS	E317B00:16 C316D00:1 E305400:10 E30CD00:4 C30CA00:1 E30C800:2 E30BD00:50
 
 Overworld (Kaipo)                                         Seed: 116   Index:   0
 Overworld (Kaipo)                                         Seed: 116   Index:   1
@@ -235,17 +235,17 @@ Overworld (Eblan)                                         Seed:  64   Index:  30
 Cave Eblana B1F                                           Seed:  64   Index:  31
   Step  37: 81 / Skull x3 (9.861s)
 Cave Eblana B2F                                           Seed:  64   Index:  73
-  Optional Steps: 0
-Pass to Bab-il (south)                                    Seed:  64   Index: 129
-Pass to Bab-il (north)                                    Seed:  64   Index: 160
-Pass to Bab-il (south)                                    Seed:  64   Index: 193
-  Step  39: 82 / GiantBat x3, Cave Bat x3 (8.043s)
-  Step  57: 83 / Skull x4 (10.637s)
-  Step  64: 84 / Ironback x1, Armadilo x1, BlackLiz x1 (9.426s)
-Pass to Bab-il (north) Inward Save Room Steps             Seed:  81   Index:   1
-  Pass to Bab-il (north)                                  Seed:  81   Index:   1
-  Pass to Bab-il (north) Save Room                        Seed:  81   Index:   5
-    Extra Steps: 6
+  Optional Steps: 2
+Pass to Bab-il (south)                                    Seed:  64   Index: 131
+Pass to Bab-il (north)                                    Seed:  64   Index: 162
+Pass to Bab-il (south)                                    Seed:  64   Index: 195
+  Step  37: 82 / GiantBat x3, Cave Bat x3 (8.043s)
+  Step  55: 83 / Skull x4 (10.637s)
+  Step  62: 84 / Ironback x1, Armadilo x1, BlackLiz x1 (9.426s)
+Pass to Bab-il (north) Inward Save Room Steps             Seed:  81   Index:   3
+  Pass to Bab-il (north)                                  Seed:  81   Index:   3
+  Pass to Bab-il (north) Save Room                        Seed:  81   Index:   7
+    Extra Steps: 4
   Pass to Bab-il (north)                                  Seed:  81   Index:  11
 Recruit Edge                                              Seed:  81   Index:  34
 Remove Dwarf Axe in Edge Menu                             Seed:  81   Index:  34
@@ -386,14 +386,14 @@ Lunar Core B4                                             Seed: 183   Index: 200
   Step  52: 133 / Mind x1 (10.119s)
 
 Encounter Time:      1119.241s
-Other Time:          1700.889s
-Total Time:          2820.130s
+Other Time:          1700.357s
+Total Time:          2819.598s
 
 Base Total Time:     2916.013s
-Time Saved:          95.882s
+Time Saved:          96.415s
 
-Optional Steps:      0
-Extra Steps:         82
+Optional Steps:      2
+Extra Steps:         80
 Encounters:          140
 
 Base Encounters:     160

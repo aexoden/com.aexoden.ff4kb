@@ -2,12 +2,12 @@ ROUTE	Final Fantasy IV Any% No64 (Rosa)
 VERSION	22
 ROSA	v1.1.0-13-g6984184
 SEED	111
-MAXSTEP	256
-MAXSEG	4
+MAXSTEP	128
+MAXSEG	5
 TASMODE	0
 MINIMUM	1
-FRAMES	172809540
-VARS	E317B00:14 C316D00:1 C310700:1 C307800:1 E317600:4 C30CA01:1 E302402:32 E310701:24
+FRAMES	172597540
+VARS	E317B00:14 C316D00:1 C310700:1 E317600:4 E302500:5 C30CA01:1 E302402:32 E310701:24
 
 Overworld (Kaipo)                                         Seed: 111   Index:   0
 Overworld (Kaipo)                                         Seed: 111   Index:   1
@@ -47,13 +47,12 @@ Overworld (Kaipo)                                         Seed: 128   Index: 206
   Step   9: 16 / Imp x4 (7.092s)
 Overworld (Damcyan)                                       Seed: 128   Index: 217
 Damcyan                                                   Seed: 128   Index: 221
-  Optional Steps: 0
-Overworld (Damcyan)                                       Seed: 128   Index: 228
-Antlion B1F                                               Seed: 128   Index: 228
-Antlion B2F Inward Charm Room Steps                       Seed: 145   Index:  10
-  Antlion B2F                                             Seed: 145   Index:  10
-  Antlion B2F Treasure Room                               Seed: 145   Index:  43
-  Antlion B2F                                             Seed: 145   Index:  43
+  Optional Steps: 1
+  Extra Steps: 4
+Overworld (Damcyan)                                       Seed: 128   Index: 233
+Antlion B1F                                               Seed: 128   Index: 233
+Antlion B2F Inward Direct                                 Seed: 145   Index:  15
+  Antlion B2F                                             Seed: 145   Index:  15
 Antlion's Nest                                            Seed: 145   Index:  95
   Step  12: 17 / Basilisk x1, Imp x3 (6.775s)
 Battle: Antlion                                           Seed: 145   Index: 109
@@ -402,14 +401,14 @@ Lunar Core B4                                             Seed: 178   Index: 189
   Step  45: 141 / Mind x1 (10.119s)
 
 Encounter Time:      1250.780s
-Other Time:          1624.644s
-Total Time:          2875.423s
+Other Time:          1621.116s
+Total Time:          2871.896s
 
 Base Total Time:     2991.215s
-Time Saved:          115.792s
+Time Saved:          119.319s
 
-Optional Steps:      4
-Extra Steps:         70
+Optional Steps:      5
+Extra Steps:         74
 Encounters:          156
 
 Base Encounters:     157
