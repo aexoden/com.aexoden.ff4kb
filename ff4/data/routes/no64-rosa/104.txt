@@ -3,11 +3,11 @@ VERSION	22
 ROSA	v1.1.0-13-g6984184
 SEED	104
 MAXSTEP	128
-MAXSEG	5
+MAXSEG	6
 TASMODE	0
 MINIMUM	1
-FRAMES	168692960
-VARS	E305400:46 E302500:19 E309200:92 E310700:20 C308F00:1 E310701:80
+FRAMES	168431758
+VARS	E305400:46 E302500:19 E309200:92 E310700:20 C308F00:1 E30C800:6 E100004:74
 
 Overworld (Kaipo)                                         Seed: 104   Index:   0
 Overworld (Kaipo)                                         Seed: 104   Index:   1
@@ -233,55 +233,56 @@ Airship Hook                                              Seed:  52   Index: 198
 Overworld (Eblan)                                         Seed:  52   Index: 198
 Cave Eblana B1F                                           Seed:  52   Index: 199
 Cave Eblana B2F                                           Seed:  52   Index: 241
+  Optional Steps: 2
+  Extra Steps: 4
+Pass to Bab-il (south)                                    Seed:  69   Index:  47
+Pass to Bab-il (north)                                    Seed:  69   Index:  78
+Pass to Bab-il (south)                                    Seed:  69   Index: 111
+  Step   8: 76 / Ironback x1, Armadilo x1, BlackLiz x1 (9.426s)
+  Step  42: 77 / Skull x4 (10.637s)
+Pass to Bab-il (north) Inward Direct                      Seed:  69   Index: 175
+  Pass to Bab-il (north)                                  Seed:  69   Index: 175
+    Step   3: 78 / Egg (Lamia) x1 (8.155s)
+Recruit Edge                                              Seed:  69   Index: 197
+Remove Dwarf Axe in Edge Menu                             Seed:  69   Index: 197
+Pass to Bab-il (north)                                    Seed:  69   Index: 197
+Tower of Bab-il 1F                                        Seed:  69   Index: 200
+  Step  31: 79 / Balloon x3 (7.108s)
+  Step  50: 80 / Sorcerer (summons Mad Ogre) x1, BladeMan x2 (7.159s)
+  Step  64: 81 / Sorcerer (summons Mad Ogre) x1, BladeMan x2 (7.159s)
+Tower of Bab-il B2F                                       Seed:  86   Index:  26
+  Step   6: 82 / BlackCat x3 (7.142s)
+  Step  50: 83 / Mad Ogre x1, BlackCat x2 (7.108s)
+  Step  59: 84 / Balloon x4 (7.171s)
+Tower of Bab-il B3F                                       Seed:  86   Index: 100
+Tower of Bab-il B4F                                       Seed:  86   Index: 113
+  Step   4: 85 / Sorcerer (summons Mad Ogre) x1, BladeMan x2 (7.159s)
+  Step  27: 86 / Balloon x3, Grudger x1 (7.145s)
+  Step  44: 87 / Balloon x3, Grudger x1 (7.145s)
+Tower of Bab-il B3F                                       Seed:  86   Index: 180
+Tower of Bab-il B4F                                       Seed:  86   Index: 222
+Tower of Bab-il B5F                                       Seed:  86   Index: 225
+  Step   4: 88 / Grudger x2 (8.759s)
+Battle: Rubicant                                          Seed:  86   Index: 252
+Equip Dwarf Axe When Removing Strength Ring               Seed:  86   Index: 252
+Tower of Bab-il B5F                                       Seed:  86   Index: 252
+Tower of Bab-il 8F (revisit)                              Seed:  86   Index: 253
+  Step  15: 89 / Grudger x1, BladeMan x2 (7.206s)
+Tower of Bab-il 7F (revisit)                              Seed: 103   Index:  13
+Tower of Bab-il 6F (revisit)                              Seed: 103   Index:  37
+  Step  14: 90 / Grudger x2, BladeMan x2 (7.291s)
+Fly to Castle of Dwarves                                  Seed: 103   Index:  87
+Underworld (Castle of Dwarves)                            Seed: 103   Index:  87
+Castle of Dwarves                                         Seed: 103   Index:  87
   Optional Steps: 0
-Pass to Bab-il (south)                                    Seed:  69   Index:  41
-  Step   2: 76 / Ironback x1, Armadilo x1, BlackLiz x1 (9.426s)
-Pass to Bab-il (north)                                    Seed:  69   Index:  72
-Pass to Bab-il (south)                                    Seed:  69   Index: 105
-  Step  14: 77 / Skull x4 (10.637s)
-  Step  48: 78 / Ironback x2, BlackLiz x2 (10.193s)
-Pass to Bab-il (north) Inward Direct                      Seed:  69   Index: 169
-  Pass to Bab-il (north)                                  Seed:  69   Index: 169
-    Step   9: 79 / Egg (Lamia) x1 (8.155s)
-Recruit Edge                                              Seed:  69   Index: 191
-Remove Dwarf Axe in Edge Menu                             Seed:  69   Index: 191
-Pass to Bab-il (north)                                    Seed:  69   Index: 191
-Tower of Bab-il 1F                                        Seed:  69   Index: 194
-  Step  37: 80 / Sorcerer (summons Mad Ogre) x1, BladeMan x2 (7.159s)
-  Step  56: 81 / Sorcerer (summons Mad Ogre) x1, BladeMan x2 (7.159s)
-  Step  70: 82 / BlackCat x2 (8.947s)
-Tower of Bab-il B2F                                       Seed:  86   Index:  20
-  Step  12: 83 / Mad Ogre x1, BlackCat x2 (7.108s)
-  Step  56: 84 / Balloon x4 (7.171s)
-  Step  65: 85 / Sorcerer (summons BlackCat) x1, BladeMan x2 (7.156s)
-Tower of Bab-il B3F                                       Seed:  86   Index:  94
-Tower of Bab-il B4F                                       Seed:  86   Index: 107
-  Step  10: 86 / Balloon x3, Grudger x1 (7.145s)
-  Step  33: 87 / Balloon x3, Grudger x1 (7.145s)
-  Step  50: 88 / Balloon x3 (7.108s)
-Tower of Bab-il B3F                                       Seed:  86   Index: 174
-Tower of Bab-il B4F                                       Seed:  86   Index: 216
-Tower of Bab-il B5F                                       Seed:  86   Index: 219
-  Step  10: 89 / BlackCat x2, Lamia x2 (7.187s)
-Battle: Rubicant                                          Seed:  86   Index: 246
-Equip Dwarf Axe When Removing Strength Ring               Seed:  86   Index: 246
-Tower of Bab-il B5F                                       Seed:  86   Index: 246
-Tower of Bab-il 8F (revisit)                              Seed:  86   Index: 247
-Tower of Bab-il 7F (revisit)                              Seed: 103   Index:   7
-  Step   5: 90 / Q.Lamia x1, Egg (Lamia) x3 (7.867s)
-Tower of Bab-il 6F (revisit)                              Seed: 103   Index:  31
-  Step  20: 91 / Q.Lamia x1, Egg (Lamia) x1, BlackCat x2 (7.857s)
-Fly to Castle of Dwarves                                  Seed: 103   Index:  81
-Underworld (Castle of Dwarves)                            Seed: 103   Index:  81
-Castle of Dwarves                                         Seed: 103   Index:  81
-  Optional Steps: 4
-  Extra Steps: 76
-Underworld (Castle of Dwarves)                            Seed: 103   Index: 184
-Sealed Cave                                               Seed: 103   Index: 185
-Underworld (Tomra)                                        Seed: 103   Index: 192
-Return to Castle of Dwarves                               Seed: 103   Index: 193
-Castle of Dwarves                                         Seed: 103   Index: 193
-Underworld (Castle of Dwarves)                            Seed: 103   Index: 194
+Underworld (Castle of Dwarves)                            Seed: 103   Index: 110
+Sealed Cave                                               Seed: 103   Index: 111
+Underworld (Tomra)                                        Seed: 103   Index: 118
+Return to Castle of Dwarves                               Seed: 103   Index: 119
+Castle of Dwarves                                         Seed: 103   Index: 119
+Underworld (Castle of Dwarves)                            Seed: 103   Index: 120
+  Extra Steps: 74
+  Step  27: 91 / Dark Imp x3, Armadilo x1, BlackLiz x1 (6.770s)
 Return to Mysidia                                         Seed: 103   Index: 195
 Overworld (Mysidia)                                       Seed: 103   Index: 195
 Fly to Lunar Path                                         Seed: 103   Index: 198
@@ -381,15 +382,15 @@ Lunar Core B4                                             Seed: 188   Index: 114
   Step  31: 129 / Mind x1 (10.119s)
   Step  58: 130 / Mind x1 (10.119s)
 
-Encounter Time:      1074.266s
-Other Time:          1732.661s
-Total Time:          2806.927s
+Encounter Time:      1069.387s
+Other Time:          1733.193s
+Total Time:          2802.580s
 
 Base Total Time:     2988.050s
-Time Saved:          181.123s
+Time Saved:          185.469s
 
-Optional Steps:      25
-Extra Steps:         232
+Optional Steps:      23
+Extra Steps:         234
 Encounters:          138
 
 Base Encounters:     162
