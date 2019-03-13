@@ -3,11 +3,11 @@ VERSION	21
 ROSA	v1.1.0-13-g6984184
 SEED	0
 MAXSTEP	256
-MAXSEG	7
+MAXSEG	8
 TASMODE	0
 MINIMUM	1
-FRAMES	75615349
-VARS	E000703:1 E000202:4 E309200:20 E302600:10 E302700:3 E302500:1 C308F00:1 E305500:15 C305500:1
+FRAMES	75587724
+VARS	E000703:1 E000202:4 E309200:12 E302600:10 E302700:3 E302500:1 C308F00:1 E303B00:8 E305500:15 C305500:1
 
 Overworld (Kaipo)                                         Seed:   0   Index:   0
 Overworld (Kaipo)                                         Seed:   0   Index:   1
@@ -126,30 +126,31 @@ Old Water-way                                             Seed:  85   Index: 143
   Step  14: 42 / Pike x3, Piranha x3 (8.025s)
   Step  86: 43 / Crocdile x1, Piranha x2 (9.538s)
 Castle Baron B3F                                          Seed:  85   Index: 233
-Castle Baron B2F                                          Seed: 102   Index:  31
-  Step   8: 44 / AquaWorm x1, Hydra x1, Crocdile x1 (10.151s)
-  Step  20: 45 / Hydra x2 (7.986s)
-Castle Baron B1F Inward Direct                            Seed: 102   Index:  57
-  Castle Baron B1F                                        Seed: 102   Index:  57
-Castle Baron                                              Seed: 102   Index:  78
-Battle: Kainazzo                                          Seed: 102   Index:  92
-Overworld (Toroia)                                        Seed: 102   Index:  92
-Toroian Castle                                            Seed: 102   Index:  93
+  Extra Steps: 8
+  Step  62: 44 / AquaWorm x1, Piranha x3 (9.542s)
+Castle Baron B2F                                          Seed: 102   Index:  39
+  Step  12: 45 / Hydra x2 (7.986s)
+Castle Baron B1F Inward Direct                            Seed: 102   Index:  65
+  Castle Baron B1F                                        Seed: 102   Index:  65
+Castle Baron                                              Seed: 102   Index:  86
+Battle: Kainazzo                                          Seed: 102   Index: 100
+Overworld (Toroia)                                        Seed: 102   Index: 100
+Toroian Castle                                            Seed: 102   Index: 101
   Optional Steps: 3
-Overworld (Toroia)                                        Seed: 102   Index: 107
+Overworld (Toroia)                                        Seed: 102   Index: 115
   Optional Steps: 0
-  Step   8: 46 / Cannibal x1, Treant x2 (8.740s)
-Black Chocobo to Cave Magnes                              Seed: 102   Index: 144
-Overworld (Toroia)                                        Seed: 102   Index: 144
-Cave Magnes B1F                                           Seed: 102   Index: 145
-  Step   2: 47 / Ogre x1, Panther x2 (8.591s)
-Cave Magnes B2F                                           Seed: 102   Index: 213
-  Step   4: 48 / Panther x2 (8.033s)
-  Step  22: 49 / Cave Bat x3 (9.265s)
-Cave Magnes B3F Inward Save Room Steps                    Seed: 102   Index: 254
-  Cave Magnes B3F                                         Seed: 102   Index: 254
-  Cave Magnes B3F Save Room                               Seed: 119   Index:   6
-    Extra Steps: 20
+  Step  32: 46 / Cannibal x1, Treant x2 (8.740s)
+  Step  33: 47 / Cannibal x1, Treant x2 (8.740s)
+Black Chocobo to Cave Magnes                              Seed: 102   Index: 152
+Overworld (Toroia)                                        Seed: 102   Index: 152
+Cave Magnes B1F                                           Seed: 102   Index: 153
+  Step  64: 48 / Panther x2 (8.033s)
+Cave Magnes B2F                                           Seed: 102   Index: 221
+  Step  14: 49 / Cave Bat x3 (9.265s)
+Cave Magnes B3F Inward Save Room Steps                    Seed: 119   Index:   6
+  Cave Magnes B3F                                         Seed: 119   Index:   6
+  Cave Magnes B3F Save Room                               Seed: 119   Index:  14
+    Extra Steps: 12
   Cave Magnes B3F                                         Seed: 119   Index:  26
     Step  23: 50 / Mage x2 (8.585s)
     Step  33: 51 / Mage x2 (8.585s)
@@ -190,12 +191,12 @@ Fly to Agart                                              Seed: 136   Index: 225
 Overworld (Eblan)                                         Seed: 136   Index: 225
 Underworld (Castle of Dwarves)                            Seed: 136   Index: 226
 
-Encounter Time:      485.523s
+Encounter Time:      485.063s
 Other Time:          772.661s
-Total Time:          1258.184s
+Total Time:          1257.724s
 
 Base Total Time:     1322.032s
-Time Saved:          63.848s
+Time Saved:          64.308s
 
 Optional Steps:      18
 Extra Steps:         36

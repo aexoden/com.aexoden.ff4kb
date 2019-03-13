@@ -3,11 +3,11 @@ VERSION	21
 ROSA	v1.1.0-13-g6984184
 SEED	175
 MAXSTEP	256
-MAXSEG	7
+MAXSEG	8
 TASMODE	0
 MINIMUM	1
-FRAMES	75925401
-VARS	E309200:20 E302600:34 C307801:1 E302700:3 E307400:8 E305400:60 C308F00:1 E305500:3 E307B01:24 C305500:1
+FRAMES	75907986
+VARS	E000703:2 E309200:18 E302600:34 C307801:1 E302700:4 E307400:8 E305400:60 C308F00:1 E305500:2 E307B01:24 C305500:1
 
 Overworld (Kaipo)                                         Seed: 175   Index:   0
 Overworld (Kaipo)                                         Seed: 175   Index:   1
@@ -134,38 +134,39 @@ Castle Baron                                              Seed:  21   Index: 194
 Battle: Kainazzo                                          Seed:  21   Index: 208
 Overworld (Toroia)                                        Seed:  21   Index: 208
 Toroian Castle                                            Seed:  21   Index: 209
-  Optional Steps: 3
-Overworld (Toroia)                                        Seed:  21   Index: 223
+  Optional Steps: 2
+  Extra Steps: 2
+Overworld (Toroia)                                        Seed:  21   Index: 224
   Optional Steps: 0
-  Step   1: 40 / Python x1, StingRat x2 (8.701s)
-  Step  28: 41 / Python x1, StingRat x2 (8.701s)
-Black Chocobo to Cave Magnes                              Seed:  38   Index:   4
-Overworld (Toroia)                                        Seed:  38   Index:   4
-Cave Magnes B1F                                           Seed:  38   Index:   5
-  Step  26: 42 / Cave Bat x3 (9.265s)
-  Step  68: 43 / Cave Bat x3 (9.265s)
-Cave Magnes B2F                                           Seed:  38   Index:  73
-  Step  21: 44 / Ogre x1, Panther x2 (8.591s)
-Cave Magnes B3F Inward Save Room Steps                    Seed:  38   Index: 114
-  Cave Magnes B3F                                         Seed:  38   Index: 114
-    Step   7: 45 / Cave Bat x3 (9.265s)
-  Cave Magnes B3F Save Room                               Seed:  38   Index: 122
-    Extra Steps: 20
-  Cave Magnes B3F                                         Seed:  38   Index: 142
-Cave Magnes B3F Passage                                   Seed:  38   Index: 205
-Cave Magnes B4F Inward Direct                             Seed:  38   Index: 216
-  Cave Magnes B4F                                         Seed:  38   Index: 216
-    Step   4: 46 / VampGirl x1, Cave Bat x6 (11.715s)
-    Step  25: 47 / VampGirl x1, Cave Bat x6 (11.715s)
-Battle: Dark Elf                                          Seed:  38   Index: 246
-Overworld (Toroia)                                        Seed:  38   Index: 246
-Black Chocobo to Toroia                                   Seed:  38   Index: 248
-Overworld (Toroia)                                        Seed:  38   Index: 248
-Toroian Castle 1F Inward Extra Steps Area Steps           Seed:  55   Index:  13
-  Toroian Castle 1F                                       Seed:  55   Index:  13
-    Optional Steps: 3
-Overworld (Toroia)                                        Seed:  55   Index:  17
-  Optional Steps: 0
+  Step  27: 40 / Python x1, StingRat x2 (8.701s)
+Black Chocobo to Cave Magnes                              Seed:  38   Index:   5
+Overworld (Toroia)                                        Seed:  38   Index:   5
+Cave Magnes B1F                                           Seed:  38   Index:   6
+  Step  25: 41 / Ogre x2 (8.223s)
+  Step  67: 42 / Cave Bat x3 (9.265s)
+Cave Magnes B2F                                           Seed:  38   Index:  74
+  Step  20: 43 / Cave Bat x3 (9.265s)
+Cave Magnes B3F Inward Save Room Steps                    Seed:  38   Index: 115
+  Cave Magnes B3F                                         Seed:  38   Index: 115
+    Step   6: 44 / CaveNaga x1, Python x2 (8.779s)
+    Step   8: 45 / Cave Bat x3 (9.265s)
+  Cave Magnes B3F Save Room                               Seed:  38   Index: 123
+    Extra Steps: 18
+  Cave Magnes B3F                                         Seed:  38   Index: 141
+Cave Magnes B3F Passage                                   Seed:  38   Index: 204
+Cave Magnes B4F Inward Direct                             Seed:  38   Index: 215
+  Cave Magnes B4F                                         Seed:  38   Index: 215
+    Step   5: 46 / VampGirl x1, Cave Bat x6 (11.715s)
+    Step  26: 47 / VampGirl x1, Cave Bat x6 (11.715s)
+Battle: Dark Elf                                          Seed:  38   Index: 245
+Overworld (Toroia)                                        Seed:  38   Index: 245
+Black Chocobo to Toroia                                   Seed:  38   Index: 247
+Overworld (Toroia)                                        Seed:  38   Index: 247
+Toroian Castle 1F Inward Extra Steps Area Steps           Seed:  55   Index:  12
+  Toroian Castle 1F                                       Seed:  55   Index:  12
+    Optional Steps: 2
+Overworld (Toroia)                                        Seed:  55   Index:  15
+  Optional Steps: 2
 Tower of Zot 1F                                           Seed:  55   Index:  18
   Step  35: 48 / Centaur x1, IceBeast x2 (10.314s)
   Step  36: 49 / Marion (summons Puppet) x1, Puppet x2 (9.023s)
@@ -189,12 +190,12 @@ Fly to Agart                                              Seed:  72   Index:  72
 Overworld (Eblan)                                         Seed:  72   Index:  72
 Underworld (Castle of Dwarves)                            Seed:  72   Index:  73
 
-Encounter Time:      459.467s
+Encounter Time:      459.177s
 Other Time:          803.876s
-Total Time:          1263.343s
+Total Time:          1263.053s
 
 Base Total Time:     1327.149s
-Time Saved:          63.806s
+Time Saved:          64.096s
 
 Optional Steps:      16
 Extra Steps:         136

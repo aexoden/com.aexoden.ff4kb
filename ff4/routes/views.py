@@ -37,7 +37,7 @@ ROUTES = {
 		'group': 'standard',
 		'enabled': True,
 		'steps': 256,
-		'locations': 7,
+		'locations': 8,
 	},
 	'no64-rosa': {
 		'name': 'Any% No64 (Rosa)',
