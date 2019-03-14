@@ -37,6 +37,7 @@ ROUTES = {
 		'group': 'standard',
 		'enabled': True,
 		'steps': 256,
+		'twin_safe': True,
 		'locations': 8,
 	},
 	'no64-rosa': {
