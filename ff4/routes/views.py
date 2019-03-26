@@ -27,34 +27,32 @@ ROUTES = {
 		'description': 'Paladin% covers the game from the beginning of the game until Cecil becomes a Paladin. The step route begins after the Mist Clip. Almost identical to the beginning hour of the two primary full-game routes, this route makes for a great place to begin for a new runner.',
 		'group': 'standard',
 		'enabled': True,
-		'steps': 256,
 		'twin_safe': True,
-		'locations': 7,
+		'status': 'Optimal',
 	},
 	'nocw': {
 		'name': 'Any% NoCW',
 		'description': 'Any% NoCW is from the beginning of the game until Zeromus is defeated by any means. The step route begins after the Mist Clip. Typically, this means using the 64-door glitch to defeat Zeromus using the upt Co spell. However, it is technically a superset of Any% No64, as any valid No64 run is also a valid NoCW run (albeit slower).',
 		'group': 'standard',
 		'enabled': True,
-		'steps': 256,
 		'twin_safe': True,
-		'locations': 8,
+		'status': '~98.52% Optimal'
 	},
 	'no64-rosa': {
 		'name': 'Any% No64 (Rosa)',
 		'description': 'This route runs from the beginning of the game until Zeromus is defeated. Use of the 64-door glitch is banned. The step route begins after the Mist Clip. This particular version of the route relies on Rosa as the primary damage dealer at the end of the game.',
 		'group': 'standard',
 		'enabled': True,
-		'steps': 128,
-		'locations': 7,
+		'twin_safe': True,
+		'status': '~99.02% Optimal'
 	},
 	'no64-excalbur': {
 		'name': 'Any% No64 (Edge+Excalbur)',
 		'description': 'This route runs from the beginning of the game until Zeromus is defeated. Use of the 64-door glitch is banned. The step route begins after the Mist Clip. This particular version of the route relies on Edge as the primary damage dealer at the end of the game.',
 		'group': 'standard',
 		'enabled': True,
-		'steps': 256,
-		'locations': 5,
+		'twin_safe': False,
+		'status': '~95.54% Optimal'
 	},
 
 	'premist': {
@@ -62,8 +60,7 @@ ROUTES = {
 		'description': 'From the beginning of the game until the Mist Clip. Primarily useful for demonstrating that seed 92 is optimal.',
 		'group': 'alternate',
 		'enabled': True,
-		'steps': 256,
-		'locations': 0,
+		'status': 'Optimal'
 	},
 
 	'sfc-nocw': {
