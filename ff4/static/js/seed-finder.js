@@ -2321,9 +2321,9 @@ com.aexoden.ff4 = function()
 	var _twinSeedData = {
 		"paladin": {
 			14: {
-				"instruction": "Take <strong>48</strong> extra steps in the save room. Determine your seed based on the next room:",
-				14: "One encounter with CaveToad x3. Take <strong>6</strong> extra steps before leaving the room.",
-				15: "No encounters. Don't take any extra steps before leaving the room."
+				"instruction": "Take <strong>54</strong> extra steps in the save room. Determine your seed based on the next room:",
+				14: "One encounter with CaveToad x3.",
+				15: "No encounters."
 			},
 			22: {
 				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
@@ -2377,13 +2377,214 @@ com.aexoden.ff4 = function()
 			},
 			183: {
 				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
-				183: "One encounter. Don't take any extra steps.",
-				184: "Three encounters. Take <strong>12</strong> extra steps before leaving the room."
+				183: "One encounter on step 37. Don't take any extra steps.",
+				184: "Two encounters on steps 18 and 37. Take <strong>12</strong> extra steps before leaving the room. There will be one more encounter during the extra steps."
 			},
 			247: {
-				"instruction": "Take <strong>10</strong> extra steps in the save room. Determine your seed based on the next room:",
+				"instruction": "Take <strong>10</strong> extra steps in the save room. Determine your seed based on the room after the next room (B3F):",
 				247: "No encounters. Take <strong>18</strong> extra steps before leaving the room.",
 				248: "One encounter with Jelly x4. Don't take any extra steps."
+			}
+		},
+		"nocw": {
+			14: {
+				"instruction": "Take <strong>54</strong> extra steps in the save room. Determine your seed based on the next room:",
+				14: "One encounter with CaveToad x3.",
+				15: "No encounters."
+			},
+			22: {
+				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+				22: "Two encounters.",
+				23: "Three encounters."
+			},
+			30: {
+				"instruction": "Take <strong>8</strong> extra steps in the save room. Determine your seed based on the next room:",
+				30: "One encounter with CaveToad x3.",
+				31: "No encounters."
+			},
+			41: {
+				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+				41: "No encounters.",
+				42: "One encounter with Pike x3."
+			},
+			47: {
+				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+				47: "One encounter.",
+				48: "Two encounters."
+			},
+			63: {
+				"instruction": "Take <strong>72</strong> extra steps in the save room. Determine your seed based on the room where you get <i>Darkness</i> (sword):",
+				63: "Encounters on steps 2 and 15.",
+				64: "Encounters on steps 15 and 32."
+			},
+			68: {
+				"instruction": "Take <strong>16</strong> extra steps in the save room. Determine your seed based on the room after the next room (B3F):",
+				68: "No encounters.",
+				69: "One encounter with CaveToad x3."
+			},
+			78: {
+				"instruction": "Take <strong>22</strong> extra steps in the save room. Determine your seed based on the next room:",
+				78: "Two encounters.",
+				79: "No encounters."
+			},
+			132: {
+				"instruction": "Take <strong>26</strong> extra steps in the save room. Determine your seed based on the room where you get <i>Darkness</i> (sword):",
+				132: "First encounter is Aligator x1, Pike x2.",
+				133: "First encounter is TinyMage x2, WaterHag x4."
+			},
+			143: {
+				"instruction": "Take <strong>2</strong> extra steps in the save room. Determine your seed based on the next room:",
+				143: "Encounter with Pike x3.",
+				144: "Encounter with CaveToad x3."
+			},
+			175: {
+				"instruction": "Take <strong>60</strong> extra steps in the save room. Determine your seed based on the next room:",
+				175: "One encounter.",
+				176: "No encounters."
+			},
+			183: {
+				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+				183: "One encounter on step 37. Don't take any extra steps.",
+				184: "Two encounters on steps 18 and 37. Take <strong>8</strong> extra steps before leaving the room. There will be one more encounter during the extra steps."
+			},
+			247: {
+				"instruction": "Take <strong>10</strong> extra steps in the save room. Determine your seed based on the room after the next room (B3F):",
+				247: "No encounters.",
+				248: "One encounter with Jelly x4."
+			}
+		},
+		"no64-excalbur": {
+			14: {
+				"instruction": "Take <strong>56</strong> extra steps in the save room. Determine your seed based on the next room:",
+				14: "One encounter with CaveToad x3.",
+				15: "No encounters."
+			},
+			22: {
+				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+				22: "Two encounters.",
+				23: "Three encounters."
+			},
+			30: {
+				"instruction": "Take <strong>8</strong> extra steps in the save room. Determine your seed based on the next room:",
+				30: "One encounter with CaveToad x3.",
+				31: "No encounters."
+			},
+			41: {
+				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+				41: "No encounters.",
+				42: "One encounter with Pike x3."
+			},
+			47: {
+				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+				47: "One encounter.",
+				48: "Two encounters."
+			},
+			63: {
+				"instruction": "Take <strong>52</strong> extra steps in the save room, and <strong>20</strong> extra steps three rooms after that (Watery Pass-North B2F). Determine your seed based on the room where you get <i>Darkness</i> (sword):",
+				63: "Encounters on steps 2 and 15.",
+				64: "Encounters on steps 15 and 32."
+			},
+			68: {
+				"instruction": "Take <strong>16</strong> extra steps in the save room. Determine your seed based on the room after the next room (B3F):",
+				68: "No encounters.",
+				69: "One encounter with CaveToad x3."
+			},
+			78: {
+				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+				78: "One encounter on step 32.",
+				79: "One encounter on step 14."
+			},
+			132: {
+				"instruction": "Take <strong>26</strong> extra steps in the save room. Determine your seed based on the room where you get <i>Darkness</i> (sword):",
+				132: "First encounter is Aligator x1, Pike x2.",
+				133: "First encounter is TinyMage x2, WaterHag x4."
+			},
+			143: {
+				"instruction": "Take <strong>2</strong> extra steps in the save room. Determine your seed based on the next room:",
+				143: "Encounter with Pike x3.",
+				144: "Encounter with CaveToad x3."
+			},
+			175: {
+				"instruction": "Take <strong>4</strong> extra steps in the save room. Determine your seed based on the next room:",
+				175: "No encounters.",
+				176: "One encounter."
+			},
+			183: {
+				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+				183: "One encounter on step 37. Don't take any extra steps.",
+				184: "Two encounters on steps 18 and 37. Take <strong>8</strong> extra steps before leaving the room. There will be one more encounter during the extra steps."
+			},
+			247: {
+				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+				247: "No encounters.",
+				248: "One encounter with Pike x3."
+			}
+		},
+		"no64-rosa": {
+			14: {
+				"instruction": "Take <strong>54</strong> extra steps in the save room. Determine your seed based on the next room:",
+				14: "One encounter with CaveToad x3.",
+				15: "No encounters."
+			},
+			22: {
+				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+				22: "Two encounters.",
+				23: "Three encounters."
+			},
+			30: {
+				"instruction": "Take <strong>8</strong> extra steps in the save room. Determine your seed based on the next room:",
+				30: "One encounter with CaveToad x3.",
+				31: "No encounters."
+			},
+			41: {
+				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+				41: "No encounters.",
+				42: "One encounter with Pike x3."
+			},
+			47: {
+				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+				47: "One encounter.",
+				48: "Two encounters."
+			},
+			63: {
+				"instruction": "Take <strong>72</strong> extra steps in the save room. Determine your seed based on the room where you get <i>Darkness</i> (sword):",
+				63: "Encounters on steps 2 and 15.",
+				64: "Encounters on steps 15 and 32."
+			},
+			68: {
+				"instruction": "Take <strong>16</strong> extra steps in the save room. Determine your seed based on the room after the next room (B3F):",
+				68: "No encounters.",
+				69: "One encounter with CaveToad x3."
+			},
+			78: {
+				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+				78: "One encounter on step 32.",
+				79: "One encounter on step 14."
+			},
+			132: {
+				"instruction": "Take <strong>26</strong> extra steps in the save room. Determine your seed based on the room where you get <i>Darkness</i> (sword):",
+				132: "First encounter is Aligator x1, Pike x2.",
+				133: "First encounter is TinyMage x2, WaterHag x4."
+			},
+			143: {
+				"instruction": "Take <strong>2</strong> extra steps in the save room. Determine your seed based on the next room:",
+				143: "Encounter with Pike x3.",
+				144: "Encounter with CaveToad x3."
+			},
+			175: {
+				"instruction": "Take <strong>60</strong> extra steps in the save room. Determine your seed based on the next room:",
+				175: "One encounter with Pike x2, EvilShel x2.",
+				176: "No encounters."
+			},
+			183: {
+				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+				183: "One encounter on step 37. Don't take any extra steps.",
+				184: "Two encounters on steps 18 and 37."
+			},
+			247: {
+				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+				247: "No encounters.",
+				248: "One encounter with Pike x3."
 			}
 		}
 	};
