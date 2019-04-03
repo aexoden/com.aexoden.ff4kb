@@ -4,6 +4,11 @@ import os
 from django.conf import settings
 
 
+def get_route_update_time(route, seed):
+	filename = os.path.join(settings.BASE_DIR, 'ff4', 'data', 'routes', route, '{:03d}.txt'.format(seed))
+	return os.path.getmtime(filename)
+
+
 class RouteDetail(object):
 	def __init__(self, route, seed):
 		self._route = route
@@ -47,6 +52,10 @@ class RouteDetail(object):
 	@property
 	def frames(self):
 		return self._frames
+
+	@property
+	def update_time(self):
+		return os.path.getmtime(self._filename)
 
 	@property
 	def saved_time(self):

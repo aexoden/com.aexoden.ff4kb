@@ -1,10 +1,12 @@
 import json
+import os
 
+from django.conf import settings
 from django.http import Http404
 from django.shortcuts import render
 from django.urls import reverse
 
-from .models import RouteDetail
+from .models import RouteDetail, get_route_update_time
 
 GROUPS = {
 	'standard': {
@@ -184,20 +186,35 @@ def index(request):
 
 
 def route(request, route):
-	seed_metrics = {
-		'frames': [],
-		'encounters': [],
-		'steps': [],
-	}
+	metrics_cache_filename = os.path.join(settings.BASE_DIR, 'ff4', 'cache', 'metrics-{}.json'.format(route))
+	metrics_cache_updated = False
+
+	if os.path.exists(metrics_cache_filename):
+		with open(metrics_cache_filename, 'r') as f:
+			seed_metrics = json.load(f)
+	else:
+		seed_metrics = {
+			'update_time': [-1 for seed in range(256)],
+			'frames': [0 for seed in range(256)],
+			'encounters': [0 for seed in range(256)],
+			'steps': [0 for seed in range(256)],
+		}
 
 	try:
 		for seed in range(256):
-			r = RouteDetail(route, seed)
-			seed_metrics['frames'].append(r.frames)
-			seed_metrics['encounters'].append(r.encounters)
-			seed_metrics['steps'].append(r.steps)
+			if seed_metrics['update_time'][seed] == -1 or get_route_update_time(route, seed) > seed_metrics['update_time'][seed]:
+				r = RouteDetail(route, seed)
+				seed_metrics['update_time'][seed] = r.update_time
+				seed_metrics['frames'][seed] = r.frames
+				seed_metrics['encounters'][seed] = r.encounters
+				seed_metrics['steps'][seed] = r.steps
+				metrics_cache_updated = True
 	except FileNotFoundError:
 		raise Http404("Route does not exist.")
+
+	if metrics_cache_updated:
+		with open(metrics_cache_filename, 'w') as f:
+			json.dump(seed_metrics, f)
 
 	seeds = []
 
