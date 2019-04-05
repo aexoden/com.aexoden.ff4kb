@@ -2589,6 +2589,13 @@ com.aexoden.ff4 = function()
 		}
 	};
 
+	var routeNames = {
+		"paladin": "Paladin%",
+		"nocw": "Any% NoCW",
+		"no64-rosa": "Any% No64 (Rosa)",
+		"no64-excalbur": "Any% No64 (Edge+Excalbur)"
+	}
+
     /*
      * Global Variables
      */
@@ -2861,7 +2868,7 @@ com.aexoden.ff4 = function()
 				if (possibleSeeds.has(seed.toString()) && possibleSeeds.has((seed + 1).toString())) {
 					if (route in _twinSeedData) {
 						if (seed in _twinSeedData[route]) {
-							let txt = '<div class="bs-callout bs-callout-info"><span class="fas fa-exclamation-triangle"></span><h4>Twin Seed Alert</h4><p>The following two seeds are twin seeds. ' + _twinSeedData[route][seed]['instruction'] + '</p>'
+							let txt = '<div class="bs-callout bs-callout-info"><span class="fas fa-exclamation-triangle"></span><h4>Twin Seed Alert</h4><p>These instructions are for <strong>' + routeNames[route] + '</strong>.</p><p>The following two seeds are twin seeds. ' + _twinSeedData[route][seed]['instruction'] + '</p>'
 							txt += '<dl class="row">'
 							txt += '<dt class="col-md-1">' + seed.toString() + '</dt><dd class="col-md-11">' + _twinSeedData[route][seed][seed] + '</dd>';
 							txt += '<dt class="col-md-1">' + (seed + 1).toString() + '</dt><dd class="col-md-11">' + _twinSeedData[route][seed][seed + 1] + '</dd>';
