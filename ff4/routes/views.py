@@ -38,7 +38,7 @@ ROUTES = {
 		'group': 'standard',
 		'enabled': True,
 		'twin_safe': True,
-		'status': '~98.52% Optimal'
+		'status': '~98.67% Optimal'
 	},
 	'no64-rosa': {
 		'name': 'Any% No64 (Rosa)',
@@ -46,7 +46,7 @@ ROUTES = {
 		'group': 'standard',
 		'enabled': True,
 		'twin_safe': True,
-		'status': '~99.02% Optimal'
+		'status': '~98.24% Optimal'
 	},
 	'no64-excalbur': {
 		'name': 'Any% No64 (Edge+Excalbur)',
@@ -54,7 +54,7 @@ ROUTES = {
 		'group': 'standard',
 		'enabled': True,
 		'twin_safe': True,
-		'status': '~96.97% Optimal'
+		'status': '~91.07% Optimal'
 	},
 
 	'premist': {
