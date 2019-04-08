@@ -152,23 +152,28 @@ class RouteDetail(object):
 						self._html_data.append(line.rstrip())
 
 					if line.strip().startswith('Step') or line.strip().startswith('(Step'):
-						matches = re.search('Step *(?P<step>[0-9]*): *(?P<index>[0-9]*) / (?P<formation>.*)\\)?', line)
+						matches = re.search(r'Step *(?P<step>[0-9]*): *(?P<index>[0-9]*) / (?P<formation>.*)\)?', line)
+
+						step = int(matches.group('step'))
+						formation = matches.group('formation')
 
 						if re.search('Searcher.*Machin', line):
 							style = "text-primary"
 
 							if line.strip().startswith('('):
 								style += ' font-italic'
+								formation = formation[:-1]
 							else:
 								style += ' font-weight-bold'
 						elif self._test_battles(line):
 							style = "text-danger"
 						elif line.strip().startswith('('):
 							style = "text-muted font-italic"
+							formation = formation[:-1]
 						else:
 							style = ""
 
-						current_battles.append((int(matches.group('step')), style, matches.group('formation')))
+						current_battles.append((step, style, formation))
 					elif not line.strip().startswith('Battle') and not self._test_options(line) and not re.search('Steps: [1-9]', line):
 						if keep_battles:
 							self._battles[current_area] = current_battles
