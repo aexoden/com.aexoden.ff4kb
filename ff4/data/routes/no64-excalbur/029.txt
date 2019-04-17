@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Edge+Excalbur)
 VERSION	22
-ROSA	v1.1.0-15-g3aeea13
+ROSA	v1.1.0-18-ge0f6888
 SEED	29
-MAXSTEP	64
-MAXSEG	9
+MAXSTEP	128
+MAXSEG	7
 TASMODE	0
 MINIMUM	1
-FRAMES	173250952
-VARS	E316700:20 C305500:1 E305500:26 E307400:8 E30CD00:32 E000501:32 C30CA00:1 C30CA01:1 E30C800:42 C313800:2 E310701:24 E310702:27 E30A000:64 C200000:1
+FRAMES	172906172
+VARS	E316700:20 C305500:1 E305500:26 E307400:8 E000501:32 C30CA01:1 E30C800:70 C313800:2 E310701:33 E310702:91 C200000:1
 
 Overworld (Kaipo)                                         Seed:  29   Index:   0
 Overworld (Kaipo)                                         Seed:  29   Index:   1
@@ -236,51 +236,48 @@ Overworld (Eblan)                                         Seed: 233   Index:  87
 Cave Eblana B1F                                           Seed: 233   Index:  88
 Cave Eblana B2F                                           Seed: 233   Index: 130
   Optional Steps: 2
-  Extra Steps: 40
-Pass to Bab-il (south)                                    Seed: 233   Index: 228
-  Step  26: 79 / Staleman x1 (9.687s)
-  Step  28: 80 / Skull x3 (9.861s)
-Pass to Bab-il (north)                                    Seed: 250   Index:   3
-Pass to Bab-il (south)                                    Seed: 250   Index:  36
-  Step  29: 81 / Skull x3 (9.861s)
-Pass to Bab-il (north) Inward Save Room Steps             Seed: 250   Index: 100
-  Pass to Bab-il (north)                                  Seed: 250   Index: 100
-  Pass to Bab-il (north) Save Room                        Seed: 250   Index: 104
-    Extra Steps: 32
-  Pass to Bab-il (north)                                  Seed: 250   Index: 136
-Recruit Edge                                              Seed: 250   Index: 159
-Remove Dwarf Axe before Q.Eblan/K.Eblan                   Seed: 250   Index: 159
-Pass to Bab-il (north)                                    Seed: 250   Index: 159
-  Step   2: 82 / Ironback x1, Armadilo x1, BlackLiz x1 (7.163s)
-Tower of Bab-il 1F                                        Seed: 250   Index: 162
-  Step  18: 83 / BlackCat x2 (7.164s)
-  Step  31: 84 / Balloon x3 (7.107s)
-  Step  63: 85 / Egg (Lamia) x1 (7.601s)
-Tower of Bab-il B2F                                       Seed: 250   Index: 244
-  Step  25: 86 / BlackCat x3 (7.141s)
-  Step  47: 87 / Mad Ogre x1, BlackCat x1, Balloon x2 (7.166s)
-Tower of Bab-il B3F                                       Seed:  11   Index:  62
-Tower of Bab-il B4F                                       Seed:  11   Index:  75
-  Step   6: 88 / BlackCat x2, Lamia x1 (7.152s)
-Tower of Bab-il B3F                                       Seed:  11   Index: 142
-  Step  17: 89 / Mad Ogre x3 (7.087s)
-  Step  41: 90 / Sorcerer (summons BladeMan) x1, BladeMan x2 (7.148s)
-Tower of Bab-il B4F                                       Seed:  11   Index: 184
-Tower of Bab-il B5F                                       Seed:  11   Index: 187
-  Step  25: 91 / BladeMan x3 (7.162s)
-Battle: Rubicant                                          Seed:  11   Index: 214
-Equip Dwarf Axe When Removing Strength Ring               Seed:  11   Index: 214
-Tower of Bab-il B5F                                       Seed:  11   Index: 214
-Tower of Bab-il 8F (revisit)                              Seed:  11   Index: 215
-  Step   8: 92 / Ironman x1 (8.164s)
-Tower of Bab-il 7F (revisit)                              Seed:  11   Index: 231
-  Step  24: 93 / Sorcerer (summons Ironman) x1, BlackCat x2 (7.232s)
-Tower of Bab-il 6F (revisit)                              Seed:  11   Index: 255
-Fly to Castle of Dwarves                                  Seed:  28   Index:  49
-Underworld (Castle of Dwarves)                            Seed:  28   Index:  49
-Castle of Dwarves                                         Seed:  28   Index:  49
-  Optional Steps: 4
-  Extra Steps: 20
+  Extra Steps: 68
+Pass to Bab-il (south)                                    Seed: 250   Index:   0
+Pass to Bab-il (north)                                    Seed: 250   Index:  31
+Pass to Bab-il (south)                                    Seed: 250   Index:  64
+  Step   1: 79 / Staleman x1 (9.687s)
+  Step  62: 80 / Skull x3 (9.861s)
+Pass to Bab-il (north) Inward Direct                      Seed: 250   Index: 128
+  Pass to Bab-il (north)                                  Seed: 250   Index: 128
+    Step   1: 81 / GiantBat x3, Cave Bat x3 (8.043s)
+Recruit Edge                                              Seed: 250   Index: 150
+Remove Dwarf Axe before Q.Eblan/K.Eblan                   Seed: 250   Index: 150
+Pass to Bab-il (north)                                    Seed: 250   Index: 150
+Tower of Bab-il 1F                                        Seed: 250   Index: 153
+  Step   8: 82 / Sorcerer (summons Mad Ogre) x1, BladeMan x2 (7.158s)
+  Step  27: 83 / BlackCat x2 (7.164s)
+  Step  40: 84 / Balloon x3 (7.107s)
+  Step  72: 85 / Egg (Lamia) x1 (7.601s)
+Tower of Bab-il B2F                                       Seed: 250   Index: 235
+  Step  34: 86 / BlackCat x3 (7.141s)
+  Step  56: 87 / Mad Ogre x1, BlackCat x1, Balloon x2 (7.166s)
+Tower of Bab-il B3F                                       Seed:  11   Index:  53
+Tower of Bab-il B4F                                       Seed:  11   Index:  66
+  Step  15: 88 / BlackCat x2, Lamia x1 (7.152s)
+Tower of Bab-il B3F                                       Seed:  11   Index: 133
+  Step  26: 89 / Mad Ogre x3 (7.087s)
+Tower of Bab-il B4F                                       Seed:  11   Index: 175
+Tower of Bab-il B5F                                       Seed:  11   Index: 178
+  Step   5: 90 / Sorcerer (summons BlackCat) x1, BladeMan x2 (7.153s)
+Battle: Rubicant                                          Seed:  11   Index: 205
+Equip Dwarf Axe When Removing Strength Ring               Seed:  11   Index: 205
+Tower of Bab-il B5F                                       Seed:  11   Index: 205
+Tower of Bab-il 8F (revisit)                              Seed:  11   Index: 206
+  Step   6: 91 / BladeMan x1, BlackCat x1, Q.Lamia x1 (7.188s)
+Tower of Bab-il 7F (revisit)                              Seed:  11   Index: 222
+  Step   1: 92 / Ironman x1, BladeMan x2 (7.213s)
+Tower of Bab-il 6F (revisit)                              Seed:  11   Index: 246
+  Step   9: 93 / Sorcerer (summons Ironman) x1, BlackCat x2 (7.232s)
+Fly to Castle of Dwarves                                  Seed:  28   Index:  40
+Underworld (Castle of Dwarves)                            Seed:  28   Index:  40
+Castle of Dwarves                                         Seed:  28   Index:  40
+  Optional Steps: 3
+  Extra Steps: 30
 Underworld (Castle of Dwarves)                            Seed:  28   Index:  96
 Land of Monsters B1F                                      Seed:  28   Index:  97
 Land of Monsters B2F                                      Seed:  28   Index: 132
@@ -291,12 +288,11 @@ Sealed Cave                                               Seed:  28   Index: 205
 Underworld (Tomra)                                        Seed:  28   Index: 212
 Return to Castle of Dwarves                               Seed:  28   Index: 213
 Castle of Dwarves                                         Seed:  28   Index: 213
-  Extra Steps: 27
-Underworld (Castle of Dwarves)                            Seed:  28   Index: 241
-Overworld (Eblan)                                         Seed:  28   Index: 242
-Overworld (Toroia)                                        Seed:  28   Index: 243
-Grotto Adamant                                            Seed:  28   Index: 244
-  Extra Steps: 64
+  Extra Steps: 91
+Underworld (Castle of Dwarves)                            Seed:  45   Index:  49
+Overworld (Eblan)                                         Seed:  45   Index:  50
+Overworld (Toroia)                                        Seed:  45   Index:  51
+Grotto Adamant                                            Seed:  45   Index:  52
 Overworld (Toroia)                                        Seed:  45   Index:  66
 Return to Mysidia                                         Seed:  45   Index:  68
 Go to Kokkol in the Underworld                            Seed:  45   Index:  68
@@ -408,15 +404,15 @@ Lunar Core B3                                             Seed: 113   Index: 205
 Lunar Core B4                                             Seed: 130   Index:   1
   Step  45: 126 / Mind x1 (10.262s)
 
-Encounter Time:      1124.334s
-Other Time:          1758.435s
-Total Time:          2882.768s
+Encounter Time:      1121.592s
+Other Time:          1755.440s
+Total Time:          2877.031s
 
 Base Total Time:     3053.261s
-Time Saved:          170.493s
+Time Saved:          176.229s
 
-Optional Steps:      8
-Extra Steps:         267
+Optional Steps:      7
+Extra Steps:         273
 Encounters:          140
 
 Base Encounters:     158

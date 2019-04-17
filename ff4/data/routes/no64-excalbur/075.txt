@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Edge+Excalbur)
 VERSION	22
-ROSA	v1.1.0-15-g3aeea13
+ROSA	v1.1.0-18-ge0f6888
 SEED	75
-MAXSTEP	64
-MAXSEG	9
+MAXSTEP	128
+MAXSEG	7
 TASMODE	0
 MINIMUM	1
-FRAMES	173897617
-VARS	E30BD00:49 E307B01:32 C317500:1 E305400:62 E307400:64 E302700:7 C307801:1 E30CD00:58 E000200:20 C30CA00:1 E302402:30 E30C800:42 C313800:2 C200000:1
+FRAMES	173717655
+VARS	E30BD00:49 C317500:1 E305400:74 E302500:37 E307400:72 E302700:7 E30CD00:58 C30CA00:1 E302402:72 C313800:2 C200000:1
 
 Overworld (Kaipo)                                         Seed:  75   Index:   0
   Step   1: 1 / Imp x4 (6.962s)
@@ -23,44 +23,41 @@ Watery Pass-South B1F                                     Seed:  75   Index: 101
 Watery Pass-South B2F                                     Seed:  75   Index: 121
   Step   6: 5 / Pike x3 (7.152s)
 Watery Pass-South B2F Save Room                           Seed:  75   Index: 211
-  Extra Steps: 62
-Watery Pass-South B2F                                     Seed:  92   Index:  21
-  Step  11: 6 / Zombie x4 (7.148s)
-  Step  29: 7 / Pike x3 (7.152s)
-Watery Pass-South B3F                                     Seed:  92   Index:  60
-Watery Pass-North B2F                                     Seed:  92   Index:  94
-Watery Pass-North B1F                                     Seed:  92   Index: 115
-Overworld (Kaipo)                                         Seed:  92   Index: 175
-  Extra Steps: 20
-Waterfalls B1F                                            Seed:  92   Index: 204
-  Extra Steps: 64
+  Extra Steps: 74
+Watery Pass-South B2F                                     Seed:  92   Index:  33
+  Step  17: 6 / Zombie x4 (7.148s)
+Watery Pass-South B3F                                     Seed:  92   Index:  72
+Watery Pass-North B2F                                     Seed:  92   Index: 106
+Watery Pass-North B1F                                     Seed:  92   Index: 127
+Overworld (Kaipo)                                         Seed:  92   Index: 187
+Waterfalls B1F                                            Seed:  92   Index: 196
+  Extra Steps: 72
 Waterfalls B2F                                            Seed: 109   Index:  13
-  Step  20: 8 / TinyMage x2, WaterHag x4 (8.120s)
+  Step  20: 7 / Aligator x1, WaterBug x2 (7.292s)
 Waterfalls Lake                                           Seed: 109   Index:  58
-  Step   4: 9 / Aligator x1, Pike x2 (7.368s)
-  Step  24: 10 / Aligator x1, WaterBug x2 (7.292s)
+  Step   4: 8 / TinyMage x2, WaterHag x4 (8.120s)
+  Step  24: 9 / Aligator x1, Pike x2 (7.368s)
 Battle: Octomamm                                          Seed: 109   Index:  95
 Waterfalls Lake                                           Seed: 109   Index:  95
 Overworld (Kaipo)                                         Seed: 109   Index:  96
 Overworld (Damcyan)                                       Seed: 109   Index: 107
 Damcyan                                                   Seed: 109   Index: 111
-  Optional Steps: 0
-Overworld (Damcyan)                                       Seed: 109   Index: 118
-Antlion B1F                                               Seed: 109   Index: 118
-  Step  18: 11 / Imp x3, Imp Cap. x1 (6.755s)
-Antlion B2F Inward Direct                                 Seed: 109   Index: 156
-  Antlion B2F                                             Seed: 109   Index: 156
-    Step  79: 12 / SandWorm x2 (6.841s)
-Antlion's Nest                                            Seed: 109   Index: 236
-Battle: Antlion                                           Seed: 109   Index: 250
-Antlion's Nest                                            Seed: 109   Index: 250
-Antlion B2F Outward Charm Room Steps                      Seed: 126   Index:   9
-  Antlion B2F                                             Seed: 126   Index:   9
-    Step  14: 13 / Basilisk x1, Imp x3 (6.783s)
-  Antlion B2F Treasure Room                               Seed: 126   Index:  60
-    Extra Steps: 32
-  Antlion B2F                                             Seed: 126   Index:  92
-    Step  20: 14 / Weeper x1, Turtle x1, Basilisk x1 (7.339s)
+  Optional Steps: 1
+  Extra Steps: 36
+Overworld (Damcyan)                                       Seed: 109   Index: 155
+Antlion B1F                                               Seed: 109   Index: 155
+Antlion B2F Inward Direct                                 Seed: 109   Index: 193
+  Antlion B2F                                             Seed: 109   Index: 193
+    Step  42: 10 / Weeper x2 (7.114s)
+Antlion's Nest                                            Seed: 126   Index:  17
+  Step   6: 11 / Basilisk x1, Imp x3 (6.775s)
+Battle: Antlion                                           Seed: 126   Index:  31
+Antlion's Nest                                            Seed: 126   Index:  31
+Antlion B2F Outward Direct                                Seed: 126   Index:  46
+  Antlion B2F                                             Seed: 126   Index:  46
+    Step  34: 12 / SandWorm x2 (6.858s)
+    Step  40: 13 / Basilisk x1, Imp x3 (6.783s)
+    Step  66: 14 / Weeper x1, Turtle x1, Basilisk x1 (7.339s)
 Antlion B1F                                               Seed: 126   Index: 126
   Step  29: 15 / Imp x3 (6.648s)
   Step  34: 16 / Turtle x1, Imp x2 (7.009s)
@@ -229,14 +226,13 @@ Tower of Bab-il 1F                                        Seed:  23   Index: 182
 Travel to Baron                                           Seed:  23   Index: 197
 Overworld (Baron)                                         Seed:  23   Index: 197
 Castle Baron                                              Seed:  23   Index: 197
-  Extra Steps: 30
-Airship Hook                                              Seed:  23   Index: 240
-Overworld (Eblan)                                         Seed:  23   Index: 240
-Cave Eblana B1F                                           Seed:  23   Index: 241
-  Step  10: 74 / Skull x3 (9.861s)
-Cave Eblana B2F                                           Seed:  40   Index:  27
-  Optional Steps: 2
-  Extra Steps: 40
+  Extra Steps: 72
+Airship Hook                                              Seed:  40   Index:  26
+Overworld (Eblan)                                         Seed:  40   Index:  26
+Cave Eblana B1F                                           Seed:  40   Index:  27
+  Step   4: 74 / Skull x3 (9.861s)
+Cave Eblana B2F                                           Seed:  40   Index:  69
+  Optional Steps: 0
 Pass to Bab-il (south)                                    Seed:  40   Index: 125
 Pass to Bab-il (north)                                    Seed:  40   Index: 156
 Pass to Bab-il (south)                                    Seed:  40   Index: 189
@@ -402,15 +398,15 @@ Lunar Core B3                                             Seed: 176   Index:  42
 Lunar Core B4                                             Seed: 176   Index:  94
   Step  28: 126 / Breath x1 (12.095s)
 
-Encounter Time:      1055.743s
-Other Time:          1837.785s
-Total Time:          2893.528s
+Encounter Time:      1055.744s
+Other Time:          1834.790s
+Total Time:          2890.534s
 
 Base Total Time:     2964.784s
-Time Saved:          71.255s
+Time Saved:          74.250s
 
-Optional Steps:      5
-Extra Steps:         359
+Optional Steps:      4
+Extra Steps:         365
 Encounters:          133
 
 Base Encounters:     152

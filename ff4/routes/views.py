@@ -54,7 +54,7 @@ ROUTES = {
 		'group': 'standard',
 		'enabled': True,
 		'twin_safe': True,
-		'status': '~94.18% Optimal'
+		'status': '~96.45% Optimal'
 	},
 
 	'premist': {

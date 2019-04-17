@@ -2480,7 +2480,7 @@ com.aexoden.ff4 = function()
 				48: "Two encounters."
 			},
 			63: {
-				"instruction": "Take <strong>52</strong> extra steps in the save room, and <strong>20</strong> extra steps three rooms after that (Watery Pass-North B2F). Determine your seed based on the room where you get <i>Darkness</i> (sword):",
+				"instruction": "Take <strong>72</strong> extra steps in the save room. Determine your seed based on the room where you get <i>Darkness</i> (sword):",
 				63: "Encounters on steps 2 and 15.",
 				64: "Encounters on steps 15 and 32."
 			},
