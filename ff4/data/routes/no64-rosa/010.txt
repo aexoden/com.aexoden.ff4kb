@@ -3,11 +3,11 @@ VERSION	22
 ROSA	v1.1.0-18-ge0f6888
 SEED	10
 MAXSTEP	128
-MAXSEG	11
+MAXSEG	12
 TASMODE	0
 MINIMUM	1
-FRAMES	167947494
-VARS	E305500:11 E305400:8 C307800:1 E302500:17 E303D00:28 E30CD00:68 E309200:12 C30CA00:1 C305500:1 C303C00:1 E000703:2 E310700:10 C308F00:1 E310701:6 E30BD00:2 E307B00:26
+FRAMES	167915494
+VARS	E30CD00:62 C30CA00:1 E30C800:6 E310701:6 E302500:17 C303C00:1 C308F00:1 E30BD00:2 C307800:1 E305400:8 E310700:10 E307B00:26 E303D00:28 E309200:12 E000703:2 C305500:1 E305500:11
 
 Overworld (Kaipo)                                         Seed:  10   Index:   0
 Overworld (Kaipo)                                         Seed:  10   Index:   1
@@ -241,15 +241,16 @@ Airship Hook                                              Seed: 214   Index: 154
 Overworld (Eblan)                                         Seed: 214   Index: 154
 Cave Eblana B1F                                           Seed: 214   Index: 155
 Cave Eblana B2F                                           Seed: 214   Index: 197
-  Optional Steps: 0
-Pass to Bab-il (south)                                    Seed: 214   Index: 253
-  Step   6: 76 / Skull x4 (10.637s)
-Pass to Bab-il (north)                                    Seed: 231   Index:  28
-Pass to Bab-il (south)                                    Seed: 231   Index:  61
-Pass to Bab-il (north) Inward Save Room Steps             Seed: 231   Index: 125
-  Pass to Bab-il (north)                                  Seed: 231   Index: 125
-  Pass to Bab-il (north) Save Room                        Seed: 231   Index: 129
-    Extra Steps: 68
+  Optional Steps: 2
+  Extra Steps: 4
+Pass to Bab-il (south)                                    Seed: 231   Index:   3
+Pass to Bab-il (north)                                    Seed: 231   Index:  34
+Pass to Bab-il (south)                                    Seed: 231   Index:  67
+  Step  64: 76 / Skull x4 (10.637s)
+Pass to Bab-il (north) Inward Save Room Steps             Seed: 231   Index: 131
+  Pass to Bab-il (north)                                  Seed: 231   Index: 131
+  Pass to Bab-il (north) Save Room                        Seed: 231   Index: 135
+    Extra Steps: 62
   Pass to Bab-il (north)                                  Seed: 231   Index: 197
 Recruit Edge                                              Seed: 231   Index: 220
 Remove Dwarf Axe in Edge Menu                             Seed: 231   Index: 220
@@ -388,14 +389,14 @@ Lunar Core B3                                             Seed:  94   Index:  15
 Lunar Core B4                                             Seed:  94   Index:  71
 
 Encounter Time:      1046.420s
-Other Time:          1748.103s
-Total Time:          2794.523s
+Other Time:          1747.571s
+Total Time:          2793.990s
 
 Base Total Time:     3141.698s
-Time Saved:          347.176s
+Time Saved:          347.708s
 
-Optional Steps:      20
-Extra Steps:         170
+Optional Steps:      22
+Extra Steps:         168
 Encounters:          132
 
 Base Encounters:     171

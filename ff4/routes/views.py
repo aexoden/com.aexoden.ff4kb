@@ -46,7 +46,7 @@ ROUTES = {
 		'group': 'standard',
 		'enabled': True,
 		'twin_safe': True,
-		'status': '~98.24% Optimal'
+		'status': '~98.25% Optimal'
 	},
 	'no64-excalbur': {
 		'name': 'Any% No64 (Edge+Excalbur)',
