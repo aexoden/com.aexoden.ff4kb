@@ -489,10 +489,10 @@ com.aexoden.ff4.nocw = function()
 		var warning = "";
 
 		if (battle == "valvalis") {
-			gp += 18500;
+			gp += 19500;
 			warning = "If you fight the Calbrena big doll, these results will be inaccurate.";
 		} else if (battle == "calbrena") {
-			gp += 13000;
+			gp += 14000;
 			warning = "if you fight the Calbrena big doll, these results will be inaccurate.";
 		}
 
