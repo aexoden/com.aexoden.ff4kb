@@ -3,11 +3,11 @@ VERSION	22
 ROSA	v1.1.0-18-ge0f6888
 SEED	22
 MAXSTEP	128
-MAXSEG	10
+MAXSEG	11
 TASMODE	0
 MINIMUM	1
-FRAMES	173848622
-VARS	C305500:1 E305500:3 E308702:1 E302700:3 E302600:10 C30CA01:1 E000703:2 E310700:16 E30B500:1 E30C800:16 C313800:2 E310701:4 C200000:1 E316500:8
+FRAMES	173838567
+VARS	C200000:1 C305500:1 E000703:2 E302700:3 E316500:8 E310700:16 E302600:10 E310701:4 E308702:1 E30C800:14 C30CA01:1 E30AC01:2 C313800:2 E305500:3 E30B500:1
 
 Overworld (Kaipo)                                         Seed:  22   Index:   0
 Overworld (Kaipo)                                         Seed:  22   Index:   1
@@ -236,39 +236,40 @@ Overworld (Eblan)                                         Seed: 226   Index:  56
 Cave Eblana B1F                                           Seed: 226   Index:  57
 Cave Eblana B2F                                           Seed: 226   Index:  99
   Optional Steps: 2
-  Extra Steps: 14
-Pass to Bab-il (south)                                    Seed: 226   Index: 171
-  Step  21: 82 / GiantBat x4 (11.694s)
-Pass to Bab-il (north)                                    Seed: 226   Index: 202
-  Step  26: 83 / GiantBat x3, Cave Bat x3 (8.043s)
-Pass to Bab-il (south)                                    Seed: 226   Index: 235
-Pass to Bab-il (north) Inward Direct                      Seed: 243   Index:  43
-  Pass to Bab-il (north)                                  Seed: 243   Index:  43
-    Step  14: 84 / Egg (Lamia) x1 (8.155s)
-    Step  22: 85 / Red Bone x3, Skull x2 (7.180s)
-Recruit Edge                                              Seed: 243   Index:  65
-Remove Dwarf Axe before Q.Eblan/K.Eblan                   Seed: 243   Index:  65
-Pass to Bab-il (north)                                    Seed: 243   Index:  65
-Tower of Bab-il 1F                                        Seed: 243   Index:  68
-  Step  30: 86 / BlackCat x2 (7.164s)
-  Step  45: 87 / Balloon x4 (7.170s)
-Tower of Bab-il B2F                                       Seed: 243   Index: 150
-  Step  12: 88 / Balloon x4 (7.170s)
-  Step  29: 89 / Mad Ogre x1, BlackCat x1, Balloon x2 (7.166s)
-  Step  44: 90 / Sorcerer (summons Green D.) x1, BladeMan x2 (7.209s)
-  Step  60: 91 / Egg (Lamia) x1 (7.601s)
-Tower of Bab-il B3F                                       Seed: 243   Index: 224
-Tower of Bab-il B4F                                       Seed: 243   Index: 237
-Tower of Bab-il B3F                                       Seed:   4   Index:  48
-  Step   8: 92 / Mad Ogre x3 (7.087s)
-  Step  33: 93 / Sorcerer (summons BladeMan) x1, BladeMan x2 (7.148s)
-  Step  39: 94 / Sorcerer (summons BladeMan) x1, BladeMan x2 (7.148s)
-Tower of Bab-il B4F                                       Seed:   4   Index:  90
-Tower of Bab-il B5F                                       Seed:   4   Index:  93
-  Step  27: 95 / Sorcerer (summons BlackCat) x1, BladeMan x2 (7.153s)
-Battle: Rubicant                                          Seed:   4   Index: 120
-Equip Dwarf Axe When Removing Strength Ring               Seed:   4   Index: 120
-Tower of Bab-il B5F                                       Seed:   4   Index: 120
+  Extra Steps: 12
+Pass to Bab-il (south)                                    Seed: 226   Index: 169
+  Step  23: 82 / GiantBat x4 (11.694s)
+Pass to Bab-il (north)                                    Seed: 226   Index: 200
+  Step  28: 83 / GiantBat x3, Cave Bat x3 (8.043s)
+Pass to Bab-il (south)                                    Seed: 226   Index: 233
+Pass to Bab-il (north) Inward Direct                      Seed: 243   Index:  41
+  Pass to Bab-il (north)                                  Seed: 243   Index:  41
+    Step  16: 84 / Egg (Lamia) x1 (8.155s)
+Recruit Edge                                              Seed: 243   Index:  63
+Remove Dwarf Axe before Q.Eblan/K.Eblan                   Seed: 243   Index:  63
+Pass to Bab-il (north)                                    Seed: 243   Index:  63
+  Step   2: 85 / Red Bone x3, Skull x2 (7.046s)
+Tower of Bab-il 1F                                        Seed: 243   Index:  66
+  Step  32: 86 / BlackCat x2 (7.164s)
+  Step  47: 87 / Balloon x4 (7.170s)
+Tower of Bab-il B2F                                       Seed: 243   Index: 148
+  Step  14: 88 / Balloon x4 (7.170s)
+  Step  31: 89 / Mad Ogre x1, BlackCat x1, Balloon x2 (7.166s)
+  Step  46: 90 / Sorcerer (summons Green D.) x1, BladeMan x2 (7.209s)
+  Step  62: 91 / Egg (Lamia) x1 (7.601s)
+Tower of Bab-il B3F                                       Seed: 243   Index: 222
+Tower of Bab-il B4F                                       Seed: 243   Index: 235
+Tower of Bab-il B3F                                       Seed:   4   Index:  46
+  Step  10: 92 / Mad Ogre x3 (7.087s)
+  Step  35: 93 / Sorcerer (summons BladeMan) x1, BladeMan x2 (7.148s)
+  Step  41: 94 / Sorcerer (summons BladeMan) x1, BladeMan x2 (7.148s)
+Tower of Bab-il B4F                                       Seed:   4   Index:  88
+Tower of Bab-il B5F                                       Seed:   4   Index:  91
+Battle: Rubicant                                          Seed:   4   Index: 118
+Equip Dwarf Axe When Removing Strength Ring               Seed:   4   Index: 118
+Tower of Bab-il B5F                                       Seed:   4   Index: 118
+  Extra Steps: 2
+  Step   2: 95 / Sorcerer (summons BlackCat) x1, BladeMan x2 (7.120s)
 Tower of Bab-il 8F (revisit)                              Seed:   4   Index: 121
   Step   9: 96 / Egg (Lamia) x3, Q.Lamia x1 (7.867s)
 Tower of Bab-il 7F (revisit)                              Seed:   4   Index: 137
@@ -399,12 +400,12 @@ Lunar Core B3                                             Seed:  89   Index: 245
 Lunar Core B4                                             Seed: 106   Index:  41
   Step  21: 137 / Breath x1 (12.059s)
 
-Encounter Time:      1121.493s
+Encounter Time:      1121.326s
 Other Time:          1771.220s
-Total Time:          2892.713s
+Total Time:          2892.546s
 
 Base Total Time:     2987.893s
-Time Saved:          95.180s
+Time Saved:          95.347s
 
 Optional Steps:      42
 Extra Steps:         22
