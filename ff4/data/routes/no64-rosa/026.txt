@@ -3,11 +3,11 @@ VERSION	22
 ROSA	v1.1.0-18-ge0f6888
 SEED	26
 MAXSTEP	128
-MAXSEG	12
+MAXSEG	13
 TASMODE	0
 MINIMUM	1
-FRAMES	169125481
-VARS	C316B00:1 E317700:2 E317000:8 E30C800:14 E310701:128 E302500:27 E307400:128 E000200:16 E305400:114 E309700:4 E000703:2 C305500:1 E305500:11 E316700:18
+FRAMES	169093481
+VARS	C316B00:1 E317700:2 E317000:8 E30C800:14 E310701:128 E302500:27 E307400:128 E000200:16 E305400:114 E309700:4 E302700:2 E000703:2 C305500:1 E305500:9 E316700:18
 
 Overworld (Kaipo)                                         Seed:  26   Index:   0
 Overworld (Kaipo)                                         Seed:  26   Index:   1
@@ -128,35 +128,35 @@ Castle Baron                                              Seed: 145   Index:  96
 Battle: Kainazzo                                          Seed: 145   Index: 110
 Overworld (Toroia)                                        Seed: 145   Index: 110
 Toroian Castle                                            Seed: 145   Index: 111
+  Optional Steps: 2
+Overworld (Toroia)                                        Seed: 145   Index: 124
   Optional Steps: 0
-Overworld (Toroia)                                        Seed: 145   Index: 122
-  Optional Steps: 0
-  Step  20: 35 / Panther x1, StingRat x3 (9.204s)
-  Step  30: 36 / Panther x1, StingRat x3 (9.204s)
-Black Chocobo to Cave Magnes                              Seed: 145   Index: 159
-Overworld (Toroia)                                        Seed: 145   Index: 159
-Cave Magnes B1F                                           Seed: 145   Index: 160
-  Step  14: 37 / Ogre x1, Panther x2 (8.591s)
-  Step  56: 38 / Python x1, StingRat x2 (8.525s)
-Cave Magnes B2F                                           Seed: 145   Index: 228
-  Step  12: 39 / CaveNaga x1, Python x2 (8.779s)
-  Step  15: 40 / Panther x2 (8.033s)
-  Step  39: 41 / CaveNaga x1, Python x2 (8.779s)
-Cave Magnes B3F Inward Direct                             Seed: 162   Index:  13
-  Cave Magnes B3F                                         Seed: 162   Index:  13
-    Step   3: 42 / Mage x2 (8.585s)
-    Step  62: 43 / Mage x2 (8.585s)
-Cave Magnes B3F Passage                                   Seed: 162   Index:  83
-Cave Magnes B4F Inward Direct                             Seed: 162   Index:  94
-  Cave Magnes B4F                                         Seed: 162   Index:  94
-    Step  14: 44 / Mage x1, Panther x1, Ogre x1 (8.285s)
-Battle: Dark Elf                                          Seed: 162   Index: 124
-Overworld (Toroia)                                        Seed: 162   Index: 124
-Black Chocobo to Toroia                                   Seed: 162   Index: 126
-Toroian Castle 1F Inward Extra Steps Area Steps           Seed: 162   Index: 126
-  Toroian Castle 1F                                       Seed: 162   Index: 126
+  Step  18: 35 / Panther x1, StingRat x3 (9.204s)
+  Step  28: 36 / Panther x1, StingRat x3 (9.204s)
+Black Chocobo to Cave Magnes                              Seed: 145   Index: 161
+Overworld (Toroia)                                        Seed: 145   Index: 161
+Cave Magnes B1F                                           Seed: 145   Index: 162
+  Step  12: 37 / Ogre x1, Panther x2 (8.591s)
+  Step  54: 38 / Python x1, StingRat x2 (8.525s)
+Cave Magnes B2F                                           Seed: 145   Index: 230
+  Step  10: 39 / CaveNaga x1, Python x2 (8.779s)
+  Step  13: 40 / Panther x2 (8.033s)
+  Step  37: 41 / CaveNaga x1, Python x2 (8.779s)
+Cave Magnes B3F Inward Direct                             Seed: 162   Index:  15
+  Cave Magnes B3F                                         Seed: 162   Index:  15
+    Step   1: 42 / Mage x2 (8.585s)
+    Step  60: 43 / Mage x2 (8.585s)
+Cave Magnes B3F Passage                                   Seed: 162   Index:  85
+Cave Magnes B4F Inward Direct                             Seed: 162   Index:  96
+  Cave Magnes B4F                                         Seed: 162   Index:  96
+    Step  12: 44 / Mage x1, Panther x1, Ogre x1 (8.285s)
+Battle: Dark Elf                                          Seed: 162   Index: 126
+Overworld (Toroia)                                        Seed: 162   Index: 126
+Black Chocobo to Toroia                                   Seed: 162   Index: 128
+Toroian Castle 1F Inward Extra Steps Area Steps           Seed: 162   Index: 128
+  Toroian Castle 1F                                       Seed: 162   Index: 128
     Optional Steps: 3
-    Extra Steps: 8
+    Extra Steps: 6
 Overworld (Toroia)                                        Seed: 162   Index: 138
   Optional Steps: 2
 Tower of Zot 1F                                           Seed: 162   Index: 141
@@ -377,14 +377,14 @@ Lunar Core B4                                             Seed: 127   Index:  80
   Step  32: 119 / Mind x1 (10.119s)
 
 Encounter Time:      1010.159s
-Other Time:          1803.964s
-Total Time:          2814.123s
+Other Time:          1803.432s
+Total Time:          2813.591s
 
 Base Total Time:     2980.694s
-Time Saved:          166.571s
+Time Saved:          167.103s
 
-Optional Steps:      12
-Extra Steps:         460
+Optional Steps:      14
+Extra Steps:         458
 Encounters:          125
 
 Base Encounters:     154
