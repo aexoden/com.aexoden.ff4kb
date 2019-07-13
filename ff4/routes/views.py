@@ -1,5 +1,6 @@
 import json
 import os
+import statistics
 
 from django.conf import settings
 from django.http import Http404
@@ -146,14 +147,15 @@ ROUTES = {
 }
 
 
-def get_color(value, best_value, worst_value):
+def get_color(value, mean, stdev):
 	colors = [
 		(0.00, (128, 64, 0)),
 		(0.50, (255, 255, 255)),
 		(1.00, (0, 224, 0)),
 	]
 
-	value = (worst_value - value) / (worst_value - best_value)
+	z = (value - mean) / stdev
+	value = (z / -5) + 0.5
 	value = max(0, min(1, value))
 
 	index = 1
@@ -226,7 +228,7 @@ def route(request, route):
 
 			group.append({
 				'seed': seed,
-				'background': get_color(seed_metrics['frames'][seed], min(seed_metrics['frames']), max(seed_metrics['frames']))
+				'background': get_color(seed_metrics['frames'][seed], statistics.mean(seed_metrics['frames']), statistics.stdev(seed_metrics['frames']))
 			})
 
 		seeds.append(group)
