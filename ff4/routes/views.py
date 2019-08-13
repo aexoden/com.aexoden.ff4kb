@@ -39,7 +39,7 @@ ROUTES = {
 		'group': 'standard',
 		'enabled': True,
 		'twin_safe': True,
-		'status': '~98.67% Optimal'
+		'status': 'Optimal'
 	},
 	'no64-rosa': {
 		'name': 'Any% No64 (Rosa)',

@@ -2423,7 +2423,7 @@ com.aexoden.ff4 = function()
 				69: "One encounter with CaveToad x3."
 			},
 			78: {
-				"instruction": "Take <strong>22</strong> extra steps in the save room. Determine your seed based on the next room:",
+				"instruction": "Take <strong>24</strong> extra steps in the save room. Determine your seed based on the next room:",
 				78: "Two encounters.",
 				79: "No encounters."
 			},

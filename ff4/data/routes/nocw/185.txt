@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% NoCW
 VERSION	21
-ROSA	v1.1.0-13-g6984184
+ROSA	v1.1.0-25-g4fc80ef
 SEED	185
 MAXSTEP	256
-MAXSEG	8
+MAXSEG	12
 TASMODE	0
 MINIMUM	1
-FRAMES	76141375
-VARS	C303C00:1 E309200:30 E307B00:36 E302600:16 E302700:13 E302500:31 C307800:1 E305400:98 C308F00:1 E309700:12 E303D00:4
+FRAMES	76100266
+VARS	C303C00:1 C307800:1 C308F00:1 E000701:1 E302500:31 E302600:8 E302700:15 E303D00:4 E305400:80 E307300:18 E307B00:36 E308400:4 E308702:1 E309200:28 E309700:14
 
 Overworld (Kaipo)                                         Seed: 185   Index:   0
 Overworld (Kaipo)                                         Seed: 185   Index:   1
@@ -24,16 +24,17 @@ Watery Pass-South B2F                                     Seed: 185   Index: 121
   Step  51: 5 / EvilShel x3, WaterBug x1 (7.081s)
   Step  66: 6 / Pike x3 (7.152s)
 Watery Pass-South B2F Save Room                           Seed: 185   Index: 211
-  Extra Steps: 98
-Watery Pass-South B2F                                     Seed: 202   Index:  57
-Watery Pass-South B3F                                     Seed: 202   Index:  96
-  Step   7: 7 / Zombie x4 (7.148s)
-  Step  13: 8 / CaveToad x3 (7.014s)
-Watery Pass-North B2F                                     Seed: 202   Index: 130
-  Step   5: 9 / Pike x3 (7.152s)
-  Step  21: 10 / Pike x2, EvilShel x2, WaterBug x2 (7.266s)
-Watery Pass-North B1F                                     Seed: 202   Index: 151
-  Step  48: 11 / Zombie x4 (7.148s)
+  Extra Steps: 80
+Watery Pass-South B2F                                     Seed: 202   Index:  39
+Watery Pass-South B3F                                     Seed: 202   Index:  78
+  Step  25: 7 / Zombie x4 (7.148s)
+  Step  31: 8 / CaveToad x3 (7.014s)
+Watery Pass-North B2F                                     Seed: 202   Index: 112
+Watery Pass-North B1F                                     Seed: 202   Index: 133
+  Extra Steps: 18
+  Step   2: 9 / Zombie x4 (7.148s)
+  Step  18: 10 / CaveToad x2, Mad Toad x2 (7.163s)
+  Step  66: 11 / Zombie x4 (7.148s)
 Overworld (Kaipo)                                         Seed: 202   Index: 211
 Waterfalls B1F                                            Seed: 202   Index: 220
 Waterfalls B2F                                            Seed: 202   Index: 221
@@ -83,75 +84,75 @@ Mt.Hobs-East                                              Seed: 236   Index: 211
 Overworld (Fabul)                                         Seed: 253   Index:   1
   Step  36: 24 / SwordRat x3, Needler x3 (7.663s)
 Fabul                                                     Seed: 253   Index:  85
-  Optional Steps: 10
-  Extra Steps: 6
-Overworld (Fabul)                                         Seed: 253   Index: 161
-Fabul Boat and Leviatan                                   Seed: 253   Index: 168
-Overworld (Mysidia)                                       Seed: 253   Index: 168
-Mysidia                                                   Seed: 253   Index: 177
-Overworld (Mysidia)                                       Seed: 253   Index: 177
-  Step   3: 25 / SwordRat x2, Imp x2, TinyMage x2 (7.401s)
-Overworld (Mt.Ordeals)                                    Seed: 253   Index: 187
-  Step   6: 26 / Needler x2, SwordRat x2 (8.097s)
-  Step  38: 27 / SwordRat x2, Imp x2, TinyMage x2 (7.401s)
-  Step  82: 28 / SwordRat x2, Imp x2, TinyMage x2 (7.401s)
-Mt.Ordeals                                                Seed:  14   Index:  25
-  Step   4: 29 / Red Bone x1, Skelton x3 (8.067s)
-  Step  10: 30 / Spirit x3, Skelton x2, Red Bone x1 (9.131s)
-  Step  39: 31 / Red Bone x1, Skelton x3 (8.067s)
-Mt.Ordeals-3rd station                                    Seed:  14   Index:  68
-Recruit Tellah                                            Seed:  14   Index:  91
-Mt.Ordeals-3rd station                                    Seed:  14   Index:  91
-Mt.Ordeals-7th station                                    Seed:  14   Index:  96
-Mt.Ordeals Summit                                         Seed:  14   Index: 138
+  Optional Steps: 8
+Overworld (Fabul)                                         Seed: 253   Index: 153
+Fabul Boat and Leviatan                                   Seed: 253   Index: 160
+Overworld (Mysidia)                                       Seed: 253   Index: 160
+  Step   1: 25 / SwordRat x2, Imp x2, TinyMage x2 (7.462s)
+Mysidia                                                   Seed: 253   Index: 169
+Overworld (Mysidia)                                       Seed: 253   Index: 169
+Overworld (Mt.Ordeals)                                    Seed: 253   Index: 179
+  Step   1: 26 / Needler x2, SwordRat x2 (8.097s)
+  Step  14: 27 / SwordRat x2, Imp x2, TinyMage x2 (7.401s)
+  Step  46: 28 / SwordRat x2, Imp x2, TinyMage x2 (7.401s)
+  Step  90: 29 / SwordRat x2, Imp x2, TinyMage x2 (7.401s)
+Mt.Ordeals                                                Seed:  14   Index:  17
+  Extra Steps: 4
+  Step  12: 30 / Spirit x3, Skelton x2, Red Bone x1 (9.131s)
+  Step  18: 31 / Red Bone x1, Skelton x3 (8.067s)
+  Step  47: 32 / Red Bone x1, Skelton x3 (8.067s)
+Mt.Ordeals-3rd station                                    Seed:  14   Index:  64
+Recruit Tellah                                            Seed:  14   Index:  87
+Mt.Ordeals-3rd station                                    Seed:  14   Index:  87
+Mt.Ordeals-7th station                                    Seed:  14   Index:  92
+Mt.Ordeals Summit                                         Seed:  14   Index: 134
   Optional Steps: 0
-Battle: Milon and Milon Z                                 Seed:  14   Index: 155
+Battle: Milon and Milon Z                                 Seed:  14   Index: 151
+Mt.Ordeals Summit                                         Seed:  14   Index: 151
+Paladin                                                   Seed:  14   Index: 155
 Mt.Ordeals Summit                                         Seed:  14   Index: 155
-  Step   3: 32 / Revenant x1, Ghoul x3 (8.611s)
-Paladin                                                   Seed:  14   Index: 159
-Mt.Ordeals Summit                                         Seed:  14   Index: 159
-  Optional Steps: 0
-Mt.Ordeals-7th station                                    Seed:  14   Index: 181
-  Step  31: 33 / Ghoul x2, Soul x2 (8.971s)
-  Step  42: 34 / Ghoul x2, Soul x2 (8.971s)
-Mt.Ordeals-3rd station                                    Seed:  14   Index: 223
-Mt.Ordeals                                                Seed:  14   Index: 253
-  Step   2: 35 / Spirit x3, Soul x1 (8.429s)
-  Step  10: 36 / Spirit x3, Skelton x2, Red Bone x1 (8.758s)
-Overworld (Mt.Ordeals)                                    Seed:  31   Index:  41
-  Step  11: 37 / Imp Cap. x4, Imp x2 (8.400s)
-Take Chocobo to Mysidia                                   Seed:  31   Index:  54
-Overworld (Mysidia)                                       Seed:  31   Index:  54
-Town of Baron Serpent Road                                Seed:  31   Index:  54
-  Extra Steps: 12
-Old Water-way                                             Seed:  31   Index:  70
-  Step  22: 38 / Crocdile x1, Piranha x2 (9.538s)
-Castle Baron B3F                                          Seed:  31   Index: 160
-  Step  28: 39 / Crocdile x2 (10.769s)
-Castle Baron B2F                                          Seed:  31   Index: 214
-  Step   6: 40 / Guard x2 (8.494s)
-Castle Baron B1F Inward Save Room Steps                   Seed:  31   Index: 240
-  Castle Baron B1F                                        Seed:  31   Index: 240
-  Castle Baron B1F Save Room                              Seed:  31   Index: 250
+  Optional Steps: 1
+  Step   3: 33 / Ghoul x2, Soul x2 (8.971s)
+Mt.Ordeals-7th station                                    Seed:  14   Index: 178
+  Step  34: 34 / Ghoul x2, Soul x2 (8.971s)
+Mt.Ordeals-3rd station                                    Seed:  14   Index: 220
+  Step   3: 35 / Ghoul x2, Soul x2 (8.971s)
+Mt.Ordeals                                                Seed:  14   Index: 250
+  Step   5: 36 / Spirit x3, Skelton x2, Red Bone x1 (8.758s)
+  Step  13: 37 / Spirit x3, Soul x1 (8.429s)
+Overworld (Mt.Ordeals)                                    Seed:  31   Index:  38
+Take Chocobo to Mysidia                                   Seed:  31   Index:  51
+Overworld (Mysidia)                                       Seed:  31   Index:  51
+Town of Baron Serpent Road                                Seed:  31   Index:  51
+  Extra Steps: 14
+Old Water-way                                             Seed:  31   Index:  69
+  Step  23: 38 / Crocdile x1, Piranha x2 (9.538s)
+Castle Baron B3F                                          Seed:  31   Index: 159
+  Step  29: 39 / Crocdile x2 (10.769s)
+Castle Baron B2F                                          Seed:  31   Index: 213
+  Step   7: 40 / Guard x2 (8.494s)
+Castle Baron B1F Inward Save Room Steps                   Seed:  31   Index: 239
+  Castle Baron B1F                                        Seed:  31   Index: 239
+  Castle Baron B1F Save Room                              Seed:  31   Index: 249
     Extra Steps: 4
-  Castle Baron B1F                                        Seed:  31   Index: 254
-Castle Baron                                              Seed:  48   Index:  22
-Battle: Kainazzo                                          Seed:  48   Index:  36
-Overworld (Toroia)                                        Seed:  48   Index:  36
-Toroian Castle                                            Seed:  48   Index:  37
+  Castle Baron B1F                                        Seed:  31   Index: 253
+Castle Baron                                              Seed:  48   Index:  21
+Battle: Kainazzo                                          Seed:  48   Index:  35
+Overworld (Toroia)                                        Seed:  48   Index:  35
+Toroian Castle                                            Seed:  48   Index:  36
   Optional Steps: 3
-  Extra Steps: 10
-Overworld (Toroia)                                        Seed:  48   Index:  61
-  Optional Steps: 0
-Black Chocobo to Cave Magnes                              Seed:  48   Index:  98
-Overworld (Toroia)                                        Seed:  48   Index:  98
-Cave Magnes B1F                                           Seed:  48   Index:  99
-Cave Magnes B2F                                           Seed:  48   Index: 167
-  Step  19: 41 / Cave Bat x3 (9.265s)
-Cave Magnes B3F Inward Save Room Steps                    Seed:  48   Index: 208
-  Cave Magnes B3F                                         Seed:  48   Index: 208
-  Cave Magnes B3F Save Room                               Seed:  48   Index: 216
-    Extra Steps: 30
+  Extra Steps: 12
+Overworld (Toroia)                                        Seed:  48   Index:  62
+  Optional Steps: 1
+Black Chocobo to Cave Magnes                              Seed:  48   Index: 100
+Overworld (Toroia)                                        Seed:  48   Index: 100
+Cave Magnes B1F                                           Seed:  48   Index: 101
+Cave Magnes B2F                                           Seed:  48   Index: 169
+  Step  17: 41 / Cave Bat x3 (9.265s)
+Cave Magnes B3F Inward Save Room Steps                    Seed:  48   Index: 210
+  Cave Magnes B3F                                         Seed:  48   Index: 210
+  Cave Magnes B3F Save Room                               Seed:  48   Index: 218
+    Extra Steps: 28
   Cave Magnes B3F                                         Seed:  48   Index: 246
     Step  38: 42 / Cave Bat x3 (9.265s)
     Step  40: 43 / Cave Bat x3 (9.265s)
@@ -192,12 +193,12 @@ Fly to Agart                                              Seed:  82   Index: 172
 Overworld (Eblan)                                         Seed:  82   Index: 172
 Underworld (Castle of Dwarves)                            Seed:  82   Index: 173
 
-Encounter Time:      433.442s
+Encounter Time:      432.758s
 Other Time:          833.494s
-Total Time:          1266.936s
+Total Time:          1266.252s
 
 Base Total Time:     1327.206s
-Time Saved:          60.269s
+Time Saved:          60.953s
 
 Optional Steps:      14
 Extra Steps:         226
