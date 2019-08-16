@@ -2382,8 +2382,8 @@ com.aexoden.ff4 = function()
 			},
 			247: {
 				"instruction": "Take <strong>10</strong> extra steps in the save room. Determine your seed based on the room after the next room (B3F):",
-				247: "No encounters.",
-				248: "One encounter with Jelly x4."
+				247: "No encounters. Take 18 extra steps before leaving the room.",
+				248: "One encounter with Jelly x4. Don't take any extra steps before leaving the room."
 			}
 		},
 		"nocw": {
