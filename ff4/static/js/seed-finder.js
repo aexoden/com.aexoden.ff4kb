@@ -2443,14 +2443,14 @@ com.aexoden.ff4 = function()
 				176: "No encounters."
 			},
 			183: {
-				"instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
-				183: "One encounter on step 37. Don't take any extra steps.",
-				184: "Two encounters on steps 18 and 37. Take <strong>8</strong> extra steps before leaving the room. There will be one more encounter during the extra steps."
+				"instruction": "Take <strong>60</strong> extra steps in the save room. Determine your seed based on the room where you get <i>Darkness</i> (sword):",
+				183: "Three encounters.",
+				184: "Two encounters."
 			},
 			247: {
 				"instruction": "Take <strong>10</strong> extra steps in the save room. Determine your seed based on the room after the next room (B3F):",
-				247: "No encounters.",
-				248: "One encounter with Jelly x4."
+				247: "No encounters. Take <strong>18</strong> extra steps before leaving the room.",
+				248: "One encounter with Jelly x4. Don't take any extra steps before leaving the room."
 			}
 		},
 		"no64-excalbur": {
