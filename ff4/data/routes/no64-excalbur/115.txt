@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Edge+Excalbur)
 VERSION	22
-ROSA	v1.1.0-15-g3aeea13
+ROSA	v1.1.0-31-gf33807b
 SEED	115
-MAXSTEP	64
-MAXSEG	9
+MAXSTEP	0
+MAXSEG	-1
 TASMODE	0
-MINIMUM	1
+MINIMUM	0
 FRAMES	172415926
-VARS	E317B00:2 C316D00:1 E316B01:4 C317500:1 E305400:4 E302500:5 E30CD00:2 C30CA00:1 E310700:5 E30B500:1 C313800:2 E310701:6 C200000:1 E316500:8
+VARS	C200000:1 C30CA00:1 C313800:2 C316D00:1 C317500:1 E302500:5 E305400:4 E30B500:1 E30CD00:2 E310700:5 E310701:6 E316500:8 E316B01:4 E317B00:2
 
 Overworld (Kaipo)                                         Seed: 115   Index:   0
 Overworld (Kaipo)                                         Seed: 115   Index:   1
@@ -347,6 +347,16 @@ Grind Fight Search                                        Seed: 148   Index:  10
    (Step 233: 117 / Horseman x1, Machine x2)
    (Step 251: 118 / MacGiant x1, Machine x1, Beamer x1)
   Giant of Bab-il Lung                                    Seed: 148   Index:  71
+   (Step  36: 111 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step  39: 112 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step  71: 113 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step  78: 114 / MacGiant x1, Horseman x1, Beamer x1)
+   (Step 103: 115 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 145: 116 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 172: 117 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 190: 118 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 196: 119 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 201: 120 / Searcher (summons D.Machin) x1, Beamer x2)
 Battle: Elements                                          Seed: 148   Index:  79
 Giant of Bab-il Lung                                      Seed: 148   Index:  79
 Giant of Bab-il CPU                                       Seed: 148   Index:  86
@@ -408,8 +418,8 @@ Lunar Core B3                                             Seed: 182   Index: 223
   Step  52: 133 / Behemoth x1 (7.494s)
 Lunar Core B4                                             Seed: 199   Index:  19
 
-Encounter Time:      1128.678s
-Other Time:          1740.196s
+Encounter Time:      1069.005s
+Other Time:          1799.869s
 Total Time:          2868.874s
 
 Base Total Time:     3072.864s
@@ -417,9 +427,10 @@ Time Saved:          203.990s
 
 Optional Steps:      11
 Extra Steps:         26
-Encounters:          141
+Encounters:          133
 
-Base Encounters:     165
-Encounters Saved:    24
+Base Encounters:     151
+Encounters Saved:    18
 
 Number of Variables: 206
+Cache Size:          329

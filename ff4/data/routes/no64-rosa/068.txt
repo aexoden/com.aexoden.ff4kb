@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa)
 VERSION	22
-ROSA	v1.1.0-15-g3aeea13
+ROSA	v1.1.0-31-gf33807b
 SEED	68
-MAXSTEP	128
-MAXSEG	8
+MAXSTEP	0
+MAXSEG	-1
 TASMODE	0
-MINIMUM	1
+MINIMUM	0
 FRAMES	171486969
-VARS	E316D00:4 E305400:16 E302500:50 E307400:26 E302700:19 E302600:14 E310700:15 E30C800:2
+VARS	E302500:50 E302600:14 E302700:19 E305400:16 E307400:26 E30C800:2 E310700:15 E316D00:4
 
 Overworld (Kaipo)                                         Seed:  68   Index:   0
 Overworld (Kaipo)                                         Seed:  68   Index:   1
@@ -292,7 +292,8 @@ Return to Castle of Dwarves                               Seed:  67   Index:  77
 Castle of Dwarves                                         Seed:  67   Index:  77
 Underworld (Castle of Dwarves)                            Seed:  67   Index:  78
 Return to Mysidia                                         Seed:  67   Index:  79
-Overworld (Mysidia)                                       Seed:  67   Index:  79
+Walk to the Big Whale                                     Seed:  67   Index:  79
+  Overworld (Mysidia)                                     Seed:  67   Index:  79
 Fly to Lunar Path                                         Seed:  67   Index:  82
 Lunar Overworld                                           Seed:  67   Index:  82
 Lunar Path (west)                                         Seed:  67   Index:  87
@@ -399,8 +400,8 @@ Lunar Core B4                                             Seed: 152   Index:   2
   Step  42: 137 / Mind x1 (10.119s)
   Step  43: 138 / Mind x1 (10.119s)
 
-Encounter Time:      1237.015s
-Other Time:          1616.402s
+Encounter Time:      1094.114s
+Other Time:          1759.303s
 Total Time:          2853.417s
 
 Base Total Time:     2928.237s
@@ -408,9 +409,10 @@ Time Saved:          74.821s
 
 Optional Steps:      30
 Extra Steps:         116
-Encounters:          156
+Encounters:          138
 
-Base Encounters:     150
-Encounters Saved:    -6
+Base Encounters:     145
+Encounters Saved:    7
 
-Number of Variables: 190
+Number of Variables: 191
+Cache Size:          304

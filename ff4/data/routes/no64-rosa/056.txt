@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa)
 VERSION	22
-ROSA	v1.1.0-15-g3aeea13
+ROSA	v1.1.0-31-gf33807b
 SEED	56
-MAXSTEP	128
-MAXSEG	8
+MAXSTEP	0
+MAXSEG	-1
 TASMODE	0
-MINIMUM	1
-FRAMES	170573959
-VARS	E316A00:4 E302500:18 E307400:4 E302700:12 C307801:1 E302600:10 C305500:1 E310700:40 E310701:10 E307B01:76
+MINIMUM	0
+FRAMES	170541959
+VARS	C305500:1 C307801:1 E302500:18 E302600:10 E302700:12 E307400:4 E307B01:76 E310700:40 E310701:10 E316A00:4
 
 Overworld (Kaipo)                                         Seed:  56   Index:   0
 Overworld (Kaipo)                                         Seed:  56   Index:   1
@@ -190,8 +190,8 @@ Overworld (Eblan)                                         Seed: 209   Index:  18
 Underworld (Castle of Dwarves)                            Seed: 209   Index:  19
 Castle of Dwarves Walk                                    Seed: 209   Index:  20
   Castle of Dwarves                                       Seed: 209   Index:  20
-    Optional Steps: 20
-    Extra Steps: 20
+    Optional Steps: 22
+    Extra Steps: 18
 Underworld (Castle of Dwarves)                            Seed: 209   Index: 171
   Step  36: 59 / Dark Imp x3, Armadilo x1, BlackLiz x1 (6.753s)
   Step  71: 60 / BlackLiz x3 (6.787s)
@@ -293,7 +293,8 @@ Return to Castle of Dwarves                               Seed:  55   Index: 111
 Castle of Dwarves                                         Seed:  55   Index: 111
 Underworld (Castle of Dwarves)                            Seed:  55   Index: 112
 Return to Mysidia                                         Seed:  55   Index: 113
-Overworld (Mysidia)                                       Seed:  55   Index: 113
+Walk to the Big Whale                                     Seed:  55   Index: 113
+  Overworld (Mysidia)                                     Seed:  55   Index: 113
 Fly to Lunar Path                                         Seed:  55   Index: 116
 Lunar Overworld                                           Seed:  55   Index: 116
 Lunar Path (west)                                         Seed:  55   Index: 121
@@ -396,18 +397,19 @@ Lunar Core B3                                             Seed: 123   Index: 236
 Lunar Core B4                                             Seed: 140   Index:  36
   Step  35: 135 / Mind x1 (10.119s)
 
-Encounter Time:      1176.505s
-Other Time:          1661.720s
-Total Time:          2838.225s
+Encounter Time:      1067.408s
+Other Time:          1770.285s
+Total Time:          2837.693s
 
 Base Total Time:     2963.890s
-Time Saved:          125.665s
+Time Saved:          126.198s
 
-Optional Steps:      36
-Extra Steps:         138
-Encounters:          149
+Optional Steps:      38
+Extra Steps:         136
+Encounters:          135
 
-Base Encounters:     163
-Encounters Saved:    14
+Base Encounters:     153
+Encounters Saved:    18
 
-Number of Variables: 190
+Number of Variables: 191
+Cache Size:          304

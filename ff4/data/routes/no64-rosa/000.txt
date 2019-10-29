@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa)
 VERSION	22
-ROSA	v1.1.0-18-ge0f6888
+ROSA	v1.1.0-31-gf33807b
 SEED	0
-MAXSTEP	128
-MAXSEG	13
+MAXSTEP	0
+MAXSEG	-1
 TASMODE	0
-MINIMUM	1
-FRAMES	168866995
-VARS	E317B00:2 E30CD00:6 C30CA00:1 E302402:32 E302600:10 E302500:1 C316D00:1 C308F00:1 E307000:4 E30BD00:8 E000701:1 E310700:24 E302700:3 E309200:52 C305500:1 E305500:3
+MINIMUM	0
+FRAMES	168834995
+VARS	C305500:1 C308F00:1 C30CA00:1 C316D00:1 E000701:1 E302402:32 E302500:1 E302600:10 E302700:3 E305500:3 E307000:4 E309200:52 E30BD00:8 E30CD00:6 E310700:24 E317B00:2
 
 Overworld (Kaipo)                                         Seed:   0   Index:   0
 Overworld (Kaipo)                                         Seed:   0   Index:   1
@@ -188,8 +188,8 @@ Overworld (Eblan)                                         Seed: 136   Index: 224
 Underworld (Castle of Dwarves)                            Seed: 136   Index: 225
 Castle of Dwarves Walk                                    Seed: 136   Index: 226
   Castle of Dwarves                                       Seed: 136   Index: 226
-    Optional Steps: 20
-    Extra Steps: 4
+    Optional Steps: 22
+    Extra Steps: 2
 Underworld (Castle of Dwarves)                            Seed: 153   Index: 105
   Step  44: 59 / Tortoise x2, Armadilo x1, BlackLiz x1 (6.876s)
   Step  68: 60 / Dark Imp x4 (6.679s)
@@ -290,7 +290,8 @@ Return to Castle of Dwarves                               Seed: 255   Index:  78
 Castle of Dwarves                                         Seed: 255   Index:  78
 Underworld (Castle of Dwarves)                            Seed: 255   Index:  79
 Return to Mysidia                                         Seed: 255   Index:  80
-Overworld (Mysidia)                                       Seed: 255   Index:  80
+Walk to the Big Whale                                     Seed: 255   Index:  80
+  Overworld (Mysidia)                                     Seed: 255   Index:  80
 Fly to Lunar Path                                         Seed: 255   Index:  83
 Lunar Overworld                                           Seed: 255   Index:  83
 Lunar Path (west)                                         Seed: 255   Index:  88
@@ -334,6 +335,15 @@ Grind Fight Search                                        Seed:  16   Index: 231
    (Step 213: 116 / MacGiant x1, Machine x1, Beamer x1)
    (Step 245: 117 / MacGiant x1, Machine x1, Beamer x1)
   Giant of Bab-il Lung                                    Seed:  33   Index:  36
+   (Step  16: 111 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step  24: 112 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step  33: 113 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step  56: 114 / Machine x3, Beamer x2)
+   (Step 105: 115 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 152: 116 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 184: 117 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 205: 118 / MacGiant x2)
+   (Step 247: 119 / MacGiant x2)
 Battle: Elements                                          Seed:  33   Index:  44
 Giant of Bab-il Lung                                      Seed:  33   Index:  44
 Giant of Bab-il CPU                                       Seed:  33   Index:  51
@@ -391,18 +401,19 @@ Lunar Core B3                                             Seed:  67   Index: 210
   Step  56: 133 / Behemoth x1 (7.463s)
 Lunar Core B4                                             Seed:  84   Index:  10
 
-Encounter Time:      1093.776s
-Other Time:          1716.047s
-Total Time:          2809.822s
+Encounter Time:      1039.937s
+Other Time:          1769.353s
+Total Time:          2809.290s
 
 Base Total Time:     3202.214s
-Time Saved:          392.392s
+Time Saved:          392.924s
 
-Optional Steps:      38
-Extra Steps:         108
-Encounters:          140
+Optional Steps:      40
+Extra Steps:         106
+Encounters:          133
 
-Base Encounters:     172
-Encounters Saved:    32
+Base Encounters:     164
+Encounters Saved:    31
 
-Number of Variables: 190
+Number of Variables: 191
+Cache Size:          306

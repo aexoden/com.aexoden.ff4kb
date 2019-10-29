@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa)
 VERSION	22
-ROSA	v1.1.0-18-ge0f6888
+ROSA	v1.1.0-31-gf33807b
 SEED	28
-MAXSTEP	128
-MAXSEG	13
+MAXSTEP	0
+MAXSEG	-1
 TASMODE	0
-MINIMUM	1
+MINIMUM	0
 FRAMES	169455159
-VARS	E30A901:6 E30CD00:10 C30CA00:1 E30C800:2 E310701:14 E302500:7 C303C00:1 C310700:1 C307801:1 E307B01:30 E305400:50 E309700:6 E303D00:10 E316401:8 E302700:5
+VARS	C303C00:1 C307801:1 C30CA00:1 C310700:1 E302500:7 E302700:5 E303D00:10 E305400:50 E307B01:30 E309700:6 E30A901:6 E30C800:2 E30CD00:10 E310701:14 E316401:8
 
 Overworld (Kaipo)                                         Seed:  28   Index:   0
 Overworld (Kaipo)                                         Seed:  28   Index:   1
@@ -290,7 +290,8 @@ Return to Castle of Dwarves                               Seed:  27   Index:  95
 Castle of Dwarves                                         Seed:  27   Index:  95
 Underworld (Castle of Dwarves)                            Seed:  27   Index:  96
 Return to Mysidia                                         Seed:  27   Index:  97
-Overworld (Mysidia)                                       Seed:  27   Index:  97
+Walk to the Big Whale                                     Seed:  27   Index:  97
+  Overworld (Mysidia)                                     Seed:  27   Index:  97
 Fly to Lunar Path                                         Seed:  27   Index: 100
 Lunar Overworld                                           Seed:  27   Index: 100
 Lunar Path (west)                                         Seed:  27   Index: 105
@@ -395,8 +396,8 @@ Lunar Core B4                                             Seed: 112   Index:  24
   Step   9: 127 / Breath x1 (11.914s)
   Step  58: 128 / Mind x1 (10.119s)
 
-Encounter Time:      1166.711s
-Other Time:          1652.898s
+Encounter Time:      1038.542s
+Other Time:          1781.067s
 Total Time:          2819.609s
 
 Base Total Time:     2935.735s
@@ -404,9 +405,10 @@ Time Saved:          116.126s
 
 Optional Steps:      10
 Extra Steps:         138
-Encounters:          142
+Encounters:          128
 
-Base Encounters:     150
-Encounters Saved:    8
+Base Encounters:     143
+Encounters Saved:    15
 
-Number of Variables: 190
+Number of Variables: 191
+Cache Size:          306

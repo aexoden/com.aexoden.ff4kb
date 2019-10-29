@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Edge+Excalbur)
 VERSION	22
-ROSA	v1.1.0-15-g3aeea13
+ROSA	v1.1.0-31-gf33807b
 SEED	111
-MAXSTEP	64
-MAXSEG	9
+MAXSTEP	0
+MAXSEG	-1
 TASMODE	0
-MINIMUM	1
+MINIMUM	0
 FRAMES	174492209
-VARS	C305500:1 E307B01:32 C317500:1 E309700:22 E305400:12 E307400:26 E302700:63 C307801:1 E302600:10 E309200:48 C30CA01:1 C308F00:1 E302402:18 E30C800:28 C200000:1
+VARS	C200000:1 C305500:1 C307801:1 C308F00:1 C30CA01:1 C317500:1 E302402:18 E302600:10 E302700:63 E305400:12 E307400:26 E307B01:32 E309200:48 E309700:22 E30C800:28
 
 Overworld (Kaipo)                                         Seed: 111   Index:   0
 Overworld (Kaipo)                                         Seed: 111   Index:   1
@@ -352,6 +352,18 @@ Grind Fight Search                                        Seed: 161   Index:   4
    (Step 244: 116 / Horseman x1, Machine x2)
    (Step 256: 117 / Horseman x1, Machine x2)
   Giant of Bab-il Lung                                    Seed: 161   Index:  65
+   (Step  10: 109 / Beamer x1, Machine x2, Horseman x1)
+   (Step  43: 110 / Machine x3, Beamer x2)
+   (Step  73: 111 / Beamer x1, Machine x2, Horseman x1)
+   (Step  89: 112 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 120: 113 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 131: 114 / MacGiant x1, Horseman x1, Beamer x1)
+   (Step 146: 115 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 183: 116 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 195: 117 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 200: 118 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 232: 119 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 233: 120 / Searcher (summons D.Machin) x1, Beamer x2)
 Battle: Elements                                          Seed: 161   Index:  73
 Giant of Bab-il Lung                                      Seed: 161   Index:  73
   Step   2: 109 / Beamer x1, Machine x2, Horseman x1 (7.702s)
@@ -409,8 +421,8 @@ Lunar Core B3                                             Seed: 195   Index: 210
 Lunar Core B4                                             Seed: 212   Index:   6
   Step  16: 131 / Mind x1 (10.566s)
 
-Encounter Time:      1119.592s
-Other Time:          1783.830s
+Encounter Time:      1052.570s
+Other Time:          1850.852s
 Total Time:          2903.422s
 
 Base Total Time:     3036.527s
@@ -418,9 +430,10 @@ Time Saved:          133.105s
 
 Optional Steps:      15
 Extra Steps:         244
-Encounters:          140
+Encounters:          131
 
-Base Encounters:     169
-Encounters Saved:    29
+Base Encounters:     153
+Encounters Saved:    22
 
 Number of Variables: 206
+Cache Size:          329

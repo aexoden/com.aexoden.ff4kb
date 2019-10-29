@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Edge+Excalbur)
 VERSION	22
-ROSA	v1.1.0-15-g3aeea13
+ROSA	v1.1.0-31-gf33807b
 SEED	97
-MAXSTEP	64
-MAXSEG	9
+MAXSTEP	0
+MAXSEG	-1
 TASMODE	0
-MINIMUM	1
+MINIMUM	0
 FRAMES	171185747
-VARS	E317B00:18 C316D00:1 E30BD00:38 E308702:5 E302600:12 E30CD00:52 C30CA00:1 E310700:22 E302402:14 E200003:4 E310701:14 C200000:1
+VARS	C200000:1 C30CA00:1 C316D00:1 E200003:4 E302402:14 E302600:12 E308702:5 E30BD00:38 E30CD00:52 E310700:22 E310701:14 E317B00:18
 
 Overworld (Kaipo)                                         Seed:  97   Index:   0
 Overworld (Kaipo)                                         Seed:  97   Index:   1
@@ -348,6 +348,16 @@ Grind Fight Search                                        Seed: 130   Index: 122
    (Step 241: 116 / Horseman x1, Machine x2)
    (Step 244: 117 / Horseman x1, Machine x2)
   Giant of Bab-il Lung                                    Seed: 130   Index: 183
+   (Step  25: 112 / Beamer x1, Machine x2, Horseman x1)
+   (Step  32: 113 / Beamer x1, Machine x2, Horseman x1)
+   (Step  54: 114 / D.Machin x1)
+   (Step 118: 115 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 180: 116 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 183: 117 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 215: 118 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 222: 119 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 225: 120 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 247: 121 / MacGiant x2)
 Battle: Elements                                          Seed: 130   Index: 191
 Giant of Bab-il Lung                                      Seed: 130   Index: 191
 Giant of Bab-il CPU                                       Seed: 130   Index: 198
@@ -405,8 +415,8 @@ Lunar Core B4                                             Seed: 181   Index: 181
   Step  21: 129 / Mind x1 (10.262s)
   Step  53: 130 / Mind x1 (10.262s)
 
-Encounter Time:      1072.097s
-Other Time:          1776.308s
+Encounter Time:      1027.237s
+Other Time:          1821.167s
 Total Time:          2848.405s
 
 Base Total Time:     3069.241s
@@ -414,9 +424,10 @@ Time Saved:          220.837s
 
 Optional Steps:      35
 Extra Steps:         144
-Encounters:          136
+Encounters:          130
 
-Base Encounters:     167
-Encounters Saved:    31
+Base Encounters:     151
+Encounters Saved:    21
 
 Number of Variables: 206
+Cache Size:          332

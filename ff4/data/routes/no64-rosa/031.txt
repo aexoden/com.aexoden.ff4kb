@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa)
 VERSION	22
-ROSA	v1.1.0-18-ge0f6888
+ROSA	v1.1.0-31-gf33807b
 SEED	31
-MAXSTEP	128
-MAXSEG	13
+MAXSTEP	0
+MAXSEG	-1
 TASMODE	0
-MINIMUM	1
-FRAMES	168880439
-VARS	E30C800:1 E310701:6 E302600:10 E302500:51 E308400:8 E307E00:20 C307801:1 C308F00:1 E307B01:38 E305400:8 E000701:7 E310700:82 E302700:9 E309200:128
+MINIMUM	0
+FRAMES	168848439
+VARS	C307801:1 C308F00:1 E000701:7 E302500:51 E302600:10 E302700:9 E305400:8 E307B01:38 E307E00:20 E308400:8 E309200:128 E30C800:1 E310700:82 E310701:6
 
 Overworld (Kaipo)                                         Seed:  31   Index:   0
 Overworld (Kaipo)                                         Seed:  31   Index:   1
@@ -186,8 +186,8 @@ Overworld (Eblan)                                         Seed: 184   Index: 177
 Underworld (Castle of Dwarves)                            Seed: 184   Index: 178
 Castle of Dwarves Walk                                    Seed: 184   Index: 179
   Castle of Dwarves                                       Seed: 184   Index: 179
-    Optional Steps: 20
-    Extra Steps: 62
+    Optional Steps: 22
+    Extra Steps: 60
 Underworld (Castle of Dwarves)                            Seed: 201   Index: 116
   Step  19: 50 / Tortoise x2, Armadilo x1, BlackLiz x1 (6.876s)
   Step  35: 51 / Tortoise x2, Armadilo x1, BlackLiz x1 (6.876s)
@@ -287,8 +287,9 @@ Return to Castle of Dwarves                               Seed:  47   Index:  53
 Castle of Dwarves                                         Seed:  47   Index:  53
 Underworld (Castle of Dwarves)                            Seed:  47   Index:  54
 Return to Mysidia                                         Seed:  47   Index:  55
-Overworld (Mysidia)                                       Seed:  47   Index:  55
-  Step   3: 88 / SwordRat x2, Imp x2, TinyMage x2 (7.062s)
+Walk to the Big Whale                                     Seed:  47   Index:  55
+  Overworld (Mysidia)                                     Seed:  47   Index:  55
+    Step   3: 88 / SwordRat x2, Imp x2, TinyMage x2 (7.062s)
 Fly to Lunar Path                                         Seed:  47   Index:  58
 Lunar Overworld                                           Seed:  47   Index:  58
   Step   3: 89 / Procyote x1, Juclyote x2 (7.784s)
@@ -330,6 +331,13 @@ Grind Fight Search                                        Seed:  64   Index: 206
    (Step 207: 108 / MacGiant x1)
    (Step 245: 109 / MacGiant x1, Machine x1, Beamer x1)
   Giant of Bab-il Lung                                    Seed:  81   Index:  11
+   (Step  37: 104 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 107: 105 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 116: 106 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 129: 107 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 146: 108 / MacGiant x2)
+   (Step 184: 109 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 218: 110 / Searcher (summons Horseman) x1, Beamer x2)
 Battle: Elements                                          Seed:  81   Index:  19
 Giant of Bab-il Lung                                      Seed:  81   Index:  19
 Giant of Bab-il CPU                                       Seed:  81   Index:  26
@@ -382,18 +390,19 @@ Lunar Core B3                                             Seed: 115   Index: 174
   Step  52: 125 / Behemoth x1 (7.463s)
 Lunar Core B4                                             Seed: 115   Index: 230
 
-Encounter Time:      1036.954s
-Other Time:          1773.093s
-Total Time:          2810.046s
+Encounter Time:      986.183s
+Other Time:          1823.330s
+Total Time:          2809.514s
 
 Base Total Time:     3177.756s
-Time Saved:          367.710s
+Time Saved:          368.243s
 
-Optional Steps:      40
-Extra Steps:         328
-Encounters:          131
+Optional Steps:      42
+Extra Steps:         326
+Encounters:          125
 
-Base Encounters:     171
-Encounters Saved:    40
+Base Encounters:     163
+Encounters Saved:    38
 
-Number of Variables: 190
+Number of Variables: 191
+Cache Size:          306

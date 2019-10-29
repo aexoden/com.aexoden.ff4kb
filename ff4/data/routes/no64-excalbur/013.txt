@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Edge+Excalbur)
 VERSION	22
-ROSA	v1.1.0-18-ge0f6888
+ROSA	v1.1.0-31-gf33807b
 SEED	13
-MAXSTEP	128
-MAXSEG	11
+MAXSTEP	0
+MAXSEG	-1
 TASMODE	0
-MINIMUM	1
+MINIMUM	0
 FRAMES	174349942
-VARS	E30A000:72 C200000:1 C305500:1 E309200:32 E310700:128 E305400:10 C308F00:1 E302500:48 E100000:40 E302600:20 E310701:122 E312501:10 C30CA01:1 E200000:20 E305500:13 C317500:1
+VARS	C200000:1 C305500:1 C308F00:1 C30CA01:1 C317500:1 E100000:40 E200000:20 E302500:48 E302600:20 E305400:10 E305500:13 E309200:32 E30A000:72 E310700:128 E310701:122 E312501:10
 
 Overworld (Kaipo)                                         Seed:  13   Index:   0
 Overworld (Kaipo)                                         Seed:  13   Index:   1
@@ -346,6 +346,15 @@ Grind Fight Search                                        Seed:  63   Index: 255
    (Step 230: 109 / Horseman x1, Machine x2)
    (Step 248: 110 / Searcher (summons D.Machin) x1, Beamer x2)
   Giant of Bab-il Lung                                    Seed:  80   Index:  60
+   (Step  58: 105 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step  67: 106 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step  80: 107 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 135: 108 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 169: 109 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 187: 110 / Beamer x1, Machine x2, Horseman x1)
+   (Step 216: 111 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 235: 112 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 246: 113 / Searcher (summons D.Machin) x1, Beamer x2)
 Battle: Elements                                          Seed:  80   Index:  68
 Giant of Bab-il Lung                                      Seed:  80   Index:  68
 Giant of Bab-il CPU                                       Seed:  80   Index:  75
@@ -402,8 +411,8 @@ Lunar Core B3                                             Seed: 114   Index: 205
 Lunar Core B4                                             Seed: 131   Index:   1
   Step  45: 126 / Mind x1 (10.566s)
 
-Encounter Time:      1037.354s
-Other Time:          1863.701s
+Encounter Time:      992.498s
+Other Time:          1908.557s
 Total Time:          2901.055s
 
 Base Total Time:     3277.693s
@@ -411,9 +420,10 @@ Time Saved:          376.638s
 
 Optional Steps:      37
 Extra Steps:         478
-Encounters:          132
+Encounters:          126
 
-Base Encounters:     173
-Encounters Saved:    41
+Base Encounters:     166
+Encounters Saved:    40
 
 Number of Variables: 206
+Cache Size:          328

@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Edge+Excalbur)
 VERSION	22
-ROSA	v1.1.0-15-g3aeea13
+ROSA	v1.1.0-31-gf33807b
 SEED	106
-MAXSTEP	64
-MAXSEG	9
+MAXSTEP	0
+MAXSEG	-1
 TASMODE	0
-MINIMUM	1
+MINIMUM	0
 FRAMES	173674174
-VARS	E317B00:18 C316D00:1 E316B01:4 C305500:1 C317500:1 E309700:19 E305400:28 E307400:18 E30CD00:6 E309200:4 C30CA00:1 C308F00:1 C313800:2 E310701:6 C200000:1 E316500:12
+VARS	C200000:1 C305500:1 C308F00:1 C30CA00:1 C313800:2 C316D00:1 C317500:1 E305400:28 E307400:18 E309200:4 E309700:19 E30CD00:6 E310701:6 E316500:12 E316B01:4 E317B00:18
 
 Overworld (Kaipo)                                         Seed: 106   Index:   0
 Overworld (Kaipo)                                         Seed: 106   Index:   1
@@ -351,6 +351,16 @@ Grind Fight Search                                        Seed: 139   Index:  74
    (Step 207: 116 / Horseman x1, Machine x2)
    (Step 226: 117 / Horseman x1, Machine x2)
   Giant of Bab-il Lung                                    Seed: 139   Index: 135
+   (Step  17: 111 / Beamer x1, Machine x2, Horseman x1)
+   (Step  33: 112 / Beamer x1, Machine x2, Horseman x1)
+   (Step  63: 113 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 103: 114 / D.Machin x1)
+   (Step 105: 115 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 146: 116 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 165: 117 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 204: 118 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 226: 119 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 229: 120 / Searcher (summons D.Machin) x1, Beamer x2)
 Battle: Elements                                          Seed: 139   Index: 143
 Giant of Bab-il Lung                                      Seed: 139   Index: 143
 Giant of Bab-il CPU                                       Seed: 139   Index: 150
@@ -411,8 +421,8 @@ Lunar Core B3                                             Seed: 190   Index:  47
 Lunar Core B4                                             Seed: 190   Index:  99
   Step   5: 132 / Mind x1 (10.566s)
 
-Encounter Time:      1114.805s
-Other Time:          1775.006s
+Encounter Time:      1062.453s
+Other Time:          1827.357s
 Total Time:          2889.810s
 
 Base Total Time:     3051.810s
@@ -420,9 +430,10 @@ Time Saved:          162.000s
 
 Optional Steps:      4
 Extra Steps:         111
-Encounters:          139
+Encounters:          132
 
-Base Encounters:     167
-Encounters Saved:    28
+Base Encounters:     151
+Encounters Saved:    19
 
 Number of Variables: 206
+Cache Size:          329

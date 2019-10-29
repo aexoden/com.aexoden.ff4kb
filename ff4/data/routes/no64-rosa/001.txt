@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa)
 VERSION	22
-ROSA	v1.1.0-18-ge0f6888
+ROSA	v1.1.0-31-gf33807b
 SEED	1
-MAXSTEP	128
-MAXSEG	13
+MAXSTEP	0
+MAXSEG	-1
 TASMODE	0
-MINIMUM	1
-FRAMES	170376997
-VARS	E30CD00:6 C30CA00:1 E302402:14 E312501:4 E310701:4 E302600:10 E302500:1 C308F00:1 E000701:1 E310700:34 E000202:4 E302700:11 E309200:44 E000703:4 C305500:1 E305500:3
+MINIMUM	0
+FRAMES	170344997
+VARS	C305500:1 C308F00:1 C30CA00:1 E000202:4 E000701:1 E000703:4 E302402:14 E302500:1 E302600:10 E302700:11 E305500:3 E309200:44 E30CD00:6 E310700:34 E310701:4 E312501:4
 
 Overworld (Kaipo)                                         Seed:   1   Index:   0
 Overworld (Kaipo)                                         Seed:   1   Index:   1
@@ -190,8 +190,8 @@ Overworld (Eblan)                                         Seed: 137   Index: 228
 Underworld (Castle of Dwarves)                            Seed: 137   Index: 229
 Castle of Dwarves Walk                                    Seed: 137   Index: 230
   Castle of Dwarves                                       Seed: 137   Index: 230
-    Optional Steps: 20
-    Extra Steps: 14
+    Optional Steps: 22
+    Extra Steps: 12
 Underworld (Castle of Dwarves)                            Seed: 154   Index: 119
   Step  30: 59 / Tortoise x2, Armadilo x1, BlackLiz x1 (6.876s)
   Step  35: 60 / Dark Imp x4 (6.679s)
@@ -294,8 +294,9 @@ Return to Castle of Dwarves                               Seed:   0   Index:  82
 Castle of Dwarves                                         Seed:   0   Index:  82
 Underworld (Castle of Dwarves)                            Seed:   0   Index:  83
 Return to Mysidia                                         Seed:   0   Index:  84
-Overworld (Mysidia)                                       Seed:   0   Index:  84
-  Step   3: 96 / Imp Cap. x3, Needler x1 (7.100s)
+Walk to the Big Whale                                     Seed:   0   Index:  84
+  Overworld (Mysidia)                                     Seed:   0   Index:  84
+    Step   3: 96 / Imp Cap. x3, Needler x1 (7.100s)
 Fly to Lunar Path                                         Seed:   0   Index:  87
 Lunar Overworld                                           Seed:   0   Index:  87
 Lunar Path (west)                                         Seed:   0   Index:  92
@@ -337,6 +338,15 @@ Grind Fight Search                                        Seed:  17   Index: 235
    (Step 209: 116 / MacGiant x1, Machine x1, Beamer x1)
    (Step 241: 117 / MacGiant x1, Machine x1, Beamer x1)
   Giant of Bab-il Lung                                    Seed:  34   Index:  40
+   (Step  20: 111 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step  29: 112 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step  52: 113 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step  81: 114 / Machine x3, Beamer x2)
+   (Step 101: 115 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 148: 116 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 180: 117 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 201: 118 / MacGiant x2)
+   (Step 243: 119 / MacGiant x2)
 Battle: Elements                                          Seed:  34   Index:  48
 Giant of Bab-il Lung                                      Seed:  34   Index:  48
 Giant of Bab-il CPU                                       Seed:  34   Index:  55
@@ -392,18 +402,19 @@ Lunar Core B4                                             Seed:  85   Index:   3
   Step   5: 134 / Breath x1 (11.914s)
   Step   7: 135 / Breath x1 (11.914s)
 
-Encounter Time:      1125.623s
-Other Time:          1709.325s
-Total Time:          2834.948s
+Encounter Time:      1071.785s
+Other Time:          1762.630s
+Total Time:          2834.415s
 
 Base Total Time:     3189.857s
-Time Saved:          354.909s
+Time Saved:          355.442s
 
-Optional Steps:      44
-Extra Steps:         96
-Encounters:          142
+Optional Steps:      46
+Extra Steps:         94
+Encounters:          135
 
-Base Encounters:     169
-Encounters Saved:    27
+Base Encounters:     163
+Encounters Saved:    28
 
-Number of Variables: 190
+Number of Variables: 191
+Cache Size:          305

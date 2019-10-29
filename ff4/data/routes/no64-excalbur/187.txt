@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Edge+Excalbur)
 VERSION	22
-ROSA	v1.1.0-18-ge0f6888
+ROSA	v1.1.0-31-gf33807b
 SEED	187
-MAXSTEP	128
-MAXSEG	7
+MAXSTEP	0
+MAXSEG	-1
 TASMODE	0
-MINIMUM	1
+MINIMUM	0
 FRAMES	175314076
-VARS	C305500:1 C317500:1 E309700:55 C310700:1 E305400:112 C307800:1 E307400:16 E30CD00:28 C30CA00:1 E30C800:18 C313800:1 E310701:28 C200000:1 E307B00:42
+VARS	C200000:1 C305500:1 C307800:1 C30CA00:1 C310700:1 C313800:1 C317500:1 E305400:112 E307400:16 E307B00:42 E309700:55 E30C800:18 E30CD00:28 E310701:28
 
 Overworld (Kaipo)                                         Seed: 187   Index:   0
 Overworld (Kaipo)                                         Seed: 187   Index:   1
@@ -412,8 +412,8 @@ Lunar Core B4                                             Seed:  32   Index:  37
   Step  32: 127 / Mind x1 (10.566s)
   Step  55: 128 / Breath x1 (12.095s)
 
-Encounter Time:      1163.536s
-Other Time:          1753.561s
+Encounter Time:      1043.749s
+Other Time:          1873.348s
 Total Time:          2917.097s
 
 Base Total Time:     3065.319s
@@ -421,9 +421,10 @@ Time Saved:          148.221s
 
 Optional Steps:      6
 Extra Steps:         293
-Encounters:          144
+Encounters:          128
 
-Base Encounters:     172
+Base Encounters:     156
 Encounters Saved:    28
 
 Number of Variables: 206
+Cache Size:          328

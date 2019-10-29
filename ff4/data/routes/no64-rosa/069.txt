@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa)
 VERSION	22
-ROSA	v1.1.0-15-g3aeea13
+ROSA	v1.1.0-31-gf33807b
 SEED	69
-MAXSTEP	128
-MAXSEG	8
+MAXSTEP	0
+MAXSEG	-1
 TASMODE	0
-MINIMUM	1
-FRAMES	173515464
-VARS	E305400:16 C307800:1 E307400:26 E302700:11 E302600:22 E310700:22 E30C800:2 E310701:1 E307B00:36
+MINIMUM	0
+FRAMES	173483464
+VARS	C307800:1 E302600:22 E302700:11 E305400:16 E307400:26 E307B00:36 E30C800:2 E310700:22 E310701:1
 
 Overworld (Kaipo)                                         Seed:  69   Index:   0
 Overworld (Kaipo)                                         Seed:  69   Index:   1
@@ -191,8 +191,7 @@ Overworld (Eblan)                                         Seed: 222   Index:   8
 Underworld (Castle of Dwarves)                            Seed: 222   Index:   9
 Castle of Dwarves Walk                                    Seed: 222   Index:  10
   Castle of Dwarves                                       Seed: 222   Index:  10
-    Optional Steps: 20
-    Extra Steps: 2
+    Optional Steps: 22
 Underworld (Castle of Dwarves)                            Seed: 222   Index: 143
   Step  21: 60 / Armadilo x2 (8.100s)
   Step  32: 61 / Armadilo x1, Tortoise x2 (6.803s)
@@ -294,7 +293,8 @@ Castle of Dwarves                                         Seed:  68   Index:  76
 Underworld (Castle of Dwarves)                            Seed:  68   Index:  77
   Step   1: 100 / Dark Imp x3, Armadilo x1, BlackLiz x1 (6.770s)
 Return to Mysidia                                         Seed:  68   Index:  78
-Overworld (Mysidia)                                       Seed:  68   Index:  78
+Walk to the Big Whale                                     Seed:  68   Index:  78
+  Overworld (Mysidia)                                     Seed:  68   Index:  78
 Fly to Lunar Path                                         Seed:  68   Index:  81
 Lunar Overworld                                           Seed:  68   Index:  81
 Lunar Path (west)                                         Seed:  68   Index:  86
@@ -401,18 +401,19 @@ Lunar Core B4                                             Seed: 136   Index: 253
   Step  47: 138 / Mind x1 (10.119s)
   Step  48: 139 / Mind x1 (10.119s)
 
-Encounter Time:      1262.698s
-Other Time:          1624.471s
-Total Time:          2887.170s
+Encounter Time:      1127.534s
+Other Time:          1759.103s
+Total Time:          2886.637s
 
 Base Total Time:     3017.215s
-Time Saved:          130.046s
+Time Saved:          130.578s
 
-Optional Steps:      36
-Extra Steps:         100
-Encounters:          156
+Optional Steps:      38
+Extra Steps:         98
+Encounters:          139
 
-Base Encounters:     161
-Encounters Saved:    5
+Base Encounters:     152
+Encounters Saved:    13
 
-Number of Variables: 190
+Number of Variables: 191
+Cache Size:          305

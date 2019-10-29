@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa)
 VERSION	22
-ROSA	v1.1.0-15-g3aeea13
+ROSA	v1.1.0-31-gf33807b
 SEED	232
-MAXSTEP	128
-MAXSEG	8
+MAXSTEP	0
+MAXSEG	-1
 TASMODE	0
-MINIMUM	1
-FRAMES	170638723
-VARS	E316A01:30 E309700:84 E307400:18 E302700:11 E302600:104 E200006:12 E310700:40 E310701:4
+MINIMUM	0
+FRAMES	170606723
+VARS	E200006:12 E302600:104 E302700:11 E307400:18 E309700:84 E310700:40 E310701:4 E316A01:30
 
 Overworld (Kaipo)                                         Seed: 232   Index:   0
 Overworld (Kaipo)                                         Seed: 232   Index:   1
@@ -183,8 +183,8 @@ Overworld (Eblan)                                         Seed: 129   Index: 109
 Underworld (Castle of Dwarves)                            Seed: 129   Index: 110
 Castle of Dwarves Walk                                    Seed: 129   Index: 111
   Castle of Dwarves                                       Seed: 129   Index: 111
-    Optional Steps: 20
-    Extra Steps: 20
+    Optional Steps: 22
+    Extra Steps: 18
 Underworld (Castle of Dwarves)                            Seed: 146   Index:   6
   Step  39: 55 / Dark Imp x4 (6.679s)
   Step 101: 56 / BlackLiz x3 (6.787s)
@@ -283,7 +283,8 @@ Return to Castle of Dwarves                               Seed: 231   Index: 196
 Castle of Dwarves                                         Seed: 231   Index: 196
 Underworld (Castle of Dwarves)                            Seed: 231   Index: 197
 Return to Mysidia                                         Seed: 231   Index: 198
-Overworld (Mysidia)                                       Seed: 231   Index: 198
+Walk to the Big Whale                                     Seed: 231   Index: 198
+  Overworld (Mysidia)                                     Seed: 231   Index: 198
 Fly to Lunar Path                                         Seed: 231   Index: 201
 Lunar Overworld                                           Seed: 231   Index: 201
 Lunar Path (west)                                         Seed: 231   Index: 206
@@ -327,6 +328,14 @@ Grind Fight Search                                        Seed:   9   Index: 105
    (Step 218: 113 / Searcher (summons D.Machin) x1, Beamer x2)
    (Step 247: 114 / MacGiant x1, Horseman x1, Beamer x1)
   Giant of Bab-il Lung                                    Seed:   9   Index: 166
+   (Step  16: 107 / Machine x3, Beamer x2)
+   (Step  17: 108 / Beamer x1, Machine x2, Horseman x1)
+   (Step  57: 109 / Beamer x1, Machine x2, Horseman x1)
+   (Step  89: 110 / Machine x3, Beamer x2)
+   (Step 142: 111 / Beamer x1, Machine x2, Horseman x1)
+   (Step 150: 112 / Beamer x1, Machine x2, Horseman x1)
+   (Step 157: 113 / Beamer x1, Machine x2, Horseman x1)
+   (Step 186: 114 / D.Machin x1)
 Battle: Elements                                          Seed:   9   Index: 174
 Giant of Bab-il Lung                                      Seed:   9   Index: 174
 Giant of Bab-il CPU                                       Seed:   9   Index: 181
@@ -382,18 +391,19 @@ Lunar Core B3                                             Seed:  60   Index: 103
   Step  21: 130 / Behemoth x2 (7.516s)
 Lunar Core B4                                             Seed:  60   Index: 159
 
-Encounter Time:      1101.118s
-Other Time:          1738.185s
-Total Time:          2839.303s
+Encounter Time:      1040.066s
+Other Time:          1798.704s
+Total Time:          2838.770s
 
 Base Total Time:     2972.621s
-Time Saved:          133.318s
+Time Saved:          133.851s
 
-Optional Steps:      37
-Extra Steps:         266
-Encounters:          138
+Optional Steps:      39
+Extra Steps:         264
+Encounters:          130
 
-Base Encounters:     162
-Encounters Saved:    24
+Base Encounters:     148
+Encounters Saved:    18
 
-Number of Variables: 190
+Number of Variables: 191
+Cache Size:          304

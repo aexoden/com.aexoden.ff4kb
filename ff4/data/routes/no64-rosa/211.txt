@@ -1,11 +1,11 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa)
 VERSION	22
-ROSA	v1.1.0-15-g3aeea13
+ROSA	v1.1.0-31-gf33807b
 SEED	211
-MAXSTEP	128
-MAXSEG	8
+MAXSTEP	0
+MAXSEG	-1
 TASMODE	0
-MINIMUM	1
+MINIMUM	0
 FRAMES	170667992
 VARS	C30CA01:1 E000703:1 E310700:6
 
@@ -288,7 +288,8 @@ Return to Castle of Dwarves                               Seed: 193   Index: 198
 Castle of Dwarves                                         Seed: 193   Index: 198
 Underworld (Castle of Dwarves)                            Seed: 193   Index: 199
 Return to Mysidia                                         Seed: 193   Index: 200
-Overworld (Mysidia)                                       Seed: 193   Index: 200
+Walk to the Big Whale                                     Seed: 193   Index: 200
+  Overworld (Mysidia)                                     Seed: 193   Index: 200
 Fly to Lunar Path                                         Seed: 193   Index: 203
 Lunar Overworld                                           Seed: 193   Index: 203
 Lunar Path (west)                                         Seed: 193   Index: 208
@@ -330,6 +331,14 @@ Grind Fight Search                                        Seed: 227   Index:  95
    (Step 226: 122 / MacGiant x1, Machine x1, Beamer x1)
   Giant of Bab-il Lung                                    Seed: 227   Index: 156
     Step   8: 117 / Beamer x1, Machine x2, Horseman x1 (7.879s)
+   (Step  34: 118 / Beamer x1, Machine x2, Horseman x1)
+   (Step  36: 119 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step  72: 120 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 157: 121 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 165: 122 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 198: 123 / MacGiant x1, Horseman x1, Beamer x1)
+   (Step 213: 124 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 226: 125 / Searcher (summons Horseman) x1, Beamer x2)
 Battle: Elements                                          Seed: 227   Index: 164
 Giant of Bab-il Lung                                      Seed: 227   Index: 164
 Giant of Bab-il CPU                                       Seed: 227   Index: 171
@@ -383,8 +392,8 @@ Lunar Core B3                                             Seed:  22   Index:  63
   Step  33: 140 / Behemoth x2 (7.516s)
 Lunar Core B4                                             Seed:  22   Index: 119
 
-Encounter Time:      1155.495s
-Other Time:          1684.295s
+Encounter Time:      1109.373s
+Other Time:          1730.417s
 Total Time:          2839.790s
 
 Base Total Time:     2886.098s
@@ -392,9 +401,10 @@ Time Saved:          46.308s
 
 Optional Steps:      7
 Extra Steps:         0
-Encounters:          146
+Encounters:          140
 
-Base Encounters:     150
+Base Encounters:     144
 Encounters Saved:    4
 
-Number of Variables: 190
+Number of Variables: 191
+Cache Size:          304

@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa)
 VERSION	22
-ROSA	v1.1.0-15-g3aeea13
+ROSA	v1.1.0-31-gf33807b
 SEED	224
-MAXSTEP	128
-MAXSEG	8
+MAXSTEP	0
+MAXSEG	-1
 TASMODE	0
-MINIMUM	1
+MINIMUM	0
 FRAMES	170665245
-VARS	E305400:14 E302500:86 E307400:74 E302700:3 E310700:20 E30CA00:10 E310701:16 E309C00:12
+VARS	E302500:86 E302700:3 E305400:14 E307400:74 E309C00:12 E30CA00:10 E310700:20 E310701:16
 
 Overworld (Kaipo)                                         Seed: 224   Index:   0
 Overworld (Kaipo)                                         Seed: 224   Index:   1
@@ -285,8 +285,9 @@ Return to Castle of Dwarves                               Seed: 223   Index: 170
 Castle of Dwarves                                         Seed: 223   Index: 170
 Underworld (Castle of Dwarves)                            Seed: 223   Index: 171
 Return to Mysidia                                         Seed: 223   Index: 172
-Overworld (Mysidia)                                       Seed: 223   Index: 172
-  Step   3: 94 / Raven x1 (7.626s)
+Walk to the Big Whale                                     Seed: 223   Index: 172
+  Overworld (Mysidia)                                     Seed: 223   Index: 172
+    Step   3: 94 / Raven x1 (7.626s)
 Fly to Lunar Path                                         Seed: 223   Index: 175
 Lunar Overworld                                           Seed: 223   Index: 175
 Lunar Path (west)                                         Seed: 223   Index: 180
@@ -330,6 +331,13 @@ Grind Fight Search                                        Seed:   1   Index:  67
    (Step 253: 116 / Horseman x1, Machine x2)
   Giant of Bab-il Lung                                    Seed:   1   Index: 128
     Step   2: 110 / MacGiant x1, Horseman x1, Beamer x1 (7.674s)
+   (Step  16: 111 / Beamer x1, Machine x2, Horseman x1)
+   (Step  52: 112 / Beamer x1, Machine x2, Horseman x1)
+   (Step 130: 113 / Beamer x1, Machine x2, Horseman x1)
+   (Step 141: 114 / D.Machin x1)
+   (Step 157: 115 / Beamer x1, Machine x2, Horseman x1)
+   (Step 192: 116 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 221: 117 / Searcher (summons Horseman) x1, Beamer x2)
 Battle: Elements                                          Seed:   1   Index: 136
 Giant of Bab-il Lung                                      Seed:   1   Index: 136
 Giant of Bab-il CPU                                       Seed:   1   Index: 143
@@ -382,8 +390,8 @@ Lunar Core B3                                             Seed:  52   Index:  35
 Lunar Core B4                                             Seed:  52   Index:  91
   Step  52: 132 / Mind x1 (10.119s)
 
-Encounter Time:      1113.049s
-Other Time:          1726.695s
+Encounter Time:      1055.948s
+Other Time:          1783.796s
 Total Time:          2839.744s
 
 Base Total Time:     3011.631s
@@ -391,9 +399,10 @@ Time Saved:          171.887s
 
 Optional Steps:      27
 Extra Steps:         208
-Encounters:          139
+Encounters:          132
 
-Base Encounters:     173
-Encounters Saved:    34
+Base Encounters:     152
+Encounters Saved:    20
 
-Number of Variables: 190
+Number of Variables: 191
+Cache Size:          304
