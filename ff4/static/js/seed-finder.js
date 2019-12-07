@@ -2828,6 +2828,12 @@ com.aexoden.ff4 = function()
 
 		if (finished) {
 			maxStep = 211;
+		} else if (currentMapIndex == 1) {
+			maxStep = Math.max(37, maxStep);
+		} else if (currentMapIndex == 2) {
+			maxStep = Math.max(69, maxStep);
+		} else if (currentMapIndex == 3) {
+			maxStep = Math.max(121, maxStep);
 		}
 
 		Object.entries(_encounterData).forEach(
