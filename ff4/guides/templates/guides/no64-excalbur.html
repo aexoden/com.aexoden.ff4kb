@@ -585,7 +585,7 @@
 							<dt>Porom</dt><dd>Run Buffer<br>Use <i>Cure2</i> on Ghast<br>Run Buffer</dd>
 							<dt>Cecil</dt><dd>Swap <i>Darkness</i> (sword) and <i>Paladin</i> (shield) (optional)<br>Move <i>Darkness</i> (sword) to bottom (optional)<br>Half-use <i>Cure2</i> (don't select a target, but cancel back to the item selection instead)<br>Swap <i>Cure2</i> and <i>Carrot</i><br>Close menu and wait</dd>
 						</dl>
-						<p>This strategy is incredibly timing-sensitive. There are many ways it can go wrong, and the only way to really get good at this strategy is to practice it over and over. Porom's first run buffer has an incredibly short window, and in my experience, you must slightly anticipate it unless you have excellent reaction times. A relatively consistent method (if you're musically inclined) is to note that the proper time to run buffer is exactly four beats of the song after you confirm Fire1 (thanks to <a href="https://www.twitch.tv/SwimmyLionni">SwimmyLionni</a> for telling me this). Regarding Tellah casting Stop, you may have better success if you have him wait a second or two before casting, but that never works for me. Just don't be too fast, either.</p>
+						<p>This strategy is incredibly timing-sensitive. There are many ways it can go wrong, and the only way to really get good at this strategy is to practice it over and over. Porom's first run buffer has an incredibly short window, and in my experience, you must slightly anticipate it unless you have excellent reaction times. A relatively consistent method (if you're musically inclined) is to note that the proper time to run buffer is exactly four beats of the song after you confirm Fire1 (thanks to <a href="https://www.twitch.tv/SwimmyLionni">SwimmyLionni</a> for telling me this). Regarding Tellah casting Stop, you may have better success if you have him wait a second or two before casting. Porom's second run buffer is more important. The first might be prevented by Milon taking an invisible turn.</p>
 					</div>
 				</div>
 			</div>
@@ -704,13 +704,14 @@
 						<dt>Cecil</dt><dd>Wait for "ACHOOOOO"<br>Fight</dd>
 					</dl>
 					<p>If necessary, you can do limited inventory management during Karate's first attack.</p>
-					<p>It's actually possible to trigger the end of battle earlier than that message. There are essentially four different patterns, defined (badly) using the point in the music when Yang says his first line:</p>
+					<p>It's actually possible to trigger the end of battle earlier than that message. There are essentially four different patterns, based on a timer you start right as the battle starts fading in from the black:</p>
 					<dl class="row">
-						<dt class="col-6">Slightly before third descending note</dt><dd class="col-6">Hold A just after the first rising note</dd>
-						<dt class="col-6">As the third descending note begins</dt><dd class="col-6">Hold A right as the second rising note starts</dd>
-						<dt class="col-6">Just before fourth descending note</dt><dd class="col-6">Hold A after the rising notes, right on the first note of the next fanfare section</dd>
-						<dt class="col-6">After the fourth descending note</dt><dd class="col-6">At some point later there is a sequence of four eighth notes, followed by two quarter notes. Hold A in between the last two quarter notes.</dd>
+						<dt class="col-6">4.5 seconds</dt><dd class="col-6">Hold A at about 10.6 seconds</dd>
+						<dt class="col-6">5.0 seconds</dt><dd class="col-6">Hold A at about 11.2 seconds</dd>
+						<dt class="col-6">6.0 seconds</dt><dd class="col-6">Hold A at about 13.2 seconds</dd>
+						<dt class="col-6">7.3 seconds</dt><dd class="col-6">Hold A at about 15.8 seconds</dd>
 					</dl>
+					<p>Originally, I tried using musical cues, but the problem is that the music doesn't restart for the second battle.</p>
 				</div>
 			</div>
 			<p>After the scenes, head to the Baron weapon and armor shop.</p>
@@ -833,8 +834,11 @@
 					<dl class="dl-horizontal">
 						<dt>Cecil</dt><dd>Fight (hold A)</dd>
 						<dt>Yang</dt><dd>Fight (hold A)</dd>
-						<dt>Cid</dt><dd>Fight (hold A)</dd>
-						<dt>Tellah</dt><dd>Cast Virus on Cid</dd>
+					</dl>
+					<p>At this point, you'll need to make a decision based on Cecil's first damage roll. The default pattern is below, and we'll discuss the variations afterward:</p>
+					<dl class="dl-horizontal">
+						<dt>Cid</dt><dd>Parry</dd>
+						<dt>Tellah</dt><dd>Cast Virus on Cid<br>Run Buffer</dd>
 						<dt>Cecil</dt><dd>Fight</dd>
 						<dt>Yang</dt><dd>Parry</dd>
 						<dt>Cecil</dt><dd>Fight</dd>
@@ -842,8 +846,10 @@
 						<dt>Yang</dt><dd>Duplicate <i>IceClaw</i> slot<br>Fight</dd>
 						<dt>Cecil</dt><dd>Inventory Management</dd>
 					</dl>
-				<p>If three characters survived at Milon Z. and the opportunity for killing Tellah presents itself, take it.</p>
-				<p>If you have trouble getting the Dark Elf to change forms before he casts Whisper, try run buffering Cecil's first turn.</p>
+					<p>If Cecil's first damage roll is 684 or less, Yang should Fight on his second turn instead of Parrying.</p>
+					<p>If Cecil's first damage roll is 942 or greater, Cid should Fight, Yang should fight on his second turn, and Cecil should Parry on his second turn. (The run buffer after Virus is not necessary in this scenario.)</p>
+					<p>If three characters survived at Milon Z. and the opportunity for killing Tellah presents itself, take it.</p>
+					<p>If you have trouble getting the Dark Elf to change forms before he casts Whisper, try run buffering Cecil's first turn.</p>
 				</div>
 			</div>
 			<p>After the battle, get the crystal, leave the room, and cast Exit.</p>
