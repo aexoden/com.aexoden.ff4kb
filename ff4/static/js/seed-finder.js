@@ -2784,7 +2784,9 @@ com.aexoden.ff4 = function()
 				continue;
 			}
 
-			e.innerHTML += '<h4>Step ' + step + '</h4>';
+			var header = document.createElement('h4')
+			header.innerHTML = 'Step ' + step;
+			e.appendChild(header);
 
 			var formations = new Set([]);
 
