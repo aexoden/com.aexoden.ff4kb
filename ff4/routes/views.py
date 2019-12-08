@@ -280,9 +280,9 @@ def route(request, route):
 	return render(request, 'routes/route.html', context)
 
 
-def detail(request, route, seed):
+def detail(request, route, seed, vars=None):
 	try:
-		r = RouteDetail(route, seed)
+		r = RouteDetail(route, seed, vars)
 	except FileNotFoundError:
 		raise Http404("Route and seed combination does not exist.")
 
@@ -295,6 +295,7 @@ def detail(request, route, seed):
 	]
 
 	context = {
+		'custom': r.custom,
 		'detail': r.html_data,
 		'battles': json.dumps(r.battles),
 		'route': route,

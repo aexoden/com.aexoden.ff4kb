@@ -13,6 +13,9 @@
 
 {% block content %}
 				<h1>{{ route_data.name }} Seed {{ seed }} Step Route</h1>
+{% if custom %}
+				<div class="bs-callout bs-callout-warning"><span class="fas fa-exclamation-triangle"></span><h4>Custom Route</h4><p>This is a custom route that may be suboptimal. If you are looking for the optimized route, please visit <a href="{% url 'routes:detail' route seed %}">the main route page</a>.</p></div>
+{% endif %}
 				<h2 id="overview">Route Overview</h2>
 				<dl class="dl row">
 {% for statistic in statistics %}
