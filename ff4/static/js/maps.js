@@ -9999,6 +9999,10 @@ com.aexoden.ff4.maps = function()
 		}
 	}
 
+	var onMapMouseLeave = function(e) {
+		document.getElementById('information').innerHTML = '';
+	}
+
 	var onMapMouseMove = function(e) {
 		if (dragStartX !== null) {
 			dx = e.offsetX - dragLastX;
@@ -10019,9 +10023,15 @@ com.aexoden.ff4.maps = function()
 
 			var trigger = getTrigger(tileX, tileY);
 
-			if (trigger !== null) {
-				contents = "";
+			contents = "";
 
+			contents += '<h3>Cursor Coordinates</h3>';
+			contents += '<dl class="dl-horizontal">';
+			contents += '<dt>X</dt><dd>' + tileX + '</dd>';
+			contents += '<dt>Y</dt><dd>' + tileY + '</dd>';
+			contents += '</dl>';
+
+			if (trigger !== null) {
 				if (trigger.type == 'warp') {
 					contents += '<h3>Warp</h3>';
 					contents += '<dl class="dl-horizontal">';
@@ -10074,11 +10084,9 @@ com.aexoden.ff4.maps = function()
 
 					contents += '</dl>';
 				}
-
-				div.innerHTML = contents;
-			} else {
-				div.innerHTML = '';
 			}
+
+			div.innerHTML = contents;
 		}
 	}
 
@@ -10287,6 +10295,7 @@ com.aexoden.ff4.maps = function()
 		canvas.addEventListener('mousedown', onMapMouseDown);
 		canvas.addEventListener('mousemove', onMapMouseMove);
 		canvas.addEventListener('mouseup', onMapMouseUp);
+		canvas.addEventListener('mouseleave', onMapMouseLeave);
 
 		var button = document.getElementById('button-base-overworld');
 		button.addEventListener('click', onButtonGoOverworld);
