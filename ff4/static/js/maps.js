@@ -10016,8 +10016,8 @@ com.aexoden.ff4.maps = function()
 
 			drawMap();
 		} else {
-			var tileX = Math.floor(((e.offsetX * currentSize / 512) + currentStartX) / 16);
-			var tileY = Math.floor(((e.offsetY * currentSize / 512) + currentStartY) / 16);
+			var tileX = Math.floor(((e.offsetX * currentSize / 512) + currentStartX) / 16) % (getMapSize() / 16);
+			var tileY = Math.floor(((e.offsetY * currentSize / 512) + currentStartY) / 16) % (getMapSize() / 16);
 
 			var div = document.getElementById('information');
 
