@@ -152,11 +152,13 @@ def get_color(value, mean, stdev):
 		(0.00, (128, 64, 0)),
 		(0.50, (255, 255, 255)),
 		(1.00, (0, 224, 0)),
+		(1.10, (224, 224, 0)),
+		(1.50, (224, 224, 0)),
 	]
 
 	z = (value - mean) / stdev
 	value = (z / -5) + 0.5
-	value = max(0, min(1, value))
+	value = max(0, min(1.5, value))
 
 	index = 1
 	while colors[index][0] < value:
