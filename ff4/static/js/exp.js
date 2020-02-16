@@ -1428,7 +1428,7 @@ com.aexoden.ff4.exp = function()
 		}
 
 		if (battle in _routeData[route].overrides && 'monsters' in _routeData[route].overrides[battle]) {
-			if (monster in _routeData[route].overrides[battle].monsters) {
+			if (monster in _routeData[route].overrides[battle].monsters && property in _routeData[route].overrides[battle].monsters[monster]) {
 				return _routeData[route].overrides[battle].monsters[monster][property];
 			}
 		}
