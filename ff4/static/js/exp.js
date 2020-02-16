@@ -1084,6 +1084,7 @@ com.aexoden.ff4.exp = function()
 			name: 'Grind Fight',
 			monsters: {
 				d_machin: {modify: true, count: 15},
+				beamer: {modify: true, count: 2},
 				searcher: {modify: true, count: 1}
 			},
 			party: {[CHARACTER_CECIL]: false, [CHARACTER_ROSA]: false, [CHARACTER_RYDIA]: false, [CHARACTER_EDGE]: true, [CHARACTER_FUSOYA]: false},
@@ -1114,6 +1115,7 @@ com.aexoden.ff4.exp = function()
 		antlion:       {name: 'Antlion',  exp: {'*': 1500}},
 		attacker:      {name: 'Attacker', exp: {'sfc': 0, 'snes': 50000}},
 		baigan:        {name: 'Baigan',   exp: {'*': 4800}},
+		beamer:        {name: 'Beamer',   exp: {'sfc': 3199, 'snes': 3250}},
 		bomb:          {name: 'Bomb',     exp: {'sfc': 361, 'snes': 370}},
 		brena:         {name: 'Brena',    exp: {'*': 1000}},
 		cal:           {name: 'Cal',      exp: {'*': 1000}},
@@ -1531,11 +1533,7 @@ com.aexoden.ff4.exp = function()
 			let survivors = 0;
 
 			for (character in battleData.party) {
-				if (battle in _overrides && character in _overrides[battle]) {
-					if (_overrides[battle][character]) {
-						survivors++;
-					}
-				} else if (battleData.party[character]) {
+				if (getCharacterAlive(battle, character)) {
 					survivors++;
 				}
 			}
@@ -1577,15 +1575,15 @@ com.aexoden.ff4.exp = function()
 					link.setAttribute('id', 'override-' + battle + '-' + character);
 
 					if (getCharacterAlive(battle, character)) {
-						link.innerHTML = '<strong>' + _characterData[character].name + '</strong>';
+						link.innerHTML = '<strong>' + _characterData[character].name + ' (' + exp[character] + ')</strong>';
 					} else {
-						link.innerHTML = _characterData[character].name;
+						link.innerHTML = _characterData[character].name  + ' (' + exp[character] + ')';
 					}
 
 					item.appendChild(link);
 					link.addEventListener('click', onOverrideClick);
 				} else if (newLevel > oldLevel) {
-					item.innerHTML = '<strong>' + _characterData[character].name + '</strong> (shadow)';
+					item.innerHTML = '<strong>' + _characterData[character].name + ' (' + exp[character] + ')</strong> (shadow)';
 				}
 
 				if (newLevel > oldLevel) {
