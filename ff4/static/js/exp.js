@@ -1279,10 +1279,10 @@ com.aexoden.ff4.exp = function()
 					party: { [CHARACTER_EDGE]: false, [CHARACTER_ROSA]: true }
 				},
 				elements: {
-					party: { [CHARACTER_ROSA]: true, [CHARACTER_CECIL]: false, [CHARACTER_EDGE]: false }
+					party: { [CHARACTER_ROSA]: true, [CHARACTER_EDGE]: false }
 				},
 				cpu: {
-					party: { [CHARACTER_ROSA]: true, [CHARACTER_CECIL]: false, [CHARACTER_EDGE]: false }
+					party: { [CHARACTER_ROSA]: true, }
 				}
 			},
 			'exp_table': 'snes',
