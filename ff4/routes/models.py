@@ -18,8 +18,6 @@ def decode_vars(vars):
 		for char in current:
 			value = (value << 6) + chars.index(char)
 
-		print(value)
-
 		var = value >> 8
 		value = value & 0xFF
 
@@ -155,7 +153,6 @@ class RouteDetail(object):
 				pass
 
 			var_string = decode_vars(vars)
-			print(var_string)
 			rosa_args = ['./rosa', '-r', self._route, '-s', str(self._seed), '-m', '0', '-v', var_string]
 			data = subprocess.run(rosa_args, capture_output=True, cwd=os.path.join(settings.BASE_DIR, 'rosa'), encoding='utf-8').stdout.split('\n')
 		else:
