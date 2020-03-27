@@ -13,14 +13,22 @@ GROUPS = {
 	'standard': {
 		'name': 'Standard Routes',
 		'description': 'These are the standard routes people are most likely to use.',
+		'twin_safe': True,
+	},
+	'testing': {
+		'name': 'Testing Routes',
+		'description': 'These are routes currently in development. They may or may not be accurate, and are almost certainly still suboptimal.',
+		'twin_safe': True,
 	},
 	'alternate': {
 		'name': 'Alternate Routes',
-		'description': 'These routes are uncommon alternate routes that are unlikely to be used during a run. They currently have no summary or tutorial data. None of these routes is twin seed safe.'
+		'description': 'These routes are uncommon alternate routes that are unlikely to be used during a run. They currently have no summary or tutorial data. None of these routes is twin seed safe.',
+		'twin_safe': True,
 	},
 	'archive': {
 		'name': 'Archived Routes',
 		'description': 'These routes are archived from the old version of the site. They have not been updated to the new data structure, and their optimization status is unknown (though they should be near optimal relative to their input data). There is no associated tutorial or summary data. Eventually, I would like to convert them to the new structure, but this is not a high priority. These routes are not guaranteed to be twin seed safe (though some of them may be).',
+		'twin_safe': False,
 	}
 }
 
@@ -31,6 +39,8 @@ ROUTES = {
 		'group': 'standard',
 		'enabled': True,
 		'twin_safe': True,
+		'complete': True,
+		'seed_finder': True,
 		'status': 'Optimal',
 	},
 	'nocw': {
@@ -39,6 +49,8 @@ ROUTES = {
 		'group': 'standard',
 		'enabled': True,
 		'twin_safe': True,
+		'complete': True,
+		'seed_finder': True,
 		'status': 'Optimal'
 	},
 	'no64-rosa': {
@@ -47,7 +59,19 @@ ROUTES = {
 		'group': 'standard',
 		'enabled': True,
 		'twin_safe': True,
+		'complete': True,
+		'seed_finder': True,
 		'status': '~98.25% Optimal'
+	},
+	'no64-rosa-marathon': {
+		'name': 'Any% No64 (Rosa) (Marathon)',
+		'description': 'This route runs from the beginning of the game until Zeromus is defeated. Use of the 64-door glitch is banned. The step route begins after the Mist Clip. This particular version of the route relies on Rosa as the primary damage dealer at the end of the game. This variant adds extra save points and a visit to the Elixir shop for use during marathons.',
+		'group': 'testing',
+		'enabled': True,
+		'twin_safe': True,
+		'complete': False,
+		'seed_finder': True,
+		'status': 'Suboptimal'
 	},
 	'no64-excalbur': {
 		'name': 'Any% No64 (Edge+Excalbur)',
@@ -55,6 +79,8 @@ ROUTES = {
 		'group': 'standard',
 		'enabled': True,
 		'twin_safe': True,
+		'complete': True,
+		'seed_finder': True,
 		'status': '~96.75% Optimal'
 	},
 
@@ -63,6 +89,8 @@ ROUTES = {
 		'description': 'From the beginning of the game until the Mist Clip. Primarily useful for demonstrating that seed 92 is optimal.',
 		'group': 'alternate',
 		'enabled': True,
+		'complete': True,
+		'seed_finder': False,
 		'status': 'Optimal'
 	},
 
@@ -71,78 +99,104 @@ ROUTES = {
 		'description': 'This is the Any% NoCW route for the SFC version of the game. The actual speedrun is not completely optimized yet, so the step routes are in flux. This route follows my guide.',
 		'group': 'archive',
 		'enabled': True,
+		'complete': False,
+		'seed_finder': False,
 	},
 	'sfc-nocw-toru': {
 		'name': 'SFC Any% NoCW (Toru_1988)',
 		'description': 'This is the Any% NoCW route for the SFC version of the game. The actual speedrun is not completely optimized yet, so the step routes are in flux. This route is used by Toru_1988.',
 		'group': 'archive',
 		'enabled': True,
+		'complete': False,
+		'seed_finder': False,
 	},
 	'no64-drain': {
 		'name': 'Any% No64 (Edge+Drain)',
 		'description': 'This route runs from the beginning of the game until Zeromus is defeated. Use of the 64-door glitch is banned. The step route begins after the Mist Clip. This particular version of the route relies on Edge as the primary damage dealer at the end of the game. This has largely been deprecated in favor of either Edge+Excalbur or Rosa.',
 		'group': 'archive',
 		'enabled': True,
+		'complete': False,
+		'seed_finder': False,
 	},
 	'octomamm-cecil-kain-darkness': {
 		'name': 'Octomamm% (Cecil+Kain+Darkness)',
 		'description': 'From the beginning of the game until Octomamm is defeated, using only Kain and Cecil, while picking up the Darkness sword.',
 		'group': 'archive',
 		'enabled': True,
+		'complete': False,
+		'seed_finder': False,
 	},
 	'ss-paladin': {
 		'name': 'Paladin% Single Segment',
 		'description': 'From the beginning of the game until Cecil becomes a paladin. The game must be completed in a single run without reloading a save.',
 		'group': 'archive',
 		'enabled': True,
+		'complete': False,
+		'seed_finder': False,
 	},
 	'ss-no64-excalbur': {
 		'name': 'Any% No64 Single Segment (Edge+Excalbur)',
 		'description': 'From the beginning of the game until Zeromus is defeated, without using the 64-door glitch. The game must be completed in a single run without reloading a save. Edge is the primary endgame damage dealer.',
 		'group': 'archive',
 		'enabled': True,
+		'complete': False,
+		'seed_finder': False,
 	},
 	'marathon-no64-drain': {
 		'name': 'Any% No64 (Edge+Drain) Marathon Safe (AGDQ 2016)',
 		'description': 'From the beginning of the game until Zeromus is defeated, without using the 64-door glitch. The game must be completed in a single run without reloading a save. Edge is the primary endgame damage dealer. This route has additional save points routed in and was designed specifically for AGDQ 2016.',
 		'group': 'archive',
 		'enabled': True,
+		'complete': False,
+		'seed_finder': False,
 	},
 	'marathon-no64-excalbur': {
 		'name': 'Any% No64 (Edge+Excalbur) Marathon Safe (AGDQ 2016)',
 		'description': 'From the beginning of the game until Zeromus is defeated, without using the 64-door glitch. The game must be completed in a single run without reloading a save. Edge is the primary endgame damage dealer. This route has additional save points routed in and was designed specifically for AGDQ 2016.',
 		'group': 'archive',
 		'enabled': True,
+		'complete': False,
+		'seed_finder': False,
 	},
 	'marathon-no64-excalbur-bosses': {
 		'name': 'Any% No64 (Edge+Excalbur) Extra Bosses Marathon Safe (AGDQ 2016)',
 		'description': 'From the beginning of the game until Zeromus is defeated, without using the 64-door glitch. The game must be completed in a single run without reloading a save. Edge is the primary endgame damage dealer. This route has additional save points routed in and was designed specifically for AGDQ 2016. This route has extra bosses as well.',
 		'group': 'archive',
 		'enabled': True,
+		'complete': False,
+		'seed_finder': False,
 	},
 	'uc': {
 		'name': 'Unprecedented Crisis v2.1 Any% No Major Skips',
 		'description': 'This is a run of the Unprecedented Crisis romhack.',
 		'group': 'archive',
 		'enabled': True,
+		'complete': False,
+		'seed_finder': False,
 	},
 	'uc-riversmccown': {
 		'name': 'Unprecedented Crisis v3.1 Any% No Major Skips (riversmccown)',
 		'description': 'This is a run of the Unprecedented Crisis romhack.',
 		'group': 'archive',
 		'enabled': True,
+		'complete': False,
+		'seed_finder': False,
 	},
 	'uc-mist': {
 		'name': 'Unprecedented Crisis v3.1 Any% (Mist Clip%)',
 		'description': 'This is a run of the Unprecedented Crisis romhack.',
 		'group': 'archive',
 		'enabled': True,
+		'complete': False,
+		'seed_finder': False,
 	},
 	'tdw': {
 		'name': 'The Darkness Within v1.07b Any%',
 		'description': 'This is a run of the The Darkness Within romhack.',
 		'group': 'archive',
 		'enabled': True,
+		'complete': False,
+		'seed_finder': False,
 	},
 }
 

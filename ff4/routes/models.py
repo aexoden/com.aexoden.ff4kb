@@ -122,9 +122,13 @@ class RouteDetail(object):
 			'(In|Out)ward.*(Steps|Secret)',
 			'Castle of Dwarves (Walk|Warp)',
 			'(Remove|Equip|Skip) Dwarf Axe',
+			'Cave Eblana B2F Shop (Walk|Warp)',
 			'Zeromus Menu',
 			'Visit Hummingway',
 			'Recruit FuSoYa First',
+			'Get Ninja Star',
+			'to the Big Whale',
+			'Save: ',
 		]
 
 		return self._test_line(patterns, line)
