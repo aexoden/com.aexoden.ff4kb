@@ -11,6 +11,7 @@ urlpatterns = [
 	path('mini-step-routing/', TemplateView.as_view(template_name='guides/mini-step-routing.html'), name='mini-step-routing'),
 	path('no64-excalbur/', TemplateView.as_view(template_name='guides/no64-excalbur.html'), name='no64-excalbur'),
 	path('no64-rosa/', TemplateView.as_view(template_name='guides/no64-rosa.html'), name='no64-rosa'),
+	path('no64-rosa-marathon/', TemplateView.as_view(template_name='guides/no64-rosa-marathon.html'), name='no64-rosa-marathon'),
 	path('nocw/', TemplateView.as_view(template_name='guides/nocw.html'), name='nocw'),
 	path('sfc-nocw/', TemplateView.as_view(template_name='guides/sfc-nocw.html'), name='sfc-nocw'),
 
