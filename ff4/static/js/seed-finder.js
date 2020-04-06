@@ -21,7 +21,2548 @@ com.aexoden.ff4 = function()
      * Data
      */
 
-    var _encounterData = [
+	var _encounterData = {};
+
+	_encounterData.fusoya = [
+		{
+			"37": "Red Worm x1, Procyote x1, Juclyote x1",
+			"87": "Red Worm x1, Procyote x1, Juclyote x1",
+			"97": "Red Worm x2",
+			"120": "MoonCell x2, Pudding x2",
+			"130": "Procyote x1, Pudding x2",
+			"144": "Slime x1, Tofu x1, Pudding x1",
+			"180": "Procyote x1, Pudding x2"
+		},
+		{
+			"37": "Red Worm x1, Procyote x1, Juclyote x1",
+			"56": "Procyote x1, Juclyote x2",
+			"87": "Red Worm x2",
+			"97": "Pudding x2, Grenade x2",
+			"120": "Slime x1, Tofu x1, Pudding x1",
+			"130": "Slime x1, Tofu x1, Pudding x1",
+			"144": "Procyote x1, Pudding x2",
+			"180": "Juclyote x2, MoonCell x2, Grenade x1"
+		},
+		{
+			"37": "Red Worm x1, Procyote x1, Juclyote x1",
+			"56": "Procyote x1, Juclyote x2",
+			"87": "Red Worm x2",
+			"97": "Pudding x2, Grenade x2",
+			"120": "Slime x1, Tofu x1, Pudding x1",
+			"130": "Slime x1, Tofu x1, Pudding x1",
+			"144": "Procyote x1, Pudding x2",
+			"146": "Red Worm x2"
+		},
+		{
+			"37": "Red Worm x1, Procyote x1, Juclyote x1",
+			"56": "Procyote x1, Juclyote x2",
+			"87": "Red Worm x2",
+			"120": "MoonCell x2, Pudding x2",
+			"130": "Slime x1, Tofu x1, Pudding x1",
+			"144": "Slime x1, Tofu x1, Pudding x1",
+			"146": "Pudding x4",
+			"182": "Juclyote x2, MoonCell x2, Grenade x1"
+		},
+		{
+			"56": "MoonCell x2, Pudding x2",
+			"81": "Red Worm x1, Procyote x1, Juclyote x1",
+			"87": "Red Worm x2",
+			"120": "MoonCell x2, Pudding x2",
+			"130": "Slime x1, Tofu x1, Pudding x1",
+			"144": "Slime x1, Tofu x1, Pudding x1",
+			"146": "Pudding x4",
+			"182": "Juclyote x2, MoonCell x2, Grenade x1"
+		},
+		{
+			"56": "MoonCell x2, Pudding x2",
+			"81": "Red Worm x1, Procyote x1, Juclyote x1",
+			"87": "Red Worm x2",
+			"130": "MoonCell x2, Pudding x2",
+			"144": "Slime x1, Tofu x1, Pudding x1",
+			"146": "Juclyote x1, Procyote x2",
+			"159": "Pudding x4",
+			"182": "Juclyote x1, Procyote x2"
+		},
+		{
+			"56": "MoonCell x2, Pudding x2",
+			"81": "Red Worm x1, Procyote x1, Juclyote x1",
+			"87": "Red Worm x2",
+			"130": "Procyote x1, Pudding x2",
+			"146": "Juclyote x1, Procyote x2",
+			"159": "Juclyote x1, Procyote x2",
+			"182": "Procyote x1, Pudding x2",
+			"183": "Juclyote x1, Procyote x2"
+		},
+		{
+			"56": "MoonCell x2, Pudding x2",
+			"81": "Red Worm x1, Procyote x1, Juclyote x1",
+			"87": "Red Worm x2",
+			"146": "Pudding x4",
+			"159": "Juclyote x1, Procyote x2",
+			"182": "Slime x1, Tofu x1, Pudding x1",
+			"183": "Procyote x1, Pudding x2",
+			"223": "Red Worm x2"
+		},
+		{
+			"56": "MoonCell x2, Pudding x2",
+			"81": "Red Worm x1, Procyote x1, Juclyote x1",
+			"146": "Pudding x2, Grenade x2",
+			"159": "Pudding x4",
+			"182": "Slime x1, Tofu x1, Pudding x1",
+			"183": "Slime x1, Tofu x1, Pudding x1",
+			"223": "Red Worm x1, Grenade x3"
+		},
+		{
+			"35": "Red Worm x1, Procyote x1, Juclyote x1",
+			"81": "Red Worm x1, Procyote x1, Juclyote x1",
+			"146": "Pudding x2, Grenade x2",
+			"159": "Pudding x4",
+			"182": "Slime x1, Tofu x1, Pudding x1",
+			"183": "Slime x1, Tofu x1, Pudding x1",
+			"223": "Red Worm x1, Grenade x3"
+		},
+		{
+			"13": "Red Worm x1, Procyote x1, Juclyote x1",
+			"35": "Procyote x1, Pudding x2",
+			"81": "Pudding x2, Grenade x2",
+			"159": "Pudding x4",
+			"182": "Slime x1, Tofu x1, Pudding x1",
+			"183": "Slime x1, Tofu x1, Pudding x1",
+			"223": "Red Worm x1, Grenade x3"
+		},
+		{
+			"13": "Red Worm x1, Procyote x1, Juclyote x1",
+			"35": "Procyote x1, Juclyote x2",
+			"81": "Pudding x2, Grenade x2",
+			"159": "Pudding x4",
+			"183": "Slime x1, Tofu x1, Pudding x1",
+			"212": "Slime x1, Tofu x1, Pudding x1",
+			"223": "Red Worm x1, Grenade x3"
+		},
+		{
+			"13": "Red Worm x1, Procyote x1, Juclyote x1",
+			"35": "Procyote x1, Juclyote x2",
+			"64": "MoonCell x2, Pudding x2",
+			"159": "Pudding x4",
+			"183": "Slime x1, Tofu x1, Pudding x1",
+			"212": "Slime x1, Tofu x1, Pudding x1",
+			"223": "Red Worm x1, Grenade x3"
+		},
+		{
+			"13": "Red Worm x1, Procyote x1, Juclyote x1",
+			"35": "Procyote x1, Juclyote x2",
+			"64": "MoonCell x2, Pudding x2",
+			"158": "Pudding x4",
+			"183": "Slime x1, Tofu x1, Pudding x1",
+			"212": "Slime x1, Tofu x1, Pudding x1",
+			"223": "Red Worm x1, Grenade x3"
+		},
+		{
+			"13": "Red Worm x1, Procyote x1, Juclyote x1",
+			"29": "Procyote x1, Juclyote x2",
+			"35": "Red Worm x1, Procyote x1, Juclyote x1",
+			"64": "Procyote x1, Pudding x2",
+			"158": "Juclyote x1, Procyote x2",
+			"212": "Slime x1, Tofu x1, Pudding x1",
+			"223": "Red Worm x1, Grenade x3"
+		},
+		{
+			"13": "Red Worm x1, Procyote x1, Juclyote x1",
+			"29": "Procyote x1, Juclyote x2",
+			"35": "Red Worm x1, Procyote x1, Juclyote x1",
+			"64": "Procyote x1, Pudding x2",
+			"158": "Juclyote x1, Procyote x2",
+			"212": "Slime x1, Tofu x1, Pudding x1",
+			"222": "Red Worm x1, Grenade x3"
+		},
+		{
+			"2": "MoonCell x2, Pudding x2",
+			"13": "Procyote x1, Juclyote x2",
+			"29": "Red Worm x1, Procyote x1, Juclyote x1",
+			"35": "Red Worm x1, Grenade x3",
+			"64": "Slime x1, Tofu x1, Pudding x1",
+			"158": "Juclyote x1, Procyote x2",
+			"212": "Slime x1, Tofu x1, Pudding x1",
+			"222": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"2": "MoonCell x2, Pudding x2",
+			"13": "Procyote x1, Juclyote x2",
+			"29": "Red Worm x1, Procyote x1, Juclyote x1",
+			"64": "Procyote x1, Pudding x2",
+			"93": "Juclyote x1, Procyote x2",
+			"158": "Juclyote x1, Procyote x2",
+			"212": "Slime x1, Tofu x1, Pudding x1",
+			"222": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"2": "Procyote x1, Pudding x2",
+			"29": "Procyote x1, Juclyote x2",
+			"64": "MoonCell x2, Pudding x2",
+			"93": "Pudding x4",
+			"158": "Juclyote x1, Procyote x2",
+			"212": "Slime x1, Tofu x1, Pudding x1",
+			"222": "Slime x1, Tofu x1, Pudding x1",
+			"224": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"2": "Procyote x1, Pudding x2",
+			"29": "Procyote x1, Juclyote x2",
+			"64": "MoonCell x2, Pudding x2",
+			"67": "Procyote x1, Pudding x2",
+			"93": "Juclyote x1, Procyote x2",
+			"158": "Juclyote x1, Procyote x2",
+			"222": "Slime x1, Tofu x1, Pudding x1",
+			"224": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"2": "Procyote x1, Pudding x2",
+			"29": "Procyote x1, Juclyote x2",
+			"67": "MoonCell x2, Pudding x2",
+			"93": "Pudding x4",
+			"158": "Juclyote x1, Procyote x2",
+			"222": "Balloon x2, Grenade x2",
+			"224": "Slime x1, Tofu x1, Pudding x1",
+			"251": "MoonCell x2, Pudding x2"
+		},
+		{
+			"2": "Procyote x1, Pudding x2",
+			"29": "Procyote x1, Juclyote x2",
+			"67": "MoonCell x2, Pudding x2",
+			"93": "Pudding x4",
+			"96": "Juclyote x1, Procyote x2",
+			"222": "Balloon x2, Grenade x2",
+			"224": "Slime x1, Tofu x1, Pudding x1",
+			"251": "MoonCell x2, Pudding x2"
+		},
+		{
+			"2": "Procyote x1, Pudding x2",
+			"67": "Juclyote x2, MoonCell x2, Grenade x1",
+			"93": "Pudding x2, Grenade x2",
+			"96": "Pudding x4",
+			"206": "Balloon x2, Grenade x2",
+			"222": "Balloon x2, Grenade x2",
+			"224": "Slime x1, Tofu x1, Pudding x1",
+			"251": "MoonCell x2, Pudding x2"
+		},
+		{
+			"2": "Procyote x1, Pudding x2",
+			"67": "Juclyote x2, MoonCell x2, Grenade x1",
+			"93": "Pudding x2, Grenade x2",
+			"96": "Pudding x4",
+			"206": "Balloon x2, Grenade x2",
+			"224": "Balloon x2, Grenade x2",
+			"239": "Slime x1, Tofu x1, Pudding x1",
+			"251": "MoonCell x2, Pudding x2"
+		},
+		{
+			"67": "Procyote x1, Pudding x2",
+			"93": "Red Worm x2",
+			"96": "Pudding x2, Grenade x2",
+			"206": "Procyote x1, Pudding x2",
+			"224": "Balloon x2, Grenade x2",
+			"239": "Balloon x2, Grenade x2",
+			"251": "Slime x1, Tofu x1, Pudding x1",
+			"253": "MoonCell x2, Pudding x2"
+		},
+		{
+			"52": "Procyote x1, Pudding x2",
+			"67": "Juclyote x2, MoonCell x2, Grenade x1",
+			"96": "Pudding x2, Grenade x2",
+			"206": "Procyote x1, Pudding x2",
+			"224": "Balloon x2, Grenade x2",
+			"239": "Balloon x2, Grenade x2",
+			"251": "Slime x1, Tofu x1, Pudding x1",
+			"253": "MoonCell x2, Pudding x2"
+		},
+		{
+			"52": "Procyote x1, Pudding x2",
+			"60": "Juclyote x2, MoonCell x2, Grenade x1",
+			"67": "MoonCell x2, Pudding x2",
+			"96": "Pudding x4",
+			"206": "Balloon x2, Grenade x2",
+			"239": "Balloon x2, Grenade x2",
+			"251": "Slime x1, Tofu x1, Pudding x1",
+			"253": "MoonCell x2, Pudding x2"
+		},
+		{
+			"52": "Procyote x1, Pudding x2",
+			"60": "Juclyote x1, Procyote x2",
+			"92": "Pudding x2, Grenade x2",
+			"96": "Pudding x4",
+			"206": "Balloon x2, Grenade x2",
+			"239": "Balloon x2, Grenade x2",
+			"251": "Slime x1, Tofu x1, Pudding x1",
+			"253": "MoonCell x2, Pudding x2"
+		},
+		{
+			"52": "Procyote x1, Pudding x2",
+			"60": "Juclyote x1, Procyote x2",
+			"69": "MoonCell x2, Pudding x2",
+			"92": "Juclyote x1, Procyote x2",
+			"96": "Juclyote x1, Procyote x2",
+			"206": "Balloon x2, Grenade x2",
+			"239": "Slime x1, Tofu x1, Pudding x1",
+			"253": "MoonCell x2, Pudding x2"
+		},
+		{
+			"7": "Red Worm x1, Grenade x3",
+			"52": "Juclyote x1, Procyote x2",
+			"60": "MoonCell x2, Pudding x2",
+			"69": "Slime x1, Tofu x1, Pudding x1",
+			"92": "Juclyote x1, Procyote x2",
+			"206": "Balloon x2, Grenade x2",
+			"239": "Slime x1, Tofu x1, Pudding x1",
+			"253": "MoonCell x2, Pudding x2"
+		},
+		{
+			"7": "Red Worm x1, Grenade x3",
+			"52": "Juclyote x1, Procyote x2",
+			"60": "Procyote x1, Pudding x2",
+			"69": "Slime x1, Tofu x1, Pudding x1",
+			"92": "Juclyote x1, Procyote x2",
+			"188": "Balloon x2, Grenade x2",
+			"239": "Slime x1, Tofu x1, Pudding x1",
+			"253": "MoonCell x2, Pudding x2"
+		},
+		{
+			"7": "Red Worm x1, Grenade x3",
+			"52": "Juclyote x1, Procyote x2",
+			"60": "Procyote x1, Pudding x2",
+			"69": "Slime x1, Tofu x1, Pudding x1",
+			"92": "Juclyote x1, Procyote x2",
+			"188": "Balloon x2, Grenade x2",
+			"220": "Slime x1, Tofu x1, Pudding x1",
+			"253": "MoonCell x2, Pudding x2"
+		},
+		{
+			"7": "Red Worm x1, Grenade x3",
+			"52": "Juclyote x1, Procyote x2",
+			"60": "Procyote x1, Pudding x2",
+			"69": "Slime x1, Tofu x1, Pudding x1",
+			"92": "Juclyote x1, Procyote x2",
+			"141": "Balloon x2, Grenade x2",
+			"188": "Slime x1, Tofu x1, Pudding x1",
+			"220": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"7": "Red Worm x1, Grenade x3",
+			"60": "Juclyote x1, Procyote x2",
+			"69": "Procyote x1, Pudding x2",
+			"92": "Juclyote x1, Procyote x2",
+			"141": "Balloon x2, Grenade x2",
+			"188": "Balloon x2, Grenade x2",
+			"220": "Slime x1, Tofu x1, Pudding x1",
+			"241": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"7": "Red Worm x1, Grenade x3",
+			"69": "Juclyote x1, Procyote x2",
+			"92": "Pudding x4",
+			"121": "Slime x1, Tofu x1, Pudding x1",
+			"141": "Balloon x2, Grenade x2",
+			"188": "Balloon x2, Grenade x2",
+			"220": "Slime x1, Tofu x1, Pudding x1",
+			"241": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"7": "Red Worm x1, Grenade x3",
+			"31": "Red Worm x2",
+			"69": "Procyote x1, Pudding x2",
+			"121": "Slime x1, Tofu x1, Pudding x1",
+			"141": "Balloon x2, Grenade x2",
+			"188": "Balloon x2, Grenade x2",
+			"220": "Slime x1, Tofu x1, Pudding x1",
+			"241": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"7": "Red Worm x1, Grenade x3",
+			"31": "Red Worm x2",
+			"121": "Procyote x1, Pudding x2",
+			"123": "Slime x1, Tofu x1, Pudding x1",
+			"141": "Balloon x2, Grenade x2",
+			"188": "Balloon x2, Grenade x2",
+			"220": "Slime x1, Tofu x1, Pudding x1",
+			"241": "Red Worm x1, Grenade x3"
+		},
+		{
+			"31": "Red Worm x1, Grenade x3",
+			"94": "Pudding x2, Grenade x2",
+			"121": "Procyote x1, Pudding x2",
+			"123": "Slime x1, Tofu x1, Pudding x1",
+			"141": "Balloon x2, Grenade x2",
+			"188": "Balloon x2, Grenade x2",
+			"220": "Balloon x2, Grenade x2",
+			"241": "Red Worm x1, Grenade x3"
+		},
+		{
+			"31": "Red Worm x1, Grenade x3",
+			"73": "MoonCell x2, Pudding x2",
+			"94": "Pudding x4",
+			"121": "Slime x1, Tofu x1, Pudding x1",
+			"123": "Balloon x2, Grenade x2",
+			"141": "Balloon x2, Grenade x2",
+			"220": "Balloon x2, Grenade x2",
+			"241": "Red Worm x1, Grenade x3"
+		},
+		{
+			"31": "Red Worm x1, Grenade x3",
+			"73": "MoonCell x2, Pudding x2",
+			"94": "Pudding x4",
+			"121": "Slime x1, Tofu x1, Pudding x1",
+			"123": "Balloon x2, Grenade x2",
+			"141": "Balloon x2, Grenade x2",
+			"203": "Balloon x2, Grenade x2",
+			"241": "Red Worm x1, Grenade x3"
+		},
+		{
+			"31": "Slime x1, Tofu x1, Pudding x1",
+			"73": "MoonCell x2, Pudding x2",
+			"94": "Pudding x4",
+			"121": "Slime x1, Tofu x1, Pudding x1",
+			"123": "Balloon x2, Grenade x2",
+			"125": "Balloon x2, Grenade x2",
+			"203": "Balloon x2, Grenade x2",
+			"241": "Red Worm x1, Grenade x3"
+		},
+		{
+			"26": "Slime x1, Tofu x1, Pudding x1",
+			"31": "Red Worm x1, Procyote x1, Juclyote x1",
+			"73": "Procyote x1, Pudding x2",
+			"94": "Juclyote x1, Procyote x2",
+			"121": "Balloon x2, Grenade x2",
+			"123": "Procyote x1, Juclyote x2",
+			"125": "Balloon x2, Grenade x2",
+			"203": "Procyote x1, Pudding x2"
+		},
+		{
+			"26": "Slime x1, Tofu x1, Pudding x1",
+			"31": "Red Worm x1, Procyote x1, Juclyote x1",
+			"73": "Procyote x1, Pudding x2",
+			"94": "Juclyote x1, Procyote x2",
+			"123": "Balloon x2, Grenade x2",
+			"125": "Procyote x1, Juclyote x2",
+			"203": "Balloon x2, Grenade x2",
+			"236": "Red Worm x1, Grenade x3"
+		},
+		{
+			"26": "Slime x1, Tofu x1, Pudding x1",
+			"47": "MoonCell x2, Pudding x2",
+			"73": "Procyote x1, Pudding x2",
+			"94": "Juclyote x1, Procyote x2",
+			"123": "Balloon x2, Grenade x2",
+			"125": "Procyote x1, Juclyote x2",
+			"203": "Balloon x2, Grenade x2",
+			"236": "Red Worm x1, Grenade x3"
+		},
+		{
+			"26": "Slime x1, Tofu x1, Pudding x1",
+			"47": "MoonCell x2, Pudding x2",
+			"58": "Procyote x1, Pudding x2",
+			"73": "Slime x1, Tofu x1, Pudding x1",
+			"94": "Red Worm x1, Procyote x1, Juclyote x1",
+			"125": "Procyote x1, Juclyote x2",
+			"203": "Balloon x2, Grenade x2",
+			"236": "Red Worm x1, Grenade x3"
+		},
+		{
+			"26": "Slime x1, Tofu x1, Pudding x1",
+			"47": "MoonCell x2, Pudding x2",
+			"58": "Procyote x1, Pudding x2",
+			"61": "Slime x1, Tofu x1, Pudding x1",
+			"73": "Procyote x1, Juclyote x2",
+			"125": "Procyote x1, Juclyote x2",
+			"203": "Balloon x2, Grenade x2",
+			"236": "Red Worm x1, Grenade x3"
+		},
+		{
+			"26": "Slime x1, Tofu x1, Pudding x1",
+			"47": "MoonCell x2, Pudding x2",
+			"58": "Procyote x1, Pudding x2",
+			"61": "Slime x1, Tofu x1, Pudding x1",
+			"125": "Procyote x1, Juclyote x2",
+			"186": "Procyote x1, Juclyote x2",
+			"203": "Balloon x2, Grenade x2",
+			"236": "Red Worm x1, Grenade x3"
+		},
+		{
+			"26": "Slime x1, Tofu x1, Pudding x1",
+			"27": "Red Worm x1, Procyote x1, Juclyote x1",
+			"47": "Procyote x1, Pudding x2",
+			"58": "Slime x1, Tofu x1, Pudding x1",
+			"61": "Procyote x1, Juclyote x2",
+			"125": "Procyote x1, Juclyote x2",
+			"186": "Balloon x2, Grenade x2",
+			"236": "Red Worm x1, Grenade x3"
+		},
+		{
+			"26": "Slime x1, Tofu x1, Pudding x1",
+			"27": "Red Worm x1, Procyote x1, Juclyote x1",
+			"47": "Procyote x1, Pudding x2",
+			"58": "Slime x1, Tofu x1, Pudding x1",
+			"61": "Procyote x1, Juclyote x2",
+			"186": "Procyote x1, Juclyote x2",
+			"236": "Balloon x2, Grenade x2",
+			"246": "Red Worm x1, Grenade x3"
+		},
+		{
+			"27": "Slime x1, Tofu x1, Pudding x1",
+			"47": "MoonCell x2, Pudding x2",
+			"58": "Procyote x1, Pudding x2",
+			"61": "Balloon x2, Grenade x2",
+			"167": "Red Worm x1, Procyote x1, Juclyote x1",
+			"186": "Procyote x1, Juclyote x2",
+			"236": "Balloon x2, Grenade x2",
+			"246": "Red Worm x1, Grenade x3"
+		},
+		{
+			"27": "Slime x1, Tofu x1, Pudding x1",
+			"47": "MoonCell x2, Pudding x2",
+			"54": "Procyote x1, Pudding x2",
+			"58": "Balloon x2, Grenade x2",
+			"61": "Procyote x1, Juclyote x2",
+			"167": "Red Worm x1, Procyote x1, Juclyote x1",
+			"186": "Balloon x2, Grenade x2",
+			"246": "Red Worm x1, Grenade x3"
+		},
+		{
+			"27": "Slime x1, Tofu x1, Pudding x1",
+			"54": "MoonCell x2, Pudding x2",
+			"58": "Slime x1, Tofu x1, Pudding x1",
+			"61": "Balloon x2, Grenade x2",
+			"89": "Red Worm x1, Procyote x1, Juclyote x1",
+			"167": "Red Worm x1, Procyote x1, Juclyote x1",
+			"186": "Balloon x2, Grenade x2",
+			"246": "Red Worm x1, Grenade x3"
+		},
+		{
+			"27": "Slime x1, Tofu x1, Pudding x1",
+			"54": "MoonCell x2, Pudding x2",
+			"61": "Slime x1, Tofu x1, Pudding x1",
+			"89": "Juclyote x1, Procyote x2",
+			"143": "Procyote x1, Juclyote x2",
+			"167": "Red Worm x1, Procyote x1, Juclyote x1",
+			"186": "Balloon x2, Grenade x2",
+			"246": "Red Worm x1, Grenade x3"
+		},
+		{
+			"15": "Slime x1, Tofu x1, Pudding x1",
+			"27": "Red Worm x1, Procyote x1, Juclyote x1",
+			"54": "Slime x1, Tofu x1, Pudding x1",
+			"89": "Juclyote x1, Procyote x2",
+			"143": "Procyote x1, Juclyote x2",
+			"167": "Red Worm x1, Procyote x1, Juclyote x1",
+			"186": "Balloon x2, Grenade x2",
+			"246": "Red Worm x1, Grenade x3"
+		},
+		{
+			"15": "Slime x1, Tofu x1, Pudding x1",
+			"27": "Red Worm x1, Procyote x1, Juclyote x1",
+			"53": "Slime x1, Tofu x1, Pudding x1",
+			"54": "Balloon x2, Grenade x2",
+			"89": "Red Worm x1, Procyote x1, Juclyote x1",
+			"143": "Procyote x1, Juclyote x2",
+			"167": "Juclyote x1, Procyote x2",
+			"246": "Red Worm x1, Grenade x3"
+		},
+		{
+			"15": "Slime x1, Tofu x1, Pudding x1",
+			"53": "MoonCell x2, Pudding x2",
+			"54": "Slime x1, Tofu x1, Pudding x1",
+			"89": "Juclyote x1, Procyote x2",
+			"99": "Red Worm x1, Procyote x1, Juclyote x1",
+			"143": "Procyote x1, Juclyote x2",
+			"167": "Juclyote x1, Procyote x2",
+			"246": "Red Worm x1, Grenade x3"
+		},
+		{
+			"15": "Slime x1, Tofu x1, Pudding x1",
+			"53": "MoonCell x2, Pudding x2",
+			"54": "Slime x1, Tofu x1, Pudding x1",
+			"89": "Juclyote x1, Procyote x2",
+			"99": "Red Worm x1, Procyote x1, Juclyote x1",
+			"143": "Procyote x1, Juclyote x2",
+			"167": "Juclyote x1, Procyote x2",
+			"249": "Procyote x1, Pudding x2"
+		},
+		{
+			"15": "Slime x1, Tofu x1, Pudding x1",
+			"24": "Red Worm x1, Procyote x1, Juclyote x1",
+			"53": "Slime x1, Tofu x1, Pudding x1",
+			"54": "Balloon x2, Grenade x2",
+			"89": "Red Worm x1, Procyote x1, Juclyote x1",
+			"99": "Red Worm x2",
+			"143": "Balloon x2, Grenade x2",
+			"249": "Procyote x1, Pudding x2"
+		},
+		{
+			"15": "Slime x1, Tofu x1, Pudding x1",
+			"24": "Red Worm x1, Procyote x1, Juclyote x1",
+			"53": "Slime x1, Tofu x1, Pudding x1",
+			"89": "Juclyote x1, Procyote x2",
+			"99": "Red Worm x1, Procyote x1, Juclyote x1",
+			"143": "Juclyote x2, MoonCell x2, Grenade x1",
+			"232": "Balloon x2, Grenade x2",
+			"249": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"15": "Slime x1, Tofu x1, Pudding x1",
+			"24": "Red Worm x1, Grenade x3",
+			"53": "Slime x1, Tofu x1, Pudding x1",
+			"99": "Juclyote x1, Procyote x2",
+			"124": "Procyote x1, Juclyote x2",
+			"143": "Juclyote x2, MoonCell x2, Grenade x1",
+			"232": "Procyote x1, Pudding x2",
+			"249": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"15": "Slime x1, Tofu x1, Pudding x1",
+			"24": "Red Worm x1, Grenade x3",
+			"53": "Slime x1, Tofu x1, Pudding x1",
+			"68": "Balloon x2, Grenade x2",
+			"99": "Red Worm x2",
+			"124": "Juclyote x2, MoonCell x2, Grenade x1",
+			"232": "Procyote x1, Pudding x2",
+			"249": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"24": "Balloon x2, Grenade x2",
+			"53": "Procyote x1, Pudding x2",
+			"68": "Slime x1, Tofu x1, Pudding x1",
+			"78": "Balloon x2, Grenade x2",
+			"99": "Red Worm x2",
+			"124": "Juclyote x2, MoonCell x2, Grenade x1",
+			"232": "Procyote x1, Pudding x2",
+			"249": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"24": "Balloon x2, Grenade x2",
+			"28": "Red Worm x1, Grenade x3",
+			"68": "Slime x1, Tofu x1, Pudding x1",
+			"78": "Balloon x2, Grenade x2",
+			"99": "Red Worm x2",
+			"124": "Juclyote x2, MoonCell x2, Grenade x1",
+			"232": "Procyote x1, Pudding x2",
+			"249": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"24": "Balloon x2, Grenade x2",
+			"28": "Red Worm x1, Grenade x3",
+			"30": "Slime x1, Tofu x1, Pudding x1",
+			"68": "Balloon x2, Grenade x2",
+			"78": "Juclyote x2, MoonCell x2, Grenade x1",
+			"124": "Juclyote x2, MoonCell x2, Grenade x1",
+			"232": "Procyote x1, Pudding x2",
+			"249": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"24": "Balloon x2, Grenade x2",
+			"28": "Red Worm x1, Grenade x3",
+			"30": "Slime x1, Tofu x1, Pudding x1",
+			"68": "Balloon x2, Grenade x2",
+			"78": "Juclyote x2, MoonCell x2, Grenade x1",
+			"124": "Juclyote x2, MoonCell x2, Grenade x1",
+			"232": "Procyote x1, Pudding x2",
+			"250": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"28": "Balloon x2, Grenade x2",
+			"30": "Red Worm x1, Grenade x3",
+			"68": "Slime x1, Tofu x1, Pudding x1",
+			"78": "Balloon x2, Grenade x2",
+			"124": "Juclyote x2, MoonCell x2, Grenade x1",
+			"178": "Juclyote x2, MoonCell x2, Grenade x1",
+			"232": "Procyote x1, Pudding x2",
+			"250": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"28": "Balloon x2, Grenade x2",
+			"30": "Red Worm x1, Grenade x3",
+			"43": "Slime x1, Tofu x1, Pudding x1",
+			"68": "Balloon x2, Grenade x2",
+			"78": "Juclyote x2, MoonCell x2, Grenade x1",
+			"124": "Juclyote x2, MoonCell x2, Grenade x1",
+			"178": "Procyote x1, Juclyote x2",
+			"250": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"28": "Balloon x2, Grenade x2",
+			"30": "Red Worm x1, Grenade x3",
+			"43": "Slime x1, Tofu x1, Pudding x1",
+			"68": "Balloon x2, Grenade x2",
+			"78": "Juclyote x2, MoonCell x2, Grenade x1",
+			"153": "Red Worm x2",
+			"178": "Procyote x1, Juclyote x2",
+			"250": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"28": "Balloon x2, Grenade x2",
+			"30": "Red Worm x1, Grenade x3",
+			"43": "Slime x1, Tofu x1, Pudding x1",
+			"78": "Balloon x2, Grenade x2",
+			"119": "Juclyote x2, MoonCell x2, Grenade x1",
+			"153": "Red Worm x2",
+			"178": "Procyote x1, Juclyote x2",
+			"250": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"28": "Balloon x2, Grenade x2",
+			"30": "Red Worm x1, Grenade x3",
+			"43": "Slime x1, Tofu x1, Pudding x1",
+			"119": "Balloon x2, Grenade x2",
+			"153": "Red Worm x2",
+			"178": "Juclyote x2, MoonCell x2, Grenade x1",
+			"231": "Procyote x1, Pudding x2",
+			"250": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"30": "Balloon x2, Grenade x2",
+			"43": "Red Worm x1, Grenade x3",
+			"72": "Slime x1, Tofu x1, Pudding x1",
+			"119": "Balloon x2, Grenade x2",
+			"153": "Red Worm x2",
+			"178": "Juclyote x2, MoonCell x2, Grenade x1",
+			"231": "Procyote x1, Pudding x2",
+			"250": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"43": "Balloon x2, Grenade x2",
+			"72": "Procyote x1, Pudding x2",
+			"77": "Slime x1, Tofu x1, Pudding x1",
+			"119": "Procyote x1, Juclyote x2",
+			"153": "Red Worm x2",
+			"178": "Juclyote x2, MoonCell x2, Grenade x1",
+			"231": "Procyote x1, Pudding x2",
+			"250": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"43": "Balloon x2, Grenade x2",
+			"72": "Procyote x1, Pudding x2",
+			"77": "Slime x1, Tofu x1, Pudding x1",
+			"119": "Procyote x1, Juclyote x2",
+			"153": "Red Worm x2",
+			"178": "Juclyote x2, MoonCell x2, Grenade x1",
+			"231": "Procyote x1, Pudding x2",
+			"247": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"43": "Balloon x2, Grenade x2",
+			"72": "Procyote x1, Pudding x2",
+			"77": "Balloon x2, Grenade x2",
+			"119": "Procyote x1, Juclyote x2",
+			"127": "Juclyote x2, MoonCell x2, Grenade x1",
+			"153": "Red Worm x2",
+			"231": "Procyote x1, Pudding x2",
+			"247": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"1": "Balloon x2, Grenade x2",
+			"72": "Procyote x1, Pudding x2",
+			"77": "Balloon x2, Grenade x2",
+			"119": "Procyote x1, Juclyote x2",
+			"127": "Juclyote x2, MoonCell x2, Grenade x1",
+			"153": "Red Worm x2",
+			"231": "Procyote x1, Pudding x2",
+			"247": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"1": "Balloon x2, Grenade x2",
+			"48": "Procyote x1, Pudding x2",
+			"72": "Balloon x2, Grenade x2",
+			"77": "Procyote x1, Juclyote x2",
+			"119": "Juclyote x2, MoonCell x2, Grenade x1",
+			"127": "Juclyote x1, Procyote x2",
+			"231": "Procyote x1, Juclyote x2",
+			"247": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"1": "Balloon x2, Grenade x2",
+			"48": "Procyote x1, Pudding x2",
+			"72": "Balloon x2, Grenade x2",
+			"77": "Procyote x1, Juclyote x2",
+			"118": "Juclyote x1, Procyote x2",
+			"127": "Juclyote x1, Procyote x2",
+			"231": "Procyote x1, Juclyote x2",
+			"247": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"1": "Balloon x2, Grenade x2",
+			"48": "Procyote x1, Pudding x2",
+			"72": "Balloon x2, Grenade x2",
+			"77": "Procyote x1, Juclyote x2",
+			"118": "Juclyote x1, Procyote x2",
+			"127": "Juclyote x1, Procyote x2",
+			"195": "Juclyote x2, MoonCell x2, Grenade x1",
+			"247": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"1": "Balloon x2, Grenade x2",
+			"10": "Red Worm x1, Grenade x3",
+			"48": "Balloon x2, Grenade x2",
+			"77": "Procyote x1, Juclyote x2",
+			"118": "Juclyote x1, Procyote x2",
+			"127": "Juclyote x1, Procyote x2",
+			"195": "Juclyote x2, MoonCell x2, Grenade x1",
+			"247": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"1": "Balloon x2, Grenade x2",
+			"10": "Red Worm x1, Grenade x3",
+			"48": "Balloon x2, Grenade x2",
+			"118": "Procyote x1, Juclyote x2",
+			"127": "Juclyote x1, Procyote x2",
+			"195": "Juclyote x1, Procyote x2",
+			"229": "Procyote x1, Juclyote x2",
+			"247": "Balloon x2, Grenade x2"
+		},
+		{
+			"1": "Balloon x2, Grenade x2",
+			"10": "Slime x1, Tofu x1, Pudding x1",
+			"48": "Balloon x2, Grenade x2",
+			"118": "Procyote x1, Juclyote x2",
+			"127": "Juclyote x1, Procyote x2",
+			"140": "Juclyote x1, Procyote x2",
+			"195": "Juclyote x2, MoonCell x2, Grenade x1",
+			"229": "Balloon x2, Grenade x2"
+		},
+		{
+			"1": "Balloon x2, Grenade x2",
+			"10": "Slime x1, Tofu x1, Pudding x1",
+			"48": "Balloon x2, Grenade x2",
+			"118": "Procyote x1, Juclyote x2",
+			"140": "Juclyote x1, Procyote x2",
+			"157": "Red Worm x2",
+			"195": "Juclyote x2, MoonCell x2, Grenade x1",
+			"229": "Balloon x2, Grenade x2"
+		},
+		{
+			"8": "Balloon x2, Grenade x2",
+			"10": "Slime x1, Tofu x1, Pudding x1",
+			"48": "Balloon x2, Grenade x2",
+			"118": "Procyote x1, Juclyote x2",
+			"140": "Juclyote x1, Procyote x2",
+			"157": "Red Worm x2",
+			"195": "Juclyote x2, MoonCell x2, Grenade x1",
+			"229": "Balloon x2, Grenade x2"
+		},
+		{
+			"8": "Procyote x1, Pudding x2",
+			"10": "Slime x1, Tofu x1, Pudding x1",
+			"85": "Juclyote x1, Procyote x2",
+			"118": "Procyote x1, Juclyote x2",
+			"140": "Juclyote x1, Procyote x2",
+			"157": "Pudding x2, Grenade x2",
+			"195": "Juclyote x2, MoonCell x2, Grenade x1",
+			"229": "Balloon x2, Grenade x2"
+		},
+		{
+			"8": "Procyote x1, Pudding x2",
+			"10": "Slime x1, Tofu x1, Pudding x1",
+			"85": "Juclyote x1, Procyote x2",
+			"117": "Procyote x1, Juclyote x2",
+			"140": "Red Worm x2",
+			"157": "Pudding x2, Grenade x2",
+			"195": "Juclyote x2, MoonCell x2, Grenade x1",
+			"229": "Balloon x2, Grenade x2"
+		},
+		{
+			"8": "Procyote x1, Pudding x2",
+			"10": "Slime x1, Tofu x1, Pudding x1",
+			"76": "Balloon x2, Grenade x2",
+			"85": "Red Worm x1, Procyote x1, Juclyote x1",
+			"117": "Red Worm x2",
+			"140": "MoonCell x2, Pudding x2",
+			"157": "Red Worm x2",
+			"229": "Balloon x2, Grenade x2"
+		},
+		{
+			"8": "Procyote x1, Pudding x2",
+			"32": "Slime x1, Tofu x1, Pudding x1",
+			"76": "Balloon x2, Grenade x2",
+			"85": "Red Worm x1, Procyote x1, Juclyote x1",
+			"117": "MoonCell x2, Pudding x2",
+			"140": "MoonCell x2, Pudding x2",
+			"157": "Red Worm x2",
+			"229": "Balloon x2, Grenade x2"
+		},
+		{
+			"8": "Procyote x1, Pudding x2",
+			"32": "Slime x1, Tofu x1, Pudding x1",
+			"76": "Balloon x2, Grenade x2",
+			"85": "Red Worm x2",
+			"117": "MoonCell x2, Pudding x2",
+			"140": "MoonCell x2, Pudding x2",
+			"157": "Red Worm x2",
+			"213": "Balloon x2, Grenade x2"
+		},
+		{
+			"8": "Procyote x1, Pudding x2",
+			"32": "Slime x1, Tofu x1, Pudding x1",
+			"76": "Balloon x2, Grenade x2",
+			"85": "Red Worm x2",
+			"117": "MoonCell x2, Pudding x2",
+			"157": "Pudding x2, Grenade x2",
+			"213": "Procyote x1, Juclyote x2",
+			"245": "Balloon x2, Grenade x2"
+		},
+		{
+			"8": "Procyote x1, Pudding x2",
+			"20": "Slime x1, Tofu x1, Pudding x1",
+			"32": "Balloon x2, Grenade x2",
+			"76": "Juclyote x2, MoonCell x2, Grenade x1",
+			"85": "Pudding x2, Grenade x2",
+			"117": "MoonCell x2, Pudding x2",
+			"213": "Procyote x1, Juclyote x2",
+			"245": "Balloon x2, Grenade x2"
+		},
+		{
+			"20": "Procyote x1, Pudding x2",
+			"32": "Slime x1, Tofu x1, Pudding x1",
+			"76": "Balloon x2, Grenade x2",
+			"85": "Red Worm x2",
+			"117": "MoonCell x2, Pudding x2",
+			"205": "MoonCell x2, Pudding x2",
+			"213": "Procyote x1, Juclyote x2",
+			"245": "Balloon x2, Grenade x2"
+		},
+		{
+			"20": "Procyote x1, Pudding x2",
+			"32": "Slime x1, Tofu x1, Pudding x1",
+			"76": "Balloon x2, Grenade x2",
+			"117": "Juclyote x2, MoonCell x2, Grenade x1",
+			"205": "MoonCell x2, Pudding x2",
+			"213": "Red Worm x1, Procyote x1, Juclyote x1",
+			"230": "Red Worm x2",
+			"245": "Balloon x2, Grenade x2"
+		},
+		{
+			"20": "Procyote x1, Pudding x2",
+			"32": "Slime x1, Tofu x1, Pudding x1",
+			"50": "Balloon x2, Grenade x2",
+			"76": "Juclyote x2, MoonCell x2, Grenade x1",
+			"205": "MoonCell x2, Pudding x2",
+			"213": "Red Worm x1, Procyote x1, Juclyote x1",
+			"230": "Red Worm x2",
+			"245": "Balloon x2, Grenade x2"
+		},
+		{
+			"20": "Procyote x1, Pudding x2",
+			"32": "Slime x1, Tofu x1, Pudding x1",
+			"50": "Balloon x2, Grenade x2",
+			"148": "Red Worm x2",
+			"205": "MoonCell x2, Pudding x2",
+			"213": "Red Worm x1, Procyote x1, Juclyote x1",
+			"230": "Red Worm x2",
+			"245": "Balloon x2, Grenade x2"
+		},
+		{
+			"20": "Procyote x1, Pudding x2",
+			"50": "Slime x1, Tofu x1, Pudding x1",
+			"148": "Red Worm x1, Procyote x1, Juclyote x1",
+			"181": "Juclyote x2, MoonCell x2, Grenade x1",
+			"205": "MoonCell x2, Pudding x2",
+			"213": "Red Worm x1, Procyote x1, Juclyote x1",
+			"230": "Red Worm x2",
+			"245": "Balloon x2, Grenade x2"
+		},
+		{
+			"20": "Procyote x1, Pudding x2",
+			"39": "Slime x1, Tofu x1, Pudding x1",
+			"50": "Procyote x1, Juclyote x2",
+			"148": "Red Worm x2",
+			"181": "MoonCell x2, Pudding x2",
+			"205": "MoonCell x2, Pudding x2",
+			"230": "Red Worm x2",
+			"245": "Balloon x2, Grenade x2"
+		},
+		{
+			"20": "Procyote x1, Pudding x2",
+			"39": "Slime x1, Tofu x1, Pudding x1",
+			"50": "Procyote x1, Juclyote x2",
+			"102": "Red Worm x2",
+			"148": "Pudding x2, Grenade x2",
+			"181": "MoonCell x2, Pudding x2",
+			"205": "Juclyote x1, Procyote x2",
+			"230": "Balloon x2, Grenade x2"
+		},
+		{
+			"39": "Procyote x1, Pudding x2",
+			"50": "Slime x1, Tofu x1, Pudding x1",
+			"91": "Red Worm x1, Procyote x1, Juclyote x1",
+			"102": "Red Worm x2",
+			"148": "Pudding x2, Grenade x2",
+			"181": "MoonCell x2, Pudding x2",
+			"205": "Juclyote x1, Procyote x2",
+			"230": "Balloon x2, Grenade x2"
+		},
+		{
+			"39": "Procyote x1, Pudding x2",
+			"50": "Slime x1, Tofu x1, Pudding x1",
+			"51": "Procyote x1, Juclyote x2",
+			"91": "Red Worm x2",
+			"102": "Pudding x2, Grenade x2",
+			"148": "Pudding x2, Grenade x2",
+			"181": "Juclyote x1, Procyote x2",
+			"230": "Balloon x2, Grenade x2"
+		},
+		{
+			"39": "Procyote x1, Juclyote x2",
+			"50": "Slime x1, Tofu x1, Pudding x1",
+			"51": "Procyote x1, Juclyote x2",
+			"91": "Red Worm x2",
+			"102": "Pudding x2, Grenade x2",
+			"148": "Pudding x2, Grenade x2",
+			"181": "Red Worm x2",
+			"217": "Balloon x2, Grenade x2"
+		},
+		{
+			"39": "Procyote x1, Juclyote x2",
+			"51": "Slime x1, Tofu x1, Pudding x1",
+			"91": "Red Worm x1, Procyote x1, Juclyote x1",
+			"102": "Red Worm x2",
+			"115": "MoonCell x2, Pudding x2",
+			"148": "Pudding x2, Grenade x2",
+			"181": "Red Worm x2",
+			"217": "Balloon x2, Grenade x2"
+		},
+		{
+			"39": "Procyote x1, Juclyote x2",
+			"51": "Slime x1, Tofu x1, Pudding x1",
+			"91": "Red Worm x1, Procyote x1, Juclyote x1",
+			"102": "Red Worm x2",
+			"115": "MoonCell x2, Pudding x2",
+			"147": "Pudding x2, Grenade x2",
+			"181": "MoonCell x2, Pudding x2",
+			"217": "Procyote x1, Pudding x2"
+		},
+		{
+			"39": "Procyote x1, Juclyote x2",
+			"51": "Balloon x2, Grenade x2",
+			"91": "Red Worm x1, Procyote x1, Juclyote x1",
+			"102": "Red Worm x2",
+			"115": "MoonCell x2, Pudding x2",
+			"147": "Pudding x2, Grenade x2",
+			"217": "Red Worm x1, Procyote x1, Juclyote x1",
+			"235": "Procyote x1, Pudding x2"
+		},
+		{
+			"12": "Procyote x1, Juclyote x2",
+			"51": "Balloon x2, Grenade x2",
+			"91": "Red Worm x1, Procyote x1, Juclyote x1",
+			"102": "Red Worm x2",
+			"115": "MoonCell x2, Pudding x2",
+			"147": "Pudding x2, Grenade x2",
+			"217": "Red Worm x1, Procyote x1, Juclyote x1",
+			"235": "Procyote x1, Pudding x2"
+		},
+		{
+			"12": "Procyote x1, Juclyote x2",
+			"51": "Balloon x2, Grenade x2",
+			"62": "Procyote x1, Juclyote x2",
+			"91": "Red Worm x2",
+			"115": "MoonCell x2, Pudding x2",
+			"147": "Pudding x4",
+			"217": "Red Worm x1, Procyote x1, Juclyote x1",
+			"235": "Procyote x1, Pudding x2"
+		},
+		{
+			"12": "Procyote x1, Juclyote x2",
+			"51": "Balloon x2, Grenade x2",
+			"62": "Procyote x1, Juclyote x2",
+			"115": "Juclyote x1, Procyote x2",
+			"136": "MoonCell x2, Pudding x2",
+			"147": "Pudding x4",
+			"217": "Red Worm x1, Procyote x1, Juclyote x1",
+			"235": "Procyote x1, Pudding x2"
+		},
+		{
+			"12": "Procyote x1, Juclyote x2",
+			"62": "Balloon x2, Grenade x2",
+			"115": "Procyote x1, Juclyote x2",
+			"116": "Juclyote x1, Procyote x2",
+			"136": "MoonCell x2, Pudding x2",
+			"147": "Pudding x4",
+			"217": "Red Worm x1, Procyote x1, Juclyote x1",
+			"235": "Procyote x1, Pudding x2"
+		},
+		{
+			"12": "Procyote x1, Juclyote x2",
+			"62": "Balloon x2, Grenade x2",
+			"82": "Red Worm x1, Procyote x1, Juclyote x1",
+			"115": "Juclyote x1, Procyote x2",
+			"116": "Procyote x1, Pudding x2",
+			"136": "Procyote x1, Pudding x2",
+			"147": "Pudding x2, Grenade x2",
+			"235": "Procyote x1, Pudding x2"
+		},
+		{
+			"12": "Procyote x1, Juclyote x2",
+			"62": "Balloon x2, Grenade x2",
+			"82": "Red Worm x1, Procyote x1, Juclyote x1",
+			"114": "Juclyote x1, Procyote x2",
+			"116": "Procyote x1, Pudding x2",
+			"136": "Procyote x1, Pudding x2",
+			"147": "Pudding x2, Grenade x2",
+			"235": "Procyote x1, Pudding x2"
+		},
+		{
+			"12": "Procyote x1, Juclyote x2",
+			"33": "Balloon x2, Grenade x2",
+			"62": "Procyote x1, Juclyote x2",
+			"82": "Red Worm x2",
+			"114": "Procyote x1, Pudding x2",
+			"116": "Procyote x1, Pudding x2",
+			"136": "MoonCell x2, Pudding x2",
+			"235": "Procyote x1, Pudding x2"
+		},
+		{
+			"12": "Procyote x1, Juclyote x2",
+			"33": "Balloon x2, Grenade x2",
+			"62": "Juclyote x2, MoonCell x2, Grenade x1",
+			"82": "Red Worm x2",
+			"114": "Procyote x1, Pudding x2",
+			"116": "Procyote x1, Pudding x2",
+			"136": "MoonCell x2, Pudding x2",
+			"218": "Procyote x1, Pudding x2"
+		},
+		{
+			"33": "Procyote x1, Juclyote x2",
+			"62": "Balloon x2, Grenade x2",
+			"82": "Red Worm x2",
+			"114": "Red Worm x2",
+			"116": "Procyote x1, Pudding x2",
+			"136": "Procyote x1, Pudding x2",
+			"218": "Red Worm x1, Procyote x1, Juclyote x1",
+			"226": "Procyote x1, Pudding x2"
+		},
+		{
+			"33": "Procyote x1, Juclyote x2",
+			"82": "Juclyote x1, Procyote x2",
+			"114": "Juclyote x2, MoonCell x2, Grenade x1",
+			"116": "Red Worm x2",
+			"136": "Procyote x1, Pudding x2",
+			"166": "Pudding x4",
+			"218": "Red Worm x1, Procyote x1, Juclyote x1",
+			"226": "Procyote x1, Pudding x2"
+		},
+		{
+			"17": "Procyote x1, Juclyote x2",
+			"33": "Balloon x2, Grenade x2",
+			"82": "Red Worm x2",
+			"114": "MoonCell x2, Pudding x2",
+			"116": "Procyote x1, Pudding x2",
+			"166": "Pudding x4",
+			"218": "Red Worm x1, Procyote x1, Juclyote x1",
+			"226": "Procyote x1, Pudding x2"
+		},
+		{
+			"17": "Procyote x1, Juclyote x2",
+			"33": "Balloon x2, Grenade x2",
+			"49": "Juclyote x2, MoonCell x2, Grenade x1",
+			"82": "Pudding x2, Grenade x2",
+			"114": "Procyote x1, Pudding x2",
+			"166": "Pudding x4",
+			"218": "Red Worm x1, Procyote x1, Juclyote x1",
+			"226": "Procyote x1, Pudding x2"
+		},
+		{
+			"17": "Red Worm x2",
+			"33": "Balloon x2, Grenade x2",
+			"49": "Juclyote x2, MoonCell x2, Grenade x1",
+			"88": "Pudding x2, Grenade x2",
+			"114": "Procyote x1, Pudding x2",
+			"166": "Pudding x4",
+			"218": "Red Worm x1, Procyote x1, Juclyote x1",
+			"226": "Procyote x1, Pudding x2"
+		},
+		{
+			"17": "Red Worm x2",
+			"33": "Balloon x2, Grenade x2",
+			"49": "Juclyote x2, MoonCell x2, Grenade x1",
+			"59": "MoonCell x2, Pudding x2",
+			"88": "Pudding x4",
+			"166": "Pudding x4",
+			"218": "Red Worm x1, Procyote x1, Juclyote x1",
+			"226": "Procyote x1, Pudding x2"
+		},
+		{
+			"17": "Red Worm x2",
+			"49": "Balloon x2, Grenade x2",
+			"59": "Juclyote x2, MoonCell x2, Grenade x1",
+			"88": "Pudding x2, Grenade x2",
+			"166": "Pudding x4",
+			"169": "Pudding x4",
+			"218": "Red Worm x1, Procyote x1, Juclyote x1",
+			"226": "Procyote x1, Juclyote x2"
+		},
+		{
+			"17": "Red Worm x2",
+			"49": "Balloon x2, Grenade x2",
+			"59": "Juclyote x2, MoonCell x2, Grenade x1",
+			"88": "Pudding x2, Grenade x2",
+			"166": "Pudding x4",
+			"169": "Pudding x4",
+			"177": "MoonCell x2, Pudding x2",
+			"226": "Procyote x1, Juclyote x2"
+		},
+		{
+			"17": "Red Worm x2",
+			"49": "Balloon x2, Grenade x2",
+			"59": "Juclyote x2, MoonCell x2, Grenade x1",
+			"88": "Pudding x2, Grenade x2",
+			"166": "Pudding x4",
+			"169": "Pudding x4",
+			"177": "MoonCell x2, Pudding x2",
+			"209": "Juclyote x2, MoonCell x2, Grenade x1"
+		},
+		{
+			"17": "Red Worm x2",
+			"23": "Balloon x2, Grenade x2",
+			"49": "Juclyote x2, MoonCell x2, Grenade x1",
+			"59": "MoonCell x2, Pudding x2",
+			"88": "Pudding x4",
+			"169": "Pudding x4",
+			"177": "MoonCell x2, Pudding x2",
+			"209": "Juclyote x2, MoonCell x2, Grenade x1"
+		},
+		{
+			"23": "Red Worm x2",
+			"49": "Balloon x2, Grenade x2",
+			"59": "Juclyote x2, MoonCell x2, Grenade x1",
+			"88": "Pudding x2, Grenade x2",
+			"155": "Pudding x4",
+			"169": "Pudding x4",
+			"177": "MoonCell x2, Pudding x2",
+			"209": "Juclyote x2, MoonCell x2, Grenade x1"
+		},
+		{
+			"23": "Red Worm x2",
+			"59": "Balloon x2, Grenade x2",
+			"86": "Red Worm x2",
+			"88": "Pudding x2, Grenade x2",
+			"155": "Pudding x4",
+			"169": "Pudding x4",
+			"177": "Procyote x1, Pudding x2",
+			"209": "Juclyote x2, MoonCell x2, Grenade x1"
+		},
+		{
+			"23": "Red Worm x2",
+			"59": "Procyote x1, Juclyote x2",
+			"80": "Red Worm x2",
+			"86": "Pudding x2, Grenade x2",
+			"155": "Pudding x4",
+			"169": "Pudding x4",
+			"177": "Procyote x1, Pudding x2",
+			"209": "Juclyote x2, MoonCell x2, Grenade x1"
+		},
+		{
+			"23": "Red Worm x2",
+			"80": "Red Worm x1, Procyote x1, Juclyote x1",
+			"86": "Red Worm x2",
+			"112": "MoonCell x2, Pudding x2",
+			"155": "Pudding x4",
+			"169": "Pudding x4",
+			"177": "Procyote x1, Pudding x2",
+			"209": "Juclyote x2, MoonCell x2, Grenade x1"
+		},
+		{
+			"23": "Red Worm x1, Procyote x1, Juclyote x1",
+			"80": "Red Worm x1, Procyote x1, Juclyote x1",
+			"86": "Red Worm x2",
+			"112": "MoonCell x2, Pudding x2",
+			"155": "Pudding x4",
+			"160": "Pudding x4",
+			"177": "Procyote x1, Pudding x2",
+			"209": "Juclyote x2, MoonCell x2, Grenade x1"
+		},
+		{
+			"23": "Red Worm x1, Procyote x1, Juclyote x1",
+			"80": "Red Worm x1, Procyote x1, Juclyote x1",
+			"86": "Red Worm x2",
+			"112": "MoonCell x2, Pudding x2",
+			"155": "Pudding x4",
+			"160": "Juclyote x1, Procyote x2",
+			"209": "Procyote x1, Pudding x2",
+			"215": "Procyote x1, Juclyote x2"
+		},
+		{
+			"23": "Red Worm x1, Procyote x1, Juclyote x1",
+			"80": "Red Worm x1, Procyote x1, Juclyote x1",
+			"86": "Red Worm x2",
+			"112": "MoonCell x2, Pudding x2",
+			"155": "Pudding x4",
+			"160": "Juclyote x1, Procyote x2",
+			"208": "Procyote x1, Pudding x2",
+			"215": "Procyote x1, Juclyote x2"
+		},
+		{
+			"46": "MoonCell x2, Pudding x2",
+			"80": "Red Worm x1, Procyote x1, Juclyote x1",
+			"86": "Red Worm x2",
+			"112": "MoonCell x2, Pudding x2",
+			"155": "Pudding x4",
+			"160": "Juclyote x1, Procyote x2",
+			"208": "Procyote x1, Pudding x2",
+			"215": "Procyote x1, Juclyote x2"
+		},
+		{
+			"46": "MoonCell x2, Pudding x2",
+			"80": "Red Worm x1, Procyote x1, Juclyote x1",
+			"86": "Red Worm x2",
+			"112": "MoonCell x2, Pudding x2",
+			"160": "Juclyote x1, Procyote x2",
+			"208": "Slime x1, Tofu x1, Pudding x1",
+			"215": "Red Worm x1, Grenade x3",
+			"237": "Procyote x1, Juclyote x2"
+		},
+		{
+			"46": "MoonCell x2, Pudding x2",
+			"80": "Red Worm x1, Procyote x1, Juclyote x1",
+			"90": "Red Worm x2",
+			"112": "MoonCell x2, Pudding x2",
+			"160": "Juclyote x1, Procyote x2",
+			"208": "Slime x1, Tofu x1, Pudding x1",
+			"215": "Red Worm x1, Grenade x3",
+			"237": "Procyote x1, Juclyote x2"
+		},
+		{
+			"46": "MoonCell x2, Pudding x2",
+			"79": "Red Worm x1, Procyote x1, Juclyote x1",
+			"90": "Red Worm x2",
+			"112": "MoonCell x2, Pudding x2",
+			"160": "Juclyote x1, Procyote x2",
+			"208": "Slime x1, Tofu x1, Pudding x1",
+			"215": "Red Worm x1, Grenade x3",
+			"237": "Procyote x1, Juclyote x2"
+		},
+		{
+			"46": "MoonCell x2, Pudding x2",
+			"79": "Red Worm x1, Procyote x1, Juclyote x1",
+			"90": "Red Worm x2",
+			"111": "MoonCell x2, Pudding x2",
+			"160": "Juclyote x1, Procyote x2",
+			"208": "Slime x1, Tofu x1, Pudding x1",
+			"215": "Red Worm x1, Grenade x3",
+			"237": "Procyote x1, Juclyote x2"
+		},
+		{
+			"46": "MoonCell x2, Pudding x2",
+			"79": "Red Worm x1, Procyote x1, Juclyote x1",
+			"90": "Red Worm x2",
+			"111": "MoonCell x2, Pudding x2",
+			"208": "Slime x1, Tofu x1, Pudding x1",
+			"215": "Slime x1, Tofu x1, Pudding x1",
+			"237": "Red Worm x1, Grenade x3",
+			"238": "Red Worm x2"
+		},
+		{
+			"46": "MoonCell x2, Pudding x2",
+			"79": "Red Worm x1, Procyote x1, Juclyote x1",
+			"90": "Red Worm x2",
+			"111": "Procyote x1, Pudding x2",
+			"168": "Juclyote x1, Procyote x2",
+			"208": "Slime x1, Tofu x1, Pudding x1",
+			"237": "Red Worm x1, Grenade x3",
+			"238": "Red Worm x2"
+		},
+		{
+			"46": "MoonCell x2, Pudding x2",
+			"79": "Red Worm x1, Procyote x1, Juclyote x1",
+			"90": "Red Worm x2",
+			"111": "Procyote x1, Pudding x2",
+			"168": "Juclyote x1, Procyote x2",
+			"198": "Slime x1, Tofu x1, Pudding x1",
+			"237": "Red Worm x1, Grenade x3",
+			"238": "Red Worm x2"
+		},
+		{
+			"71": "MoonCell x2, Pudding x2",
+			"79": "Red Worm x1, Procyote x1, Juclyote x1",
+			"90": "Pudding x2, Grenade x2",
+			"111": "Procyote x1, Pudding x2",
+			"168": "Juclyote x1, Procyote x2",
+			"198": "Slime x1, Tofu x1, Pudding x1",
+			"237": "Red Worm x1, Grenade x3",
+			"238": "Red Worm x2"
+		},
+		{
+			"14": "Red Worm x1, Procyote x1, Juclyote x1",
+			"71": "Procyote x1, Juclyote x2",
+			"79": "Pudding x2, Grenade x2",
+			"90": "Pudding x4",
+			"111": "Slime x1, Tofu x1, Pudding x1",
+			"168": "Juclyote x1, Procyote x2",
+			"198": "Procyote x1, Pudding x2",
+			"238": "Red Worm x2"
+		},
+		{
+			"14": "Red Worm x1, Procyote x1, Juclyote x1",
+			"71": "Procyote x1, Juclyote x2",
+			"79": "Pudding x2, Grenade x2",
+			"111": "Procyote x1, Pudding x2",
+			"168": "Juclyote x1, Procyote x2",
+			"198": "Slime x1, Tofu x1, Pudding x1",
+			"238": "Red Worm x1, Grenade x3",
+			"240": "Red Worm x2"
+		},
+		{
+			"14": "Red Worm x1, Procyote x1, Juclyote x1",
+			"71": "Juclyote x2, MoonCell x2, Grenade x1",
+			"111": "MoonCell x2, Pudding x2",
+			"152": "Pudding x4",
+			"168": "Juclyote x1, Procyote x2",
+			"198": "Slime x1, Tofu x1, Pudding x1",
+			"238": "Red Worm x1, Grenade x3",
+			"240": "Red Worm x2"
+		},
+		{
+			"14": "Red Worm x1, Procyote x1, Juclyote x1",
+			"71": "Juclyote x2, MoonCell x2, Grenade x1",
+			"110": "MoonCell x2, Pudding x2",
+			"152": "Pudding x4",
+			"168": "Juclyote x1, Procyote x2",
+			"198": "Slime x1, Tofu x1, Pudding x1",
+			"238": "Red Worm x1, Grenade x3",
+			"240": "Red Worm x2"
+		},
+		{
+			"14": "Red Worm x1, Procyote x1, Juclyote x1",
+			"71": "Juclyote x2, MoonCell x2, Grenade x1",
+			"110": "MoonCell x2, Pudding x2",
+			"142": "Procyote x1, Pudding x2",
+			"152": "Juclyote x1, Procyote x2",
+			"168": "Juclyote x1, Procyote x2",
+			"198": "Procyote x1, Pudding x2",
+			"240": "Red Worm x2"
+		},
+		{
+			"14": "Red Worm x1, Procyote x1, Juclyote x1",
+			"71": "Juclyote x2, MoonCell x2, Grenade x1",
+			"110": "MoonCell x2, Pudding x2",
+			"142": "Procyote x1, Pudding x2",
+			"152": "Juclyote x1, Procyote x2",
+			"174": "Juclyote x1, Procyote x2",
+			"198": "Procyote x1, Pudding x2",
+			"240": "Red Worm x2"
+		},
+		{
+			"14": "Red Worm x1, Procyote x1, Juclyote x1",
+			"71": "Juclyote x2, MoonCell x2, Grenade x1",
+			"107": "Pudding x2, Grenade x2",
+			"110": "Procyote x1, Pudding x2",
+			"142": "Slime x1, Tofu x1, Pudding x1",
+			"152": "Juclyote x1, Procyote x2",
+			"174": "Pudding x4",
+			"240": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"14": "Red Worm x1, Procyote x1, Juclyote x1",
+			"107": "Red Worm x2",
+			"110": "MoonCell x2, Pudding x2",
+			"142": "Procyote x1, Pudding x2",
+			"152": "Juclyote x1, Procyote x2",
+			"174": "Juclyote x1, Procyote x2",
+			"216": "Slime x1, Tofu x1, Pudding x1",
+			"240": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"107": "Pudding x2, Grenade x2",
+			"110": "Juclyote x2, MoonCell x2, Grenade x1",
+			"142": "MoonCell x2, Pudding x2",
+			"152": "Pudding x4",
+			"174": "Juclyote x1, Procyote x2",
+			"216": "Slime x1, Tofu x1, Pudding x1",
+			"240": "Slime x1, Tofu x1, Pudding x1",
+			"243": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"45": "Procyote x1, Pudding x2",
+			"107": "Red Worm x2",
+			"110": "MoonCell x2, Pudding x2",
+			"142": "Procyote x1, Pudding x2",
+			"152": "Juclyote x1, Procyote x2",
+			"174": "Juclyote x1, Procyote x2",
+			"216": "Slime x1, Tofu x1, Pudding x1",
+			"243": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"45": "Procyote x1, Pudding x2",
+			"107": "Red Worm x2",
+			"110": "MoonCell x2, Pudding x2",
+			"142": "Procyote x1, Pudding x2",
+			"149": "Juclyote x1, Procyote x2",
+			"174": "Juclyote x1, Procyote x2",
+			"216": "Slime x1, Tofu x1, Pudding x1",
+			"243": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"44": "Procyote x1, Pudding x2",
+			"45": "Juclyote x2, MoonCell x2, Grenade x1",
+			"107": "Pudding x2, Grenade x2",
+			"142": "Procyote x1, Pudding x2",
+			"149": "Juclyote x1, Procyote x2",
+			"174": "Juclyote x1, Procyote x2",
+			"216": "Slime x1, Tofu x1, Pudding x1",
+			"243": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"44": "Procyote x1, Pudding x2",
+			"45": "Juclyote x2, MoonCell x2, Grenade x1",
+			"83": "Pudding x2, Grenade x2",
+			"107": "Pudding x4",
+			"149": "Juclyote x1, Procyote x2",
+			"174": "Juclyote x1, Procyote x2",
+			"216": "Slime x1, Tofu x1, Pudding x1",
+			"243": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"44": "Procyote x1, Pudding x2",
+			"45": "Juclyote x2, MoonCell x2, Grenade x1",
+			"83": "Pudding x2, Grenade x2",
+			"107": "Pudding x4",
+			"149": "Juclyote x1, Procyote x2",
+			"173": "Juclyote x1, Procyote x2",
+			"216": "Slime x1, Tofu x1, Pudding x1",
+			"243": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"44": "Procyote x1, Pudding x2",
+			"45": "Juclyote x2, MoonCell x2, Grenade x1",
+			"83": "Pudding x2, Grenade x2",
+			"105": "Pudding x4",
+			"149": "Juclyote x1, Procyote x2",
+			"173": "Juclyote x1, Procyote x2",
+			"216": "Slime x1, Tofu x1, Pudding x1",
+			"243": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"25": "Red Worm x1, Grenade x3",
+			"44": "Juclyote x2, MoonCell x2, Grenade x1",
+			"45": "MoonCell x2, Pudding x2",
+			"83": "Pudding x4",
+			"105": "Juclyote x1, Procyote x2",
+			"149": "Juclyote x1, Procyote x2",
+			"173": "Juclyote x1, Procyote x2",
+			"243": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"25": "Red Worm x1, Grenade x3",
+			"44": "Juclyote x2, MoonCell x2, Grenade x1",
+			"45": "MoonCell x2, Pudding x2",
+			"83": "Pudding x4",
+			"105": "Juclyote x1, Procyote x2",
+			"149": "Juclyote x1, Procyote x2",
+			"173": "Juclyote x1, Procyote x2",
+			"211": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"25": "Red Worm x1, Grenade x3",
+			"44": "Juclyote x2, MoonCell x2, Grenade x1",
+			"83": "Pudding x2, Grenade x2",
+			"105": "Pudding x4",
+			"149": "Juclyote x1, Procyote x2",
+			"154": "Juclyote x1, Procyote x2",
+			"173": "Juclyote x1, Procyote x2",
+			"211": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"25": "Red Worm x1, Grenade x3",
+			"44": "Juclyote x1, Procyote x2",
+			"83": "Pudding x2, Grenade x2",
+			"105": "Pudding x4",
+			"154": "Juclyote x1, Procyote x2",
+			"173": "Juclyote x1, Procyote x2",
+			"185": "Slime x1, Tofu x1, Pudding x1",
+			"211": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"25": "Red Worm x1, Grenade x3",
+			"83": "Red Worm x2",
+			"105": "Pudding x2, Grenade x2",
+			"108": "Juclyote x1, Procyote x2",
+			"154": "Juclyote x1, Procyote x2",
+			"173": "Juclyote x1, Procyote x2",
+			"185": "Slime x1, Tofu x1, Pudding x1",
+			"211": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"25": "Red Worm x1, Grenade x3",
+			"105": "Red Worm x2",
+			"108": "Pudding x2, Grenade x2",
+			"154": "Juclyote x1, Procyote x2",
+			"173": "Juclyote x1, Procyote x2",
+			"185": "Balloon x2, Grenade x2",
+			"211": "Slime x1, Tofu x1, Pudding x1",
+			"248": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"25": "Red Worm x1, Grenade x3",
+			"105": "Red Worm x2",
+			"108": "Pudding x4",
+			"138": "Slime x1, Tofu x1, Pudding x1",
+			"154": "Juclyote x1, Procyote x2",
+			"185": "Balloon x2, Grenade x2",
+			"211": "Slime x1, Tofu x1, Pudding x1",
+			"248": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"25": "Red Worm x1, Grenade x3",
+			"75": "Juclyote x1, Procyote x2",
+			"108": "Pudding x4",
+			"138": "Slime x1, Tofu x1, Pudding x1",
+			"154": "Juclyote x1, Procyote x2",
+			"185": "Balloon x2, Grenade x2",
+			"211": "Slime x1, Tofu x1, Pudding x1",
+			"248": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"16": "Red Worm x1, Grenade x3",
+			"75": "Juclyote x1, Procyote x2",
+			"108": "Pudding x4",
+			"138": "Slime x1, Tofu x1, Pudding x1",
+			"154": "Juclyote x1, Procyote x2",
+			"185": "Balloon x2, Grenade x2",
+			"211": "Slime x1, Tofu x1, Pudding x1",
+			"248": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"16": "Red Worm x1, Grenade x3",
+			"75": "Juclyote x1, Procyote x2",
+			"108": "Pudding x4",
+			"138": "Slime x1, Tofu x1, Pudding x1",
+			"154": "Juclyote x1, Procyote x2",
+			"185": "Balloon x2, Grenade x2",
+			"196": "Slime x1, Tofu x1, Pudding x1",
+			"248": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"11": "Red Worm x1, Grenade x3",
+			"16": "Red Worm x2",
+			"75": "Procyote x1, Pudding x2",
+			"108": "Juclyote x1, Procyote x2",
+			"138": "Balloon x2, Grenade x2",
+			"185": "Balloon x2, Grenade x2",
+			"196": "Slime x1, Tofu x1, Pudding x1",
+			"248": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"11": "Red Worm x1, Grenade x3",
+			"16": "Red Worm x2",
+			"75": "Procyote x1, Pudding x2",
+			"108": "Juclyote x1, Procyote x2",
+			"138": "Balloon x2, Grenade x2",
+			"196": "Balloon x2, Grenade x2",
+			"204": "Slime x1, Tofu x1, Pudding x1",
+			"248": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"11": "Red Worm x1, Grenade x3",
+			"16": "Red Worm x2",
+			"75": "Procyote x1, Pudding x2",
+			"138": "Slime x1, Tofu x1, Pudding x1",
+			"189": "Balloon x2, Grenade x2",
+			"196": "Balloon x2, Grenade x2",
+			"204": "Slime x1, Tofu x1, Pudding x1",
+			"248": "Red Worm x1, Grenade x3"
+		},
+		{
+			"5": "Procyote x1, Pudding x2",
+			"11": "Red Worm x1, Procyote x1, Juclyote x1",
+			"16": "Red Worm x1, Grenade x3",
+			"75": "Slime x1, Tofu x1, Pudding x1",
+			"138": "Balloon x2, Grenade x2",
+			"189": "Balloon x2, Grenade x2",
+			"196": "Balloon x2, Grenade x2",
+			"204": "Procyote x1, Pudding x2"
+		},
+		{
+			"5": "Procyote x1, Pudding x2",
+			"11": "Red Worm x1, Procyote x1, Juclyote x1",
+			"16": "Red Worm x1, Grenade x3",
+			"75": "Slime x1, Tofu x1, Pudding x1",
+			"171": "Juclyote x1, Procyote x2",
+			"189": "Balloon x2, Grenade x2",
+			"196": "Balloon x2, Grenade x2",
+			"204": "Procyote x1, Pudding x2"
+		},
+		{
+			"5": "Procyote x1, Pudding x2",
+			"11": "Red Worm x1, Procyote x1, Juclyote x1",
+			"16": "Red Worm x1, Grenade x3",
+			"95": "Juclyote x1, Procyote x2",
+			"171": "Juclyote x1, Procyote x2",
+			"189": "Balloon x2, Grenade x2",
+			"196": "Balloon x2, Grenade x2",
+			"204": "Procyote x1, Pudding x2"
+		},
+		{
+			"5": "Slime x1, Tofu x1, Pudding x1",
+			"11": "Red Worm x1, Procyote x1, Juclyote x1",
+			"95": "Pudding x4",
+			"171": "Juclyote x1, Procyote x2",
+			"176": "Balloon x2, Grenade x2",
+			"189": "Balloon x2, Grenade x2",
+			"196": "Balloon x2, Grenade x2",
+			"204": "Procyote x1, Pudding x2"
+		},
+		{
+			"5": "Slime x1, Tofu x1, Pudding x1",
+			"11": "Red Worm x1, Procyote x1, Juclyote x1",
+			"95": "Pudding x4",
+			"171": "Juclyote x1, Procyote x2",
+			"176": "Balloon x2, Grenade x2",
+			"189": "Procyote x1, Juclyote x2",
+			"204": "Balloon x2, Grenade x2",
+			"219": "Red Worm x1, Grenade x3"
+		},
+		{
+			"5": "Slime x1, Tofu x1, Pudding x1",
+			"42": "Red Worm x1, Procyote x1, Juclyote x1",
+			"95": "Pudding x4",
+			"171": "Juclyote x1, Procyote x2",
+			"176": "Balloon x2, Grenade x2",
+			"189": "Procyote x1, Juclyote x2",
+			"204": "Balloon x2, Grenade x2",
+			"219": "Red Worm x1, Grenade x3"
+		},
+		{
+			"4": "Slime x1, Tofu x1, Pudding x1",
+			"5": "MoonCell x2, Pudding x2",
+			"42": "Red Worm x1, Grenade x3",
+			"95": "Juclyote x1, Procyote x2",
+			"171": "Juclyote x1, Procyote x2",
+			"176": "Procyote x1, Juclyote x2",
+			"189": "Balloon x2, Grenade x2",
+			"219": "Red Worm x1, Grenade x3"
+		},
+		{
+			"4": "Slime x1, Tofu x1, Pudding x1",
+			"5": "MoonCell x2, Pudding x2",
+			"42": "Red Worm x1, Grenade x3",
+			"95": "Juclyote x1, Procyote x2",
+			"122": "Procyote x1, Juclyote x2",
+			"171": "Red Worm x1, Procyote x1, Juclyote x1",
+			"176": "Balloon x2, Grenade x2",
+			"219": "Red Worm x1, Grenade x3"
+		},
+		{
+			"4": "Slime x1, Tofu x1, Pudding x1",
+			"42": "Red Worm x1, Procyote x1, Juclyote x1",
+			"95": "Pudding x4",
+			"122": "Slime x1, Tofu x1, Pudding x1",
+			"165": "Red Worm x1, Procyote x1, Juclyote x1",
+			"171": "Red Worm x1, Procyote x1, Juclyote x1",
+			"176": "Balloon x2, Grenade x2",
+			"219": "Red Worm x1, Grenade x3"
+		},
+		{
+			"4": "Slime x1, Tofu x1, Pudding x1",
+			"42": "Red Worm x1, Procyote x1, Juclyote x1",
+			"95": "Pudding x4",
+			"122": "Slime x1, Tofu x1, Pudding x1",
+			"165": "Red Worm x1, Procyote x1, Juclyote x1",
+			"170": "Red Worm x1, Procyote x1, Juclyote x1",
+			"176": "Balloon x2, Grenade x2",
+			"219": "Red Worm x1, Grenade x3"
+		},
+		{
+			"4": "Slime x1, Tofu x1, Pudding x1",
+			"42": "Red Worm x1, Procyote x1, Juclyote x1",
+			"122": "Procyote x1, Pudding x2",
+			"165": "Juclyote x1, Procyote x2",
+			"170": "Red Worm x1, Procyote x1, Juclyote x1",
+			"176": "Procyote x1, Juclyote x2",
+			"202": "Balloon x2, Grenade x2",
+			"219": "Red Worm x1, Grenade x3"
+		},
+		{
+			"4": "Slime x1, Tofu x1, Pudding x1",
+			"42": "Red Worm x1, Procyote x1, Juclyote x1",
+			"122": "Procyote x1, Pudding x2",
+			"165": "Juclyote x1, Procyote x2",
+			"170": "Red Worm x1, Procyote x1, Juclyote x1",
+			"202": "Procyote x1, Juclyote x2",
+			"219": "Balloon x2, Grenade x2",
+			"234": "Red Worm x1, Grenade x3"
+		},
+		{
+			"4": "Slime x1, Tofu x1, Pudding x1",
+			"9": "Red Worm x1, Procyote x1, Juclyote x1",
+			"42": "Red Worm x1, Grenade x3",
+			"122": "Balloon x2, Grenade x2",
+			"165": "Red Worm x1, Procyote x1, Juclyote x1",
+			"170": "Red Worm x1, Procyote x1, Juclyote x1",
+			"202": "Balloon x2, Grenade x2",
+			"234": "Red Worm x1, Grenade x3"
+		},
+		{
+			"4": "Slime x1, Tofu x1, Pudding x1",
+			"9": "Red Worm x1, Procyote x1, Juclyote x1",
+			"41": "Red Worm x1, Grenade x3",
+			"122": "Balloon x2, Grenade x2",
+			"165": "Red Worm x1, Procyote x1, Juclyote x1",
+			"170": "Red Worm x1, Procyote x1, Juclyote x1",
+			"202": "Balloon x2, Grenade x2",
+			"234": "Red Worm x1, Grenade x3"
+		},
+		{
+			"9": "Slime x1, Tofu x1, Pudding x1",
+			"41": "Red Worm x1, Procyote x1, Juclyote x1",
+			"122": "Slime x1, Tofu x1, Pudding x1",
+			"165": "Juclyote x1, Procyote x2",
+			"170": "Red Worm x1, Procyote x1, Juclyote x1",
+			"187": "Procyote x1, Juclyote x2",
+			"202": "Balloon x2, Grenade x2",
+			"234": "Red Worm x1, Grenade x3"
+		},
+		{
+			"9": "Slime x1, Tofu x1, Pudding x1",
+			"21": "Red Worm x1, Procyote x1, Juclyote x1",
+			"41": "Slime x1, Tofu x1, Pudding x1",
+			"165": "Juclyote x1, Procyote x2",
+			"170": "Red Worm x1, Procyote x1, Juclyote x1",
+			"187": "Procyote x1, Juclyote x2",
+			"202": "Balloon x2, Grenade x2",
+			"234": "Red Worm x1, Grenade x3"
+		},
+		{
+			"9": "Slime x1, Tofu x1, Pudding x1",
+			"21": "Red Worm x1, Procyote x1, Juclyote x1",
+			"41": "Slime x1, Tofu x1, Pudding x1",
+			"170": "Juclyote x1, Procyote x2",
+			"187": "Procyote x1, Juclyote x2",
+			"202": "Procyote x1, Juclyote x2",
+			"234": "Balloon x2, Grenade x2",
+			"252": "Procyote x1, Pudding x2"
+		},
+		{
+			"9": "Slime x1, Tofu x1, Pudding x1",
+			"21": "Red Worm x1, Procyote x1, Juclyote x1",
+			"41": "Slime x1, Tofu x1, Pudding x1",
+			"145": "Juclyote x1, Procyote x2",
+			"187": "Procyote x1, Juclyote x2",
+			"202": "Procyote x1, Juclyote x2",
+			"234": "Balloon x2, Grenade x2",
+			"252": "Procyote x1, Pudding x2"
+		},
+		{
+			"9": "Slime x1, Tofu x1, Pudding x1",
+			"21": "Red Worm x1, Procyote x1, Juclyote x1",
+			"41": "Slime x1, Tofu x1, Pudding x1",
+			"145": "Juclyote x1, Procyote x2",
+			"172": "Red Worm x1, Procyote x1, Juclyote x1",
+			"187": "Procyote x1, Juclyote x2",
+			"234": "Balloon x2, Grenade x2",
+			"252": "Procyote x1, Pudding x2"
+		},
+		{
+			"9": "Slime x1, Tofu x1, Pudding x1",
+			"21": "Red Worm x1, Procyote x1, Juclyote x1",
+			"41": "Slime x1, Tofu x1, Pudding x1",
+			"145": "Juclyote x1, Procyote x2",
+			"172": "Red Worm x1, Procyote x1, Juclyote x1",
+			"187": "Procyote x1, Juclyote x2",
+			"233": "Balloon x2, Grenade x2",
+			"252": "Procyote x1, Pudding x2"
+		},
+		{
+			"21": "Slime x1, Tofu x1, Pudding x1",
+			"41": "Red Worm x1, Procyote x1, Juclyote x1",
+			"63": "Slime x1, Tofu x1, Pudding x1",
+			"145": "Juclyote x1, Procyote x2",
+			"172": "Red Worm x1, Procyote x1, Juclyote x1",
+			"187": "Juclyote x2, MoonCell x2, Grenade x1",
+			"233": "Balloon x2, Grenade x2",
+			"252": "Procyote x1, Pudding x2"
+		},
+		{
+			"21": "Slime x1, Tofu x1, Pudding x1",
+			"40": "Red Worm x1, Procyote x1, Juclyote x1",
+			"63": "Slime x1, Tofu x1, Pudding x1",
+			"145": "Juclyote x1, Procyote x2",
+			"172": "Red Worm x1, Procyote x1, Juclyote x1",
+			"187": "Juclyote x2, MoonCell x2, Grenade x1",
+			"233": "Balloon x2, Grenade x2",
+			"252": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"21": "Slime x1, Tofu x1, Pudding x1",
+			"40": "Red Worm x1, Grenade x3",
+			"63": "Slime x1, Tofu x1, Pudding x1",
+			"145": "Juclyote x1, Procyote x2",
+			"172": "Red Worm x1, Procyote x1, Juclyote x1",
+			"191": "Juclyote x2, MoonCell x2, Grenade x1",
+			"233": "Procyote x1, Pudding x2",
+			"252": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"40": "Slime x1, Tofu x1, Pudding x1",
+			"63": "Procyote x1, Pudding x2",
+			"104": "Juclyote x1, Procyote x2",
+			"145": "Juclyote x1, Procyote x2",
+			"172": "Red Worm x2",
+			"191": "Juclyote x2, MoonCell x2, Grenade x1",
+			"233": "Procyote x1, Pudding x2",
+			"252": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"18": "Balloon x2, Grenade x2",
+			"40": "Red Worm x1, Grenade x3",
+			"63": "Slime x1, Tofu x1, Pudding x1",
+			"104": "Juclyote x1, Procyote x2",
+			"145": "Red Worm x2",
+			"172": "Red Worm x2",
+			"191": "Procyote x1, Juclyote x2",
+			"233": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"18": "Balloon x2, Grenade x2",
+			"40": "Red Worm x1, Grenade x3",
+			"63": "Slime x1, Tofu x1, Pudding x1",
+			"104": "Juclyote x1, Procyote x2",
+			"172": "Red Worm x2",
+			"191": "Juclyote x2, MoonCell x2, Grenade x1",
+			"214": "Procyote x1, Pudding x2",
+			"233": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"18": "Balloon x2, Grenade x2",
+			"40": "Red Worm x1, Grenade x3",
+			"63": "Slime x1, Tofu x1, Pudding x1",
+			"104": "Juclyote x1, Procyote x2",
+			"184": "Juclyote x2, MoonCell x2, Grenade x1",
+			"191": "Juclyote x2, MoonCell x2, Grenade x1",
+			"214": "Procyote x1, Pudding x2",
+			"233": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"18": "Balloon x2, Grenade x2",
+			"40": "Red Worm x1, Grenade x3",
+			"63": "Slime x1, Tofu x1, Pudding x1",
+			"104": "Juclyote x1, Procyote x2",
+			"106": "Red Worm x2",
+			"184": "Juclyote x2, MoonCell x2, Grenade x1",
+			"191": "Procyote x1, Juclyote x2",
+			"214": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"18": "Balloon x2, Grenade x2",
+			"40": "Red Worm x1, Grenade x3",
+			"104": "Juclyote x1, Procyote x2",
+			"106": "Juclyote x1, Procyote x2",
+			"156": "Red Worm x2",
+			"184": "Juclyote x2, MoonCell x2, Grenade x1",
+			"191": "Procyote x1, Juclyote x2",
+			"214": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"18": "Balloon x2, Grenade x2",
+			"19": "Red Worm x1, Grenade x3",
+			"104": "Juclyote x1, Procyote x2",
+			"106": "Juclyote x1, Procyote x2",
+			"156": "Red Worm x2",
+			"184": "Juclyote x2, MoonCell x2, Grenade x1",
+			"191": "Procyote x1, Juclyote x2",
+			"214": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"18": "Balloon x2, Grenade x2",
+			"19": "Red Worm x1, Grenade x3",
+			"104": "Juclyote x1, Procyote x2",
+			"106": "Juclyote x1, Procyote x2",
+			"156": "Red Worm x2",
+			"184": "Juclyote x2, MoonCell x2, Grenade x1",
+			"214": "Procyote x1, Pudding x2",
+			"221": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"18": "Balloon x2, Grenade x2",
+			"19": "Red Worm x1, Grenade x3",
+			"103": "Juclyote x1, Procyote x2",
+			"106": "Juclyote x1, Procyote x2",
+			"156": "Red Worm x2",
+			"184": "Juclyote x2, MoonCell x2, Grenade x1",
+			"214": "Procyote x1, Pudding x2",
+			"221": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"19": "Balloon x2, Grenade x2",
+			"103": "Pudding x4",
+			"106": "Juclyote x1, Procyote x2",
+			"135": "Balloon x2, Grenade x2",
+			"156": "Red Worm x2",
+			"184": "Juclyote x2, MoonCell x2, Grenade x1",
+			"214": "Procyote x1, Pudding x2",
+			"221": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"19": "Balloon x2, Grenade x2",
+			"103": "Pudding x4",
+			"106": "Juclyote x1, Procyote x2",
+			"109": "Juclyote x1, Procyote x2",
+			"135": "Juclyote x2, MoonCell x2, Grenade x1",
+			"156": "Red Worm x2",
+			"184": "Procyote x1, Juclyote x2",
+			"221": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"19": "Balloon x2, Grenade x2",
+			"103": "Pudding x4",
+			"106": "Juclyote x1, Procyote x2",
+			"109": "Red Worm x1, Procyote x1, Juclyote x1",
+			"135": "Juclyote x2, MoonCell x2, Grenade x1",
+			"156": "Red Worm x2",
+			"199": "Procyote x1, Juclyote x2",
+			"221": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"19": "Balloon x2, Grenade x2",
+			"103": "Pudding x4",
+			"109": "Juclyote x1, Procyote x2",
+			"135": "Procyote x1, Juclyote x2",
+			"151": "Red Worm x2",
+			"156": "Red Worm x2",
+			"199": "Procyote x1, Juclyote x2",
+			"221": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"6": "Balloon x2, Grenade x2",
+			"19": "Red Worm x1, Grenade x3",
+			"103": "Juclyote x1, Procyote x2",
+			"109": "Red Worm x1, Procyote x1, Juclyote x1",
+			"135": "Juclyote x2, MoonCell x2, Grenade x1",
+			"151": "Red Worm x2",
+			"199": "Procyote x1, Juclyote x2",
+			"221": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"6": "Balloon x2, Grenade x2",
+			"38": "Red Worm x1, Grenade x3",
+			"103": "Juclyote x1, Procyote x2",
+			"109": "Red Worm x1, Procyote x1, Juclyote x1",
+			"135": "Juclyote x2, MoonCell x2, Grenade x1",
+			"151": "Red Worm x2",
+			"199": "Procyote x1, Juclyote x2",
+			"221": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"6": "Balloon x2, Grenade x2",
+			"38": "Red Worm x1, Grenade x3",
+			"70": "Balloon x2, Grenade x2",
+			"103": "Red Worm x1, Procyote x1, Juclyote x1",
+			"109": "Red Worm x2",
+			"135": "Juclyote x1, Procyote x2",
+			"151": "Red Worm x2",
+			"199": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"6": "Balloon x2, Grenade x2",
+			"38": "Red Worm x1, Grenade x3",
+			"70": "Balloon x2, Grenade x2",
+			"109": "Red Worm x1, Procyote x1, Juclyote x1",
+			"135": "Juclyote x1, Procyote x2",
+			"151": "Red Worm x2",
+			"199": "Juclyote x2, MoonCell x2, Grenade x1",
+			"244": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"6": "Balloon x2, Grenade x2",
+			"38": "Red Worm x1, Grenade x3",
+			"70": "Balloon x2, Grenade x2",
+			"109": "Red Worm x1, Procyote x1, Juclyote x1",
+			"134": "Juclyote x1, Procyote x2",
+			"151": "Red Worm x2",
+			"199": "Juclyote x2, MoonCell x2, Grenade x1",
+			"244": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"6": "Balloon x2, Grenade x2",
+			"38": "Red Worm x1, Grenade x3",
+			"70": "Balloon x2, Grenade x2",
+			"134": "Procyote x1, Juclyote x2",
+			"151": "Red Worm x2",
+			"199": "Juclyote x1, Procyote x2",
+			"242": "Procyote x1, Juclyote x2",
+			"244": "Slime x1, Tofu x1, Pudding x1"
+		},
+		{
+			"6": "Balloon x2, Grenade x2",
+			"38": "Red Worm x1, Grenade x3",
+			"70": "Balloon x2, Grenade x2",
+			"134": "Procyote x1, Juclyote x2",
+			"151": "Red Worm x2",
+			"207": "Juclyote x1, Procyote x2",
+			"242": "Procyote x1, Juclyote x2",
+			"244": "Balloon x2, Grenade x2"
+		},
+		{
+			"6": "Balloon x2, Grenade x2",
+			"38": "Slime x1, Tofu x1, Pudding x1",
+			"70": "Balloon x2, Grenade x2",
+			"84": "Red Worm x1, Procyote x1, Juclyote x1",
+			"134": "Juclyote x1, Procyote x2",
+			"207": "Juclyote x1, Procyote x2",
+			"242": "Procyote x1, Juclyote x2",
+			"244": "Balloon x2, Grenade x2"
+		},
+		{
+			"38": "Balloon x2, Grenade x2",
+			"70": "Slime x1, Tofu x1, Pudding x1",
+			"84": "Juclyote x1, Procyote x2",
+			"134": "Procyote x1, Juclyote x2",
+			"139": "Juclyote x1, Procyote x2",
+			"207": "Red Worm x2",
+			"242": "Procyote x1, Juclyote x2",
+			"244": "Balloon x2, Grenade x2"
+		},
+		{
+			"70": "Balloon x2, Grenade x2",
+			"84": "Juclyote x1, Procyote x2",
+			"134": "Balloon x2, Grenade x2",
+			"139": "Procyote x1, Juclyote x2",
+			"200": "Juclyote x1, Procyote x2",
+			"207": "Red Worm x2",
+			"242": "Procyote x1, Juclyote x2",
+			"244": "Balloon x2, Grenade x2"
+		},
+		{
+			"22": "Procyote x1, Pudding x2",
+			"84": "Juclyote x1, Procyote x2",
+			"134": "Balloon x2, Grenade x2",
+			"139": "Procyote x1, Juclyote x2",
+			"200": "Juclyote x1, Procyote x2",
+			"207": "MoonCell x2, Pudding x2",
+			"242": "Procyote x1, Juclyote x2",
+			"244": "Balloon x2, Grenade x2"
+		},
+		{
+			"22": "Procyote x1, Pudding x2",
+			"84": "Juclyote x1, Procyote x2",
+			"101": "Juclyote x1, Procyote x2",
+			"134": "Procyote x1, Juclyote x2",
+			"139": "Red Worm x2",
+			"200": "MoonCell x2, Pudding x2",
+			"207": "Juclyote x2, MoonCell x2, Grenade x1",
+			"242": "Balloon x2, Grenade x2"
+		},
+		{
+			"22": "Procyote x1, Pudding x2",
+			"84": "Juclyote x1, Procyote x2",
+			"101": "Juclyote x1, Procyote x2",
+			"133": "Procyote x1, Juclyote x2",
+			"139": "Red Worm x2",
+			"200": "MoonCell x2, Pudding x2",
+			"207": "Juclyote x2, MoonCell x2, Grenade x1",
+			"242": "Balloon x2, Grenade x2"
+		},
+		{
+			"22": "Procyote x1, Pudding x2",
+			"84": "Juclyote x1, Procyote x2",
+			"101": "Juclyote x1, Procyote x2",
+			"133": "Procyote x1, Juclyote x2",
+			"139": "MoonCell x2, Pudding x2",
+			"200": "MoonCell x2, Pudding x2",
+			"201": "Juclyote x2, MoonCell x2, Grenade x1",
+			"207": "Balloon x2, Grenade x2"
+		},
+		{
+			"22": "Procyote x1, Pudding x2",
+			"84": "Juclyote x1, Procyote x2",
+			"101": "Juclyote x1, Procyote x2",
+			"133": "Juclyote x2, MoonCell x2, Grenade x1",
+			"139": "MoonCell x2, Pudding x2",
+			"197": "MoonCell x2, Pudding x2",
+			"200": "Juclyote x2, MoonCell x2, Grenade x1",
+			"201": "Balloon x2, Grenade x2"
+		},
+		{
+			"22": "Procyote x1, Pudding x2",
+			"101": "Juclyote x1, Procyote x2",
+			"133": "Balloon x2, Grenade x2",
+			"139": "Juclyote x2, MoonCell x2, Grenade x1",
+			"175": "Pudding x2, Grenade x2",
+			"197": "MoonCell x2, Pudding x2",
+			"200": "Juclyote x2, MoonCell x2, Grenade x1",
+			"201": "Balloon x2, Grenade x2"
+		},
+		{
+			"22": "Procyote x1, Pudding x2",
+			"74": "Slime x1, Tofu x1, Pudding x1",
+			"101": "Juclyote x1, Procyote x2",
+			"133": "Juclyote x2, MoonCell x2, Grenade x1",
+			"175": "Pudding x2, Grenade x2",
+			"197": "MoonCell x2, Pudding x2",
+			"200": "Juclyote x2, MoonCell x2, Grenade x1",
+			"201": "Balloon x2, Grenade x2"
+		},
+		{
+			"22": "Procyote x1, Pudding x2",
+			"36": "Slime x1, Tofu x1, Pudding x1",
+			"74": "Balloon x2, Grenade x2",
+			"101": "Red Worm x2",
+			"133": "MoonCell x2, Pudding x2",
+			"175": "Pudding x2, Grenade x2",
+			"197": "Juclyote x2, MoonCell x2, Grenade x1",
+			"201": "Balloon x2, Grenade x2"
+		},
+		{
+			"36": "Procyote x1, Pudding x2",
+			"74": "Slime x1, Tofu x1, Pudding x1",
+			"101": "Juclyote x1, Procyote x2",
+			"128": "Juclyote x2, MoonCell x2, Grenade x1",
+			"133": "MoonCell x2, Pudding x2",
+			"175": "Pudding x2, Grenade x2",
+			"197": "Juclyote x1, Procyote x2",
+			"201": "Balloon x2, Grenade x2"
+		},
+		{
+			"36": "Procyote x1, Pudding x2",
+			"74": "Slime x1, Tofu x1, Pudding x1",
+			"100": "Juclyote x1, Procyote x2",
+			"128": "Juclyote x2, MoonCell x2, Grenade x1",
+			"133": "MoonCell x2, Pudding x2",
+			"175": "Pudding x2, Grenade x2",
+			"197": "Juclyote x1, Procyote x2",
+			"201": "Balloon x2, Grenade x2"
+		},
+		{
+			"36": "Procyote x1, Pudding x2",
+			"74": "Slime x1, Tofu x1, Pudding x1",
+			"100": "Juclyote x1, Procyote x2",
+			"128": "Juclyote x2, MoonCell x2, Grenade x1",
+			"132": "MoonCell x2, Pudding x2",
+			"175": "Pudding x2, Grenade x2",
+			"197": "Juclyote x1, Procyote x2",
+			"201": "Balloon x2, Grenade x2"
+		},
+		{
+			"36": "Procyote x1, Pudding x2",
+			"74": "Slime x1, Tofu x1, Pudding x1",
+			"100": "Red Worm x1, Procyote x1, Juclyote x1",
+			"128": "Juclyote x2, MoonCell x2, Grenade x1",
+			"132": "MoonCell x2, Pudding x2",
+			"164": "Pudding x2, Grenade x2",
+			"175": "Red Worm x2",
+			"197": "Balloon x2, Grenade x2"
+		},
+		{
+			"36": "Procyote x1, Pudding x2",
+			"55": "Slime x1, Tofu x1, Pudding x1",
+			"74": "Procyote x1, Juclyote x2",
+			"100": "Red Worm x2",
+			"128": "MoonCell x2, Pudding x2",
+			"132": "MoonCell x2, Pudding x2",
+			"164": "Red Worm x2",
+			"175": "Juclyote x1, Procyote x2"
+		},
+		{
+			"36": "Procyote x1, Pudding x2",
+			"55": "Slime x1, Tofu x1, Pudding x1",
+			"74": "Procyote x1, Juclyote x2",
+			"100": "Red Worm x2",
+			"128": "MoonCell x2, Pudding x2",
+			"132": "MoonCell x2, Pudding x2",
+			"164": "Red Worm x2",
+			"228": "Balloon x2, Grenade x2"
+		},
+		{
+			"3": "Procyote x1, Juclyote x2",
+			"36": "Slime x1, Tofu x1, Pudding x1",
+			"55": "Procyote x1, Juclyote x2",
+			"100": "Red Worm x2",
+			"128": "MoonCell x2, Pudding x2",
+			"132": "MoonCell x2, Pudding x2",
+			"164": "Red Worm x2",
+			"228": "Balloon x2, Grenade x2"
+		},
+		{
+			"3": "Procyote x1, Juclyote x2",
+			"55": "Slime x1, Tofu x1, Pudding x1",
+			"100": "Red Worm x1, Procyote x1, Juclyote x1",
+			"128": "Juclyote x2, MoonCell x2, Grenade x1",
+			"132": "MoonCell x2, Pudding x2",
+			"164": "Pudding x2, Grenade x2",
+			"192": "Juclyote x1, Procyote x2",
+			"228": "Balloon x2, Grenade x2"
+		},
+		{
+			"3": "Juclyote x2, MoonCell x2, Grenade x1",
+			"55": "Slime x1, Tofu x1, Pudding x1",
+			"100": "Red Worm x1, Procyote x1, Juclyote x1",
+			"132": "Juclyote x2, MoonCell x2, Grenade x1",
+			"164": "Pudding x2, Grenade x2",
+			"190": "MoonCell x2, Pudding x2",
+			"192": "Red Worm x2",
+			"228": "Balloon x2, Grenade x2"
+		},
+		{
+			"3": "Juclyote x2, MoonCell x2, Grenade x1",
+			"55": "Slime x1, Tofu x1, Pudding x1",
+			"131": "Procyote x1, Juclyote x2",
+			"132": "Juclyote x2, MoonCell x2, Grenade x1",
+			"164": "Pudding x2, Grenade x2",
+			"190": "MoonCell x2, Pudding x2",
+			"192": "Red Worm x2",
+			"228": "Balloon x2, Grenade x2"
+		},
+		{
+			"3": "Juclyote x2, MoonCell x2, Grenade x1",
+			"55": "Slime x1, Tofu x1, Pudding x1",
+			"131": "Procyote x1, Juclyote x2",
+			"137": "Juclyote x2, MoonCell x2, Grenade x1",
+			"164": "Pudding x2, Grenade x2",
+			"190": "MoonCell x2, Pudding x2",
+			"192": "MoonCell x2, Pudding x2",
+			"228": "Procyote x1, Pudding x2"
+		},
+		{
+			"3": "Juclyote x2, MoonCell x2, Grenade x1",
+			"55": "Balloon x2, Grenade x2",
+			"131": "Procyote x1, Juclyote x2",
+			"137": "Juclyote x2, MoonCell x2, Grenade x1",
+			"163": "Pudding x2, Grenade x2",
+			"190": "MoonCell x2, Pudding x2",
+			"192": "MoonCell x2, Pudding x2",
+			"228": "Procyote x1, Pudding x2"
+		},
+		{
+			"3": "Juclyote x2, MoonCell x2, Grenade x1",
+			"131": "Balloon x2, Grenade x2",
+			"137": "Procyote x1, Juclyote x2",
+			"150": "Red Worm x2",
+			"163": "Pudding x2, Grenade x2",
+			"190": "MoonCell x2, Pudding x2",
+			"192": "MoonCell x2, Pudding x2",
+			"228": "Procyote x1, Pudding x2"
+		},
+		{
+			"3": "Juclyote x2, MoonCell x2, Grenade x1",
+			"131": "Balloon x2, Grenade x2",
+			"137": "Procyote x1, Juclyote x2",
+			"150": "Red Worm x2",
+			"163": "Pudding x2, Grenade x2",
+			"190": "Procyote x1, Pudding x2",
+			"192": "MoonCell x2, Pudding x2",
+			"227": "Procyote x1, Pudding x2"
+		},
+		{
+			"131": "Juclyote x2, MoonCell x2, Grenade x1",
+			"137": "Balloon x2, Grenade x2",
+			"150": "Red Worm x1, Procyote x1, Juclyote x1",
+			"163": "Red Worm x2",
+			"190": "MoonCell x2, Pudding x2",
+			"192": "Procyote x1, Pudding x2",
+			"227": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"34": "Procyote x1, Juclyote x2",
+			"131": "Balloon x2, Grenade x2",
+			"137": "Procyote x1, Juclyote x2",
+			"150": "Red Worm x2",
+			"163": "Pudding x2, Grenade x2",
+			"190": "Procyote x1, Pudding x2",
+			"227": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"34": "Procyote x1, Juclyote x2",
+			"66": "Balloon x2, Grenade x2",
+			"131": "Procyote x1, Juclyote x2",
+			"137": "Juclyote x1, Procyote x2",
+			"150": "Pudding x4",
+			"163": "Pudding x4",
+			"227": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"34": "Procyote x1, Juclyote x2",
+			"66": "Balloon x2, Grenade x2",
+			"98": "Red Worm x1, Procyote x1, Juclyote x1",
+			"137": "Juclyote x1, Procyote x2",
+			"150": "Pudding x4",
+			"163": "Pudding x4",
+			"227": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"34": "Procyote x1, Juclyote x2",
+			"66": "Balloon x2, Grenade x2",
+			"98": "Red Worm x1, Procyote x1, Juclyote x1",
+			"113": "Juclyote x1, Procyote x2",
+			"150": "Pudding x4",
+			"163": "Pudding x4",
+			"227": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"34": "Procyote x1, Juclyote x2",
+			"66": "Balloon x2, Grenade x2",
+			"98": "Red Worm x2",
+			"113": "Juclyote x1, Procyote x2",
+			"150": "Pudding x4",
+			"162": "Pudding x4",
+			"227": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"34": "Procyote x1, Juclyote x2",
+			"66": "Balloon x2, Grenade x2",
+			"98": "Red Worm x2",
+			"113": "Red Worm x2",
+			"162": "Pudding x4",
+			"194": "Procyote x1, Pudding x2",
+			"227": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"34": "Procyote x1, Juclyote x2",
+			"66": "Balloon x2, Grenade x2",
+			"98": "Red Worm x2",
+			"113": "Red Worm x2",
+			"162": "Pudding x4",
+			"194": "Procyote x1, Pudding x2",
+			"210": "MoonCell x2, Pudding x2"
+		},
+		{
+			"34": "Procyote x1, Juclyote x2",
+			"57": "Balloon x2, Grenade x2",
+			"66": "Juclyote x2, MoonCell x2, Grenade x1",
+			"98": "Pudding x2, Grenade x2",
+			"113": "Procyote x1, Pudding x2",
+			"162": "Pudding x4",
+			"194": "MoonCell x2, Pudding x2",
+			"210": "Procyote x1, Juclyote x2"
+		},
+		{
+			"57": "Juclyote x2, MoonCell x2, Grenade x1",
+			"66": "Balloon x2, Grenade x2",
+			"98": "Red Worm x2",
+			"113": "MoonCell x2, Pudding x2",
+			"162": "Pudding x4",
+			"179": "Procyote x1, Pudding x2",
+			"194": "MoonCell x2, Pudding x2",
+			"210": "Procyote x1, Juclyote x2"
+		},
+		{
+			"57": "Juclyote x1, Procyote x2",
+			"65": "Balloon x2, Grenade x2",
+			"98": "Red Worm x2",
+			"113": "MoonCell x2, Pudding x2",
+			"162": "Pudding x4",
+			"179": "Procyote x1, Pudding x2",
+			"194": "MoonCell x2, Pudding x2",
+			"210": "Procyote x1, Juclyote x2"
+		},
+		{
+			"57": "Juclyote x1, Procyote x2",
+			"65": "Balloon x2, Grenade x2",
+			"113": "Juclyote x2, MoonCell x2, Grenade x1",
+			"126": "MoonCell x2, Pudding x2",
+			"162": "Pudding x4",
+			"179": "Procyote x1, Pudding x2",
+			"194": "MoonCell x2, Pudding x2",
+			"210": "Procyote x1, Juclyote x2"
+		},
+		{
+			"57": "Juclyote x1, Procyote x2",
+			"65": "Balloon x2, Grenade x2",
+			"126": "Juclyote x2, MoonCell x2, Grenade x1",
+			"129": "MoonCell x2, Pudding x2",
+			"162": "Pudding x4",
+			"179": "Procyote x1, Pudding x2",
+			"194": "MoonCell x2, Pudding x2",
+			"210": "Juclyote x2, MoonCell x2, Grenade x1"
+		},
+		{
+			"57": "Juclyote x1, Procyote x2",
+			"65": "Balloon x2, Grenade x2",
+			"126": "Juclyote x2, MoonCell x2, Grenade x1",
+			"129": "MoonCell x2, Pudding x2",
+			"161": "Pudding x4",
+			"179": "Procyote x1, Pudding x2",
+			"194": "MoonCell x2, Pudding x2",
+			"210": "Juclyote x2, MoonCell x2, Grenade x1"
+		},
+		{
+			"57": "Juclyote x1, Procyote x2",
+			"65": "Balloon x2, Grenade x2",
+			"126": "Juclyote x2, MoonCell x2, Grenade x1",
+			"129": "MoonCell x2, Pudding x2",
+			"161": "Pudding x4",
+			"179": "Procyote x1, Pudding x2",
+			"193": "MoonCell x2, Pudding x2",
+			"210": "Juclyote x2, MoonCell x2, Grenade x1"
+		},
+		{
+			"57": "Juclyote x1, Procyote x2",
+			"65": "Balloon x2, Grenade x2",
+			"126": "Juclyote x2, MoonCell x2, Grenade x1",
+			"129": "MoonCell x2, Pudding x2",
+			"161": "Pudding x4",
+			"179": "Procyote x1, Pudding x2",
+			"193": "MoonCell x2, Pudding x2",
+			"225": "Procyote x1, Juclyote x2"
+		},
+		{
+			"65": "Juclyote x1, Procyote x2",
+			"126": "Balloon x2, Grenade x2",
+			"129": "Juclyote x2, MoonCell x2, Grenade x1",
+			"161": "Pudding x2, Grenade x2",
+			"179": "Procyote x1, Pudding x2",
+			"193": "Procyote x1, Pudding x2",
+			"225": "Red Worm x1, Procyote x1, Juclyote x1"
+		},
+		{
+			"65": "Juclyote x1, Procyote x2",
+			"126": "Balloon x2, Grenade x2",
+			"129": "Juclyote x2, MoonCell x2, Grenade x1",
+			"161": "Pudding x2, Grenade x2",
+			"180": "Procyote x1, Pudding x2",
+			"193": "Procyote x1, Pudding x2",
+			"225": "Red Worm x1, Grenade x3"
+		},
+		{
+			"97": "Red Worm x2",
+			"126": "Procyote x1, Juclyote x2",
+			"129": "Juclyote x2, MoonCell x2, Grenade x1",
+			"161": "Pudding x2, Grenade x2",
+			"180": "Procyote x1, Pudding x2",
+			"193": "Procyote x1, Pudding x2",
+			"225": "Red Worm x1, Grenade x3"
+		},
+		{
+			"37": "Red Worm x2",
+			"97": "Red Worm x1, Procyote x1, Juclyote x1",
+			"129": "Juclyote x2, MoonCell x2, Grenade x1",
+			"161": "Pudding x2, Grenade x2",
+			"180": "Procyote x1, Pudding x2",
+			"193": "Procyote x1, Pudding x2",
+			"225": "Red Worm x1, Grenade x3"
+		},
+		{
+			"37": "Red Worm x1, Procyote x1, Juclyote x1",
+			"97": "Red Worm x1, Procyote x1, Juclyote x1",
+			"120": "Juclyote x2, MoonCell x2, Grenade x1",
+			"161": "Pudding x2, Grenade x2",
+			"180": "Procyote x1, Pudding x2",
+			"193": "Procyote x1, Pudding x2",
+			"225": "Red Worm x1, Grenade x3"
+		},
+		{
+			"37": "Red Worm x1, Procyote x1, Juclyote x1",
+			"97": "Red Worm x1, Procyote x1, Juclyote x1",
+			"120": "Juclyote x1, Procyote x2",
+			"144": "MoonCell x2, Pudding x2",
+			"180": "Procyote x1, Pudding x2",
+			"193": "Slime x1, Tofu x1, Pudding x1",
+			"225": "Red Worm x1, Grenade x3"
+		},
+		{
+			"37": "Red Worm x1, Procyote x1, Juclyote x1",
+			"97": "Red Worm x1, Procyote x1, Juclyote x1",
+			"120": "Juclyote x1, Procyote x2",
+			"130": "MoonCell x2, Pudding x2",
+			"144": "Procyote x1, Pudding x2",
+			"180": "Slime x1, Tofu x1, Pudding x1",
+			"225": "Red Worm x1, Grenade x3"
+		}
+	]
+
+    _encounterData.mist = [
 		{
 			37: "SandMoth x2, Larva x2",
 			87: "EvilShel x3, WaterBug x1",
@@ -2082,7 +4623,62 @@ com.aexoden.ff4 = function()
 		}
 	];
 
-    var _mapData = [
+	var _mapData = {};
+
+	_mapData.fusoya = [
+		{
+			'map': '2000-0',
+			'origin': [3, 4],
+			'stepRange': [1, 5]
+		},
+		{
+			'map': '3163-0',
+			'origin': [0, 0],
+			'stepRange': [6, 43]
+		},
+		{
+			'map': '2000-0',
+			'origin': [14, 4],
+			'stepRange': [44, 78]
+		},
+		{
+			'map': '3164-0',
+			'origin': [0, 0],
+			'stepRange': [79, 109]
+		},
+		{
+			'map': '2000-0',
+			'origin': [17, 11],
+			'stepRange': [110, 126]
+		},
+		{
+			'map': '2000-0',
+			'origin': [17, 11],
+			'stepRange': [127, 144]
+		},
+		{
+			'map': '3164-0',
+			'origin': [0, 0],
+			'stepRange': [145, 175]
+		},
+		{
+			'map': '2000-0',
+			'origin': [14, 4],
+			'stepRange': [176, 210]
+		},
+		{
+			'map': '3163-0',
+			'origin': [0, 0],
+			'stepRange': [211, 248]
+		},
+		{
+			'map': '2000-0',
+			'origin': [3, 4],
+			'stepRange': [249, 253]
+		}
+	];
+
+    _mapData.mist = [
         {
             'map': '0000-0',
             'origin': [98, 95],
@@ -2103,9 +4699,267 @@ com.aexoden.ff4 = function()
 			'origin': [0, 0],
             'stepRange': [122, 211]
         }
-    ];
+	];
 
-	var _stepData = {
+	var _stepData = {};
+
+	_stepData.fusoya = {
+		1: [21, 20],
+		2: [21, 21],
+		3: [20, 21],
+		4: [19, 21],
+		5: [18, 21],
+		6: [12, 29],
+		7: [13, 29],
+		8: [14, 29],
+		9: [14, 28],
+		10: [14, 27],
+		11: [14, 26],
+		12: [14, 25],
+		13: [14, 24],
+		14: [14, 23],
+		15: [13, 23],
+		16: [12, 23],
+		17: [11, 23],
+		18: [11, 22],
+		19: [11, 21],
+		20: [11, 20],
+		21: [11, 19],
+		22: [11, 18],
+		23: [11, 17],
+		24: [11, 16],
+		25: [11, 15],
+		26: [12, 15],
+		27: [13, 15],
+		28: [14, 15],
+		29: [14, 14],
+		30: [14, 13],
+		31: [14, 12],
+		32: [14, 11],
+		33: [14, 10],
+		34: [15, 10],
+		35: [16, 10],
+		36: [17, 10],
+		37: [18, 10],
+		38: [19, 10],
+		39: [19, 9],
+		40: [19, 8],
+		41: [19, 7],
+		42: [19, 6],
+		43: [19, 5],
+		44: [19, 15],
+		45: [20, 15],
+		46: [21, 15],
+		47: [22, 15],
+		48: [23, 15],
+		49: [23, 14],
+		50: [24, 14],
+		51: [25, 14],
+		52: [26, 14],
+		53: [27, 14],
+		54: [28, 14],
+		55: [29, 14],
+		56: [30, 14],
+		57: [31, 14],
+		58: [32, 14],
+		59: [33, 14],
+		60: [33, 15],
+		61: [33, 16],
+		62: [34, 16],
+		63: [35, 16],
+		64: [36, 16],
+		65: [37, 16],
+		66: [37, 17],
+		67: [37, 18],
+		68: [37, 19],
+		69: [37, 20],
+		70: [37, 21],
+		71: [37, 22],
+		72: [37, 23],
+		73: [37, 24],
+		74: [37, 25],
+		75: [38, 25],
+		76: [39, 25],
+		77: [40, 25],
+		78: [41, 25],
+		79: [20, 6],
+		80: [19, 6],
+		81: [18, 6],
+		82: [17, 6],
+		83: [16, 6],
+		84: [15, 6],
+		85: [14, 6],
+		86: [14, 7],
+		87: [14, 8],
+		88: [14, 9],
+		89: [14, 10],
+		90: [14, 11],
+		91: [14, 12],
+		92: [14, 13],
+		93: [14, 14],
+		94: [14, 15],
+		95: [14, 16],
+		96: [14, 17],
+		97: [14, 18],
+		98: [14, 19],
+		99: [13, 19],
+		100: [12, 19],
+		101: [11, 19],
+		102: [10, 19],
+		103: [9, 19],
+		104: [9, 20],
+		105: [9, 21],
+		106: [9, 22],
+		107: [9, 23],
+		108: [9, 24],
+		109: [9, 25],
+		110: [39, 29],
+		111: [38, 29],
+		112: [37, 29],
+		113: [37, 30],
+		114: [36, 30],
+		115: [35, 30],
+		116: [34, 30],
+		117: [33, 30],
+		118: [33, 29],
+		119: [32, 29],
+		120: [31, 29],
+		121: [30, 29],
+		122: [29, 29],
+		123: [28, 29],
+		124: [28, 28],
+		125: [28, 27],
+		126: [28, 26],
+		127: [28, 26],
+		128: [28, 27],
+		129: [28, 28],
+		130: [28, 29],
+		131: [29, 29],
+		132: [30, 29],
+		133: [31, 29],
+		134: [32, 29],
+		135: [33, 29],
+		136: [34, 29],
+		137: [34, 30],
+		138: [35, 30],
+		139: [36, 30],
+		140: [37, 30],
+		141: [37, 29],
+		142: [38, 29],
+		143: [39, 29],
+		144: [40, 29],
+		145: [9, 24],
+		146: [9, 23],
+		147: [9, 22],
+		148: [9, 21],
+		149: [9, 20],
+		150: [9, 19],
+		151: [9, 18],
+		152: [10, 18],
+		153: [11, 18],
+		154: [12, 18],
+		155: [13, 18],
+		156: [14, 18],
+		157: [14, 17],
+		158: [14, 16],
+		159: [14, 15],
+		160: [14, 14],
+		161: [14, 13],
+		162: [14, 12],
+		163: [14, 11],
+		164: [14, 10],
+		165: [14, 9],
+		166: [14, 8],
+		167: [14, 7],
+		168: [14, 6],
+		169: [15, 6],
+		170: [16, 6],
+		171: [17, 6],
+		172: [18, 6],
+		173: [19, 6],
+		174: [20, 6],
+		175: [21, 6],
+		176: [40, 25],
+		177: [39, 25],
+		178: [38, 25],
+		179: [37, 25],
+		180: [37, 24],
+		181: [37, 23],
+		182: [37, 22],
+		183: [37, 21],
+		184: [37, 20],
+		185: [37, 19],
+		186: [37, 18],
+		187: [37, 17],
+		188: [37, 16],
+		189: [36, 16],
+		190: [35, 16],
+		191: [34, 16],
+		192: [33, 16],
+		193: [33, 15],
+		194: [33, 14],
+		195: [32, 14],
+		196: [31, 14],
+		197: [30, 14],
+		198: [29, 14],
+		199: [28, 14],
+		200: [27, 14],
+		201: [26, 14],
+		202: [25, 14],
+		203: [24, 14],
+		204: [23, 14],
+		205: [22, 14],
+		206: [22, 15],
+		207: [21, 15],
+		208: [20, 15],
+		209: [19, 15],
+		210: [18, 15],
+		211: [19, 6],
+		212: [19, 7],
+		213: [19, 8],
+		214: [19, 9],
+		215: [19, 10],
+		216: [18, 10],
+		217: [17, 10],
+		218: [16, 10],
+		219: [15, 10],
+		220: [14, 10],
+		221: [13, 10],
+		222: [12, 10],
+		223: [12, 11],
+		224: [12, 12],
+		225: [12, 13],
+		226: [12, 14],
+		227: [12, 15],
+		228: [11, 15],
+		229: [11, 16],
+		230: [11, 17],
+		231: [11, 18],
+		232: [11, 19],
+		233: [11, 20],
+		234: [11, 21],
+		235: [11, 22],
+		236: [11, 23],
+		237: [12, 23],
+		238: [13, 23],
+		239: [14, 23],
+		240: [14, 24],
+		241: [14, 25],
+		242: [14, 26],
+		243: [14, 27],
+		244: [14, 28],
+		245: [14, 29],
+		246: [13, 29],
+		247: [12, 29],
+		248: [12, 30],
+		249: [19, 21],
+		250: [20, 21],
+		251: [21, 21],
+		252: [21, 20],
+		253: [21, 19]
+	}
+
+	_stepData.mist = {
 		2: [103, 118],
 	    3: [103, 117],
 	    4: [104, 117],
@@ -2318,7 +5172,13 @@ com.aexoden.ff4 = function()
 		211: [2, 18]
 	};
 
-	var _twinSeedData = {
+	var _twinSeedData = {}
+
+	_twinSeedData.fusoya = {
+		"no64-rosa-marathon-recovery-fusoya": {},
+	}
+
+	_twinSeedData.mist = {
 		"paladin": {
 			14: {
 				"instruction": "Take <strong>54</strong> extra steps in the save room. Determine your seed based on the next room:",
@@ -2656,18 +5516,34 @@ com.aexoden.ff4 = function()
 		}
 	};
 
+	var twinSeedMapSets = {
+		"fusoya": new Set([]),
+		"mist": new Set([7, 14, 22, 30, 41, 47, 63, 68, 78, 98, 101, 109, 132, 143, 168, 175, 183, 231, 247])
+	}
+
 	var routeNames = {
 		"paladin": "Paladin%",
 		"nocw": "Any% NoCW",
 		"no64-rosa": "Any% No64 (Rosa)",
 		"no64-excalbur": "Any% No64 (Edge+Excalbur)",
-		"no64-rosa-marathon": "Any% No64 (Rosa) (Marathon)"
+		"no64-rosa-marathon": "Any% No64 (Rosa) (Marathon)",
+		"no64-rosa-marathon-recovery-fusoya": "Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)"
+	}
+
+	var routeMapSets = {
+		"paladin": "mist",
+		"nocw": "mist",
+		"no64-rosa": "mist",
+		"no64-excalbur": "mist",
+		"no64-rosa-marathon": "mist",
+		"no64-rosa-marathon-recovery-fusoya": "fusoya"
 	}
 
     /*
      * Global Variables
      */
 
+	var currentMapSet = "mist";
 	var currentMapIndex = 0;
 	var selectedSteps = new Set([]);
 	var possibleSeeds = new Set([]);
@@ -2680,8 +5556,9 @@ com.aexoden.ff4 = function()
      */
 
 	var onMapClick = function(e) {
-		var x = Math.floor(e.offsetX / 16) + _mapData[currentMapIndex].origin[0];
-		var y = Math.floor(e.offsetY / 16) + _mapData[currentMapIndex].origin[1];
+		var mapData = getData(_mapData);
+		var x = Math.floor(e.offsetX / 16) + mapData[currentMapIndex].origin[0];
+		var y = Math.floor(e.offsetY / 16) + mapData[currentMapIndex].origin[1];
 		var step = getStep(x, y);
 
 		if (step > 0) {
@@ -2701,6 +5578,7 @@ com.aexoden.ff4 = function()
 		possibleSeeds = new Set([]);
 		possibleSteps = new Set([]);
 		setEncounters = {};
+		finished = false;
 
 		updateDisplay();
 	}
@@ -2721,12 +5599,17 @@ com.aexoden.ff4 = function()
 		var select = document.getElementById('route-select');
 		select.addEventListener('change', onRouteChange);
 
+		var route = document.getElementById('route-select').value;
+		currentMapSet = routeMapSets[route];
+
 		updateDisplay();
 	};
 
 	var drawStep = function(step, ctx, boxStyle, textStyle) {
-		var x = _stepData[step][0] - _mapData[currentMapIndex].origin[0];
-		var y = _stepData[step][1] - _mapData[currentMapIndex].origin[1];
+		var mapData = getData(_mapData);
+		var stepData = getData(_stepData);
+		var x = stepData[step][0] - mapData[currentMapIndex].origin[0];
+		var y = stepData[step][1] - mapData[currentMapIndex].origin[1];
 
 		ctx.beginPath();
 		ctx.fillStyle = 'rgba(0, 0, 0, 0.4)';
@@ -2750,7 +5633,8 @@ com.aexoden.ff4 = function()
 	}
 
 	var drawMap = function() {
-		var mapData = _mapData[currentMapIndex];
+		var mapData = getData(_mapData)[currentMapIndex];
+		var stepData = getData(_stepData);
 		var canvas = document.getElementById('map');
 		var ctx = canvas.getContext('2d');
 
@@ -2764,9 +5648,9 @@ com.aexoden.ff4 = function()
 			offScreenCanvas.height = canvas.height;
 			var offScreenCtx = offScreenCanvas.getContext('2d');
 
-			Object.entries(_stepData).forEach(
+			Object.entries(stepData).forEach(
 				([step, [stepX, stepY]]) => {
-					if (parseInt(step) >= _mapData[currentMapIndex].stepRange[0] && parseInt(step) <= _mapData[currentMapIndex].stepRange[1]) {
+					if (parseInt(step) >= mapData.stepRange[0] && parseInt(step) <= mapData.stepRange[1]) {
 						if (possibleSteps.has(parseInt(step))) {
 							drawStep(step, offScreenCtx, "#FFFFFF", "#FFFFFF");
 						} else {
@@ -2777,7 +5661,9 @@ com.aexoden.ff4 = function()
 			);
 
 			for (var step of selectedSteps) {
-				drawStep(step, offScreenCtx, "#FF0000", null);
+				if (step >= mapData.stepRange[0] && step <= mapData.stepRange[1]) {
+					drawStep(step, offScreenCtx, "#FF0000", null);
+				}
 			}
 
 			ctx.drawImage(offScreenCanvas, 0, 0);
@@ -2786,11 +5672,17 @@ com.aexoden.ff4 = function()
 		img.src = '/static/img/maps/composite/' + mapData.map + '.png';
 	};
 
+	var getData = function(x) {
+		var route = document.getElementById('route-select').value;
+		return x[routeMapSets[route]];
+	}
+
 	var getStep = function(x, y) {
-		var mapData = _mapData[currentMapIndex];
+		var mapData = getData(_mapData)[currentMapIndex];
+		var stepData = getData(_stepData);
 		var result;
 
-		Object.entries(_stepData).forEach(
+		Object.entries(stepData).forEach(
 			([step, [stepX, stepY]]) => {
 				if (x == stepX && y == stepY && parseInt(step) >= mapData.stepRange[0] && parseInt(step) <= mapData.stepRange[1]) {
 					result = parseInt(step);
@@ -2826,9 +5718,10 @@ com.aexoden.ff4 = function()
 	}
 
 	var onNextImageClick = function(e) {
-		if (currentMapIndex < _mapData.length - 1) {
+		var mapData = getData(_mapData);
+		if (currentMapIndex < mapData.length - 1) {
 			currentMapIndex += 1;
-		} else if (currentMapIndex == _mapData.length - 1) {
+		} else if (currentMapIndex == mapData.length - 1) {
 			finished = !finished;
 		}
 
@@ -2840,15 +5733,24 @@ com.aexoden.ff4 = function()
 	}
 
 	var onRouteChange = function(e) {
-		updateDisplay();
+		var route = document.getElementById('route-select').value;
+
+		if (routeMapSets[route] != currentMapSet) {
+			currentMapSet = routeMapSets[route];
+			reset();
+		} else {
+			updateDisplay();
+		}
 	}
 
 	var updateEncounters = function() {
+		var encounterData = getData(_encounterData);
+		var mapData = getData(_mapData);
 		var e = document.getElementById('encounters');
 		e.innerHTML = '<h3>Encounters</h3>';
 
 		for (var step of selectedSteps) {
-			if (step < _mapData[currentMapIndex].stepRange[0] || step > _mapData[currentMapIndex].stepRange[1]) {
+			if (step < mapData[currentMapIndex].stepRange[0] || step > mapData[currentMapIndex].stepRange[1]) {
 				continue;
 			}
 
@@ -2859,7 +5761,7 @@ com.aexoden.ff4 = function()
 			var formations = new Set([]);
 
 			for (var seed of possibleSeeds) {
-				var formation = _encounterData[seed][step];
+				var formation = encounterData[seed][step];
 
 				if (!(formations.has(formation))) {
 					formations.add(formation);
@@ -2890,23 +5792,21 @@ com.aexoden.ff4 = function()
 	}
 
 	var updateSeeds = function() {
-		var twinSeeds = new Set([7, 14, 22, 30, 41, 47, 63, 68, 78, 98, 101, 109, 132, 143, 168, 175, 183, 231, 247]);
+		var encounterData = getData(_encounterData);
+		var mapData = getData(_mapData);
+		var twinSeeds = twinSeedMapSets[currentMapSet];
 
 		possibleSeeds = new Set([]);
 
 		var maxStep = Math.max(...selectedSteps);
 
 		if (finished) {
-			maxStep = 211;
-		} else if (currentMapIndex == 1) {
-			maxStep = Math.max(37, maxStep);
-		} else if (currentMapIndex == 2) {
-			maxStep = Math.max(69, maxStep);
-		} else if (currentMapIndex == 3) {
-			maxStep = Math.max(121, maxStep);
+			maxStep = mapData[currentMapIndex].stepRange[1];
+		} else if (currentMapIndex > 0) {
+			maxStep = Math.max(mapData[currentMapIndex - 1].stepRange[1], maxStep);
 		}
 
-		Object.entries(_encounterData).forEach(
+		Object.entries(encounterData).forEach(
 			([seed, data]) => {
 				var valid = true;
 
@@ -2939,15 +5839,17 @@ com.aexoden.ff4 = function()
 			possibleSeedsLinks.push('<a href="/routes/' + route + '/' + seed + '/">' + seed + '</a>');
 		}
 
+		var twinSeedData = getData(_twinSeedData);
+
 		if (possibleSeeds.size == 2) {
 			for (seed of twinSeeds) {
 				if (possibleSeeds.has(seed.toString()) && possibleSeeds.has((seed + 1).toString())) {
-					if (route in _twinSeedData) {
-						if (seed in _twinSeedData[route]) {
-							let txt = '<div class="bs-callout bs-callout-info"><span class="fas fa-exclamation-triangle"></span><h4>Twin Seed Alert</h4><p>These instructions are for <strong>' + routeNames[route] + '</strong>.</p><p>The following two seeds are twin seeds. ' + _twinSeedData[route][seed]['instruction'] + '</p>'
+					if (route in twinSeedData) {
+						if (seed in twinSeedData[route]) {
+							let txt = '<div class="bs-callout bs-callout-info"><span class="fas fa-exclamation-triangle"></span><h4>Twin Seed Alert</h4><p>These instructions are for <strong>' + routeNames[route] + '</strong>.</p><p>The following two seeds are twin seeds. ' + twinSeedData[route][seed]['instruction'] + '</p>'
 							txt += '<dl class="row">'
-							txt += '<dt class="col-md-1">' + seed.toString() + '</dt><dd class="col-md-11">' + _twinSeedData[route][seed][seed] + '</dd>';
-							txt += '<dt class="col-md-1">' + (seed + 1).toString() + '</dt><dd class="col-md-11">' + _twinSeedData[route][seed][seed + 1] + '</dd>';
+							txt += '<dt class="col-md-1">' + seed.toString() + '</dt><dd class="col-md-11">' + twinSeedData[route][seed][seed] + '</dd>';
+							txt += '<dt class="col-md-1">' + (seed + 1).toString() + '</dt><dd class="col-md-11">' + twinSeedData[route][seed][seed + 1] + '</dd>';
 							txt += '</dl></div>'
 
 							e.innerHTML = txt;
@@ -2965,10 +5867,11 @@ com.aexoden.ff4 = function()
 	}
 
 	var updateSteps = function() {
+		var encounterData = getData(_encounterData);
 		possibleSteps = new Set([]);
 
 		for (var seed of possibleSeeds) {
-			Object.entries(_encounterData[seed]).forEach(
+			Object.entries(encounterData[seed]).forEach(
 				([step, formation]) => {
 					if (!(possibleSteps.has(parseInt(step)))) {
 						possibleSteps.add(parseInt(step));
@@ -2979,6 +5882,8 @@ com.aexoden.ff4 = function()
 	}
 
 	var updateDisplay = function() {
+		var mapData = getData(_mapData);
+
 		updateSeeds();
 		updateSteps();
 		updateEncounters();
@@ -2993,7 +5898,7 @@ com.aexoden.ff4 = function()
 			previous.removeAttribute('disabled');
 		}
 
-		if (currentMapIndex == _mapData.length - 1) {
+		if (currentMapIndex == mapData.length - 1) {
 			if (finished) {
 				next.innerHTML = 'Unfinish';
 			} else {

@@ -83,6 +83,16 @@ ROUTES = {
 		'seed_finder': True,
 		'status': '~96.75% Optimal'
 	},
+	'no64-rosa-marathon-recovery-fusoya': {
+		'name': 'Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)',
+		'description': 'This variant of no64-rosa-marathon runs from immediately upon landing on the moon until Zeromus is defeated, and is primarily intended as a step route (and grind) recovery method.',
+		'group': 'testing',
+		'enabled': True,
+		'twin_safe': True,
+		'complete': False,
+		'seed_finder': True,
+		'status': 'Suboptimal'
+	},
 
 	'premist': {
 		'name': 'Pre-Mist Clip',
