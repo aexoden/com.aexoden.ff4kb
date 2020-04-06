@@ -59,6 +59,7 @@
 {% block extrajs %}
 				<script src="{% static "js/seed-finder.js" %}"></script>
 				<script>
-					com.aexoden.ff4.init();
+					let colors = {{ colors|safe }};
+					com.aexoden.ff4.init(colors);
 				</script>
 {% endblock %}

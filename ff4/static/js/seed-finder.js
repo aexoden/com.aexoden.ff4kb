@@ -5564,6 +5564,7 @@ com.aexoden.ff4 = function()
 	var possibleSteps = new Set([]);
 	var setEncounters = {};
 	var finished = false;
+	var route_colors = {};
 
     /*
      * Functions
@@ -5597,7 +5598,7 @@ com.aexoden.ff4 = function()
 		updateDisplay();
 	}
 
-	var init = function() {
+	var init = function(colors) {
 		var canvas = document.getElementById('map');
 		canvas.addEventListener('click', onMapClick);
 
@@ -5615,6 +5616,8 @@ com.aexoden.ff4 = function()
 
 		var route = document.getElementById('route-select').value;
 		currentMapSet = routeMapSets[route];
+
+		route_colors = colors;
 
 		updateDisplay();
 	};
@@ -5850,7 +5853,7 @@ com.aexoden.ff4 = function()
 		var possibleSeedsLinks = [];
 
 		for (seed of possibleSeeds) {
-			possibleSeedsLinks.push('<a href="/routes/' + route + '/' + seed + '/">' + seed + '</a>');
+			possibleSeedsLinks.push('<a class="seed-link" style="background: ' + route_colors[route][seed] + '" href="/routes/' + route + '/' + seed + '/">' + seed + '</a>');
 		}
 
 		var twinSeedData = getData(_twinSeedData);
@@ -5877,7 +5880,7 @@ com.aexoden.ff4 = function()
 			}
 		}
 
-		e.innerHTML += '<p>' + Array.from(possibleSeedsLinks).join(', ') + '</p>';
+		e.innerHTML += '<p class="seed-container">' + Array.from(possibleSeedsLinks).join('') + '</p>';
 	}
 
 	var updateSteps = function() {

@@ -234,3 +234,21 @@ table.seeds {
 	background-color: #FFFF00;
 	text-decoration: none;
 }
+
+.seed-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.seed-link {
+	color: #000000;
+	display: block;
+	padding: 8px;
+	text-align: center;
+	width: 3em;
+}
+
+.seed-link:hover {
+	background-color: #FFFF00 !important;
+	text-decoration: none;
+}

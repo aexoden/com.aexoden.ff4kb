@@ -237,6 +237,11 @@ def get_color(value, mean, stdev):
 	return '#{:02X}{:02X}{:02X}'.format(*color)
 
 
+def mad(data):
+	median = statistics.median(data)
+	return statistics.median([abs(x - median) for x in data]) * 1.4826
+
+
 def index(request):
 	routes = dict(GROUPS)
 
@@ -253,7 +258,7 @@ def index(request):
 	return render(request, 'routes/index.html', context)
 
 
-def route(request, route):
+def get_metrics(route):
 	metrics_cache_filename = os.path.join(settings.BASE_DIR, 'ff4', 'cache', 'metrics-{}.json'.format(route))
 	metrics_cache_updated = False
 
@@ -284,6 +289,21 @@ def route(request, route):
 		with open(metrics_cache_filename, 'w') as f:
 			json.dump(seed_metrics, f)
 
+	return seed_metrics
+
+
+def get_colors(route):
+	metrics = get_metrics(route)
+	result = []
+
+	for seed in range(256):
+		result.append(get_color(metrics['frames'][seed], statistics.median(metrics['frames']), mad(metrics['frames'])))
+
+	return result
+
+
+def route(request, route):
+	seed_metrics = get_metrics(route)
 	seeds = []
 
 	for group_index in range(16):
@@ -294,7 +314,7 @@ def route(request, route):
 
 			group.append({
 				'seed': seed,
-				'background': get_color(seed_metrics['frames'][seed], statistics.mean(seed_metrics['frames']), statistics.stdev(seed_metrics['frames']))
+				'background': get_color(seed_metrics['frames'][seed], statistics.median(seed_metrics['frames']), mad(seed_metrics['frames']))
 			})
 
 		seeds.append(group)
