@@ -4628,51 +4628,61 @@ com.aexoden.ff4 = function()
 	_mapData.fusoya = [
 		{
 			'map': '2000-0',
+			'maxStep': 5,
 			'origin': [3, 4],
 			'stepRange': [1, 5]
 		},
 		{
 			'map': '3163-0',
+			'maxStep': 43,
 			'origin': [0, 0],
 			'stepRange': [6, 43]
 		},
 		{
 			'map': '2000-0',
+			'maxStep': 78,
 			'origin': [14, 4],
 			'stepRange': [44, 78]
 		},
 		{
 			'map': '3164-0',
+			'maxStep': 109,
 			'origin': [0, 0],
 			'stepRange': [79, 109]
 		},
 		{
 			'map': '2000-0',
+			'maxStep': 126,
 			'origin': [17, 11],
 			'stepRange': [110, 126]
 		},
 		{
 			'map': '2000-0',
+			'maxStep': 144,
 			'origin': [17, 11],
 			'stepRange': [127, 144]
 		},
 		{
 			'map': '3164-0',
+			'maxStep': 175,
 			'origin': [0, 0],
 			'stepRange': [145, 175]
 		},
 		{
 			'map': '2000-0',
+			'maxStep': 210,
 			'origin': [14, 4],
 			'stepRange': [176, 210]
 		},
 		{
 			'map': '3163-0',
+			'maxStep': 248,
 			'origin': [0, 0],
 			'stepRange': [211, 248]
 		},
 		{
 			'map': '2000-0',
+			'maxStep': 253,
 			'origin': [3, 4],
 			'stepRange': [249, 253]
 		}
@@ -4681,21 +4691,25 @@ com.aexoden.ff4 = function()
     _mapData.mist = [
         {
             'map': '0000-0',
-            'origin': [98, 95],
+			'maxStep': 37,
+			'origin': [98, 95],
             'stepRange': [2, 48]
         },
         {
-            'map': '0000-0',
+			'map': '0000-0',
+			'maxStep': 69,
 			'origin': [120, 80],
             'stepRange': [28, 69]
         },
         {
-            'map': '306F-0',
+			'map': '306F-0',
+			'maxStep': 121,
 			'origin': [0, 0],
             'stepRange': [70, 121]
         },
         {
             'map': '3070-0',
+			'maxStep': 211,
 			'origin': [0, 0],
             'stepRange': [122, 211]
         }
@@ -5801,9 +5815,9 @@ com.aexoden.ff4 = function()
 		var maxStep = Math.max(...selectedSteps);
 
 		if (finished) {
-			maxStep = mapData[currentMapIndex].stepRange[1];
+			maxStep = mapData[currentMapIndex].maxStep;
 		} else if (currentMapIndex > 0) {
-			maxStep = Math.max(mapData[currentMapIndex - 1].stepRange[1], maxStep);
+			maxStep = Math.max(mapData[currentMapIndex - 1].maxStep, maxStep);
 		}
 
 		Object.entries(encounterData).forEach(
