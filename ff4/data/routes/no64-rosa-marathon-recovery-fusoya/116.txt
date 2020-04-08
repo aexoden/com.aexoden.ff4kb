@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)
 VERSION	1
-ROSA	v1.2.0-2-g139db62
+ROSA	v1.2.0-3-g32213e2
 SEED	116
-MAXSTEP	64
-MAXSEG	-1
+MAXSTEP	256
+MAXSEG	4
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	47328054
-VARS	C316C00:2 E200000:32 E30B500:1 E30B600:12 E316700:12 E316900:14 E316A00:2
+VARS	C316C00:2 E200000:32 E30B500:13 E316700:12 E316900:16
 
 Fly to Lunar Path                                         Seed: 116   Index:   0
 Lunar Overworld                                           Seed: 116   Index:   0
@@ -36,9 +36,9 @@ Lunar Overworld                                           Seed: 133   Index:  13
 Save: Before Giant of Bab-il                              Seed: 133   Index:  46
 Giant of Bab-il Mouth                                     Seed: 133   Index:  46
   Optional Steps: 1
-Giant of Bab-il Neck                                      Seed: 133   Index:  65
   Extra Steps: 12
-  Step  14: 10 / Searcher (summons Machine) x1, Machine x2 (7.655s)
+Giant of Bab-il Neck                                      Seed: 133   Index:  77
+  Step   2: 10 / Searcher (summons Machine) x1, Machine x2 (7.655s)
 Giant of Bab-il Chest                                     Seed: 133   Index:  79
   Step  11: 11 / Horseman x1, Beamer x1, Machine x1 (7.709s)
   Step  32: 12 / Machine x2, Beamer x2 (7.818s)
@@ -90,11 +90,10 @@ Lunar Subterrane B1                                       Seed: 150   Index: 171
 Lunar Subterrane B2                                       Seed: 150   Index: 216
   Step  27: 23 / Warlock x1, Kary x1 (6.350s)
 Lunar Subterrane B3                                       Seed: 150   Index: 245
-  Extra Steps: 14
+  Extra Steps: 16
   Step  16: 24 / Ging-Ryu x1 (6.682s)
   Step  22: 25 / D.Bone x1, Warlock x1 (6.366s)
-Lunar Subterrane B4                                       Seed: 167   Index:  17
-  Extra Steps: 2
+Lunar Subterrane B4                                       Seed: 167   Index:  19
 Lunar Subterrane B4 Passage                               Seed: 167   Index:  75
   Step  20: 26 / D.Fossil x1 (6.354s)
 Lunar Subterrane B4                                       Seed: 167   Index: 104

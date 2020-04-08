@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)
 VERSION	1
-ROSA	v1.2.0-2-g139db62
+ROSA	v1.2.0-3-g32213e2
 SEED	33
-MAXSTEP	64
-MAXSEG	-1
+MAXSTEP	256
+MAXSEG	4
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	45403475
-VARS	C316C00:2 E30B500:1 E30B700:2 E30BD00:18 E316500:48 E316A01:2 E317B00:58
+VARS	C316C00:2 E30B500:3 E30BD00:20 E316500:48 E317B00:58
 
 Fly to Lunar Path                                         Seed:  33   Index:   0
 Lunar Overworld                                           Seed:  33   Index:   0
@@ -35,10 +35,10 @@ Lunar Overworld                                           Seed:  50   Index:  61
 Save: Before Giant of Bab-il                              Seed:  50   Index:  62
 Giant of Bab-il Mouth                                     Seed:  50   Index:  62
   Optional Steps: 1
-Giant of Bab-il Neck                                      Seed:  50   Index:  81
-Giant of Bab-il Chest                                     Seed:  50   Index:  83
   Extra Steps: 2
-  Step  84: 9 / MacGiant x1 (7.506s)
+Giant of Bab-il Neck                                      Seed:  50   Index:  83
+Giant of Bab-il Chest                                     Seed:  50   Index:  85
+  Step  82: 9 / MacGiant x1 (7.506s)
 Giant of Bab-il Stomach                                   Seed:  50   Index: 167
   Step  19: 10 / Machine x2, Beamer x3 (7.876s)
 Grind Fight Search                                        Seed:  50   Index: 216
@@ -68,28 +68,27 @@ Battle: Elements                                          Seed:  67   Index:  42
 Giant of Bab-il Lung                                      Seed:  67   Index:  42
   Step   1: 15 / MacGiant x2 (11.785s)
 Giant of Bab-il CPU                                       Seed:  67   Index:  49
-  Extra Steps: 18
-Return to Moon                                            Seed:  67   Index:  69
-Lunar Overworld                                           Seed:  67   Index:  69
-Lunar Path (west)                                         Seed:  67   Index:  74
-  Step   4: 16 / Red Worm x1, Procyote x1, Juclyote x1 (7.791s)
-Lunar Overworld                                           Seed:  67   Index: 112
-Lunar Path (east)                                         Seed:  67   Index: 147
-  Step   6: 17 / Juclyote x1, Procyote x2 (7.792s)
-  Step  31: 18 / Red Worm x2 (7.562s)
-Lunar Overworld                                           Seed:  67   Index: 178
-Lunar Subterrane B1                                       Seed:  67   Index: 195
-Lunar Subterrane B2                                       Seed:  67   Index: 228
-  Step  22: 19 / Warlock x1, Kary x1, RedGiant x1 (6.432s)
-Lunar Subterrane B3                                       Seed:  84   Index:   1
-  Step   7: 20 / Ging-Ryu x1 (6.682s)
-  Step   9: 21 / RedGiant x2 (6.721s)
-Lunar Subterrane B4                                       Seed:  84   Index:  15
-Lunar Subterrane B4 Passage                               Seed:  84   Index:  71
-  Step  14: 22 / King-Ryu x1 (6.694s)
-Lunar Subterrane B4                                       Seed:  84   Index: 100
-  Extra Steps: 2
-  Step  17: 23 / D.Bone x1, Warlock x1 (6.366s)
+  Extra Steps: 20
+Return to Moon                                            Seed:  67   Index:  71
+Lunar Overworld                                           Seed:  67   Index:  71
+Lunar Path (west)                                         Seed:  67   Index:  76
+  Step   2: 16 / Red Worm x1, Procyote x1, Juclyote x1 (7.791s)
+Lunar Overworld                                           Seed:  67   Index: 114
+Lunar Path (east)                                         Seed:  67   Index: 149
+  Step   4: 17 / Juclyote x1, Procyote x2 (7.792s)
+  Step  29: 18 / Red Worm x2 (7.562s)
+Lunar Overworld                                           Seed:  67   Index: 180
+Lunar Subterrane B1                                       Seed:  67   Index: 197
+Lunar Subterrane B2                                       Seed:  67   Index: 230
+  Step  20: 19 / Warlock x1, Kary x1, RedGiant x1 (6.432s)
+Lunar Subterrane B3                                       Seed:  84   Index:   3
+  Step   5: 20 / Ging-Ryu x1 (6.682s)
+  Step   7: 21 / RedGiant x2 (6.721s)
+Lunar Subterrane B4                                       Seed:  84   Index:  17
+Lunar Subterrane B4 Passage                               Seed:  84   Index:  73
+  Step  12: 22 / King-Ryu x1 (6.694s)
+Lunar Subterrane B4                                       Seed:  84   Index: 102
+  Step  15: 23 / D.Bone x1, Warlock x1 (6.366s)
 Lunar Subterrane B5                                       Seed:  84   Index: 117
 Lunar Subterrane B5 Passage A                             Seed:  84   Index: 134
   Step   6: 24 / King-Ryu x1, Ging-Ryu x1 (6.738s)

@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)
 VERSION	1
-ROSA	v1.2.0-2-g139db62
+ROSA	v1.2.0-5-g24c3a79
 SEED	38
-MAXSTEP	64
-MAXSEG	-1
+MAXSTEP	256
+MAXSEG	6
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	46466516
-VARS	C316C00:2 E30B500:1 E30B700:8 E30BA00:10 E30BD00:16 E316500:42 E316800:12 E316B00:6 E317B00:48
+VARS	C316C00:2 E30B500:1 E30B700:18 E30BD00:16 E316500:42 E316800:18 E317B00:48
 
 Fly to Lunar Path                                         Seed:  38   Index:   0
 Lunar Overworld                                           Seed:  38   Index:   0
@@ -37,23 +37,22 @@ Giant of Bab-il Mouth                                     Seed:  55   Index:  56
   Optional Steps: 1
 Giant of Bab-il Neck                                      Seed:  55   Index:  75
 Giant of Bab-il Chest                                     Seed:  55   Index:  77
-  Extra Steps: 8
+  Extra Steps: 18
   Step  12: 9 / MacGiant x1 (7.506s)
   Step  22: 10 / Horseman x1, Beamer x1, Machine x1 (7.709s)
   Step  66: 11 / MacGiant x1, Horseman x1 (7.641s)
   Step  90: 12 / Horseman x1, Beamer x1, Machine x1 (7.709s)
-Giant of Bab-il Stomach                                   Seed:  55   Index: 167
-Grind Fight Search                                        Seed:  55   Index: 216
-  Save: Giant of Bab-il Passage                           Seed:  55   Index: 216
-  Giant of Bab-il Passage                                 Seed:  55   Index: 216
-    Extra Steps: 10
-    Step  30: 13 / MacGiant x1, Horseman x1, Beamer x1 (7.715s)
-    Step  83: 14 / Searcher (summons D.Machin) x1, Beamer x2 (7.658s)
-   (Step 112: 15 / MacGiant x1)
-   (Step 117: 16 / Searcher (summons Horseman) x1, Beamer x2)
-   (Step 159: 17 / MacGiant x1)
-   (Step 193: 18 / MacGiant x1, Horseman x1, Beamer x1)
-   (Step 218: 19 / MacGiant x1, Machine x1, Beamer x1)
+Giant of Bab-il Stomach                                   Seed:  55   Index: 177
+Grind Fight Search                                        Seed:  55   Index: 226
+  Save: Giant of Bab-il Passage                           Seed:  55   Index: 226
+  Giant of Bab-il Passage                                 Seed:  55   Index: 226
+    Step  20: 13 / MacGiant x1, Horseman x1, Beamer x1 (7.715s)
+    Step  73: 14 / Searcher (summons D.Machin) x1, Beamer x2 (7.658s)
+   (Step 102: 15 / MacGiant x1)
+   (Step 107: 16 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 149: 17 / MacGiant x1)
+   (Step 183: 18 / MacGiant x1, Horseman x1, Beamer x1)
+   (Step 208: 19 / MacGiant x1, Machine x1, Beamer x1)
   Giant of Bab-il Lung                                    Seed:  72   Index:  44
    (Step  28: 15 / MacGiant x2)
    (Step  33: 16 / Machine x3, Beamer x2)
@@ -82,19 +81,18 @@ Lunar Overworld                                           Seed:  72   Index: 186
 Lunar Subterrane B1                                       Seed:  72   Index: 203
   Step  28: 18 / Warlock x1, Kary x2 (6.416s)
 Lunar Subterrane B2                                       Seed:  72   Index: 236
-  Extra Steps: 12
+  Extra Steps: 18
   Step  11: 19 / Warlock x1, Kary x1, RedGiant x1 (6.432s)
   Step  40: 20 / Warlock x1, Kary x1, RedGiant x1 (6.432s)
-Lunar Subterrane B3                                       Seed:  89   Index:  21
-  Step  11: 21 / Warlock x2, RedGiant x1 (6.432s)
-Lunar Subterrane B4                                       Seed:  89   Index:  35
-  Step  41: 22 / D.Bone x1, Warlock x1 (6.366s)
-  Step  50: 23 / D.Bone x1, Warlock x1 (6.366s)
-Lunar Subterrane B4 Passage                               Seed:  89   Index:  91
-  Step  26: 24 / King-Ryu x1, Ging-Ryu x1 (6.738s)
-Lunar Subterrane B4                                       Seed:  89   Index: 120
-Lunar Subterrane B5                                       Seed:  89   Index: 135
-  Extra Steps: 6
+Lunar Subterrane B3                                       Seed:  89   Index:  27
+  Step   5: 21 / Warlock x2, RedGiant x1 (6.432s)
+Lunar Subterrane B4                                       Seed:  89   Index:  41
+  Step  35: 22 / D.Bone x1, Warlock x1 (6.366s)
+  Step  44: 23 / D.Bone x1, Warlock x1 (6.366s)
+Lunar Subterrane B4 Passage                               Seed:  89   Index:  97
+  Step  20: 24 / King-Ryu x1, Ging-Ryu x1 (6.738s)
+Lunar Subterrane B4                                       Seed:  89   Index: 126
+Lunar Subterrane B5                                       Seed:  89   Index: 141
 Lunar Subterrane B5 Passage A                             Seed:  89   Index: 158
 Lunar Subterrane B5                                       Seed:  89   Index: 191
 Lunar Subterrane B5 Passage B                             Seed:  89   Index: 200

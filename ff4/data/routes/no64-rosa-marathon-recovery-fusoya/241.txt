@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)
 VERSION	1
-ROSA	v1.2.0-2-g139db62
+ROSA	v1.2.0-3-g32213e2
 SEED	241
-MAXSTEP	64
-MAXSEG	-1
+MAXSTEP	256
+MAXSEG	3
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	46102456
-VARS	C316C00:1 E30B500:1 E30BC01:2 E30BD00:64 E316A01:10 E317000:2 E317B00:4
+VARS	C316C00:2 E30B500:1 E30BD00:76 E317B00:12
 
 Fly to Lunar Path                                         Seed: 241   Index:   0
 Lunar Overworld                                           Seed: 241   Index:   0
@@ -67,30 +67,28 @@ Grind Fight Search                                        Seed:   2   Index: 166
    (Step 240: 26 / Beamer x1, Machine x2, Horseman x1)
 Battle: Elements                                          Seed:   2   Index: 248
 Giant of Bab-il Lung                                      Seed:   2   Index: 248
-  Extra Steps: 2
-Giant of Bab-il CPU                                       Seed:  19   Index:   1
-  Extra Steps: 64
-Return to Moon                                            Seed:  19   Index:  67
-Lunar Overworld                                           Seed:  19   Index:  67
-Lunar Path (west)                                         Seed:  19   Index:  72
-  Step  21: 18 / Slime x1, Tofu x1, Pudding x1 (7.637s)
-Lunar Overworld                                           Seed:  19   Index: 110
-Lunar Path (east)                                         Seed:  19   Index: 145
-  Step  13: 19 / Pudding x2, Grenade x2 (7.823s)
-Lunar Overworld                                           Seed:  19   Index: 176
-Lunar Subterrane B1                                       Seed:  19   Index: 193
-  Step  29: 20 / Warlock x1 (6.338s)
-  Step  31: 21 / RedGiant x1 (6.683s)
-Lunar Subterrane B2                                       Seed:  19   Index: 226
-Lunar Subterrane B3                                       Seed:  19   Index: 255
-Lunar Subterrane B4                                       Seed:  36   Index:  13
-  Step  18: 22 / Ging-Ryu x1 (6.682s)
-Lunar Subterrane B4 Passage                               Seed:  36   Index:  69
-  Step  23: 23 / D.Fossil x1 (6.354s)
-Lunar Subterrane B4                                       Seed:  36   Index:  98
-  Extra Steps: 10
-  Step  23: 24 / D.Bone x1, Warlock x1 (6.366s)
-  Step  25: 25 / D.Bone x1, Warlock x1 (6.366s)
+Giant of Bab-il CPU                                       Seed:   2   Index: 255
+  Extra Steps: 76
+Return to Moon                                            Seed:  19   Index:  77
+Lunar Overworld                                           Seed:  19   Index:  77
+Lunar Path (west)                                         Seed:  19   Index:  82
+  Step  11: 18 / Slime x1, Tofu x1, Pudding x1 (7.637s)
+Lunar Overworld                                           Seed:  19   Index: 120
+Lunar Path (east)                                         Seed:  19   Index: 155
+  Step   3: 19 / Pudding x2, Grenade x2 (7.823s)
+Lunar Overworld                                           Seed:  19   Index: 186
+Lunar Subterrane B1                                       Seed:  19   Index: 203
+  Step  19: 20 / Warlock x1 (6.338s)
+  Step  21: 21 / RedGiant x1 (6.683s)
+Lunar Subterrane B2                                       Seed:  19   Index: 236
+Lunar Subterrane B3                                       Seed:  36   Index:   9
+Lunar Subterrane B4                                       Seed:  36   Index:  23
+  Step   8: 22 / Ging-Ryu x1 (6.682s)
+Lunar Subterrane B4 Passage                               Seed:  36   Index:  79
+  Step  13: 23 / D.Fossil x1 (6.354s)
+Lunar Subterrane B4                                       Seed:  36   Index: 108
+  Step  13: 24 / D.Bone x1, Warlock x1 (6.366s)
+  Step  15: 25 / D.Bone x1, Warlock x1 (6.366s)
 Lunar Subterrane B5                                       Seed:  36   Index: 123
 Lunar Subterrane B5 Passage A                             Seed:  36   Index: 140
   Step   1: 26 / D.Fossil x1 (6.354s)
@@ -100,7 +98,7 @@ Lunar Subterrane B5 Passage B                             Seed:  36   Index: 182
 Lunar Subterrane B5 Inward Direct                         Seed:  36   Index: 214
   Lunar Subterrane B5                                     Seed:  36   Index: 214
     Step   6: 28 / Warlock x3 (6.419s)
-Get Ninja Star on Lunar Core B1                           Seed:  36   Index: 226
+Get Ninja Star on Lunar Core B3                           Seed:  36   Index: 226
   Lunar Subterrane B6                                     Seed:  36   Index: 226
     Step  15: 29 / Ging-Ryu x1, RedGiant x1 (6.738s)
   Lunar Subterrane B6 Passage                             Seed:  53   Index:   7
@@ -109,19 +107,18 @@ Get Ninja Star on Lunar Core B1                           Seed:  36   Index: 226
     Step   7: 31 / King-Ryu x1 (6.694s)
   Save: Lunar Subterrane B7 Save Room                     Seed:  53   Index:  43
   Lunar Subterrane B7 Save Room                           Seed:  53   Index:  43
-    Extra Steps: 4
-  Lunar Subterrane B7                                     Seed:  53   Index:  54
-    Step  35: 32 / King-Ryu x1, Ging-Ryu x1 (6.738s)
-  Lunar Core B1                                           Seed:  53   Index: 112
-    Step  31: 33 / Behemoth x1 (7.413s)
-    Step  55: 34 / Behemoth x1 (7.413s)
-    Step  74: 35 / Red D. x1 (23.119s)
-  Lunar Core B2                                           Seed:  53   Index: 190
-  Lunar Core B3                                           Seed:  53   Index: 245
-    Extra Steps: 2
-    Step   1: 36 / Behemoth x2 (7.471s)
-    Step  41: 37 / Behemoth x1 (7.413s)
-    Step  54: 38 / Behemoth x2 (7.471s)
+    Extra Steps: 12
+  Lunar Subterrane B7                                     Seed:  53   Index:  62
+    Step  27: 32 / King-Ryu x1, Ging-Ryu x1 (6.738s)
+  Lunar Core B1                                           Seed:  53   Index: 120
+    Step  23: 33 / Behemoth x1 (7.413s)
+    Step  47: 34 / Behemoth x1 (7.413s)
+    Step  66: 35 / Red D. x1 (23.119s)
+  Lunar Core B2                                           Seed:  53   Index: 188
+  Lunar Core B3                                           Seed:  53   Index: 243
+    Step   3: 36 / Behemoth x2 (7.471s)
+    Step  43: 37 / Behemoth x1 (7.413s)
+    Step  56: 38 / Behemoth x2 (7.471s)
 Lunar Core B4                                             Seed:  70   Index:  43
   Step  29: 39 / Mind x1 (12.517s)
 
@@ -133,7 +130,7 @@ Base Total Time:     794.481s
 Time Saved:          27.370s
 
 Optional Steps:      1
-Extra Steps:         82
+Extra Steps:         88
 Encounters:          39
 
 Base Encounters:     43

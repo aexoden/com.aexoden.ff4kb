@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)
 VERSION	1
-ROSA	v1.2.0-2-g139db62
+ROSA	v1.2.0-3-g32213e2
 SEED	61
-MAXSTEP	64
-MAXSEG	-1
+MAXSTEP	256
+MAXSEG	4
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	44723968
-VARS	C316C00:2 E30B500:1 E30B600:14 E30B900:16 E30BA00:6 E30BD00:14 E316700:20 E316D01:8 E317B00:2
+VARS	C316C00:2 E30B500:37 E30BD00:14 E316700:20 E317B00:10
 
 Fly to Lunar Path                                         Seed:  61   Index:   0
 Lunar Overworld                                           Seed:  61   Index:   0
@@ -34,27 +34,25 @@ Lunar Overworld                                           Seed:  78   Index:  13
 Save: Before Giant of Bab-il                              Seed:  78   Index:  14
 Giant of Bab-il Mouth                                     Seed:  78   Index:  14
   Optional Steps: 1
-Giant of Bab-il Neck                                      Seed:  78   Index:  33
-  Extra Steps: 14
-  Step  15: 9 / Searcher (summons Machine) x1 (7.406s)
-Giant of Bab-il Chest                                     Seed:  78   Index:  49
-  Step  23: 10 / Searcher (summons MacGiant) x1 (7.400s)
-  Step  28: 11 / Machine x2, Beamer x2 (7.818s)
-  Step  69: 12 / MacGiant x1 (7.514s)
-  Step  78: 13 / Searcher (summons Horseman) x1, Machine x2 (7.657s)
-Giant of Bab-il Stomach                                   Seed:  78   Index: 131
-  Extra Steps: 16
-  Step  64: 14 / Searcher (summons Horseman) x1, Beamer x2 (7.606s)
-Grind Fight Search                                        Seed:  78   Index: 196
-  Save: Giant of Bab-il Passage                           Seed:  78   Index: 196
-  Giant of Bab-il Passage                                 Seed:  78   Index: 196
-    Extra Steps: 6
-    Step  51: 15 / D.Machin x1 (7.496s)
-    Step  80: 16 / Searcher (summons D.Machin) x1, Beamer x2 (7.658s)
-   (Step  99: 17 / MacGiant x1, Horseman x1, Beamer x1)
-   (Step 110: 18 / Searcher (summons Horseman) x1, Beamer x2)
-   (Step 208: 19 / MacGiant x1)
-   (Step 241: 20 / MacGiant x1)
+  Extra Steps: 36
+  Step  34: 9 / Searcher (summons Machine) x1 (7.406s)
+Giant of Bab-il Neck                                      Seed:  78   Index:  69
+Giant of Bab-il Chest                                     Seed:  78   Index:  71
+  Step   1: 10 / Searcher (summons MacGiant) x1 (7.400s)
+  Step   6: 11 / Machine x2, Beamer x2 (7.818s)
+  Step  47: 12 / MacGiant x1 (7.514s)
+  Step  56: 13 / Searcher (summons Horseman) x1, Machine x2 (7.657s)
+Giant of Bab-il Stomach                                   Seed:  78   Index: 153
+  Step  42: 14 / Searcher (summons Horseman) x1, Beamer x2 (7.606s)
+Grind Fight Search                                        Seed:  78   Index: 202
+  Save: Giant of Bab-il Passage                           Seed:  78   Index: 202
+  Giant of Bab-il Passage                                 Seed:  78   Index: 202
+    Step  45: 15 / D.Machin x1 (7.496s)
+    Step  74: 16 / Searcher (summons D.Machin) x1, Beamer x2 (7.658s)
+   (Step  93: 17 / MacGiant x1, Horseman x1, Beamer x1)
+   (Step 104: 18 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 202: 19 / MacGiant x1)
+   (Step 235: 20 / MacGiant x1)
   Giant of Bab-il Lung                                    Seed:  95   Index:  20
    (Step  19: 17 / D.Machin x1)
    (Step  30: 18 / Machine x3, Beamer x2)
@@ -105,12 +103,11 @@ Get Ninja Star on Lunar Core B3                           Seed: 112   Index: 220
   Lunar Subterrane B7                                     Seed: 129   Index:  14
   Save: Lunar Subterrane B7 Save Room                     Seed: 129   Index:  37
   Lunar Subterrane B7 Save Room                           Seed: 129   Index:  37
-    Extra Steps: 2
-  Lunar Subterrane B7                                     Seed: 129   Index:  46
-    Extra Steps: 8
-    Step  34: 29 / D.Fossil x1 (6.354s)
-    Step  40: 30 / King-Ryu x1 (6.694s)
-    Step  66: 31 / D.Fossil x1 (6.354s)
+    Extra Steps: 10
+  Lunar Subterrane B7                                     Seed: 129   Index:  54
+    Step  26: 29 / D.Fossil x1 (6.354s)
+    Step  32: 30 / King-Ryu x1 (6.694s)
+    Step  58: 31 / D.Fossil x1 (6.354s)
   Lunar Core B1                                           Seed: 129   Index: 112
     Step  48: 32 / Behemoth x1 (7.413s)
   Lunar Core B2                                           Seed: 129   Index: 180

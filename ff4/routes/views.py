@@ -15,6 +15,11 @@ GROUPS = {
 		'description': 'These are the standard routes people are most likely to use.',
 		'twin_safe': True,
 	},
+	'recovery': {
+		'name': 'Recovery Routes',
+		'description': 'These routes are intended to be used to recover a step route in case the original one was permanently lost.',
+		'twin_safe': True,
+	},
 	'testing': {
 		'name': 'Testing Routes',
 		'description': 'These are routes currently in development. They may or may not be accurate, and are almost certainly still suboptimal.',
@@ -86,12 +91,12 @@ ROUTES = {
 	'no64-rosa-marathon-recovery-fusoya': {
 		'name': 'Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)',
 		'description': 'This variant of no64-rosa-marathon runs from immediately upon landing on the moon until Zeromus is defeated, and is primarily intended as a step route (and grind) recovery method.',
-		'group': 'testing',
+		'group': 'recovery',
 		'enabled': True,
 		'twin_safe': True,
-		'complete': False,
+		'complete': True,
 		'seed_finder': True,
-		'status': 'Suboptimal'
+		'status': 'Optimal'
 	},
 
 	'premist': {

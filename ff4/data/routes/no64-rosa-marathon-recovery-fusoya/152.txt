@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)
 VERSION	1
-ROSA	v1.2.0-2-g139db62
+ROSA	v1.2.0-3-g32213e2
 SEED	152
-MAXSTEP	64
-MAXSEG	-1
+MAXSTEP	256
+MAXSEG	4
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	47131113
-VARS	C316C00:2 E200007:10 E200008:8 E30B500:1 E30B900:10 E30BA00:28 E30BC00:10 E316D01:2
+VARS	C316C00:2 E200007:18 E30B500:11 E30BA00:38 E316D01:2
 
 Fly to Lunar Path                                         Seed: 152   Index:   0
 Lunar Overworld                                           Seed: 152   Index:   0
@@ -34,17 +34,17 @@ Lunar Overworld                                           Seed: 169   Index:  13
 Save: Before Giant of Bab-il                              Seed: 169   Index:  14
 Giant of Bab-il Mouth                                     Seed: 169   Index:  14
   Optional Steps: 1
-Giant of Bab-il Neck                                      Seed: 169   Index:  33
-Giant of Bab-il Chest                                     Seed: 169   Index:  35
-  Step  60: 9 / MacGiant x1 (7.514s)
-Giant of Bab-il Stomach                                   Seed: 169   Index: 117
   Extra Steps: 10
-  Step  54: 10 / Searcher (summons Horseman) x1, Beamer x2 (7.606s)
-  Step  59: 11 / Horseman x2 (7.607s)
+Giant of Bab-il Neck                                      Seed: 169   Index:  43
+Giant of Bab-il Chest                                     Seed: 169   Index:  45
+  Step  50: 9 / MacGiant x1 (7.514s)
+Giant of Bab-il Stomach                                   Seed: 169   Index: 127
+  Step  44: 10 / Searcher (summons Horseman) x1, Beamer x2 (7.606s)
+  Step  49: 11 / Horseman x2 (7.607s)
 Grind Fight Search                                        Seed: 169   Index: 176
   Save: Giant of Bab-il Passage                           Seed: 169   Index: 176
   Giant of Bab-il Passage                                 Seed: 169   Index: 176
-    Extra Steps: 28
+    Extra Steps: 38
     Step  13: 12 / MacGiant x1, Machine x1, Beamer x1 (7.694s)
     Step  20: 13 / MacGiant x1 (7.506s)
     Step  28: 14 / Searcher (summons Horseman) x1, Beamer x2 (7.606s)
@@ -55,29 +55,27 @@ Grind Fight Search                                        Seed: 169   Index: 176
    (Step 143: 19 / Horseman x1, Machine x2)
    (Step 225: 20 / Horseman x1, Machine x2)
    (Step 252: 21 / MacGiant x1, Horseman x1, Beamer x1)
-  Giant of Bab-il Lung                                    Seed: 186   Index:  22
-    Extra Steps: 10
-    Step  18: 17 / Searcher (summons D.Machin) x1, Beamer x2 (7.658s)
-   (Step  19: 18 / MacGiant x2)
-   (Step  41: 19 / Searcher (summons Horseman) x1, Beamer x2)
-   (Step 123: 20 / Searcher (summons Horseman) x1, Beamer x2)
-   (Step 150: 21 / D.Machin x1)
-   (Step 165: 22 / Searcher (summons Horseman) x1, Beamer x2)
-   (Step 211: 23 / Searcher (summons Horseman) x1, Beamer x2)
-   (Step 230: 24 / MacGiant x2)
-   (Step 240: 25 / MacGiant x1, Horseman x1, Beamer x1)
+  Giant of Bab-il Lung                                    Seed: 186   Index:  32
+    Step   8: 17 / Searcher (summons D.Machin) x1, Beamer x2 (7.658s)
+   (Step   9: 18 / MacGiant x2)
+   (Step  31: 19 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 113: 20 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 140: 21 / D.Machin x1)
+   (Step 155: 22 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 201: 23 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 220: 24 / MacGiant x2)
+   (Step 230: 25 / MacGiant x1, Horseman x1, Beamer x1)
 Battle: Elements                                          Seed: 186   Index:  40
 Giant of Bab-il Lung                                      Seed: 186   Index:  40
   Step   1: 18 / MacGiant x2 (11.785s)
 Giant of Bab-il CPU                                       Seed: 186   Index:  47
 Return to Moon                                            Seed: 186   Index:  49
 Lunar Overworld                                           Seed: 186   Index:  49
-  Extra Steps: 10
+  Extra Steps: 18
   Step  14: 19 / Slime x1, Tofu x1, Pudding x1 (7.586s)
-Lunar Path (west)                                         Seed: 186   Index:  64
-Lunar Overworld                                           Seed: 186   Index: 102
-  Extra Steps: 8
-  Step  43: 20 / Slime x1, Tofu x1, Pudding x1 (7.586s)
+Lunar Path (west)                                         Seed: 186   Index:  72
+Lunar Overworld                                           Seed: 186   Index: 110
+  Step  35: 20 / Slime x1, Tofu x1, Pudding x1 (7.586s)
 Lunar Path (east)                                         Seed: 186   Index: 145
   Step  27: 21 / Red Worm x2 (7.562s)
 Lunar Overworld                                           Seed: 186   Index: 176

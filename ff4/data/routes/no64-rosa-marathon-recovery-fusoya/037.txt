@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)
 VERSION	1
-ROSA	v1.2.0-2-g139db62
+ROSA	v1.2.0-3-g32213e2
 SEED	37
-MAXSTEP	64
-MAXSEG	-1
+MAXSTEP	256
+MAXSEG	2
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	45911443
-VARS	E30B500:1 E30B900:2 E316D01:14 E317B00:2
+VARS	E30B500:3 E317B00:16
 
 Fly to Lunar Path                                         Seed:  37   Index:   0
 Lunar Overworld                                           Seed:  37   Index:   0
@@ -34,17 +34,17 @@ Lunar Overworld                                           Seed:  54   Index:  13
 Save: Before Giant of Bab-il                              Seed:  54   Index:  14
 Giant of Bab-il Mouth                                     Seed:  54   Index:  14
   Optional Steps: 1
+  Extra Steps: 2
   Step   1: 9 / MacGiant x1 (7.514s)
   Step  13: 10 / Machine x2, Beamer x2 (7.818s)
-Giant of Bab-il Neck                                      Seed:  54   Index:  33
-Giant of Bab-il Chest                                     Seed:  54   Index:  35
-  Step  18: 11 / MacGiant x1, Horseman x1 (7.641s)
-  Step  19: 12 / Horseman x1, Beamer x1, Machine x1 (7.709s)
-  Step  54: 13 / MacGiant x1 (7.514s)
-Giant of Bab-il Stomach                                   Seed:  54   Index: 117
-  Extra Steps: 2
-  Step  26: 14 / Horseman x1, Beamer x1, Machine x1 (7.709s)
-  Step  50: 15 / Searcher (summons MacGiant) x1 (7.400s)
+Giant of Bab-il Neck                                      Seed:  54   Index:  35
+Giant of Bab-il Chest                                     Seed:  54   Index:  37
+  Step  16: 11 / MacGiant x1, Horseman x1 (7.641s)
+  Step  17: 12 / Horseman x1, Beamer x1, Machine x1 (7.709s)
+  Step  52: 13 / MacGiant x1 (7.514s)
+Giant of Bab-il Stomach                                   Seed:  54   Index: 119
+  Step  24: 14 / Horseman x1, Beamer x1, Machine x1 (7.709s)
+  Step  48: 15 / Searcher (summons MacGiant) x1 (7.400s)
 Grind Fight Search                                        Seed:  54   Index: 168
   Save: Giant of Bab-il Passage                           Seed:  54   Index: 168
   Giant of Bab-il Passage                                 Seed:  54   Index: 168
@@ -109,12 +109,11 @@ Get Ninja Star on Lunar Subterrane B6                     Seed:  88   Index: 152
   Lunar Subterrane B7                                     Seed:  88   Index: 214
   Save: Lunar Subterrane B7 Save Room                     Seed:  88   Index: 237
   Lunar Subterrane B7 Save Room                           Seed:  88   Index: 237
-    Extra Steps: 2
-  Lunar Subterrane B7                                     Seed:  88   Index: 246
-    Extra Steps: 14
-    Step  22: 34 / King-Ryu x1, Ging-Ryu x1 (6.738s)
-    Step  61: 35 / King-Ryu x1 (6.694s)
-    Step  72: 36 / D.Fossil x1 (6.354s)
+    Extra Steps: 16
+  Lunar Subterrane B7                                     Seed: 105   Index:   4
+    Step   8: 34 / King-Ryu x1, Ging-Ryu x1 (6.738s)
+    Step  47: 35 / King-Ryu x1 (6.694s)
+    Step  58: 36 / D.Fossil x1 (6.354s)
   Lunar Core B1                                           Seed: 105   Index:  62
     Step  53: 37 / Behemoth x1 (7.413s)
   Lunar Core B2                                           Seed: 105   Index: 130

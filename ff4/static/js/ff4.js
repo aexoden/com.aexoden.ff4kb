@@ -1067,6 +1067,70 @@ com.aexoden.ff4 = function()
 			"lunar-core-b3-1",
 			"lunar-core-b4-0",
 			"lunar-core-b5-0"
+		],
+		"no64-rosa-marathon-recovery-fusoya": [
+			"lunar-overworld-5-0",
+			"lunar-path-west-0-0",
+			"lunar-overworld-6-0",
+			"lunar-path-east-0-0",
+			"lunar-overworld-7-0",
+			"lunars-lair-1f-0-0",
+			"lunar-overworld-8-0",
+			"lunar-path-east-1-0",
+			"lunar-overworld-9-0",
+			"lunar-path-west-1-0",
+			"lunar-overworld-10-0",
+			"big-whale-console",
+			"lunar-overworld-4-1",
+			"big-whale-exit",
+			"lunar-overworld-2-1",
+			"hummingway-cave-0-1",
+			"lunar-overworld-3-1",
+			"big-whale-crystal",
+			"giant-of-babil-mouth-0",
+			"giant-of-babil-neck-0",
+			"giant-of-babil-chest-0",
+			"giant-of-babil-stomach-0",
+			"giant-of-babil-passage-1",
+			"giant-of-babil-lung-0",
+			"giant-of-babil-cpu-0",
+			"big-whale-console",
+			"lunar-overworld-11-0",
+			"big-whale-exit",
+			"lunar-overworld-12-0",
+			"lunar-path-west-2",
+			"lunar-overworld-13-0",
+			"lunar-path-east-2",
+			"lunar-overworld-14-0",
+			"lunars-lair-1f-1",
+			"lunars-lair-2f-0",
+			"lunar-subterrane-b1-0",
+			"lunar-subterrane-b2-0",
+			"lunar-subterrane-b3-0",
+			"lunar-subterrane-b4-0",
+			"lunar-subterrane-b4-passage-0",
+			"lunar-subterrane-b4-1",
+			"lunar-subterrane-b5-0",
+			"lunar-subterrane-b5-passage-a-2",
+			"lunar-subterrane-b5-1",
+			"lunar-subterrane-b5-passage-b-1",
+			"lunar-subterrane-b5-2",
+			"lunar-subterrane-b5-3",
+			"lunar-subterrane-b5-pink-puff-room-0",
+			"lunar-subterrane-b5-4",
+			"lunar-subterrane-b6-0",
+			"lunar-subterrane-b6-1",
+			"lunar-subterrane-b6-passage-0",
+			"lunar-subterrane-b7-1",
+			"lunar-subterrane-b7-save-room-1",
+			"lunar-subterrane-b7-2",
+			"lunar-core-b1-0",
+			"lunar-core-b1-1",
+			"lunar-core-b2-0",
+			"lunar-core-b3-0",
+			"lunar-core-b3-1",
+			"lunar-core-b4-0",
+			"lunar-core-b5-0"
 		]
 	};
 
@@ -2289,6 +2353,17 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"giant-of-babil-passage-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"giant-of-babil-passage-1": {
+					"index": "0",
+					"location": "Giant of Bab-il Passage",
+					"disambiguation": ""
+				}
+			}
+		},
 		"giant-of-babil-stomach-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -2435,6 +2510,17 @@ com.aexoden.ff4 = function()
 			"routes": {},
 			"paths": {
 				"lunar-core-b1-0": {
+					"index": "0",
+					"location": "Lunar Core B1",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-core-b1-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-core-b1-1": {
 					"index": "0",
 					"location": "Lunar Core B1",
 					"disambiguation": ""
@@ -3098,6 +3184,60 @@ com.aexoden.ff4 = function()
 				}
 			}
 		},
+		"lunar-subterrane-b6-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-subterrane-b6-1": {
+					"index": "0",
+					"location": "Lunar Subterrane B6",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-subterrane-b6-choice-0": {
+			"type": VariableFlags.CHOICE,
+			"descriptions": {
+				0: "Get the Ninja star on Lunar Subterrane B6",
+				1: "Get the Ninja star on Lunar Core B1",
+				2: "Get the Ninja star on Lunar Core B3"
+			},
+			"paths": {
+				0: {
+					"lunar-subterrane-b6-0": { "enabled": false },
+					"lunar-subterrane-b6-1": {
+						"enabled": true,
+						"index": "0",
+						"location": "Lunar Subterrane B6",
+						"instruction": "Get the Ninja star"
+					},
+					"lunar-core-b1-1": { "enabled": false },
+					"lunar-core-b3-1": { "enabled": false },
+				},
+				1: {
+					"lunar-subterrane-b6-1": { "enabled": false },
+					"lunar-core-b1-0": { "enabled": false },
+					"lunar-core-b1-1": {
+						"enabled": true,
+						"index": "0",
+						"location": "Lunar Core B1",
+						"instruction": "Get the Ninja star"
+					},
+					"lunar-core-b3-1": { "enabled": false },
+				},
+				2: {
+					"lunar-subterrane-b6-1": { "enabled": false },
+					"lunar-core-b1-1": { "enabled": false },
+					"lunar-core-b3-0": { "enabled": false },
+					"lunar-core-b3-1": {
+						"enabled": true,
+						"index": "0",
+						"location": "Lunar Core B3",
+						"instruction": "Get the Ninja star"
+					}
+				}
+			}
+		},
 		"lunar-subterrane-b6-passage-0": {
 			"type": VariableFlags.EXTRA,
 			"routes": {},
@@ -3169,6 +3309,17 @@ com.aexoden.ff4 = function()
 			"routes": {},
 			"paths": {
 				"lunar-subterrane-b7-save-room-0": {
+					"index": "0",
+					"location": "Lunar Subterrane B7 Save Room",
+					"disambiguation": ""
+				}
+			}
+		},
+		"lunar-subterrane-b7-save-room-1": {
+			"type": VariableFlags.EXTRA,
+			"routes": {},
+			"paths": {
+				"lunar-subterrane-b7-save-room-1": {
 					"index": "0",
 					"location": "Lunar Subterrane B7 Save Room",
 					"disambiguation": ""
@@ -5047,6 +5198,46 @@ com.aexoden.ff4 = function()
 			"E316E00": ["lunar-core-b1-0"],
 			"E316F00": ["lunar-core-b2-0"],
 			"E317000": ["lunar-core-b3-1"]
+		},
+		"no64-rosa-marathon-recovery-fusoya": {
+			"E316500": ["hummingway-cave-0-1"],
+			"E200000": ["lunar-overworld-3-1"],
+			"E30B500": ["giant-of-babil-mouth-0"],
+			"E30B600": ["giant-of-babil-neck-0"],
+			"E30B700": ["giant-of-babil-chest-0"],
+			"E30B900": ["giant-of-babil-stomach-0"],
+			"E30BA00": ["giant-of-babil-passage-1"],
+			"E30BC00": ["giant-of-babil-lung-0"],
+			"E30BC01": ["giant-of-babil-lung-1"],
+			"E30BD00": ["giant-of-babil-cpu-0"],
+			"E200007": ["lunar-overworld-12-0"],
+			"E316302": ["lunar-path-west-2"],
+			"E200008": ["lunar-overworld-13-0"],
+			"E316402": ["lunar-path-east-2"],
+			"E200009": ["lunar-overworld-14-0"],
+			"E316700": ["lunar-subterrane-b1-0"],
+			"E316800": ["lunar-subterrane-b2-0"],
+			"E316900": ["lunar-subterrane-b3-0"],
+			"E316A00": ["lunar-subterrane-b4-0"],
+			"E317400": ["lunar-subterrane-b4-passage-0"],
+			"E316A01": ["lunar-subterrane-b4-1"],
+			"E316B00": ["lunar-subterrane-b5-0"],
+			"E317500": ["lunar-subterrane-b5-passage-a-2"],
+			"E316B01": ["lunar-subterrane-b5-1"],
+			"E317600": ["lunar-subterrane-b5-passage-b-1"],
+			"C316B00": ["lunar-subterrane-b5-choice-0"],
+			"E316B02": ["lunar-subterrane-b5-2", "lunar-subterrane-b5-3"],
+			"E317700": ["lunar-subterrane-b5-pink-puff-room-0"],
+			"E316B03": ["lunar-subterrane-b5-4"],
+			"C316C00": ["lunar-subterrane-b6-choice-0"],
+			"E316C00": ["lunar-subterrane-b6-0", "lunar-subterrane-b6-1"],
+			"E317900": ["lunar-subterrane-b6-passage-0"],
+			"E316D00": ["lunar-subterrane-b7-1"],
+			"E317B00": ["lunar-subterrane-b7-save-room-1"],
+			"E316D01": ["lunar-subterrane-b7-2"],
+			"E316E00": ["lunar-core-b1-0", "lunar-core-b1-1"],
+			"E316F00": ["lunar-core-b2-0"],
+			"E317000": ["lunar-core-b3-0", "lunar-core-b3-1"]
 		}
 	};
 
@@ -7315,6 +7506,40 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"giant-of-babil-passage-1": {
+			"description": "Giant of Bab-il Passage",
+			"flags": PathFlags.STEPS,
+			"map": "30BA-0",
+			"segments": {
+				"base-0": [
+					[3, 4, SegmentFlags.START],
+					[3, 23, SegmentFlags.NONE],
+					[4, 23, SegmentFlags.NONE],
+					[4, 25, SegmentFlags.NONE],
+					[6, 25, SegmentFlags.NONE],
+					[6, 26, SegmentFlags.NONE],
+					[11, 26, SegmentFlags.NONE],
+					[11, 25, SegmentFlags.NONE],
+					[17, 25, SegmentFlags.NONE],
+					[17, 26, SegmentFlags.NONE],
+					[24, 26, SegmentFlags.NONE],
+					[24, 23, SegmentFlags.NONE],
+					[25, 23, SegmentFlags.NONE],
+					[25, 15, SegmentFlags.NONE],
+					[14, 15, SegmentFlags.RETURN],
+					[21, 15, SegmentFlags.NONE],
+					[21, 4, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[21, 8, SegmentFlags.NONE],
+					[22, 8, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				],
+				"extra-2-0": [
+					[21, 5, SegmentFlags.NONE],
+					[22, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
 		"giant-of-babil-stomach-0": {
 			"flags": PathFlags.STEPS,
 			"map": "30B9-0",
@@ -7763,6 +7988,54 @@ com.aexoden.ff4 = function()
 					[21, 13, SegmentFlags.NONE],
 					[13, 13, SegmentFlags.NONE],
 					[13, 15, SegmentFlags.NONE],
+					[9, 15, SegmentFlags.NONE],
+					[9, 20, SegmentFlags.NONE],
+					[12, 20, SegmentFlags.NONE],
+					[12, 19, SegmentFlags.NONE],
+					[14, 19, SegmentFlags.NONE],
+					[14, 20, SegmentFlags.NONE],
+					[15, 20, SegmentFlags.NONE],
+					[15, 21, SegmentFlags.NONE],
+					[19, 21, SegmentFlags.NONE],
+					[19, 20, SegmentFlags.NONE],
+					[20, 20, SegmentFlags.NONE],
+					[20, 16, SegmentFlags.NONE],
+					[17, 16, SegmentFlags.NONE],
+					[17, 19, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[17, 21, SegmentFlags.NONE],
+					[17, 22, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-core-b1-1": {
+			"description": "Lunar Core B1",
+			"flags": PathFlags.STEPS,
+			"map": "316E-0",
+			"segments": {
+				"base-0": [
+					[17, 8, SegmentFlags.START],
+					[17, 9, SegmentFlags.NONE],
+					[24, 9, SegmentFlags.NONE],
+					[24, 12, SegmentFlags.NONE],
+					[26, 12, SegmentFlags.NONE],
+					[26, 16, SegmentFlags.NONE],
+					[24, 16, SegmentFlags.NONE],
+					[24, 15, SegmentFlags.NONE],
+					[23, 15, SegmentFlags.NONE],
+					[23, 14, SegmentFlags.NONE],
+					[21, 14, SegmentFlags.NONE],
+					[21, 13, SegmentFlags.NONE],
+					[13, 13, SegmentFlags.NONE],
+					[13, 15, SegmentFlags.NONE],
+					[8, 15, SegmentFlags.NONE],
+					[8, 13, SegmentFlags.NONE],
+					[7, 13, SegmentFlags.NONE],
+					[7, 12, SegmentFlags.RETURN],
+					[7, 13, SegmentFlags.NONE],
+					[8, 13, SegmentFlags.NONE],
+					[8, 15, SegmentFlags.NONE],
 					[9, 15, SegmentFlags.NONE],
 					[9, 20, SegmentFlags.NONE],
 					[12, 20, SegmentFlags.NONE],
@@ -8854,6 +9127,38 @@ com.aexoden.ff4 = function()
 				]
 			}
 		},
+		"lunar-subterrane-b6-1": {
+			"description": "Lunar Subterrane B6",
+			"flags": PathFlags.STEPS,
+			"map": "316C-0",
+			"segments": {
+				"base-0": [
+					[20, 1, SegmentFlags.START],
+					[20, 8, SegmentFlags.NONE],
+					[25, 8, SegmentFlags.NONE],
+					[25, 6, SegmentFlags.RETURN],
+					[25, 8, SegmentFlags.NONE],
+					[21, 8, SegmentFlags.NONE],
+					[21, 10, SegmentFlags.NONE],
+					[21, 10, SegmentFlags.NONE],
+					[21, 14, SegmentFlags.NONE],
+					[23, 14, SegmentFlags.NONE],
+					[23, 12, SegmentFlags.NONE],
+					[27, 12, SegmentFlags.NONE],
+					[27, 20, SegmentFlags.NONE],
+					[26, 20, SegmentFlags.NONE],
+					[26, 21, SegmentFlags.NONE],
+					[25, 21, SegmentFlags.NONE],
+					[25, 22, SegmentFlags.NONE],
+					[22, 22, SegmentFlags.NONE],
+					[22, 21, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[22, 22, SegmentFlags.NONE],
+					[21, 22, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL]
+				]
+			}
+		},
 		"lunar-subterrane-b6-passage-0": {
 			"flags": PathFlags.STEPS,
 			"map": "3179-0",
@@ -8940,6 +9245,25 @@ com.aexoden.ff4 = function()
 				"base-0": [
 					[3, 14, SegmentFlags.START],
 					[3, 15, SegmentFlags.END]
+				],
+				"extra-2-0": [
+					[3, 14, SegmentFlags.NONE],
+					[4, 14, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
+				]
+			}
+		},
+		"lunar-subterrane-b7-save-room-1": {
+			"flags": PathFlags.STEPS,
+			"map": "317B-0",
+			"segments": {
+				"base-0": [
+					[3, 14, SegmentFlags.START],
+					[3, 9, SegmentFlags.RETURN],
+					[3, 15, SegmentFlags.END]
+				],
+				"extra-1-0": [
+					[3, 10, SegmentFlags.NONE],
+					[4, 10, SegmentFlags.RETURN | SegmentFlags.ANNOTATE]
 				],
 				"extra-2-0": [
 					[3, 14, SegmentFlags.NONE],

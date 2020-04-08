@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)
 VERSION	1
-ROSA	v1.2.0-2-g139db62
+ROSA	v1.2.0-3-g32213e2
 SEED	64
-MAXSTEP	64
-MAXSEG	-1
+MAXSTEP	256
+MAXSEG	2
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	46743108
-VARS	C316C00:2 E30B500:1 E30B600:14 E30B700:26 E30BA00:28 E30BD00:22
+VARS	C316C00:2 E30B500:41 E30BA00:50
 
 Fly to Lunar Path                                         Seed:  64   Index:   0
 Lunar Overworld                                           Seed:  64   Index:   0
@@ -34,21 +34,20 @@ Lunar Overworld                                           Seed:  81   Index:  13
 Save: Before Giant of Bab-il                              Seed:  81   Index:  14
 Giant of Bab-il Mouth                                     Seed:  81   Index:  14
   Optional Steps: 1
-Giant of Bab-il Neck                                      Seed:  81   Index:  33
-  Extra Steps: 14
-  Step  15: 9 / Searcher (summons Machine) x1, Machine x2 (7.655s)
-Giant of Bab-il Chest                                     Seed:  81   Index:  49
-  Extra Steps: 26
-  Step  69: 10 / MacGiant x1 (7.514s)
-  Step  78: 11 / Machine x2, Beamer x2 (7.818s)
-  Step  91: 12 / MacGiant x1 (7.514s)
-  Step 108: 13 / Searcher (summons Horseman) x1, Machine x2 (7.657s)
+  Extra Steps: 40
+  Step  34: 9 / Searcher (summons Machine) x1, Machine x2 (7.655s)
+Giant of Bab-il Neck                                      Seed:  81   Index:  73
+Giant of Bab-il Chest                                     Seed:  81   Index:  75
+  Step  43: 10 / MacGiant x1 (7.514s)
+  Step  52: 11 / Machine x2, Beamer x2 (7.818s)
+  Step  65: 12 / MacGiant x1 (7.514s)
+  Step  82: 13 / Searcher (summons Horseman) x1, Machine x2 (7.657s)
 Giant of Bab-il Stomach                                   Seed:  81   Index: 157
   Step  38: 14 / Searcher (summons Horseman) x1, Beamer x2 (7.606s)
 Grind Fight Search                                        Seed:  81   Index: 206
   Save: Giant of Bab-il Passage                           Seed:  81   Index: 206
   Giant of Bab-il Passage                                 Seed:  81   Index: 206
-    Extra Steps: 28
+    Extra Steps: 50
     Step  23: 15 / D.Machin x1 (7.496s)
     Step  89: 16 / Searcher (summons D.Machin) x1, Beamer x2 (7.658s)
     Step 100: 17 / MacGiant x1, Horseman x1, Beamer x1 (7.674s)
@@ -58,20 +57,19 @@ Grind Fight Search                                        Seed:  81   Index: 206
    (Step 198: 21 / Searcher (summons Horseman) x1, Beamer x2)
    (Step 231: 22 / MacGiant x1, Horseman x1, Beamer x1)
    (Step 255: 23 / MacGiant x1)
-  Giant of Bab-il Lung                                    Seed:  98   Index:  52
-   (Step  39: 19 / MacGiant x2)
-   (Step  50: 20 / MacGiant x2)
-   (Step  96: 21 / Machine x3, Beamer x2)
-   (Step 129: 22 / D.Machin x1)
-   (Step 153: 23 / MacGiant x2)
-   (Step 178: 24 / Machine x3, Beamer x2)
-   (Step 221: 25 / Beamer x1, Machine x2, Horseman x1)
-   (Step 237: 26 / D.Machin x1)
-   (Step 253: 27 / Searcher (summons Horseman) x1, Beamer x2)
-Battle: Elements                                          Seed:  98   Index:  60
-Giant of Bab-il Lung                                      Seed:  98   Index:  60
-Giant of Bab-il CPU                                       Seed:  98   Index:  67
-  Extra Steps: 22
+  Giant of Bab-il Lung                                    Seed:  98   Index:  74
+   (Step  17: 19 / MacGiant x2)
+   (Step  28: 20 / MacGiant x2)
+   (Step  74: 21 / Machine x3, Beamer x2)
+   (Step 107: 22 / D.Machin x1)
+   (Step 131: 23 / MacGiant x2)
+   (Step 156: 24 / Machine x3, Beamer x2)
+   (Step 199: 25 / Beamer x1, Machine x2, Horseman x1)
+   (Step 215: 26 / D.Machin x1)
+   (Step 231: 27 / Searcher (summons Horseman) x1, Beamer x2)
+Battle: Elements                                          Seed:  98   Index:  82
+Giant of Bab-il Lung                                      Seed:  98   Index:  82
+Giant of Bab-il CPU                                       Seed:  98   Index:  89
 Return to Moon                                            Seed:  98   Index:  91
 Lunar Overworld                                           Seed:  98   Index:  91
 Lunar Path (west)                                         Seed:  98   Index:  96

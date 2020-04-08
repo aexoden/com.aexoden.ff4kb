@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)
 VERSION	1
-ROSA	v1.2.0-2-g139db62
+ROSA	v1.2.0-3-g32213e2
 SEED	183
-MAXSTEP	64
-MAXSEG	-1
+MAXSTEP	256
+MAXSEG	5
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	45984782
-VARS	C316C00:2 E30B500:1 E30B700:12 E30BD00:4 E316302:8 E316500:6 E316700:12 E317500:52 E317600:24
+VARS	C316C00:2 E30B500:13 E30BD00:24 E316500:6 E317500:52 E317600:24
 
 Fly to Lunar Path                                         Seed: 183   Index:   0
 Lunar Overworld                                           Seed: 183   Index:   0
@@ -35,13 +35,13 @@ Lunar Overworld                                           Seed: 200   Index:  19
 Save: Before Giant of Bab-il                              Seed: 200   Index:  20
 Giant of Bab-il Mouth                                     Seed: 200   Index:  20
   Optional Steps: 1
-Giant of Bab-il Neck                                      Seed: 200   Index:  39
-Giant of Bab-il Chest                                     Seed: 200   Index:  41
   Extra Steps: 12
-  Step  62: 9 / Searcher (summons Horseman) x1, Machine x2 (7.657s)
-  Step  65: 10 / Searcher (summons MacGiant) x1 (7.400s)
-  Step  68: 11 / Searcher (summons Horseman) x1, Machine x2 (7.657s)
-  Step  94: 12 / MacGiant x1 (7.514s)
+Giant of Bab-il Neck                                      Seed: 200   Index:  51
+Giant of Bab-il Chest                                     Seed: 200   Index:  53
+  Step  50: 9 / Searcher (summons Horseman) x1, Machine x2 (7.657s)
+  Step  53: 10 / Searcher (summons MacGiant) x1 (7.400s)
+  Step  56: 11 / Searcher (summons Horseman) x1, Machine x2 (7.657s)
+  Step  82: 12 / MacGiant x1 (7.514s)
 Giant of Bab-il Stomach                                   Seed: 200   Index: 135
   Step  16: 13 / Horseman x1, Beamer x2 (7.663s)
   Step  21: 14 / Searcher (summons Horseman) x1, Beamer x2 (7.606s)
@@ -69,22 +69,20 @@ Grind Fight Search                                        Seed: 200   Index: 184
 Battle: Elements                                          Seed: 217   Index:  10
 Giant of Bab-il Lung                                      Seed: 217   Index:  10
 Giant of Bab-il CPU                                       Seed: 217   Index:  17
-  Extra Steps: 4
-Return to Moon                                            Seed: 217   Index:  23
-Lunar Overworld                                           Seed: 217   Index:  23
-Lunar Path (west)                                         Seed: 217   Index:  28
-  Extra Steps: 8
-  Step  46: 17 / Procyote x1, Juclyote x2 (7.784s)
-Lunar Overworld                                           Seed: 217   Index:  74
-  Step  27: 18 / Red Worm x2 (7.513s)
-Lunar Path (east)                                         Seed: 217   Index: 109
-  Step  24: 19 / Red Worm x1, Procyote x1, Juclyote x1 (7.791s)
-Lunar Overworld                                           Seed: 217   Index: 140
-Lunar Subterrane B1                                       Seed: 217   Index: 157
-  Extra Steps: 12
-  Step  18: 20 / Warlock x1, Kary x1 (6.350s)
-  Step  40: 21 / Warlock x1 (6.338s)
-  Step  44: 22 / Warlock x1, Kary x1 (6.350s)
+  Extra Steps: 24
+Return to Moon                                            Seed: 217   Index:  43
+Lunar Overworld                                           Seed: 217   Index:  43
+Lunar Path (west)                                         Seed: 217   Index:  48
+  Step  26: 17 / Procyote x1, Juclyote x2 (7.784s)
+Lunar Overworld                                           Seed: 217   Index:  86
+  Step  15: 18 / Red Worm x2 (7.513s)
+Lunar Path (east)                                         Seed: 217   Index: 121
+  Step  12: 19 / Red Worm x1, Procyote x1, Juclyote x1 (7.791s)
+Lunar Overworld                                           Seed: 217   Index: 152
+Lunar Subterrane B1                                       Seed: 217   Index: 169
+  Step   6: 20 / Warlock x1, Kary x1 (6.350s)
+  Step  28: 21 / Warlock x1 (6.338s)
+  Step  32: 22 / Warlock x1, Kary x1 (6.350s)
 Lunar Subterrane B2                                       Seed: 217   Index: 202
 Lunar Subterrane B3                                       Seed: 217   Index: 231
 Lunar Subterrane B4                                       Seed: 217   Index: 245

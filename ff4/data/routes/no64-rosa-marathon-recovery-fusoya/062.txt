@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)
 VERSION	1
-ROSA	v1.2.0-2-g139db62
+ROSA	v1.2.0-3-g32213e2
 SEED	62
-MAXSTEP	64
-MAXSEG	-1
+MAXSTEP	256
+MAXSEG	4
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	44994526
-VARS	C316C00:1 E30B500:1 E30B600:14 E30BA00:22 E30BD00:14 E316700:20 E316B00:2
+VARS	C316C00:1 E30B500:15 E30BA00:22 E30BD00:14 E316700:22
 
 Fly to Lunar Path                                         Seed:  62   Index:   0
 Lunar Overworld                                           Seed:  62   Index:   0
@@ -34,9 +34,9 @@ Lunar Overworld                                           Seed:  79   Index:  13
 Save: Before Giant of Bab-il                              Seed:  79   Index:  14
 Giant of Bab-il Mouth                                     Seed:  79   Index:  14
   Optional Steps: 1
-Giant of Bab-il Neck                                      Seed:  79   Index:  33
   Extra Steps: 14
-  Step  15: 9 / Searcher (summons Machine) x1 (7.406s)
+Giant of Bab-il Neck                                      Seed:  79   Index:  47
+  Step   1: 9 / Searcher (summons Machine) x1 (7.406s)
 Giant of Bab-il Chest                                     Seed:  79   Index:  49
   Step  28: 10 / Searcher (summons MacGiant) x1 (7.400s)
   Step  69: 11 / Machine x2, Beamer x2 (7.818s)
@@ -77,22 +77,21 @@ Lunar Path (east)                                         Seed:  96   Index: 129
   Step  19: 18 / Pudding x2, Grenade x2 (7.823s)
 Lunar Overworld                                           Seed:  96   Index: 160
 Lunar Subterrane B1                                       Seed:  96   Index: 177
-  Extra Steps: 20
+  Extra Steps: 22
   Step   4: 19 / Warlock x1, Kary x1 (6.350s)
   Step  28: 20 / Warlock x1, Kary x1 (6.350s)
   Step  53: 21 / Warlock x1 (6.338s)
-Lunar Subterrane B2                                       Seed:  96   Index: 230
-Lunar Subterrane B3                                       Seed: 113   Index:   3
-  Step  14: 22 / D.Bone x1, Warlock x1 (6.366s)
-Lunar Subterrane B4                                       Seed: 113   Index:  17
-  Step  16: 23 / D.Bone x1, Warlock x1 (6.366s)
-Lunar Subterrane B4 Passage                               Seed: 113   Index:  73
-  Step   9: 24 / D.Fossil x1 (6.354s)
-Lunar Subterrane B4                                       Seed: 113   Index: 102
-  Step  12: 25 / Ging-Ryu x1 (6.682s)
-  Step  14: 26 / King-Ryu x2 (6.739s)
-Lunar Subterrane B5                                       Seed: 113   Index: 117
-  Extra Steps: 2
+Lunar Subterrane B2                                       Seed:  96   Index: 232
+Lunar Subterrane B3                                       Seed: 113   Index:   5
+  Step  12: 22 / D.Bone x1, Warlock x1 (6.366s)
+Lunar Subterrane B4                                       Seed: 113   Index:  19
+  Step  14: 23 / D.Bone x1, Warlock x1 (6.366s)
+Lunar Subterrane B4 Passage                               Seed: 113   Index:  75
+  Step   7: 24 / D.Fossil x1 (6.354s)
+Lunar Subterrane B4                                       Seed: 113   Index: 104
+  Step  10: 25 / Ging-Ryu x1 (6.682s)
+  Step  12: 26 / King-Ryu x2 (6.739s)
+Lunar Subterrane B5                                       Seed: 113   Index: 119
 Lunar Subterrane B5 Passage A                             Seed: 113   Index: 136
   Step  30: 27 / D.Fossil x1 (6.354s)
 Lunar Subterrane B5                                       Seed: 113   Index: 169

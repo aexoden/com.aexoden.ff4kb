@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)
 VERSION	1
-ROSA	v1.2.0-2-g139db62
+ROSA	v1.2.0-3-g32213e2
 SEED	232
-MAXSTEP	64
-MAXSEG	-1
+MAXSTEP	256
+MAXSEG	4
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	44173645
-VARS	C316C00:2 E30B500:1 E30B700:10 E30BD00:2 E316A01:2 E316C00:6 E316D01:2 E317B00:4
+VARS	C316C00:2 E30B500:11 E30BD00:2 E316A01:8 E317B00:6
 
 Fly to Lunar Path                                         Seed: 232   Index:   0
 Lunar Overworld                                           Seed: 232   Index:   0
@@ -34,12 +34,12 @@ Lunar Overworld                                           Seed: 249   Index:  13
 Save: Before Giant of Bab-il                              Seed: 249   Index:  14
 Giant of Bab-il Mouth                                     Seed: 249   Index:  14
   Optional Steps: 1
-Giant of Bab-il Neck                                      Seed: 249   Index:  33
-Giant of Bab-il Chest                                     Seed: 249   Index:  35
   Extra Steps: 10
-  Step  22: 9 / Horseman x1, Beamer x2 (7.663s)
-  Step  30: 10 / Searcher (summons Horseman) x1, Machine x2 (7.657s)
-  Step  91: 11 / Horseman x1, Beamer x1, Machine x1 (7.709s)
+Giant of Bab-il Neck                                      Seed: 249   Index:  43
+Giant of Bab-il Chest                                     Seed: 249   Index:  45
+  Step  12: 9 / Horseman x1, Beamer x2 (7.663s)
+  Step  20: 10 / Searcher (summons Horseman) x1, Machine x2 (7.657s)
+  Step  81: 11 / Horseman x1, Beamer x1, Machine x1 (7.709s)
 Giant of Bab-il Stomach                                   Seed: 249   Index: 127
   Step   2: 12 / Horseman x1, Beamer x1, Machine x1 (7.709s)
   Step  34: 13 / Searcher (summons Horseman) x1, Beamer x2 (7.606s)
@@ -85,32 +85,30 @@ Lunar Subterrane B4                                       Seed:  10   Index: 215
   Step  40: 22 / D.Bone x1 (6.355s)
 Lunar Subterrane B4 Passage                               Seed:  27   Index:  15
 Lunar Subterrane B4                                       Seed:  27   Index:  44
-  Extra Steps: 2
+  Extra Steps: 8
   Step   8: 23 / Warlock x3 (6.419s)
   Step  16: 24 / D.Bone x1, Warlock x1 (6.366s)
-Lunar Subterrane B5                                       Seed:  27   Index:  61
-Lunar Subterrane B5 Passage A                             Seed:  27   Index:  78
-  Step  14: 25 / King-Ryu x1 (6.694s)
-  Step  18: 26 / D.Fossil x1 (6.354s)
-Lunar Subterrane B5                                       Seed:  27   Index: 111
-Lunar Subterrane B5 Passage B                             Seed:  27   Index: 120
-Lunar Subterrane B5 Inward Direct                         Seed:  27   Index: 152
-  Lunar Subterrane B5                                     Seed:  27   Index: 152
-Get Ninja Star on Lunar Core B3                           Seed:  27   Index: 164
-  Lunar Subterrane B6                                     Seed:  27   Index: 164
-    Extra Steps: 6
-    Step  42: 27 / Ging-Ryu x1, RedGiant x1 (6.738s)
+Lunar Subterrane B5                                       Seed:  27   Index:  67
+Lunar Subterrane B5 Passage A                             Seed:  27   Index:  84
+  Step   8: 25 / King-Ryu x1 (6.694s)
+  Step  12: 26 / D.Fossil x1 (6.354s)
+Lunar Subterrane B5                                       Seed:  27   Index: 117
+Lunar Subterrane B5 Passage B                             Seed:  27   Index: 126
+Lunar Subterrane B5 Inward Direct                         Seed:  27   Index: 158
+  Lunar Subterrane B5                                     Seed:  27   Index: 158
+Get Ninja Star on Lunar Core B3                           Seed:  27   Index: 170
+  Lunar Subterrane B6                                     Seed:  27   Index: 170
+    Step  36: 27 / Ging-Ryu x1, RedGiant x1 (6.738s)
   Lunar Subterrane B6 Passage                             Seed:  27   Index: 207
   Lunar Subterrane B7                                     Seed:  27   Index: 220
     Step  19: 28 / King-Ryu x1 (6.694s)
   Save: Lunar Subterrane B7 Save Room                     Seed:  27   Index: 243
   Lunar Subterrane B7 Save Room                           Seed:  27   Index: 243
-    Extra Steps: 4
-  Lunar Subterrane B7                                     Seed:  27   Index: 254
-    Extra Steps: 2
-    Step  28: 29 / King-Ryu x1 (6.694s)
-    Step  49: 30 / King-Ryu x1, Ging-Ryu x1 (6.738s)
-    Step  60: 31 / King-Ryu x1 (6.694s)
+    Extra Steps: 6
+  Lunar Subterrane B7                                     Seed:  44   Index:   0
+    Step  26: 29 / King-Ryu x1 (6.694s)
+    Step  47: 30 / King-Ryu x1, Ging-Ryu x1 (6.738s)
+    Step  58: 31 / King-Ryu x1 (6.694s)
   Lunar Core B1                                           Seed:  44   Index:  58
     Step  15: 32 / Red D. x1 (23.119s)
     Step  36: 33 / Behemoth x1 (7.413s)

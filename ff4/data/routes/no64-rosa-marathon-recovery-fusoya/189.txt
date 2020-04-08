@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)
 VERSION	1
-ROSA	v1.2.0-2-g139db62
+ROSA	v1.2.0-3-g32213e2
 SEED	189
-MAXSTEP	64
-MAXSEG	-1
+MAXSTEP	256
+MAXSEG	2
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	46037767
-VARS	C316C00:2 E30B500:1 E30B600:4 E316F00:2 E317B00:20
+VARS	C316C00:2 E30B500:5 E317B00:21
 
 Fly to Lunar Path                                         Seed: 189   Index:   0
 Lunar Overworld                                           Seed: 189   Index:   0
@@ -34,9 +34,9 @@ Lunar Overworld                                           Seed: 206   Index:  13
 Save: Before Giant of Bab-il                              Seed: 206   Index:  14
 Giant of Bab-il Mouth                                     Seed: 206   Index:  14
   Optional Steps: 1
-Giant of Bab-il Neck                                      Seed: 206   Index:  33
   Extra Steps: 4
-  Step   5: 9 / Searcher (summons Machine) x1 (7.406s)
+Giant of Bab-il Neck                                      Seed: 206   Index:  37
+  Step   1: 9 / Searcher (summons Machine) x1 (7.406s)
 Giant of Bab-il Chest                                     Seed: 206   Index:  39
   Step  31: 10 / Searcher (summons MacGiant) x1 (7.400s)
   Step  70: 11 / Machine x2, Beamer x2 (7.818s)
@@ -107,23 +107,22 @@ Get Ninja Star on Lunar Core B3                           Seed: 240   Index: 154
     Step   6: 30 / King-Ryu x1 (6.694s)
   Save: Lunar Subterrane B7 Save Room                     Seed: 240   Index: 227
   Lunar Subterrane B7 Save Room                           Seed: 240   Index: 227
-    Extra Steps: 20
-  Lunar Subterrane B7                                     Seed: 240   Index: 254
-    Step  39: 31 / D.Fossil x1 (6.354s)
-    Step  58: 32 / King-Ryu x1 (6.694s)
-  Lunar Core B1                                           Seed:   1   Index:  56
-    Step  31: 33 / EvilMask x1 (12.186s)
-    Step  41: 34 / EvilMask x1 (12.186s)
-    Step  64: 35 / Behemoth x1 (7.413s)
-  Lunar Core B2                                           Seed:   1   Index: 124
-    Extra Steps: 2
-    Step   6: 36 / Behemoth x1 (7.413s)
-    Step  20: 37 / Behemoth x1 (7.413s)
-    Step  56: 38 / Behemoth x1 (7.413s)
-  Lunar Core B3                                           Seed:   1   Index: 181
-Lunar Core B4                                             Seed:   1   Index: 237
-  Step  21: 39 / Breath x1 (11.896s)
-  Step  48: 40 / Mind x1 (12.517s)
+    Extra Steps: 21
+  Lunar Subterrane B7                                     Seed: 240   Index: 255
+    Step  38: 31 / D.Fossil x1 (6.354s)
+    Step  57: 32 / King-Ryu x1 (6.694s)
+  Lunar Core B1                                           Seed:   1   Index:  57
+    Step  30: 33 / EvilMask x1 (12.186s)
+    Step  40: 34 / EvilMask x1 (12.186s)
+    Step  63: 35 / Behemoth x1 (7.413s)
+  Lunar Core B2                                           Seed:   1   Index: 125
+    Step   5: 36 / Behemoth x1 (7.413s)
+    Step  19: 37 / Behemoth x1 (7.413s)
+    Step  55: 38 / Behemoth x1 (7.413s)
+  Lunar Core B3                                           Seed:   1   Index: 180
+Lunar Core B4                                             Seed:   1   Index: 236
+  Step  22: 39 / Breath x1 (11.896s)
+  Step  49: 40 / Mind x1 (12.517s)
 
 Encounter Time:      320.568s
 Other Time:          445.466s
@@ -133,7 +132,7 @@ Base Total Time:     883.022s
 Time Saved:          116.988s
 
 Optional Steps:      1
-Extra Steps:         26
+Extra Steps:         25
 Encounters:          40
 
 Base Encounters:     46

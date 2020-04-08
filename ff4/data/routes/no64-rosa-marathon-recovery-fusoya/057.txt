@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)
 VERSION	1
-ROSA	v1.2.0-2-g139db62
+ROSA	v1.2.0-3-g32213e2
 SEED	57
-MAXSTEP	64
-MAXSEG	-1
+MAXSTEP	256
+MAXSEG	3
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	45026834
-VARS	E30B500:1 E30B600:8 E30B700:2 E30BD00:10 E316800:4 E316900:4 E316D01:8
+VARS	E30B500:21 E316800:8 E316D01:8
 
 Fly to Lunar Path                                         Seed:  57   Index:   0
 Lunar Overworld                                           Seed:  57   Index:   0
@@ -34,41 +34,39 @@ Lunar Overworld                                           Seed:  74   Index:  13
 Save: Before Giant of Bab-il                              Seed:  74   Index:  14
 Giant of Bab-il Mouth                                     Seed:  74   Index:  14
   Optional Steps: 1
-Giant of Bab-il Neck                                      Seed:  74   Index:  33
-  Extra Steps: 8
-  Step  10: 9 / Searcher (summons Machine) x1 (7.406s)
-Giant of Bab-il Chest                                     Seed:  74   Index:  43
-  Extra Steps: 2
-  Step  29: 10 / Searcher (summons MacGiant) x1 (7.400s)
-  Step  34: 11 / Searcher (summons Horseman) x1, Machine x2 (7.657s)
-  Step  76: 12 / MacGiant x1 (7.514s)
-  Step  84: 13 / Searcher (summons Horseman) x1, Machine x2 (7.657s)
-Giant of Bab-il Stomach                                   Seed:  74   Index: 127
-  Step  26: 14 / Searcher (summons Horseman) x1, Beamer x2 (7.606s)
-Grind Fight Search                                        Seed:  74   Index: 176
-  Save: Giant of Bab-il Passage                           Seed:  74   Index: 176
-  Giant of Bab-il Passage                                 Seed:  74   Index: 176
-    Step  55: 15 / MacGiant x1, Horseman x1, Beamer x1 (7.715s)
-    Step  71: 16 / Searcher (summons D.Machin) x1, Beamer x2 (7.658s)
-   (Step 100: 17 / MacGiant x1, Horseman x1, Beamer x1)
-   (Step 112: 18 / Searcher (summons Horseman) x1, Beamer x2)
-   (Step 156: 19 / MacGiant x1)
-   (Step 165: 20 / MacGiant x1)
-   (Step 197: 21 / Searcher (summons Horseman) x1, Beamer x2)
-  Giant of Bab-il Lung                                    Seed:  74   Index: 250
-   (Step  26: 17 / D.Machin x1)
-   (Step  38: 18 / Machine x3, Beamer x2)
-   (Step  82: 19 / MacGiant x2)
-   (Step  91: 20 / MacGiant x2)
-   (Step 123: 21 / Machine x3, Beamer x2)
-   (Step 211: 22 / MacGiant x2)
-   (Step 219: 23 / Searcher (summons D.Machin) x1, Beamer x2)
-   (Step 236: 24 / MacGiant x1, Horseman x1, Beamer x1)
-   (Step 251: 25 / Beamer x1, Machine x2, Horseman x1)
-Battle: Elements                                          Seed:  91   Index:   2
-Giant of Bab-il Lung                                      Seed:  91   Index:   2
-Giant of Bab-il CPU                                       Seed:  91   Index:   9
-  Extra Steps: 10
+  Extra Steps: 20
+  Step  29: 9 / Searcher (summons Machine) x1 (7.406s)
+Giant of Bab-il Neck                                      Seed:  74   Index:  53
+Giant of Bab-il Chest                                     Seed:  74   Index:  55
+  Step  17: 10 / Searcher (summons MacGiant) x1 (7.400s)
+  Step  22: 11 / Searcher (summons Horseman) x1, Machine x2 (7.657s)
+  Step  64: 12 / MacGiant x1 (7.514s)
+  Step  72: 13 / Searcher (summons Horseman) x1, Machine x2 (7.657s)
+Giant of Bab-il Stomach                                   Seed:  74   Index: 137
+  Step  16: 14 / Searcher (summons Horseman) x1, Beamer x2 (7.606s)
+Grind Fight Search                                        Seed:  74   Index: 186
+  Save: Giant of Bab-il Passage                           Seed:  74   Index: 186
+  Giant of Bab-il Passage                                 Seed:  74   Index: 186
+    Step  45: 15 / MacGiant x1, Horseman x1, Beamer x1 (7.715s)
+    Step  61: 16 / Searcher (summons D.Machin) x1, Beamer x2 (7.658s)
+   (Step  90: 17 / MacGiant x1, Horseman x1, Beamer x1)
+   (Step 102: 18 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 146: 19 / MacGiant x1)
+   (Step 155: 20 / MacGiant x1)
+   (Step 187: 21 / Searcher (summons Horseman) x1, Beamer x2)
+  Giant of Bab-il Lung                                    Seed:  91   Index:   4
+   (Step  16: 17 / D.Machin x1)
+   (Step  28: 18 / Machine x3, Beamer x2)
+   (Step  72: 19 / MacGiant x2)
+   (Step  81: 20 / MacGiant x2)
+   (Step 113: 21 / Machine x3, Beamer x2)
+   (Step 201: 22 / MacGiant x2)
+   (Step 209: 23 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 226: 24 / MacGiant x1, Horseman x1, Beamer x1)
+   (Step 241: 25 / Beamer x1, Machine x2, Horseman x1)
+Battle: Elements                                          Seed:  91   Index:  12
+Giant of Bab-il Lung                                      Seed:  91   Index:  12
+Giant of Bab-il CPU                                       Seed:  91   Index:  19
 Return to Moon                                            Seed:  91   Index:  21
 Lunar Overworld                                           Seed:  91   Index:  21
 Lunar Path (west)                                         Seed:  91   Index:  26
@@ -80,12 +78,11 @@ Lunar Path (east)                                         Seed:  91   Index:  99
 Lunar Overworld                                           Seed:  91   Index: 130
 Lunar Subterrane B1                                       Seed:  91   Index: 147
 Lunar Subterrane B2                                       Seed:  91   Index: 180
-  Extra Steps: 4
+  Extra Steps: 8
   Step  25: 20 / Warlock x1, Kary x1, RedGiant x1 (6.432s)
   Step  33: 21 / Warlock x1, Kary x1 (6.350s)
-Lunar Subterrane B3                                       Seed:  91   Index: 213
-  Extra Steps: 4
-  Step  17: 22 / D.Bone x1, Warlock x1 (6.366s)
+Lunar Subterrane B3                                       Seed:  91   Index: 217
+  Step  13: 22 / D.Bone x1, Warlock x1 (6.366s)
 Lunar Subterrane B4                                       Seed:  91   Index: 231
   Step  14: 23 / D.Bone x1, Warlock x1 (6.366s)
   Step  37: 24 / RedGiant x2 (6.721s)

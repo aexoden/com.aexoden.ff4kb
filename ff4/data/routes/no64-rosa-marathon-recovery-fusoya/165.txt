@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)
 VERSION	1
-ROSA	v1.2.0-2-g139db62
+ROSA	v1.2.0-3-g32213e2
 SEED	165
-MAXSTEP	64
-MAXSEG	-1
+MAXSTEP	256
+MAXSEG	5
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	46932273
-VARS	C316C00:2 E30B500:1 E30B700:26 E30B900:14 E30BC01:24 E30BD00:64 E316500:28 E316D01:6 E316F00:4 E317000:10 E317B00:62
+VARS	C316C00:2 E30B500:41 E30BD00:88 E316500:28 E317000:10 E317B00:72
 
 Fly to Lunar Path                                         Seed: 165   Index:   0
 Lunar Overworld                                           Seed: 165   Index:   0
@@ -35,16 +35,15 @@ Lunar Overworld                                           Seed: 182   Index:  41
 Save: Before Giant of Bab-il                              Seed: 182   Index:  42
 Giant of Bab-il Mouth                                     Seed: 182   Index:  42
   Optional Steps: 1
-Giant of Bab-il Neck                                      Seed: 182   Index:  61
-Giant of Bab-il Chest                                     Seed: 182   Index:  63
-  Extra Steps: 26
-  Step  82: 9 / MacGiant x1 (7.506s)
-  Step 107: 10 / Horseman x1, Beamer x1, Machine x1 (7.709s)
-Giant of Bab-il Stomach                                   Seed: 182   Index: 171
-  Extra Steps: 14
-  Step  16: 11 / D.Machin x1 (7.496s)
-  Step  31: 12 / Machine x2, Beamer x3 (7.876s)
-  Step  63: 13 / Horseman x2 (7.607s)
+  Extra Steps: 40
+Giant of Bab-il Neck                                      Seed: 182   Index: 101
+Giant of Bab-il Chest                                     Seed: 182   Index: 103
+  Step  42: 9 / MacGiant x1 (7.506s)
+  Step  67: 10 / Horseman x1, Beamer x1, Machine x1 (7.709s)
+Giant of Bab-il Stomach                                   Seed: 182   Index: 185
+  Step   2: 11 / D.Machin x1 (7.496s)
+  Step  17: 12 / Machine x2, Beamer x3 (7.876s)
+  Step  49: 13 / Horseman x2 (7.607s)
 Grind Fight Search                                        Seed: 182   Index: 234
   Save: Giant of Bab-il Passage                           Seed: 182   Index: 234
   Giant of Bab-il Passage                                 Seed: 182   Index: 234
@@ -70,9 +69,8 @@ Grind Fight Search                                        Seed: 182   Index: 234
    (Step 226: 24 / D.Machin x1)
 Battle: Elements                                          Seed: 199   Index:  60
 Giant of Bab-il Lung                                      Seed: 199   Index:  60
-  Extra Steps: 24
-Giant of Bab-il CPU                                       Seed: 199   Index:  91
-  Extra Steps: 64
+Giant of Bab-il CPU                                       Seed: 199   Index:  67
+  Extra Steps: 88
 Return to Moon                                            Seed: 199   Index: 157
 Lunar Overworld                                           Seed: 199   Index: 157
 Lunar Path (west)                                         Seed: 199   Index: 162
@@ -107,17 +105,15 @@ Get Ninja Star on Lunar Core B3                           Seed: 233   Index:  50
   Lunar Subterrane B7                                     Seed: 233   Index: 100
   Save: Lunar Subterrane B7 Save Room                     Seed: 233   Index: 123
   Lunar Subterrane B7 Save Room                           Seed: 233   Index: 123
-    Extra Steps: 62
-  Lunar Subterrane B7                                     Seed: 233   Index: 192
-    Extra Steps: 6
-    Step  35: 26 / King-Ryu x1, Ging-Ryu x1 (6.738s)
-    Step  62: 27 / D.Fossil x1 (6.354s)
-    Step  64: 28 / D.Fossil x1 (6.354s)
-  Lunar Core B1                                           Seed: 250   Index:   0
-    Step  65: 29 / EvilMask x1 (12.186s)
-  Lunar Core B2                                           Seed: 250   Index:  68
-    Extra Steps: 4
-    Step  58: 30 / EvilMask x1 (12.186s)
+    Extra Steps: 72
+  Lunar Subterrane B7                                     Seed: 233   Index: 202
+    Step  25: 26 / King-Ryu x1, Ging-Ryu x1 (6.738s)
+    Step  52: 27 / D.Fossil x1 (6.354s)
+    Step  54: 28 / D.Fossil x1 (6.354s)
+  Lunar Core B1                                           Seed: 250   Index:   4
+    Step  61: 29 / EvilMask x1 (12.186s)
+  Lunar Core B2                                           Seed: 250   Index:  72
+    Step  54: 30 / EvilMask x1 (12.186s)
   Lunar Core B3                                           Seed: 250   Index: 127
     Extra Steps: 10
     Step   2: 31 / Behemoth x1 (7.413s)

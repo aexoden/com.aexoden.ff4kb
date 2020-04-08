@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)
 VERSION	1
-ROSA	v1.2.0-2-g139db62
+ROSA	v1.2.0-3-g32213e2
 SEED	60
-MAXSTEP	64
-MAXSEG	-1
+MAXSTEP	256
+MAXSEG	3
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	43889064
-VARS	C316C00:2 E30B500:1 E30B600:14 E316700:8 E316900:6 E316D01:8 E317B00:44
+VARS	C316C00:2 E30B500:15 E316700:14 E317B00:52
 
 Fly to Lunar Path                                         Seed:  60   Index:   0
 Lunar Overworld                                           Seed:  60   Index:   0
@@ -34,9 +34,9 @@ Lunar Overworld                                           Seed:  77   Index:  13
 Save: Before Giant of Bab-il                              Seed:  77   Index:  14
 Giant of Bab-il Mouth                                     Seed:  77   Index:  14
   Optional Steps: 1
-Giant of Bab-il Neck                                      Seed:  77   Index:  33
   Extra Steps: 14
-  Step  15: 9 / Searcher (summons Machine) x1 (7.406s)
+Giant of Bab-il Neck                                      Seed:  77   Index:  47
+  Step   1: 9 / Searcher (summons Machine) x1 (7.406s)
 Giant of Bab-il Chest                                     Seed:  77   Index:  49
   Step  23: 10 / Searcher (summons MacGiant) x1 (7.400s)
   Step  28: 11 / Searcher (summons Horseman) x1, Machine x2 (7.657s)
@@ -75,14 +75,13 @@ Lunar Overworld                                           Seed:  94   Index:  58
 Lunar Path (east)                                         Seed:  94   Index:  93
 Lunar Overworld                                           Seed:  94   Index: 124
 Lunar Subterrane B1                                       Seed:  94   Index: 141
-  Extra Steps: 8
+  Extra Steps: 14
   Step   7: 19 / Warlock x1, Kary x1 (6.350s)
   Step  40: 20 / Warlock x1, Kary x1 (6.350s)
-Lunar Subterrane B2                                       Seed:  94   Index: 182
-  Step  23: 21 / Warlock x1, Kary x1 (6.350s)
-Lunar Subterrane B3                                       Seed:  94   Index: 211
-  Extra Steps: 6
-  Step  19: 22 / D.Bone x1, Warlock x1 (6.366s)
+Lunar Subterrane B2                                       Seed:  94   Index: 188
+  Step  17: 21 / Warlock x1, Kary x1 (6.350s)
+Lunar Subterrane B3                                       Seed:  94   Index: 217
+  Step  13: 22 / D.Bone x1, Warlock x1 (6.366s)
 Lunar Subterrane B4                                       Seed:  94   Index: 231
   Step  14: 23 / D.Bone x1, Warlock x1 (6.366s)
 Lunar Subterrane B4 Passage                               Seed: 111   Index:  31
@@ -107,12 +106,11 @@ Get Ninja Star on Lunar Core B3                           Seed: 111   Index: 178
   Lunar Subterrane B7                                     Seed: 111   Index: 228
   Save: Lunar Subterrane B7 Save Room                     Seed: 111   Index: 251
   Lunar Subterrane B7 Save Room                           Seed: 111   Index: 251
-    Extra Steps: 44
-  Lunar Subterrane B7                                     Seed: 128   Index:  46
-    Extra Steps: 8
-    Step  34: 32 / D.Fossil x1 (6.354s)
-    Step  40: 33 / D.Fossil x1 (6.354s)
-    Step  66: 34 / D.Fossil x1 (6.354s)
+    Extra Steps: 52
+  Lunar Subterrane B7                                     Seed: 128   Index:  54
+    Step  26: 32 / D.Fossil x1 (6.354s)
+    Step  32: 33 / D.Fossil x1 (6.354s)
+    Step  58: 34 / D.Fossil x1 (6.354s)
   Lunar Core B1                                           Seed: 128   Index: 112
     Step  43: 35 / Behemoth x1 (7.413s)
     Step  48: 36 / Behemoth x1 (7.413s)
