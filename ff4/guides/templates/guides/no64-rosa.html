@@ -13,6 +13,7 @@
 			<address>Jason Lynch &lt;<a href="mailto:jason@calindora.com">jason@calindora.com</a>&gt; (Aexoden)</address>
 			<h2 id="introduction">Introduction</h2>
 			<p>These are my notes for the Rosa of the Final Fantasy IV Any% No64 speedrun. While I am very familiar with the game and the speedrun, I am nonetheless nowhere near being the world record holder in this category or any other, so there are almost certainly faster ways to do things. That said, I do periodically update this document as new techniques and strategies are discovered, so if you follow them, you're probably not doomed to be perilously slow.</p>
+			<p>This particular guide is intended for high-level PB attempts. Beginners may wish to the marathon guide instead, as it provides extra elixirs, but otherwise, the differences are minimal. Runners using this guide may have trouble competing for the world record time, but times of 3:07 or better are definitely possible. I use this guide for my own PB attempts.</p>
 			<h2 id="general-concepts">General Concepts</h2>
 			<p>While these are largely my personal notes used when I actually run the game, a number of people have been using them to learn the run, so I will briefly go over some of the more general concepts that apply to the run. However, the notes will almost certainly still assume you are generally familiar with some of the techniques used speedrunning the game (such as item duplication and run buffering). If you are unfamiliar with these, there are other resources on this site that you may wish to examine.</p>
 			<h3 id="general-concepts-route">Route</h3>
@@ -23,7 +24,7 @@
 				<dt class="col-2">Edge+Drain</dt><dd class="col-10">The standard route for a long time, this route primarily does damage by having Edge throw the <i>Drain</i> spear. Exactly how this route compares to Edge+Excalbur time-wise is the subject of debate, but this route is probably no worse than equal to the Edge+Excalbur route, perhaps being 30 seconds faster. However, it is largely deprecated, as it is more difficult to execute and not nearly as fast as the Rosa route.</dd>
 				<dt class="col-2">Berserk Edge</dt><dd class="col-10">This route barely gets an entry, but people have played around with attempting to route it. It is inspired by the glitchless SFC runs.</dd>
 			</dl>
-			<p>There are other routes, but they are older and obsolete. My personal recommendation is to begin with Edge+Excalbur to get a few runs under your belt, and then to move on to Rosa once your time is approaching 3:10 or less. Once you've reached that level, you will be relying on good RNG for your better runs, and you won't want to be leaving two and a half free minutes on the table. That said, with enough luck, a 3:04:xx Edge+Excalbur time is entirely possible, if you're inclined to try grinding it out.</p>
+			<p>There are other routes, but they are older and obsolete. My personal recommendation is to begin with the marathon-safe version of the Rosa route. You may also choose to begin with Edge+Excalbur to get a few runs under your belt if you prefer Edge, and then to move on to Rosa once your time is approaching 3:10 or less. Once you've reached that level, you will be relying on good RNG for your better runs, and you won't want to be leaving two and a half free minutes on the table. That said, with enough luck, a 3:04:xx Edge+Excalbur time is entirely possible, if you're inclined to try grinding it out.</p>
 			<h3 id="general-concepts-experience-path">Experience Path</h3>
 			<p>Unfortunately, as it turns out, levels matter a lot in this run. As such, there is a lot of research into the best ways to allocate experience throughout the run. Experience is primarily manipulated using the following facts:</p>
 			<ol>
@@ -59,11 +60,13 @@
 			<p>The following resources should prove invaluable to either help during a run or to help you learn the run in the first place:</p>
 			<ul>
 				<li><a href="https://docs.google.com/document/d/1oLUA9Xt5RGQehK6I8MY7R4qKbhDeR5V9PY8gz7Lz4YI/edit">Any% No64 Notes</a> (by <a href="https://www.twitch.tv/riversmccown">Rivers McCown</a>)</li>
-				<li><a href="{% url 'routes:route' "no64-excalbur" %}">Any% No64 (Edge+Excalbur) Step Routes</a></li>
+				<li><a href="{% url 'routes:route' "no64-rosa" %}">Any% No64 (Rosa) Step Routes</a></li>
 				<li><a href="{% url 'tools:seed-finder' %}">Seed Finder Tool</a></li>
 				<li><a href="{% static "myself086/GrindFightManip.txt" %}">Grind Fight Manipulation Text</a> (by <a href="https://www.twitch.tv/myself086">Myself086</a>)</li>
 				<li><a href="{% static "myself086/GrindFightManip.PNG" %}">Grind Fight Manipulation Image</a> (by <a href="https://www.twitch.tv/myself086">Myself086</a>)</li>
 			</ul>
+			<h3 id="general-concepts-step-route">Step Route</h3>
+			<p>This guide is intended to be used with a step route. The step route is not required, but it will generally save you 2 or 3 minutes if executed properly. For this guide, you should be using the no64-rosa-safe routes, which are not yet available on the site. I'm working on it. As of 2020-04-21, an early test version is available on my computer. Contact me if you'd like to test them.</p>
 			<h2 id="walkthrough">Walkthrough</h2>
 			<h3 id="walkthrough-prologue">Prologue</h3>
 			<p>Begin the game. During the introduction, you may wish to hold down B+Right+Down immediately before the battle with the Raven, in an attempt to avoid the Raven's attack. This is known as the BRD or BIRD skip. It may or may not work for you, depending on the awesomeness of your mashing. Finish the introduction and gain control.</p>
@@ -586,7 +589,7 @@
 							<dt>Cecil</dt><dd>Wait for Palom's <i>Cure2</i><br>Parry</dd>
 							<dt>Tellah</dt><dd>Cast Stop on Cecil</dd>
 							<dt>Porom</dt><dd>Pause Buffer then Run Buffer<br>Use <i>Cure2</i> on Ghast<br>Run Buffer</dd>
-							<dt>Cecil</dt><dd>Swap <i>Darkness</i> (sword) and <i>Paladin</i> (shield) (optional)<br>Move <i>Darkness</i> (sword) to bottom (optional)<br>Half-use <i>Cure2</i> (don't select a target, but cancel back to the item selection instead)<br>Swap <i>Cure2</i> and <i>Carrot</i><br>Close menu and wait</dd>
+							<dt>Cecil</dt><dd>Equip <i>Darkness</i> (sword)<br>Swap <i>Black</i> (sword) and <i>Paladin</i> (shield) (optional)<br>Move <i>Black</i> (sword) to bottom (optional)<br>Half-use <i>Cure2</i> (don't select a target, but cancel back to the item selection instead)<br>Swap <i>Cure2</i> and <i>Carrot</i><br>Close menu and wait</dd>
 						</dl>
 						<p>This strategy is incredibly timing-sensitive. There are many ways it can go wrong, and the only way to really get good at this strategy is to practice it over and over. Porom's first run buffer has an incredibly short window, and in my experience, you must slightly anticipate it unless you have excellent reaction times. A relatively consistent method (if you're musically inclined) is to note that the proper time to run buffer is exactly four beats of the song after you confirm Fire1 (thanks to <a href="https://www.twitch.tv/SwimmyLionni">SwimmyLionni</a> for telling me this). Regarding Tellah casting Stop, you may have better success if you have him wait a second or two before casting. Porom's second run buffer is more important. The first might be prevented by Milon taking an invisible turn.</p>
 						<p>The notes talk about pause buffering before Porom's final turn. To execute this, immediately pause once you queue Stop. Continue unpausing and pausing quickly until you see Porom flashing. At this point, hold down L and R and unpause. This allows you to get the run buffer in as quickly as possible. This is only necessary on battle speed 1, and can also be omitted if you're confident on the run buffer timing. Do note, however, that there is an incredibly short, approximately six frame window.</p>
@@ -629,13 +632,11 @@
 						<p>The experience path assumes one character (specifically Porom) dies here. If you're close to finishing the battle and everyone is still alive, you may want to kill someone to keep your experience path intact (doesn't matter who). If only two survive, that's even better, as it helps ensure that Rosa will reach level 20 before Rubicant.</p>
 					</div>
 					<div class="tab-pane fade show active" id="tab-battle-milonz-mimic">
+						<p>Hold Up and A starting from the black screen. Release as soon as you hear Cecil's item menu trigger.</p>
 						<dl class="dl-horizontal">
-							<dt>Cecil</dt><dd>Use <i>Cure2</i>/Use <i>Heal</i>/Parry</dd>
-						</dl>
-						<p>Cecil should execute this action as the damage from Milon Z.'s attack disappears. If he gets another turn, he should Parry immediately. Some people recommend a Run Buffer as well, though I haven't personally needed that.</p>
-						<dl class="dl-horizontal">
+							<dt>Cecil</dt><dd>Use <i>Cure2</i>/Use <i>Heal</i></dd>
 							<dt>Palom</dt><dd>Cast Ice-2 on Porom</dd>
-							<dt>Tellah</dt><dd>Run Buffer<br>Cast Stop on Cecil</dd>
+							<dt>Tellah</dt><dd>Cast Stop on Cecil</dd>
 							<dt>Porom</dt><dd>Run Buffer<br>Twin</dd>
 							<dt>Cecil</dt><dd>Half-use <i>Cure2</i> (don't select a target, but cancel back to the item selection instead)<br>Swap <i>Cure2</i> and <i>TrashCan</i><br>Close menu and wait</dd>
 							<dt>Tellah</dt><dd>Equip <i>Change</i> (rod)<br>Inventory Management</dd>
@@ -687,7 +688,7 @@
 					<dl class="dl-horizontal">
 						<dt>Cecil</dt><dd>Run Buffer<br>Use <i>Dancing</i></dd>
 						<dt>Palom</dt><dd>Equip <i>Dancing</i><br>Use <i>Dancing</i></dd>
-						<dt>Tellah</dt><dd>Inventory Management</dd>
+						<dt>Tellah</dt><dd>Equip <i>Change</i> (if not already equipped)<br>Inventory Management</dd>
 					</dl>
 					<p>If either Cecil or Palom are unable to kill their respective Guards, Tellah should cast Virus.</p>
 				</div>
@@ -738,6 +739,7 @@
 					<li>Equip Cecil: */*/<i>Headband</i>/<i>Karate</i>/<i>Paladin</i>.</li>
 					<li>Equip Yang: <i>Thunder</i>/<i>IceClaw</i>/<i>Headband</i>/<i>Karate</i>/<i>Silver</i>.</li>
 					<li>Equip Tellah: */*/<i>Gaea</i> (helm)/*/*.</li>
+					<li>Equip Porom: */*/<i>Gaea</i> (helm)/*/*. (to remove <i>Tiara</i> if equipped)</li>
 				</ul>
 			</div>
 			<p>Move on to challenge Baigan.</p>
@@ -875,9 +877,7 @@
 					<p>If three characters survived at Milon Z. and the opportunity for killing Tellah presents itself, take it.</p>
 				</div>
 			</div>
-			<p>After the battle, get the crystal, leave the room, and cast Exit. If there are encounters before Toroia, you may want to heal now.</p>
-			<p>Take the black chocobo back to the Chocobo Village, get a chocobo and return to Toroia.</p>
-			<p>Talk to the clerics.</p>
+			<p>After the battle, get the crystal and leave the room.</p>
 			<div class="bs-callout bs-callout-info">
 				<span class="fas fa-bars"></span>
 				<h4>Menu</h4>
@@ -885,8 +885,11 @@
 					<li>Move Cecil down a slot. (Form, Down, Down, A, Down, A)</li>
 					<li>Cast Exit.</li>
 				</ul>
-				<p>You may wish to heal Cecil and Tellah here to try to avoid a later menu.</p>
+				<p>You may wish to heal Cecil, Tellah and Yang here to try to avoid menuing again before FlameDog. If you get back attacked on the way, however, you might have to menu again anyway.</p>
 			</div>
+			<p>Take the black chocobo back to the Chocobo Village, get a chocobo and return to Toroia.</p>
+			<p>Talk to the clerics and then cast Exit.</p>
+			<p>Board your airship and you'll fly to the Tower of Zot.</p>
 			<h3 id="walkthrough-tower-of-zot">Tower of Zot</h3>
 			<p>After Golbez is done taunting you, go up a floor and head to the chest with <i>Fire</i>.</p>
 			<div class="bs-callout bs-callout-info">
@@ -970,6 +973,7 @@
 					<li>Equip Kain: */<i>Fire</i>/<i>Headband</i>/<i>Karate</i>/*.</li>
 					<li>Equip Rosa: */*/<i>Gaea</i>/<i>Karate</i>/<i>Silver</i>.</li>
 					<li>Revive all dead party members.</li>
+					<li>You may wish to use a <i>Cure2</i> on Cecil if he's particularly low.</li>
 				</ul>
 			</div>
 			<div class="bs-callout bs-callout-warning">
@@ -1099,7 +1103,7 @@
 			<div class="bs-callout bs-callout-danger">
 				<span class="fas fa-shoe-prints"></span>
 				<h4>Step Route</h4>
-				<p>Your path through the Dwarf castle (especially regarding when to walk and when to cast Warp) may vary significantly depending on your step route. Your step route instructions supersede anything written here, but don't forget to cast Warp to get the crystal.</p>
+				<p>Your path through the Dwarf castle (especially regarding when to walk and when to cast Warp) may vary significantly depending on your step route. Your step route instructions supersede anything written here, but don't forget to cast Warp to get the crystal. In particular, it may ask you to cast Warp up to three times (in addition to the first warp). The priority order for these warps is 1) the <i>Dwarf</i> (axe) room on the way down, 2) the throne room and 3) the stairway in the right tower.</p>
 			</div>
 			<p>After the scenes, open the menu and cast Warp.</p>
 			<p>Get the crystal, and then walk down out of the crystal room. Leave the throne room, and go east to the shop area.</p>
@@ -1241,7 +1245,7 @@
 					<li>Buy <i>IceBrand</i>, <i>Blizzard</i>.</li>
 				</ul>
 			</div>
-			<p>Continue through the cave until you meet up with Edge.</p>
+			<p>Continue through the cave until you meet up with Edge, making sure to pick up the two <i>Elixir</i> chests on the way. (When you return to the first room after the town, they are the two chests in the secret passage.)</p>
 			<div class="bs-callout bs-callout-info">
 				<span class="fas fa-bars"></span>
 				<h4>Menu</h4>
@@ -1383,7 +1387,6 @@
 						</dl>
 					</div>
 				</div>
-				<p>If you have followed the experience path exactly, Rosa needs to survive this battle to reach level 20.</p>
 			</div>
 			<div class="bs-callout bs-callout-danger">
 				<span class="fas fa-shoe-prints"></span>
@@ -1429,12 +1432,12 @@
 				<ul>
 					<li>Switch to battle speed 2.</li>
 					<li>Underflow FuSoYa's MP.</li>
-					<li>Use an <i>Ether1</i> on Edge if he has less than 20 MP.</li>
+					<li>Use an <i>Elixir</i> on Edge if he has less than 20 MP.</li>
 					<li>Fully heal the party.</li>
+					<li>Equip FuSoYa: empty/*/<i>Gaea</i>/*/<i>Rune</i>.</li>
+					<li>Equip Rosa: <i>Lunar</i>/*/<i>Wizard</i>/<i>Wizard</i>/<i>Rune</i>.</li>
 					<li>Equip Cecil: <i>Dancing</i> (to remove <i>Dwarf</i>).</li>
 					<li>Equip Rydia: <i>Dancing</i>.</li>
-					<li>Equip FuSoYa: <i>Change</i>/*/<i>Gaea</i>/*/<i>Rune</i>.</li>
-					<li>Equip Rosa: <i>Lunar</i>/*/<i>Wizard</i>/<i>Wizard</i>/<i>Rune</i>.</li>
 					<li>Swap Cecil and Rosa. (Form, A, Up, Up, A)</li>
 					<li>Swap Rosa and Edge. (Form, A, Up, A)</li>
 					<li>Swap Rydia and Rosa. (Form, Down, A, Up, Up, A)</li>
@@ -1473,6 +1476,7 @@
 						<dt>Cecil</dt><dd>Use <i>Life</i> on D.Machin</dd>
 					</dl>
 					<p>This fight has very difficult timing, and things may go wrong. The most obvious failure is Rydia going before FuSoYa casts Weak. You can prevent this by delaying Rydia's Fight if the Searcher's text box pops up during her turn, but the exact timing of this is difficult to describe in text. Rivers McCown suggests no longer holding A on Rydia's turn after the second cycle. If Rydia does end up going before Weak, the character after FuSoYa should hold A the rest of the fight.</p>
+					<p>The battle speed 2 version of this fight appears to be 100% consistent, so using that is highly recommended.</p>
 					<p>A detailed strategy for recovery if things go wrong is beyond the scope of this guide.</p>
 					<p>Ultimately, you need to kill 18 dragons. Each <i>Life</i> use counts as an additional dragon kill.</p>
 				</div>
@@ -1497,13 +1501,13 @@
 				<span class="fas fa-bars"></span>
 				<h4>Menu</h4>
 				<ul>
-					<li>Use <i>Life</i> on Edge.</li>
+					<li>Use <i>Life</i> on Edge (only if expecting an encounter).</li>
 					<li>Rearrange Rosa's top left spells to Wall, White and Cure4.</li>
 					<li>Equip Cecil: <i>Dwarf</i>.</li>
 					<li>Change rows and swap Edge and Rosa (Form, Left, A, Down, A).</li>
-					<li>Swap Cecil and Rydia (Form, Up, A, Up, A).</li>
 					<li>Switch to battle speed 1.</li>
 				</ul>
+				<p>There are only a few random formations that pose a potential problem for a post-grind Rosa, so Edge is revived to help with those if necessary.</p>
 			</div>
 			<p>Continue on to the Elements battle.</p>
 			<div class="bs-callout bs-callout-danger">
@@ -1521,39 +1525,40 @@
 						<dt>HP</dt><dd>65000</dd>
 						<dt>EXP</dt><dd>40000</dd>
 						<dt>Party</dt><dd>Rosa (48:801745) / *Edge (25:69777) / FuSoYa (50:1007865) / *Rydia (20:34221) / Cecil (21:30546)</dd>
+						<dt>Ideal Survivors</dt><dd>Rosa and FuSoYa (but Rydia surviving is okay)</dd></dt>
 					</dl>
 				</div>
 				<h5>Battle Plan</h5>
 				<div class="info-block">
 					<dl class="dl-horizontal">
-						<dt>Edge</dt><dd>Parry</dd>
+						<dt>Edge</dt><dd>Use <i>Dancing</i> on Cecil</dd>
 						<dt>FuSoYa</dt><dd>Cast Nuke on Milon</dd>
 						<dt>Rosa</dt><dd>Cast Cure4 on Milon</dd>
-						<dt>Cecil</dt><dd>Parry</dd>
-						<dt>Rydia</dt><dd>Use <i>Dancing</i> on Rydia</dd>
-						<dt>Edge</dt><dd>Parry</dd>
+						<dt>Rydia</dt><dd>Use <i>Dancing</i> on Cecil/Edge</dd>
+						<dt>Cecil</dt><dd>Cover Rydia/Rosa/FuSoYa</dd>
+						<dt>Edge</dt><dd>Use <i>Dancing</i> on Cecil/Edge</dd>
 						<dt>FuSoYa</dt><dd>Cast Fire3 on Rosa</dd>
 						<dt>Rosa</dt><dd>Cast Wall on Rosa</dd>
-						<dt>Cecil</dt><dd>Parry</dd>
-						<dt>Edge</dt><dd>Parry</dd>
+					</dl>
+					<p>At this point, not every turn is listed, but Cecil, Edge and Rydia should focus on making sure Cecil and Edge are dead. Afterward, Rydia can equip <i>Change</i> and then parry.</p>
+					<dl class="dl-horizontal">
 						<dt>Rosa</dt><dd>Cast Cure4 on Rosa</dd>
 						<dt>FuSoYa</dt><dd>Cast Fire3 on Rosa</dd>
-						<dt>Cecil</dt><dd>Parry</dd>
-						<dt>Edge</dt><dd>Parry</dd>
 						<dt>Rosa</dt><dd>Cast Cure4 on Rosa</dd>
-						<dt>Cecil</dt><dd>Parry</dd>
-						<dt>Edge</dt><dd>Parry</dd>
-						<dt>FuSoYa</dt><dd>Cast Ice-3 on Milon (or Nuke if Rosa gets her final turn first)</dd>
-						<dt>Rosa</dt><dd>Cure Cure4 on Milon (or on Rosa if she goes before FuSoYa)</dd>
+						<dt>Rosa</dt><dd>Cast Cure4 on Rosa (see note below if FuSoYa gets his turn here instead)</dd>
+						<dt>FuSoYa</dt><dd>Cast Nuke on Milon</dd>
 					</dl>
+					<p>If FuSoYa somehow gets his final turn before Rosa gets hers, have him cast Fire3 on Rosa instead, and then Rosa can follow up with a direct Cure4.</p>
+					<p>The most annoying thing about this fight is that the pattern changes depending on how long everyone stays alive. You want to finish the fight with Cecil and Edge dead. It doesn't matter if Rydia survives or not, but if she survives, she'll ultimately be level 27 instead of level 26, which doesn't really affect anything.</p>
 				</div>
 			</div>
 			<div class="bs-callout bs-callout-info">
 				<span class="fas fa-bars"></span>
 				<h4>Menu</h4>
 				<ul>
-					<li>Use <i>Life</i> on Edge (if needed).</li>
+					<li>Use <i>Life</i> on Rydia (if needed).</li>
 					<li>Underflow FuSoYa's MP to cure the party.</li>
+					<li>Equip Edge: <i>CatClaw</i>/*/*/*/*.</li>
 				</ul>
 			</div>
 			<div class="bs-callout bs-callout-warning">
@@ -1564,30 +1569,25 @@
 					<dl class="dl-horizontal">
 						<dt>HP</dt><dd>CPU: 20000 / Attacker: 2000 / Defender: 2000</dd>
 						<dt>EXP</dt><dd>150000</dd>
-						<dt>Party</dt><dd>Rosa (49:815078) / *Edge (25:69777) / FuSoYa (50:1021198) / *Rydia (20:34221) / Cecil (23:43879)</dd>
-						<dt>Ideal Survivors</dt><dd>Rosa, Edge, FuSoYa, Cecil</dd>
-						<dt>Inventory Goals</dt><dd>Clear out two empty spots near the top.</dd>
+						<dt>Party</dt><dd>Rosa (49:821745) / *Edge (25:69777) / FuSoYa (50:1027865) / *Cecil (21:30546) / Rydia (20:34221)</dd>
+						<dt>Ideal Survivors</dt><dd>Rosa, FuSoYa, Rydia</dd>
+						<dt>Inventory Goals</dt><dd>Both <i>Dancing</i> x1 to bottom<br><i>Gaea</i> (helm) to bottom<br><i>Strength</i> to 4L</dd>
 					</dl>
 				</div>
 				<h5>Battle Plan</h5>
 				<div class="info-block">
 					<dl class="dl-horizontal">
-						<dt>Edge</dt><dd>Pause Buffer to Run Buffer<br>Parry</dd>
-						<dt>FuSoYa</dt><dd>Pause Buffer to Run Buffer<br>Cast Meteo<br>Run Buffer</dd>
-						<dt>Rosa</dt><dd>Cast Wall on Rosa (must confirm before CPU finishes casting Wall, see below)</dd>
-						<dt>Cecil</dt><dd>Parry</dd>
-						<dt>Edge</dt><dd>Run Buffer<br>Parry</dd>
-						<dt>Rosa</dt><dd>Cast White on Rosa<br>Run Buffer</dd>
-						<dt>Cecil</dt><dd>Parry</dd>
-						<dt>Edge</dt><dd>Inventory Management during Meteo and White<br>Dart <i>Dancing</i></dd>
-						<dt>Cecil</dt><dd>Parry</dd>
-						<dt>FuSoYa</dt><dd>Pause Buffer to Run Buffer<br>Cast Virus on Rosa if White did at least 7951<br>Cast Nuke on Rosa otherwise<br>Run Buffer</dd>
+						<dt>FuSoYa</dt><dd>Cast Meteo</dd>
+						<dt>Rosa</dt><dd>Cast Wall on Rosa</dd>
+						<dt>Rydia</dt><dd>Parry (must be fast if you want her last turn)</dd>
+						<dt>Rosa</dt><dd>Wait for Maser (second Maser after Rydia parried)<br>Cast White on Rosa</dd>
+						<dt>Rydia</dt><dd>Parry (must be fast if you want her last turn)</dd>
+						<dt>FuSoYa</dt><dd>Swap <i>Strength</i> and <i>Dancing</i> x1<br>Cast Nuke on Rosa</dd>
+						<dt>Rydia</dt><dd>Equip <i>Change</i> (if not yet done)<br>Move both <i>Dancing</i> x1 to bottom<br>Move <i>Gaea</i> (helm) to bottom</dd>
 					</dl>
 				</div>
-				<p>If you are too slow with confirming Rosa's Wall cast (that is, if you confirm it after CPU finishes its own Wall cast), Cecil will fall behind in the turn order. The good news is that it's not super-problematic. You can run buffer out of Rosa's cast to fix things. Otherwise, you can run buffer Cecil's second turn, which will allow Edge to go before Meteo. However, either way, FuSoYa will go immediately after Edge's dart, so be prepared.</p>
-				<p>Ideally, everyone except Rydia survives this battle. If Cecil survives and anyone else dies, he will level up to level 28 or higher, which is not good.</p>
-				<p>This fight might be easier to handle on battle speed 2. In that case, you'll no longer need the pause buffers.</p>
-				<p>If White does at least 9301 damage, the <i>Dancing</i> dart is a guaranteed kill. If White doesn't do at least 7951, the dart is technically pointless, but Edge needs to confirm his turn before White is done animating, so it's risky to try skipping it.</p>
+				<p>With regard to FuSoYa's final turn, there is plenty of time to do what needs to be done with the inventory. As long as you enter the Black magic menu before White is finished, you're fine. Alternately, you can just try to finish everything during Rydia's turn.</p>
+				<p>If you're unable to get <i>Change</i> on Rydia by this point, you can either equip it later and accept that your inventory is not going to be quite right, or just do an extra menu to put it on before you dupe <i>Gungnir</i>.</p>
 			</div>
 			<h3 id="walkthrough-descent">Final Descent</h3>
 			<p>After the scenes, board the Big Whale.</p>
@@ -1598,7 +1598,7 @@
 				<h4>Step Route</h4>
 				<p>If you are using a step route, you will potentially need to pick up one of the chests with a <i>Ninja</i> star. This guide does not require one in its Zeromus battle strategy, but the chest is in the step routes. There are three potential choices (Subterrane B6, Core B1 and Core B3), and the step route will tell you which to pick up. If not using a step route (or if the route is an older route and doesn't tell you), pick up the one on Core B3, as it has the shortest walk.</p>
 			</div>
-			<p>Continue the descent until you reach the final battle.</p>
+			<p>Continue the descent until you reach the final battle. If you run into any formations of <i>Red D. x1</i>, it's probably faster to have Kain parry and for Rosa to cast Exit. The battle itself will take longer, but you'll escape the Heat Ray, which might make healing less necessary.</p>
 			<div class="bs-callout bs-callout-info">
 				<span class="fas fa-bars"></span>
 				<h4>Menu</h4>
@@ -1607,7 +1607,8 @@
 					<li>Equip Edge: */*/*/Karate/*.</li>
 					<li>Equip Kain: */<i>Gungnir</i>/*/<i>Bl.Belt</i>/<i>Strength</i> (finishes <i>Gungnir</i> duplication).</li>
 					<li>Swap Edge and Kain (Form, Down, A, Down, A).</li>
-					<li>Swap Edge and Cecil (Form, Up, A, Up, Up, A).</li>
+					<li>Swap Edge and Cecil (Form, Down, Down, A, Down, A).</li>
+					<li>Swap Edge and Rydia (Form, Up, A, Up, A).</li>
 				</ul>
 			</div>
 			<p>Approach Zemus to begin the final cutscenes.</p>
@@ -1619,13 +1620,13 @@
 					<dl class="dl-horizontal">
 						<dt>HP</dt><dd>110000-120000 (depending on damage rolls)</dd>
 						<dt>EXP</dt><dd>0</dd>
-						<dt>Party</dt><dd>Rosa (49:852578) / *Kain (50:861935) / Cecil (27:81379) / *Rydia (20:34221) / Edge (28:107277)</dd>
+						<dt>Party</dt><dd>Rosa (49:871745) / *Kain (51:881102) / Cecil (21:30546) / *Rydia (26:84221) / Edge (25:69777)</dd>
 					</dl>
 				</div>
 				<h5>Battle Plan</h5>
 				<div class="info-block col-md">
 					<p>The below strategy is very timing-sensitive. I recommend that you practice it several times. Be prepared to use a backup strategy (cast Bersk on Kain and have Rosa cast Cure4 after damage) if you notice Zeromus's actions no longer match the below list.</p>
-					<p>Practice counting the damage from Kain's attacks. There are up to eight you can observe before Edge's final Dart, and the more accurately you can measure this total, the more likely you'll be able to choose the most optimal action on Edge and Kain's final turns. This guide assumes you are able to count five of them, but recommendations will be given if you are unable.</p>
+					<p>Practice counting the damage from Kain's attacks. The more accurately you can measure this total, the more likely you'll be able to choose the most optimal action on Kain's final turns. This guide assumes you are able to count five of them, but recommendations will be given if you are unable.</p>
 					<dl class="dl-horizontal">
 						<dt>Cecil</dt><dd>Move <i>Dancing</i> to 2L<br>Use <i>Crystal</i> on Zeromus</dd>
 						<dt>Rosa</dt><dd>Cast Bersk on Kain</dd>
@@ -1634,45 +1635,40 @@
 					<dl class="dl-horizontal">
 						<dt>Edge</dt><dd>Dart <i>Gungnir</i></dd>
 						<dt>Rydia</dt><dd>Parry</dd>
-						<dt>Rosa</dt><dd>Parry</dd>
+						<dt>Rosa</dt><dd>Cast White</dd>
 						<dt>Cecil</dt><dd>Parry</dd>
-						<dt>Edge</dt><dd>Dart <i>Gungnir</i></dd>
-						<dt>Rydia</dt><dd>Parry (during Zeromus shake)</dd>
+						<dt>Edge</dt><dd>Dart <i>Dancing</i></dd>
 					</dl>
 					<p>Zeromus shakes.</p>
 					<dl class="dl-horizontal">
-						<dt>Rosa</dt><dd>Wait for Kain's second attack<br>Use <i>Life</i> on Edge</dd>
+						<dt>Rydia</dt><dd>Wait for White<br>Use <i>Elixir</i> on Weak target if Kain or Rosa/Parry</dd>
+						<dt>Cecil</dt><dd>Parry</dd>
+						<dt>Rosa</dt><dd>Cast Cure4 on entire party (as Big Bang goes off)</dd>
+					</dl>
+					<p>Zeromus casts Big Bang and shakes.</p>
+					<dl class="dl-horizontal">
+						<dt>Rosa</dt><dd>Wait for Kain attack after Zeromus shake<br>Use <i>Life</i> on Rydia</dd>
 					</dl>
 					<p>Zeromus casts Big Bang.</p>
 					<dl class="dl-horizontal">
-						<dt>Edge</dt><dd>Dart <i>Gungnir</i></dd>
-						<dt>Rosa</dt><dd>Cast Cure4 on entire party</dd>
-						<dt>Edge</dt><dd>Dart <i>Gungnir</i></dd>
-						<dt>Rosa</dt><dd>Parry</dd>
-					</dl>
-					<p>Zeromus shakes.</p>
-					<dl class="dl-horizontal">
-						<dt>Edge</dt><dd>Dart <i>Gungnir</i> (but see below)</dd>
 						<dt>Rosa</dt><dd>Wait for Blk.Hole after Big Bang<br>Cast Wall on Rosa</dd>
-						<dt>Kain</dt><dd>Run Buffer<br>Use <i>Elixir</i> on Rosa</dd>
+						<dt>Rydia</dt><dd>Cast Virus on Rosa</dd>
+						<dt>Kain</dt><dd>Fight/Use <i>Elixir</i> on Rosa</dd>
 						<dt>Rosa</dt><dd>Cast White on Rosa</dd>
-						<dt>Kain</dt><dd>Either Fight or Parry (see below)</dd>
+						<dt>Rydia</dt><dd>Run Buffer (only if Kain used Fight)<br>Cast Virus on Rosa</dd>
+						<dt>Kain</dt><dd>Use <i>Elixir</i> on Rosa (as Virus goes off, only if not already done)</dd>
 					</dl>
 					<p>Zeromus shakes and casts Big Bang.</p>
 					<dl class="dl-horizontal">
 						<dt>Rosa</dt><dd>Cast White on Zeromus</dd>
 					</dl>
 				</div>
-				<p>Edge's final Dart (his fifth overall) and Kain's final action can vary depending on the damage rolls in the fight. If you weren't able to count any damage, your best bet is to have Edge dart the <i>Gungnir</i> as planned and for Kain to Fight (hold A), which will give you a 71.4% chance of success (less if Edge is level 29). Otherwise, use the below chart, which assumes you counted five of Kain's attacks:</p>
+				<p>Kain's last actions can vary depending on the damage rolls in the fight. If you weren't able to count any damage, your best bet is to have Kain immediately use the Elixir, which will give you a 92.6% chance of success. Otherwise, use the below chart, which assumes you counted five of Kain's attacks:</p>
 				<table class="table">
-					<tr><th>Damage Range</th><th>Probability</th><th>Edge Dart</th><th>Kain Action</th><th>Success Rate</th></tr>
-					<tr><th>less than 11875</th><td>64.6%</td><td><i>Gungnir</i></td><td>Fight</td><td>79.5%</td></tr>
-					<tr><th>11875 to 12925</th><td>32.5%</td><td><i>Gungnir</i></td><td>Parry</td><td>79.5%</td></tr>
-					<tr><th>12925 to 13625</th><td>2.7%</td><td><i>Dancing</i></td><td>Fight</td><td>81.4%</td></tr>
-					<tr><th>greater than 13625</th><td>0.1%</td><td><i>Dancing</i></td><td>Parry</td><td>76.4%</td></tr>
+					<tr><th>Damage Range</th><th>Probability</th><th>Kain Action</th><th>Success Rate</th></tr>
+					<tr><th>less than 19575</th><td>21.3%</td><td>Fight</td><td>94.3%</td></tr>
+					<tr><th>greater than 19575</th><td>78.7%</td><td>Use <i>Elixir</i></td><td>97.5%</td></tr>
 				</table>
-				<p>If Edge is level 29 (instead of the assumed 28), add 460 to your counted damage.</p>
-				<p>Open Questions: a) how to handle Rosa getting her first turn too late and b) how to handle a level 28 Cecil. I plan to route backups for both of these scenarios, as well as one or two safer marathon routes.</p>
 			</div>
 		</div>
 		<script>$('#toc').toc({
