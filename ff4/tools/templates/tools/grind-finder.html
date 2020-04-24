@@ -1,0 +1,54 @@
+{% extends "tools/base.html" %}
+{% load static %}
+{% load django_bootstrap_breadcrumbs %}
+
+{% block breadcrumbs %}
+	{{ block.super }}
+	{% breadcrumb "Grind Finder" "tools:grind-finder" %}
+{% endblock %}
+
+{% block subtitle %}Seed Finder{% endblock %}
+
+{% block content %}				<h1>Grind Finder</h1>
+				<p>This tool will help you find a grind fight. At this time, it is primarily intended for use with <a href="http://ff4fe.com">Final Fantasy IV: Free Enterprise</a>. If the D.Machin fight is added at some point, that will also be applicable to vanilla.</p>
+				<div class="btn-group-toggle" data-toggle="buttons">
+					<button type="button" class="btn btn-primary" id="button-image-previous" disabled>Previous Image</button>
+					<button type="button" class="btn btn-primary" id="button-image-next" disabled>Next Image</button>
+					<button type="button" class="btn btn-primary" id="button-reset">Reset</button>
+				</div>
+				<div class="row" style="margin-top: 1.0em">
+					<div class="col">
+						<canvas width="512" height="512" id="map">
+					</div>
+					<div class="col">
+						<div id="encounters">
+						</div>
+						<div id="probabilities">
+						</div>
+					</div>
+				</div>
+				<h3>Grind Fight Selection</h3>
+				<select class="custom-select" id="route-select" style="margin-bottom: 1em;">
+					<option value="fe-macgiant">MacGiant (FF4FE)</option>
+				</select>
+				<div id="description"></div>
+				<h3>Possible Seeds</h3>
+				<div class="row">
+					<div class="col" id="seeds">
+					</div>
+				</div>
+				<h3>Documentation</h3>
+				<p>In order to use this tool, simply follow these steps:</p>
+					<li>Determine which grind you're interested in, and read the description to determine where to save and reset (and other important notes about the grind).</li>
+					<li>Every time you get an encounter, select the tile on which you got the encounter. Select the exact formation you got by clicking on it. (Technically, you can skip selecting the formation, but it's highly recommended and may be required to differentiate seeds in certain instances.)</li>
+					<li>When you're done with a given map, simply click <em>Next Image</em> to move to the next map.</li>
+					<li>If your only available option listed in the <em>Possibilities</em> section is <strong>Reset</strong>, you should reset and reload your save to try again. The reset points are optimized to minimize the average time spent searching.</li>
+				</ol>
+{% endblock %}
+
+{% block extrajs %}
+				<script src="{% static "js/grind-finder.js" %}"></script>
+				<script>
+					com.aexoden.ff4.init();
+				</script>
+{% endblock %}
