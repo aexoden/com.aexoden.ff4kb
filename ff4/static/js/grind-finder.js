@@ -670,37 +670,37 @@ com.aexoden.ff4 = function()
 			"49": "MacGiant x1"
 		},
 		{
-			"49": "MacGiant x1"
+			"23": "MacGiant x1"
 		},
 		{
-			"49": "MacGiant x1"
+			"23": "MacGiant x1"
 		},
 		{
-			"49": "MacGiant x1"
+			"23": "MacGiant x1"
 		},
 		{
-			"59": "MacGiant x1, Horseman x1",
+			"23": "MacGiant x1, Horseman x1",
+			"59": "Searcher (summons MacGiant) x1"
+		},
+		{
+			"23": "MacGiant x1, Horseman x1",
+			"59": "Searcher (summons MacGiant) x1"
+		},
+		{
+			"23": "Searcher (summons Horseman) x1, Machine x2",
 			"80": "Searcher (summons MacGiant) x1"
 		},
 		{
-			"59": "MacGiant x1, Horseman x1",
+			"23": "Searcher (summons Horseman) x1, Machine x2",
 			"80": "Searcher (summons MacGiant) x1"
 		},
 		{
-			"80": "Searcher (summons Horseman) x1, Machine x2",
-			"86": "Searcher (summons MacGiant) x1"
-		},
-		{
-			"80": "Searcher (summons Horseman) x1, Machine x2",
-			"86": "Searcher (summons MacGiant) x1"
-		},
-		{
-			"80": "Searcher (summons Horseman) x1, Machine x2",
-			"86": "Searcher (summons MacGiant) x1"
-		},
-		{
-			"46": "Searcher (summons Horseman) x1, Machine x2",
+			"23": "Searcher (summons Horseman) x1, Machine x2",
 			"80": "Searcher (summons MacGiant) x1"
+		},
+		{
+			"23": "Searcher (summons Horseman) x1, Machine x2",
+			"46": "Searcher (summons MacGiant) x1"
 		},
 		{
 			"46": "Searcher (summons Horseman) x1, Machine x2",
@@ -1016,7 +1016,7 @@ com.aexoden.ff4 = function()
 		{
 			"40": "Horseman x1, Beamer x2",
 			"63": "Machine x2, Beamer x2",
-			"104": "Horseman x1, Beamer x2",
+			"104": "Searcher (summons Horseman) x1, Beamer x2",
 			"145": "Machine x2, Beamer x3",
 			"172": "Horseman x2",
 			"191": "Horseman x2",
@@ -1025,7 +1025,7 @@ com.aexoden.ff4 = function()
 		{
 			"40": "Horseman x1, Beamer x1, Machine x1",
 			"63": "Machine x2, Beamer x2",
-			"104": "Horseman x1, Beamer x2",
+			"104": "Searcher (summons Horseman) x1, Beamer x2",
 			"145": "Machine x2, Beamer x3",
 			"172": "Horseman x2",
 			"191": "Horseman x2",
@@ -1034,7 +1034,7 @@ com.aexoden.ff4 = function()
 		{
 			"40": "Horseman x1, Beamer x1, Machine x1",
 			"63": "Machine x2, Beamer x2",
-			"104": "Horseman x1, Beamer x2",
+			"104": "Searcher (summons Horseman) x1, Beamer x2",
 			"145": "Machine x2, Beamer x3",
 			"172": "Horseman x2",
 			"191": "Horseman x2",
@@ -1043,7 +1043,7 @@ com.aexoden.ff4 = function()
 		{
 			"40": "Horseman x1, Beamer x1, Machine x1",
 			"63": "Machine x2, Beamer x2",
-			"104": "Horseman x1, Beamer x2",
+			"104": "Searcher (summons Horseman) x1, Beamer x2",
 			"172": "Machine x2, Beamer x3",
 			"184": "Horseman x2",
 			"191": "Horseman x2",
@@ -1052,7 +1052,7 @@ com.aexoden.ff4 = function()
 		{
 			"40": "Horseman x1, Beamer x1, Machine x1",
 			"63": "Machine x2, Beamer x2",
-			"104": "Horseman x1, Beamer x2",
+			"104": "Searcher (summons Horseman) x1, Beamer x2",
 			"106": "Machine x2, Beamer x3",
 			"184": "Horseman x2",
 			"191": "Horseman x2",
@@ -1061,7 +1061,7 @@ com.aexoden.ff4 = function()
 		{
 			"40": "Horseman x1, Beamer x1, Machine x1",
 			"63": "Machine x2, Beamer x2",
-			"104": "Horseman x1, Beamer x2",
+			"104": "Searcher (summons Horseman) x1, Beamer x2",
 			"106": "Machine x2, Beamer x3",
 			"156": "Horseman x2",
 			"184": "Horseman x2",
@@ -1069,7 +1069,7 @@ com.aexoden.ff4 = function()
 		},
 		{
 			"40": "Horseman x1, Beamer x1, Machine x1",
-			"104": "Machine x2, Beamer x2",
+			"104": "Horseman x1, Beamer x1, Machine x1",
 			"106": "Searcher (summons Horseman) x1, Beamer x2",
 			"156": "Machine x2, Beamer x3",
 			"184": "Horseman x2",
@@ -1077,7 +1077,7 @@ com.aexoden.ff4 = function()
 			"214": "Searcher (summons MacGiant) x1"
 		},
 		{
-			"104": "Horseman x1, Beamer x1, Machine x1",
+			"104": "Machine x2, Beamer x3",
 			"106": "Horseman x1, Beamer x1, Machine x1",
 			"156": "Searcher (summons Horseman) x1, Beamer x2",
 			"184": "Machine x2, Beamer x3",
@@ -1087,7 +1087,7 @@ com.aexoden.ff4 = function()
 		},
 		{
 			"103": "Horseman x1, Beamer x1, Machine x1",
-			"104": "Machine x2, Beamer x2",
+			"104": "Horseman x1, Beamer x1, Machine x1",
 			"106": "Searcher (summons Horseman) x1, Beamer x2",
 			"156": "Machine x2, Beamer x3",
 			"184": "Horseman x2",
@@ -1185,31 +1185,31 @@ com.aexoden.ff4 = function()
 			"134": "Searcher (summons MacGiant) x1"
 		},
 		{
-			"70": "Searcher (summons MacGiant) x1"
+			"22": "Searcher (summons MacGiant) x1"
 		},
 		{
-			"84": "Searcher (summons MacGiant) x1"
+			"22": "Searcher (summons MacGiant) x1"
 		},
 		{
-			"84": "Searcher (summons MacGiant) x1"
+			"22": "Searcher (summons MacGiant) x1"
 		},
 		{
-			"84": "Searcher (summons MacGiant) x1"
+			"22": "Searcher (summons MacGiant) x1"
 		},
 		{
-			"84": "Searcher (summons MacGiant) x1"
+			"22": "Searcher (summons MacGiant) x1"
 		},
 		{
-			"84": "Searcher (summons MacGiant) x1"
+			"22": "Searcher (summons MacGiant) x1"
 		},
 		{
-			"74": "Searcher (summons MacGiant) x1"
+			"22": "Searcher (summons MacGiant) x1"
 		},
 		{
-			"36": "Searcher (summons MacGiant) x1"
+			"22": "Searcher (summons MacGiant) x1"
 		},
 		{
-			"36": "Searcher (summons MacGiant) x1"
+			"22": "Searcher (summons MacGiant) x1"
 		},
 		{
 			"36": "Searcher (summons MacGiant) x1"
