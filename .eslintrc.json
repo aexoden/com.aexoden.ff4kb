@@ -5,8 +5,9 @@
 	},
 	"extends": "eslint:recommended",
 	"parserOptions": {
-		"ecmaVersion": 2015,
-		"sourceType": "module"
+		"ecmaVersion": 8,
+		"sourceType": "module",
+		"ecmaFeatures": "impliedStrict"
 	},
 	"rules": {
 		"indent": ["error", "tab"],
