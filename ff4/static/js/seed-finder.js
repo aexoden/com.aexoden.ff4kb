@@ -5821,6 +5821,8 @@ com.aexoden.ff4 = function()
 			maxStep = mapData[currentMapIndex].maxStep;
 		} else if (currentMapIndex > 0) {
 			maxStep = Math.max(mapData[currentMapIndex - 1].maxStep, maxStep);
+		} else {
+			maxStep = Math.max(mapData[currentMapIndex].stepRange[0] - 1, maxStep);
 		}
 
 		Object.entries(encounterData).forEach(
@@ -5888,10 +5890,18 @@ com.aexoden.ff4 = function()
 		possibleSteps = new Set([]);
 
 		for (var seed of possibleSeeds) {
+			let addSteps = true;
+
 			Object.entries(encounterData[seed]).forEach(
-				([step, formation]) => {
-					if (!(possibleSteps.has(parseInt(step)))) {
-						possibleSteps.add(parseInt(step));
+				([step,]) => {
+					if (addSteps) {
+						if (!(possibleSteps.has(parseInt(step)))) {
+							possibleSteps.add(parseInt(step));
+						}
+
+						if (selectedSteps.size == 0 || parseInt(step) > Math.max(...Array.from(selectedSteps))) {
+							addSteps = false;
+						}
 					}
 				}
 			);
