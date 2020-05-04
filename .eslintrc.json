@@ -6,11 +6,10 @@
 	"extends": "eslint:recommended",
 	"parserOptions": {
 		"ecmaVersion": 8,
-		"sourceType": "module",
-		"ecmaFeatures": "impliedStrict"
+		"sourceType": "module"
 	},
 	"rules": {
-		"indent": ["error", "tab"],
+		"indent": ["error", 4],
 		"linebreak-style": ["error", "unix"],
 		"no-extra-parens": "error",
 		"no-tabs": ["error", {"allowIndentationTabs": true}],
