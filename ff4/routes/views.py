@@ -98,6 +98,16 @@ ROUTES = {
 		'seed_finder': True,
 		'status': 'Optimal'
 	},
+	'no64-rosa-marathon-recovery-paladin': {
+		'name': 'Any% No64 (Rosa) (Marathon) (Recovery: Paladin)',
+		'description': 'This variant of no64-rosa-marathon runs from the save point on Mt.Ordeals after Cecil becomes a Paladin until Zeromus is defeated, and is primarily intended as a step route (and grind) recovery method.',
+		'group': 'testing',
+		'enabled': True,
+		'twin_safe': True,
+		'complete': False,
+		'seed_finder': True,
+		'status': 'Optimal'
+	},
 
 	'premist': {
 		'name': 'Pre-Mist Clip',
