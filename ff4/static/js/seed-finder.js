@@ -8642,6 +8642,73 @@ com.aexoden.ff4 = function()
                 248: "One encounter with Pike x3."
             }
         },
+        "no64-rosa-safe": {
+            14: {
+                "instruction": "Take <strong>48</strong> extra steps in the save room. Determine your seed based on the room after the next room (B3F):",
+                14: "Three encounters on steps 6, 14 and 23.",
+                15: "Two encounters on steps 14 and 23."
+            },
+            22: {
+                "instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+                22: "Two encounters on steps 9 and 36.",
+                23: "Three encounters on steps 9, 24 and 36."
+            },
+            30: {
+                "instruction": "Take <strong>6</strong> extra steps in the save room. Determine your seed based on the next room:",
+                30: "One encounter with CaveToad x3 on step 32.",
+                31: "No encounters."
+            },
+            41: {
+                "instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+                41: "No encounters.",
+                42: "One encounter with Pike x3 on step 21."
+            },
+            47: {
+                "instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+                47: "One encounter on step 21.",
+                48: "Two encounters on steps 21 and 31."
+            },
+            63: {
+                "instruction": "Take <strong>52</strong> extra steps in the save room. Determine your seed based on the room where you get <i>Darkness</i> (sword):",
+                63: "Encounters on steps 8 and 21.",
+                64: "Encounters on steps 21 and 38."
+            },
+            68: {
+                "instruction": "Take <strong>16</strong> extra steps in the save room. Determine your seed based on the room after the next room (B3F):",
+                68: "No encounters.",
+                69: "One encounter with CaveToad x3 on step 18."
+            },
+            78: {
+                "instruction": "Take <strong>14</strong> extra steps in the save room. Determine your seed based on the next room:",
+                78: "One encounter with Pike x3 on step 18. Take <strong>8</strong> extra steps before leaving the room. An additional encounter with CaveToad x3 will occur before you leave.",
+                79: "No encounters. Don't take any extra steps."
+            },
+            132: {
+                "instruction": "Take <strong>24</strong> extra steps in the save room. Determine your seed based on the room where you get <i>Darkness</i> (sword):",
+                132: "First encounter is Aligator x1, Pike x2.",
+                133: "First encounter is TinyMage x2, WaterHag x4."
+            },
+            143: {
+                "instruction": "Take <strong>2</strong> extra steps in the save room. Determine your seed based on the next room:",
+                143: "Encounter with Pike x3 on step 23.",
+                144: "Encounter with CaveToad x3 on step 23."
+            },
+            175: {
+                "instruction": "Take <strong>60</strong> extra steps in the save room. Determine your seed based on the next room:",
+                175: "One encounter with Pike x2, EvilShel x2 on step 21.",
+                176: "No encounters."
+            },
+            183: {
+                "instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+                183: "One encounter on step 37. Don't take any extra steps.",
+                184: "Two encounters on steps 18 and 37. Take <strong>8</strong> extra steps before leaving the room. An additional encounter will occur before you leave."
+            },
+            247: {
+                "instruction": "Take <strong>10</strong> extra steps in the save room. Determine your seed based on the room after the next room (B3F):",
+                247: "No encounters. Take <strong>14</strong> extra steps before leaving the room.",
+                248: "One encounter with Jelly x4 on step 27. Don't take any extra steps before leaving."
+            }
+        },
         "no64-rosa-marathon": {
             14: {
                 "instruction": "Take <strong>58</strong> extra steps in the save room. Determine your seed based on the next room:",
@@ -8726,6 +8793,7 @@ com.aexoden.ff4 = function()
         "nocw": "Any% NoCW",
         "no64-rosa": "Any% No64 (Rosa)",
         "no64-excalbur": "Any% No64 (Edge+Excalbur)",
+        "no64-rosa-safe": "Any% No64 (Rosa) (Safe)",
         "no64-rosa-marathon": "Any% No64 (Rosa) (Marathon)",
         "no64-rosa-marathon-recovery-fusoya": "Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)",
         "no64-rosa-marathon-recovery-paladin": "Any% No64 (Rosa) (Marathon) (Recovery: Paladin)"
@@ -8736,6 +8804,7 @@ com.aexoden.ff4 = function()
         "nocw": "mist",
         "no64-rosa": "mist",
         "no64-excalbur": "mist",
+        "no64-rosa-safe": "mist",
         "no64-rosa-marathon": "mist",
         "no64-rosa-marathon-recovery-fusoya": "fusoya",
         "no64-rosa-marathon-recovery-paladin": "paladin"

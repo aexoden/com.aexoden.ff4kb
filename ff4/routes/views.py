@@ -68,6 +68,16 @@ ROUTES = {
         'seed_finder': True,
         'status': '~98.25% Optimal'
     },
+    'no64-rosa-safe': {
+        'name': 'Any% No64 (Rosa) (Safe)',
+        'description': 'This route runs from the beginning of the game until Zeromus is defeated. Use of the 64-door glitch is banned. The step route begins after the Mist Clip. This particular version of the route relies on Rosa as the primary damage dealer at the end of the game. This variant adds the healing pot in the Castle of Dwarves and two extra elixirs in the Pass to Bab-il.',
+        'group': 'testing',
+        'enabled': True,
+        'twin_safe': True,
+        'complete': False,
+        'seed_finder': True,
+        'status': 'Optimal'
+    },
     'no64-rosa-marathon': {
         'name': 'Any% No64 (Rosa) (Marathon)',
         'description': 'This route runs from the beginning of the game until Zeromus is defeated. Use of the 64-door glitch is banned. The step route begins after the Mist Clip. This particular version of the route relies on Rosa as the primary damage dealer at the end of the game. This variant adds extra save points and a visit to the Elixir shop for use during marathons.',
