@@ -9,11 +9,14 @@
 		"sourceType": "module"
 	},
 	"rules": {
+        "comma-dangle": ["error", "always-multiline"],
 		"indent": ["error", 4],
 		"linebreak-style": ["error", "unix"],
 		"no-extra-parens": "error",
 		"no-tabs": ["error", {"allowIndentationTabs": true}],
-		"quotes": ["error", "double", {"avoidEscape": true}],
-		"semi": ["error", "always"]
+        "quotes": ["error", "double", {"avoidEscape": true}],
+        "quote-props": ["error", "as-needed"],
+        "semi": ["error", "always"],
+        "sort-keys": ["error", "asc", {"natural": true, "minKeys": 3}]
 	}
 }
