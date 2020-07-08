@@ -1450,7 +1450,9 @@ com.aexoden.ff4.exp = function()
         let value = e.target.value;
 
         if (value == getMonsterProperty(route, battle, monster, "count", true)) {
-            delete _monster_overrides[battle][monster];
+            if (battle in _monster_overrides && monster in _monster_overrides[battle]) {
+                delete _monster_overrides[battle][monster];
+            }
             this.value = getMonsterProperty(route, battle, monster, "count", true);
         } else {
             if (!(battle in _monster_overrides)) {
@@ -1489,13 +1491,19 @@ com.aexoden.ff4.exp = function()
         var routeData = _routeData[route];
         let warnings = [];
 
-        e.innerHTML = "";
-
         let exp = {};
 
         routeData.battles.forEach(function(battle) {
             var battleData = _battleData[battle];
-            var battleDiv = document.createElement("div");
+            let battleDiv = document.getElementById("battle-" + battle);
+            let addDiv = false;
+
+            if (!battleDiv) {
+                battleDiv = document.createElement("div");
+                battleDiv.id = "battle-" + battle;
+                addDiv = true;
+            }
+
             battleDiv.innerHTML = "<h4>" + battleData.name + "</h4>";
             for (let monster in battleData.monsters) {
                 let monsters = [];
@@ -1615,7 +1623,10 @@ com.aexoden.ff4.exp = function()
             battleData.shadow.forEach(doCharacter);
 
             battleDiv.appendChild(list);
-            e.appendChild(battleDiv);
+
+            if (addDiv) {
+                e.appendChild(battleDiv);
+            }
         });
 
         let status = document.getElementById("status");
