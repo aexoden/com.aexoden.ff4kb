@@ -71,10 +71,10 @@ ROUTES = {
     'no64-rosa-safe': {
         'name': 'Any% No64 (Rosa) (Safe)',
         'description': 'This route runs from the beginning of the game until Zeromus is defeated. Use of the 64-door glitch is banned. The step route begins after the Mist Clip. This particular version of the route relies on Rosa as the primary damage dealer at the end of the game. This variant adds the healing pot in the Castle of Dwarves and two extra elixirs in the Pass to Bab-il.',
-        'group': 'testing',
+        'group': 'standard',
         'enabled': True,
         'twin_safe': True,
-        'complete': False,
+        'complete': True,
         'seed_finder': True,
         'status': 'Optimal'
     },
