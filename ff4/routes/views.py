@@ -94,7 +94,7 @@ ROUTES = {
         'group': 'standard',
         'enabled': True,
         'twin_safe': True,
-        'complete': True,
+        'complete': False,
         'seed_finder': True,
         'status': '~96.75% Optimal'
     },
@@ -104,7 +104,7 @@ ROUTES = {
         'group': 'recovery',
         'enabled': True,
         'twin_safe': True,
-        'complete': True,
+        'complete': False,
         'seed_finder': True,
         'status': 'Optimal'
     },
@@ -124,7 +124,7 @@ ROUTES = {
         'description': 'From the beginning of the game until the Mist Clip. Primarily useful for demonstrating that seed 92 is optimal.',
         'group': 'alternate',
         'enabled': True,
-        'complete': True,
+        'complete': False,
         'seed_finder': False,
         'status': 'Optimal'
     },
