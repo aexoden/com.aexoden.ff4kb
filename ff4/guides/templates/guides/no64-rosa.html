@@ -47,6 +47,7 @@
 				<li>Rosa needs to be level 20 (in order to learn Bersk) by the time you reach Zeromus. This is irrelevant for the Rosa route, but for Drain or Excalbur, it's essential unless you want to wing your own Zeromus strat.</li>
 				<li>Kain ideally should be level 19 by the time you reach Valvalis. While it is possible to defeat Valvalis with a level 18 Kain, the fight is longer and requires a slightly modified strat.</li>
 				<li>Yang should be level 17 by the time you reach Dr.Lugae. However, it is not absolutely essential, as there are strats to handle a level 16 Yang.</li>
+				<li>Rydia should ideally be level 19 by the time you reach Dr.Lugae, but like with Yang, it is not absolutely essential.</li>
 				<li>Especially toward the later fights, it's best to not have too many people dead, as if Cecil receives too many levels, the Zeromus fight can go badly. For Rosa, you want Cecil to be level 27 or lower, and for Excalbur, level 29 or lower.</li>
 			</ul>
 			<p>In these notes, I recommend a particular experience path. However, it isn't necessary to follow it exactly, so long as the above goals are maintained. Consult some of the other guides (especially riversmccown's guide) for more information on other possibilities.</p>
@@ -70,13 +71,13 @@
 			<p>The following resources should prove invaluable to either help during a run or to help you learn the run in the first place:</p>
 			<ul>
 				<li><a href="https://docs.google.com/document/d/1oLUA9Xt5RGQehK6I8MY7R4qKbhDeR5V9PY8gz7Lz4YI/edit">Any% No64 Notes</a> (by <a href="https://www.twitch.tv/riversmccown">Rivers McCown</a>)</li>
-				<li><a href="{% url 'routes:route' "no64-rosa" %}">Any% No64 (Rosa) Step Routes</a></li>
+				<li><a href="{% url 'routes:route' "no64-rosa-safe" %}">Any% No64 (Rosa) (Safe) Step Routes</a></li>
 				<li><a href="{% url 'tools:seed-finder' %}">Seed Finder Tool</a></li>
 				<li><a href="{% static "myself086/GrindFightManip.txt" %}">Grind Fight Manipulation Text</a> (by <a href="https://www.twitch.tv/myself086">Myself086</a>)</li>
 				<li><a href="{% static "myself086/GrindFightManip.PNG" %}">Grind Fight Manipulation Image</a> (by <a href="https://www.twitch.tv/myself086">Myself086</a>)</li>
 			</ul>
 			<h3 id="general-concepts-step-route">Step Route</h3>
-			<p>This guide is intended to be used with a step route. The step route is not required, but it will generally save you 2 or 3 minutes if executed properly. For this guide, you should be using the no64-rosa-safe routes, which are not yet available on the site. I'm working on it. As of 2020-04-21, an early test version is available on my computer. Contact me if you'd like to test them.</p>
+			<p>This guide is intended to be used with a step route. The step route is not required, but it will generally save you 2 or 3 minutes if executed properly. For this guide, you should be using the no64-rosa-safe routes.</p>
 			<h2 id="walkthrough">Walkthrough</h2>
 			<h3 id="walkthrough-prologue">Prologue</h3>
 			<p>Begin the game. During the introduction, you may wish to hold down B+Right+Down immediately before the battle with the Raven, in an attempt to avoid the Raven's attack. This is known as the BRD or BIRD skip. It may or may not work for you, depending on the awesomeness of your mashing. Finish the introduction and gain control.</p>
@@ -996,6 +997,7 @@
 						<dt>HP</dt><dd>6000</dd>
 						<dt>EXP</dt><dd>9500</dd>
 						<dt>Party</dt><dd>*Cid (20:26754) / Rosa (18:17481) / *Kain (19:20172) / Cecil (16:11316) / *Yang (15:10493)</dd>
+						<dt>Ideal Survivors</dt><dd>Rosa, Kain, Cecil and Yang</dd>
 					</dl>
 				</div>
 				<h5>Battle Plan</h5>
@@ -1026,7 +1028,7 @@
 						<dt>Yang</dt><dd>Fight</dd>
 						<dt>Rosa</dt><dd>Parry</dd>
 						<dt>Cecil</dt><dd>Use <i>Dancing</i></dd>
-						<dt>Cid</dt><dd>Fight</dd>
+						<dt>Cid</dt><dd>Fight Cid (optional)</dd>
 						<dt>Kain</dt><dd>Jump/Fight</dd>
 						<dt>Yang</dt><dd>Fight</dd>
 						<dt>Rosa</dt><dd>Parry</dd>
@@ -1034,6 +1036,7 @@
 					</dl>
 					<p>If the damage rolls were decent, Kain can Fight on his last turn instead of Jumping. If Valvalis still doesn't die, just continue the normal pattern. She won't have much HP left at this point.</p>
 					<p>If Cid dies, leave him dead, as it will help Rosa's experience path. Everyone else (except perhaps Cecil) optimally needs to survive. Being fully stoned counts as death, but it can be hard to see if this is the case or not.</p>
+					<p>If you want to ensure a level 19 Rydia for Dr.Lugae, make sure Cid dies here. Depending on your exact experience path, this may not be necessary, but it is if you are following this guide exactly.</p>
 				</div>
 			</div>
 			<h3 id="walkthrough-underworld">The Underworld</h3>
@@ -1471,10 +1474,11 @@
 					<p>This fight is somewhat complicated, so instead of a detailed command sequence, we'll instead look at the three phases of the fight. The first phase depends on exactly what type of battle you get:</p>
 					<dl class="row">
 						<dt class="col-3">Normal</dt><dd class="col-9">FuSoYa casts Quake, Rydia waits for Quake and then parries, and everyone else parries until it's FuSoYa's turn.</dd>
-						<dt class="col-3">Strike First</dt><dd class="col-9">FuSoYa casts Lit-3 on a Beamer while Edge parries immediately. Wait on Rydia's turn until Lit-3 is cast, then parry back to FuSoYa.</dd>
+						<dt class="col-3">Strike First</dt><dd class="col-9">FuSoYa casts Lit-3 on a Beamer while Edge parries immediately. Wait on Rydia's turn until Lit-3 is cast, then parry back to FuSoYa. At this point, FuSoYa casts Quake as usual, Rydia waits until Quake and parries, and then everyone else parries back to FuSoYa.</dd>
 						<dt class="col-3">Back Attack/Surprise</dt><dd class="col-9">Edge casts Flood. FuSoYa waits for Flood, then casts Quake. Rydia waits for Quake, then parries. Parry back to FuSoYa.</dd>
 					</dl>
-					<p>If you have a chance during a Beam attack, you can do some minor inventory management. If following my inventory management route, I recommend swapping <i>IceBrand</i> and <i>Karate</i>.</p>
+					<p>If Edge is in the front row (in other words, in any case except a back attack), you might wish to have eithe Rydia, Rosa or Cecil use Change on their first turn. This will minimize the chance of killing the searcher early.<p>
+					<p>If you have a chance during a Beam attack, you should do some minor inventory management. If following my inventory management route, I recommend swapping <i>Strength</i> and <i>Dwarf</i> and then swapping <i>IceBrand</i> and <i>Karate</i>.</p>
 				</div>
 				<h5>Battle Phase Two: Midfight</h5>
 				<div class="info-block">
@@ -1593,7 +1597,7 @@
 						<dt>Rydia</dt><dd>Parry (must be fast if you want her last turn)</dd>
 						<dt>Rosa</dt><dd>Wait for Maser (second Maser after Rydia parried)<br>Cast White on Rosa</dd>
 						<dt>Rydia</dt><dd>Parry (must be fast if you want her last turn)</dd>
-						<dt>FuSoYa</dt><dd>Swap <i>Strength</i> and <i>Dancing</i> x1<br>Cast Nuke on Rosa</dd>
+						<dt>FuSoYa</dt><dd>Cast Nuke on Rosa</dd>
 						<dt>Rydia</dt><dd>Equip <i>Change</i> (if not yet done)<br>Move both <i>Dancing</i> x1 to bottom<br>Move <i>Gaea</i> (helm) to bottom</dd>
 					</dl>
 				</div>
@@ -1607,7 +1611,7 @@
 			<div class="bs-callout bs-callout-danger">
 				<span class="fas fa-shoe-prints"></span>
 				<h4>Step Route</h4>
-				<p>If you are using a step route, you will potentially need to pick up one of the chests with a <i>Ninja</i> star. This guide does not require one in its Zeromus battle strategy, but the chest is in the step routes. There are three potential choices (Subterrane B6, Core B1 and Core B3), and the step route will tell you which to pick up. If not using a step route (or if the route is an older route and doesn't tell you), pick up the one on Core B3, as it has the shortest walk.</p>
+				<p>If you are using a step route, you will potentially need to pick up one of the chests with a <i>Ninja</i> star. This guide does not require one in its Zeromus battle strategy, but the chest is in the step routes. There are three potential choices (Subterrane B6, Core B1 and Core B3), and the step route will tell you which to pick up. If not using a step route (or if the route is an older route and doesn't tell you), pick up the one on Core B3, as it has the shortest walk. If you don't need one for your Zeromus fight, however, don't bother picking it up unless you're on step route.</p>
 			</div>
 			<p>Continue the descent until you reach the final battle. If you run into any formations of <i>Red D. x1</i>, it's probably faster to have Kain parry and for Rosa to cast Exit. The battle itself will take longer, but you'll escape the Heat Ray, which might make healing less necessary.</p>
 			<div class="bs-callout bs-callout-info">
@@ -1668,6 +1672,7 @@
 						<dt>Rosa</dt><dd>Cast White on Rosa</dd>
 						<dt>Rydia</dt><dd>Run Buffer (only if Kain used Fight)<br>Cast Virus on Rosa</dd>
 						<dt>Kain</dt><dd>Use <i>Elixir</i> on Rosa (as Virus goes off, only if not already done)</dd>
+						<dt>Rydia</dt><dd>Cast Virus on Rosa (this turn only happens if Rydia run buffers her previous turn)</dd>
 					</dl>
 					<p>Zeromus shakes and casts Big Bang.</p>
 					<dl class="dl-horizontal">
@@ -1677,9 +1682,10 @@
 				<p>Kain's last actions can vary depending on the damage rolls in the fight. If you weren't able to count any damage, your best bet is to have Kain immediately use the Elixir, which will give you a 92.6% chance of success. Otherwise, use the below chart, which assumes you counted Rosa's first White and at least five of Kain's attacks:</p>
 				<table class="table">
 					<tr><th>White + 5 Attacks</th><th>White + 8 Attacks</th><th>White + 12 Attacks</th><th>Kain Action</th></tr>
-					<tr><th>less than 19575</th><th>less than 26676</th><th>less than 36288</th><td>Fight</td></tr>
-					<tr><th>greater than 19575</th><th>greater than 26676</th><th>greater than 36288</th><td>Use <i>Elixir</i></td></tr>
+					<tr><th>less than 19830</th><th>less than 26606</th><th>less than 36238</th><td>Fight</td></tr>
+					<tr><th>greater than 19830</th><th>greater than 26606</th><th>greater than 36238</th><td>Use <i>Elixir</i></td></tr>
 				</table>
+				<p>If you run buffer Rydia's second Virus cast (even if Kain used an <i>Elixir</i>), there is a chance Rydia will get an opportunity to reflect a third virus. It may be worth taking if you're concerned about your damage rolls. Eventually, more specific guidance will be given here.</p>
 			</div>
 		</div>
 		<script>$('#toc').toc({
