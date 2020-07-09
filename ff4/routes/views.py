@@ -81,12 +81,12 @@ ROUTES = {
     'no64-rosa-marathon': {
         'name': 'Any% No64 (Rosa) (Marathon)',
         'description': 'This route runs from the beginning of the game until Zeromus is defeated. Use of the 64-door glitch is banned. The step route begins after the Mist Clip. This particular version of the route relies on Rosa as the primary damage dealer at the end of the game. This variant adds extra save points and a visit to the Elixir shop for use during marathons.',
-        'group': 'testing',
+        'group': 'standard',
         'enabled': True,
         'twin_safe': True,
-        'complete': False,
+        'complete': True,
         'seed_finder': True,
-        'status': 'Suboptimal'
+        'status': 'Suboptimal (ETA: September 2020)'
     },
     'no64-excalbur': {
         'name': 'Any% No64 (Edge+Excalbur)',
@@ -96,7 +96,7 @@ ROUTES = {
         'twin_safe': True,
         'complete': True,
         'seed_finder': True,
-        'status': 'Suboptimal'
+        'status': 'Suboptimal (ETA: November 2020)'
     },
     'no64-rosa-marathon-recovery-fusoya': {
         'name': 'Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)',
