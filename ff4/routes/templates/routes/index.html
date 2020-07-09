@@ -17,8 +17,8 @@
 			<p>For an introduction to step routing, I recommend reading the <a href="{% url 'guides:mini-step-routing' %}">Step Routing Basics</a> guide. If you have suggestions or comments regarding that guide, please contact me.</p>
 			<p>In addition, each route has its own individual <em>Tutorial</em> tab which should help newcomers.</p>
 			<p>In order to find your seed during a run, I recommend using my <a href="{% url 'tools:seed-finder' %}">Seed Finder tool</a>.</p>
-			<h2>Optimization Status</h2>
-			<p>Three of the four primary routes are now almost entirely optimized and have twin seed safety guarantees. The remaining route will follow shortly. The optimization percentages are based on how close the times are to optimal on average (based on comparison to older versions of the routes). Some of the seeds may still be relatively suboptimal, but most are either optimal or within a few seconds of such.</p>
+            <h2>Optimization Status</h2>
+            <p>All modern routes are now available with tutorial and summary data and are twin safe. Some of the routes remain suboptimal, but they should be fully optimized within a few months. The no64-excalbur routes are particularly suboptimal, but as they are generally only used by beginners, I consider this a minor issue. (They should still on average get 90% of the optimal time savings.)</p>
 {% for group, group_data in routes.items %}
 			<h2>{{ group_data.name }}</h2>
 			<p>{{ group_data.description }}</p>
