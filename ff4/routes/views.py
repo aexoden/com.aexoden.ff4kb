@@ -94,9 +94,9 @@ ROUTES = {
         'group': 'standard',
         'enabled': True,
         'twin_safe': True,
-        'complete': False,
+        'complete': True,
         'seed_finder': True,
-        'status': '~96.75% Optimal'
+        'status': 'Suboptimal'
     },
     'no64-rosa-marathon-recovery-fusoya': {
         'name': 'Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)',

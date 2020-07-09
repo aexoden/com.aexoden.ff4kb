@@ -8520,9 +8520,9 @@ com.aexoden.ff4 = function()
                 23: "Three encounters."
             },
             30: {
-                "instruction": "Take <strong>8</strong> extra steps in the save room. Determine your seed based on the next room:",
-                30: "One encounter with CaveToad x3.",
-                31: "No encounters."
+                "instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+                30: "One encounter with CaveToad x3 on step 38.",
+                31: "One encounter with CaveToad x3 on step 5."
             },
             41: {
                 "instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
@@ -8535,14 +8535,14 @@ com.aexoden.ff4 = function()
                 48: "Two encounters."
             },
             63: {
-                "instruction": "Take <strong>72</strong> extra steps in the save room. Determine your seed based on the room where you get <i>Darkness</i> (sword):",
-                63: "Encounters on steps 2 and 15.",
-                64: "Encounters on steps 15 and 32."
+                "instruction": "Take <strong>52</strong> extra steps in the save room. Determine your seed based on the room where you get <i>Darkness</i> (sword):",
+                63: "Encounters on steps 13, 22 and 35.",
+                64: "Encounters on steps 13, 35 and 52."
             },
             68: {
-                "instruction": "Take <strong>16</strong> extra steps in the save room. Determine your seed based on the room after the next room (B3F):",
-                68: "No encounters.",
-                69: "One encounter with CaveToad x3."
+                "instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+                68: "One encounter.",
+                69: "Two encounters."
             },
             78: {
                 "instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
@@ -8550,7 +8550,7 @@ com.aexoden.ff4 = function()
                 79: "One encounter on step 14."
             },
             132: {
-                "instruction": "Take <strong>26</strong> extra steps in the save room. Determine your seed based on the room where you get <i>Darkness</i> (sword):",
+                "instruction": "Take <strong>28</strong> extra steps in the save room. Determine your seed based on the room where you get <i>Darkness</i> (sword):",
                 132: "First encounter is Aligator x1, Pike x2.",
                 133: "First encounter is TinyMage x2, WaterHag x4."
             },
@@ -8560,14 +8560,14 @@ com.aexoden.ff4 = function()
                 144: "Encounter with CaveToad x3."
             },
             175: {
-                "instruction": "Take <strong>4</strong> extra steps in the save room. Determine your seed based on the next room:",
+                "instruction": "Take <strong>8</strong> extra steps in the save room. Determine your seed based on the next room:",
                 175: "No encounters.",
                 176: "One encounter."
             },
             183: {
                 "instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
-                183: "One encounter on step 37. Don't take any extra steps.",
-                184: "Two encounters on steps 18 and 37. Take <strong>8</strong> extra steps before leaving the room. There will be one more encounter during the extra steps."
+                183: "One encounter on step 37.",
+                184: "Two encounters on steps 18 and 37."
             },
             247: {
                 "instruction": "Don't take any extra steps in the save room. Determine your seed based on the next room:",
