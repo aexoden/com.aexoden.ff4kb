@@ -26,7 +26,7 @@
 				<li><em>There is such thing as a free step.</em> In several places throughout the game, there are multiple paths you can take from A to B, and while these paths are equally long tile-wise, they may increase your step counter by different numbers. The routes use this fact extensively, and this page will attempt to make you aware of all the locations. For historical reasons, these are referred to as <strong>optional steps</strong>.</li>
 				<li><em>A single mistaken step can be disasterous.</em> A single extra step may seem innocuous, but if it causes you to get an extra encounter or to miss an expected encounter, the encounters you get for the rest of the run may change significantly. This includes losing the guaranteed grind fight, running into unexpected dangerous encounters, or simply getting a less favorable descent in the final dungeon.</li>
 			</ul>
-			<p>The route detail pages for the four mainstream routes provide detailed tutorials to help you learn exactly how to walk, and where you might take extra steps. With few exceptions, you can actually take these steps anywhere on the appropriate map, so long as you take the correct number of steps. However, you need to be mindful of tiles that do not count, as these are sometimes used to add a single extra step. Those can obviously not be moved around arbitrarily. I recommend using these tutorial pages once or twice until you are familiar with most of the available maps.</p>
+			<p>The route detail pages for the mainstream routes provide detailed tutorials to help you learn exactly how to walk, and where you might take extra steps. With few exceptions, you can actually take these steps anywhere on the appropriate map, so long as you take the correct number of steps. However, you need to be mindful of tiles that do not count, as these are sometimes used to add a single extra step. Those can obviously not be moved around arbitrarily. I recommend using these tutorial pages once or twice until you are familiar with most of the available maps.</p>
 			<p>On most maps, the extent of the step route is going to be to take some number of extra steps. This guide will detail the locations where things are more complicated, but it won't go into detail about every possible map. If you have any questions, please contact me on Discord or <a href="mailto:jason@calindora.com">via e-mail</a>.</p>
 			<h2 id="knowing-your-seed">Knowing Your Seed</h2>
 			<p>One of the most annoying parts of using a step route is determining your seed. This process begins after you reset after the Mist Clip. The currently recommended way to identify your seed is to use the <a href="{% url 'tools:seed-finder' %}">Seed Finder</a>, which provides a point-and-click interface.</p>
@@ -56,7 +56,7 @@
 			<div class="row mb-4">
 				<div class="col">
 					<h3 id="watery-pass-south-save-room">Watery Pass-South Save Room</h3>
-					<p>Again, this map is pretty mundane. However, it is notable in that there are several pairs of seeds, known as twin seeds, that cannot be distinguished by the time you reach this map. The routes have been adjusted to make this a non-issue, but it's something to be aware of if you get to this point and still have two possible seeds. You'll want to pick one of them, and follow it closely using the detail tab. If you run into any differences, switch to the other one. Extra data may eventually be added to the seed finder to make this song and dance unnecessary.</p>
+					<p>Again, this map is pretty mundane. However, it is notable in that there are several pairs of seeds, known as twin seeds, that cannot be distinguished by the time you reach this map. If you are using the seed finder tool, appropriate instructions will be given to you to resolve the situation. If not, your best bet is to pick one of them, and follow that route closely using the detail tab. If you run into any differences, switch to the other one.</p>
 				</div>
 				<div class="col"><img src="{% static 'img/tutorial/0001.png' %}"></div>
 			</div>
@@ -130,7 +130,7 @@
 				<div class="col">
 					<h3 id="toroian-castle-after-cave-magnes">Toroian Castle [after Cave Magnes]</h3>
 					<p>You may be asked to enter the <i>Extra Steps Area</i>, which refers to the non-carpet tiles on the left or right side of the screen. Once in this area, you will need to take any requested number of extra steps.</p>
-					<p>A long time ago, Myself086's routes simply listed this section as a number of steps. The implicit step from entering the step area was included. This implicit step is no longer included in the modern routes. To help keep things clear, both totals are listed in the route summary.</p>
+					<p>A long time ago, Myself086's routes simply listed this section as a number of steps. The implicit step from entering the step area was included in the given number. This implicit step is no longer included in the modern routes. To help keep things clear, both totals are listed in the route summary.</p>
 					<p>Pretend the <i>Extra Steps Area</i> is a separate room and treat it the same as you would treat any other separate room.</p>
 				</div>
 				<div class="col"><img src="{% static 'img/tutorial/0015.png' %}"></div>
@@ -145,8 +145,19 @@
 			<div class="row mb-4">
 				<div class="col">
 					<h3 id="castle-of-dwarves">Castle of Dwarves</h3>
-					<p>Welcome to the nightmare. With a total of 20 optional steps scattered among seven rooms, the Castle of Dwarves is the nemesis of any FF4 speedrunner. Your first step should probably be to learn the default paths, as they aren't necessarily how one would walk normally.</p>
-					<p>You may be asked to cast Warp twice immediately after you retrieve the crystal. Collect the crystal, cast Warp twice, and then follow the rest of the route as normal. In this case, there will be a maximum of 18 optional steps.</p>
+                    <p>Welcome to the nightmare. With a total of either 21 or 22 optional steps (depending on route) scattered among seven rooms, and up to four potential extra Warp casts, the Castle of Dwarves is the nemesis of any FF4 speedrunner. Your first step should probably be to learn the default paths, as they aren't necessarily how one would walk normally.</p>
+                    <p>As hinted above, there may be up to four extra Warp casts. The summary or detail tabs of the route will only specify the number of extra warps. If you need more assitance, the tutorial maps will tell you exactly which maps on which to cast Warp. There is an assumed priority order, which you must follow (in other words, do the first X number of Warp casts from the below list, depending on what the route specifies):</p>
+                    <ol>
+                        <li>The room where you picked up the Dwarf axe, on the way down.</li>
+                        <li>The King's room (the throne room), after returning from the crystal room.</li>
+                        <li>The top floor of the right tower, after picking up the Strength ring (Edge+Excalbur routes only).</li>
+                        <li>The floor after the top floor of the right tower (on the way down, where you walk two steps from staircase to staircase).</li>
+                    </ol>
+                    <p>The maps shown here are slightly outdated, and do not show the two most recent optional step additions. Refer to the tutorial maps for more assitance, but the two new steps are as follows:</p>
+                    <ol>
+                        <li>In the Dwarf axe room, on the way up, if you walk in between the two pillars, you can take two extra steps.</li>
+                        <li>For Rosa routes only, on your way to get the elixir on the top floor, if you step onto the tile next to the staircase, you can take one additional step.</li>
+                    </ol>
 				</div>
 				<div class="col">
 					<img src="{% static 'img/tutorial/0017.png' %}" class="mb-2">
@@ -161,7 +172,8 @@
 			<div class="row mb-4">
 				<div class="col">
 					<h3 id="cave-eblana-b2f">Cave Eblana B2F</h3>
-					<p>In the Weapon/Armor shop in Cave Eblana B2F, there are two optional steps available, as tiles up against the shop counter don't count as steps.</p>
+                    <p>In the Weapon/Armor shop in Cave Eblana B2F, there are two optional steps available, as tiles up against the shop counter don't count as steps.</p>
+                    <p>You may also be asked to cast Warp to leave this room.</p>
 				</div>
 				<div class="col"><img src="{% static 'img/tutorial/0024.png' %}"></div>
 			</div>
