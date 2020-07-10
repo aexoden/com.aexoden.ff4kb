@@ -111,10 +111,10 @@ ROUTES = {
     'no64-rosa-marathon-recovery-paladin': {
         'name': 'Any% No64 (Rosa) (Marathon) (Recovery: Paladin)',
         'description': 'This variant of no64-rosa-marathon runs from the save point on Mt.Ordeals after Cecil becomes a Paladin until Zeromus is defeated, and is primarily intended as a step route (and grind) recovery method.',
-        'group': 'testing',
+        'group': 'recovery',
         'enabled': True,
         'twin_safe': True,
-        'complete': False,
+        'complete': True,
         'seed_finder': True,
         'status': 'Optimal'
     },
@@ -275,6 +275,10 @@ def index(request):
             routes[data['group']]['routes'] = {}
 
         routes[data['group']]['routes'][route] = data
+
+    for group in list(routes.keys()):
+        if 'routes' not in routes[group]:
+            del(routes[group])
 
     context = {
         'routes': routes,
