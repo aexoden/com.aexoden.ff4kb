@@ -104,7 +104,7 @@ ROUTES = {
         'group': 'recovery',
         'enabled': True,
         'twin_safe': True,
-        'complete': False,
+        'complete': True,
         'seed_finder': True,
         'status': 'Optimal'
     },
