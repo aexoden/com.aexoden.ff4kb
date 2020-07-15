@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa)
-VERSION	22
-ROSA	v1.1.0-31-gf33807b
+VERSION	27
+ROSA	v1.2.0-13-ge69b608
 SEED	211
-MAXSTEP	0
+MAXSTEP	128
 MAXSEG	-1
 TASMODE	0
 MINIMUM	0
-FRAMES	170667992
-VARS	C30CA01:1 E000703:1 E310700:6
+FRAMES	171247992
+VARS	C30CA01:1 C316C00:2 E000703:1 E310700:11
 
 Overworld (Kaipo)                                         Seed: 211   Index:   0
 Overworld (Kaipo)                                         Seed: 211   Index:   1
@@ -189,7 +189,7 @@ Overworld (Eblan)                                         Seed:  91   Index: 149
 Underworld (Castle of Dwarves)                            Seed:  91   Index: 150
 Castle of Dwarves Walk                                    Seed:  91   Index: 151
   Castle of Dwarves                                       Seed:  91   Index: 151
-    Optional Steps: 6
+    Optional Steps: 11
 Underworld (Castle of Dwarves)                            Seed: 108   Index:  12
   Step  50: 65 / Dark Imp x4 (6.679s)
   Step  70: 66 / Tortoise x1, Dark Imp x2 (6.727s)
@@ -236,8 +236,9 @@ Castle Baron                                              Seed: 159   Index:  14
 Airship Hook                                              Seed: 159   Index:  27
 Overworld (Eblan)                                         Seed: 159   Index:  27
 Cave Eblana B1F                                           Seed: 159   Index:  28
-Cave Eblana B2F                                           Seed: 159   Index:  70
-  Optional Steps: 0
+Cave Eblana B2F Shop Walk                                 Seed: 159   Index:  70
+  Cave Eblana B2F                                         Seed: 159   Index:  70
+    Optional Steps: 0
 Pass to Bab-il (south)                                    Seed: 159   Index: 126
   Step  12: 85 / GiantBat x3, Cave Bat x3 (8.043s)
   Step  28: 86 / Ironback x1, Armadilo x1, BlackLiz x1 (9.426s)
@@ -372,39 +373,39 @@ Lunar Subterrane B5 Passage B                             Seed:   5   Index:  22
 Lunar Subterrane B5 Inward Direct                         Seed:   5   Index:  54
   Lunar Subterrane B5                                     Seed:   5   Index:  54
     Step   2: 129 / Warlock x3 (6.253s)
-Lunar Subterrane B6                                       Seed:   5   Index:  66
-  Step  15: 130 / Blue D. x2 (7.348s)
-  Step  21: 131 / Ging-Ryu x1, RedGiant x1 (6.614s)
-Lunar Subterrane B6 Passage                               Seed:   5   Index: 103
-Lunar Subterrane B7 Inward Direct                         Seed:   5   Index: 116
-  Lunar Subterrane B7                                     Seed:   5   Index: 116
-    Step  14: 132 / King-Ryu x1, Ging-Ryu x1 (6.611s)
-    Step  28: 133 / King-Ryu x1, Ging-Ryu x1 (6.611s)
-    Step  30: 134 / King-Ryu x1, Ging-Ryu x1 (6.611s)
-    Step  43: 135 / King-Ryu x1, Ging-Ryu x1 (6.611s)
-    Step  66: 136 / King-Ryu x1, Ging-Ryu x1 (6.611s)
-Lunar Core B1                                             Seed:   5   Index: 196
-  Step  62: 137 / EvilMask x1 (12.170s)
-Lunar Core B2                                             Seed:  22   Index:   8
-Lunar Core B3                                             Seed:  22   Index:  63
-  Step   4: 138 / Behemoth x2 (7.516s)
-  Step  30: 139 / Behemoth x1 (7.463s)
-  Step  33: 140 / Behemoth x2 (7.516s)
+Get Ninja Star on Lunar Core B3                           Seed:   5   Index:  66
+  Lunar Subterrane B6                                     Seed:   5   Index:  66
+    Step  15: 130 / Blue D. x2 (7.348s)
+    Step  21: 131 / Ging-Ryu x1, RedGiant x1 (6.614s)
+  Lunar Subterrane B6 Passage                             Seed:   5   Index: 103
+  Lunar Subterrane B7 Inward Direct                       Seed:   5   Index: 116
+    Lunar Subterrane B7                                   Seed:   5   Index: 116
+      Step  14: 132 / King-Ryu x1, Ging-Ryu x1 (6.611s)
+      Step  28: 133 / King-Ryu x1, Ging-Ryu x1 (6.611s)
+      Step  30: 134 / King-Ryu x1, Ging-Ryu x1 (6.611s)
+      Step  43: 135 / King-Ryu x1, Ging-Ryu x1 (6.611s)
+      Step  66: 136 / King-Ryu x1, Ging-Ryu x1 (6.611s)
+  Lunar Core B1                                           Seed:   5   Index: 196
+    Step  62: 137 / EvilMask x1 (12.170s)
+  Lunar Core B2                                           Seed:  22   Index:   8
+  Lunar Core B3                                           Seed:  22   Index:  63
+    Step   4: 138 / Behemoth x2 (7.516s)
+    Step  30: 139 / Behemoth x1 (7.463s)
+    Step  33: 140 / Behemoth x2 (7.516s)
 Lunar Core B4                                             Seed:  22   Index: 119
 
 Encounter Time:      1109.373s
-Other Time:          1730.417s
-Total Time:          2839.790s
+Other Time:          1740.068s
+Total Time:          2849.440s
 
-Base Total Time:     2886.098s
-Time Saved:          46.308s
+Base Total Time:     2910.421s
+Time Saved:          60.980s
 
-Optional Steps:      7
+Optional Steps:      12
 Extra Steps:         0
 Encounters:          140
 
-Base Encounters:     144
-Encounters Saved:    4
+Base Encounters:     143
+Encounters Saved:    3
 
-Number of Variables: 191
-Cache Size:          304
+Number of Variables: 193

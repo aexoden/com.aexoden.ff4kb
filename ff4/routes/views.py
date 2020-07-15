@@ -66,7 +66,7 @@ ROUTES = {
         'twin_safe': True,
         'complete': True,
         'seed_finder': True,
-        'status': '~98.25% Optimal'
+        'status': 'Optimal'
     },
     'no64-rosa-safe': {
         'name': 'Any% No64 (Rosa) (Safe)',
