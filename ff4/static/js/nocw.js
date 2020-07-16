@@ -292,7 +292,7 @@ com.aexoden.ff4.nocw = function()
 		247: [true, false, false, false],
 		248: [false, false, false, false],
 		249: [false, false, false, false],
-		250: [false, false, false, false]
+        250: [false, false, false, false]
 	};
 
 	var mapResultBooleans = {
@@ -404,10 +404,6 @@ com.aexoden.ff4.nocw = function()
 		var x = Math.floor(gp / 65536) % 64;
 		// y depends on the frame counter and is essentially random from 0-59.
 
-		if (!mapData) {
-			return "Unknown";
-		}
-
 		if (map == 251) {
 			return mapResultStrings[MapResult.OVERWORLD];
 		} else if (map == 252) {
@@ -417,34 +413,38 @@ com.aexoden.ff4.nocw = function()
 		} else if (map == 254) {
 			return mapResultStrings[MapResult.CURRENT];
 		} else if (map == 255) {
-			return mapResultStrings[MapResult.RANDOM];
-		} else {
-			if (mapData[0]) {
-				if (x >= 32) {
-					return mapResultStrings[MapResult.AUTO];
-				} else if (mapData[2]) {
-					if (mapData[3]) {
-						return "Safe (cast Warp if not pushed through automatically)";
-					} else {
-						return "47% Safe (pushed through automatically), 53% Stuck without Bacon";
-					}
-				} else {
-					if (x == 0) {
-						return "Safe (walk left if not pushed through automatically)";
-					} else if (x == 31) {
-						return "Safe (walk right if not pushed through automatically)";
-					} else if (mapData[1]) {
-						return "Safe (pick a direction and walk until you leave the map if not pushed through automatically)";
-					} else if (mapData[3]) {
-						return "Safe (cast Warp if not pushed through automatically)";
-					} else {
-						return "47% Safe (pushed through automatically), 53% Possibly Stuck (but feel free to try walking around first, since if you reach the edge of the map, you're clear)";
-					}
-				}
-			} else {
-				return "Crispy, Crispy Bacon";
-			}
+            return mapResultStrings[MapResult.RANDOM];
+        }
+
+        if (!mapData) {
+			return "Unknown";
 		}
+
+		if (mapData[0]) {
+            if (x >= 32) {
+                return mapResultStrings[MapResult.AUTO];
+            } else if (mapData[2]) {
+                if (mapData[3]) {
+                    return "Safe (cast Warp if not pushed through automatically)";
+                } else {
+                    return "47% Safe (pushed through automatically), 53% Stuck without Bacon";
+                }
+            } else {
+                if (x == 0) {
+                    return "Safe (walk left if not pushed through automatically)";
+                } else if (x == 31) {
+                    return "Safe (walk right if not pushed through automatically)";
+                } else if (mapData[1]) {
+                    return "Safe (pick a direction and walk until you leave the map if not pushed through automatically)";
+                } else if (mapData[3]) {
+                    return "Safe (cast Warp if not pushed through automatically)";
+                } else {
+                    return "47% Safe (pushed through automatically), 53% Possibly Stuck (but feel free to try walking around first, since if you reach the edge of the map, you're clear)";
+                }
+            }
+        } else {
+            return "Crispy, Crispy Bacon";
+        }
 	}
 
 	var testFloor47 = function(gp) {
