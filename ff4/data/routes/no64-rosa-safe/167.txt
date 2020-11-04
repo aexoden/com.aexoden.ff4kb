@@ -3,11 +3,11 @@ VERSION	4
 ROSA	v1.2.0-7-gad6754d
 SEED	167
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	24
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	172457028
-VARS	C303C00:1 C305500:1 C307800:1 C308F00:1 C30CA00:1 C316B00:1 C316D00:1 E000401:1 E000501:2 E000703:2 E200008:10 E302402:18 E302500:25 E302600:70 E302700:39 E303A00:4 E303D00:14 E305500:17 E307400:22 E307900:4 E307B00:62 E308700:1 E308702:1 E308F01:2 E309200:66 E309800:8 E30B500:1 E30BD00:4 E30C800:2 E30CD00:40 E310700:86 E310701:4 E312500:10 E316900:6 E316D01:8 E317000:2 E317700:18 E317B00:4
+VARS	C303C00:1 C305500:1 C307800:1 C308F00:1 C30CA00:1 C316B00:1 C316D00:1 E000703:10 E302402:18 E302500:25 E302600:73 E302700:39 E303A00:4 E303D00:14 E305500:17 E307400:22 E307B00:66 E308700:1 E308702:1 E309200:68 E30B500:1 E30BD00:14 E30C800:2 E30CD00:40 E310700:86 E310701:4 E312500:10 E316900:6 E317000:2 E317700:18 E317B00:12
 
 Overworld (Kaipo)                                         Seed: 167   Index:   0
 Overworld (Kaipo)                                         Seed: 167   Index:   1
@@ -52,12 +52,11 @@ Antlion B1F                                               Seed: 201   Index:  19
 Antlion B2F Inward Charm Room Steps                       Seed: 201   Index:  57
   Antlion B2F                                             Seed: 201   Index:  57
   Antlion B2F Treasure Room                               Seed: 201   Index:  90
-    Extra Steps: 62
-  Antlion B2F                                             Seed: 201   Index: 152
-    Step  47: 14 / Basilisk x1, Imp x3 (6.775s)
-Antlion's Nest                                            Seed: 201   Index: 204
-  Extra Steps: 4
-  Step  17: 15 / Basilisk x1, Turtle x1 (7.110s)
+    Extra Steps: 66
+  Antlion B2F                                             Seed: 201   Index: 156
+    Step  43: 14 / Basilisk x1, Imp x3 (6.775s)
+Antlion's Nest                                            Seed: 201   Index: 208
+  Step  13: 15 / Basilisk x1, Turtle x1 (7.110s)
 Battle: Antlion                                           Seed: 201   Index: 222
 Antlion's Nest                                            Seed: 201   Index: 222
 Antlion B2F Outward Direct                                Seed: 201   Index: 237
@@ -83,15 +82,13 @@ Mt.Hobs-East                                              Seed: 218   Index: 159
   Step  42: 23 / GrayBomb x2, Bomb x2 (8.430s)
 Overworld (Fabul)                                         Seed: 218   Index: 205
 Fabul                                                     Seed: 235   Index:  33
-  Optional Steps: 10
-  Extra Steps: 60
-Overworld (Fabul)                                         Seed: 235   Index: 163
-  Extra Steps: 1
-Fabul Boat and Leviatan                                   Seed: 235   Index: 171
-Overworld (Mysidia)                                       Seed: 235   Index: 171
-Mysidia                                                   Seed: 235   Index: 180
-Overworld (Mysidia)                                       Seed: 235   Index: 180
-  Extra Steps: 2
+  Optional Steps: 9
+  Extra Steps: 64
+Overworld (Fabul)                                         Seed: 235   Index: 166
+Fabul Boat and Leviatan                                   Seed: 235   Index: 173
+Overworld (Mysidia)                                       Seed: 235   Index: 173
+Mysidia                                                   Seed: 235   Index: 182
+Overworld (Mysidia)                                       Seed: 235   Index: 182
 Overworld (Mt.Ordeals)                                    Seed: 235   Index: 192
   Step  35: 24 / Needler x2, SwordRat x2 (8.097s)
   Step  62: 25 / Raven x1 (8.356s)
@@ -154,10 +151,9 @@ Cave Magnes B2F                                           Seed:  30   Index: 202
 Cave Magnes B3F Inward Save Room Steps                    Seed:  30   Index: 243
   Cave Magnes B3F                                         Seed:  30   Index: 243
   Cave Magnes B3F Save Room                               Seed:  30   Index: 251
-    Extra Steps: 66
-  Cave Magnes B3F                                         Seed:  47   Index:  61
-    Extra Steps: 2
-    Step  64: 42 / Mage x2 (8.585s)
+    Extra Steps: 68
+  Cave Magnes B3F                                         Seed:  47   Index:  63
+    Step  62: 42 / Mage x2 (8.585s)
 Cave Magnes B3F Passage                                   Seed:  47   Index: 126
 Cave Magnes B4F Inward Direct                             Seed:  47   Index: 137
   Cave Magnes B4F                                         Seed:  47   Index: 137
@@ -170,9 +166,9 @@ Toroian Castle 1F Inward Extra Steps Area Steps           Seed:  47   Index: 169
     Extra Steps: 14
 Overworld (Toroia)                                        Seed:  47   Index: 187
   Optional Steps: 2
-Tower of Zot 1F                                           Seed:  47   Index: 190
   Extra Steps: 8
-  Step  46: 43 / Centaur x3 (8.469s)
+Tower of Zot 1F                                           Seed:  47   Index: 198
+  Step  38: 43 / Centaur x3 (8.469s)
 Tower of Zot 2F                                           Seed:  47   Index: 236
   Step  44: 44 / Marion (summons Puppet) x1, Puppet x2 (9.023s)
   Step  48: 45 / Ice Liz x1, Slime x3 (9.423s)
@@ -349,13 +345,12 @@ Grind Fight Search                                        Seed: 217   Index: 120
 Battle: Elements                                          Seed: 217   Index: 189
 Giant of Bab-il Lung                                      Seed: 217   Index: 189
 Giant of Bab-il CPU                                       Seed: 217   Index: 196
-  Extra Steps: 4
-Return to Moon                                            Seed: 217   Index: 202
-Lunar Overworld                                           Seed: 217   Index: 202
-Lunar Path (west)                                         Seed: 217   Index: 207
-Lunar Overworld                                           Seed: 217   Index: 245
-  Extra Steps: 10
-  Step  45: 99 / Slime x1, Tofu x1, Pudding x1 (7.590s)
+  Extra Steps: 14
+Return to Moon                                            Seed: 217   Index: 212
+Lunar Overworld                                           Seed: 217   Index: 212
+Lunar Path (west)                                         Seed: 217   Index: 217
+Lunar Overworld                                           Seed: 217   Index: 255
+  Step  35: 99 / Slime x1, Tofu x1, Pudding x1 (7.590s)
 Lunar Path (east)                                         Seed: 234   Index:  34
 Lunar Overworld                                           Seed: 234   Index:  65
 Lunar Subterrane B1                                       Seed: 234   Index:  82
@@ -392,11 +387,10 @@ Get Ninja Star on Lunar Subterrane B6                     Seed: 251   Index: 136
   Lunar Subterrane B7 Inward Save Room Steps              Seed: 251   Index: 198
     Lunar Subterrane B7                                   Seed: 251   Index: 198
     Lunar Subterrane B7 Save Room                         Seed: 251   Index: 221
-      Extra Steps: 4
-    Lunar Subterrane B7                                   Seed: 251   Index: 225
-      Extra Steps: 8
-      Step  44: 112 / King-Ryu x1, Ging-Ryu x1 (6.611s)
-      Step  66: 113 / King-Ryu x1, Ging-Ryu x1 (6.611s)
+      Extra Steps: 12
+    Lunar Subterrane B7                                   Seed: 251   Index: 233
+      Step  36: 112 / King-Ryu x1, Ging-Ryu x1 (6.611s)
+      Step  58: 113 / King-Ryu x1, Ging-Ryu x1 (6.611s)
   Lunar Core B1                                           Seed:  12   Index:  35
     Step  29: 114 / Behemoth x1 (7.463s)
   Lunar Core B2                                           Seed:  12   Index: 103
@@ -417,8 +411,8 @@ Total Time:          2869.558s
 Base Total Time:     2975.810s
 Time Saved:          106.252s
 
-Optional Steps:      50
-Extra Steps:         503
+Optional Steps:      49
+Extra Steps:         504
 Encounters:          120
 
 Base Encounters:     148

@@ -8587,9 +8587,9 @@ com.aexoden.ff4 = function()
                 instruction: "Don't take any extra steps in the save room. Determine your seed based on the next room:",
             },
             30: {
-                30: "One encounter with CaveToad x3 on step 32.",
+                30: "One encounter with CaveToad x3 on step 30.",
                 31: "No encounters.",
-                instruction: "Take <strong>6</strong> extra steps in the save room. Determine your seed based on the next room:",
+                instruction: "Take <strong>8</strong> extra steps in the save room. Determine your seed based on the next room:",
             },
             41: {
                 41: "No encounters.",
@@ -8602,9 +8602,9 @@ com.aexoden.ff4 = function()
                 instruction: "Don't take any extra steps in the save room. Determine your seed based on the next room:",
             },
             63: {
-                63: "Encounters on steps 8 and 21.",
-                64: "Encounters on steps 21 and 38.",
-                instruction: "Take <strong>52</strong> extra steps in the save room. Determine your seed based on the room where you get <i>Darkness</i> (sword):",
+                63: "Encounters on steps 2 and 15.",
+                64: "Encounters on steps 15 and 32.",
+                instruction: "Take <strong>72</strong> extra steps in the save room. Determine your seed based on the room where you get <i>Darkness</i> (sword):",
             },
             68: {
                 68: "No encounters.",
@@ -8619,11 +8619,11 @@ com.aexoden.ff4 = function()
             132: {
                 132: "First encounter is Aligator x1, Pike x2.",
                 133: "First encounter is TinyMage x2, WaterHag x4.",
-                instruction: "Take <strong>24</strong> extra steps in the save room. Determine your seed based on the room where you get <i>Darkness</i> (sword):",
+                instruction: "Take <strong>26</strong> extra steps in the save room. Determine your seed based on the room where you get <i>Darkness</i> (sword):",
             },
             143: {
-                143: "Encounter with Pike x3 on step 23.",
-                144: "Encounter with CaveToad x3 on step 23.",
+                143: "One encounter with Pike x3 on step 23.",
+                144: "One encounter with CaveToad x3 on step 23.",
                 instruction: "Take <strong>2</strong> extra steps in the save room. Determine your seed based on the next room:",
             },
             175: {
@@ -8637,7 +8637,7 @@ com.aexoden.ff4 = function()
                 instruction: "Don't take any extra steps in the save room. Determine your seed based on the next room:",
             },
             247: {
-                247: "No encounters. Take <strong>14</strong> extra steps before leaving the room.",
+                247: "No encounters. Take <strong>18</strong> extra steps before leaving the room.",
                 248: "One encounter with Jelly x4 on step 27. Don't take any extra steps before leaving.",
                 instruction: "Take <strong>10</strong> extra steps in the save room. Determine your seed based on the room after the next room (B3F):",
             },

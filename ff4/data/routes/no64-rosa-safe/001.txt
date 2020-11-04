@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Safe)
 VERSION	4
-ROSA	v1.1.0-57-g5baafe9
+ROSA	v1.2.0-13-ge69b608
 SEED	1
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	11
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	172383580
-VARS	C308F00:1 C30C800:1 C30CA01:1 C316C00:2 E000202:4 E000701:1 E000703:2 E302500:1 E302600:10 E302700:11 E308F01:2 E309200:8 E30B500:1 E310700:6 E310701:1 E312301:2 E312501:4
+VARS	C308F00:1 C30C800:1 C30CA01:1 C316C00:2 E000202:4 E000701:1 E000703:2 E302500:1 E302600:10 E302700:11 E309200:10 E30B500:1 E310700:6 E310701:1 E312501:6
 
 Overworld (Kaipo)                                         Seed:   1   Index:   0
 Overworld (Kaipo)                                         Seed:   1   Index:   1
@@ -150,12 +150,11 @@ Cave Magnes B2F                                           Seed: 103   Index: 222
 Cave Magnes B3F Inward Save Room Steps                    Seed: 120   Index:   7
   Cave Magnes B3F                                         Seed: 120   Index:   7
   Cave Magnes B3F Save Room                               Seed: 120   Index:  15
-    Extra Steps: 8
-  Cave Magnes B3F                                         Seed: 120   Index:  23
-    Extra Steps: 2
-    Step  26: 50 / Mage x2 (8.585s)
-    Step  36: 51 / Mage x2 (8.585s)
-    Step  65: 52 / Mage x2 (8.585s)
+    Extra Steps: 10
+  Cave Magnes B3F                                         Seed: 120   Index:  25
+    Step  24: 50 / Mage x2 (8.585s)
+    Step  34: 51 / Mage x2 (8.585s)
+    Step  63: 52 / Mage x2 (8.585s)
 Cave Magnes B3F Passage                                   Seed: 120   Index:  88
 Cave Magnes B4F Inward Direct                             Seed: 120   Index:  99
   Cave Magnes B4F                                         Seed: 120   Index:  99
@@ -220,19 +219,18 @@ Tower of Bab-il 7F                                        Seed: 188   Index:   1
   Step  39: 74 / Alert (summons Chimera) x1 (7.188s)
 Tower of Bab-il 6F                                        Seed: 188   Index:  45
 Tower of Bab-il 5F                                        Seed: 188   Index:  58
-  Extra Steps: 4
+  Extra Steps: 6
   Step   5: 75 / Chimera x1, Tofu x3 (7.044s)
   Step  46: 76 / Chimera x2 (8.437s)
-Battle: Dark Imps                                         Seed: 188   Index: 104
-Tower of Bab-il 5F                                        Seed: 188   Index: 104
-  Step  41: 77 / Chimera x1, FlameMan x2 (9.730s)
-Tower of Bab-il 4F                                        Seed: 188   Index: 148
-  Step  24: 78 / Chimera x1 (10.965s)
-  Step  43: 79 / Chimera x1 (10.965s)
-Tower of Bab-il 3F                                        Seed: 188   Index: 210
-  Extra Steps: 2
-  Step  23: 80 / BlackLiz x3 (9.086s)
-  Step  52: 81 / Egg (BlackLiz) x1 (7.850s)
+Battle: Dark Imps                                         Seed: 188   Index: 106
+Tower of Bab-il 5F                                        Seed: 188   Index: 106
+  Step  39: 77 / Chimera x1, FlameMan x2 (9.730s)
+Tower of Bab-il 4F                                        Seed: 188   Index: 150
+  Step  22: 78 / Chimera x1 (10.965s)
+  Step  41: 79 / Chimera x1 (10.965s)
+Tower of Bab-il 3F                                        Seed: 188   Index: 212
+  Step  21: 80 / BlackLiz x3 (9.086s)
+  Step  50: 81 / Egg (BlackLiz) x1 (7.850s)
 Tower of Bab-il 2F                                        Seed: 205   Index:   6
   Step  32: 82 / BlackLiz x3 (9.244s)
 Tower of Bab-il 1F                                        Seed: 205   Index:  44

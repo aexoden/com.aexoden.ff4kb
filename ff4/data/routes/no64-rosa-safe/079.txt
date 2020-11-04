@@ -3,11 +3,11 @@ VERSION	4
 ROSA	v1.2.0-13-ge69b608
 SEED	79
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	14
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	172375350
-VARS	C305500:1 C308F00:1 C30C800:1 C30CA01:1 C316D00:1 E302500:1 E302600:7 E302700:33 E303A00:4 E305400:14 E305500:29 E307400:12 E308601:2 E308700:1 E308702:1 E309200:120 E309700:38 E30BD00:36 E30C800:4 E310700:1 E317600:4 E317B00:8
+VARS	C305500:1 C308F00:1 C30C800:1 C30CA01:1 C316D00:1 E302500:1 E302600:8 E302700:33 E305400:14 E305500:29 E307400:12 E308702:3 E309200:120 E309700:42 E30BD00:36 E30C800:4 E310700:1 E317600:4 E317B00:8
 
 Overworld (Kaipo)                                         Seed:  79   Index:   0
   Step   1: 1 / Imp x4 (6.962s)
@@ -82,38 +82,38 @@ Overworld (Fabul)                                         Seed: 130   Index: 114
   Step  41: 25 / Imp Cap. x4, Imp x2 (8.467s)
   Step  46: 26 / Imp Cap. x3, Needler x1 (8.023s)
 Fabul                                                     Seed: 130   Index: 198
-  Optional Steps: 7
-Overworld (Fabul)                                         Seed: 147   Index:   9
-Fabul Boat and Leviatan                                   Seed: 147   Index:  16
-Overworld (Mysidia)                                       Seed: 147   Index:  16
-Mysidia                                                   Seed: 147   Index:  25
-Overworld (Mysidia)                                       Seed: 147   Index:  25
-Overworld (Mt.Ordeals)                                    Seed: 147   Index:  35
-  Step  10: 27 / Imp Cap. x3, Needler x1 (7.932s)
-  Step  72: 28 / Imp Cap. x3, Needler x1 (7.932s)
-  Step  75: 29 / Imp Cap. x3, Needler x1 (7.932s)
-Mt.Ordeals                                                Seed: 147   Index: 129
-  Step  13: 30 / Spirit x3, Soul x1 (8.687s)
-  Step  20: 31 / Spirit x3, Skelton x2, Red Bone x1 (9.131s)
-Mt.Ordeals-3rd station                                    Seed: 147   Index: 172
-  Step   2: 32 / Zombie x2, Ghoul x2 (7.661s)
-Recruit Tellah                                            Seed: 147   Index: 195
-Mt.Ordeals-3rd station                                    Seed: 147   Index: 195
-Mt.Ordeals-7th station                                    Seed: 147   Index: 200
-  Step  16: 33 / Revenant x1, Ghoul x3 (8.914s)
-Mt.Ordeals Summit                                         Seed: 147   Index: 242
-  Optional Steps: 1
-  Step   1: 34 / Revenant x1, Ghoul x3 (8.914s)
+  Optional Steps: 8
+Overworld (Fabul)                                         Seed: 147   Index:  10
+Fabul Boat and Leviatan                                   Seed: 147   Index:  17
+Overworld (Mysidia)                                       Seed: 147   Index:  17
+Mysidia                                                   Seed: 147   Index:  26
+Overworld (Mysidia)                                       Seed: 147   Index:  26
+Overworld (Mt.Ordeals)                                    Seed: 147   Index:  36
+  Step   9: 27 / Imp Cap. x3, Needler x1 (7.932s)
+  Step  71: 28 / Imp Cap. x3, Needler x1 (7.932s)
+  Step  74: 29 / Imp Cap. x3, Needler x1 (7.932s)
+Mt.Ordeals                                                Seed: 147   Index: 130
+  Step  12: 30 / Spirit x3, Soul x1 (8.687s)
+  Step  19: 31 / Spirit x3, Skelton x2, Red Bone x1 (9.131s)
+Mt.Ordeals-3rd station                                    Seed: 147   Index: 173
+  Step   1: 32 / Zombie x2, Ghoul x2 (7.661s)
+Recruit Tellah                                            Seed: 147   Index: 196
+Mt.Ordeals-3rd station                                    Seed: 147   Index: 196
+Mt.Ordeals-7th station                                    Seed: 147   Index: 201
+  Step  15: 33 / Revenant x1, Ghoul x3 (8.914s)
+  Step  42: 34 / Revenant x1, Ghoul x3 (8.914s)
+Mt.Ordeals Summit                                         Seed: 147   Index: 243
+  Optional Steps: 0
 Battle: Milon and Milon Z                                 Seed: 164   Index:   4
 Mt.Ordeals Summit                                         Seed: 164   Index:   4
 Paladin                                                   Seed: 164   Index:   8
 Mt.Ordeals Summit                                         Seed: 164   Index:   8
   Optional Steps: 1
+  Extra Steps: 2
   Step   3: 35 / Lilith x1, Red Bone x2 (8.437s)
   Step   8: 36 / Soul x2, Ghoul x2, Revenant x2 (9.991s)
-Mt.Ordeals-7th station                                    Seed: 164   Index:  31
-  Extra Steps: 2
-  Step  44: 37 / Lilith x1, Red Bone x2 (8.437s)
+Mt.Ordeals-7th station                                    Seed: 164   Index:  33
+  Step  42: 37 / Lilith x1, Red Bone x2 (8.437s)
 Mt.Ordeals-3rd station                                    Seed: 164   Index:  75
 Mt.Ordeals                                                Seed: 164   Index: 105
   Step  33: 38 / Spirit x3, Soul x1 (8.429s)
@@ -121,13 +121,12 @@ Overworld (Mt.Ordeals)                                    Seed: 164   Index: 149
 Take Chocobo to Mysidia                                   Seed: 164   Index: 162
 Overworld (Mysidia)                                       Seed: 164   Index: 162
 Town of Baron Serpent Road                                Seed: 164   Index: 162
-  Extra Steps: 38
-Old Water-way                                             Seed: 164   Index: 204
-  Extra Steps: 4
-  Step  44: 39 / Crocdile x1, ElecFish x3 (10.343s)
-  Step  61: 40 / Pike x3, Piranha x3 (8.025s)
-  Step  73: 41 / Crocdile x1, ElecFish x3 (10.343s)
-  Step  93: 42 / AquaWorm x1, Piranha x3 (9.542s)
+  Extra Steps: 42
+Old Water-way                                             Seed: 164   Index: 208
+  Step  40: 39 / Crocdile x1, ElecFish x3 (10.343s)
+  Step  57: 40 / Pike x3, Piranha x3 (8.025s)
+  Step  69: 41 / Crocdile x1, ElecFish x3 (10.343s)
+  Step  89: 42 / AquaWorm x1, Piranha x3 (9.542s)
 Castle Baron B3F                                          Seed: 181   Index:  42
 Castle Baron B2F                                          Seed: 181   Index:  96
 Castle Baron B1F Inward Direct                            Seed: 181   Index: 122

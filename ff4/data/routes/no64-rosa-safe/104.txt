@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Safe)
 VERSION	4
-ROSA	v1.2.0-6-g47ffccf
+ROSA	v1.2.0-13-ge69b608
 SEED	104
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	16
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	169431454
-VARS	C308F00:1 C316C00:2 E000401:4 E000701:1 E000703:2 E302500:1 E302600:10 E302700:1 E305400:20 E307400:26 E308700:1 E308702:1 E309200:80 E309800:10 E30B500:1 E30B900:10 E30BD00:18 E30C800:2 E310700:20 E310701:3 E310702:10 E316400:14 E316401:4
+VARS	C308F00:1 C316C00:2 E000703:12 E302500:1 E302600:14 E302700:2 E305400:20 E307400:26 E308700:1 E308702:1 E309200:80 E30B500:1 E30B900:10 E30BD00:18 E30C800:2 E310700:20 E310701:13 E316400:18
 
 Overworld (Kaipo)                                         Seed: 104   Index:   0
 Overworld (Kaipo)                                         Seed: 104   Index:   1
@@ -83,9 +83,9 @@ Overworld (Fabul)                                         Seed: 155   Index: 134
   Step  77: 26 / Imp Cap. x3, Needler x3 (8.555s)
 Fabul                                                     Seed: 155   Index: 218
   Optional Steps: 10
-Overworld (Fabul)                                         Seed: 172   Index:  32
   Extra Steps: 4
-  Step  10: 27 / Cocktric x3 (8.218s)
+Overworld (Fabul)                                         Seed: 172   Index:  36
+  Step   6: 27 / Cocktric x3 (8.218s)
 Fabul Boat and Leviatan                                   Seed: 172   Index:  43
 Overworld (Mysidia)                                       Seed: 172   Index:  43
 Mysidia                                                   Seed: 172   Index:  52
@@ -134,9 +134,9 @@ Castle Baron                                              Seed: 206   Index: 126
 Battle: Kainazzo                                          Seed: 206   Index: 140
 Overworld (Toroia)                                        Seed: 206   Index: 140
 Toroian Castle                                            Seed: 206   Index: 141
-  Optional Steps: 1
-Overworld (Toroia)                                        Seed: 206   Index: 153
-  Optional Steps: 1
+  Optional Steps: 2
+Overworld (Toroia)                                        Seed: 206   Index: 154
+  Optional Steps: 0
 Black Chocobo to Cave Magnes                              Seed: 206   Index: 191
 Overworld (Toroia)                                        Seed: 206   Index: 191
 Cave Magnes B1F                                           Seed: 206   Index: 192
@@ -162,9 +162,9 @@ Toroian Castle 1F Inward Direct                           Seed: 223   Index: 239
   Toroian Castle 1F                                       Seed: 223   Index: 239
 Overworld (Toroia)                                        Seed: 223   Index: 239
   Optional Steps: 2
-Tower of Zot 1F                                           Seed: 223   Index: 242
   Extra Steps: 10
-  Step  48: 49 / Centaur x3 (8.469s)
+Tower of Zot 1F                                           Seed: 223   Index: 252
+  Step  38: 49 / Centaur x3 (8.469s)
 Tower of Zot 2F                                           Seed: 240   Index:  34
   Step  32: 50 / Centaur x3 (8.469s)
 Battle: FlameDog                                          Seed: 240   Index:  86
@@ -278,12 +278,12 @@ Fly to Castle of Dwarves                                  Seed: 103   Index: 101
 Underworld (Castle of Dwarves)                            Seed: 103   Index: 101
 Castle of Dwarves                                         Seed: 103   Index: 101
   Optional Steps: 3
-Underworld (Castle of Dwarves)                            Seed: 103   Index: 127
-Sealed Cave                                               Seed: 103   Index: 128
-Underworld (Tomra)                                        Seed: 103   Index: 135
-Return to Castle of Dwarves                               Seed: 103   Index: 136
-Castle of Dwarves                                         Seed: 103   Index: 136
   Extra Steps: 10
+Underworld (Castle of Dwarves)                            Seed: 103   Index: 137
+Sealed Cave                                               Seed: 103   Index: 138
+Underworld (Tomra)                                        Seed: 103   Index: 145
+Return to Castle of Dwarves                               Seed: 103   Index: 146
+Castle of Dwarves                                         Seed: 103   Index: 146
 Underworld (Castle of Dwarves)                            Seed: 103   Index: 147
 Return to Mysidia                                         Seed: 103   Index: 148
 Walk to the Big Whale                                     Seed: 103   Index: 148
@@ -294,18 +294,17 @@ Lunar Path (west)                                         Seed: 103   Index: 156
 Lunar Overworld                                           Seed: 103   Index: 194
   Step  23: 92 / Slime x1, Tofu x1, Pudding x1 (7.440s)
 Lunar Path (east)                                         Seed: 103   Index: 229
-  Extra Steps: 14
+  Extra Steps: 18
   Step   6: 93 / Red Worm x1, Procyote x1, Juclyote x1 (7.764s)
   Step  44: 94 / Red Worm x1, Procyote x1, Juclyote x1 (7.764s)
-Lunar Overworld                                           Seed: 120   Index:  18
-  Step   5: 95 / Balloon x2, Grenade x2 (7.502s)
-Recruit FuSoYa                                            Seed: 120   Index:  35
-Lunar Overworld                                           Seed: 120   Index:  35
-  Step  14: 96 / MoonCell x2, Pudding x2 (7.923s)
-Lunar Path (east)                                         Seed: 120   Index:  53
-  Extra Steps: 4
-  Step   6: 97 / Red Worm x1, Procyote x1, Juclyote x1 (7.885s)
-  Step  35: 98 / Red Worm x2 (7.647s)
+Lunar Overworld                                           Seed: 120   Index:  22
+  Step   1: 95 / Balloon x2, Grenade x2 (7.502s)
+Recruit FuSoYa                                            Seed: 120   Index:  39
+Lunar Overworld                                           Seed: 120   Index:  39
+  Step  10: 96 / MoonCell x2, Pudding x2 (7.923s)
+Lunar Path (east)                                         Seed: 120   Index:  57
+  Step   2: 97 / Red Worm x1, Procyote x1, Juclyote x1 (7.885s)
+  Step  31: 98 / Red Worm x2 (7.647s)
 Lunar Overworld                                           Seed: 120   Index:  88
 Lunar Path (west)                                         Seed: 120   Index: 123
 Lunar Overworld                                           Seed: 120   Index: 161

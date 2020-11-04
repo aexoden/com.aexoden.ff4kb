@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Safe)
 VERSION	4
-ROSA	v1.2.0-7-gad6754d
+ROSA	v1.2.0-13-ge69b608
 SEED	160
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	20
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	170230414
-VARS	C305500:1 C307801:1 C308F00:1 C30CA00:1 C310700:1 C316C00:2 C316D00:1 E000701:1 E100003:6 E100004:20 E302400:4 E302402:21 E302500:1 E302600:6 E302700:25 E305500:3 E307000:12 E307B01:8 E308700:1 E308702:1 E309200:12 E309700:32 E30B500:1 E30C800:1 E30CD00:20 E310701:4 E316300:2 E316400:8 E316900:2 E316D01:6 E317B00:10
+VARS	C305500:1 C307801:1 C308F00:1 C30CA00:1 C310700:1 C316C00:2 C316D00:1 E000701:1 E100003:26 E302400:4 E302402:22 E302500:1 E302600:6 E302700:25 E305500:3 E307000:12 E307B01:8 E308700:1 E308702:1 E309200:12 E309700:32 E30B500:1 E30CD00:20 E310701:4 E316300:10 E316900:2 E317B00:16
 
 Overworld (Kaipo)                                         Seed: 160   Index:   0
 Overworld (Kaipo)                                         Seed: 160   Index:   1
@@ -230,13 +230,13 @@ Tower of Bab-il 1F                                        Seed: 108   Index:  98
 Travel to Baron                                           Seed: 108   Index: 113
 Overworld (Baron)                                         Seed: 108   Index: 113
 Castle Baron                                              Seed: 108   Index: 113
-  Extra Steps: 21
-Airship Hook                                              Seed: 108   Index: 147
-Overworld (Eblan)                                         Seed: 108   Index: 147
-Cave Eblana B1F                                           Seed: 108   Index: 148
-Cave Eblana B2F Shop Walk                                 Seed: 108   Index: 190
-  Cave Eblana B2F                                         Seed: 108   Index: 190
-    Optional Steps: 1
+  Extra Steps: 22
+Airship Hook                                              Seed: 108   Index: 148
+Overworld (Eblan)                                         Seed: 108   Index: 148
+Cave Eblana B1F                                           Seed: 108   Index: 149
+Cave Eblana B2F Shop Walk                                 Seed: 108   Index: 191
+  Cave Eblana B2F                                         Seed: 108   Index: 191
+    Optional Steps: 0
 Pass to Bab-il (south)                                    Seed: 108   Index: 247
 Pass to Bab-il (north)                                    Seed: 125   Index:  22
   Step   1: 71 / Red Bone x3, Skull x2 (7.180s)
@@ -281,30 +281,28 @@ Underworld (Castle of Dwarves)                            Seed: 159   Index:  74
 Castle of Dwarves                                         Seed: 159   Index:  74
   Optional Steps: 4
 Underworld (Castle of Dwarves)                            Seed: 159   Index: 101
-  Extra Steps: 6
+  Extra Steps: 26
   Step   7: 86 / BlackLiz x3 (6.959s)
-Sealed Cave                                               Seed: 159   Index: 108
-Underworld (Tomra)                                        Seed: 159   Index: 115
-Return to Castle of Dwarves                               Seed: 159   Index: 116
-Castle of Dwarves                                         Seed: 159   Index: 116
-Underworld (Castle of Dwarves)                            Seed: 159   Index: 117
-  Extra Steps: 20
-  Step  21: 87 / Tortoise x1, Dark Imp x2 (6.722s)
+Sealed Cave                                               Seed: 159   Index: 128
+Underworld (Tomra)                                        Seed: 159   Index: 135
+Return to Castle of Dwarves                               Seed: 159   Index: 136
+Castle of Dwarves                                         Seed: 159   Index: 136
+Underworld (Castle of Dwarves)                            Seed: 159   Index: 137
+  Step   1: 87 / Tortoise x1, Dark Imp x2 (6.722s)
 Return to Mysidia                                         Seed: 159   Index: 138
 Walk to the Big Whale                                     Seed: 159   Index: 138
   Overworld (Mysidia)                                     Seed: 159   Index: 138
 Fly to Lunar Path                                         Seed: 159   Index: 141
 Lunar Overworld                                           Seed: 159   Index: 141
 Lunar Path (west)                                         Seed: 159   Index: 146
-  Extra Steps: 2
+  Extra Steps: 10
   Step   8: 88 / Red Worm x1, Grenade x3 (7.658s)
   Step  39: 89 / Procyote x1, Juclyote x2 (7.843s)
-Lunar Overworld                                           Seed: 159   Index: 186
-  Step  25: 90 / MoonCell x2, Pudding x2 (7.782s)
-Lunar Path (east)                                         Seed: 159   Index: 221
-  Extra Steps: 8
-  Step  27: 91 / Red Worm x1, Procyote x1, Juclyote x1 (7.764s)
-  Step  39: 92 / Red Worm x2 (7.506s)
+Lunar Overworld                                           Seed: 159   Index: 194
+  Step  17: 90 / MoonCell x2, Pudding x2 (7.782s)
+Lunar Path (east)                                         Seed: 159   Index: 229
+  Step  19: 91 / Red Worm x1, Procyote x1, Juclyote x1 (7.764s)
+  Step  31: 92 / Red Worm x2 (7.506s)
 Lunar Overworld                                           Seed: 176   Index:   4
 Recruit FuSoYa                                            Seed: 176   Index:  21
 Lunar Overworld                                           Seed: 176   Index:  21
@@ -387,11 +385,10 @@ Get Ninja Star on Lunar Core B3                           Seed: 227   Index:  17
   Lunar Subterrane B7 Inward Save Room Steps              Seed: 227   Index:  67
     Lunar Subterrane B7                                   Seed: 227   Index:  67
     Lunar Subterrane B7 Save Room                         Seed: 227   Index:  90
-      Extra Steps: 10
-    Lunar Subterrane B7                                   Seed: 227   Index: 100
-      Extra Steps: 6
-      Step  32: 119 / Tricker x1 (6.647s)
-      Step  64: 120 / Tricker x1 (6.646s)
+      Extra Steps: 16
+    Lunar Subterrane B7                                   Seed: 227   Index: 106
+      Step  26: 119 / Tricker x1 (6.647s)
+      Step  58: 120 / Tricker x1 (6.646s)
   Lunar Core B1                                           Seed: 227   Index: 164
     Step  26: 121 / EvilMask x1 (12.170s)
     Step  28: 122 / EvilMask x1 (12.170s)
@@ -411,8 +408,8 @@ Total Time:          2832.509s
 Base Total Time:     3043.833s
 Time Saved:          211.325s
 
-Optional Steps:      22
-Extra Steps:         185
+Optional Steps:      21
+Extra Steps:         186
 Encounters:          127
 
 Base Encounters:     147

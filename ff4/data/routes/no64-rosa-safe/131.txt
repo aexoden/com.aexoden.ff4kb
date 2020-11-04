@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Safe)
 VERSION	4
-ROSA	v1.2.0-7-gad6754d
+ROSA	v1.2.0-13-ge69b608
 SEED	131
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	20
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	169191395
-VARS	C305500:1 C308F00:1 C316C00:2 C316D00:1 E000701:1 E000703:2 E302500:19 E302600:10 E302700:1 E305500:7 E307400:26 E308700:1 E308702:1 E308F01:2 E309200:2 E309700:16 E30AC01:12 E30B500:1 E30BD00:2 E30C800:18 E310700:20 E310701:4 E316800:14 E316B00:14 E316B02:20 E317500:4 E317B00:42
+VARS	C305500:1 C308F00:1 C316C00:2 C316D00:1 E000703:2 E302500:19 E302600:10 E302700:2 E305500:7 E307400:26 E308700:1 E308702:1 E309200:4 E309700:16 E30AC01:12 E30B500:3 E30C800:18 E310700:20 E310701:4 E316800:14 E316B00:14 E316B02:20 E317500:4 E317B00:42
 
 Overworld (Kaipo)                                         Seed: 131   Index:   0
 Overworld (Kaipo)                                         Seed: 131   Index:   1
@@ -130,11 +130,11 @@ Castle Baron                                              Seed: 233   Index: 136
 Battle: Kainazzo                                          Seed: 233   Index: 150
 Overworld (Toroia)                                        Seed: 233   Index: 150
 Toroian Castle                                            Seed: 233   Index: 151
-  Optional Steps: 1
-Overworld (Toroia)                                        Seed: 233   Index: 163
-  Optional Steps: 1
-  Step  27: 39 / Panther x1, StingRat x3 (9.204s)
-  Step  29: 40 / Python x1, StingRat x2 (8.701s)
+  Optional Steps: 2
+Overworld (Toroia)                                        Seed: 233   Index: 164
+  Optional Steps: 0
+  Step  26: 39 / Panther x1, StingRat x3 (9.204s)
+  Step  28: 40 / Python x1, StingRat x2 (8.701s)
 Black Chocobo to Cave Magnes                              Seed: 233   Index: 201
 Overworld (Toroia)                                        Seed: 233   Index: 201
 Cave Magnes B1F                                           Seed: 233   Index: 202
@@ -145,11 +145,10 @@ Cave Magnes B2F                                           Seed: 250   Index:  14
 Cave Magnes B3F Inward Save Room Steps                    Seed: 250   Index:  55
   Cave Magnes B3F                                         Seed: 250   Index:  55
   Cave Magnes B3F Save Room                               Seed: 250   Index:  63
-    Extra Steps: 2
-  Cave Magnes B3F                                         Seed: 250   Index:  65
-    Extra Steps: 2
-    Step  61: 44 / Cave Bat x3 (9.265s)
-    Step  64: 45 / Panther x2 (8.033s)
+    Extra Steps: 4
+  Cave Magnes B3F                                         Seed: 250   Index:  67
+    Step  59: 44 / Cave Bat x3 (9.265s)
+    Step  62: 45 / Panther x2 (8.033s)
 Cave Magnes B3F Passage                                   Seed: 250   Index: 130
 Cave Magnes B4F Inward Direct                             Seed: 250   Index: 141
   Cave Magnes B4F                                         Seed: 250   Index: 141
@@ -310,43 +309,43 @@ Lunar Path (west)                                         Seed: 147   Index:  56
 Lunar Overworld                                           Seed: 147   Index:  94
 Giant of Bab-il Mouth                                     Seed: 147   Index:  99
   Optional Steps: 1
+  Extra Steps: 2
   Step   8: 97 / MacGiant x1 (7.514s)
   Step  11: 98 / Searcher (summons Machine) x1 (7.406s)
-Giant of Bab-il Neck                                      Seed: 147   Index: 118
-Giant of Bab-il Chest                                     Seed: 147   Index: 120
-  Step  22: 99 / Searcher (summons Horseman) x1, Machine x2 (7.657s)
-  Step  29: 100 / MacGiant x1 (7.514s)
-  Step  32: 101 / Searcher (summons Horseman) x1, Machine x2 (7.657s)
-  Step  54: 102 / Machine x2, Beamer x2 (7.818s)
-Giant of Bab-il Stomach                                   Seed: 147   Index: 202
-  Step  14: 103 / Machine x2, Beamer x3 (7.876s)
-  Step  41: 104 / Horseman x1, Beamer x1, Machine x1 (7.709s)
-Grind Fight Search                                        Seed: 147   Index: 251
-  Giant of Bab-il Passage                                 Seed: 147   Index: 251
-    Step  16: 105 / Searcher (summons D.Machin) x1, Beamer x2 (7.658s)
-    Step  21: 106 / Horseman x1, Machine x2 (7.737s)
-   (Step  80: 107 / Searcher (summons D.Machin) x1, Beamer x2)
-   (Step 113: 108 / Horseman x1, Machine x2)
-   (Step 143: 109 / Horseman x1, Machine x2)
-   (Step 194: 110 / Searcher (summons D.Machin) x1, Beamer x2)
-   (Step 201: 111 / Horseman x1, Machine x2)
-   (Step 209: 112 / MacGiant x1, Machine x1, Beamer x1)
-   (Step 253: 113 / MacGiant x1, Machine x1, Beamer x1)
-  Giant of Bab-il Lung                                    Seed: 164   Index:  56
-   (Step  19: 107 / Beamer x1, Machine x2, Horseman x1)
-   (Step  52: 108 / Searcher (summons Horseman) x1, Beamer x2)
-   (Step  82: 109 / Searcher (summons Horseman) x1, Beamer x2)
-   (Step 133: 110 / Beamer x1, Machine x2, Horseman x1)
-   (Step 140: 111 / Searcher (summons Horseman) x1, Beamer x2)
-   (Step 148: 112 / Searcher (summons D.Machin) x1, Beamer x2)
-   (Step 192: 113 / Searcher (summons D.Machin) x1, Beamer x2)
-   (Step 209: 114 / Machine x3, Beamer x2)
-   (Step 221: 115 / Searcher (summons D.Machin) x1, Beamer x2)
-   (Step 241: 116 / Searcher (summons D.Machin) x1, Beamer x2)
-Battle: Elements                                          Seed: 164   Index:  64
-Giant of Bab-il Lung                                      Seed: 164   Index:  64
-Giant of Bab-il CPU                                       Seed: 164   Index:  71
-  Extra Steps: 2
+Giant of Bab-il Neck                                      Seed: 147   Index: 120
+Giant of Bab-il Chest                                     Seed: 147   Index: 122
+  Step  20: 99 / Searcher (summons Horseman) x1, Machine x2 (7.657s)
+  Step  27: 100 / MacGiant x1 (7.514s)
+  Step  30: 101 / Searcher (summons Horseman) x1, Machine x2 (7.657s)
+  Step  52: 102 / Machine x2, Beamer x2 (7.818s)
+Giant of Bab-il Stomach                                   Seed: 147   Index: 204
+  Step  12: 103 / Machine x2, Beamer x3 (7.876s)
+  Step  39: 104 / Horseman x1, Beamer x1, Machine x1 (7.709s)
+Grind Fight Search                                        Seed: 147   Index: 253
+  Giant of Bab-il Passage                                 Seed: 147   Index: 253
+    Step  14: 105 / Searcher (summons D.Machin) x1, Beamer x2 (7.658s)
+    Step  19: 106 / Horseman x1, Machine x2 (7.737s)
+   (Step  78: 107 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 111: 108 / Horseman x1, Machine x2)
+   (Step 141: 109 / Horseman x1, Machine x2)
+   (Step 192: 110 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 199: 111 / Horseman x1, Machine x2)
+   (Step 207: 112 / MacGiant x1, Machine x1, Beamer x1)
+   (Step 251: 113 / MacGiant x1, Machine x1, Beamer x1)
+  Giant of Bab-il Lung                                    Seed: 164   Index:  58
+   (Step  17: 107 / Beamer x1, Machine x2, Horseman x1)
+   (Step  50: 108 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step  80: 109 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 131: 110 / Beamer x1, Machine x2, Horseman x1)
+   (Step 138: 111 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 146: 112 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 190: 113 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 207: 114 / Machine x3, Beamer x2)
+   (Step 219: 115 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 239: 116 / Searcher (summons D.Machin) x1, Beamer x2)
+Battle: Elements                                          Seed: 164   Index:  66
+Giant of Bab-il Lung                                      Seed: 164   Index:  66
+Giant of Bab-il CPU                                       Seed: 164   Index:  73
 Return to Moon                                            Seed: 164   Index:  75
 Lunar Overworld                                           Seed: 164   Index:  75
 Lunar Path (west)                                         Seed: 164   Index:  80

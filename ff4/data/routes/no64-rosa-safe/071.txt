@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Safe)
 VERSION	4
-ROSA	v1.2.0-6-g47ffccf
+ROSA	v1.2.0-13-ge69b608
 SEED	71
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	16
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	172879054
-VARS	C305500:1 C308F00:1 C316C00:2 E000703:2 E302500:1 E302600:36 E302700:43 E305500:3 E307700:2 E308601:6 E308700:1 E308702:1 E309200:16 E309700:10 E309901:2 E30B500:1 E30BD00:14 E30C800:22 E310700:21 E310701:4 E316700:6 E316A01:2 E317000:4 E317600:10
+VARS	C305500:1 C308F00:1 C316C00:2 E000703:4 E302500:3 E302600:36 E302700:43 E305500:3 E308700:1 E308702:7 E309200:16 E309700:10 E30B500:1 E30BD00:20 E30C800:22 E310700:21 E310701:4 E316A01:12 E317000:4
 
 Overworld (Kaipo)                                         Seed:  71   Index:   0
 Overworld (Kaipo)                                         Seed:  71   Index:   1
@@ -46,11 +46,11 @@ Overworld (Kaipo)                                         Seed:  88   Index: 206
 Overworld (Damcyan)                                       Seed:  88   Index: 217
 Damcyan                                                   Seed:  88   Index: 221
   Optional Steps: 1
-Overworld (Damcyan)                                       Seed:  88   Index: 229
-Antlion B1F                                               Seed:  88   Index: 229
   Extra Steps: 2
-  Step  16: 15 / Imp x3 (6.649s)
-  Step  39: 16 / Turtle x1, Imp x2 (7.044s)
+Overworld (Damcyan)                                       Seed:  88   Index: 231
+Antlion B1F                                               Seed:  88   Index: 231
+  Step  14: 15 / Imp x3 (6.649s)
+  Step  37: 16 / Turtle x1, Imp x2 (7.044s)
 Antlion B2F Inward Direct                                 Seed: 105   Index:  13
   Antlion B2F                                             Seed: 105   Index:  13
     Step  38: 17 / SandWorm x2 (6.841s)
@@ -113,10 +113,10 @@ Mt.Ordeals Summit                                         Seed: 156   Index:   9
 Paladin                                                   Seed: 156   Index:  13
 Mt.Ordeals Summit                                         Seed: 156   Index:  13
   Optional Steps: 1
-  Step  12: 39 / Lilith x1, Red Bone x2 (8.437s)
-Mt.Ordeals-7th station                                    Seed: 156   Index:  36
   Extra Steps: 6
-  Step  47: 40 / Revenant x1, Ghoul x3 (8.489s)
+  Step  12: 39 / Lilith x1, Red Bone x2 (8.437s)
+Mt.Ordeals-7th station                                    Seed: 156   Index:  42
+  Step  41: 40 / Revenant x1, Ghoul x3 (8.489s)
 Mt.Ordeals-3rd station                                    Seed: 156   Index:  84
   Step  21: 41 / Zombie x3, Ghoul x2, Revenant x2 (7.923s)
   Step  24: 42 / Zombie x3, Ghoul x2, Revenant x2 (7.923s)
@@ -170,15 +170,15 @@ Toroian Castle 1F Inward Extra Steps Area Steps           Seed: 190   Index: 210
     Optional Steps: 3
 Overworld (Toroia)                                        Seed: 190   Index: 214
   Optional Steps: 2
-Tower of Zot 1F                                           Seed: 190   Index: 217
-  Step  16: 54 / Slime x4 (8.548s)
-Tower of Zot 2F                                           Seed: 190   Index: 255
-  Step   7: 55 / Centaur x3 (8.469s)
-  Step  39: 56 / Ice Liz x1, Slime x3 (9.423s)
-Battle: FlameDog                                          Seed: 207   Index:  51
-Tower of Zot 2F                                           Seed: 207   Index:  51
   Extra Steps: 2
-  Step  19: 57 / Carapace x2, Ice Liz x2 (9.635s)
+Tower of Zot 1F                                           Seed: 190   Index: 219
+  Step  14: 54 / Slime x4 (8.548s)
+Tower of Zot 2F                                           Seed: 207   Index:   1
+  Step   5: 55 / Centaur x3 (8.469s)
+  Step  37: 56 / Ice Liz x1, Slime x3 (9.423s)
+Battle: FlameDog                                          Seed: 207   Index:  53
+Tower of Zot 2F                                           Seed: 207   Index:  53
+  Step  17: 57 / Carapace x2, Ice Liz x2 (9.635s)
 Tower of Zot 3F                                           Seed: 207   Index:  70
   Step  64: 58 / SwordMan x2 (12.756s)
   Step  81: 59 / Ice Liz x1, Slime x3 (9.423s)
@@ -354,19 +354,18 @@ Grind Fight Search                                        Seed: 104   Index:  23
 Battle: Elements                                          Seed: 104   Index:  92
 Giant of Bab-il Lung                                      Seed: 104   Index:  92
 Giant of Bab-il CPU                                       Seed: 104   Index:  99
-  Extra Steps: 14
-Return to Moon                                            Seed: 104   Index: 115
-Lunar Overworld                                           Seed: 104   Index: 115
-Lunar Path (west)                                         Seed: 104   Index: 120
-  Step  27: 115 / Red Worm x1, Procyote x1, Juclyote x1 (7.796s)
-Lunar Overworld                                           Seed: 104   Index: 158
-Lunar Path (east)                                         Seed: 104   Index: 193
-  Step  24: 116 / Pudding x2, Grenade x2 (7.809s)
-Lunar Overworld                                           Seed: 104   Index: 224
-  Step  11: 117 / MoonCell x2, Pudding x2 (7.792s)
-Lunar Subterrane B1                                       Seed: 104   Index: 241
-  Extra Steps: 6
-  Step  38: 118 / Warlock x1 (6.227s)
+  Extra Steps: 20
+Return to Moon                                            Seed: 104   Index: 121
+Lunar Overworld                                           Seed: 104   Index: 121
+Lunar Path (west)                                         Seed: 104   Index: 126
+  Step  21: 115 / Red Worm x1, Procyote x1, Juclyote x1 (7.796s)
+Lunar Overworld                                           Seed: 104   Index: 164
+Lunar Path (east)                                         Seed: 104   Index: 199
+  Step  18: 116 / Pudding x2, Grenade x2 (7.809s)
+Lunar Overworld                                           Seed: 104   Index: 230
+  Step   5: 117 / MoonCell x2, Pudding x2 (7.792s)
+Lunar Subterrane B1                                       Seed: 104   Index: 247
+  Step  32: 118 / Warlock x1 (6.227s)
 Lunar Subterrane B2                                       Seed: 121   Index:  24
 Lunar Subterrane B3                                       Seed: 121   Index:  53
   Step   6: 119 / D.Bone x1 (6.178s)
@@ -374,17 +373,16 @@ Lunar Subterrane B4                                       Seed: 121   Index:  67
   Step  21: 120 / Ging-Ryu x1 (6.538s)
 Lunar Subterrane B4 Passage                               Seed: 121   Index: 123
 Lunar Subterrane B4                                       Seed: 121   Index: 152
-  Extra Steps: 2
+  Extra Steps: 12
   Step   3: 121 / D.Bone x1, Warlock x1 (6.199s)
   Step  17: 122 / D.Bone x1, Warlock x1 (6.199s)
-Lunar Subterrane B5                                       Seed: 121   Index: 169
-  Step   8: 123 / King-Ryu x2 (6.597s)
-Lunar Subterrane B5 Passage A                             Seed: 121   Index: 186
-  Step  23: 124 / King-Ryu x1 (6.565s)
-Lunar Subterrane B5                                       Seed: 121   Index: 219
-Lunar Subterrane B5 Passage B                             Seed: 121   Index: 228
-  Extra Steps: 10
-  Step  42: 125 / King-Ryu x1 (6.565s)
+  Step  25: 123 / King-Ryu x2 (6.597s)
+Lunar Subterrane B5                                       Seed: 121   Index: 179
+Lunar Subterrane B5 Passage A                             Seed: 121   Index: 196
+  Step  13: 124 / King-Ryu x1 (6.565s)
+Lunar Subterrane B5                                       Seed: 121   Index: 229
+Lunar Subterrane B5 Passage B                             Seed: 121   Index: 238
+  Step  32: 125 / King-Ryu x1 (6.565s)
 Lunar Subterrane B5 Inward Direct                         Seed: 138   Index:  14
   Lunar Subterrane B5                                     Seed: 138   Index:  14
 Get Ninja Star on Lunar Core B3                           Seed: 138   Index:  26

@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Safe)
 VERSION	4
-ROSA	v1.2.0-6-g47ffccf
+ROSA	v1.2.0-7-gad6754d
 SEED	126
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	25
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	170810063
-VARS	C303C00:1 C305500:1 C307800:1 C307801:1 C308F00:1 C316B00:1 C316D00:1 E000501:6 E000702:10 E302401:1 E302402:72 E302500:1 E302600:10 E302700:45 E303D00:2 E305500:127 E307200:18 E307400:12 E307B00:2 E307B01:4 E308700:1 E308702:1 E309200:68 E309700:14 E30B500:1 E30BA00:2 E30BD00:14 E30C800:36 E310700:30 E310701:4 E312500:32 E312501:8 E312700:16 E316F00:6 E317700:12 E317B00:28
+VARS	C303C00:1 C305500:1 C307800:1 C307801:1 C308F00:1 C316B00:1 C316D00:1 E000501:6 E302401:1 E302402:72 E302500:1 E302600:10 E302700:45 E303D00:2 E305500:127 E307200:18 E307400:12 E307B00:2 E307B01:4 E308700:1 E308702:1 E309200:78 E309700:14 E30B500:3 E30BD00:14 E30C800:36 E310700:30 E310701:4 E312500:48 E312501:8 E317700:12 E317B00:34
 
 Overworld (Kaipo)                                         Seed: 126   Index:   0
 Overworld (Kaipo)                                         Seed: 126   Index:   1
@@ -157,15 +157,14 @@ Cave Magnes B3F Inward Save Room Steps                    Seed: 245   Index: 119
   Cave Magnes B3F                                         Seed: 245   Index: 119
     Step   7: 44 / Cave Bat x3 (9.265s)
   Cave Magnes B3F Save Room                               Seed: 245   Index: 127
-    Extra Steps: 68
-  Cave Magnes B3F                                         Seed: 245   Index: 195
-    Step  15: 45 / Panther x2 (8.033s)
-Cave Magnes B3F Passage                                   Seed:   6   Index:   2
-Cave Magnes B4F Inward Direct                             Seed:   6   Index:  13
-  Cave Magnes B4F                                         Seed:   6   Index:  13
-Battle: Dark Elf                                          Seed:   6   Index:  43
-Overworld (Toroia)                                        Seed:   6   Index:  43
-  Extra Steps: 10
+    Extra Steps: 78
+  Cave Magnes B3F                                         Seed: 245   Index: 205
+    Step   5: 45 / Panther x2 (8.033s)
+Cave Magnes B3F Passage                                   Seed:   6   Index:  12
+Cave Magnes B4F Inward Direct                             Seed:   6   Index:  23
+  Cave Magnes B4F                                         Seed:   6   Index:  23
+Battle: Dark Elf                                          Seed:   6   Index:  53
+Overworld (Toroia)                                        Seed:   6   Index:  53
 Black Chocobo to Toroia                                   Seed:   6   Index:  55
 Toroian Castle 1F Inward Extra Steps Area Steps           Seed:   6   Index:  55
   Toroian Castle 1F                                       Seed:   6   Index:  55
@@ -211,13 +210,12 @@ Tower of Bab-il 3F                                        Seed:  57   Index:  49
 Tower of Bab-il 4F                                        Seed:  57   Index: 107
   Step  36: 57 / BlackLiz x3 (6.963s)
 Tower of Bab-il 5F                                        Seed:  57   Index: 169
-  Extra Steps: 32
+  Extra Steps: 48
   Step  80: 58 / Chimera x1, Tofu x3 (7.080s)
   Step  88: 59 / Chimera x1, FlameDog x2 (7.034s)
-Tower of Bab-il 6F                                        Seed:  74   Index:   2
-Tower of Bab-il 7F                                        Seed:  74   Index:  14
-  Extra Steps: 16
-  Step  58: 60 / Alert (summons FlameDog) x1 (7.259s)
+Tower of Bab-il 6F                                        Seed:  74   Index:  18
+Tower of Bab-il 7F                                        Seed:  74   Index:  30
+  Step  42: 60 / Alert (summons FlameDog) x1 (7.259s)
 Tower of Bab-il 8F                                        Seed:  74   Index:  73
   Step   4: 61 / Alert (summons Chimera) x1 (7.249s)
 Battle: Dr.Lugae                                          Seed:  74   Index:  98
@@ -321,27 +319,27 @@ Lunar Path (west)                                         Seed: 159   Index: 201
 Lunar Overworld                                           Seed: 159   Index: 239
 Giant of Bab-il Mouth                                     Seed: 159   Index: 244
   Optional Steps: 1
+  Extra Steps: 2
   Step   4: 92 / Machine x2, Beamer x2 (7.818s)
   Step  16: 93 / Horseman x1, Machine x2 (7.724s)
-Giant of Bab-il Neck                                      Seed: 176   Index:   7
-Giant of Bab-il Chest                                     Seed: 176   Index:   9
-  Step  33: 94 / MacGiant x1 (7.514s)
-Giant of Bab-il Stomach                                   Seed: 176   Index:  91
-  Step  31: 95 / Horseman x2 (7.607s)
-Grind Fight Search                                        Seed: 176   Index: 140
-  Giant of Bab-il Passage                                 Seed: 176   Index: 140
-    Extra Steps: 2
-    Step  25: 96 / Searcher (summons D.Machin) x1, Beamer x2 (7.658s)
-    Step  30: 97 / MacGiant x1, Horseman x1, Beamer x1 (7.674s)
-    Step  36: 98 / Searcher (summons Horseman) x1, Beamer x2 (7.604s)
-    Step  62: 99 / Searcher (summons Horseman) x1, Beamer x2 (7.604s)
-   (Step  79: 100 / MacGiant x1)
-   (Step  94: 101 / Searcher (summons Horseman) x1, Beamer x2)
-   (Step 134: 102 / Searcher (summons Horseman) x1, Beamer x2)
-   (Step 156: 103 / MacGiant x1, Machine x1, Beamer x1)
-   (Step 179: 104 / Searcher (summons D.Machin) x1, Beamer x2)
-   (Step 220: 105 / Searcher (summons D.Machin) x1, Beamer x2)
-   (Step 222: 106 / Horseman x1, Machine x2)
+Giant of Bab-il Neck                                      Seed: 176   Index:   9
+Giant of Bab-il Chest                                     Seed: 176   Index:  11
+  Step  31: 94 / MacGiant x1 (7.514s)
+Giant of Bab-il Stomach                                   Seed: 176   Index:  93
+  Step  29: 95 / Horseman x2 (7.607s)
+Grind Fight Search                                        Seed: 176   Index: 142
+  Giant of Bab-il Passage                                 Seed: 176   Index: 142
+    Step  23: 96 / Searcher (summons D.Machin) x1, Beamer x2 (7.658s)
+    Step  28: 97 / MacGiant x1, Horseman x1, Beamer x1 (7.674s)
+    Step  34: 98 / Searcher (summons Horseman) x1, Beamer x2 (7.604s)
+    Step  60: 99 / Searcher (summons Horseman) x1, Beamer x2 (7.604s)
+   (Step  77: 100 / MacGiant x1)
+   (Step  92: 101 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 132: 102 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 154: 103 / MacGiant x1, Machine x1, Beamer x1)
+   (Step 177: 104 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 218: 105 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 220: 106 / Horseman x1, Machine x2)
   Giant of Bab-il Lung                                    Seed: 176   Index: 203
    (Step  16: 100 / MacGiant x2)
    (Step  31: 101 / Machine x3, Beamer x2)
@@ -398,16 +396,15 @@ Get Ninja Star on Lunar Subterrane B6                     Seed: 210   Index: 146
   Lunar Subterrane B7 Inward Save Room Steps              Seed: 210   Index: 208
     Lunar Subterrane B7                                   Seed: 210   Index: 208
     Lunar Subterrane B7 Save Room                         Seed: 210   Index: 231
-      Extra Steps: 28
-    Lunar Subterrane B7                                   Seed: 227   Index:   3
-      Step  52: 114 / D.Fossil x1 (6.210s)
-  Lunar Core B1                                           Seed: 227   Index:  61
-    Step  39: 115 / Behemoth x1 (7.463s)
-  Lunar Core B2                                           Seed: 227   Index: 129
-    Extra Steps: 6
-    Step   3: 116 / Behemoth x1 (7.463s)
-    Step  35: 117 / Behemoth x1 (7.463s)
-    Step  61: 118 / Behemoth x1 (7.463s)
+      Extra Steps: 34
+    Lunar Subterrane B7                                   Seed: 227   Index:   9
+      Step  46: 114 / D.Fossil x1 (6.210s)
+  Lunar Core B1                                           Seed: 227   Index:  67
+    Step  33: 115 / Behemoth x1 (7.463s)
+    Step  65: 116 / Behemoth x1 (7.463s)
+  Lunar Core B2                                           Seed: 227   Index: 135
+    Step  29: 117 / Behemoth x1 (7.463s)
+    Step  55: 118 / Behemoth x1 (7.463s)
   Lunar Core B3                                           Seed: 227   Index: 190
     Step   2: 119 / Behemoth x2 (7.516s)
     Step  38: 120 / Behemoth x2 (7.516s)

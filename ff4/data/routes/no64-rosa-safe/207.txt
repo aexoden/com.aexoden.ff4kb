@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Safe)
 VERSION	4
-ROSA	v1.2.0-8-gc0d8eb9
+ROSA	v1.2.0-13-ge69b608
 SEED	207
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	18
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	173210742
-VARS	C305500:1 C307800:1 C308F00:1 C30CA00:1 C30CA01:1 C316C00:2 C316D00:1 E000201:2 E000701:1 E000703:2 E302402:46 E302600:18 E302700:3 E305500:5 E307200:2 E307400:8 E307B00:58 E308700:1 E308702:1 E309200:32 E30BA00:6 E30BD00:10 E30C800:68 E30CD00:46 E310700:6 E316D01:6 E317B00:2
+VARS	C305500:1 C307800:1 C308F00:1 C30CA00:1 C30CA01:1 C316C00:2 C316D00:1 E000701:1 E000703:2 E302402:46 E302600:18 E302700:3 E305500:5 E307200:2 E307400:10 E307B00:58 E308700:1 E308702:1 E309200:32 E30BA00:16 E30C800:68 E30CD00:46 E310700:6 E316D01:6 E317B00:2
 
 Overworld (Kaipo)                                         Seed: 207   Index:   0
 Overworld (Kaipo)                                         Seed: 207   Index:   1
@@ -36,15 +36,14 @@ Watery Pass-North B1F                                     Seed: 224   Index:  55
   Step  45: 11 / Pike x2, EvilShel x2, WaterBug x2 (7.266s)
 Overworld (Kaipo)                                         Seed: 224   Index: 115
 Waterfalls B1F                                            Seed: 224   Index: 124
-  Extra Steps: 8
-Waterfalls B2F                                            Seed: 224   Index: 133
-  Step  31: 12 / TinyMage x4 (7.558s)
-Waterfalls Lake                                           Seed: 224   Index: 178
-Battle: Octomamm                                          Seed: 224   Index: 215
-Waterfalls Lake                                           Seed: 224   Index: 215
-Overworld (Kaipo)                                         Seed: 224   Index: 216
-  Extra Steps: 2
-  Step  12: 13 / Sand Man x4 (7.347s)
+  Extra Steps: 10
+Waterfalls B2F                                            Seed: 224   Index: 135
+  Step  29: 12 / TinyMage x4 (7.558s)
+Waterfalls Lake                                           Seed: 224   Index: 180
+Battle: Octomamm                                          Seed: 224   Index: 217
+Waterfalls Lake                                           Seed: 224   Index: 217
+Overworld (Kaipo)                                         Seed: 224   Index: 218
+  Step  10: 13 / Sand Man x4 (7.347s)
 Overworld (Damcyan)                                       Seed: 224   Index: 229
 Damcyan                                                   Seed: 224   Index: 233
   Optional Steps: 0
@@ -327,7 +326,7 @@ Giant of Bab-il Stomach                                   Seed: 240   Index: 112
   Step   1: 102 / Searcher (summons MacGiant) x1 (7.400s)
 Grind Fight Search                                        Seed: 240   Index: 161
   Giant of Bab-il Passage                                 Seed: 240   Index: 161
-    Extra Steps: 6
+    Extra Steps: 16
     Step   1: 103 / Searcher (summons D.Machin) x1, Beamer x2 (7.658s)
     Step  33: 104 / MacGiant x1, Horseman x1, Beamer x1 (7.674s)
     Step  49: 105 / MacGiant x1, Horseman x1, Beamer x1 (7.674s)
@@ -341,21 +340,20 @@ Grind Fight Search                                        Seed: 240   Index: 161
    (Step 215: 113 / Searcher (summons Horseman) x1, Beamer x2)
    (Step 225: 114 / MacGiant x1)
    (Step 239: 115 / Searcher (summons D.Machin) x1, Beamer x2)
-  Giant of Bab-il Lung                                    Seed: 240   Index: 228
-   (Step  26: 107 / D.Machin x1)
-   (Step  28: 108 / Machine x3, Beamer x2)
-   (Step  65: 109 / Machine x3, Beamer x2)
-   (Step  84: 110 / D.Machin x1)
-   (Step 115: 111 / Machine x3, Beamer x2)
-   (Step 125: 112 / Machine x3, Beamer x2)
-   (Step 148: 113 / Machine x3, Beamer x2)
-   (Step 158: 114 / MacGiant x2)
-   (Step 172: 115 / Beamer x1, Machine x2, Horseman x1)
-   (Step 208: 116 / Beamer x1, Machine x2, Horseman x1)
-Battle: Elements                                          Seed: 240   Index: 236
-Giant of Bab-il Lung                                      Seed: 240   Index: 236
-Giant of Bab-il CPU                                       Seed: 240   Index: 243
-  Extra Steps: 10
+  Giant of Bab-il Lung                                    Seed: 240   Index: 238
+   (Step  16: 107 / D.Machin x1)
+   (Step  18: 108 / Machine x3, Beamer x2)
+   (Step  55: 109 / Machine x3, Beamer x2)
+   (Step  74: 110 / D.Machin x1)
+   (Step 105: 111 / Machine x3, Beamer x2)
+   (Step 115: 112 / Machine x3, Beamer x2)
+   (Step 138: 113 / Machine x3, Beamer x2)
+   (Step 148: 114 / MacGiant x2)
+   (Step 162: 115 / Beamer x1, Machine x2, Horseman x1)
+   (Step 198: 116 / Beamer x1, Machine x2, Horseman x1)
+Battle: Elements                                          Seed: 240   Index: 246
+Giant of Bab-il Lung                                      Seed: 240   Index: 246
+Giant of Bab-il CPU                                       Seed: 240   Index: 253
 Return to Moon                                            Seed: 240   Index: 255
 Lunar Overworld                                           Seed: 240   Index: 255
 Lunar Path (west)                                         Seed:   1   Index:   4

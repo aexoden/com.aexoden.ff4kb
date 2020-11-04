@@ -3,11 +3,11 @@ VERSION	4
 ROSA	v1.2.0-13-ge69b608
 SEED	248
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	18
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	168541665
-VARS	C303C00:1 C305500:1 C308F00:1 C30CA00:1 C316C00:2 E000703:2 E200003:6 E200005:2 E302500:35 E302600:54 E302700:23 E303D00:42 E305400:10 E305500:3 E307400:50 E308700:1 E308702:1 E309200:10 E30B500:1 E30B900:4 E30BD00:52 E30C800:76 E30C900:4 E30CD00:32 E310700:22 E310701:4 E316F00:4
+VARS	C303C00:1 C305500:1 C308F00:1 C30CA00:1 C316C00:2 E000703:2 E302500:35 E302600:54 E302700:23 E303D00:42 E305400:10 E305500:3 E307400:50 E308700:1 E308702:1 E309200:10 E30B500:5 E30BD00:52 E30C800:80 E30CD00:32 E310700:22 E310701:12 E316F00:4
 
 Overworld (Kaipo)                                         Seed: 248   Index:   0
 Overworld (Kaipo)                                         Seed: 248   Index:   1
@@ -234,10 +234,9 @@ Cave Eblana B1F                                           Seed: 213   Index:  33
 Cave Eblana B2F Shop Walk                                 Seed: 213   Index:  75
   Cave Eblana B2F                                         Seed: 213   Index:  75
     Optional Steps: 2
-    Extra Steps: 74
-Pass to Bab-il (south)                                    Seed: 213   Index: 207
-  Extra Steps: 4
-  Step  35: 68 / GiantBat x3, Cave Bat x3 (8.043s)
+    Extra Steps: 78
+Pass to Bab-il (south)                                    Seed: 213   Index: 211
+  Step  31: 68 / GiantBat x3, Cave Bat x3 (8.043s)
 Pass to Bab-il (north)                                    Seed: 213   Index: 242
   Step  17: 69 / GiantBat x3, Cave Bat x3 (8.043s)
 Pass to Bab-il (south)                                    Seed: 230   Index:  19
@@ -279,48 +278,47 @@ Fly to Castle of Dwarves                                  Seed:   8   Index:  50
 Underworld (Castle of Dwarves)                            Seed:   8   Index:  50
 Castle of Dwarves                                         Seed:   8   Index:  50
   Optional Steps: 4
-Underworld (Castle of Dwarves)                            Seed:   8   Index:  77
-Sealed Cave                                               Seed:   8   Index:  78
-Underworld (Tomra)                                        Seed:   8   Index:  85
-Return to Castle of Dwarves                               Seed:   8   Index:  86
-Castle of Dwarves                                         Seed:   8   Index:  86
-Underworld (Castle of Dwarves)                            Seed:   8   Index:  87
-Return to Mysidia                                         Seed:   8   Index:  88
-Walk to the Big Whale                                     Seed:   8   Index:  88
-  Overworld (Mysidia)                                     Seed:   8   Index:  88
-Fly to Lunar Path                                         Seed:   8   Index:  91
-Lunar Overworld                                           Seed:   8   Index:  91
-Lunar Path (west)                                         Seed:   8   Index:  96
-Lunar Overworld                                           Seed:   8   Index: 134
-  Step  12: 83 / Balloon x2, Grenade x2 (7.502s)
-  Step  25: 84 / Slime x1, Tofu x1, Pudding x1 (7.440s)
-Lunar Path (east)                                         Seed:   8   Index: 169
-  Step  13: 85 / Pudding x2, Grenade x2 (7.799s)
-  Step  14: 86 / Juclyote x1, Procyote x2 (7.900s)
-Lunar Overworld                                           Seed:   8   Index: 200
-  Extra Steps: 6
-  Step  23: 87 / Slime x1, Tofu x1, Pudding x1 (7.440s)
-Recruit FuSoYa                                            Seed:   8   Index: 223
-Lunar Overworld                                           Seed:   8   Index: 223
-Lunar Path (east)                                         Seed:   8   Index: 241
-  Step  14: 88 / Red Worm x2 (7.647s)
-Lunar Overworld                                           Seed:  25   Index:  16
-  Extra Steps: 2
-  Step  36: 89 / Slime x1, Tofu x1, Pudding x1 (7.606s)
+  Extra Steps: 8
+Underworld (Castle of Dwarves)                            Seed:   8   Index:  85
+Sealed Cave                                               Seed:   8   Index:  86
+Underworld (Tomra)                                        Seed:   8   Index:  93
+Return to Castle of Dwarves                               Seed:   8   Index:  94
+Castle of Dwarves                                         Seed:   8   Index:  94
+Underworld (Castle of Dwarves)                            Seed:   8   Index:  95
+Return to Mysidia                                         Seed:   8   Index:  96
+Walk to the Big Whale                                     Seed:   8   Index:  96
+  Overworld (Mysidia)                                     Seed:   8   Index:  96
+Fly to Lunar Path                                         Seed:   8   Index:  99
+Lunar Overworld                                           Seed:   8   Index:  99
+Lunar Path (west)                                         Seed:   8   Index: 104
+Lunar Overworld                                           Seed:   8   Index: 142
+  Step   4: 83 / Balloon x2, Grenade x2 (7.502s)
+  Step  17: 84 / Slime x1, Tofu x1, Pudding x1 (7.440s)
+Lunar Path (east)                                         Seed:   8   Index: 177
+  Step   5: 85 / Pudding x2, Grenade x2 (7.799s)
+  Step   6: 86 / Juclyote x1, Procyote x2 (7.900s)
+Lunar Overworld                                           Seed:   8   Index: 208
+  Step  15: 87 / Slime x1, Tofu x1, Pudding x1 (7.440s)
+Recruit FuSoYa                                            Seed:   8   Index: 225
+Lunar Overworld                                           Seed:   8   Index: 225
+Lunar Path (east)                                         Seed:   8   Index: 243
+  Step  12: 88 / Red Worm x2 (7.647s)
+Lunar Overworld                                           Seed:  25   Index:  18
+  Step  34: 89 / Slime x1, Tofu x1, Pudding x1 (7.606s)
 Lunar Path (west)                                         Seed:  25   Index:  53
   Step  14: 90 / Procyote x1, Pudding x2 (7.902s)
 Lunar Overworld                                           Seed:  25   Index:  91
   Step   5: 91 / Slime x1, Tofu x1, Pudding x1 (7.606s)
 Giant of Bab-il Mouth                                     Seed:  25   Index:  96
   Optional Steps: 1
-Giant of Bab-il Neck                                      Seed:  25   Index: 115
-Giant of Bab-il Chest                                     Seed:  25   Index: 117
-Giant of Bab-il Stomach                                   Seed:  25   Index: 199
   Extra Steps: 4
-  Step   7: 92 / Machine x2, Beamer x3 (7.876s)
-  Step  25: 93 / Horseman x2 (7.607s)
-  Step  40: 94 / Horseman x2 (7.607s)
-  Step  52: 95 / Searcher (summons MacGiant) x1 (7.400s)
+Giant of Bab-il Neck                                      Seed:  25   Index: 119
+Giant of Bab-il Chest                                     Seed:  25   Index: 121
+Giant of Bab-il Stomach                                   Seed:  25   Index: 203
+  Step   3: 92 / Machine x2, Beamer x3 (7.876s)
+  Step  21: 93 / Horseman x2 (7.607s)
+  Step  36: 94 / Horseman x2 (7.607s)
+  Step  48: 95 / Searcher (summons MacGiant) x1 (7.400s)
 Grind Fight Search                                        Seed:  25   Index: 252
   Giant of Bab-il Passage                                 Seed:  25   Index: 252
     Step   1: 96 / Searcher (summons D.Machin) x1, Beamer x2 (7.658s)

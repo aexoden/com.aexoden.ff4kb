@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Safe)
 VERSION	4
-ROSA	v1.2.0-6-g47ffccf
+ROSA	v1.2.0-13-ge69b608
 SEED	102
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	20
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	171371029
-VARS	C305500:1 C307800:1 C30CA00:1 C316C00:2 C316D00:1 E000701:1 E000703:2 E100001:2 E200002:6 E200008:4 E302402:26 E302600:10 E302700:3 E305400:20 E305500:11 E307B00:8 E308700:1 E308702:1 E308C00:30 E309700:18 E30B500:1 E30C800:48 E30CD00:38 E310700:28 E310701:4 E310702:2 E316A00:12 E316A01:6 E317B00:2
+VARS	C305500:1 C307800:1 C30CA00:1 C316C00:2 C316D00:1 E000701:1 E000703:2 E200008:4 E302402:26 E302600:10 E302700:3 E305400:20 E305500:11 E307B00:8 E308700:1 E308702:1 E308C00:30 E309700:18 E30B500:1 E30C800:48 E30CD00:38 E310700:30 E310701:12 E316A00:18 E317B00:2
 
 Overworld (Kaipo)                                         Seed: 102   Index:   0
 Overworld (Kaipo)                                         Seed: 102   Index:   1
@@ -193,13 +193,12 @@ Underworld (Castle of Dwarves)                            Seed: 255   Index:   4
 Castle of Dwarves Walk                                    Seed: 255   Index:   5
   Castle of Dwarves                                       Seed: 255   Index:   5
     Optional Steps: 22
-    Extra Steps: 6
-Underworld (Castle of Dwarves)                            Seed: 255   Index: 144
-  Extra Steps: 2
-  Step  36: 60 / Armadilo x1, Tortoise x2 (6.803s)
-  Step  81: 61 / Tortoise x1, Dark Imp x2 (6.727s)
-  Step 114: 62 / Dark Imp x4 (6.679s)
-  Step 125: 63 / Armadilo x1, Tortoise x2 (6.803s)
+    Extra Steps: 8
+Underworld (Castle of Dwarves)                            Seed: 255   Index: 146
+  Step  34: 60 / Armadilo x1, Tortoise x2 (6.803s)
+  Step  79: 61 / Tortoise x1, Dark Imp x2 (6.727s)
+  Step 112: 62 / Dark Imp x4 (6.679s)
+  Step 123: 63 / Armadilo x1, Tortoise x2 (6.803s)
 Tower of Bab-il 1F                                        Seed:  16   Index:  13
   Step  16: 64 / Marion (summons EvilDoll) x1, EvilDoll x2 (7.038s)
 Tower of Bab-il 2F                                        Seed:  16   Index:  31
@@ -288,23 +287,22 @@ Fly to Castle of Dwarves                                  Seed: 101   Index: 179
 Underworld (Castle of Dwarves)                            Seed: 101   Index: 179
 Castle of Dwarves                                         Seed: 101   Index: 179
   Optional Steps: 4
-Underworld (Castle of Dwarves)                            Seed: 101   Index: 206
-Sealed Cave                                               Seed: 101   Index: 207
-Underworld (Tomra)                                        Seed: 101   Index: 214
-Return to Castle of Dwarves                               Seed: 101   Index: 215
-Castle of Dwarves                                         Seed: 101   Index: 215
-  Extra Steps: 2
-Underworld (Castle of Dwarves)                            Seed: 101   Index: 218
-Return to Mysidia                                         Seed: 101   Index: 219
-Walk to the Big Whale                                     Seed: 101   Index: 219
-  Overworld (Mysidia)                                     Seed: 101   Index: 219
-Fly to Lunar Path                                         Seed: 101   Index: 222
-Lunar Overworld                                           Seed: 101   Index: 222
-Lunar Path (west)                                         Seed: 101   Index: 227
-Lunar Overworld                                           Seed: 118   Index:   9
-  Extra Steps: 6
-  Step   8: 94 / Procyote x1, Juclyote x2 (7.784s)
-  Step  40: 95 / Balloon x2, Grenade x2 (7.502s)
+  Extra Steps: 8
+Underworld (Castle of Dwarves)                            Seed: 101   Index: 214
+Sealed Cave                                               Seed: 101   Index: 215
+Underworld (Tomra)                                        Seed: 101   Index: 222
+Return to Castle of Dwarves                               Seed: 101   Index: 223
+Castle of Dwarves                                         Seed: 101   Index: 223
+Underworld (Castle of Dwarves)                            Seed: 101   Index: 224
+Return to Mysidia                                         Seed: 101   Index: 225
+Walk to the Big Whale                                     Seed: 101   Index: 225
+  Overworld (Mysidia)                                     Seed: 101   Index: 225
+Fly to Lunar Path                                         Seed: 101   Index: 228
+Lunar Overworld                                           Seed: 101   Index: 228
+Lunar Path (west)                                         Seed: 101   Index: 233
+Lunar Overworld                                           Seed: 118   Index:  15
+  Step   2: 94 / Procyote x1, Juclyote x2 (7.784s)
+  Step  34: 95 / Balloon x2, Grenade x2 (7.502s)
 Lunar Path (east)                                         Seed: 118   Index:  50
   Step   9: 96 / Pudding x2, Grenade x2 (7.799s)
 Lunar Overworld                                           Seed: 118   Index:  81
@@ -374,14 +372,13 @@ Lunar Subterrane B2                                       Seed: 152   Index: 106
 Lunar Subterrane B3                                       Seed: 152   Index: 135
   Step  14: 114 / RedGiant x2 (6.585s)
 Lunar Subterrane B4                                       Seed: 152   Index: 149
-  Extra Steps: 12
+  Extra Steps: 18
   Step  24: 115 / D.Bone x1, Warlock x1 (6.199s)
-Lunar Subterrane B4 Passage                               Seed: 152   Index: 217
-  Step  26: 116 / King-Ryu x1 (6.565s)
-Lunar Subterrane B4                                       Seed: 152   Index: 246
-  Extra Steps: 6
-  Step  15: 117 / D.Bone x1, Warlock x1 (6.199s)
-  Step  21: 118 / D.Bone x1, Warlock x1 (6.199s)
+Lunar Subterrane B4 Passage                               Seed: 152   Index: 223
+  Step  20: 116 / King-Ryu x1 (6.565s)
+Lunar Subterrane B4                                       Seed: 152   Index: 252
+  Step   9: 117 / D.Bone x1, Warlock x1 (6.199s)
+  Step  15: 118 / D.Bone x1, Warlock x1 (6.199s)
 Lunar Subterrane B5                                       Seed: 169   Index:  11
 Lunar Subterrane B5 Passage A                             Seed: 169   Index:  28
 Lunar Subterrane B5                                       Seed: 169   Index:  61

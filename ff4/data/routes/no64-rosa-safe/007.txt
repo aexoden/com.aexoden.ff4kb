@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Safe)
 VERSION	4
-ROSA	v1.1.0-57-g5baafe9
+ROSA	v1.2.0-13-ge69b608
 SEED	7
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	18
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	170519472
-VARS	C305500:1 C307800:1 C307801:1 C30CA00:1 C30CA01:1 C316C00:2 E000701:1 E100001:2 E302500:57 E302600:34 E302700:3 E305500:3 E307600:2 E307700:4 E307701:4 E307B00:20 E307B01:22 E308401:2 E308700:1 E308702:1 E309700:108 E30B500:1 E30C800:62 E30CD00:8 E310700:18 E310701:3 E312401:10 E317500:3
+VARS	C305500:1 C307800:1 C307801:1 C30CA00:1 C30CA01:1 C316C00:2 E000701:1 E100001:2 E302500:61 E302600:34 E302700:3 E305500:3 E307600:2 E307B00:20 E307B01:26 E308700:1 E308702:3 E309700:108 E30C800:62 E30CD00:8 E310700:18 E310701:4 E312401:10 E317500:3
 
 Overworld (Kaipo)                                         Seed:   7   Index:   0
 Overworld (Kaipo)                                         Seed:   7   Index:   1
@@ -44,11 +44,10 @@ Overworld (Kaipo)                                         Seed:  24   Index: 208
 Overworld (Damcyan)                                       Seed:  24   Index: 219
 Damcyan                                                   Seed:  24   Index: 223
   Optional Steps: 1
-  Extra Steps: 56
-Overworld (Damcyan)                                       Seed:  41   Index:  31
-Antlion B1F                                               Seed:  41   Index:  31
-  Extra Steps: 4
-  Step  42: 12 / Turtle x1, Imp x2 (7.044s)
+  Extra Steps: 60
+Overworld (Damcyan)                                       Seed:  41   Index:  35
+Antlion B1F                                               Seed:  41   Index:  35
+  Step  38: 12 / Turtle x1, Imp x2 (7.044s)
 Antlion B2F Inward Charm Room Steps                       Seed:  41   Index:  73
   Antlion B2F                                             Seed:  41   Index:  73
     Step  21: 13 / Weeper x1, Turtle x1, Basilisk x1 (7.385s)
@@ -62,13 +61,12 @@ Antlion's Nest                                            Seed:  41   Index: 192
 Antlion B2F Outward Charm Room Steps                      Seed:  41   Index: 207
   Antlion B2F                                             Seed:  41   Index: 207
   Antlion B2F Treasure Room                               Seed:  58   Index:   2
-    Extra Steps: 22
-  Antlion B2F                                             Seed:  58   Index:  24
-    Step  29: 15 / Weeper x1, Turtle x1, Basilisk x1 (7.339s)
-Antlion B1F                                               Seed:  58   Index:  58
-  Extra Steps: 4
-  Step  31: 16 / Turtle x2 (7.464s)
-  Step  41: 17 / Turtle x1, Imp x2 (7.009s)
+    Extra Steps: 26
+  Antlion B2F                                             Seed:  58   Index:  28
+    Step  25: 15 / Weeper x1, Turtle x1, Basilisk x1 (7.339s)
+Antlion B1F                                               Seed:  58   Index:  62
+  Step  27: 16 / Turtle x2 (7.464s)
+  Step  37: 17 / Turtle x1, Imp x2 (7.009s)
 Overworld (Damcyan)                                       Seed:  58   Index: 100
 Overworld (Kaipo)                                         Seed:  58   Index: 100
 Kaipo Revisited                                           Seed:  58   Index: 100
@@ -111,15 +109,15 @@ Mt.Ordeals Summit                                         Seed:  92   Index: 123
 Paladin                                                   Seed:  92   Index: 127
 Mt.Ordeals Summit                                         Seed:  92   Index: 127
   Optional Steps: 1
-Mt.Ordeals-7th station                                    Seed:  92   Index: 150
-Mt.Ordeals-3rd station                                    Seed:  92   Index: 192
-  Step  13: 28 / Zombie x3, Ghoul x2, Revenant x2 (7.923s)
-  Step  21: 29 / Zombie x3, Ghoul x2, Revenant x2 (7.923s)
-Mt.Ordeals                                                Seed:  92   Index: 222
   Extra Steps: 2
-  Step   8: 30 / Spirit x2, Skelton x2 (8.065s)
-  Step  23: 31 / Skelton x3, Red Bone x2 (7.997s)
-  Step  46: 32 / Skelton x3, Red Bone x2 (7.997s)
+Mt.Ordeals-7th station                                    Seed:  92   Index: 152
+Mt.Ordeals-3rd station                                    Seed:  92   Index: 194
+  Step  11: 28 / Zombie x3, Ghoul x2, Revenant x2 (7.923s)
+  Step  19: 29 / Zombie x3, Ghoul x2, Revenant x2 (7.923s)
+Mt.Ordeals                                                Seed:  92   Index: 224
+  Step   6: 30 / Spirit x2, Skelton x2 (8.065s)
+  Step  21: 31 / Skelton x3, Red Bone x2 (7.997s)
+  Step  44: 32 / Skelton x3, Red Bone x2 (7.997s)
 Overworld (Mt.Ordeals)                                    Seed: 109   Index:  12
 Take Chocobo to Mysidia                                   Seed: 109   Index:  25
 Overworld (Mysidia)                                       Seed: 109   Index:  25
@@ -283,39 +281,39 @@ Tower of Bab-il 6F (revisit)                              Seed:   6   Index: 249
 Fly to Castle of Dwarves                                  Seed:  23   Index:  43
 Underworld (Castle of Dwarves)                            Seed:  23   Index:  43
 Castle of Dwarves                                         Seed:  23   Index:  43
-  Optional Steps: 3
-Underworld (Castle of Dwarves)                            Seed:  23   Index:  69
-Sealed Cave                                               Seed:  23   Index:  70
-Underworld (Tomra)                                        Seed:  23   Index:  77
-Return to Castle of Dwarves                               Seed:  23   Index:  78
-Castle of Dwarves                                         Seed:  23   Index:  78
-Underworld (Castle of Dwarves)                            Seed:  23   Index:  79
-Return to Mysidia                                         Seed:  23   Index:  80
-Walk to the Big Whale                                     Seed:  23   Index:  80
-  Overworld (Mysidia)                                     Seed:  23   Index:  80
-Fly to Lunar Path                                         Seed:  23   Index:  83
-Lunar Overworld                                           Seed:  23   Index:  83
-Lunar Path (west)                                         Seed:  23   Index:  88
-  Step   5: 85 / Red Worm x1, Grenade x3 (7.658s)
-  Step   8: 86 / Procyote x1, Pudding x2 (7.804s)
-Lunar Overworld                                           Seed:  23   Index: 126
-Lunar Path (east)                                         Seed:  23   Index: 161
-Lunar Overworld                                           Seed:  23   Index: 192
-  Step  14: 87 / Balloon x2, Grenade x2 (7.502s)
-Recruit FuSoYa                                            Seed:  23   Index: 209
-Lunar Overworld                                           Seed:  23   Index: 209
-  Step  15: 88 / MoonCell x2, Pudding x2 (7.923s)
-Lunar Path (east)                                         Seed:  23   Index: 227
-  Step  12: 89 / Juclyote x1, Procyote x2 (7.957s)
-  Step  24: 90 / Red Worm x2 (7.647s)
-Lunar Overworld                                           Seed:  40   Index:   2
-  Step  29: 91 / Balloon x2, Grenade x2 (7.687s)
-Lunar Path (west)                                         Seed:  40   Index:  37
-  Step  36: 92 / Procyote x1, Pudding x2 (7.902s)
-Lunar Overworld                                           Seed:  40   Index:  75
-Giant of Bab-il Mouth                                     Seed:  40   Index:  80
-  Optional Steps: 1
-  Step  14: 93 / MacGiant x1 (7.514s)
+  Optional Steps: 4
+Underworld (Castle of Dwarves)                            Seed:  23   Index:  70
+Sealed Cave                                               Seed:  23   Index:  71
+Underworld (Tomra)                                        Seed:  23   Index:  78
+Return to Castle of Dwarves                               Seed:  23   Index:  79
+Castle of Dwarves                                         Seed:  23   Index:  79
+Underworld (Castle of Dwarves)                            Seed:  23   Index:  80
+Return to Mysidia                                         Seed:  23   Index:  81
+Walk to the Big Whale                                     Seed:  23   Index:  81
+  Overworld (Mysidia)                                     Seed:  23   Index:  81
+Fly to Lunar Path                                         Seed:  23   Index:  84
+Lunar Overworld                                           Seed:  23   Index:  84
+Lunar Path (west)                                         Seed:  23   Index:  89
+  Step   4: 85 / Red Worm x1, Grenade x3 (7.658s)
+  Step   7: 86 / Procyote x1, Pudding x2 (7.804s)
+Lunar Overworld                                           Seed:  23   Index: 127
+Lunar Path (east)                                         Seed:  23   Index: 162
+Lunar Overworld                                           Seed:  23   Index: 193
+  Step  13: 87 / Balloon x2, Grenade x2 (7.502s)
+Recruit FuSoYa                                            Seed:  23   Index: 210
+Lunar Overworld                                           Seed:  23   Index: 210
+  Step  14: 88 / MoonCell x2, Pudding x2 (7.923s)
+Lunar Path (east)                                         Seed:  23   Index: 228
+  Step  11: 89 / Juclyote x1, Procyote x2 (7.957s)
+  Step  23: 90 / Red Worm x2 (7.647s)
+Lunar Overworld                                           Seed:  40   Index:   3
+  Step  28: 91 / Balloon x2, Grenade x2 (7.687s)
+Lunar Path (west)                                         Seed:  40   Index:  38
+  Step  35: 92 / Procyote x1, Pudding x2 (7.902s)
+Lunar Overworld                                           Seed:  40   Index:  76
+Giant of Bab-il Mouth                                     Seed:  40   Index:  81
+  Optional Steps: 0
+  Step  13: 93 / MacGiant x1 (7.514s)
 Giant of Bab-il Neck                                      Seed:  40   Index:  99
 Giant of Bab-il Chest                                     Seed:  40   Index: 101
   Step  20: 94 / MacGiant x1, Horseman x1 (7.641s)

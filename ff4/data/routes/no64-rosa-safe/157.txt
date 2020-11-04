@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Safe)
 VERSION	4
-ROSA	v1.2.0-7-gad6754d
+ROSA	v1.2.0-13-ge69b608
 SEED	157
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	10
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	170961362
-VARS	C316C00:2 E200002:2 E302500:1 E302600:10 E307700:8 E307701:10 E307802:6 E307F01:4 E308700:1 E308702:1 E309700:10 E30B500:1 E30C800:2 E310701:4 E310702:14 E316A00:2 E317500:10
+VARS	C316C00:2 E302500:29 E302600:10 E308700:1 E308702:1 E309700:10 E30B500:1 E30C800:2 E310701:20 E316A00:2 E317500:10
 
 Overworld (Kaipo)                                         Seed: 157   Index:   0
 Overworld (Kaipo)                                         Seed: 157   Index:   1
@@ -47,40 +47,37 @@ Overworld (Damcyan)                                       Seed: 174   Index: 217
   Step   2: 15 / SandWorm x1 (7.264s)
 Damcyan                                                   Seed: 174   Index: 221
   Optional Steps: 1
-Overworld (Damcyan)                                       Seed: 174   Index: 229
-Antlion B1F                                               Seed: 174   Index: 229
-  Extra Steps: 8
-  Step  45: 16 / Imp x3 (6.649s)
-Antlion B2F Inward Direct                                 Seed: 191   Index:  19
-  Antlion B2F                                             Seed: 191   Index:  19
-    Step  21: 17 / Weeper x1, Turtle x1, Basilisk x1 (7.385s)
-    Step  44: 18 / Basilisk x1, Turtle x1 (7.110s)
-Antlion's Nest                                            Seed: 191   Index:  99
-  Step   5: 19 / Turtle x2 (7.487s)
-Battle: Antlion                                           Seed: 191   Index: 113
-Antlion's Nest                                            Seed: 191   Index: 113
-Antlion B2F Outward Direct                                Seed: 191   Index: 128
-  Antlion B2F                                             Seed: 191   Index: 128
-    Extra Steps: 6
-    Step  56: 20 / Turtle x2 (7.464s)
-    Step  63: 21 / Weeper x2 (7.132s)
-    Step  86: 22 / Weeper x1, Turtle x1, Basilisk x1 (7.339s)
-Antlion B1F                                               Seed: 191   Index: 214
-  Extra Steps: 10
-  Step  19: 23 / Turtle x1, Imp x2 (7.009s)
-  Step  48: 24 / Basilisk x1, Imp x3 (6.783s)
-Overworld (Damcyan)                                       Seed: 208   Index:   6
-Overworld (Kaipo)                                         Seed: 208   Index:   6
-Kaipo Revisited                                           Seed: 208   Index:   6
-Overworld (Kaipo)                                         Seed: 208   Index:   6
-Overworld (Damcyan)                                       Seed: 208   Index:   6
-Mt.Hobs-West                                              Seed: 208   Index:   6
-  Step  32: 25 / Skelton x4 (8.683s)
-Mt.Hobs Summit                                            Seed: 208   Index:  45
-Battle: MomBomb                                           Seed: 208   Index:  60
-Mt.Hobs Summit                                            Seed: 208   Index:  60
-  Extra Steps: 4
-  Step  10: 26 / Skelton x4 (7.819s)
+  Extra Steps: 28
+Overworld (Damcyan)                                       Seed: 191   Index:   1
+Antlion B1F                                               Seed: 191   Index:   1
+  Step  17: 16 / Imp x3 (6.649s)
+Antlion B2F Inward Direct                                 Seed: 191   Index:  39
+  Antlion B2F                                             Seed: 191   Index:  39
+    Step   1: 17 / Weeper x1, Turtle x1, Basilisk x1 (7.385s)
+    Step  24: 18 / Basilisk x1, Turtle x1 (7.110s)
+    Step  65: 19 / Turtle x2 (7.487s)
+Antlion's Nest                                            Seed: 191   Index: 119
+Battle: Antlion                                           Seed: 191   Index: 133
+Antlion's Nest                                            Seed: 191   Index: 133
+Antlion B2F Outward Direct                                Seed: 191   Index: 148
+  Antlion B2F                                             Seed: 191   Index: 148
+    Step  36: 20 / Turtle x2 (7.464s)
+    Step  43: 21 / Weeper x2 (7.132s)
+    Step  66: 22 / Weeper x1, Turtle x1, Basilisk x1 (7.339s)
+Antlion B1F                                               Seed: 191   Index: 228
+  Step   5: 23 / Turtle x1, Imp x2 (7.009s)
+  Step  34: 24 / Basilisk x1, Imp x3 (6.783s)
+Overworld (Damcyan)                                       Seed: 208   Index:  10
+Overworld (Kaipo)                                         Seed: 208   Index:  10
+Kaipo Revisited                                           Seed: 208   Index:  10
+Overworld (Kaipo)                                         Seed: 208   Index:  10
+Overworld (Damcyan)                                       Seed: 208   Index:  10
+Mt.Hobs-West                                              Seed: 208   Index:  10
+  Step  28: 25 / Skelton x4 (8.683s)
+Mt.Hobs Summit                                            Seed: 208   Index:  49
+Battle: MomBomb                                           Seed: 208   Index:  64
+Mt.Hobs Summit                                            Seed: 208   Index:  64
+  Step   6: 26 / Skelton x4 (7.819s)
 Mt.Hobs-East                                              Seed: 208   Index:  70
   Step  14: 27 / Spirit x2, Skelton x2 (8.237s)
 Overworld (Fabul)                                         Seed: 208   Index: 116
@@ -284,24 +281,23 @@ Fly to Castle of Dwarves                                  Seed: 139   Index: 230
 Underworld (Castle of Dwarves)                            Seed: 139   Index: 230
 Castle of Dwarves                                         Seed: 139   Index: 230
   Optional Steps: 4
-Underworld (Castle of Dwarves)                            Seed: 156   Index:   1
-Sealed Cave                                               Seed: 156   Index:   2
-Underworld (Tomra)                                        Seed: 156   Index:   9
-Return to Castle of Dwarves                               Seed: 156   Index:  10
-Castle of Dwarves                                         Seed: 156   Index:  10
-  Extra Steps: 14
-Underworld (Castle of Dwarves)                            Seed: 156   Index:  25
-Return to Mysidia                                         Seed: 156   Index:  26
-Walk to the Big Whale                                     Seed: 156   Index:  26
-  Overworld (Mysidia)                                     Seed: 156   Index:  26
-Fly to Lunar Path                                         Seed: 156   Index:  29
-Lunar Overworld                                           Seed: 156   Index:  29
-Lunar Path (west)                                         Seed: 156   Index:  34
-Lunar Overworld                                           Seed: 156   Index:  72
-  Extra Steps: 2
-  Step  11: 100 / MoonCell x2, Pudding x2 (7.782s)
-  Step  33: 101 / Slime x1, Tofu x1, Pudding x1 (7.440s)
-  Step  36: 102 / Slime x1, Tofu x1, Pudding x1 (7.440s)
+  Extra Steps: 16
+Underworld (Castle of Dwarves)                            Seed: 156   Index:  17
+Sealed Cave                                               Seed: 156   Index:  18
+Underworld (Tomra)                                        Seed: 156   Index:  25
+Return to Castle of Dwarves                               Seed: 156   Index:  26
+Castle of Dwarves                                         Seed: 156   Index:  26
+Underworld (Castle of Dwarves)                            Seed: 156   Index:  27
+Return to Mysidia                                         Seed: 156   Index:  28
+Walk to the Big Whale                                     Seed: 156   Index:  28
+  Overworld (Mysidia)                                     Seed: 156   Index:  28
+Fly to Lunar Path                                         Seed: 156   Index:  31
+Lunar Overworld                                           Seed: 156   Index:  31
+Lunar Path (west)                                         Seed: 156   Index:  36
+Lunar Overworld                                           Seed: 156   Index:  74
+  Step   9: 100 / MoonCell x2, Pudding x2 (7.782s)
+  Step  31: 101 / Slime x1, Tofu x1, Pudding x1 (7.440s)
+  Step  34: 102 / Slime x1, Tofu x1, Pudding x1 (7.440s)
 Lunar Path (east)                                         Seed: 156   Index: 109
 Lunar Overworld                                           Seed: 156   Index: 140
   Step  14: 103 / Juclyote x2, MoonCell x2, Grenade x1 (7.983s)
