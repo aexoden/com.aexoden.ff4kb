@@ -1142,7 +1142,7 @@
 				</ul>
 				<p>If you are on pace to have a level 16 Yang at Dr.Lugae, give the <i>Strength</i> (ring) to Yang instead of Kain.</p>
 			</div>
-			<p>Travel through the passage underneath the Castle to the Dwarf Base. Heal at the pot, exit to the Underworld, and then make your way to the Tower of Bab-il.</p>
+			<p>Travel through the passage underneath the Castle to the Dwarf Base. If you are using the safe route, heal at the healing pot, otherwise skip it. Exit to the Underworld, and then make your way to the Tower of Bab-il.</p>
 			<h3 id="walkthrough-tower-of-babil">Tower of Bab-il</h3>
 			<p>Enter the Tower of Bab-il and make your way to the <i>CatClaw</i> on 3F. Collect the chest and continue walking until just before Dr.Lugae.</p>
 			<div class="bs-callout bs-callout-info">
@@ -1150,7 +1150,7 @@
 				<h4>Menu</h4>
 				<ul>
 					<li>Equip Yang: */<i>CatClaw</i>/*/*/* (finishes duplication).</li>
-					<li>Fully heal the party.</li>
+					<li>Fully heal the party, but don't heal mute (if you skipped the healing pot).</li>
 				</ul>
 			</div>
 			<p>Approach Dr.Lugae to begin the scene.</p>
@@ -1259,7 +1259,7 @@
 					<li>Buy <i>IceBrand</i>, <i>Blizzard</i>.</li>
 				</ul>
 			</div>
-			<p>Continue through the cave until you meet up with Edge, making sure to pick up the two <i>Elixir</i> chests on the way. (When you return to the first room after the town, they are the two chests in the secret passage.)</p>
+			<p>Continue through the cave until you meet up with Edge, making sure to pick up the two <i>Elixir</i> chests on the way if you are using the safe route. (When you return to the first room after the town, they are the two chests in the secret passage.)</p>
 			<div class="bs-callout bs-callout-info">
 				<span class="fas fa-bars"></span>
 				<h4>Menu</h4>
@@ -1446,7 +1446,7 @@
 				<ul>
 					<li>Switch to battle speed 2.</li>
 					<li>Underflow FuSoYa's MP.</li>
-					<li>Use an <i>Elixir</i> on Edge if he has less than 20 MP.</li>
+					<li>Use an <i>Ether1</i> on Edge if he has less than 20 MP. (If using the safe route, you can use an <i>Elixir</i> instead.)</li>
 					<li>Fully heal the party.</li>
 					<li>Equip FuSoYa: empty/*/<i>Gaea</i>/*/<i>Rune</i>.</li>
 					<li>Equip Rosa: <i>Lunar</i>/*/<i>Wizard</i>/<i>Wizard</i>/<i>Rune</i>.</li>
@@ -1641,7 +1641,7 @@
 				<h5>Battle Plan</h5>
 				<div class="info-block col-md">
 					<p>The below strategy is very timing-sensitive. I recommend that you practice it several times. Be prepared to use a backup strategy (cast Bersk on Kain and have Rosa cast Cure4 after damage) if you notice Zeromus's actions no longer match the below list.</p>
-					<p>Practice counting the damage from Kain's attacks. The more accurately you can measure this total, the more likely you'll be able to choose the most optimal action on Kain's final turns. This guide assumes you are able to count Rosa's first White cast and at least five of Kain's attacks, but recommendations will be given if you are unable.</p>
+                    <p>Practice counting the damage from Kain's attacks. The more accurately you can measure this total, the more likely you'll be able to choose the most optimal action on Kain's final turns. This guide assumes you are able to count Rosa's first White cast and at least five of Kain's attacks, but recommendations will be given if you are unable.</p>
 					<dl class="dl-horizontal">
 						<dt>Cecil</dt><dd>Move <i>Dancing</i> to 2L<br>Use <i>Crystal</i> on Zeromus</dd>
 						<dt>Rosa</dt><dd>Cast Bersk on Kain</dd>
@@ -1656,36 +1656,70 @@
 					</dl>
 					<p>Zeromus shakes.</p>
 					<dl class="dl-horizontal">
-						<dt>Rydia</dt><dd>Wait for White<br>Use <i>Elixir</i> on Weak target if Kain or Rosa/Parry</dd>
+                        <dt>Rydia</dt><dd>Wait for Weak (counter to White)<br>Use <i>Elixir</i> on Weak target if Kain or Rosa/Parry</dd>
 						<dt>Cecil</dt><dd>Parry</dd>
 						<dt>Rosa</dt><dd>Cast Cure4 on entire party (as Big Bang goes off)</dd>
-					</dl>
-					<p>Zeromus casts Big Bang and shakes.</p>
-					<dl class="dl-horizontal">
-						<dt>Rosa</dt><dd>Wait for Kain attack after Zeromus shake<br>Use <i>Life</i> on Rydia</dd>
-					</dl>
-					<p>Zeromus casts Big Bang.</p>
-					<dl class="dl-horizontal">
-						<dt>Rosa</dt><dd>Wait for Blk.Hole after Big Bang<br>Cast Wall on Rosa</dd>
-						<dt>Rydia</dt><dd>Cast Virus on Rosa</dd>
-						<dt>Kain</dt><dd>Fight/Use <i>Elixir</i> on Rosa</dd>
-						<dt>Rosa</dt><dd>Cast White on Rosa</dd>
-						<dt>Rydia</dt><dd>Run Buffer (only if Kain used Fight)<br>Cast Virus on Rosa</dd>
-						<dt>Kain</dt><dd>Use <i>Elixir</i> on Rosa (as Virus goes off, only if not already done)</dd>
-						<dt>Rydia</dt><dd>Cast Virus on Rosa (this turn only happens if Rydia run buffers her previous turn)</dd>
-					</dl>
-					<p>Zeromus shakes and casts Big Bang.</p>
-					<dl class="dl-horizontal">
-						<dt>Rosa</dt><dd>Cast White on Zeromus</dd>
-					</dl>
+                    </dl>
+                </div>
+                <p>Depending on how that first sequence went, you may need to branch now. If you are using the safe route or if Edge, Cecil or Rydia was the Weak target, you can continue to follow the safe strategy. Otherwise, you must follow the backup strategy.</p>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tab-battle-zeromus-safe">Safe (Elixir Left)</a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-battle-zeromus-backup">Backup (No Elixir Left)</a></li>
+                </ul>
+                <div class="info-block tab-content">
+                    <div class="tab-pane fade show active" id="tab-battle-zeromus-safe">
+                        <p>Zeromus casts Big Bang and shakes.</p>
+                        <dl class="dl-horizontal">
+                            <dt>Rosa</dt><dd>Wait for Kain attack after Zeromus shake<br>Use <i>Life</i> on Rydia</dd>
+                        </dl>
+                        <p>Zeromus casts Big Bang.</p>
+                        <dl class="dl-horizontal">
+                            <dt>Rosa</dt><dd>Wait for Blk.Hole after Big Bang<br>Cast Wall on Rosa</dd>
+                            <dt>Rydia</dt><dd>Cast Virus on Rosa</dd>
+                            <dt>Kain</dt><dd>Fight/Use <i>Elixir</i> on Rosa</dd>
+                            <dt>Rosa</dt><dd>Cast White on Rosa</dd>
+                            <dt>Rydia</dt><dd>Run Buffer (only if Kain used Fight)<br>Cast Virus on Rosa</dd>
+                            <dt>Kain</dt><dd>Use <i>Elixir</i> on Rosa (as Virus goes off, only if not already done)</dd>
+                            <dt>Rydia</dt><dd>Cast Virus on Rosa (this turn only happens if Rydia run buffers her previous turn)</dd>
+                        </dl>
+                        <p>Zeromus shakes and casts Big Bang.</p>
+                        <dl class="dl-horizontal">
+                            <dt>Rosa</dt><dd>Cast White on Zeromus</dd>
+                        </dl>
+                        <p>Kain's last actions can vary depending on the damage rolls in the fight. If you weren't able to count any damage, your best bet is to have Kain immediately use the Elixir, which will give you a 92.6% chance of success. Otherwise, use the below chart, which assumes you counted Rosa's first White and at least five of Kain's attacks:</p>
+                        <table class="table">
+                            <tr><th>White + 5 Attacks</th><th>White + 8 Attacks</th><th>White + 12 Attacks</th><th>Kain Action</th></tr>
+                            <tr><th>less than 19830</th><th>less than 26606</th><th>less than 36238</th><td>Fight</td></tr>
+                            <tr><th>greater than 19830</th><th>greater than 26606</th><th>greater than 36238</th><td>Use <i>Elixir</i></td></tr>
+                        </table>
+                        <p>If you run buffer Rydia's second Virus cast (even if Kain used an <i>Elixir</i>), there is a chance Rydia will get an opportunity to reflect a third virus. It may be worth taking if you're concerned about your damage rolls. Eventually, more specific guidance will be given here.</p>
+                    </div>
+                    <div class="tab-pane fade show" id="tab-battle-zeromus-backup">
+                        <p>Zeromus casts Big Bang and shakes.</p>
+                        <dl class="dl-horizontal">
+                            <dt>Rosa</dt><dd>Wait for Kain attack after Zeromus shake<br>Cast Cure4 on Rosa</dd>
+                        </dl>
+                        <p>Zeromus casts Big Bang.</p>
+                        <dl class="dl-horizontal">
+                            <dt>Rosa</dt><dd>Wait for Blk.Hole after Big Bang<br>Cast Wall on Rosa</dd>
+                            <dt>Kain</dt><dd>Fight (hold A)/Parry</dd>
+                            <dt>Rosa</dt><dd>Cast White on Rosa</dd>
+                            <dt>Kain</dt><dd>Fight (hold A)/Parry</dd>
+                        </dl>
+                        <p>Zeromus shakes and casts Big Bang.</p>
+                        <dl class="dl-horizontal">
+                            <dt>Rosa</dt><dd>Cast White on Zeromus</dd>
+                        </dl>
+                        <p>Kain's last actions can vary depending on the damage rolls in the fight. If you weren't able to count any damage, it's more or less a guessing game, but you're safest having Kain parry both turns, which will give you a 63% chance of success. Otherwise, use the below chart, which assumes you counted Rosa's White and at least five of Kain's attacks.</p>
+                        <table class="table">
+                            <tr><th>White + 5 Attacks</th><th>White + 8 Attacks</th><th>White + 12 Attacks</th><th>Kain Actions</th></tr>
+                            <tr><th>less than 20400</th><th>less than 27300</th><th>less than 36800</th><td>Fight/Fight</td></tr>
+                            <tr><th>20400 to 22000</th><th>27300 to 28950</th><th>36800 to 38500</th><td>Fight/Parry</td></tr>
+                            <tr><th>greater than 22000</th><th>greater than 28950</th><th>greater than 36800</th><td>Parry/Parry</td></tr>
+                        </table>
+                        <p>Ultimately, if you're able to count all 12 initial attacks, your odds of success go up to about 86%.</p>
+                    </div>
 				</div>
-				<p>Kain's last actions can vary depending on the damage rolls in the fight. If you weren't able to count any damage, your best bet is to have Kain immediately use the Elixir, which will give you a 92.6% chance of success. Otherwise, use the below chart, which assumes you counted Rosa's first White and at least five of Kain's attacks:</p>
-				<table class="table">
-					<tr><th>White + 5 Attacks</th><th>White + 8 Attacks</th><th>White + 12 Attacks</th><th>Kain Action</th></tr>
-					<tr><th>less than 19830</th><th>less than 26606</th><th>less than 36238</th><td>Fight</td></tr>
-					<tr><th>greater than 19830</th><th>greater than 26606</th><th>greater than 36238</th><td>Use <i>Elixir</i></td></tr>
-				</table>
-				<p>If you run buffer Rydia's second Virus cast (even if Kain used an <i>Elixir</i>), there is a chance Rydia will get an opportunity to reflect a third virus. It may be worth taking if you're concerned about your damage rolls. Eventually, more specific guidance will be given here.</p>
 			</div>
 		</div>
 		<script>$('#toc').toc({
