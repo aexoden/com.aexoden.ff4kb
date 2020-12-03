@@ -3,11 +3,11 @@ VERSION	27
 ROSA	v1.2.0-13-ge69b608
 SEED	183
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	12
 TASMODE	0
 MINIMUM	0
 FRAMES	170989223
-VARS	C303C00:1 C305500:1 C307800:1 C30CA00:1 C310700:1 C316C00:2 E000401:2 E302500:31 E302600:9 E302700:25 E303D00:4 E307400:98 E307701:4 E307802:1 E307B00:30 E308400:2 E309700:16 E30B500:1 E30BD00:4 E30C800:16 E30CD00:32 E310701:4 E316800:4 E316B01:4 E317000:4
+VARS	C303C00:1 C305500:1 C307800:1 C30CA00:1 C310700:1 C316C00:2 E302500:32 E302600:13 E302700:25 E303D00:4 E307400:98 E307B00:34 E309700:16 E30B500:1 E30BD00:16 E30C800:16 E30CD00:32 E310701:4
 
 Overworld (Kaipo)                                         Seed: 183   Index:   0
 Overworld (Kaipo)                                         Seed: 183   Index:   1
@@ -43,28 +43,26 @@ Waterfalls Lake                                           Seed: 217   Index:  47
 Overworld (Kaipo)                                         Seed: 217   Index:  48
 Overworld (Damcyan)                                       Seed: 217   Index:  59
 Damcyan                                                   Seed: 217   Index:  63
-  Optional Steps: 1
-  Extra Steps: 30
-Overworld (Damcyan)                                       Seed: 217   Index: 101
-Antlion B1F                                               Seed: 217   Index: 101
-  Step  32: 12 / Turtle x2 (7.487s)
-Antlion B2F Inward Charm Room Steps                       Seed: 217   Index: 139
-  Antlion B2F                                             Seed: 217   Index: 139
-  Antlion B2F Treasure Room                               Seed: 217   Index: 172
-    Extra Steps: 30
-  Antlion B2F                                             Seed: 217   Index: 202
-Antlion's Nest                                            Seed: 217   Index: 254
-Battle: Antlion                                           Seed: 234   Index:  12
-Antlion's Nest                                            Seed: 234   Index:  12
-Antlion B2F Outward Direct                                Seed: 234   Index:  27
-  Antlion B2F                                             Seed: 234   Index:  27
-    Extra Steps: 1
-    Step   7: 13 / Cream x4 (7.523s)
-Antlion B1F                                               Seed: 234   Index: 108
-  Extra Steps: 4
-  Step  23: 14 / Turtle x1, Imp x2 (7.009s)
-  Step  29: 15 / Turtle x2 (7.464s)
-  Step  42: 16 / Imp x3, Imp Cap. x1 (6.753s)
+  Optional Steps: 0
+  Extra Steps: 32
+Overworld (Damcyan)                                       Seed: 217   Index: 102
+Antlion B1F                                               Seed: 217   Index: 102
+  Step  31: 12 / Turtle x2 (7.487s)
+Antlion B2F Inward Charm Room Steps                       Seed: 217   Index: 140
+  Antlion B2F                                             Seed: 217   Index: 140
+  Antlion B2F Treasure Room                               Seed: 217   Index: 173
+    Extra Steps: 34
+  Antlion B2F                                             Seed: 217   Index: 207
+Antlion's Nest                                            Seed: 234   Index:   3
+Battle: Antlion                                           Seed: 234   Index:  17
+Antlion's Nest                                            Seed: 234   Index:  17
+Antlion B2F Outward Direct                                Seed: 234   Index:  32
+  Antlion B2F                                             Seed: 234   Index:  32
+    Step   2: 13 / Cream x4 (7.523s)
+Antlion B1F                                               Seed: 234   Index: 112
+  Step  19: 14 / Turtle x1, Imp x2 (7.009s)
+  Step  25: 15 / Turtle x2 (7.464s)
+  Step  38: 16 / Imp x3, Imp Cap. x1 (6.753s)
 Overworld (Damcyan)                                       Seed: 234   Index: 150
 Overworld (Kaipo)                                         Seed: 234   Index: 150
 Kaipo Revisited                                           Seed: 234   Index: 150
@@ -84,22 +82,21 @@ Overworld (Fabul)                                         Seed: 251   Index:   0
   Step  65: 22 / Gargoyle x1, Cocktric x2 (8.254s)
 Fabul                                                     Seed: 251   Index:  84
   Optional Steps: 9
-Overworld (Fabul)                                         Seed: 251   Index: 153
-  Extra Steps: 2
-  Step   8: 23 / Cocktric x3 (8.218s)
-Fabul Boat and Leviatan                                   Seed: 251   Index: 162
-Overworld (Mysidia)                                       Seed: 251   Index: 162
-Mysidia                                                   Seed: 251   Index: 171
-Overworld (Mysidia)                                       Seed: 251   Index: 171
-  Step   9: 24 / Raven x1, Cocktric x3 (9.100s)
-Overworld (Mt.Ordeals)                                    Seed: 251   Index: 181
-  Step  12: 25 / SwordRat x2, Imp x2, TinyMage x2 (7.401s)
-  Step  44: 26 / Needler x2, SwordRat x2 (8.097s)
-  Step  88: 27 / SwordRat x2, Imp x2, TinyMage x2 (7.401s)
-Mt.Ordeals                                                Seed:  12   Index:  19
-  Extra Steps: 2
-  Step  16: 28 / Red Bone x1, Skelton x3 (8.067s)
-  Step  45: 29 / Red Bone x1, Skelton x3 (8.067s)
+  Extra Steps: 4
+Overworld (Fabul)                                         Seed: 251   Index: 157
+  Step   4: 23 / Cocktric x3 (8.218s)
+Fabul Boat and Leviatan                                   Seed: 251   Index: 164
+Overworld (Mysidia)                                       Seed: 251   Index: 164
+Mysidia                                                   Seed: 251   Index: 173
+Overworld (Mysidia)                                       Seed: 251   Index: 173
+  Step   7: 24 / Raven x1, Cocktric x3 (9.100s)
+Overworld (Mt.Ordeals)                                    Seed: 251   Index: 183
+  Step  10: 25 / SwordRat x2, Imp x2, TinyMage x2 (7.401s)
+  Step  42: 26 / Needler x2, SwordRat x2 (8.097s)
+  Step  86: 27 / SwordRat x2, Imp x2, TinyMage x2 (7.401s)
+Mt.Ordeals                                                Seed:  12   Index:  21
+  Step  14: 28 / Red Bone x1, Skelton x3 (8.067s)
+  Step  43: 29 / Red Bone x1, Skelton x3 (8.067s)
 Mt.Ordeals-3rd station                                    Seed:  12   Index:  64
 Recruit Tellah                                            Seed:  12   Index:  87
 Mt.Ordeals-3rd station                                    Seed:  12   Index:  87
@@ -345,57 +342,54 @@ Grind Fight Search                                        Seed: 216   Index: 119
 Battle: Elements                                          Seed: 216   Index: 188
 Giant of Bab-il Lung                                      Seed: 216   Index: 188
 Giant of Bab-il CPU                                       Seed: 216   Index: 195
-  Extra Steps: 4
-Return to Moon                                            Seed: 216   Index: 201
-Lunar Overworld                                           Seed: 216   Index: 201
-Lunar Path (west)                                         Seed: 216   Index: 206
-Lunar Overworld                                           Seed: 216   Index: 244
-Lunar Path (east)                                         Seed: 233   Index:  23
-Lunar Overworld                                           Seed: 233   Index:  54
-Lunar Subterrane B1                                       Seed: 233   Index:  71
-Lunar Subterrane B2                                       Seed: 233   Index: 104
-  Extra Steps: 4
-  Step  27: 103 / Warlock x1, Kary x1 (6.230s)
-  Step  33: 104 / Warlock x1, Kary x1, RedGiant x1 (6.293s)
-Lunar Subterrane B3                                       Seed: 233   Index: 137
-  Step  13: 105 / D.Bone x1, Warlock x1 (6.199s)
-Lunar Subterrane B4                                       Seed: 233   Index: 151
-  Step  12: 106 / King-Ryu x2 (6.597s)
-  Step  39: 107 / King-Ryu x2 (6.597s)
-  Step  41: 108 / King-Ryu x2 (6.597s)
-Lunar Subterrane B4 Passage                               Seed: 233   Index: 207
-  Step  20: 109 / King-Ryu x1, Ging-Ryu x1 (6.611s)
-  Step  21: 110 / King-Ryu x1 (6.565s)
-Lunar Subterrane B4                                       Seed: 233   Index: 236
-Lunar Subterrane B5                                       Seed: 233   Index: 251
-  Step   3: 111 / King-Ryu x2 (6.597s)
-  Step   5: 112 / King-Ryu x2 (6.597s)
-Lunar Subterrane B5 Passage A                             Seed: 250   Index:  12
-Lunar Subterrane B5                                       Seed: 250   Index:  45
-  Extra Steps: 4
-Lunar Subterrane B5 Passage B                             Seed: 250   Index:  58
-  Step   7: 113 / Tricker x1 (6.646s)
-Lunar Subterrane B5 Inward Direct                         Seed: 250   Index:  90
-  Lunar Subterrane B5                                     Seed: 250   Index:  90
-Get Ninja Star on Lunar Core B3                           Seed: 250   Index: 102
-  Lunar Subterrane B6                                     Seed: 250   Index: 102
-    Step  24: 114 / Ging-Ryu x1, RedGiant x1 (6.614s)
-    Step  27: 115 / Warlock x3 (6.253s)
-  Lunar Subterrane B6 Passage                             Seed: 250   Index: 139
-  Lunar Subterrane B7 Inward Direct                       Seed: 250   Index: 152
-    Lunar Subterrane B7                                   Seed: 250   Index: 152
-      Step   9: 116 / D.Fossil x1 (6.210s)
-      Step  28: 117 / D.Fossil x1 (6.210s)
-      Step  41: 118 / D.Fossil x1 (6.210s)
-      Step  73: 119 / D.Fossil x1 (6.210s)
-  Lunar Core B1                                           Seed: 250   Index: 232
-    Step  37: 120 / EvilMask x1 (12.170s)
-    Step  59: 121 / Behemoth x1 (7.463s)
-  Lunar Core B2                                           Seed:  11   Index:  44
-    Step  37: 122 / EvilMask x1 (12.170s)
-  Lunar Core B3                                           Seed:  11   Index:  99
-    Extra Steps: 4
-    Step  60: 123 / Behemoth x2 (7.516s)
+  Extra Steps: 16
+Return to Moon                                            Seed: 216   Index: 213
+Lunar Overworld                                           Seed: 216   Index: 213
+Lunar Path (west)                                         Seed: 216   Index: 218
+Lunar Overworld                                           Seed: 233   Index:   0
+Lunar Path (east)                                         Seed: 233   Index:  35
+Lunar Overworld                                           Seed: 233   Index:  66
+Lunar Subterrane B1                                       Seed: 233   Index:  83
+Lunar Subterrane B2                                       Seed: 233   Index: 116
+  Step  15: 103 / Warlock x1, Kary x1 (6.230s)
+  Step  21: 104 / Warlock x1, Kary x1, RedGiant x1 (6.293s)
+Lunar Subterrane B3                                       Seed: 233   Index: 145
+  Step   5: 105 / D.Bone x1, Warlock x1 (6.199s)
+Lunar Subterrane B4                                       Seed: 233   Index: 159
+  Step   4: 106 / King-Ryu x2 (6.597s)
+  Step  31: 107 / King-Ryu x2 (6.597s)
+  Step  33: 108 / King-Ryu x2 (6.597s)
+Lunar Subterrane B4 Passage                               Seed: 233   Index: 215
+  Step  12: 109 / King-Ryu x1, Ging-Ryu x1 (6.611s)
+  Step  13: 110 / King-Ryu x1 (6.565s)
+Lunar Subterrane B4                                       Seed: 233   Index: 244
+  Step  10: 111 / King-Ryu x2 (6.597s)
+  Step  12: 112 / King-Ryu x2 (6.597s)
+Lunar Subterrane B5                                       Seed: 250   Index:   3
+Lunar Subterrane B5 Passage A                             Seed: 250   Index:  20
+Lunar Subterrane B5                                       Seed: 250   Index:  53
+Lunar Subterrane B5 Passage B                             Seed: 250   Index:  62
+  Step   3: 113 / Tricker x1 (6.646s)
+Lunar Subterrane B5 Inward Direct                         Seed: 250   Index:  94
+  Lunar Subterrane B5                                     Seed: 250   Index:  94
+Get Ninja Star on Lunar Core B3                           Seed: 250   Index: 106
+  Lunar Subterrane B6                                     Seed: 250   Index: 106
+    Step  20: 114 / Ging-Ryu x1, RedGiant x1 (6.614s)
+    Step  23: 115 / Warlock x3 (6.253s)
+  Lunar Subterrane B6 Passage                             Seed: 250   Index: 143
+  Lunar Subterrane B7 Inward Direct                       Seed: 250   Index: 156
+    Lunar Subterrane B7                                   Seed: 250   Index: 156
+      Step   5: 116 / D.Fossil x1 (6.210s)
+      Step  24: 117 / D.Fossil x1 (6.210s)
+      Step  37: 118 / D.Fossil x1 (6.210s)
+      Step  69: 119 / D.Fossil x1 (6.210s)
+  Lunar Core B1                                           Seed: 250   Index: 236
+    Step  33: 120 / EvilMask x1 (12.170s)
+    Step  55: 121 / Behemoth x1 (7.463s)
+  Lunar Core B2                                           Seed:  11   Index:  48
+    Step  33: 122 / EvilMask x1 (12.170s)
+  Lunar Core B3                                           Seed:  11   Index: 103
+    Step  56: 123 / Behemoth x2 (7.516s)
 Lunar Core B4                                             Seed:  11   Index: 159
   Step  24: 124 / Breath x1 (11.914s)
   Step  53: 125 / Breath x1 (11.914s)
@@ -408,8 +402,8 @@ Total Time:          2845.135s
 Base Total Time:     2966.786s
 Time Saved:          121.651s
 
-Optional Steps:      20
-Extra Steps:         271
+Optional Steps:      19
+Extra Steps:         272
 Encounters:          126
 
 Base Encounters:     148

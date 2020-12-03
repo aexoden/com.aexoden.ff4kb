@@ -3,11 +3,11 @@ VERSION	27
 ROSA	v1.2.0-13-ge69b608
 SEED	246
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	21
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	171067613
-VARS	C303C00:1 C305500:1 C307801:1 C30CA00:1 C316C00:2 C316D00:1 E000600:6 E000703:2 E200002:10 E302500:1 E302600:10 E302700:63 E303D00:78 E305500:63 E307200:4 E307400:56 E307B01:56 E308500:6 E308700:1 E308701:2 E308702:1 E309700:12 E30A800:2 E30B500:1 E30BC00:6 E30BD00:42 E30C800:4 E30CA03:6 E30CD00:12 E310700:2 E310701:6 E316B01:16 E316C00:2 E317B00:44
+VARS	C303C00:1 C305500:1 C307801:1 C30CA00:1 C316C00:2 C316D00:1 E000703:2 E200002:10 E302500:1 E302600:22 E302700:63 E303D00:78 E305500:63 E307200:4 E307400:56 E307B01:56 E308700:3 E308702:1 E309700:12 E30B500:7 E30BD00:42 E30C800:4 E30CD00:20 E310700:2 E310701:6 E316B01:18 E317B00:44
 
 Overworld (Kaipo)                                         Seed: 246   Index:   0
 Overworld (Kaipo)                                         Seed: 246   Index:   1
@@ -85,22 +85,21 @@ Overworld (Fabul)                                         Seed:  41   Index: 209
   Step  71: 25 / Gargoyle x1, Cocktric x2 (8.254s)
 Fabul                                                     Seed:  58   Index:  37
   Optional Steps: 10
-Overworld (Fabul)                                         Seed:  58   Index: 107
-Fabul Boat and Leviatan                                   Seed:  58   Index: 114
-Overworld (Mysidia)                                       Seed:  58   Index: 114
-Mysidia                                                   Seed:  58   Index: 123
-Overworld (Mysidia)                                       Seed:  58   Index: 123
-Overworld (Mt.Ordeals)                                    Seed:  58   Index: 133
-  Extra Steps: 6
-  Step  10: 26 / SwordRat x2, Imp x2, TinyMage x2 (7.401s)
-  Step  34: 27 / Raven x1 (8.356s)
-  Step  99: 28 / Raven x1 (8.356s)
-Mt.Ordeals                                                Seed:  58   Index: 233
-  Step  16: 29 / Soul x2, Red Bone x2 (9.583s)
-  Step  24: 30 / Skelton x3, Red Bone x2 (8.244s)
-Mt.Ordeals-3rd station                                    Seed:  75   Index:  20
-  Extra Steps: 6
-  Step  28: 31 / Revenant x1, Ghoul x3 (8.911s)
+  Extra Steps: 12
+Overworld (Fabul)                                         Seed:  58   Index: 119
+Fabul Boat and Leviatan                                   Seed:  58   Index: 126
+Overworld (Mysidia)                                       Seed:  58   Index: 126
+Mysidia                                                   Seed:  58   Index: 135
+Overworld (Mysidia)                                       Seed:  58   Index: 135
+  Step   8: 26 / SwordRat x2, Imp x2, TinyMage x2 (7.401s)
+Overworld (Mt.Ordeals)                                    Seed:  58   Index: 145
+  Step  22: 27 / Raven x1 (8.356s)
+  Step  87: 28 / Raven x1 (8.356s)
+Mt.Ordeals                                                Seed:  58   Index: 239
+  Step  10: 29 / Soul x2, Red Bone x2 (9.583s)
+  Step  18: 30 / Skelton x3, Red Bone x2 (8.244s)
+Mt.Ordeals-3rd station                                    Seed:  75   Index:  26
+  Step  22: 31 / Revenant x1, Ghoul x3 (8.911s)
 Recruit Tellah                                            Seed:  75   Index:  49
 Mt.Ordeals-3rd station                                    Seed:  75   Index:  49
 Mt.Ordeals-7th station                                    Seed:  75   Index:  54
@@ -108,10 +107,10 @@ Mt.Ordeals-7th station                                    Seed:  75   Index:  54
   Step  23: 33 / Soul x2, Ghoul x2, Revenant x2 (10.367s)
 Mt.Ordeals Summit                                         Seed:  75   Index:  96
   Optional Steps: 1
-Battle: Milon and Milon Z                                 Seed:  75   Index: 114
-Mt.Ordeals Summit                                         Seed:  75   Index: 114
   Extra Steps: 2
-  Step   5: 34 / Zombie x3, Ghoul x2, Revenant x2 (7.808s)
+Battle: Milon and Milon Z                                 Seed:  75   Index: 116
+Mt.Ordeals Summit                                         Seed:  75   Index: 116
+  Step   3: 34 / Zombie x3, Ghoul x2, Revenant x2 (7.808s)
 Paladin                                                   Seed:  75   Index: 120
 Mt.Ordeals Summit                                         Seed:  75   Index: 120
   Optional Steps: 1
@@ -252,21 +251,19 @@ Pass to Bab-il (south)                                    Seed: 228   Index:  52
 Pass to Bab-il (north) Inward Save Room Steps             Seed: 228   Index: 116
   Pass to Bab-il (north)                                  Seed: 228   Index: 116
   Pass to Bab-il (north) Save Room                        Seed: 228   Index: 120
-    Extra Steps: 12
-  Pass to Bab-il (north)                                  Seed: 228   Index: 132
-Recruit Edge                                              Seed: 228   Index: 155
-Remove Dwarf Axe in Edge Menu                             Seed: 228   Index: 155
-Pass to Bab-il (north)                                    Seed: 228   Index: 155
-  Extra Steps: 6
-  Step   9: 76 / Ironback x1, Armadilo x1, BlackLiz x1 (7.152s)
-Tower of Bab-il 1F                                        Seed: 228   Index: 164
-  Step  26: 77 / Balloon x3 (7.108s)
-  Step  28: 78 / Balloon x3 (7.108s)
-  Step  64: 79 / Balloon x4 (7.171s)
-Tower of Bab-il B2F                                       Seed: 228   Index: 246
-  Extra Steps: 2
-  Step  67: 80 / Mad Ogre x1, BlackCat x2 (7.108s)
-  Step  75: 81 / Mad Ogre x1, BlackCat x2 (7.108s)
+    Extra Steps: 20
+  Pass to Bab-il (north)                                  Seed: 228   Index: 140
+Recruit Edge                                              Seed: 228   Index: 163
+Remove Dwarf Axe in Edge Menu                             Seed: 228   Index: 163
+Pass to Bab-il (north)                                    Seed: 228   Index: 163
+  Step   1: 76 / Ironback x1, Armadilo x1, BlackLiz x1 (7.152s)
+Tower of Bab-il 1F                                        Seed: 228   Index: 166
+  Step  24: 77 / Balloon x3 (7.108s)
+  Step  26: 78 / Balloon x3 (7.108s)
+  Step  62: 79 / Balloon x4 (7.171s)
+Tower of Bab-il B2F                                       Seed: 228   Index: 248
+  Step  65: 80 / Mad Ogre x1, BlackCat x2 (7.108s)
+  Step  73: 81 / Mad Ogre x1, BlackCat x2 (7.108s)
 Tower of Bab-il B3F                                       Seed: 245   Index:  66
 Tower of Bab-il B4F                                       Seed: 245   Index:  79
   Step  47: 82 / Balloon x3 (7.108s)
@@ -322,39 +319,39 @@ Lunar Path (west)                                         Seed:  23   Index:  60
 Lunar Overworld                                           Seed:  23   Index:  98
 Giant of Bab-il Mouth                                     Seed:  23   Index: 103
   Optional Steps: 1
-Giant of Bab-il Neck                                      Seed:  23   Index: 122
-Giant of Bab-il Chest                                     Seed:  23   Index: 124
-  Step  82: 97 / MacGiant x1 (7.514s)
-Giant of Bab-il Stomach                                   Seed:  23   Index: 206
-  Step  16: 98 / MacGiant x1, Horseman x1 (7.641s)
-  Step  18: 99 / Horseman x1, Beamer x2 (7.663s)
-  Step  33: 100 / Searcher (summons MacGiant) x1 (7.400s)
-  Step  45: 101 / Horseman x1, Beamer x2 (7.663s)
-Grind Fight Search                                        Seed:  23   Index: 255
-  Giant of Bab-il Passage                                 Seed:  23   Index: 255
-    Step  32: 102 / Searcher (summons Horseman) x1, Beamer x2 (7.606s)
-   (Step  74: 103 / MacGiant x1, Machine x1, Beamer x1)
-   (Step  95: 104 / Searcher (summons Horseman) x1, Beamer x2)
-   (Step 122: 105 / Searcher (summons D.Machin) x1, Beamer x2)
-   (Step 124: 106 / Searcher (summons D.Machin) x1, Beamer x2)
-   (Step 126: 107 / Searcher (summons D.Machin) x1, Beamer x2)
-   (Step 142: 108 / Horseman x1, Machine x2)
-   (Step 204: 109 / Searcher (summons D.Machin) x1, Beamer x2)
-   (Step 242: 110 / Searcher (summons Horseman) x1, Beamer x2)
-  Giant of Bab-il Lung                                    Seed:  40   Index:  60
-    Extra Steps: 6
-    Step  13: 103 / Searcher (summons D.Machin) x1, Beamer x2 (7.658s)
-   (Step  34: 104 / Machine x3, Beamer x2)
-   (Step  61: 105 / Beamer x1, Machine x2, Horseman x1)
-   (Step  63: 106 / Beamer x1, Machine x2, Horseman x1)
-   (Step  65: 107 / Beamer x1, Machine x2, Horseman x1)
-   (Step  81: 108 / Searcher (summons Horseman) x1, Beamer x2)
-   (Step 143: 109 / Beamer x1, Machine x2, Horseman x1)
-   (Step 181: 110 / Machine x3, Beamer x2)
-   (Step 211: 111 / Searcher (summons Horseman) x1, Beamer x2)
-   (Step 220: 112 / Searcher (summons Horseman) x1, Beamer x2)
-   (Step 249: 113 / Searcher (summons Horseman) x1, Beamer x2)
-   (Step 250: 114 / MacGiant x2)
+  Extra Steps: 6
+Giant of Bab-il Neck                                      Seed:  23   Index: 128
+Giant of Bab-il Chest                                     Seed:  23   Index: 130
+  Step  76: 97 / MacGiant x1 (7.514s)
+Giant of Bab-il Stomach                                   Seed:  23   Index: 212
+  Step  10: 98 / MacGiant x1, Horseman x1 (7.641s)
+  Step  12: 99 / Horseman x1, Beamer x2 (7.663s)
+  Step  27: 100 / Searcher (summons MacGiant) x1 (7.400s)
+  Step  39: 101 / Horseman x1, Beamer x2 (7.663s)
+Grind Fight Search                                        Seed:  40   Index:   5
+  Giant of Bab-il Passage                                 Seed:  40   Index:   5
+    Step  26: 102 / Searcher (summons Horseman) x1, Beamer x2 (7.606s)
+   (Step  68: 103 / MacGiant x1, Machine x1, Beamer x1)
+   (Step  89: 104 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 116: 105 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 118: 106 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 120: 107 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 136: 108 / Horseman x1, Machine x2)
+   (Step 198: 109 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 236: 110 / Searcher (summons Horseman) x1, Beamer x2)
+  Giant of Bab-il Lung                                    Seed:  40   Index:  66
+    Step   7: 103 / Searcher (summons D.Machin) x1, Beamer x2 (7.658s)
+   (Step  28: 104 / Machine x3, Beamer x2)
+   (Step  55: 105 / Beamer x1, Machine x2, Horseman x1)
+   (Step  57: 106 / Beamer x1, Machine x2, Horseman x1)
+   (Step  59: 107 / Beamer x1, Machine x2, Horseman x1)
+   (Step  75: 108 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 137: 109 / Beamer x1, Machine x2, Horseman x1)
+   (Step 175: 110 / Machine x3, Beamer x2)
+   (Step 205: 111 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 214: 112 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 243: 113 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 244: 114 / MacGiant x2)
 Battle: Elements                                          Seed:  40   Index:  74
 Giant of Bab-il Lung                                      Seed:  40   Index:  74
 Giant of Bab-il CPU                                       Seed:  40   Index:  81
@@ -382,16 +379,15 @@ Lunar Subterrane B4                                       Seed:  57   Index: 156
 Lunar Subterrane B5                                       Seed:  57   Index: 171
 Lunar Subterrane B5 Passage A                             Seed:  57   Index: 188
 Lunar Subterrane B5                                       Seed:  57   Index: 221
-  Extra Steps: 16
-Lunar Subterrane B5 Passage B                             Seed:  57   Index: 246
-  Step   3: 112 / King-Ryu x1, Ging-Ryu x1 (6.611s)
-  Step  11: 113 / King-Ryu x1, Ging-Ryu x1 (6.611s)
-Lunar Subterrane B5 Inward Direct                         Seed:  74   Index:  22
-  Lunar Subterrane B5                                     Seed:  74   Index:  22
-Get Ninja Star on Lunar Core B3                           Seed:  74   Index:  34
-  Lunar Subterrane B6                                     Seed:  74   Index:  34
-    Extra Steps: 2
-    Step  38: 114 / King-Ryu x2 (6.597s)
+  Extra Steps: 18
+Lunar Subterrane B5 Passage B                             Seed:  57   Index: 248
+  Step   1: 112 / King-Ryu x1, Ging-Ryu x1 (6.611s)
+  Step   9: 113 / King-Ryu x1, Ging-Ryu x1 (6.611s)
+Lunar Subterrane B5 Inward Direct                         Seed:  74   Index:  24
+  Lunar Subterrane B5                                     Seed:  74   Index:  24
+Get Ninja Star on Lunar Core B3                           Seed:  74   Index:  36
+  Lunar Subterrane B6                                     Seed:  74   Index:  36
+    Step  36: 114 / King-Ryu x2 (6.597s)
   Lunar Subterrane B6 Passage                             Seed:  74   Index:  73
     Step   4: 115 / King-Ryu x1, Ging-Ryu x1 (6.611s)
   Lunar Subterrane B7 Inward Save Room Steps              Seed:  74   Index:  86

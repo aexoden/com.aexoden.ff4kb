@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa)
 VERSION	27
-ROSA	v1.2.0-13-ge69b608
+ROSA	v1.2.0-7-gad6754d
 SEED	8
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	15
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	168820868
-VARS	C305500:1 C308F00:1 C30CA00:1 C316C00:2 E000701:1 E000703:2 E302500:57 E302600:94 E302700:2 E305500:3 E307000:2 E308502:8 E308700:1 E308702:1 E309200:6 E309A00:6 E30BD00:6 E30C800:2 E30CD00:4 E310700:11 E310701:4 E310702:4 E317000:4
+VARS	C305500:1 C308F00:1 C30CA00:1 C316C00:2 E000703:8 E302500:57 E302600:94 E302700:3 E305500:3 E307000:2 E308700:1 E308702:9 E309200:6 E30BD00:6 E30C800:2 E30CD00:4 E310700:11 E310701:8 E317000:4
 
 Overworld (Kaipo)                                         Seed:   8   Index:   0
 Overworld (Kaipo)                                         Seed:   8   Index:   1
@@ -105,13 +105,13 @@ Mt.Ordeals Summit                                         Seed:  93   Index: 123
 Paladin                                                   Seed:  93   Index: 127
 Mt.Ordeals Summit                                         Seed:  93   Index: 127
   Optional Steps: 1
-  Step  21: 30 / Ghoul x2, Soul x2 (8.971s)
-Mt.Ordeals-7th station                                    Seed:  93   Index: 150
-Mt.Ordeals-3rd station                                    Seed:  93   Index: 192
   Extra Steps: 8
-  Step  13: 31 / Zombie x3, Ghoul x2, Revenant x2 (7.923s)
-  Step  21: 32 / Lilith x1, Red Bone x2 (8.437s)
-  Step  38: 33 / Revenant x1, Ghoul x3 (8.489s)
+  Step  21: 30 / Ghoul x2, Soul x2 (8.971s)
+Mt.Ordeals-7th station                                    Seed:  93   Index: 158
+Mt.Ordeals-3rd station                                    Seed:  93   Index: 200
+  Step   5: 31 / Zombie x3, Ghoul x2, Revenant x2 (7.923s)
+  Step  13: 32 / Lilith x1, Red Bone x2 (8.437s)
+  Step  30: 33 / Revenant x1, Ghoul x3 (8.489s)
 Mt.Ordeals                                                Seed:  93   Index: 230
   Step  15: 34 / Spirit x3, Soul x1 (8.429s)
   Step  38: 35 / Spirit x2, Skelton x2 (8.065s)
@@ -134,10 +134,10 @@ Castle Baron                                              Seed: 110   Index: 226
 Battle: Kainazzo                                          Seed: 110   Index: 240
 Overworld (Toroia)                                        Seed: 110   Index: 240
 Toroian Castle                                            Seed: 110   Index: 241
-  Optional Steps: 2
-Overworld (Toroia)                                        Seed: 110   Index: 254
-  Optional Steps: 1
-  Step  25: 42 / Cannibal x1, Treant x2 (8.740s)
+  Optional Steps: 3
+Overworld (Toroia)                                        Seed: 110   Index: 255
+  Optional Steps: 0
+  Step  24: 42 / Cannibal x1, Treant x2 (8.740s)
 Black Chocobo to Cave Magnes                              Seed: 127   Index:  36
 Overworld (Toroia)                                        Seed: 127   Index:  36
 Cave Magnes B1F                                           Seed: 127   Index:  37
@@ -163,18 +163,18 @@ Toroian Castle 1F Inward Extra Steps Area Steps           Seed: 144   Index:  10
     Optional Steps: 3
 Overworld (Toroia)                                        Seed: 144   Index:  14
   Optional Steps: 2
-Tower of Zot 1F                                           Seed: 144   Index:  17
-Tower of Zot 2F                                           Seed: 144   Index:  55
-  Step  52: 48 / Centaur x1, Gremlin x2 (8.473s)
-Battle: FlameDog                                          Seed: 144   Index: 107
-Tower of Zot 2F                                           Seed: 144   Index: 107
-  Step   3: 49 / Ice Liz x1, Slime x3 (9.423s)
-Tower of Zot 3F                                           Seed: 144   Index: 124
   Extra Steps: 6
-  Step  18: 50 / SwordMan x2 (12.756s)
-  Step  28: 51 / Marion (summons Puppet) x1, Puppet x3 (9.426s)
-  Step  50: 52 / Marion (summons Puppet) x1, Puppet x3 (9.426s)
-  Step  92: 53 / Jelly x1, Slime x2, Cream x1 (7.808s)
+Tower of Zot 1F                                           Seed: 144   Index:  23
+Tower of Zot 2F                                           Seed: 144   Index:  61
+  Step  46: 48 / Centaur x1, Gremlin x2 (8.473s)
+  Step  49: 49 / Ice Liz x1, Slime x3 (9.423s)
+Battle: FlameDog                                          Seed: 144   Index: 113
+Tower of Zot 2F                                           Seed: 144   Index: 113
+Tower of Zot 3F                                           Seed: 144   Index: 130
+  Step  12: 50 / SwordMan x2 (12.756s)
+  Step  22: 51 / Marion (summons Puppet) x1, Puppet x3 (9.426s)
+  Step  44: 52 / Marion (summons Puppet) x1, Puppet x3 (9.426s)
+  Step  86: 53 / Jelly x1, Slime x2, Cream x1 (7.808s)
 Tower of Zot 4F                                           Seed: 144   Index: 216
   Step  24: 54 / Gremlin x2, Ice Liz x2 (9.444s)
   Step  56: 55 / Gremlin x2, Ice Liz x2 (9.444s)
@@ -283,12 +283,12 @@ Fly to Castle of Dwarves                                  Seed:   7   Index: 105
 Underworld (Castle of Dwarves)                            Seed:   7   Index: 105
 Castle of Dwarves                                         Seed:   7   Index: 105
   Optional Steps: 4
-Underworld (Castle of Dwarves)                            Seed:   7   Index: 132
-Sealed Cave                                               Seed:   7   Index: 133
-Underworld (Tomra)                                        Seed:   7   Index: 140
-Return to Castle of Dwarves                               Seed:   7   Index: 141
-Castle of Dwarves                                         Seed:   7   Index: 141
   Extra Steps: 4
+Underworld (Castle of Dwarves)                            Seed:   7   Index: 136
+Sealed Cave                                               Seed:   7   Index: 137
+Underworld (Tomra)                                        Seed:   7   Index: 144
+Return to Castle of Dwarves                               Seed:   7   Index: 145
+Castle of Dwarves                                         Seed:   7   Index: 145
 Underworld (Castle of Dwarves)                            Seed:   7   Index: 146
 Return to Mysidia                                         Seed:   7   Index: 147
 Walk to the Big Whale                                     Seed:   7   Index: 147

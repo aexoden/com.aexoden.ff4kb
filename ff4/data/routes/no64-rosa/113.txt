@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa)
 VERSION	27
-ROSA	v1.2.0-13-ge69b608
+ROSA	v1.2.0-7-gad6754d
 SEED	113
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	8
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	168726142
-VARS	C30CA00:1 C316B00:1 C316C00:2 E302500:5 E305400:4 E30B500:1 E30B700:2 E30BD00:30 E30C800:1 E30CD00:10 E310701:4 E310702:14 E316700:2 E316C00:4 E317700:6
+VARS	C30CA00:1 C316B00:1 C316C00:2 E302500:5 E305400:4 E30B500:3 E30BD00:32 E30C800:1 E30CD00:10 E310701:18 E317700:10
 
 Overworld (Kaipo)                                         Seed: 113   Index:   0
 Overworld (Kaipo)                                         Seed: 113   Index:   1
@@ -278,12 +278,12 @@ Fly to Castle of Dwarves                                  Seed:  95   Index: 179
 Underworld (Castle of Dwarves)                            Seed:  95   Index: 179
 Castle of Dwarves                                         Seed:  95   Index: 179
   Optional Steps: 4
-Underworld (Castle of Dwarves)                            Seed:  95   Index: 206
-Sealed Cave                                               Seed:  95   Index: 207
-Underworld (Tomra)                                        Seed:  95   Index: 214
-Return to Castle of Dwarves                               Seed:  95   Index: 215
-Castle of Dwarves                                         Seed:  95   Index: 215
   Extra Steps: 14
+Underworld (Castle of Dwarves)                            Seed:  95   Index: 220
+Sealed Cave                                               Seed:  95   Index: 221
+Underworld (Tomra)                                        Seed:  95   Index: 228
+Return to Castle of Dwarves                               Seed:  95   Index: 229
+Castle of Dwarves                                         Seed:  95   Index: 229
 Underworld (Castle of Dwarves)                            Seed:  95   Index: 230
 Return to Mysidia                                         Seed:  95   Index: 231
 Walk to the Big Whale                                     Seed:  95   Index: 231
@@ -311,11 +311,11 @@ Lunar Path (west)                                         Seed: 112   Index: 188
 Lunar Overworld                                           Seed: 112   Index: 226
 Giant of Bab-il Mouth                                     Seed: 112   Index: 231
   Optional Steps: 1
-Giant of Bab-il Neck                                      Seed: 112   Index: 250
-Giant of Bab-il Chest                                     Seed: 112   Index: 252
   Extra Steps: 2
-  Step  50: 103 / Horseman x1, Beamer x1, Machine x1 (7.709s)
-  Step  84: 104 / Searcher (summons Horseman) x1, Machine x2 (7.657s)
+Giant of Bab-il Neck                                      Seed: 112   Index: 252
+Giant of Bab-il Chest                                     Seed: 112   Index: 254
+  Step  48: 103 / Horseman x1, Beamer x1, Machine x1 (7.709s)
+  Step  82: 104 / Searcher (summons Horseman) x1, Machine x2 (7.657s)
 Giant of Bab-il Stomach                                   Seed: 129   Index:  80
   Step   6: 105 / Horseman x1, Beamer x2 (7.663s)
   Step  32: 106 / Horseman x1, Beamer x1, Machine x1 (7.709s)
@@ -342,19 +342,18 @@ Grind Fight Search                                        Seed: 129   Index: 129
 Battle: Elements                                          Seed: 129   Index: 198
 Giant of Bab-il Lung                                      Seed: 129   Index: 198
 Giant of Bab-il CPU                                       Seed: 129   Index: 205
-  Extra Steps: 30
-Return to Moon                                            Seed: 129   Index: 237
-Lunar Overworld                                           Seed: 129   Index: 237
-Lunar Path (west)                                         Seed: 129   Index: 242
-Lunar Overworld                                           Seed: 146   Index:  24
-  Step  21: 109 / Procyote x1, Pudding x2 (7.729s)
-Lunar Path (east)                                         Seed: 146   Index:  59
-Lunar Overworld                                           Seed: 146   Index:  90
-  Step  17: 110 / MoonCell x2, Pudding x2 (7.792s)
-Lunar Subterrane B1                                       Seed: 146   Index: 107
-  Extra Steps: 2
-  Step   3: 111 / Warlock x1, Kary x1 (6.230s)
-  Step  35: 112 / Warlock x1, Kary x1 (6.230s)
+  Extra Steps: 32
+Return to Moon                                            Seed: 129   Index: 239
+Lunar Overworld                                           Seed: 129   Index: 239
+Lunar Path (west)                                         Seed: 129   Index: 244
+Lunar Overworld                                           Seed: 146   Index:  26
+  Step  19: 109 / Procyote x1, Pudding x2 (7.729s)
+Lunar Path (east)                                         Seed: 146   Index:  61
+Lunar Overworld                                           Seed: 146   Index:  92
+  Step  15: 110 / MoonCell x2, Pudding x2 (7.792s)
+Lunar Subterrane B1                                       Seed: 146   Index: 109
+  Step   1: 111 / Warlock x1, Kary x1 (6.230s)
+  Step  33: 112 / Warlock x1, Kary x1 (6.230s)
 Lunar Subterrane B2                                       Seed: 146   Index: 142
 Lunar Subterrane B3                                       Seed: 146   Index: 171
   Step   3: 113 / Ging-Ryu x1 (6.538s)
@@ -374,11 +373,10 @@ Lunar Subterrane B5 Passage B                             Seed: 163   Index:  88
 Lunar Subterrane B5 Inward Pink Puff Room Steps           Seed: 163   Index: 120
   Lunar Subterrane B5                                     Seed: 163   Index: 120
   Lunar Subterrane B5 Pink Puff Room                      Seed: 163   Index: 133
-    Extra Steps: 6
-  Lunar Subterrane B5                                     Seed: 163   Index: 139
-Get Ninja Star on Lunar Core B3                           Seed: 163   Index: 145
-  Lunar Subterrane B6                                     Seed: 163   Index: 145
-    Extra Steps: 4
+    Extra Steps: 10
+  Lunar Subterrane B5                                     Seed: 163   Index: 143
+Get Ninja Star on Lunar Core B3                           Seed: 163   Index: 149
+  Lunar Subterrane B6                                     Seed: 163   Index: 149
   Lunar Subterrane B6 Passage                             Seed: 163   Index: 186
     Step  10: 120 / Tricker x1 (6.647s)
   Lunar Subterrane B7 Inward Direct                       Seed: 163   Index: 199

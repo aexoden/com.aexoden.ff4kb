@@ -3,11 +3,11 @@ VERSION	27
 ROSA	v1.2.0-13-ge69b608
 SEED	233
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	20
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	169659099
-VARS	C303C00:1 C305500:1 C308F00:1 C316B00:1 C316C00:2 E000701:1 E000703:2 E302402:12 E302500:5 E302600:36 E302700:2 E303D00:4 E305400:42 E305500:17 E307300:6 E307400:10 E308700:1 E308702:1 E309200:2 E309700:38 E30B500:1 E30BD00:12 E30C800:2 E310700:56 E310701:4 E312501:10 E317500:2 E317700:14
+VARS	C303C00:1 C305500:1 C308F00:1 C316B00:1 C316C00:2 E000703:2 E302402:12 E302500:5 E302600:36 E302700:3 E303D00:4 E305400:48 E305500:17 E307400:10 E308700:1 E308702:1 E309200:2 E309700:38 E30B500:1 E30BD00:14 E30C800:2 E310700:56 E310701:4 E312501:10 E317700:14
 
 Overworld (Kaipo)                                         Seed: 233   Index:   0
 Overworld (Kaipo)                                         Seed: 233   Index:   1
@@ -23,15 +23,14 @@ Watery Pass-South B2F                                     Seed: 233   Index: 121
   Step  42: 4 / Zombie x4 (7.148s)
   Step  69: 5 / EvilShel x3, WaterBug x1 (7.081s)
 Watery Pass-South B2F Save Room                           Seed: 233   Index: 211
-  Extra Steps: 42
-Watery Pass-South B2F                                     Seed: 250   Index:   1
-Watery Pass-South B3F                                     Seed: 250   Index:  40
-Watery Pass-North B2F                                     Seed: 250   Index:  74
-Watery Pass-North B1F                                     Seed: 250   Index:  95
-  Extra Steps: 6
-  Step  31: 6 / Pike x2, EvilShel x2, WaterBug x2 (7.266s)
-  Step  34: 7 / Zombie x4 (7.148s)
-  Step  66: 8 / CaveToad x2, Mad Toad x2 (7.163s)
+  Extra Steps: 48
+Watery Pass-South B2F                                     Seed: 250   Index:   7
+Watery Pass-South B3F                                     Seed: 250   Index:  46
+Watery Pass-North B2F                                     Seed: 250   Index:  80
+Watery Pass-North B1F                                     Seed: 250   Index: 101
+  Step  25: 6 / Pike x2, EvilShel x2, WaterBug x2 (7.266s)
+  Step  28: 7 / Zombie x4 (7.148s)
+  Step  60: 8 / CaveToad x2, Mad Toad x2 (7.163s)
 Overworld (Kaipo)                                         Seed: 250   Index: 161
 Waterfalls B1F                                            Seed: 250   Index: 170
   Extra Steps: 10
@@ -134,10 +133,10 @@ Castle Baron                                              Seed:  79   Index: 219
 Battle: Kainazzo                                          Seed:  79   Index: 233
 Overworld (Toroia)                                        Seed:  79   Index: 233
 Toroian Castle                                            Seed:  79   Index: 234
-  Optional Steps: 2
-Overworld (Toroia)                                        Seed:  79   Index: 247
-  Optional Steps: 1
-  Step  29: 37 / Cannibal x1, Treant x2 (8.740s)
+  Optional Steps: 3
+Overworld (Toroia)                                        Seed:  79   Index: 248
+  Optional Steps: 0
+  Step  28: 37 / Cannibal x1, Treant x2 (8.740s)
 Black Chocobo to Cave Magnes                              Seed:  96   Index:  29
 Overworld (Toroia)                                        Seed:  96   Index:  29
 Cave Magnes B1F                                           Seed:  96   Index:  30
@@ -347,33 +346,32 @@ Grind Fight Search                                        Seed:  10   Index:  94
 Battle: Elements                                          Seed:  10   Index: 163
 Giant of Bab-il Lung                                      Seed:  10   Index: 163
 Giant of Bab-il CPU                                       Seed:  10   Index: 170
-  Extra Steps: 12
-Return to Moon                                            Seed:  10   Index: 184
-Lunar Overworld                                           Seed:  10   Index: 184
-Lunar Path (west)                                         Seed:  10   Index: 189
-  Step  34: 101 / Red Worm x2 (7.573s)
-Lunar Overworld                                           Seed:  10   Index: 227
-  Step  28: 102 / Red Worm x2 (7.511s)
-Lunar Path (east)                                         Seed:  27   Index:   6
-Lunar Overworld                                           Seed:  27   Index:  37
-  Step  15: 103 / Slime x1, Tofu x1, Pudding x1 (7.590s)
-Lunar Subterrane B1                                       Seed:  27   Index:  54
-  Step   6: 104 / Warlock x1 (6.227s)
-Lunar Subterrane B2                                       Seed:  27   Index:  87
-  Step   5: 105 / Warlock x1, Kary x1 (6.230s)
-  Step   9: 106 / Warlock x1, Kary x2 (6.285s)
-Lunar Subterrane B3                                       Seed:  27   Index: 116
-Lunar Subterrane B4                                       Seed:  27   Index: 130
-Lunar Subterrane B4 Passage                               Seed:  27   Index: 186
-  Step  20: 107 / D.Fossil x1 (6.210s)
-Lunar Subterrane B4                                       Seed:  27   Index: 215
-Lunar Subterrane B5                                       Seed:  27   Index: 230
-  Step   9: 108 / Blue D. x1 (10.697s)
-Lunar Subterrane B5 Passage A                             Seed:  27   Index: 247
-  Extra Steps: 2
-  Step   4: 109 / D.Fossil x1 (6.210s)
-  Step   6: 110 / D.Fossil x1 (6.210s)
-  Step  35: 111 / D.Fossil x1 (6.210s)
+  Extra Steps: 14
+Return to Moon                                            Seed:  10   Index: 186
+Lunar Overworld                                           Seed:  10   Index: 186
+Lunar Path (west)                                         Seed:  10   Index: 191
+  Step  32: 101 / Red Worm x2 (7.573s)
+Lunar Overworld                                           Seed:  10   Index: 229
+  Step  26: 102 / Red Worm x2 (7.511s)
+Lunar Path (east)                                         Seed:  27   Index:   8
+Lunar Overworld                                           Seed:  27   Index:  39
+  Step  13: 103 / Slime x1, Tofu x1, Pudding x1 (7.590s)
+Lunar Subterrane B1                                       Seed:  27   Index:  56
+  Step   4: 104 / Warlock x1 (6.227s)
+Lunar Subterrane B2                                       Seed:  27   Index:  89
+  Step   3: 105 / Warlock x1, Kary x1 (6.230s)
+  Step   7: 106 / Warlock x1, Kary x2 (6.285s)
+Lunar Subterrane B3                                       Seed:  27   Index: 118
+Lunar Subterrane B4                                       Seed:  27   Index: 132
+Lunar Subterrane B4 Passage                               Seed:  27   Index: 188
+  Step  18: 107 / D.Fossil x1 (6.210s)
+Lunar Subterrane B4                                       Seed:  27   Index: 217
+Lunar Subterrane B5                                       Seed:  27   Index: 232
+  Step   7: 108 / Blue D. x1 (10.697s)
+Lunar Subterrane B5 Passage A                             Seed:  27   Index: 249
+  Step   2: 109 / D.Fossil x1 (6.210s)
+  Step   4: 110 / D.Fossil x1 (6.210s)
+  Step  33: 111 / D.Fossil x1 (6.210s)
 Lunar Subterrane B5                                       Seed:  44   Index:  26
 Lunar Subterrane B5 Passage B                             Seed:  44   Index:  35
   Step  12: 112 / King-Ryu x1 (6.565s)

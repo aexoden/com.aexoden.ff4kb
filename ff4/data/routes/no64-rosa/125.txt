@@ -3,11 +3,11 @@ VERSION	27
 ROSA	v1.2.0-13-ge69b608
 SEED	125
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	21
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	171599619
-VARS	C303C00:1 C305500:1 C307800:1 C307801:1 C308F00:1 C30C800:1 C30CA00:1 C316D00:1 E000701:1 E000702:10 E302500:1 E302600:18 E302700:9 E303D00:2 E305500:127 E307000:16 E307200:2 E307400:12 E307B00:2 E307B01:4 E308700:1 E308702:1 E308C00:14 E309200:88 E309700:12 E30AA00:2 E30BD00:47 E30CD00:40 E310700:34 E310701:4 E310702:98 E312701:2 E316900:20 E316A00:22 E317B00:20
+VARS	C303C00:1 C305500:1 C307800:1 C307801:1 C308F00:1 C30C800:1 C30CA00:1 C316D00:1 E000701:15 E302500:1 E302600:18 E302700:9 E303D00:2 E305500:127 E307000:18 E307400:12 E307B00:2 E307B01:4 E308700:1 E308702:1 E309200:98 E309700:12 E30BD00:47 E30CD00:42 E310700:36 E310701:102 E316900:20 E316A00:22 E317B00:20
 
 Overworld (Kaipo)                                         Seed: 125   Index:   0
 Overworld (Kaipo)                                         Seed: 125   Index:   1
@@ -26,12 +26,11 @@ Watery Pass-South B2F                                     Seed: 125   Index: 121
   Step  88: 7 / Pike x3 (7.152s)
 Watery Pass-South B2F Save Room                           Seed: 125   Index: 211
 Watery Pass-South B2F                                     Seed: 125   Index: 215
-  Extra Steps: 16
+  Extra Steps: 18
   Step  55: 8 / Pike x3 (7.152s)
-Watery Pass-South B3F                                     Seed: 142   Index:  14
-Watery Pass-North B2F                                     Seed: 142   Index:  48
-  Extra Steps: 2
-  Step  23: 9 / Zombie x4 (7.148s)
+Watery Pass-South B3F                                     Seed: 142   Index:  16
+Watery Pass-North B2F                                     Seed: 142   Index:  50
+  Step  21: 9 / Zombie x4 (7.148s)
 Watery Pass-North B1F                                     Seed: 142   Index:  71
   Step  39: 10 / Pike x2, EvilShel x2, WaterBug x2 (7.266s)
 Overworld (Kaipo)                                         Seed: 142   Index: 131
@@ -148,26 +147,25 @@ Toroian Castle                                            Seed: 227   Index: 172
   Extra Steps: 6
 Overworld (Toroia)                                        Seed: 227   Index: 192
   Optional Steps: 1
-  Step  36: 42 / Panther x1, StingRat x3 (9.204s)
-Black Chocobo to Cave Magnes                              Seed: 227   Index: 230
-Overworld (Toroia)                                        Seed: 227   Index: 230
-Cave Magnes B1F                                           Seed: 227   Index: 231
   Extra Steps: 14
-  Step  82: 43 / Python x1, StingRat x2 (8.525s)
+  Step  36: 42 / Panther x1, StingRat x3 (9.204s)
+Black Chocobo to Cave Magnes                              Seed: 227   Index: 244
+Overworld (Toroia)                                        Seed: 227   Index: 244
+Cave Magnes B1F                                           Seed: 227   Index: 245
+  Step  68: 43 / Python x1, StingRat x2 (8.525s)
 Cave Magnes B2F                                           Seed: 244   Index:  57
   Step   8: 44 / Cave Bat x3 (9.265s)
 Cave Magnes B3F Inward Save Room Steps                    Seed: 244   Index:  98
   Cave Magnes B3F                                         Seed: 244   Index:  98
   Cave Magnes B3F Save Room                               Seed: 244   Index: 106
-    Extra Steps: 88
-  Cave Magnes B3F                                         Seed: 244   Index: 194
-    Step  16: 45 / Panther x2 (8.033s)
-Cave Magnes B3F Passage                                   Seed:   5   Index:   1
-Cave Magnes B4F Inward Direct                             Seed:   5   Index:  12
-  Cave Magnes B4F                                         Seed:   5   Index:  12
-Battle: Dark Elf                                          Seed:   5   Index:  42
-Overworld (Toroia)                                        Seed:   5   Index:  42
-  Extra Steps: 10
+    Extra Steps: 98
+  Cave Magnes B3F                                         Seed: 244   Index: 204
+    Step   6: 45 / Panther x2 (8.033s)
+Cave Magnes B3F Passage                                   Seed:   5   Index:  11
+Cave Magnes B4F Inward Direct                             Seed:   5   Index:  22
+  Cave Magnes B4F                                         Seed:   5   Index:  22
+Battle: Dark Elf                                          Seed:   5   Index:  52
+Overworld (Toroia)                                        Seed:   5   Index:  52
 Black Chocobo to Toroia                                   Seed:   5   Index:  54
 Toroian Castle 1F Inward Extra Steps Area Steps           Seed:   5   Index:  54
   Toroian Castle 1F                                       Seed:   5   Index:  54
@@ -197,33 +195,32 @@ Underworld (Castle of Dwarves)                            Seed:  22   Index: 238
 Castle of Dwarves Walk                                    Seed:  22   Index: 239
   Castle of Dwarves                                       Seed:  22   Index: 239
     Optional Steps: 22
-    Extra Steps: 12
-Underworld (Castle of Dwarves)                            Seed:  39   Index: 123
-  Step  18: 50 / Dark Imp x4 (6.679s)
-  Step  80: 51 / Dark Imp x4 (6.679s)
-  Step 118: 52 / Dark Imp x4 (6.679s)
-Tower of Bab-il 1F                                        Seed:  39   Index: 246
-Tower of Bab-il 2F                                        Seed:  56   Index:   8
-  Step   7: 53 / BlackLiz x3 (6.973s)
-Tower of Bab-il 3F                                        Seed:  56   Index:  46
-  Step   7: 54 / Tortoise x2, BlackLiz x1 (7.003s)
-  Step   8: 55 / Tortoise x2, BlackLiz x1 (7.003s)
-  Step  43: 56 / FlameMan x1, FlameDog x2 (7.375s)
-  Step  53: 57 / BlackLiz x3 (6.963s)
-Tower of Bab-il 4F                                        Seed:  56   Index: 104
-  Step  39: 58 / Egg (BlackLiz) x1 (7.624s)
-Tower of Bab-il 5F                                        Seed:  56   Index: 166
-Tower of Bab-il 6F                                        Seed:  56   Index: 223
-Tower of Bab-il 7F                                        Seed:  56   Index: 235
-  Step  14: 59 / Alert (summons Chimera) x1 (7.249s)
-Tower of Bab-il 8F                                        Seed:  73   Index:  22
-Battle: Dr.Lugae                                          Seed:  73   Index:  47
-Tower of Bab-il 8F                                        Seed:  73   Index:  47
-  Step  25: 60 / Stoneman x2 (8.738s)
-Tower of Bab-il 7F                                        Seed:  73   Index:  73
-  Extra Steps: 2
-  Step   4: 61 / Alert (summons Chimera) x1 (7.188s)
-  Step  46: 62 / Alert (summons Chimera) x1 (7.188s)
+    Extra Steps: 14
+Underworld (Castle of Dwarves)                            Seed:  39   Index: 125
+  Step  16: 50 / Dark Imp x4 (6.679s)
+  Step  78: 51 / Dark Imp x4 (6.679s)
+  Step 116: 52 / Dark Imp x4 (6.679s)
+Tower of Bab-il 1F                                        Seed:  39   Index: 248
+Tower of Bab-il 2F                                        Seed:  56   Index:  10
+  Step   5: 53 / BlackLiz x3 (6.973s)
+Tower of Bab-il 3F                                        Seed:  56   Index:  48
+  Step   5: 54 / Tortoise x2, BlackLiz x1 (7.003s)
+  Step   6: 55 / Tortoise x2, BlackLiz x1 (7.003s)
+  Step  41: 56 / FlameMan x1, FlameDog x2 (7.375s)
+  Step  51: 57 / BlackLiz x3 (6.963s)
+Tower of Bab-il 4F                                        Seed:  56   Index: 106
+  Step  37: 58 / Egg (BlackLiz) x1 (7.624s)
+Tower of Bab-il 5F                                        Seed:  56   Index: 168
+Tower of Bab-il 6F                                        Seed:  56   Index: 225
+Tower of Bab-il 7F                                        Seed:  56   Index: 237
+  Step  12: 59 / Alert (summons Chimera) x1 (7.249s)
+Tower of Bab-il 8F                                        Seed:  73   Index:  24
+Battle: Dr.Lugae                                          Seed:  73   Index:  49
+Tower of Bab-il 8F                                        Seed:  73   Index:  49
+  Step  23: 60 / Stoneman x2 (8.738s)
+Tower of Bab-il 7F                                        Seed:  73   Index:  75
+  Step   2: 61 / Alert (summons Chimera) x1 (7.188s)
+  Step  44: 62 / Alert (summons Chimera) x1 (7.188s)
 Tower of Bab-il 6F                                        Seed:  73   Index: 119
   Step   8: 63 / Stoneman x1, Medusa x1 (8.328s)
 Tower of Bab-il 5F                                        Seed:  73   Index: 132
@@ -258,22 +255,21 @@ Pass to Bab-il (south)                                    Seed: 107   Index:  40
 Pass to Bab-il (north) Inward Save Room Steps             Seed: 107   Index: 104
   Pass to Bab-il (north)                                  Seed: 107   Index: 104
   Pass to Bab-il (north) Save Room                        Seed: 107   Index: 108
-    Extra Steps: 40
-  Pass to Bab-il (north)                                  Seed: 107   Index: 148
-Recruit Edge                                              Seed: 107   Index: 171
-Remove Dwarf Axe in Edge Menu                             Seed: 107   Index: 171
-Pass to Bab-il (north)                                    Seed: 107   Index: 171
-Tower of Bab-il 1F                                        Seed: 107   Index: 174
-  Step  61: 75 / Mad Ogre x2 (8.472s)
-Tower of Bab-il B2F                                       Seed: 124   Index:   0
-  Step  23: 76 / Mad Ogre x1, BlackCat x2 (7.108s)
-Tower of Bab-il B3F                                       Seed: 124   Index:  74
-  Step   6: 77 / Egg (Lamia) x1 (7.878s)
-  Step  12: 78 / Mad Ogre x3 (7.075s)
-Tower of Bab-il B4F                                       Seed: 124   Index:  87
-  Extra Steps: 2
-  Step  25: 79 / Lamia x1, BlackCat x1, Mad Ogre x1 (7.134s)
-  Step  68: 80 / Balloon x3, Grudger x1 (7.145s)
+    Extra Steps: 42
+  Pass to Bab-il (north)                                  Seed: 107   Index: 150
+Recruit Edge                                              Seed: 107   Index: 173
+Remove Dwarf Axe in Edge Menu                             Seed: 107   Index: 173
+Pass to Bab-il (north)                                    Seed: 107   Index: 173
+Tower of Bab-il 1F                                        Seed: 107   Index: 176
+  Step  59: 75 / Mad Ogre x2 (8.472s)
+Tower of Bab-il B2F                                       Seed: 124   Index:   2
+  Step  21: 76 / Mad Ogre x1, BlackCat x2 (7.108s)
+Tower of Bab-il B3F                                       Seed: 124   Index:  76
+  Step   4: 77 / Egg (Lamia) x1 (7.878s)
+  Step  10: 78 / Mad Ogre x3 (7.075s)
+Tower of Bab-il B4F                                       Seed: 124   Index:  89
+  Step  23: 79 / Lamia x1, BlackCat x1, Mad Ogre x1 (7.134s)
+  Step  66: 80 / Balloon x3, Grudger x1 (7.145s)
 Tower of Bab-il B3F                                       Seed: 124   Index: 156
   Step  13: 81 / Mad Ogre x1, BlackCat x1, Balloon x2 (7.166s)
   Step  21: 82 / Sorcerer (summons Green D.) x1, BladeMan x2 (7.209s)
@@ -291,12 +287,12 @@ Fly to Castle of Dwarves                                  Seed: 141   Index:  63
 Underworld (Castle of Dwarves)                            Seed: 141   Index:  63
 Castle of Dwarves                                         Seed: 141   Index:  63
   Optional Steps: 4
-Underworld (Castle of Dwarves)                            Seed: 141   Index:  90
-Sealed Cave                                               Seed: 141   Index:  91
-Underworld (Tomra)                                        Seed: 141   Index:  98
-Return to Castle of Dwarves                               Seed: 141   Index:  99
-Castle of Dwarves                                         Seed: 141   Index:  99
   Extra Steps: 98
+Underworld (Castle of Dwarves)                            Seed: 141   Index: 188
+Sealed Cave                                               Seed: 141   Index: 189
+Underworld (Tomra)                                        Seed: 141   Index: 196
+Return to Castle of Dwarves                               Seed: 141   Index: 197
+Castle of Dwarves                                         Seed: 141   Index: 197
 Underworld (Castle of Dwarves)                            Seed: 141   Index: 198
 Return to Mysidia                                         Seed: 141   Index: 199
 Walk to the Big Whale                                     Seed: 141   Index: 199

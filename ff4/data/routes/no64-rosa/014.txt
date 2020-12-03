@@ -3,11 +3,11 @@ VERSION	27
 ROSA	v1.2.0-13-ge69b608
 SEED	14
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	11
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	171401800
-VARS	C305500:1 C308F00:1 C30C800:1 C30CA01:1 C310700:2 C316C00:2 E000701:1 E000703:2 E302500:1 E302600:14 E305400:54 E305500:19 E307E00:4 E308700:1 E308702:1 E309200:12 E309700:14 E30BD00:14 E316A00:2
+VARS	C305500:1 C308F00:1 C30C800:1 C30CA01:1 C310700:2 C316C00:2 E000701:1 E000703:2 E302500:5 E302600:14 E305400:54 E305500:19 E308700:1 E308702:1 E309200:12 E309700:14 E30BD00:15
 
 Overworld (Kaipo)                                         Seed:  14   Index:   0
 Overworld (Kaipo)                                         Seed:  14   Index:   1
@@ -45,33 +45,33 @@ Overworld (Kaipo)                                         Seed:  48   Index:   4
 Overworld (Damcyan)                                       Seed:  48   Index:  15
 Damcyan                                                   Seed:  48   Index:  19
   Optional Steps: 1
-Overworld (Damcyan)                                       Seed:  48   Index:  27
-Antlion B1F                                               Seed:  48   Index:  27
-  Step  20: 13 / Basilisk x1, Imp x3 (6.775s)
-  Step  31: 14 / Imp x3 (6.649s)
-  Step  34: 15 / Cream x4 (7.552s)
-Antlion B2F Inward Direct                                 Seed:  48   Index:  65
-  Antlion B2F                                             Seed:  48   Index:  65
-Antlion's Nest                                            Seed:  48   Index: 145
-Battle: Antlion                                           Seed:  48   Index: 159
-Antlion's Nest                                            Seed:  48   Index: 159
-Antlion B2F Outward Direct                                Seed:  48   Index: 174
-  Antlion B2F                                             Seed:  48   Index: 174
-    Step  12: 16 / Weeper x2 (7.132s)
-    Step  62: 17 / Turtle x2 (7.464s)
-    Step  72: 18 / Weeper x1, Turtle x1, Basilisk x1 (7.339s)
-Antlion B1F                                               Seed:  48   Index: 254
-  Step  30: 19 / Turtle x1, Imp x2 (7.009s)
-  Step  32: 20 / Turtle x1, Imp x2 (7.009s)
-Overworld (Damcyan)                                       Seed:  65   Index:  36
-Overworld (Kaipo)                                         Seed:  65   Index:  36
-Kaipo Revisited                                           Seed:  65   Index:  36
-Overworld (Kaipo)                                         Seed:  65   Index:  36
-Overworld (Damcyan)                                       Seed:  65   Index:  36
-Mt.Hobs-West                                              Seed:  65   Index:  36
   Extra Steps: 4
-  Step  32: 21 / Cocktric x3 (9.055s)
-  Step  42: 22 / Gargoyle x1, Cocktric x2 (9.399s)
+Overworld (Damcyan)                                       Seed:  48   Index:  31
+Antlion B1F                                               Seed:  48   Index:  31
+  Step  16: 13 / Basilisk x1, Imp x3 (6.775s)
+  Step  27: 14 / Imp x3 (6.649s)
+  Step  30: 15 / Cream x4 (7.552s)
+Antlion B2F Inward Direct                                 Seed:  48   Index:  69
+  Antlion B2F                                             Seed:  48   Index:  69
+Antlion's Nest                                            Seed:  48   Index: 149
+Battle: Antlion                                           Seed:  48   Index: 163
+Antlion's Nest                                            Seed:  48   Index: 163
+Antlion B2F Outward Direct                                Seed:  48   Index: 178
+  Antlion B2F                                             Seed:  48   Index: 178
+    Step   8: 16 / Weeper x2 (7.132s)
+    Step  58: 17 / Turtle x2 (7.464s)
+    Step  68: 18 / Weeper x1, Turtle x1, Basilisk x1 (7.339s)
+Antlion B1F                                               Seed:  65   Index:   2
+  Step  26: 19 / Turtle x1, Imp x2 (7.009s)
+  Step  28: 20 / Turtle x1, Imp x2 (7.009s)
+Overworld (Damcyan)                                       Seed:  65   Index:  40
+Overworld (Kaipo)                                         Seed:  65   Index:  40
+Kaipo Revisited                                           Seed:  65   Index:  40
+Overworld (Kaipo)                                         Seed:  65   Index:  40
+Overworld (Damcyan)                                       Seed:  65   Index:  40
+Mt.Hobs-West                                              Seed:  65   Index:  40
+  Step  28: 21 / Cocktric x3 (9.055s)
+  Step  38: 22 / Gargoyle x1, Cocktric x2 (9.399s)
 Mt.Hobs Summit                                            Seed:  65   Index:  79
 Battle: MomBomb                                           Seed:  65   Index:  94
 Mt.Hobs Summit                                            Seed:  65   Index:  94
@@ -345,59 +345,58 @@ Grind Fight Search                                        Seed:  30   Index: 191
 Battle: Elements                                          Seed:  47   Index:   4
 Giant of Bab-il Lung                                      Seed:  47   Index:   4
 Giant of Bab-il CPU                                       Seed:  47   Index:  11
-  Extra Steps: 14
-Return to Moon                                            Seed:  47   Index:  27
-Lunar Overworld                                           Seed:  47   Index:  27
-Lunar Path (west)                                         Seed:  47   Index:  32
-  Step  15: 109 / Slime x1, Tofu x1, Pudding x1 (7.654s)
-  Step  26: 110 / Slime x1, Tofu x1, Pudding x1 (7.654s)
-  Step  29: 111 / Balloon x2, Grenade x2 (7.736s)
-Lunar Overworld                                           Seed:  47   Index:  70
-Lunar Path (east)                                         Seed:  47   Index: 105
-  Step  20: 112 / Juclyote x1, Procyote x2 (7.797s)
-Lunar Overworld                                           Seed:  47   Index: 136
-Lunar Subterrane B1                                       Seed:  47   Index: 153
-  Step  33: 113 / RedGiant x1 (6.566s)
-Lunar Subterrane B2                                       Seed:  47   Index: 186
-Lunar Subterrane B3                                       Seed:  47   Index: 215
-Lunar Subterrane B4                                       Seed:  47   Index: 229
-  Extra Steps: 2
-  Step   7: 114 / Ging-Ryu x1 (6.538s)
-  Step  51: 115 / King-Ryu x2 (6.597s)
-  Step  55: 116 / King-Ryu x2 (6.597s)
-  Step  57: 117 / King-Ryu x2 (6.597s)
-Lunar Subterrane B4 Passage                               Seed:  64   Index:  31
-Lunar Subterrane B4                                       Seed:  64   Index:  60
-  Step   8: 118 / King-Ryu x2 (6.597s)
-Lunar Subterrane B5                                       Seed:  64   Index:  75
-  Step   3: 119 / King-Ryu x2 (6.597s)
-Lunar Subterrane B5 Passage A                             Seed:  64   Index:  92
-  Step   7: 120 / King-Ryu x1, Ging-Ryu x1 (6.611s)
-  Step  32: 121 / D.Fossil x1 (6.210s)
-Lunar Subterrane B5                                       Seed:  64   Index: 125
-Lunar Subterrane B5 Passage B                             Seed:  64   Index: 134
-Lunar Subterrane B5 Inward Direct                         Seed:  64   Index: 166
-  Lunar Subterrane B5                                     Seed:  64   Index: 166
-Get Ninja Star on Lunar Core B3                           Seed:  64   Index: 178
-  Lunar Subterrane B6                                     Seed:  64   Index: 178
-  Lunar Subterrane B6 Passage                             Seed:  64   Index: 215
-  Lunar Subterrane B7 Inward Direct                       Seed:  64   Index: 228
-    Lunar Subterrane B7                                   Seed:  64   Index: 228
-      Step   4: 122 / Tricker x1 (6.647s)
-      Step  22: 123 / King-Ryu x1 (6.565s)
-      Step  29: 124 / Tricker x1 (6.647s)
-      Step  38: 125 / King-Ryu x1, Ging-Ryu x1 (6.611s)
-      Step  76: 126 / Tricker x1 (6.647s)
-  Lunar Core B1                                           Seed:  81   Index:  52
-    Step  66: 127 / EvilMask x1 (12.170s)
-  Lunar Core B2                                           Seed:  81   Index: 120
-    Step  20: 128 / Red D. x1 (24.585s)
-    Step  37: 129 / EvilMask x1 (12.170s)
-  Lunar Core B3                                           Seed:  81   Index: 175
-    Step  20: 130 / Behemoth x1 (7.463s)
-    Step  54: 131 / Behemoth x1 (7.463s)
-Lunar Core B4                                             Seed:  81   Index: 231
-  Step  64: 132 / Breath x1 (11.914s)
+  Extra Steps: 15
+Return to Moon                                            Seed:  47   Index:  28
+Lunar Overworld                                           Seed:  47   Index:  28
+Lunar Path (west)                                         Seed:  47   Index:  33
+  Step  14: 109 / Slime x1, Tofu x1, Pudding x1 (7.654s)
+  Step  25: 110 / Slime x1, Tofu x1, Pudding x1 (7.654s)
+  Step  28: 111 / Balloon x2, Grenade x2 (7.736s)
+Lunar Overworld                                           Seed:  47   Index:  71
+Lunar Path (east)                                         Seed:  47   Index: 106
+  Step  19: 112 / Juclyote x1, Procyote x2 (7.797s)
+Lunar Overworld                                           Seed:  47   Index: 137
+Lunar Subterrane B1                                       Seed:  47   Index: 154
+  Step  32: 113 / RedGiant x1 (6.566s)
+Lunar Subterrane B2                                       Seed:  47   Index: 187
+Lunar Subterrane B3                                       Seed:  47   Index: 216
+Lunar Subterrane B4                                       Seed:  47   Index: 230
+  Step   6: 114 / Ging-Ryu x1 (6.538s)
+  Step  50: 115 / King-Ryu x2 (6.597s)
+  Step  54: 116 / King-Ryu x2 (6.597s)
+  Step  56: 117 / King-Ryu x2 (6.597s)
+Lunar Subterrane B4 Passage                               Seed:  64   Index:  30
+Lunar Subterrane B4                                       Seed:  64   Index:  59
+  Step   9: 118 / King-Ryu x2 (6.597s)
+Lunar Subterrane B5                                       Seed:  64   Index:  74
+  Step   4: 119 / King-Ryu x2 (6.597s)
+Lunar Subterrane B5 Passage A                             Seed:  64   Index:  91
+  Step   8: 120 / King-Ryu x1, Ging-Ryu x1 (6.611s)
+  Step  33: 121 / D.Fossil x1 (6.210s)
+Lunar Subterrane B5                                       Seed:  64   Index: 124
+Lunar Subterrane B5 Passage B                             Seed:  64   Index: 133
+Lunar Subterrane B5 Inward Direct                         Seed:  64   Index: 165
+  Lunar Subterrane B5                                     Seed:  64   Index: 165
+Get Ninja Star on Lunar Core B3                           Seed:  64   Index: 177
+  Lunar Subterrane B6                                     Seed:  64   Index: 177
+  Lunar Subterrane B6 Passage                             Seed:  64   Index: 214
+  Lunar Subterrane B7 Inward Direct                       Seed:  64   Index: 227
+    Lunar Subterrane B7                                   Seed:  64   Index: 227
+      Step   5: 122 / Tricker x1 (6.647s)
+      Step  23: 123 / King-Ryu x1 (6.565s)
+      Step  30: 124 / Tricker x1 (6.647s)
+      Step  39: 125 / King-Ryu x1, Ging-Ryu x1 (6.611s)
+      Step  77: 126 / Tricker x1 (6.647s)
+  Lunar Core B1                                           Seed:  81   Index:  51
+    Step  67: 127 / EvilMask x1 (12.170s)
+  Lunar Core B2                                           Seed:  81   Index: 119
+    Step  21: 128 / Red D. x1 (24.585s)
+    Step  38: 129 / EvilMask x1 (12.170s)
+  Lunar Core B3                                           Seed:  81   Index: 174
+    Step  21: 130 / Behemoth x1 (7.463s)
+    Step  55: 131 / Behemoth x1 (7.463s)
+Lunar Core B4                                             Seed:  81   Index: 230
+  Step  65: 132 / Breath x1 (11.914s)
 
 Encounter Time:      1068.371s
 Other Time:          1783.629s
@@ -407,7 +406,7 @@ Base Total Time:     3296.597s
 Time Saved:          444.598s
 
 Optional Steps:      19
-Extra Steps:         120
+Extra Steps:         119
 Encounters:          132
 
 Base Encounters:     169

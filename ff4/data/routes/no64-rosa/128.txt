@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa)
 VERSION	27
-ROSA	v1.2.0-13-ge69b608
+ROSA	v1.2.0-7-gad6754d
 SEED	128
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	16
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	171382425
-VARS	C305500:1 C316C00:2 E000701:1 E302402:14 E302500:15 E302600:10 E302700:2 E305500:3 E307400:30 E307701:12 E307802:4 E308700:1 E308702:1 E309700:6 E30A800:14 E30B500:1 E30BD00:14 E30C800:21 E30CA03:4 E310700:12 E310701:4 E316D00:8
+VARS	C305500:1 C316C00:2 E302402:14 E302500:31 E302600:10 E302700:3 E305500:3 E307400:30 E308700:1 E308702:1 E309700:6 E30B500:1 E30BD00:14 E30C800:21 E30CA03:18 E310700:12 E310701:4 E316D00:8
 
 Overworld (Kaipo)                                         Seed: 128   Index:   0
 Overworld (Kaipo)                                         Seed: 128   Index:   1
@@ -45,27 +45,25 @@ Overworld (Kaipo)                                         Seed: 145   Index: 236
 Overworld (Damcyan)                                       Seed: 145   Index: 247
 Damcyan                                                   Seed: 145   Index: 251
   Optional Steps: 1
-  Extra Steps: 14
-Overworld (Damcyan)                                       Seed: 162   Index:  17
-Antlion B1F                                               Seed: 162   Index:  17
-Antlion B2F Inward Direct                                 Seed: 162   Index:  55
-  Antlion B2F                                             Seed: 162   Index:  55
-    Step  20: 13 / Weeper x1, Turtle x1, Basilisk x1 (7.385s)
-    Step  53: 14 / SandWorm x2 (6.841s)
-Antlion's Nest                                            Seed: 162   Index: 135
-  Step   3: 15 / Turtle x2 (7.487s)
-Battle: Antlion                                           Seed: 162   Index: 149
-Antlion's Nest                                            Seed: 162   Index: 149
-Antlion B2F Outward Direct                                Seed: 162   Index: 164
-  Antlion B2F                                             Seed: 162   Index: 164
-    Extra Steps: 4
-    Step  21: 16 / Basilisk x1, Turtle x1 (7.124s)
-    Step  32: 17 / Turtle x2 (7.464s)
-    Step  84: 18 / Weeper x1, Turtle x1, Basilisk x1 (7.339s)
-Antlion B1F                                               Seed: 162   Index: 248
-  Extra Steps: 12
-  Step  17: 19 / Imp x3, Imp Cap. x1 (6.753s)
-  Step  49: 20 / Imp x3, Imp Cap. x1 (6.753s)
+  Extra Steps: 30
+Overworld (Damcyan)                                       Seed: 162   Index:  33
+Antlion B1F                                               Seed: 162   Index:  33
+Antlion B2F Inward Direct                                 Seed: 162   Index:  71
+  Antlion B2F                                             Seed: 162   Index:  71
+    Step   4: 13 / Weeper x1, Turtle x1, Basilisk x1 (7.385s)
+    Step  37: 14 / SandWorm x2 (6.841s)
+    Step  67: 15 / Turtle x2 (7.487s)
+Antlion's Nest                                            Seed: 162   Index: 151
+Battle: Antlion                                           Seed: 162   Index: 165
+Antlion's Nest                                            Seed: 162   Index: 165
+Antlion B2F Outward Direct                                Seed: 162   Index: 180
+  Antlion B2F                                             Seed: 162   Index: 180
+    Step   5: 16 / Basilisk x1, Turtle x1 (7.124s)
+    Step  16: 17 / Turtle x2 (7.464s)
+    Step  68: 18 / Weeper x1, Turtle x1, Basilisk x1 (7.339s)
+Antlion B1F                                               Seed: 179   Index:   4
+  Step   5: 19 / Imp x3, Imp Cap. x1 (6.753s)
+  Step  37: 20 / Imp x3, Imp Cap. x1 (6.753s)
 Overworld (Damcyan)                                       Seed: 179   Index:  42
 Overworld (Kaipo)                                         Seed: 179   Index:  42
 Kaipo Revisited                                           Seed: 179   Index:  42
@@ -136,11 +134,11 @@ Castle Baron                                              Seed: 230   Index: 142
 Battle: Kainazzo                                          Seed: 230   Index: 156
 Overworld (Toroia)                                        Seed: 230   Index: 156
 Toroian Castle                                            Seed: 230   Index: 157
-  Optional Steps: 2
-Overworld (Toroia)                                        Seed: 230   Index: 170
-  Optional Steps: 1
-  Step  20: 43 / Cannibal x1, Treant x2 (8.740s)
-  Step  22: 44 / StingRat x3, Treant x2 (9.825s)
+  Optional Steps: 3
+Overworld (Toroia)                                        Seed: 230   Index: 171
+  Optional Steps: 0
+  Step  19: 43 / Cannibal x1, Treant x2 (8.740s)
+  Step  21: 44 / StingRat x3, Treant x2 (9.825s)
 Black Chocobo to Cave Magnes                              Seed: 230   Index: 208
 Overworld (Toroia)                                        Seed: 230   Index: 208
 Cave Magnes B1F                                           Seed: 230   Index: 209
@@ -254,18 +252,17 @@ Pass to Bab-il (north) Inward Direct                      Seed:  93   Index: 119
 Recruit Edge                                              Seed:  93   Index: 141
 Remove Dwarf Axe in Edge Menu                             Seed:  93   Index: 141
 Pass to Bab-il (north)                                    Seed:  93   Index: 141
-  Extra Steps: 4
+  Extra Steps: 18
   Step   7: 84 / Red Bone x3, Skull x2 (7.040s)
-Tower of Bab-il 1F                                        Seed:  93   Index: 148
-  Step  57: 85 / Sorcerer (summons Mad Ogre) x1, BladeMan x2 (7.159s)
-  Step  65: 86 / Balloon x4 (7.171s)
-  Step  82: 87 / Balloon x3 (7.108s)
-Tower of Bab-il B2F                                       Seed:  93   Index: 230
-  Extra Steps: 14
-  Step  15: 88 / Sorcerer (summons BlackCat) x1, BladeMan x2 (7.156s)
-  Step  38: 89 / Egg (Lamia) x1 (7.878s)
-  Step  59: 90 / BlackCat x3 (7.142s)
-  Step  88: 91 / Mad Ogre x1, BlackCat x2 (7.108s)
+Tower of Bab-il 1F                                        Seed:  93   Index: 162
+  Step  43: 85 / Sorcerer (summons Mad Ogre) x1, BladeMan x2 (7.159s)
+  Step  51: 86 / Balloon x4 (7.171s)
+  Step  68: 87 / Balloon x3 (7.108s)
+Tower of Bab-il B2F                                       Seed:  93   Index: 244
+  Step   1: 88 / Sorcerer (summons BlackCat) x1, BladeMan x2 (7.156s)
+  Step  24: 89 / Egg (Lamia) x1 (7.878s)
+  Step  45: 90 / BlackCat x3 (7.142s)
+  Step  74: 91 / Mad Ogre x1, BlackCat x2 (7.108s)
 Tower of Bab-il B3F                                       Seed: 110   Index:  62
 Tower of Bab-il B4F                                       Seed: 110   Index:  75
   Step   7: 92 / Egg (Lamia) x1 (7.878s)

@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa)
 VERSION	27
-ROSA	v1.2.0-13-ge69b608
+ROSA	v1.2.0-7-gad6754d
 SEED	204
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	11
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	169668733
-VARS	C303C00:1 C305500:1 C307801:1 C308F00:1 C30CA01:1 C316C00:2 E000701:1 E000703:1 E302400:2 E302600:2 E302700:35 E303D00:6 E305500:40 E307400:78 E307B01:8 E308700:1 E308702:1 E309200:32 E309700:94 E30C800:16 E310700:24
+VARS	C303C00:1 C305500:1 C307801:1 C308F00:1 C30CA01:1 C316C00:2 E000701:1 E302600:4 E302700:35 E303D00:8 E305500:41 E307400:78 E307B01:8 E309200:32 E309700:94 E30C800:16 E310700:24
 
 Overworld (Kaipo)                                         Seed: 204   Index:   0
 Overworld (Kaipo)                                         Seed: 204   Index:   1
@@ -84,31 +84,31 @@ Overworld (Fabul)                                         Seed: 255   Index: 178
   Step  47: 25 / Imp Cap. x4, Imp x2 (8.467s)
   Step  80: 26 / Imp Cap. x3, Needler x1 (8.023s)
 Fabul                                                     Seed:  16   Index:   6
-  Optional Steps: 2
-Overworld (Fabul)                                         Seed:  16   Index:  68
-Fabul Boat and Leviatan                                   Seed:  16   Index:  75
-Overworld (Mysidia)                                       Seed:  16   Index:  75
-Mysidia                                                   Seed:  16   Index:  84
-Overworld (Mysidia)                                       Seed:  16   Index:  84
-Overworld (Mt.Ordeals)                                    Seed:  16   Index:  94
-  Step  64: 27 / Imp Cap. x3, Needler x1 (7.932s)
-Mt.Ordeals                                                Seed:  16   Index: 188
-  Step  24: 28 / Spirit x3, Skelton x2, Red Bone x1 (9.131s)
-  Step  34: 29 / Spirit x3, Skelton x2, Red Bone x1 (9.131s)
-Mt.Ordeals-3rd station                                    Seed:  16   Index: 231
-Recruit Tellah                                            Seed:  16   Index: 254
-Mt.Ordeals-3rd station                                    Seed:  16   Index: 254
-Mt.Ordeals-7th station                                    Seed:  33   Index:   3
-  Step   4: 30 / Soul x2, Ghoul x2, Revenant x2 (10.367s)
-Mt.Ordeals Summit                                         Seed:  33   Index:  45
-  Optional Steps: 1
-  Step  15: 31 / Zombie x3, Ghoul x2, Revenant x2 (7.869s)
-Battle: Milon and Milon Z                                 Seed:  33   Index:  63
-Mt.Ordeals Summit                                         Seed:  33   Index:  63
-Paladin                                                   Seed:  33   Index:  67
-Mt.Ordeals Summit                                         Seed:  33   Index:  67
-  Optional Steps: 1
-  Step   2: 32 / Zombie x3, Ghoul x2, Revenant x2 (7.923s)
+  Optional Steps: 4
+Overworld (Fabul)                                         Seed:  16   Index:  70
+Fabul Boat and Leviatan                                   Seed:  16   Index:  77
+Overworld (Mysidia)                                       Seed:  16   Index:  77
+Mysidia                                                   Seed:  16   Index:  86
+Overworld (Mysidia)                                       Seed:  16   Index:  86
+Overworld (Mt.Ordeals)                                    Seed:  16   Index:  96
+  Step  62: 27 / Imp Cap. x3, Needler x1 (7.932s)
+Mt.Ordeals                                                Seed:  16   Index: 190
+  Step  22: 28 / Spirit x3, Skelton x2, Red Bone x1 (9.131s)
+  Step  32: 29 / Spirit x3, Skelton x2, Red Bone x1 (9.131s)
+Mt.Ordeals-3rd station                                    Seed:  16   Index: 233
+Recruit Tellah                                            Seed:  33   Index:   0
+Mt.Ordeals-3rd station                                    Seed:  33   Index:   0
+Mt.Ordeals-7th station                                    Seed:  33   Index:   5
+  Step   2: 30 / Soul x2, Ghoul x2, Revenant x2 (10.367s)
+Mt.Ordeals Summit                                         Seed:  33   Index:  47
+  Optional Steps: 0
+  Step  13: 31 / Zombie x3, Ghoul x2, Revenant x2 (7.869s)
+Battle: Milon and Milon Z                                 Seed:  33   Index:  64
+Mt.Ordeals Summit                                         Seed:  33   Index:  64
+Paladin                                                   Seed:  33   Index:  68
+Mt.Ordeals Summit                                         Seed:  33   Index:  68
+  Optional Steps: 0
+  Step   1: 32 / Zombie x3, Ghoul x2, Revenant x2 (7.923s)
 Mt.Ordeals-7th station                                    Seed:  33   Index:  90
   Step   2: 33 / Revenant x1, Ghoul x3 (8.489s)
 Mt.Ordeals-3rd station                                    Seed:  33   Index: 132
@@ -128,10 +128,9 @@ Castle Baron B2F                                          Seed:  50   Index: 205
 Castle Baron B1F Inward Save Room Steps                   Seed:  50   Index: 231
   Castle Baron B1F                                        Seed:  50   Index: 231
   Castle Baron B1F Save Room                              Seed:  50   Index: 241
-    Extra Steps: 6
-  Castle Baron B1F                                        Seed:  50   Index: 247
-Castle Baron                                              Seed:  67   Index:  15
-  Extra Steps: 2
+    Extra Steps: 8
+  Castle Baron B1F                                        Seed:  50   Index: 249
+Castle Baron                                              Seed:  67   Index:  17
 Battle: Kainazzo                                          Seed:  67   Index:  31
 Overworld (Toroia)                                        Seed:  67   Index:  31
 Toroian Castle                                            Seed:  67   Index:  32
@@ -159,10 +158,10 @@ Overworld (Toroia)                                        Seed:  84   Index: 114
 Black Chocobo to Toroia                                   Seed:  84   Index: 116
 Toroian Castle 1F Inward Extra Steps Area Steps           Seed:  84   Index: 116
   Toroian Castle 1F                                       Seed:  84   Index: 116
-    Optional Steps: 2
+    Optional Steps: 3
     Extra Steps: 38
-Overworld (Toroia)                                        Seed:  84   Index: 157
-  Optional Steps: 1
+Overworld (Toroia)                                        Seed:  84   Index: 158
+  Optional Steps: 0
 Tower of Zot 1F                                           Seed:  84   Index: 159
   Step  36: 41 / Carapace x2, Ice Liz x2 (9.635s)
 Tower of Zot 2F                                           Seed:  84   Index: 197

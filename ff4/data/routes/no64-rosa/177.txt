@@ -3,11 +3,11 @@ VERSION	27
 ROSA	v1.2.0-13-ge69b608
 SEED	177
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	20
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	172076264
-VARS	C303C00:1 C307801:1 C308F00:1 C30CA00:1 C316C00:1 C316D00:1 E000701:1 E302402:8 E302600:78 E302700:59 E303D00:12 E305400:60 E307400:8 E307B01:22 E307F01:28 E308000:18 E308702:1 E309200:58 E309700:4 E30B500:1 E30BD00:2 E30C800:2 E30CA01:4 E30CD00:128 E310700:17 E310701:4 E310702:4 E316F00:2 E317B00:2
+VARS	C303C00:1 C307801:1 C308F00:1 C30CA00:1 C316C00:1 C316D00:1 E000701:1 E302402:8 E302600:78 E302700:59 E303D00:12 E305400:60 E307400:8 E307B01:22 E307F01:46 E308702:1 E309200:58 E309700:4 E30B500:1 E30BD00:2 E30C800:6 E30CD00:128 E310700:17 E310701:4 E310702:4 E317B00:4
 
 Overworld (Kaipo)                                         Seed: 177   Index:   0
 Overworld (Kaipo)                                         Seed: 177   Index:   1
@@ -74,15 +74,14 @@ Mt.Hobs-West                                              Seed: 228   Index:  76
 Mt.Hobs Summit                                            Seed: 228   Index: 115
 Battle: MomBomb                                           Seed: 228   Index: 130
 Mt.Hobs Summit                                            Seed: 228   Index: 130
-  Extra Steps: 28
+  Extra Steps: 46
   Step   1: 19 / Skelton x4 (7.819s)
   Step   2: 20 / Skelton x4 (7.819s)
   Step  34: 21 / Gargoyle x1, Cocktric x2 (7.868s)
-Mt.Hobs-East                                              Seed: 228   Index: 164
-  Extra Steps: 18
-  Step  26: 22 / Red Bone x1, Skelton x3 (8.007s)
-  Step  28: 23 / Gargoyle x1, Cocktric x2 (7.868s)
-  Step  64: 24 / Turtle x2 (7.432s)
+Mt.Hobs-East                                              Seed: 228   Index: 182
+  Step   8: 22 / Red Bone x1, Skelton x3 (8.007s)
+  Step  10: 23 / Gargoyle x1, Cocktric x2 (7.868s)
+  Step  46: 24 / Turtle x2 (7.432s)
 Overworld (Fabul)                                         Seed: 228   Index: 228
 Fabul                                                     Seed: 245   Index:  56
   Optional Steps: 10
@@ -245,15 +244,15 @@ Cave Eblana B1F                                           Seed: 142   Index: 153
 Cave Eblana B2F Shop Walk                                 Seed: 142   Index: 195
   Cave Eblana B2F                                         Seed: 142   Index: 195
     Optional Steps: 2
-Pass to Bab-il (south)                                    Seed: 142   Index: 253
-  Step  28: 74 / Ironback x1, Armadilo x1, BlackLiz x1 (9.426s)
-Pass to Bab-il (north)                                    Seed: 159   Index:  28
-Pass to Bab-il (south)                                    Seed: 159   Index:  61
-  Step  14: 75 / Ironback x2, BlackLiz x2 (10.193s)
-  Step  47: 76 / Skull x3 (9.861s)
-Pass to Bab-il (north) Inward Save Room Steps             Seed: 159   Index: 125
-  Pass to Bab-il (north)                                  Seed: 159   Index: 125
     Extra Steps: 4
+Pass to Bab-il (south)                                    Seed: 159   Index:   1
+  Step  24: 74 / Ironback x1, Armadilo x1, BlackLiz x1 (9.426s)
+Pass to Bab-il (north)                                    Seed: 159   Index:  32
+Pass to Bab-il (south)                                    Seed: 159   Index:  65
+  Step  10: 75 / Ironback x2, BlackLiz x2 (10.193s)
+  Step  43: 76 / Skull x3 (9.861s)
+Pass to Bab-il (north) Inward Save Room Steps             Seed: 159   Index: 129
+  Pass to Bab-il (north)                                  Seed: 159   Index: 129
   Pass to Bab-il (north) Save Room                        Seed: 159   Index: 133
     Extra Steps: 128
   Pass to Bab-il (north)                                  Seed: 176   Index:   5
@@ -390,16 +389,15 @@ Get Ninja Star on Lunar Core B1                           Seed:   5   Index:  85
       Step   9: 115 / Tricker x1 (6.647s)
       Step  11: 116 / Tricker x1 (6.646s)
     Lunar Subterrane B7 Save Room                         Seed:   5   Index: 158
-      Extra Steps: 2
-    Lunar Subterrane B7                                   Seed:   5   Index: 160
-      Step  22: 117 / Tricker x1 (6.647s)
-  Lunar Core B1                                           Seed:   5   Index: 218
-    Step  40: 118 / EvilMask x1 (12.170s)
-  Lunar Core B2                                           Seed:  22   Index:  40
-    Extra Steps: 2
-    Step  27: 119 / EvilMask x1 (12.170s)
-    Step  53: 120 / EvilMask x1 (12.170s)
-    Step  56: 121 / Behemoth x1 (7.463s)
+      Extra Steps: 4
+    Lunar Subterrane B7                                   Seed:   5   Index: 162
+      Step  20: 117 / Tricker x1 (6.647s)
+  Lunar Core B1                                           Seed:   5   Index: 220
+    Step  38: 118 / EvilMask x1 (12.170s)
+  Lunar Core B2                                           Seed:  22   Index:  42
+    Step  25: 119 / EvilMask x1 (12.170s)
+    Step  51: 120 / EvilMask x1 (12.170s)
+    Step  54: 121 / Behemoth x1 (7.463s)
   Lunar Core B3                                           Seed:  22   Index:  97
 Lunar Core B4                                             Seed:  22   Index: 149
   Step  57: 122 / Breath x1 (11.914s)

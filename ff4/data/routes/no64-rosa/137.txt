@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa)
 VERSION	27
-ROSA	v1.2.0-13-ge69b608
+ROSA	v1.2.0-7-gad6754d
 SEED	137
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	9
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	171821897
-VARS	C308F00:1 C30C800:1 C316C00:2 C316D00:1 E302600:2 E302700:5 E309200:4 E309700:2 E30B500:1 E310700:3 E310701:4 E310702:8 E316700:8 E316A00:2 E316D01:2 E317500:6 E317B00:68
+VARS	C308F00:1 C30C800:1 C316C00:2 C316D00:1 E302600:2 E302700:5 E309200:4 E309700:2 E30B500:1 E310700:3 E310701:12 E316700:16 E317B00:70
 
 Overworld (Kaipo)                                         Seed: 137   Index:   0
 Overworld (Kaipo)                                         Seed: 137   Index:   1
@@ -281,12 +281,12 @@ Fly to Castle of Dwarves                                  Seed: 119   Index: 164
 Underworld (Castle of Dwarves)                            Seed: 119   Index: 164
 Castle of Dwarves                                         Seed: 119   Index: 164
   Optional Steps: 4
-Underworld (Castle of Dwarves)                            Seed: 119   Index: 191
-Sealed Cave                                               Seed: 119   Index: 192
-Underworld (Tomra)                                        Seed: 119   Index: 199
-Return to Castle of Dwarves                               Seed: 119   Index: 200
-Castle of Dwarves                                         Seed: 119   Index: 200
   Extra Steps: 8
+Underworld (Castle of Dwarves)                            Seed: 119   Index: 199
+Sealed Cave                                               Seed: 119   Index: 200
+Underworld (Tomra)                                        Seed: 119   Index: 207
+Return to Castle of Dwarves                               Seed: 119   Index: 208
+Castle of Dwarves                                         Seed: 119   Index: 208
 Underworld (Castle of Dwarves)                            Seed: 119   Index: 209
 Return to Mysidia                                         Seed: 119   Index: 210
 Walk to the Big Whale                                     Seed: 119   Index: 210
@@ -352,24 +352,22 @@ Lunar Path (east)                                         Seed: 170   Index:   6
 Lunar Overworld                                           Seed: 170   Index:  37
   Step   5: 115 / Balloon x2, Grenade x2 (7.664s)
 Lunar Subterrane B1                                       Seed: 170   Index:  54
-  Extra Steps: 8
+  Extra Steps: 16
   Step  41: 116 / Warlock x1, Kary x1 (6.230s)
-Lunar Subterrane B2                                       Seed: 170   Index:  95
-Lunar Subterrane B3                                       Seed: 170   Index: 124
-Lunar Subterrane B4                                       Seed: 170   Index: 138
-  Extra Steps: 2
-  Step  33: 117 / D.Bone x1, Warlock x1 (6.199s)
-  Step  38: 118 / King-Ryu x2 (6.597s)
-  Step  51: 119 / King-Ryu x2 (6.597s)
-Lunar Subterrane B4 Passage                               Seed: 170   Index: 196
-  Step   8: 120 / King-Ryu x1, Ging-Ryu x1 (6.611s)
-  Step  23: 121 / D.Fossil x1 (6.210s)
-Lunar Subterrane B4                                       Seed: 170   Index: 225
-Lunar Subterrane B5                                       Seed: 170   Index: 240
-Lunar Subterrane B5 Passage A                             Seed: 187   Index:   1
-  Extra Steps: 6
-  Step  20: 122 / Tricker x1 (6.647s)
-  Step  39: 123 / King-Ryu x1 (6.565s)
+Lunar Subterrane B2                                       Seed: 170   Index: 103
+Lunar Subterrane B3                                       Seed: 170   Index: 132
+Lunar Subterrane B4                                       Seed: 170   Index: 146
+  Step  25: 117 / D.Bone x1, Warlock x1 (6.199s)
+  Step  30: 118 / King-Ryu x2 (6.597s)
+  Step  43: 119 / King-Ryu x2 (6.597s)
+Lunar Subterrane B4 Passage                               Seed: 170   Index: 202
+  Step   2: 120 / King-Ryu x1, Ging-Ryu x1 (6.611s)
+  Step  17: 121 / D.Fossil x1 (6.210s)
+Lunar Subterrane B4                                       Seed: 170   Index: 231
+Lunar Subterrane B5                                       Seed: 170   Index: 246
+Lunar Subterrane B5 Passage A                             Seed: 187   Index:   7
+  Step  14: 122 / Tricker x1 (6.647s)
+  Step  33: 123 / King-Ryu x1 (6.565s)
 Lunar Subterrane B5                                       Seed: 187   Index:  40
 Lunar Subterrane B5 Passage B                             Seed: 187   Index:  49
   Step  14: 124 / Tricker x1 (6.646s)
@@ -382,12 +380,11 @@ Get Ninja Star on Lunar Core B3                           Seed: 187   Index:  93
     Lunar Subterrane B7                                   Seed: 187   Index: 143
       Step   2: 125 / King-Ryu x1, Ging-Ryu x1 (6.611s)
     Lunar Subterrane B7 Save Room                         Seed: 187   Index: 166
-      Extra Steps: 68
-    Lunar Subterrane B7                                   Seed: 187   Index: 234
-      Extra Steps: 2
-      Step  18: 126 / King-Ryu x1, Ging-Ryu x1 (6.611s)
-      Step  28: 127 / D.Fossil x1 (6.210s)
-      Step  60: 128 / King-Ryu x1, Ging-Ryu x1 (6.611s)
+      Extra Steps: 70
+    Lunar Subterrane B7                                   Seed: 187   Index: 236
+      Step  16: 126 / King-Ryu x1, Ging-Ryu x1 (6.611s)
+      Step  26: 127 / D.Fossil x1 (6.210s)
+      Step  58: 128 / King-Ryu x1, Ging-Ryu x1 (6.611s)
   Lunar Core B1                                           Seed: 204   Index:  38
     Step  32: 129 / EvilMask x1 (12.170s)
   Lunar Core B2                                           Seed: 204   Index: 106

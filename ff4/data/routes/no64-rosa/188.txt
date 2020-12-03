@@ -3,11 +3,11 @@ VERSION	27
 ROSA	v1.2.0-13-ge69b608
 SEED	188
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	21
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	173030174
-VARS	C303C00:1 C305500:1 C308F00:1 C30CA01:1 C316B00:1 C316D00:1 E000701:1 E000703:2 E302500:5 E302600:10 E302700:3 E303D00:10 E305500:3 E307000:8 E307400:4 E308700:1 E308701:2 E308702:1 E309200:12 E309901:6 E30B500:1 E30BD00:24 E30C800:2 E310700:21 E310701:4 E312300:6 E312801:28 E316F00:8 E317700:32 E317B00:6
+VARS	C303C00:1 C305500:1 C308F00:1 C30CA01:1 C316B00:1 C316D00:1 E000701:1 E000703:8 E302500:5 E302600:10 E302700:3 E303D00:10 E305500:3 E307000:8 E307400:4 E308700:3 E308702:1 E309200:12 E30B500:1 E30BD00:24 E30C800:2 E310700:21 E310701:4 E312300:6 E312801:28 E317700:32 E317B00:14
 
 Overworld (Kaipo)                                         Seed: 188   Index:   0
 Overworld (Kaipo)                                         Seed: 188   Index:   1
@@ -106,10 +106,10 @@ Mt.Ordeals-3rd station                                    Seed:   0   Index: 188
 Mt.Ordeals-7th station                                    Seed:   0   Index: 193
 Mt.Ordeals Summit                                         Seed:   0   Index: 235
   Optional Steps: 1
-Battle: Milon and Milon Z                                 Seed:   0   Index: 253
-Mt.Ordeals Summit                                         Seed:   0   Index: 253
   Extra Steps: 2
-  Step   5: 36 / Zombie x3, Ghoul x2, Revenant x2 (7.808s)
+Battle: Milon and Milon Z                                 Seed:   0   Index: 255
+Mt.Ordeals Summit                                         Seed:   0   Index: 255
+  Step   3: 36 / Zombie x3, Ghoul x2, Revenant x2 (7.808s)
 Paladin                                                   Seed:  17   Index:   3
 Mt.Ordeals Summit                                         Seed:  17   Index:   3
   Optional Steps: 1
@@ -169,14 +169,14 @@ Toroian Castle 1F Inward Extra Steps Area Steps           Seed:  51   Index: 164
     Optional Steps: 3
 Overworld (Toroia)                                        Seed:  51   Index: 168
   Optional Steps: 2
-Tower of Zot 1F                                           Seed:  51   Index: 171
-  Step  15: 51 / Marion (summons Puppet) x1, Puppet x2 (9.023s)
-Tower of Zot 2F                                           Seed:  51   Index: 209
-  Step  37: 52 / Marion (summons Puppet) x1, Puppet x2 (9.023s)
-Battle: FlameDog                                          Seed:  68   Index:   5
-Tower of Zot 2F                                           Seed:  68   Index:   5
   Extra Steps: 6
-  Step  23: 53 / Centaur x3 (8.469s)
+Tower of Zot 1F                                           Seed:  51   Index: 177
+  Step   9: 51 / Marion (summons Puppet) x1, Puppet x2 (9.023s)
+Tower of Zot 2F                                           Seed:  51   Index: 215
+  Step  31: 52 / Marion (summons Puppet) x1, Puppet x2 (9.023s)
+Battle: FlameDog                                          Seed:  68   Index:  11
+Tower of Zot 2F                                           Seed:  68   Index:  11
+  Step  17: 53 / Centaur x3 (8.469s)
 Tower of Zot 3F                                           Seed:  68   Index:  28
   Step   2: 54 / Centaur x2, IceBeast x2 (10.289s)
   Step  15: 55 / Centaur x2, IceBeast x2 (10.289s)
@@ -398,19 +398,18 @@ Get Ninja Star on Lunar Subterrane B6                     Seed: 255   Index:   6
   Lunar Subterrane B7 Inward Save Room Steps              Seed: 255   Index:  68
     Lunar Subterrane B7                                   Seed: 255   Index:  68
     Lunar Subterrane B7 Save Room                         Seed: 255   Index:  91
-      Extra Steps: 6
-    Lunar Subterrane B7                                   Seed: 255   Index:  97
-      Step  23: 128 / D.Fossil x1 (6.210s)
-      Step  33: 129 / King-Ryu x1 (6.565s)
-      Step  47: 130 / King-Ryu x1 (6.565s)
-  Lunar Core B1                                           Seed: 255   Index: 155
-    Step  25: 131 / Behemoth x1 (7.463s)
-  Lunar Core B2                                           Seed: 255   Index: 223
-    Extra Steps: 8
-    Step   2: 132 / Behemoth x1 (7.463s)
-    Step  35: 133 / Behemoth x1 (7.463s)
-    Step  46: 134 / Behemoth x1 (7.463s)
-    Step  62: 135 / Behemoth x1 (7.463s)
+      Extra Steps: 14
+    Lunar Subterrane B7                                   Seed: 255   Index: 105
+      Step  15: 128 / D.Fossil x1 (6.210s)
+      Step  25: 129 / King-Ryu x1 (6.565s)
+      Step  39: 130 / King-Ryu x1 (6.565s)
+  Lunar Core B1                                           Seed: 255   Index: 163
+    Step  17: 131 / Behemoth x1 (7.463s)
+    Step  62: 132 / Behemoth x1 (7.463s)
+  Lunar Core B2                                           Seed: 255   Index: 231
+    Step  27: 133 / Behemoth x1 (7.463s)
+    Step  38: 134 / Behemoth x1 (7.463s)
+    Step  54: 135 / Behemoth x1 (7.463s)
   Lunar Core B3                                           Seed:  16   Index:  30
     Step   5: 136 / Behemoth x2 (7.516s)
     Step  34: 137 / Behemoth x1 (7.463s)

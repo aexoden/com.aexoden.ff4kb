@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa)
 VERSION	27
-ROSA	v1.2.0-13-ge69b608
+ROSA	v1.2.0-7-gad6754d
 SEED	28
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	8
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	169340550
-VARS	C000500:1 C30CA00:1 C316C00:2 E000401:2 E302500:6 E302600:10 E302700:3 E305400:38 E307000:12 E30A901:4 E30BD00:10 E30C800:42 E30CD00:26 E310700:1 E310701:4 E310702:12
+VARS	C000500:1 C30CA00:1 C316C00:2 E302600:12 E302700:3 E305400:56 E30BD00:10 E30C800:42 E30CD00:30 E310700:1 E310701:16
 
 Overworld (Kaipo)                                         Seed:  28   Index:   0
 Overworld (Kaipo)                                         Seed:  28   Index:   1
@@ -23,30 +23,28 @@ Watery Pass-South B1F                                     Seed:  28   Index: 101
 Watery Pass-South B2F                                     Seed:  28   Index: 121
   Step  85: 5 / Pike x2, EvilShel x2 (7.149s)
 Watery Pass-South B2F Save Room                           Seed:  28   Index: 211
-  Extra Steps: 38
-Watery Pass-South B2F                                     Seed:  28   Index: 253
-  Extra Steps: 12
-  Step  29: 6 / Pike x2, EvilShel x2 (7.149s)
-  Step  50: 7 / CaveToad x3 (7.014s)
-Watery Pass-South B3F                                     Seed:  45   Index:  48
-  Step  10: 8 / Pike x3 (7.152s)
-  Step  13: 9 / Jelly x4 (7.324s)
-Watery Pass-North B2F                                     Seed:  45   Index:  82
-Watery Pass-North B1F                                     Seed:  45   Index: 103
-  Step  22: 10 / CaveToad x4 (7.163s)
-Overworld (Kaipo)                                         Seed:  45   Index: 163
-Waterfalls B1F                                            Seed:  45   Index: 172
-Waterfalls B2F                                            Seed:  45   Index: 173
-  Step  30: 11 / Aligator x1, WaterBug x2 (7.292s)
-Waterfalls Lake                                           Seed:  45   Index: 218
-  Step  18: 12 / Zombie x6 (7.489s)
-Battle: Octomamm                                          Seed:  45   Index: 255
-Waterfalls Lake                                           Seed:  45   Index: 255
-Overworld (Kaipo)                                         Seed:  62   Index:   0
-Overworld (Damcyan)                                       Seed:  62   Index:  11
-Damcyan                                                   Seed:  62   Index:  15
+  Extra Steps: 56
+Watery Pass-South B2F                                     Seed:  45   Index:  15
+  Step  11: 6 / Pike x2, EvilShel x2 (7.149s)
+  Step  32: 7 / CaveToad x3 (7.014s)
+Watery Pass-South B3F                                     Seed:  45   Index:  54
+  Step   4: 8 / Pike x3 (7.152s)
+  Step   7: 9 / Jelly x4 (7.324s)
+Watery Pass-North B2F                                     Seed:  45   Index:  88
+Watery Pass-North B1F                                     Seed:  45   Index: 109
+  Step  16: 10 / CaveToad x4 (7.163s)
+Overworld (Kaipo)                                         Seed:  45   Index: 169
+Waterfalls B1F                                            Seed:  45   Index: 178
+Waterfalls B2F                                            Seed:  45   Index: 179
+  Step  24: 11 / Aligator x1, WaterBug x2 (7.292s)
+Waterfalls Lake                                           Seed:  45   Index: 224
+  Step  12: 12 / Zombie x6 (7.489s)
+Battle: Octomamm                                          Seed:  62   Index:   5
+Waterfalls Lake                                           Seed:  62   Index:   5
+Overworld (Kaipo)                                         Seed:  62   Index:   6
+Overworld (Damcyan)                                       Seed:  62   Index:  17
+Damcyan                                                   Seed:  62   Index:  21
   Optional Steps: 0
-  Extra Steps: 6
 Overworld (Damcyan)                                       Seed:  62   Index:  28
 Antlion B1F                                               Seed:  62   Index:  28
 Antlion B2F Inward Direct                                 Seed:  62   Index:  66
@@ -82,9 +80,9 @@ Overworld (Fabul)                                         Seed:  79   Index: 143
   Step  52: 24 / Gargoyle x1, Cocktric x2 (8.254s)
 Fabul                                                     Seed:  79   Index: 227
   Optional Steps: 10
-Overworld (Fabul)                                         Seed:  96   Index:  41
   Extra Steps: 2
-  Step   9: 25 / SwordRat x3, Needler x3 (7.573s)
+Overworld (Fabul)                                         Seed:  96   Index:  43
+  Step   7: 25 / SwordRat x3, Needler x3 (7.573s)
 Fabul Boat and Leviatan                                   Seed:  96   Index:  50
 Overworld (Mysidia)                                       Seed:  96   Index:  50
 Mysidia                                                   Seed:  96   Index:  59
@@ -244,26 +242,25 @@ Pass to Bab-il (south)                                    Seed: 249   Index:  36
 Pass to Bab-il (north) Inward Save Room Steps             Seed: 249   Index: 100
   Pass to Bab-il (north)                                  Seed: 249   Index: 100
   Pass to Bab-il (north) Save Room                        Seed: 249   Index: 104
-    Extra Steps: 26
-  Pass to Bab-il (north)                                  Seed: 249   Index: 130
-Recruit Edge                                              Seed: 249   Index: 153
-Remove Dwarf Axe in Edge Menu                             Seed: 249   Index: 153
-Pass to Bab-il (north)                                    Seed: 249   Index: 153
-Tower of Bab-il 1F                                        Seed: 249   Index: 156
-  Step   5: 79 / Sorcerer (summons Green D.) x1, BladeMan x2 (7.209s)
-  Step  23: 80 / Balloon x4 (7.171s)
-  Step  37: 81 / Balloon x4 (7.171s)
-  Step  69: 82 / Sorcerer (summons Mad Ogre) x1, BladeMan x2 (7.159s)
-Tower of Bab-il B2F                                       Seed: 249   Index: 238
-  Step  31: 83 / BlackCat x3 (7.142s)
-  Step  53: 84 / Egg (Lamia) x1 (7.878s)
-Tower of Bab-il B3F                                       Seed:  10   Index:  56
-Tower of Bab-il B4F                                       Seed:  10   Index:  69
-  Step  12: 85 / Balloon x3, Grudger x1 (7.145s)
-Tower of Bab-il B3F                                       Seed:  10   Index: 136
-  Extra Steps: 4
-  Step  23: 86 / Grudger x1, Mad Ogre x1, Balloon x2 (7.154s)
-  Step  46: 87 / Mad Ogre x3 (7.075s)
+    Extra Steps: 30
+  Pass to Bab-il (north)                                  Seed: 249   Index: 134
+Recruit Edge                                              Seed: 249   Index: 157
+Remove Dwarf Axe in Edge Menu                             Seed: 249   Index: 157
+Pass to Bab-il (north)                                    Seed: 249   Index: 157
+Tower of Bab-il 1F                                        Seed: 249   Index: 160
+  Step   1: 79 / Sorcerer (summons Green D.) x1, BladeMan x2 (7.209s)
+  Step  19: 80 / Balloon x4 (7.171s)
+  Step  33: 81 / Balloon x4 (7.171s)
+  Step  65: 82 / Sorcerer (summons Mad Ogre) x1, BladeMan x2 (7.159s)
+Tower of Bab-il B2F                                       Seed: 249   Index: 242
+  Step  27: 83 / BlackCat x3 (7.142s)
+  Step  49: 84 / Egg (Lamia) x1 (7.878s)
+Tower of Bab-il B3F                                       Seed:  10   Index:  60
+Tower of Bab-il B4F                                       Seed:  10   Index:  73
+  Step   8: 85 / Balloon x3, Grudger x1 (7.145s)
+Tower of Bab-il B3F                                       Seed:  10   Index: 140
+  Step  19: 86 / Grudger x1, Mad Ogre x1, Balloon x2 (7.154s)
+  Step  42: 87 / Mad Ogre x3 (7.075s)
 Tower of Bab-il B4F                                       Seed:  10   Index: 182
   Step   1: 88 / BlackCat x2, Lamia x1 (7.145s)
 Tower of Bab-il B5F                                       Seed:  10   Index: 185
@@ -279,12 +276,12 @@ Fly to Castle of Dwarves                                  Seed:  27   Index:  47
 Underworld (Castle of Dwarves)                            Seed:  27   Index:  47
 Castle of Dwarves                                         Seed:  27   Index:  47
   Optional Steps: 4
-Underworld (Castle of Dwarves)                            Seed:  27   Index:  74
-Sealed Cave                                               Seed:  27   Index:  75
-Underworld (Tomra)                                        Seed:  27   Index:  82
-Return to Castle of Dwarves                               Seed:  27   Index:  83
-Castle of Dwarves                                         Seed:  27   Index:  83
   Extra Steps: 12
+Underworld (Castle of Dwarves)                            Seed:  27   Index:  86
+Sealed Cave                                               Seed:  27   Index:  87
+Underworld (Tomra)                                        Seed:  27   Index:  94
+Return to Castle of Dwarves                               Seed:  27   Index:  95
+Castle of Dwarves                                         Seed:  27   Index:  95
 Underworld (Castle of Dwarves)                            Seed:  27   Index:  96
 Return to Mysidia                                         Seed:  27   Index:  97
 Fly the Falcon to the Big Whale                           Seed:  27   Index:  97

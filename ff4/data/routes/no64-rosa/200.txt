@@ -3,11 +3,11 @@ VERSION	27
 ROSA	v1.2.0-13-ge69b608
 SEED	200
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	19
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	170271429
-VARS	C305500:1 C307801:1 C308F00:1 C316C00:2 C316D00:1 E000701:1 E000703:2 E302600:14 E302700:57 E305400:6 E305500:23 E307400:72 E307B01:6 E308000:4 E308700:1 E308702:1 E308D00:6 E309200:26 E309700:80 E30AC01:2 E30BD00:2 E30C800:18 E310700:22 E310701:1 E317000:2 E317B00:2
+VARS	C305500:1 C307801:1 C308F00:1 C316C00:2 C316D00:1 E000701:1 E000703:2 E302600:14 E302700:57 E305400:6 E305500:23 E307400:72 E307B01:6 E308000:4 E308700:1 E308702:1 E308D00:6 E309200:26 E309700:80 E30BD00:2 E30C800:20 E310700:22 E310701:1 E317B00:4
 
 Overworld (Kaipo)                                         Seed: 200   Index:   0
 Overworld (Kaipo)                                         Seed: 200   Index:   1
@@ -243,40 +243,39 @@ Cave Eblana B1F                                           Seed: 165   Index:  88
 Cave Eblana B2F Shop Walk                                 Seed: 165   Index: 130
   Cave Eblana B2F                                         Seed: 165   Index: 130
     Optional Steps: 2
-    Extra Steps: 16
-Pass to Bab-il (south)                                    Seed: 165   Index: 204
-Pass to Bab-il (north)                                    Seed: 165   Index: 235
-  Step  30: 74 / Red Bone x3, Skull x2 (7.180s)
-Pass to Bab-il (south)                                    Seed: 182   Index:  12
-  Step   9: 75 / Skull x3 (9.861s)
-  Step  29: 76 / Staleman x1, Skull x2 (10.023s)
-Pass to Bab-il (north) Inward Direct                      Seed: 182   Index:  76
-  Pass to Bab-il (north)                                  Seed: 182   Index:  76
-Recruit Edge                                              Seed: 182   Index:  98
-Remove Dwarf Axe in Edge Menu                             Seed: 182   Index:  98
-Pass to Bab-il (north)                                    Seed: 182   Index:  98
-Tower of Bab-il 1F                                        Seed: 182   Index: 101
-  Step  44: 77 / Sorcerer (summons Mad Ogre) x1, BladeMan x2 (7.159s)
-Tower of Bab-il B2F                                       Seed: 182   Index: 183
-  Step   4: 78 / Balloon x4 (7.171s)
-  Step  19: 79 / Balloon x4 (7.171s)
-  Step  51: 80 / Sorcerer (summons BlackCat) x1, BladeMan x2 (7.156s)
-  Step  69: 81 / Sorcerer (summons BlackCat) x1, BladeMan x2 (7.156s)
-Tower of Bab-il B3F                                       Seed: 199   Index:   1
-Tower of Bab-il B4F                                       Seed: 199   Index:  14
-  Step   5: 82 / Egg (Lamia) x1 (7.878s)
-Tower of Bab-il B3F                                       Seed: 199   Index:  81
-  Step  22: 83 / Sorcerer (summons BladeMan) x1, BladeMan x2 (7.148s)
-  Step  25: 84 / Sorcerer (summons Green D.) x1, BladeMan x2 (7.209s)
-  Step  28: 85 / Mad Ogre x3 (7.075s)
-Tower of Bab-il B4F                                       Seed: 199   Index: 123
-Tower of Bab-il B5F                                       Seed: 199   Index: 126
-  Step   9: 86 / Balloon x3, Grudger x1 (7.145s)
-Battle: Rubicant                                          Seed: 199   Index: 153
-Equip Dwarf Axe When Removing Strength Ring               Seed: 199   Index: 153
-Tower of Bab-il B5F                                       Seed: 199   Index: 153
-  Extra Steps: 2
-  Step   3: 87 / Sorcerer (summons BlackCat) x1, BladeMan x2 (7.120s)
+    Extra Steps: 18
+Pass to Bab-il (south)                                    Seed: 165   Index: 206
+Pass to Bab-il (north)                                    Seed: 165   Index: 237
+  Step  28: 74 / Red Bone x3, Skull x2 (7.180s)
+Pass to Bab-il (south)                                    Seed: 182   Index:  14
+  Step   7: 75 / Skull x3 (9.861s)
+  Step  27: 76 / Staleman x1, Skull x2 (10.023s)
+Pass to Bab-il (north) Inward Direct                      Seed: 182   Index:  78
+  Pass to Bab-il (north)                                  Seed: 182   Index:  78
+Recruit Edge                                              Seed: 182   Index: 100
+Remove Dwarf Axe in Edge Menu                             Seed: 182   Index: 100
+Pass to Bab-il (north)                                    Seed: 182   Index: 100
+Tower of Bab-il 1F                                        Seed: 182   Index: 103
+  Step  42: 77 / Sorcerer (summons Mad Ogre) x1, BladeMan x2 (7.159s)
+Tower of Bab-il B2F                                       Seed: 182   Index: 185
+  Step   2: 78 / Balloon x4 (7.171s)
+  Step  17: 79 / Balloon x4 (7.171s)
+  Step  49: 80 / Sorcerer (summons BlackCat) x1, BladeMan x2 (7.156s)
+  Step  67: 81 / Sorcerer (summons BlackCat) x1, BladeMan x2 (7.156s)
+Tower of Bab-il B3F                                       Seed: 199   Index:   3
+Tower of Bab-il B4F                                       Seed: 199   Index:  16
+  Step   3: 82 / Egg (Lamia) x1 (7.878s)
+Tower of Bab-il B3F                                       Seed: 199   Index:  83
+  Step  20: 83 / Sorcerer (summons BladeMan) x1, BladeMan x2 (7.148s)
+  Step  23: 84 / Sorcerer (summons Green D.) x1, BladeMan x2 (7.209s)
+  Step  26: 85 / Mad Ogre x3 (7.075s)
+Tower of Bab-il B4F                                       Seed: 199   Index: 125
+Tower of Bab-il B5F                                       Seed: 199   Index: 128
+  Step   7: 86 / Balloon x3, Grudger x1 (7.145s)
+Battle: Rubicant                                          Seed: 199   Index: 155
+Equip Dwarf Axe When Removing Strength Ring               Seed: 199   Index: 155
+Tower of Bab-il B5F                                       Seed: 199   Index: 155
+  Step   1: 87 / Sorcerer (summons BlackCat) x1, BladeMan x2 (7.120s)
 Tower of Bab-il 8F (revisit)                              Seed: 199   Index: 156
 Tower of Bab-il 7F (revisit)                              Seed: 199   Index: 172
 Tower of Bab-il 6F (revisit)                              Seed: 199   Index: 196
@@ -386,19 +385,18 @@ Get Ninja Star on Lunar Core B3                           Seed:  11   Index: 149
     Lunar Subterrane B7                                   Seed:  11   Index: 199
       Step  13: 116 / D.Fossil x1 (6.210s)
     Lunar Subterrane B7 Save Room                         Seed:  11   Index: 222
-      Extra Steps: 2
-    Lunar Subterrane B7                                   Seed:  11   Index: 224
-      Step  31: 117 / D.Fossil x1 (6.210s)
-  Lunar Core B1                                           Seed:  28   Index:  26
-    Step  26: 118 / EvilMask x1 (12.170s)
-    Step  34: 119 / EvilMask x1 (12.170s)
-    Step  43: 120 / EvilMask x1 (12.170s)
-    Step  66: 121 / Behemoth x1 (7.463s)
-  Lunar Core B2                                           Seed:  28   Index:  94
-    Step   2: 122 / Behemoth x1 (7.463s)
-  Lunar Core B3                                           Seed:  28   Index: 149
-    Extra Steps: 2
-    Step  57: 123 / Behemoth x2 (7.516s)
+      Extra Steps: 4
+    Lunar Subterrane B7                                   Seed:  11   Index: 226
+      Step  29: 117 / D.Fossil x1 (6.210s)
+  Lunar Core B1                                           Seed:  28   Index:  28
+    Step  24: 118 / EvilMask x1 (12.170s)
+    Step  32: 119 / EvilMask x1 (12.170s)
+    Step  41: 120 / EvilMask x1 (12.170s)
+    Step  64: 121 / Behemoth x1 (7.463s)
+    Step  68: 122 / Behemoth x1 (7.463s)
+  Lunar Core B2                                           Seed:  28   Index:  96
+  Lunar Core B3                                           Seed:  28   Index: 151
+    Step  55: 123 / Behemoth x2 (7.516s)
 Lunar Core B4                                             Seed:  28   Index: 207
   Step  32: 124 / Breath x1 (11.914s)
   Step  46: 125 / Breath x1 (11.914s)

@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa)
 VERSION	27
-ROSA	v1.2.0-13-ge69b608
+ROSA	v1.2.0-7-gad6754d
 SEED	119
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	10
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	171789019
-VARS	C305500:1 C308F00:1 C30CA01:1 C316C00:2 C316D00:1 E302500:1 E302600:5 E302700:37 E305500:7 E308702:1 E308F01:2 E309200:2 E30C800:1 E310700:17 E311E00:2 E317500:1 E317B00:14
+VARS	C305500:1 C308F00:1 C30CA01:1 C316C00:2 C316D00:1 E302500:1 E302600:5 E302700:37 E305500:7 E308702:1 E309200:4 E310700:18 E311E00:2 E317500:1 E317B00:14
 
 Overworld (Kaipo)                                         Seed: 119   Index:   0
 Overworld (Kaipo)                                         Seed: 119   Index:   1
@@ -147,11 +147,10 @@ Cave Magnes B2F                                           Seed: 221   Index: 239
 Cave Magnes B3F Inward Save Room Steps                    Seed: 238   Index:  24
   Cave Magnes B3F                                         Seed: 238   Index:  24
   Cave Magnes B3F Save Room                               Seed: 238   Index:  32
-    Extra Steps: 2
-  Cave Magnes B3F                                         Seed: 238   Index:  34
-    Extra Steps: 2
-    Step  32: 48 / Cave Bat x3 (9.265s)
-    Step  64: 49 / Mage x2 (8.585s)
+    Extra Steps: 4
+  Cave Magnes B3F                                         Seed: 238   Index:  36
+    Step  30: 48 / Cave Bat x3 (9.265s)
+    Step  62: 49 / Mage x2 (8.585s)
 Cave Magnes B3F Passage                                   Seed: 238   Index:  99
 Cave Magnes B4F Inward Direct                             Seed: 238   Index: 110
   Cave Magnes B4F                                         Seed: 238   Index: 110
@@ -191,56 +190,56 @@ Overworld (Eblan)                                         Seed: 255   Index: 205
 Underworld (Castle of Dwarves)                            Seed: 255   Index: 206
 Castle of Dwarves Walk                                    Seed: 255   Index: 207
   Castle of Dwarves                                       Seed: 255   Index: 207
-    Optional Steps: 17
-Underworld (Castle of Dwarves)                            Seed:  16   Index:  74
-  Step  84: 60 / Armadilo x1, Tortoise x2 (6.803s)
-Tower of Bab-il 1F                                        Seed:  16   Index: 197
-  Step  15: 61 / FlameDog x3 (7.032s)
-Tower of Bab-il 2F                                        Seed:  16   Index: 215
-  Step   7: 62 / BlackLiz x2 (8.214s)
-Tower of Bab-il 3F                                        Seed:  16   Index: 253
-  Step  10: 63 / Egg (BlackLiz) x1 (7.624s)
-Tower of Bab-il 4F                                        Seed:  33   Index:  55
-  Step  14: 64 / Tortoise x2, BlackLiz x1 (7.003s)
-  Step  37: 65 / Chimera x2 (8.558s)
-Tower of Bab-il 5F                                        Seed:  33   Index: 117
-  Step  24: 66 / BlackLiz x3 (6.963s)
-Tower of Bab-il 6F                                        Seed:  33   Index: 174
-Tower of Bab-il 7F                                        Seed:  33   Index: 186
-  Step   2: 67 / Stoneman x1, Medusa x1 (8.567s)
-  Step  34: 68 / Alert (summons Chimera) x1 (7.249s)
-Tower of Bab-il 8F                                        Seed:  33   Index: 229
-  Step  12: 69 / Alert (summons Stoneman) x1 (7.308s)
-Battle: Dr.Lugae                                          Seed:  33   Index: 254
-Tower of Bab-il 8F                                        Seed:  33   Index: 254
-Tower of Bab-il 7F                                        Seed:  50   Index:  24
-  Step   3: 70 / Alert (summons Chimera) x1 (7.188s)
-  Step  30: 71 / Stoneman x1, Medusa x1 (8.328s)
-  Step  34: 72 / Alert (summons Naga) x1 (7.143s)
-  Step  37: 73 / Alert (summons FlameDog) x1 (7.185s)
-Tower of Bab-il 6F                                        Seed:  50   Index:  68
-Tower of Bab-il 5F                                        Seed:  50   Index:  81
-Battle: Dark Imps                                         Seed:  50   Index: 123
-Tower of Bab-il 5F                                        Seed:  50   Index: 123
-  Step  44: 74 / Chimera x1, FlameMan x2 (9.730s)
-Tower of Bab-il 4F                                        Seed:  50   Index: 167
-  Step  19: 75 / Egg (BlackLiz) x1 (7.850s)
-Tower of Bab-il 3F                                        Seed:  50   Index: 229
-  Step  17: 76 / BlackLiz x2 (8.519s)
-Tower of Bab-il 2F                                        Seed:  67   Index:  23
-  Step   5: 77 / FlameMan x2, FlameDog x2 (10.337s)
-  Step   7: 78 / FlameMan x2, FlameDog x2 (10.337s)
-  Step  20: 79 / BlackLiz x2 (8.519s)
-Tower of Bab-il 1F                                        Seed:  67   Index:  61
-Travel to Baron                                           Seed:  67   Index:  76
-Overworld (Baron)                                         Seed:  67   Index:  76
-Castle Baron                                              Seed:  67   Index:  76
-Airship Hook                                              Seed:  67   Index:  89
-Overworld (Eblan)                                         Seed:  67   Index:  89
-Cave Eblana B1F                                           Seed:  67   Index:  90
-Cave Eblana B2F Shop Walk                                 Seed:  67   Index: 132
-  Cave Eblana B2F                                         Seed:  67   Index: 132
-    Optional Steps: 1
+    Optional Steps: 18
+Underworld (Castle of Dwarves)                            Seed:  16   Index:  75
+  Step  83: 60 / Armadilo x1, Tortoise x2 (6.803s)
+Tower of Bab-il 1F                                        Seed:  16   Index: 198
+  Step  14: 61 / FlameDog x3 (7.032s)
+Tower of Bab-il 2F                                        Seed:  16   Index: 216
+  Step   6: 62 / BlackLiz x2 (8.214s)
+Tower of Bab-il 3F                                        Seed:  16   Index: 254
+  Step   9: 63 / Egg (BlackLiz) x1 (7.624s)
+Tower of Bab-il 4F                                        Seed:  33   Index:  56
+  Step  13: 64 / Tortoise x2, BlackLiz x1 (7.003s)
+  Step  36: 65 / Chimera x2 (8.558s)
+Tower of Bab-il 5F                                        Seed:  33   Index: 118
+  Step  23: 66 / BlackLiz x3 (6.963s)
+Tower of Bab-il 6F                                        Seed:  33   Index: 175
+Tower of Bab-il 7F                                        Seed:  33   Index: 187
+  Step   1: 67 / Stoneman x1, Medusa x1 (8.567s)
+  Step  33: 68 / Alert (summons Chimera) x1 (7.249s)
+Tower of Bab-il 8F                                        Seed:  33   Index: 230
+  Step  11: 69 / Alert (summons Stoneman) x1 (7.308s)
+Battle: Dr.Lugae                                          Seed:  33   Index: 255
+Tower of Bab-il 8F                                        Seed:  33   Index: 255
+Tower of Bab-il 7F                                        Seed:  50   Index:  25
+  Step   2: 70 / Alert (summons Chimera) x1 (7.188s)
+  Step  29: 71 / Stoneman x1, Medusa x1 (8.328s)
+  Step  33: 72 / Alert (summons Naga) x1 (7.143s)
+  Step  36: 73 / Alert (summons FlameDog) x1 (7.185s)
+Tower of Bab-il 6F                                        Seed:  50   Index:  69
+Tower of Bab-il 5F                                        Seed:  50   Index:  82
+Battle: Dark Imps                                         Seed:  50   Index: 124
+Tower of Bab-il 5F                                        Seed:  50   Index: 124
+  Step  43: 74 / Chimera x1, FlameMan x2 (9.730s)
+Tower of Bab-il 4F                                        Seed:  50   Index: 168
+  Step  18: 75 / Egg (BlackLiz) x1 (7.850s)
+Tower of Bab-il 3F                                        Seed:  50   Index: 230
+  Step  16: 76 / BlackLiz x2 (8.519s)
+Tower of Bab-il 2F                                        Seed:  67   Index:  24
+  Step   4: 77 / FlameMan x2, FlameDog x2 (10.337s)
+  Step   6: 78 / FlameMan x2, FlameDog x2 (10.337s)
+  Step  19: 79 / BlackLiz x2 (8.519s)
+Tower of Bab-il 1F                                        Seed:  67   Index:  62
+Travel to Baron                                           Seed:  67   Index:  77
+Overworld (Baron)                                         Seed:  67   Index:  77
+Castle Baron                                              Seed:  67   Index:  77
+Airship Hook                                              Seed:  67   Index:  90
+Overworld (Eblan)                                         Seed:  67   Index:  90
+Cave Eblana B1F                                           Seed:  67   Index:  91
+Cave Eblana B2F Shop Walk                                 Seed:  67   Index: 133
+  Cave Eblana B2F                                         Seed:  67   Index: 133
+    Optional Steps: 0
 Pass to Bab-il (south)                                    Seed:  67   Index: 189
 Pass to Bab-il (north)                                    Seed:  67   Index: 220
   Step  30: 80 / Red Bone x3, Skull x2 (7.180s)

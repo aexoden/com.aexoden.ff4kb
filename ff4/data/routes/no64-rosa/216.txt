@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa)
 VERSION	27
-ROSA	v1.2.0-13-ge69b608
+ROSA	v1.2.0-7-gad6754d
 SEED	216
 MAXSTEP	128
-MAXSEG	-1
+MAXSEG	16
 TASMODE	0
-MINIMUM	0
+MINIMUM	1
 FRAMES	169637280
-VARS	C305500:1 C316C00:2 C316D00:1 E000200:6 E000701:1 E200005:6 E302402:4 E302600:10 E302700:21 E305500:3 E307400:128 E308702:1 E309700:12 E30A800:2 E30BD00:90 E30C800:2 E310700:2 E310701:4 E310702:64 E311D00:6 E314400:2 E316D01:2 E317B00:18
+VARS	C305500:1 C316C00:2 C316D00:1 E000200:6 E000701:1 E200005:6 E302402:4 E302600:10 E302700:21 E305500:3 E307400:128 E308702:1 E309700:12 E30BD00:90 E30C800:4 E310700:2 E310701:70 E311D00:6 E317B00:20
 
 Overworld (Kaipo)                                         Seed: 216   Index:   0
 Overworld (Kaipo)                                         Seed: 216   Index:   1
@@ -233,24 +233,24 @@ Cave Eblana B1F                                           Seed: 164   Index: 205
 Cave Eblana B2F Shop Walk                                 Seed: 164   Index: 247
   Cave Eblana B2F                                         Seed: 164   Index: 247
     Optional Steps: 2
-Pass to Bab-il (south)                                    Seed: 181   Index:  49
-Pass to Bab-il (north)                                    Seed: 181   Index:  80
-Pass to Bab-il (south)                                    Seed: 181   Index: 113
-  Step  57: 73 / Skull x4 (10.637s)
-Pass to Bab-il (north) Inward Direct                      Seed: 181   Index: 177
-  Pass to Bab-il (north)                                  Seed: 181   Index: 177
-    Step  10: 74 / Egg (Lamia) x1 (8.155s)
-Recruit Edge                                              Seed: 181   Index: 199
-Remove Dwarf Axe in Edge Menu                             Seed: 181   Index: 199
-Pass to Bab-il (north)                                    Seed: 181   Index: 199
-  Step   3: 75 / Ironback x2, BlackLiz x2 (7.194s)
-Tower of Bab-il 1F                                        Seed: 181   Index: 202
-  Step  32: 76 / Mad Ogre x2 (8.472s)
-  Step  50: 77 / Egg (Lamia) x1 (7.878s)
-  Step  73: 78 / Egg (Lamia) x1 (7.878s)
-Tower of Bab-il B2F                                       Seed: 198   Index:  28
-  Extra Steps: 2
-  Step  75: 79 / Mad Ogre x1, BlackCat x2 (7.108s)
+    Extra Steps: 2
+Pass to Bab-il (south)                                    Seed: 181   Index:  51
+Pass to Bab-il (north)                                    Seed: 181   Index:  82
+Pass to Bab-il (south)                                    Seed: 181   Index: 115
+  Step  55: 73 / Skull x4 (10.637s)
+Pass to Bab-il (north) Inward Direct                      Seed: 181   Index: 179
+  Pass to Bab-il (north)                                  Seed: 181   Index: 179
+    Step   8: 74 / Egg (Lamia) x1 (8.155s)
+Recruit Edge                                              Seed: 181   Index: 201
+Remove Dwarf Axe in Edge Menu                             Seed: 181   Index: 201
+Pass to Bab-il (north)                                    Seed: 181   Index: 201
+  Step   1: 75 / Ironback x2, BlackLiz x2 (7.194s)
+Tower of Bab-il 1F                                        Seed: 181   Index: 204
+  Step  30: 76 / Mad Ogre x2 (8.472s)
+  Step  48: 77 / Egg (Lamia) x1 (7.878s)
+  Step  71: 78 / Egg (Lamia) x1 (7.878s)
+Tower of Bab-il B2F                                       Seed: 198   Index:  30
+  Step  73: 79 / Mad Ogre x1, BlackCat x2 (7.108s)
 Tower of Bab-il B3F                                       Seed: 198   Index: 104
   Step   2: 80 / Mad Ogre x2, BlackCat x2 (7.171s)
   Step   5: 81 / Mad Ogre x2, BlackCat x2 (7.171s)
@@ -275,13 +275,12 @@ Fly to Castle of Dwarves                                  Seed: 215   Index:  97
 Underworld (Castle of Dwarves)                            Seed: 215   Index:  97
 Castle of Dwarves                                         Seed: 215   Index:  97
   Optional Steps: 4
-Underworld (Castle of Dwarves)                            Seed: 215   Index: 124
-Sealed Cave                                               Seed: 215   Index: 125
-  Extra Steps: 2
-Underworld (Tomra)                                        Seed: 215   Index: 134
-Return to Castle of Dwarves                               Seed: 215   Index: 135
-Castle of Dwarves                                         Seed: 215   Index: 135
-  Extra Steps: 64
+  Extra Steps: 66
+Underworld (Castle of Dwarves)                            Seed: 215   Index: 190
+Sealed Cave                                               Seed: 215   Index: 191
+Underworld (Tomra)                                        Seed: 215   Index: 198
+Return to Castle of Dwarves                               Seed: 215   Index: 199
+Castle of Dwarves                                         Seed: 215   Index: 199
 Underworld (Castle of Dwarves)                            Seed: 215   Index: 200
   Step   1: 88 / Tortoise x1, Dark Imp x2 (6.722s)
 Return to Mysidia                                         Seed: 215   Index: 201
@@ -376,12 +375,11 @@ Get Ninja Star on Lunar Core B3                           Seed:  27   Index: 163
   Lunar Subterrane B7 Inward Save Room Steps              Seed:  27   Index: 213
     Lunar Subterrane B7                                   Seed:  27   Index: 213
     Lunar Subterrane B7 Save Room                         Seed:  27   Index: 236
-      Extra Steps: 18
-    Lunar Subterrane B7                                   Seed:  27   Index: 254
-      Extra Steps: 2
-      Step  28: 115 / D.Fossil x1 (6.210s)
-      Step  49: 116 / D.Fossil x1 (6.210s)
-      Step  60: 117 / D.Fossil x1 (6.210s)
+      Extra Steps: 20
+    Lunar Subterrane B7                                   Seed:  44   Index:   0
+      Step  26: 115 / D.Fossil x1 (6.210s)
+      Step  47: 116 / D.Fossil x1 (6.210s)
+      Step  58: 117 / D.Fossil x1 (6.210s)
   Lunar Core B1                                           Seed:  44   Index:  58
     Step  15: 118 / Behemoth x1 (7.463s)
     Step  36: 119 / Behemoth x1 (7.463s)
