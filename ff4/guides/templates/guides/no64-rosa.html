@@ -543,15 +543,17 @@
 			<div class="bs-callout bs-callout-info">
 				<span class="fas fa-bars"></span>
 				<h4>Menu</h4>
+                <p>The following is a baseline list of things you might do in this menu. Please read the below paragraphs for more information. <strong>If using the mimic (<i>Carrot</i>) strategy, ideally, there is no menu at all.</strong></p>
 				<ul>
 					<li>Equip Porom (for Twin strats only): */*/<i>Tiara</i>/<i>Gaea</i>/<i>Silver</i>.</li>
-					<li>Equip Palom: */<i>Change</i>/<i>Gaea</i>/<i>Gaea</i>/<i>Silver</i>.</li>
-					<li>Equip Tellah: */*/<i>Gaea</i>/*/<i>Silver</i>.</li>
+					<li>Equip Palom (for Twin strats or extra safety): */<i>Change</i>/<i>Gaea</i>/<i>Gaea</i>/<i>Silver</i>.</li>
+					<li>Equip Tellah (for Twin strats or extra safety): */*/<i>Gaea</i>/*/<i>Silver</i>.</li>
 					<li>Fully heal the party (for Twin strats only).</li>
 				</ul>
-				<p>If you are going to use the Mimic (<i>Carrot</i>) strategy, you should not equip or heal Porom. You can also opt to skip equipping the other characters, as well. You may wish to at least equip <i>Change</i> on Palom to make the backup strategy more effective, but the inventory management route will assume you did not do this.</p>
+                <p>If you are going to use the Mimic (<i>Carrot</i>) strategy, you should not equip or heal Porom, though you should make sure she is alive and in critical health. You can also opt to skip equipping the other characters, as well. You may wish to at least equip <i>Change</i> on Palom to make the backup strategy more effective.</p>
+                <p>The inventory management instructions will assume you didn't do any equipment changes.</p>
 				<p>Even if you're not doing the full equipment change, if you have to menu anyway to heal, you may want to put the <i>Gaea</i> (helm) on Tellah. It will have to be done eventually, and now's as good a time as any.</p>
-				<p>If you want an easier time if you're using the Mimic (<i>Carrot</i>) strategy, consider changing the battle speed to 2.</p>
+				<p>If you want an easier time if you're using the Mimic (<i>Carrot</i>) strategy, consider changing the battle speed to 2 (or slower).</p>
 			</div>
 			<div class="bs-callout bs-callout-warning">
 				<span class="fas fa-bolt"></span>
@@ -1150,7 +1152,7 @@
 				<h4>Menu</h4>
 				<ul>
 					<li>Equip Yang: */<i>CatClaw</i>/*/*/* (finishes duplication).</li>
-					<li>Fully heal the party, but don't heal mute (if you skipped the healing pot).</li>
+					<li>Fully heal the party (except perhaps Rosa), but don't heal mute (if you skipped the healing pot).</li>
 				</ul>
 			</div>
 			<p>Approach Dr.Lugae to begin the scene.</p>
@@ -1170,7 +1172,7 @@
 				<div class="info-block">
 					<dl class="dl-horizontal">
 						<dt>Kain</dt><dd>Run Buffer<br>Jump Dr.Lugae</dd>
-						<dt>Yang</dt><dd>Fight</dd>
+						<dt>Yang</dt><dd>Fight (hold A)</dd>
 						<dt>Rydia</dt><dd>Cast Titan</dd>
 						<dt>Cecil</dt><dd>Fight Dr.Lugae</dd>
 						<dt>Rosa</dt><dd>Cast Mute on Dr.Lugae</dd>
@@ -1180,7 +1182,7 @@
 						<dt>Yang</dt><dd>Fight</dd>
 					</dl>
 					<p>After Cecil targets Dr.Lugae the second time, you can basically hold A until the fight is over. Yang may not be sufficient, in which case Rosa or Rydia will most likely finish the job.</p>
-					<p>In case you were wondering, the Mute cast is for timing purposes only.</p>
+					<p>If you kept Rosa dead, simply skip her turn. In that case, Yang will need to wait for the dialog before he begins inventory management. Also, in case you were wondering, the Mute cast is for timing purposes only.</p>
 				</div>
 			</div>
 			<div class="bs-callout bs-callout-warning">
@@ -1194,22 +1196,38 @@
 						<dt>Party</dt><dd>*Rosa (18:20881) / Rydia (18:25057) / *Kain (21:30238) / Cecil (19:21382) / *Yang (17:13893)</dd>
 					</dl>
 				</div>
-				<h5>Battle Plan</h5>
-				<div class="info-block">
-					<dl class="dl-horizontal">
-						<dt>Kain</dt><dd>Run Buffer<br>Jump</dd>
-						<dt>Yang</dt><dd>Fight</dd>
-						<dt>Rydia</dt><dd>Cast Titan</dd>
-						<dt>Cecil</dt><dd>Fight (if someone fell asleep)/Parry</dd>
-						<dt>Rosa</dt><dd>Heal Sleep/Parry</dd>
-						<dt>Yang</dt><dd>Fight</dd>
-						<dt>Kain</dt><dd>Fight</dd>
-						<dt>Cecil</dt><dd>Parry</dd>
-						<dt>Rosa</dt><dd>Parry</dd>
-						<dt>Yang</dt><dd>Fight</dd>
-						<dt>Rydia</dt><dd>Cast Lit-2</dd>
-					</dl>
-				</div>
+                <h5>Battle Plan</h5>
+                <p>This fight can vary slightly depending on if you revived Rosa or not. Ideally, she's dead.</p>
+				<ul class="nav nav-tabs">
+					<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tab-battle-lugae-rosa-dead">Rosa Dead</a></li>
+					<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-battle-lugae-rosa-alive">Rosa Alive</a></li>
+				</ul>
+				<div class="info-block tab-content">
+                    <div class="tab-pane fade show active" id="tab-battle-lugae-rosa-dead">
+                        <dl class="dl-horizontal">
+                            <dt>Kain</dt><dd>Run Buffer<br>Fight</dd>
+                            <dt>Yang</dt><dd>Run Buffer<br>Fight</dd>
+                            <dt>Rydia</dt><dd>Cast Titan</dd>
+                            <dt>Cecil</dt><dd>Parry</dd>
+                        </dl>
+                        <p>At this point, you can just hold A.</p>
+                    </div>
+                    <div class="tab-pane fade" id="tab-battle-lugae-rosa-alive">
+                        <dl class="dl-horizontal">
+                            <dt>Kain</dt><dd>Run Buffer<br>Jump</dd>
+                            <dt>Yang</dt><dd>Fight</dd>
+                            <dt>Rydia</dt><dd>Cast Titan</dd>
+                            <dt>Cecil</dt><dd>Fight (if someone fell asleep)/Parry</dd>
+                            <dt>Rosa</dt><dd>Heal Sleep/Parry</dd>
+                            <dt>Yang</dt><dd>Fight</dd>
+                            <dt>Kain</dt><dd>Fight</dd>
+                            <dt>Cecil</dt><dd>Parry</dd>
+                            <dt>Rosa</dt><dd>Parry</dd>
+                            <dt>Yang</dt><dd>Fight</dd>
+                            <dt>Rydia</dt><dd>Cast Lit-2</dd>
+                        </dl>
+                    </div>
+                </div>
 			</div>
 			<div class="bs-callout bs-callout-info">
 				<span class="fas fa-bars"></span>
