@@ -936,6 +936,14 @@ com.aexoden.ff4.exp = function()
             party: {[CHARACTER_CECIL]: true, [CHARACTER_EDGE]: true, [CHARACTER_FUSOYA]: true, [CHARACTER_ROSA]: false, [CHARACTER_RYDIA]: false},
             shadow: [CHARACTER_KAIN],
         },
+        evilwall: {
+            monsters: {
+                evilwall: {modify: false, count: 1},
+            },
+            name: "EvilWall",
+            party: {[CHARACTER_CECIL]: true, [CHARACTER_EDGE]: true, [CHARACTER_KAIN]: true, [CHARACTER_ROSA]: true, [CHARACTER_RYDIA]: true},
+            shadow: [],
+        },
         fabul_1: {
             monsters: {
                 general: {modify: true, count: 0},
@@ -1079,12 +1087,44 @@ com.aexoden.ff4.exp = function()
             party: {[CHARACTER_DKC]: true},
             shadow: [CHARACTER_KAIN],
         },
+        pikes: {
+            monsters: {
+                pike: {modify: true, count: 3},
+            },
+            name: "Pike x3",
+            party: {[CHARACTER_DKC]: true, [CHARACTER_RYDIA]: true, [CHARACTER_TELLAH]: true},
+            shadow: [CHARACTER_KAIN],
+        },
         rubicant: {
             monsters: {
                 rubicant: {modify: false, count: 1},
             },
             name: "Rubicant",
             party: {[CHARACTER_CECIL]: true, [CHARACTER_EDGE]: true, [CHARACTER_KAIN]: true, [CHARACTER_ROSA]: true, [CHARACTER_RYDIA]: true},
+            shadow: [],
+        },
+        trapdoor_1: {
+            monsters: {
+                trapdoor: {modify: true, count: 1},
+            },
+            name: "TrapDoor 1",
+            party: {[CHARACTER_CECIL]: false, [CHARACTER_EDGE]: true, [CHARACTER_KAIN]: true, [CHARACTER_ROSA]: true, [CHARACTER_RYDIA]: true},
+            shadow: [],
+        },
+        trapdoor_2: {
+            monsters: {
+                trapdoor: {modify: true, count: 1},
+            },
+            name: "TrapDoor 2",
+            party: {[CHARACTER_CECIL]: false, [CHARACTER_EDGE]: true, [CHARACTER_KAIN]: true, [CHARACTER_ROSA]: true, [CHARACTER_RYDIA]: true},
+            shadow: [],
+        },
+        trapdoor_3: {
+            monsters: {
+                trapdoor: {modify: true, count: 1},
+            },
+            name: "TrapDoor 3",
+            party: {[CHARACTER_CECIL]: false, [CHARACTER_EDGE]: true, [CHARACTER_KAIN]: true, [CHARACTER_ROSA]: true, [CHARACTER_RYDIA]: true},
             shadow: [],
         },
         valvalis: {
@@ -1124,6 +1164,7 @@ com.aexoden.ff4.exp = function()
         dr_lugae:      {name: "Dr.Lugae", exp: {sfc: 10101, snes: 15000}},
         elements_1:    {name: "Elements (Milon Z./Rubicant)", exp: {"*": 40000}},
         elements_2:    {name: "Elements (Kainazzo/Valvalis)", exp: {"*": 62500}},
+        evilwall:      {name: "EvilWall", exp: {"*": 23000}},
         fighter:       {name: "Fighter",  exp: {sfc: 400, snes: 410}},
         flamedog:      {name: "Flamedog", exp: {sfc: 1708, snes: 1720}},
         gargoyle:      {name: "Gargoyle", exp: {sfc: 315, snes: 320}},
@@ -1134,17 +1175,20 @@ com.aexoden.ff4.exp = function()
         imp_cap:       {name: "Imp Cap.", exp: {sfc: 184, snes: 190}},
         kainazzo:      {name: "Kainazzo", exp: {"*": 5500}},
         left_arm:      {name: "Left Arm", exp: {"*": 10}},
+        lilith:        {name: "Lilith",   exp: {sfc: 2703, snes: 2750}},
         milon:         {name: "Milon",    exp: {"*": 3200}},
         milon_z:       {name: "Milon Z.", exp: {sfc: 3600, snes: 4000}},
         mindy:         {name: "Mindy",    exp: {sfc: 2500, snes: 3000}},
         octomamm:      {name: "Octomamm", exp: {"*": 1200}},
         officer:       {name: "Officer",  exp: {sfc: 398, snes: 400}},
+        pike:          {name: "Pike",     exp: {sfc: 119, snes: 120}},
         rightarm:      {name: "RightArm", exp: {"*": 10}},
         rubicant:      {name: "Rubicant", exp: {sfc: 18000, snes: 25000}},
         sandy:         {name: "Sandy",    exp: {sfc: 2500, snes: 3000}},
         searcher:      {name: "Searcher", exp: {sfc: 15004, snes: 18200}},
         shadow:        {name: "Shadow",   exp: {sfc: 1, snes: 5000}},
         soldier:       {name: "Soldier",  exp: {sfc: 157, snes: 160}},
+        trapdoor:      {name: "TrapDoor", exp: {sfc: 30000, snes: 31100}},
         valvalis:      {name: "Valvalis", exp: {sfc: 9000, snes: 9500}},
         waterhag:      {name: "WaterHag", exp: {sfc: 136, snes: 140}},
         waterhag_boss: {name: "WaterHag", exp: {"*": 800}},
@@ -1152,6 +1196,88 @@ com.aexoden.ff4.exp = function()
     };
 
     let _routeData = {
+        glitchless: {
+            battles: [
+                "d_mist",
+                "officer_soldiers",
+                "pikes",
+                "octomamm",
+                "antlion",
+                "waterhag",
+                "mombomb",
+                "fabul_1",
+                "fabul_2",
+                "fabul_3",
+                "fabul_4",
+                "fabul_5",
+                "fabul_6",
+                "milon",
+                "milon_z",
+                "baigan",
+                "kainazzo",
+                "dark_elf",
+                "flamedog",
+                "magus_sisters",
+                "valvalis",
+                "calbrena",
+                "golbez",
+                "dr_lugae",
+                "dark_imps",
+                "rubicant",
+                "trapdoor_1",
+                "trapdoor_2",
+                "trapdoor_3",
+                "evilwall",
+                "grind",
+                "elements",
+                "cpu",
+            ],
+            exp_table: "snes",
+            name: "Any% Glitchless",
+            overrides: {
+                cpu: {
+                    party: { [CHARACTER_CECIL]: false, [CHARACTER_ROSA]: true },
+                },
+                dr_lugae: {
+                    party: { [CHARACTER_ROSA]: false },
+                },
+                elements: {
+                    monsters: { elements_1: { count: 0 }, elements_2: { count: 1 }},
+                    party: { [CHARACTER_CECIL]: false, [CHARACTER_ROSA]: true},
+                },
+                grind: {
+                    monsters: { d_machin: { count: 17 }},
+                    party: { [CHARACTER_EDGE]: false, [CHARACTER_ROSA]: true },
+                },
+                magus_sisters: {
+                    monsters: {sandy: { modify: true }},
+                    party: { [CHARACTER_CECIL]: false },
+                },
+                milon_z: {
+                    party: { [CHARACTER_POROM]: true },
+                },
+                valvalis: {
+                    party: { [CHARACTER_CID]: false },
+                },
+            },
+            restrictions: {
+                cpu: {
+                    [CHARACTER_CECIL]: [null, 27],
+                    [CHARACTER_EDGE]: [32, null],
+                    [CHARACTER_ROSA]: [20, null],
+                },
+                dark_imps: {
+                    [CHARACTER_CECIL]: [null, 19],
+                },
+                golbez: {
+                    [CHARACTER_RYDIA]: [19, null],
+                    [CHARACTER_YANG]: [17, null],
+                },
+                magus_sisters: {
+                    [CHARACTER_KAIN]: [19, null],
+                },
+            },
+        },
         "no64-excalbur": {
             battles: [
                 "d_mist",
@@ -1368,12 +1494,12 @@ com.aexoden.ff4.exp = function()
     var reset = function() {
         _overrides = {};
         _monster_overrides = {};
-        updateDisplay();
+        updateDisplay(true);
     };
 
     var init = function() {
         initSelect();
-        updateDisplay();
+        updateDisplay(true);
     };
 
     var initSelect = function() {
@@ -1462,7 +1588,7 @@ com.aexoden.ff4.exp = function()
             _monster_overrides[battle][monster] = e.target.value;
         }
 
-        updateDisplay();
+        updateDisplay(false);
     };
 
     var onOverrideClick = function(e) {
@@ -1480,18 +1606,22 @@ com.aexoden.ff4.exp = function()
             _overrides[battle][character] = !getDefaultCharacterAlive(battle, character);
         }
 
-        updateDisplay();
+        updateDisplay(false);
 
         e.preventDefault();
     };
 
-    var updateDisplay = function() {
+    var updateDisplay = function(reset) {
         var e = document.getElementById("battles");
         var route = getRoute();
         var routeData = _routeData[route];
         let warnings = [];
 
         let exp = {};
+
+        if (reset) {
+            e.innerHTML = "";
+        }
 
         routeData.battles.forEach(function(battle) {
             var battleData = _battleData[battle];
