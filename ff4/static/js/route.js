@@ -238,7 +238,7 @@ com.aexoden.ff4.route = function()
                                                 draw = true;
                                             } else if (fields[0] == "extra" && fields[1] == "2" && delta - delta % 2 > 0) {
                                                 draw = true;
-                                            } else if (fields[0] == "extra" && fields[1] == "1" && (delta % 2 == 1 || (path.flags & PathFlags.SINGLE) > 0)) {
+                                            } else if (fields[0] == "extra" && fields[1] == "1" && (delta % 2 == 1 || (path.flags & PathFlags.SINGLE) > 0) && delta > 0) {
                                                 draw = true;
                                             }
                                         }
