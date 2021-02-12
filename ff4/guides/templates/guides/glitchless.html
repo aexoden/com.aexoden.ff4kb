@@ -1,0 +1,1723 @@
+{% extends "guides/base.html" %}
+{% load static %}
+{% load django_bootstrap_breadcrumbs %}
+
+{% block breadcrumbs %}
+	{{ block.super }}
+	{% breadcrumb "Any% Glitchless" "guides:glitchless" %}
+{% endblock %}
+
+{% block subtitle %}Any% Glitchless{% endblock %}
+
+{% block content %}				<h1>Final Fantasy IV Any% Glitchless Guide</h1>
+			<address>Jason Lynch &lt;<a href="mailto:jason@calindora.com">jason@calindora.com</a>&gt; (Aexoden)</address>
+			<h2 id="introduction">Introduction</h2>
+			<p>These are my notes for the Final Fantasy IV (USA) Any% Glitchless speedrun. While I am very familiar with the game and the speedrun, there are almost certainly faster ways to do things. That said, I do periodically update this document as new techniques and strategies are discovered, so if you follow them, you're probably not doomed to be perilously slow.</p>
+            <p>This particular guide is intended for high-level PB attempts. Since this category is less commonly played, this guide is probably the best available at this time. Nonetheless, it is not very well optimized in some parts. I use this guide for my own PB attempts.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-exclamation-circle"></span>
+				<h4>Warning</h4>
+				<ul>
+					<li>This guide is currently in development. Several of the strategies are suboptimal and certain things may be incomplete. Use at your own risk.</li>
+				</ul>
+			</div>
+			<h2 id="general-concepts">General Concepts</h2>
+			<p>While these are largely my personal notes used when I actually run the game, a number of people have been using them to learn the run, so I will briefly go over some of the more general concepts that apply to the run. However, the notes will almost certainly still assume you are generally familiar with some of the techniques used speedrunning the game (such as run buffering). If you are unfamiliar with these, there are other resources on this site that you may wish to examine.</p>
+			<h3 id="general-concepts-experience-path">Experience Path</h3>
+			<p>Unfortunately, as it turns out, levels matter a lot in this run. As such, there is a lot of research into the best ways to allocate experience throughout the run. Experience is primarily manipulated using the following facts:</p>
+			<ol>
+				<li>Dead characters do not gain experience. Total experience from the fight is divided amongst living party members. Therefore, the fewer characters that are alive, the more experience the living ones collect.</li>
+				<li>Characters in the so-called <em>shadow party</em> gain the same amount of experience as living party members. These are characters who have left the party and will later return.</li>
+			</ol>
+			<p>The &quot;perfect&quot; path is a matter of personal preference and is always up for debate. I make my recommendations throughout this guide, but there are many ways to skin a cat, and you're welcome to develop your own path that suits your playing style better. However, keep in mind the following points:</p>
+			<ul>
+				<!--li>Cecil absolutely needs to reach level 20 before fighting Rubicant. Otherwise, Rubicant will be approximately twice as fast, and you'll have a bad time.</li>-->
+				<li>Kain ideally should be level 19 by the time you reach Valvalis. While it is possible to defeat Valvalis with a level 18 Kain, the fight is longer and requires a slightly modified strat.</li>
+				<li>Yang should be level 17 by the time you reach Dr.Lugae. However, it is not absolutely essential, as there are strats to handle a level 16 Yang.</li>
+				<li>Rydia should ideally be level 19 by the time you reach Dr.Lugae, but like with Yang, it is not absolutely essential.</li>
+				<li>Especially toward the later fights, it's best to not have too many people dead, as if Cecil receives too many levels, the Zeromus fight can go badly. You ultimately want Cecil to be level 27 or lower for Zeromus.</li>
+			</ul>
+			<p>In these notes, I recommend a particular experience path. However, it isn't necessary to follow it exactly, so long as the above goals are maintained.</p>
+			<h3 id="general-concepts-inventory-management">Inventory Management</h3>
+            <p>Another important aspect of any run is inventory management. You end up with a very full inventory and optimizing the location of items in the inventory is essential to a good run. This guide makes some recommendations, but ultimately, you will need to come up with an inventory management scheme you're comfortable with.</p>
+            <h3 id="general-concepts-glitchless">Glitchless?</h3>
+            <p>In defining a glitchless category, the obvious question becomes &quot;What counts as a glitch?&quot; This question is currently open to some debate, but a preliminary list of rules for the category is available <a href="https://gist.github.com/aexoden/f7b52e4f6122b39643aa51592e6305fe">here</a>. If some of these rules are changed, this guide may be updated accordingly.</p>
+			<h3 id="general-concepts-assumptions">Assumptions</h3>
+			<p>This guide makes the assumption that you are following along from start to finish. Menuing instructions assume that your characters are already equipped as per the guide, and won't list equipment that is staying the same. If you attempt to join in the middle, you may miss this or similar points.</p>
+			<p>This guide is primarily meant to serve as my notes for personal best attempts. As such, they generally tend to err on the side of less safety. In some cases, notes are made regarding potential safer strats for beginners, but they may not be entirely consistent throughout the document (especially regarding inventory management).</p>
+			<h3 id="general-concepts-conventions">Conventions</h3>
+			<p>This guide uses the following conventions:</p>
+			<ul>
+				<li>Item names are <i>italicized</i>.</li>
+				<li>Each battle lists the recommended party formation. The slots are listed from top to bottom. Characters in the front row are prefixed with an asterisk (*). In addition, their level and current experience is listed (assuming you follow this guide's experience path).</li>
+				<li>The battle strategies occasionally list multiple actions separated by slashes (/). In such cases, you should take the first option that applies to your situation. That is, don't use a <i>Cure2</i> potion on your party if all your characters are fully healed.</li>
+				<li>In contrast, occasionally multiple commands are listed on separate lines. In this case, you should execute each command in order.</li>
+				<li>Battle summaries list the experience earned through the battle. This assumes you kill the same enemies as the guide. (For example, killing the General at Fabul or having to fight Calbrena will result in different experience gains.)</li>
+			</ul>
+			<h3 id="general-concepts-resources">Resources</h3>
+			<p>The following resources should prove invaluable to either help during a run or to help you learn the run in the first place:</p>
+			<ul>
+				<li><a href="{% url 'routes:route' "glitchless" %}">Any% Glitchless Step Routes</a></li>
+				<li><a href="{% url 'tools:seed-finder' %}">Seed Finder Tool</a></li>
+				<li><a href="{% static "myself086/GrindFightManip.txt" %}">Grind Fight Manipulation Text</a> (by <a href="https://www.twitch.tv/myself086">Myself086</a>)</li>
+				<li><a href="{% static "myself086/GrindFightManip.PNG" %}">Grind Fight Manipulation Image</a> (by <a href="https://www.twitch.tv/myself086">Myself086</a>)</li>
+			</ul>
+			<h3 id="general-concepts-step-route">Step Route</h3>
+			<p>This guide is intended to be used with a step route. The step route is not required, but it will generally save you 2 or 3 minutes if executed properly. For this guide, you should be using the glitchless routes.</p>
+			<h2 id="walkthrough">Walkthrough</h2>
+			<h3 id="walkthrough-prologue">Prologue</h3>
+			<p>Begin the game. During the introduction, you may wish to hold down B+Right+Down immediately before the battle with the Raven, in an attempt to avoid the Raven's attack. This is known as the BRD or BIRD skip. It may or may not work for you, depending on the awesomeness of your mashing. Finish the introduction and gain control.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Set <i>battle speed</i> and <i>battle message</i> to 1.</li>
+				</ul>
+			</div>
+			<p>Head to Cecil's room in the left tower to finish the introduction.</p>
+			<p>Walk to the chocobo forest, capture a yellow chocobo, and ride to the Misty Cave.</p>
+			<h3 id="walkthrough-misty-cave">Misty Cave</h3>
+			<p>Walk through the cave until you reach the boss.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: D.Mist</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>465</dd>
+						<dt>EXP</dt><dd>700</dd>
+						<dt>Party</dt><dd>*Kain (10:2300) / empty / *Cecil (10:3000) / empty / *empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Kain</dt><dd>Jump</dd>
+						<dt>Cecil</dt><dd>Fight</dd>
+						<dt>Cecil</dt><dd>Fight</dd>
+						<dt>Kain</dt><dd>Fight</dd>
+						<dt>Cecil</dt><dd>Fight</dd>
+						<dt>Kain</dt><dd>Jump</dd>
+						<dt>Cecil</dt><dd>Fight</dd>
+					</dl>
+					<p>D.Mist turns to mist.</p>
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Parry</dd>
+						<dt>Kain</dt><dd>Wait until note before long high note<br>Jump</dd>
+						<dt>Cecil</dt><dd>Wait for &quot;Now, get ready to fight!&quot;<br>Unequip <i>Shadow</i> (shield)<br>Fight</dd>
+						<dt>Cecil</dt><dd>Fight</dd>
+						<dt>Kain</dt><dd>Unequip <i>Iron</i> (shield)<br>Jump</dd>
+						<dt>Cecil</dt><dd>Fight</dd>
+					</dl>
+					<p>Continue with Fight and Jump until D.Mist falls. There is a small chance (just under 1%) of a third cycle, depending on damage rolls.</p>
+				</div>
+			</div>
+			<h3 id="walkthrough-village-mist">Village Mist</h3>
+			<p>After the battle, exit the cave and head toward Mist. Before entering the village, open the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Unequip Kain: <i>Iron</i> (gauntlet).</li>
+				</ul>
+            </div>
+            <p>Enter the village and trigger the scene.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Girl</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>65000</dd>
+						<dt>EXP</dt><dd>0</dd>
+						<dt>Party</dt><dd>*Kain (10:2650) / empty / *Cecil (11:3350) / empty / *empty</dd>
+						<dt>Inventory Goals</dt><dd><i>Shadow</i> (shield) to 4R<br><i>Iron</i> (gauntlet) to 5L<br><i>Iron</i> (shield) to 5R</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<p>Attempt to rearrange your inventory during the animations. Change rows at the end for fist-pump swag strats.</p>
+				</div>
+			</div>
+			<h3 id="walkthrough-kaipo">Kaipo</h3>
+			<p>Continue to Kaipo in the middle of the desert. Enter the town and trigger the cut scene.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-info-circle"></span>
+				<h4>NPC Movement</h4>
+				<p>NPC movement may seem random, but it's actually reasonably deterministic during this portion of the game. Assuming you walk perfectly and don't stand around, the NPCs will always be in the same location from run to run. This will remain true until Fabul. Learn where the NPCs will be and optimize your walking accordingly.</p>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Officer x1, Soldier x3</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>Officer: 221 / Soldier: 27</dd>
+						<dt>EXP</dt><dd>480</dd>
+						<dt>Party</dt><dd>empty / empty / *Cecil (11:3350) / empty / *empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Run Buffer<br>Fight</dd>
+						<dt>Cecil</dt><dd>Run Buffer<br>Fight</dd>
+						<dt>Cecil</dt><dd>Run Buffer<br>Fight</dd>
+					</dl>
+					<p>If at any point, you are unable to execute the Run Buffer for that turn, simply switch to holding A. This is entirely random. After the soldiers are dead, simply twiddle your thumbs until the Officer retreats.</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Move Rydia down one slot. (Form, A, Down, A)</li>
+				</ul>
+            </div>
+            <p>Head to the shop on the east side of the building.</p>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-shopping-cart"></span>
+				<h4>Shopping</h4>
+				<ul>
+					<li>Buy 10 <i>Cure1</i>.</li>
+				</ul>
+			</div>
+            <p>Visit Rosa in the northeast house. Mash with B to avoid talking to Rosa repeatedly. Afterward, leave the house.</p>
+            <p>Take the <i>Ether1</i> from the northernmost pot to the left of the house below the one Rosa is in.</p>
+			<p>Just before exiting the town (immediately after emerging from the door in the wall), take one step to the right, and then go down.</p>
+			<p>Head north to the cave and enter the Watery Pass.</p>
+			<h3 id="walkthrough-watery-pass">Watery Pass</h3>
+            <p>Walk through the first part of the cave and recruit Tellah. Sometime during the next two maps, you'll want to take an encounter:</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Pike x3</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>Pike: 65</dd>
+						<dt>EXP</dt><dd>360</dd>
+						<dt>Party</dt><dd>*Tellah (20:54873) / Rydia (1:0) / *Cecil (11:3350) / empty / *empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Parry</dd>
+						<dt>Cecil</dt><dd>Cast Lit-1 on all enemies</dd>
+                    </dl>
+                    <p>This isn't the only workable formation. The idea is to get Rydia a few extra experience points.</p>
+				</div>
+            </div>
+            <p>On the way to the save room, you should collect the <i>Ether1</i> in the middle of the map on Watery Pass-South B2F. Continue to the end of the cave, stopping to pick up the <i>Darkness</i> (sword) in the last room.</p>
+			<p>Enter the other cave and proceed. Pick up the <i>Ether1</i> and <i>Darkness</i> (armor) from the two chests closest to Octomamm, before proceeding to the battle.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Octomamm</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>2350</dd>
+						<dt>EXP</dt><dd>1200</dd>
+						<dt>Party</dt><dd>*Tellah (20:54993) / Rydia (3:120) / *Cecil (11:3950) / empty / *empty</dd>
+						<dt>Inventory Goals</dt><dd><i>Darkness</i> (armor) to 4L<br><i>Shadow</i> (sword) to 3L<br><i>Ether1</i> to 2R<br><i>Cure1</i> to 1R</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Equip <i>Darkness</i> (sword)<br>Fight</dd>
+						<dt>Tellah</dt><dd>Cast Lit-1</dd>
+						<dt>Rydia</dt><dd>Cast Chocb</dd>
+                    </dl>
+                    <p>Don't bother reviving Rydia if she dies until just before the end of the fight. A more detailed strat should appear here eventually. Take advantage of inventory management time.</p>
+				</div>
+			</div>
+			<p>Immediately after the battle, open the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Change rows and swap Tellah and Rydia. (Form, Left, A, Down, A)</li>
+					<li>Move Cecil down one slot. (Form, Down, Down, A, Down, A)</li>
+				</ul>
+			</div>
+            <p>Exit the cave and enter Damcyan. On 2F, collect the <i>Tent</i>, and then head to the top of the castle. Watch the scene, and then take the hovercraft to the Antlion cave.</p>
+            <p>Before entering the cave, use the <i>Tent</i> to heal and restore MP.</p>
+			<h3 id="walkthrough-antlion">Antlion</h3>
+            <p>Follow the path to the second room. You may take either the left or right path, but the right path feels better to me. Your mileage may vary. Once in the second room, pick up the chest on the right side with a <i>Life</i>.</p>
+            <p>Enter the nearby room and collect the <i>Charm</i> (harp) from the chest, return to the main room, take the secret passage, and then make your way to Antlion's Nest and engage Antlion.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Antlion</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>1000</dd>
+						<dt>EXP</dt><dd>1500</dd>
+						<dt>Party</dt><dd>Rydia (5:520) / *empty / Edward (5:388) / *Cecil (11:4350) / empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Fight</dd>
+						<dt>Edward</dt><dd>Move <i>Life</i> to 3R<br>Swap <i>Life</i> and <i>Ether1</i><br>Use <i>Cure1</i>/Parry</dd>
+                        <dt>Rydia</dt><dd>Cast Chocb</dd>
+                        <dt>Cecil</dt><dd>Fight</dd>
+                        <dt>Edward</dt><dd>Use <i>Cure1</i>/Use <i>Ether1</i>/Parry</dd>
+                    </dl>
+                    <p>Essentially repeat this sequence until the fight is over. Try to keep everybody alive, but you shouldn't need more than one <i>Ether1</i></p>
+				</div>
+			</div>
+			<p>Walk out of the cave, board the hovercraft, and return to Kaipo, making sure to park directly to the left of the town.</p>
+			<h3 id="walkthrough-kaipo-revisited">Kaipo Revisited</h3>
+			<p>Head to the house in the northeast corner of town and use the <i>SandRuby</i> on Rosa.</p>
+			<p>During the night, Edward will loudly play his harp and an angry monster who was just trying to sleep will attack.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: WaterHag</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>45672</dd>
+						<dt>EXP</dt><dd>800</dd>
+						<dt>Party</dt><dd>empty / *empty / Edward (6:888) / *empty / empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Edward</dt><dd>Fight</dd>
+						<dt>Edward</dt><dd>Fight</dd>
+						<dt>Edward</dt><dd>Fight</dd>
+					</dl>
+					<p>You can simply hold the A button for the duration of the fight.</p>
+				</div>
+			</div>
+			<p>After waking up, leave the town, making sure to take a step to the left immediately before exiting.</p>
+			<p>Take the hovercraft to the entrance of Mt.Hobs, parking directly to the left of the entrance.</p>
+			<h3 id="walkthrough-mt-hobs">Mt.Hobs</h3>
+			<p>Climb the mountain and meet Yang at the top.</p>
+			<p>During Yang's solo battle, you can potentially manipulate yourself out of a longer battle by checking the damage rolls against <a href="{% static "myself086/YangVSimps.txt" %}">this chart</a> and pausing for a short while if you get a bad first kick.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: MomBomb</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>MomBomb: 10800 (800) / Bomb: 50 / GrayBomb: 100</dd>
+						<dt>EXP</dt><dd>2460</dd>
+                        <dt>Party</dt><dd>Rydia (7:1020) / *Yang (10:2061) / Edward (8:1688) / *Cecil (12:4850) / Rosa (10:2139)</dd>
+                        <dt>Inventory Goals</dt><dd>Move <i>Charm</i> (harp) to 6L</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Edward</dt><dd>Run Buffer<br>Parry</dd>
+						<dt>Cecil</dt><dd>Fight</dd>
+						<dt>Rosa</dt><dd>Cast Cure1/Parry</dd>
+						<dt>Yang</dt><dd>Fight</dd>
+						<dt>Rydia</dt><dd>Cast Chocb</dd>
+						<dt>Edward</dt><dd>Parry</dd>
+						<dt>Cecil</dt><dd>Fight</dd>
+						<dt>Rosa</dt><dd>Cast Cure1/Parry</dd>
+					</dl>
+					<p>Repeat this rough pattern until you have done 800 damage. At that point, heal or parry until Yang's turn.</p>
+					<dl class="dl-horizontal">
+						<dt>Yang</dt><dd>Wait for "Exploding!"<br>Wait one second after "Exploding!" disappears<br>Kick</dd>
+						<dt>Cecil</dt><dd>Inventory Management<br>Fight</dd>
+                        <dt>Rydia</dt><dd>Cast Chocb on GrayBomb</dd>
+						<dt>Rosa</dt><dd>Use Aim on weakest Bomb</dd>
+                        <dt>Edward</dt><dd>Fight</dd>
+                    </dl>
+                    <p>It may be easier to just focus on healing at this point, and letting them explode.</p>
+				</div>
+			</div>
+			<p>After the battle, continue to the other side of the mountain. Continue downward and then head east to Fabul.</p>
+			<h3 id="walkthrough-fabul">Fabul</h3>
+			<p>Head to the King's Room and offer to help. (Do not mash the B button during this dialogue.)</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Fabul Gauntlet #1 - General x1, Fighter x2</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>General: 320 / Fighter: 65</dd>
+						<dt>EXP</dt><dd>820</dd>
+						<dt>Party</dt><dd>empty / *Yang (10:2553) / Edward (9:2180) / *Cecil (12:5342) / empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Edward</dt><dd>Run Buffer<br>Fight top Fighter</dd>
+						<dt>Cecil</dt><dd>Fight</dd>
+						<dt>Yang</dt><dd>Fight</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Fabul Gauntlet #2 - Weeper x1, Imp Cap. x1, WaterHag x1</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>Weeper: 100 / Imp Cap.: 37 / WaterHag: 48</dd>
+						<dt>EXP</dt><dd>490</dd>
+						<dt>Party</dt><dd>empty / *Yang (10:2826) / Edward (9:2453) / *Cecil (12:5615) / empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Edward</dt><dd>Run Buffer<br>Fight Weeper</dd>
+						<dt>Cecil</dt><dd>Fight WaterHag</dd>
+						<dt>Yang</dt><dd>Fight</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Fabul Gauntlet #3 - General x1, Fighter x2</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>General: 320 / Fighter: 65</dd>
+						<dt>EXP</dt><dd>820</dd>
+						<dt>Party</dt><dd>empty / *Yang (11:2989) / Edward (10:2616) / *Cecil (12:5778) / empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Edward</dt><dd>Run Buffer<br>Fight top Fighter</dd>
+						<dt>Yang</dt><dd>Fight</dd>
+						<dt>Cecil</dt><dd>Fight</dd>
+					</dl>
+                </div>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Fabul Gauntlet #4 - Gargoyle x1</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>160</dd>
+						<dt>EXP</dt><dd>320</dd>
+						<dt>Party</dt><dd>empty / *Yang (11:3262) / Edward (10:2889) / *Cecil (13:6051) / empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Edward</dt><dd>Run Buffer<br>Fight</dd>
+                        <dt>Yang</dt><dd>Fight</dd>
+                        <dt>Cecil</dt><dd>Fight</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Fabul Gauntlet #5 - Weeper x1, Imp Cap. x1, WaterHag x1</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>Weeper: 100 / Imp Cap.: 37 / WaterHag: 48</dd>
+						<dt>EXP</dt><dd>490</dd>
+						<dt>Party</dt><dd>empty / *Yang (11:3368) / Edward (10:2995) / *Cecil (13:6157) / empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Edward</dt><dd>Run Buffer<br>Fight Weeper</dd>
+						<dt>Yang</dt><dd>Fight</dd>
+						<dt>Cecil</dt><dd>Fight WaterHag</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Fabul Gauntlet #6 - General x1, Fighter x2</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>General: 320 / Fighter: 65</dd>
+						<dt>EXP</dt><dd>820</dd>
+						<dt>Party</dt><dd>empty / *Yang (11:3531) / Edward (10:3158) / *Cecil (13:6320) / empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Edward</dt><dd>Run Buffer<br>Fight top Fighter</dd>
+						<dt>Yang</dt><dd>Fight</dd>
+                        <dt>Cecil</dt><dd>Fight</dd>
+                        <dt>Edward</dt><dd>Unequip <i>Dreamer</i> to 6R<br>Parry</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Dragoon</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>65000</dd>
+						<dt>EXP</dt><dd>0</dd>
+						<dt>Party</dt><dd>empty / *empty / empty / *Cecil (13:6593) / empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Fight Cecil</dd>
+					</dl>
+				</div>
+			</div>
+			<p>Walk to the Inn and watch the scenes.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+                    <li>Equip Cecil: <i>Black</i> (sword).</li>
+                    <li>Unequip Yang: <i>FireClaw</i> (if not done in battle).</li>
+                    <li>Unequip Edward: <i>Dreamer</i> (if not done in battle).</li>
+				</ul>
+            </div>
+            <p>Get the <i>Tent</i> from the chest and go down a floor. Get the 500 GP from the lowest pot and then continue to the exit. After leaving Fabul, head for the ship to the east.</p>
+			<h3 id="walkthrough-mysidia">Mysidia</h3>
+			<p>Walk east into Mysidia and go to the item shop on the right.</p>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-shopping-cart"></span>
+				<h4>Shopping</h4>
+				<ul>
+                    <li>Sell <i>Darkness</i> (sword), <i>Shadow</i> (sword), <i>Darkness</i> (armor), <i>Shadow</i> (shield), <i>Charm</i> and <i>Dreamer</i>.</li>
+                </ul>
+                <p>If you don't have at least 6130 GP at this point, you'll need to reduce your item purchases to make up for it. It's probably safer to skip a <i>Cure2</i>.</p>
+                <ul>
+                    <li>Buy 7 <i>Life</i>, 17 <i>Cure2</i>, 1 <i>Heal</i>.</li>
+				</ul>
+			</div>
+			<p>Head to the House of Wishes and talk to the elder. After the scene, head to the weapon and armor shops on the left side of town.</p>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-shopping-cart"></span>
+				<h4>Shopping</h4>
+				<ul>
+                    <li>Buy 1 <i>FlameRod</i>.</li>
+                    <li>Buy 2 <i>Gaea</i> (helm), 1 <i>Silver</i> (ring).</li>
+				</ul>
+			</div>
+			<p>Exit the town and head east to Mt.Ordeals.</p>
+			<h3 id="walkthrough-mt-ordeals">Mt.Ordeals</h3>
+			<p>Begin climbing the mountain. On the way up, collect the closest <i>Ether1</i> on the 7th station. Continue to the summit.</p>
+			<p>Once on the summit, continue until you are even with the final bridge.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Equip Palom: */<i>FlameRod</i>/<i>Gaea</i> (helm)/*/*.</li>
+					<li>Equip Tellah: */*/<i>Gaea</i> (helm)/*/<i>*</i>.</li>
+					<li>Fully heal the party.</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Milon</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>Milon: 3000 (2300) / Ghast: 170</dd>
+						<dt>EXP</dt><dd>3800</dd>
+						<dt>Party</dt><dd>Porom (10:1957) / *empty / Palom (10:1957) / *Cecil (13:6593) / Tellah (20:58436)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+                        <dt>Cecil</dt><dd>Parry</dd>
+                        <dt>Palom</dt><dd>Twin</dd>
+                        <dt>Tellah</dt><dd>Cast Cure2 on all enemies</dd>
+                        <dt>Cecil</dt><dd><i>Cure2</i> to 1R<br><i>Life</i> to 2R<br><i>Heal</i> to 4R<br>Swap <i>FireClaw</i> and <i>Iron</i> (shield)<br>Use <i>Cure1</i>/Parry</dd>
+                    </dl>
+                    <p>From this point on, Palom or Porom should Twin and Cecil should use <i>Cure1</i> on the twins. Cecil may need to Fight toward the end of the fight if the twin spells don't do enough damage.</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Fully heal the party (including MP on the twins).</li>
+					<li>Change rows.</li>
+					<li>Cast Piggy on Cecil.</li>
+				</ul>
+			</div>
+			<p>Walk across the bridge and engage Milon Z.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Milon Z.</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>3000</dd>
+						<dt>EXP</dt><dd>4000</dd>
+                        <dt>Party</dt><dd>*Porom (11:2907) / empty / *Palom (11:2907) / Cecil (13:7543) / *Tellah (20:59386)</dd>
+                        <dt>Inventory Goals</dt><dd>Clear up four spots near the top for faster removal of Cecil's equipment after battle</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+                        <dt>Cecil</dt><dd>Fight</dd>
+                        <dt>Cecil</dt><dd>Fight</dd>
+                        <dt>Palom</dt><dd>Use <i>Cure2</i> on Milon Z.</dd>
+                        <dt>Porom</dt><dd>Twin</dd>
+                    </dl>
+                    <p>From here, Tellah and Cecil can either revive or cure the twins or Fight (Cecil) or use <i>Cure2</i> on Milon Z. (Tellah). After you've gotten a couple of twins off, however, it's probably more expedient to just let the twins die if they must.</p>
+                    <p>Try to leave this fight with at least 13 <i>Cure2</i> remaining.</p>
+				</div>
+			</div>
+            <p>After the battle, quickly open the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+                    <li>Unequip Cecil (everything).</li>
+				</ul>
+			</div>
+            enter the tomb and watch the scene.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: D.Knight</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>1000</dd>
+						<dt>EXP</dt><dd>0</dd>
+						<dt>Party</dt><dd>*empty / Cecil (1:0) / *empty / empty / *empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Wait for Dark Wave<br>Equip <i>Iron</i> (shield)</dd>
+					</dl>
+				</div>
+			</div>
+			<p>After the scenes, descend the mountain and head to the chocobo forest. Catch a yellow chocobo and travel back to Mysidia.</p>
+			<p>Talk to the elder, and then head to Baron via the Serpent Road.</p>
+			<h3 id="walkthrough-return-to-baron">Return to Baron</h3>
+			<p>Go to the back of the Inn and talk to Yang.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Guard x2</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>200</dd>
+						<dt>EXP</dt><dd>0</dd>
+						<dt>Party</dt><dd>*Tellah (20:60386) / Cecil (1:0) / *Palom (12:3907) / empty / *Porom (12:3907)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Run Buffer<br>Parry</dd>
+                        <dt>Palom</dt><dd>Unequip <i>FlameRod</i></dd>
+                        <dt>Porom</dt><dd>Parry</dd>
+                        <dt>Tellah</dt><dd>Equip <i>FlameRod</i><br>Cast Virus on all enemies</dd>
+                        <dt>Cecil</dt><dd>Make sure 1L is empty</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Karate</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>4000</dd>
+						<dt>EXP</dt><dd>0</dd>
+						<dt>Party</dt><dd>*Tellah (20:60386) / Cecil (1:0) / *Palom (12:3907) / empty / *Porom (12:3907)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Wait for "ACHOOOOO"<br>Fight</dd>
+					</dl>
+					<p>If necessary, you can do limited inventory management during Karate's first attack.</p>
+					<p>It's actually possible to trigger the end of battle earlier than that message. There are essentially four different patterns, based on a timer you start right as the battle starts fading in from the black:</p>
+					<dl class="row">
+						<dt class="col-6">4.5 seconds</dt><dd class="col-6">Hold A at about 10.6 seconds</dd>
+						<dt class="col-6">5.0 seconds</dt><dd class="col-6">Hold A at about 11.2 seconds</dd>
+						<dt class="col-6">6.0 seconds</dt><dd class="col-6">Hold A at about 13.2 seconds</dd>
+						<dt class="col-6">7.3 seconds</dt><dd class="col-6">Hold A at about 15.8 seconds</dd>
+					</dl>
+					<p>Originally, I tried using musical cues, but the problem is that the music doesn't restart for the second battle.</p>
+				</div>
+			</div>
+            <p>After the scenes, leave the Inn. Enter the house to the north, collect the <i>Ether1</i>head to the Baron weapon and armor shop.</p>
+            <p>Inside the shop, use the secret passage to go behind the counters and collect the two chests for 2000 GP and a <i>Thunder</i> (claw). Afterward, it's time to shop.</p>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-shopping-cart"></span>
+				<h4>Shopping</h4>
+				<ul>
+                    <li>Sell <i>Black</i>, <i>Shadow</i>, <i>Rod</i>, <i>Leather</i> and the <i>Staff</i>.</li>
+					<li>Buy 3 <i>Headband</i>, 2 <i>Karate</i>.</li>
+					<li>Buy <i>IceClaw</i>.</li>
+				</ul>
+			</div>
+			<p>Enter the Old Water-way, collect the 1000 GP in the secret passage, and continue until just before the Baigan battle on Castle Baron 1F.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Fully cure Cecil and Tellah.</li>
+					<li>Equip Cecil: */*/<i>Headband</i>/<i>Karate</i>/*.</li>
+                    <li>Equip Yang: <i>Thunder</i>/<i>IceClaw</i>/<i>Headband</i>/<i>Karate</i>/<i>Silver</i>.</li>
+                    <li>Change rows and swap Porom and Tellah (Form, Left, A, Up, A).</li>
+                    <li>Swap Cecil and Palom (Form, Down, A, Down, A).</li>
+                    <li>Swap Yang and Porom (Form, Up, A, Up, A).</li>
+				</ul>
+			</div>
+			<p>Move on to challenge Baigan.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Baigan</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>Baigan: 3500 / RightArm: 350 / Left Arm: 350</dd>
+						<dt>EXP</dt><dd>4820</dd>
+						<dt>Party</dt><dd>*Tellah (20:60386) / Palom (12:3907) / *Cecil (1:0) / Porom (11:3907) / *Yang (13:5754)</dd>
+                        <dt>Ideal Survivors</dt><dd>Cecil and Tellah</dd>
+                        <dt>Inventory Goals</dt><dd>Swap <i>Baron</i> and <i>Iron</i> (gauntlet)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Run Buffer<br>Cover Tellah</dd>
+						<dt>Yang</dt><dd>Fight Porom</dd>
+                        <dt>Palom</dt><dd>Cast Fire2 on RightArm</dd>
+                        <dt>Porom</dt><dd>Parry</dd>
+                        <dt>Tellah</dt><dd>Cast Lit-3 on Baigan</dd>
+                        <dt>Cecil</dt><dd>Fight LeftArm/Fight Baigan</dd>
+                        <dt>Yang</dt><dd>Fight</dd>
+                        <dt>Porom</dt><dd>Parry</dd>
+                        <dt>Palom</dt><dd>Cast Fire2 on Palom</dd>
+                        <dt>Cecil</dt><dd>Fight Porom/Fight LeftArm/Fight Baigan</dd>
+                        <dt>Yang</dt><dd>Fight Porom/Fight Baigan</dd>
+                        <dt>Tellah</dt><dd>Virus Yang</dd>
+                        <dt>Cecil</dt><dd>Fight</dd>
+                        <dt>Tellah</dt><dd>Cast Lit-3 on Baigan</dd>
+					</dl>
+					<p>Your priority is to ensure Palom and Porom are dead. If necessary, Cecil can use his last turn to hit Yang again, but you will lose your chance to menu, so you'll need to finish anything in the Kainazzo battle. Don't leave Yang alive if you can avoid it.</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+                    <li>Fully cure Cecil, Tellah and Yang.</li>
+                    <li>Use an <i>Ether1</i> on Tellah.</li>
+					<li>Change rows.</li>
+				</ul>
+			</div>
+			<p>Head to the throne room to fight Kainazzo.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Kainazzo</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>4000</dd>
+						<dt>EXP</dt><dd>5500</dd>
+						<dt>Party</dt><dd>*Tellah (20:62796) / Palom (12:3907) / *Cecil (10:2410) / Porom (12:3907) / *Yang (13:5754)</dd>
+						<dt>Ideal Survivors</dt><dd>Cecil, Tellah and Yang</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Run Buffer<br>Fight</dd>
+						<dt>Yang</dt><dd>Fight</dd>
+						<dt>Tellah</dt><dd>Cast Lit-3</dd>
+						<dt>Cecil</dt><dd>Wait for Lit-3<br>Inventory Management</dd>
+                    </dl>
+                    <p>If this isn't enough, have Cecil and Yang continue using Fight, while Tellah casts Virus. If that still isn't enough, you're going to have to use an <i>Ether1</i> on Tellah. There's approximately a 7% chance of this happening.</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-exclamation-triangle"></span>
+				<h4>Mash Warning</h4>
+				<p>Do not mash X during the scenes, unless you're looking to mercy kill your run. In particular, once you're on the airship, pressing X at the wrong time will cause the game to lock up. Stick to A or B (or some other button) instead.</p>
+            </div>
+            <p>After the scenes, fly to Mist, and enter the town. Head to the weapon shop.</p>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-shopping-cart"></span>
+				<h4>Shopping</h4>
+				<ul>
+                    <li>Buy 1 <i>Dancing</i> (dagger).</li>
+				</ul>
+            </div>
+            <p>Make your way now to the house at the top of the village, enter the fireplace, and collect the <i>Tiara</i> in the first chest you come across, and the <i>Change</i> (rod) at the end of the secret passage. Use an <i>Ether1</i> on Tellah and cast Exit to leave the village.</p>
+			<p>Next, fly to Toroia and enter the castle. Visit Edward on the left side of the castle and then cast Exit.</p>
+			<p>Head north to the Chocobo Village, catch a black chocobo, and fly to Cave Magnes.</p>
+			<h3 id="walkthrough-cave-magnes">Cave Magnes</h3>
+			<p>Head through the cave. On B2F, pick up the <i>Ether1</i> on the left side of the room. Finally, pick up the <i>Ether2</i> to the left of the door to the crystal room. Afterward, enter the crystal room.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Swap Tellah and Cid. (Form, A, Down, A)</li>
+					<li>Equip Cid: */*/<i>Headband</i>/*/<i>Iron</i> (arms).</li>
+				</ul>
+			</div>
+			<p>Talk to the Dark Elf. After the scene, talk to him again.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Dark Elf</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>22000 (2000) (pre-change) / 3000 (post-change)</dd>
+						<dt>EXP</dt><dd>6000</dd>
+						<dt>Party</dt><dd>*Cid (20:26754) / Tellah (21:64629) / *Cecil (12:4243) / empty / *Yang (14:7587)</dd>
+						<dt>Ideal Survivors</dt><dd>Cecil, Tellah and Yang</dd>
+						<dt>Inventory Goals</dt><dd><i>Ether1</i> and <i>Ether2</i> to near top<br>Try to leave spots for later equipment removal</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Fight (hold A)</dd>
+						<dt>Yang</dt><dd>Fight (hold A)</dd>
+					</dl>
+					<p>At this point, you'll need to make a decision based on Cecil's first damage roll. The default pattern is below, and we'll discuss the variations afterward:</p>
+					<dl class="dl-horizontal">
+						<dt>Cid</dt><dd>Parry</dd>
+						<dt>Tellah</dt><dd>Cast Virus on Cid<br>Run Buffer</dd>
+						<dt>Cecil</dt><dd>Fight</dd>
+						<dt>Yang</dt><dd>Parry</dd>
+						<dt>Cecil</dt><dd>Fight</dd>
+						<dt>Tellah</dt><dd>Wait for &quot;ME CHANGE!&quot;<br>Equip <i>Change</i> (rod)<br>Cast Weak</dd>
+						<dt>Yang</dt><dd>Fight</dd>
+						<dt>Cecil</dt><dd>Inventory Management</dd>
+					</dl>
+					<p>If Cecil's first damage roll is 684 or less, Yang should Fight on his second turn instead of Parrying.</p>
+					<p>If Cecil's first damage roll is 942 or greater, Cid should Fight, Yang should fight on his second turn, and Cecil should Parry on his second turn. (The run buffer after Virus is not necessary in this scenario.)</p>
+				</div>
+			</div>
+			<p>After the battle, get the crystal and leave the room.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Move Cecil down a slot. (Form, Down, Down, A, Down, A)</li>
+					<li>Cast Exit.</li>
+				</ul>
+				<p>You may wish to heal Cecil, Tellah and Yang here to try to avoid menuing again before FlameDog. If you get back attacked on the way, however, you might have to menu again anyway.</p>
+			</div>
+			<p>Take the black chocobo back to the Chocobo Village, get a chocobo and return to Toroia.</p>
+			<p>Talk to the clerics and then cast Exit.</p>
+			<p>Board your airship and you'll fly to the Tower of Zot.</p>
+			<h3 id="walkthrough-tower-of-zot">Tower of Zot</h3>
+			<p>After Golbez is done taunting you, take the left path to pick up the <i>Fire</i> (armor) and then go up a floor and head to the chest with <i>Fire</i> (sword).</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Fully cure Cecil, Tellah and Yang.</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: FlameDog</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>1221</dd>
+						<dt>EXP</dt><dd>1720</dd>
+						<dt>Party</dt><dd>*Cid (20:26754) / Tellah (21:66629) / empty / Cecil (13:6243) / *Yang (15:9587)</dd>
+						<dt>Ideal Survivors</dt><dd>Cecil, Tellah and Yang</dd>
+						<dt>Inventory Goals</dt><dd>Clear three spots near top for equipment</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Pause Buffer after Fire to Run Buffer<br>Cover Tellah<br>Run Buffer</dd>
+						<dt>Yang</dt><dd>Parry</dd>
+						<dt>Tellah</dt><dd>Cast Ice-2</dd>
+						<dt>Cecil</dt><dd>Wait for Ice-2<br>Inventory Management</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-exclamation-triangle"></span>
+				<h4>Experience Path</h4>
+				<p>If Yang dies to FlameDog, you'll either have to a) resign yourself to a level 16 Yang at Dr.Lugae or b) revive Yang at Golbez. The level 16 Yang method is probably the simplest.</p>
+            </div>
+            <p>You may want to cure Cecil or Tellah if they're weakened, and then continue to the top of the tower.</p>
+			<p>Stop in the save room, use a <i>Tent</i>, and then move on to engage the Magus Sisters.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Magus Sisters</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>Sandy: 2500 / Cindy: 4300 / Mindy: 2200</dd>
+						<dt>EXP</dt><dd>9000</dd>
+						<dt>Party</dt><dd>*Cid (20:26754) / Tellah (21:67202) / *empty / Cecil (14:6816) / *Yang (15:10160)</dd>
+						<dt>Ideal Survivors</dt><dd>Tellah</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Run Buffer<br>Equip <i>Dancing</i><br>Use <i>Dancing</i> on Cindy<br>Run Buffer</dd>
+						<dt>Yang</dt><dd>Run Buffer<br>Fight Cindy</dd>
+						<dt>Tellah</dt><dd>Cast Lit-3 on Sandy</dd>
+						<dt>Cecil</dt><dd>Use <i>Dancing</i> on Cindy</dd>
+						<dt>Yang</dt><dd>Use <i>Cure2</i> on Fire2 target/Fight Cindy</dd>
+                        <dt>Cecil</dt><dd>Use <i>Dancing</i> on Cindy</dd>
+                        <dt>Yang</dt><dd>Run Buffer<br>Use <i>Cure2</i> on Lit-2 target/Fight Cindy</dd>
+                        <dt>Tellah</dt><dd>Cast Virus on Sandy</dd>
+                        <dt>Cecil</dt><dd>Use <i>Dancing</i> on Cindy</dd>
+                        <dt>Yang</dt><dd>Run Buffer<br>Use <i>Ether1</i> on Tellah</dd>
+                        <dt>Cecil</dt><dd>Use <i>Dancing</i> on Cindy</dd>
+                        <dt>Tellah</dt><dd>Cast Lit-3 on Cindy</dd>
+                        <dt>Yang</dt><dd>Run Buffer<br>Fight Cindy</dd>
+                        <dt>Cecil</dt><dd>Run Buffer<br>Use <i>Dancing</i> on Cindy (if alive)</dd>
+					</dl>
+                    <p>At this point, there is a reasonable chance that Cindy will be dead. If she's not, finish her off, and you'll have to kill Sandy again (Lit-3 and either Virus or a dagger or two).</p>
+                    <p>Either way, at this point, Yang and Cecil should work on taking themselves out, while Tellah casts Virus on Sandy twice. Make sure he doesn't cast it the second time until Cecil and Yang are dead.</p>
+                    <p>If Tellah needs more MP, he can use Psych on Mindy.</p>
+				</div>
+            </div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+                    <li>Unequip Tellah: <i>Change</i>, <i>Gaea</i> (helm) and <i>Gaea</i> (armor).</li>
+                </ul>
+                <p>If you're worried about a potential encounter before you enter the next room, you may want to revive and cure Cecil.</p>
+			</div>
+			<p>Enter the door, watch the scene, talk to Kain and then finally watch the next scene.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+                    <li>Equip Cecil: */*/empty/<i>Fire</i> (armor)/* (removes <i>Headband</i> and <i>Karate</i>).</li>
+					<li>Equip Kain: */<i>Fire</i>/<i>Headband</i>/<i>Karate</i>/*.</li>
+                    <li>Equip Rosa: */*/<i>Gaea</i>/<i>Gaea</i>/*.</li>
+                    <li>Equip Cecil: */*/<i>Silver</i> (helm)/*/*.</li>
+					<li>Revive all dead party members.</li>
+					<li>Cure Cecil using Rosa or <i>Cure2</i> potions if you have plenty.</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Valvalis</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>6000</dd>
+						<dt>EXP</dt><dd>9500</dd>
+						<dt>Party</dt><dd>*Cid (20:26754) / Rosa (19:21648) / *Kain (20:24459) / Cecil (14:6816) / *Yang (15:10160)</dd>
+						<dt>Ideal Survivors</dt><dd>Rosa, Kain, Cecil and Yang</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<p>Kain should be level 19 at this time. If he (for whatever reason) is only level 18, after the first two jumps, have him alternate between Fight and Jump.</p>
+					<p>The timing on this fight is very sensitive. Don't hold A to fight unless directed to do so.</p>
+					<dl class="dl-horizontal">
+						<dt>Kain</dt><dd>Jump</dd>
+						<dt>Cecil</dt><dd>Wait for Weak<br>Move <i>TODO</i> to first blank space (makes room for <i>Magma</i>)<br>Use <i>Cure2</i> on Cecil/Cover Rosa</dd>
+						<dt>Yang</dt><dd>Wait for Jump to land<br>Fight</dd>
+						<dt>Rosa</dt><dd>Cast Slow</dd>
+						<dt>Cid</dt><dd>Fight</dd>
+						<dt>Cecil</dt><dd>Use <i>Dancing</i></dd>
+						<dt>Kain</dt><dd>Jump</dd>
+						<dt>Yang</dt><dd>Fight (hold A)</dd>
+						<dt>Rosa</dt><dd>Wait for Jump<br>Cast Slow</dd>
+						<dt>Cecil</dt><dd>Use <i>Dancing</i></dd>
+						<dt>Cid</dt><dd>Fight</dd>
+						<dt>Kain</dt><dd>Jump</dd>
+						<dt>Yang</dt><dd>Run Buffer<br>Kick</dd>
+						<dt>Rosa</dt><dd>Wait for Valvalis to transform<br>Use <i>Cure2</i> on Cecil/Parry</dd>
+					</dl>
+					<p>At this point, Valvalis transforms into her tornado form. If you still have the <i>Heal</i>, feel free to use it.</p>
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>Use <i>Dancing</i></dd>
+						<dt>Cid</dt><dd>Fight</dd>
+						<dt>Kain</dt><dd>Jump</dd>
+						<dt>Yang</dt><dd>Fight</dd>
+						<dt>Rosa</dt><dd>Parry</dd>
+						<dt>Cecil</dt><dd>Use <i>Dancing</i></dd>
+						<dt>Cid</dt><dd>Fight Cid (optional)</dd>
+						<dt>Kain</dt><dd>Jump/Fight</dd>
+						<dt>Yang</dt><dd>Fight</dd>
+						<dt>Rosa</dt><dd>Parry</dd>
+						<dt>Cecil</dt><dd>Use <i>Dancing</i></dd>
+					</dl>
+					<p>If the damage rolls were decent, Kain can Fight on his last turn instead of Jumping. If Valvalis still doesn't die, just continue the normal pattern. She won't have much HP left at this point.</p>
+					<p>If Cid dies, leave him dead, as it will help Rosa's experience path. Everyone else (except perhaps Cecil) optimally needs to survive. Being fully stoned counts as death, but it can be hard to see if this is the case or not.</p>
+					<p>If you want to ensure a level 19 Rydia for Dr.Lugae, make sure Cid dies here. Depending on your exact experience path, this may not be necessary, but it is if you are following this guide exactly.</p>
+				</div>
+			</div>
+			<h3 id="walkthrough-underworld">The Underworld</h3>
+			<p>After the scenes, leave the castle and take the airship to Agart.</p>
+			<p>Use <i>Magma</i> on the well. Afterward, fly to the Underworld.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Swap Cid and Rosa. (Form, A, Down, A)</li>
+                    <li>Swap Rosa and Cecil. (Form, A, Up, Up, A)</li>
+                    <li>Unequip Cid: <i>Headband</i>.</li>
+                    <li>Equip Cecil: <i>Headband</i>.</li>
+				</ul>
+			</div>
+			<p>Enter the castle and talk to the king.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Calbrena</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>Cal: 1000 / Brena: 300</dd>
+						<dt>EXP</dt><dd>6000</dd>
+						<dt>Party</dt><dd>*Cecil (15:9191) / empty / *Kain (20:26834) / Rosa (19:24023) / *Yang (16:12535)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Kain</dt><dd>Run Buffer<br>Jump center Blue</dd>
+						<dt>Cecil</dt><dd>Use <i>Dancing</i> on center Orange</dd>
+						<dt>Yang</dt><dd>Kick</dd>
+						<dt>Rosa</dt><dd>Cast Slow on all enemies</dd>
+						<dt>Cecil</dt><dd>Use <i>Dancing</i> on top Orange</dd>
+						<dt>Rosa</dt><dd>Cast Mute on party</dd>
+						<dt>Kain</dt><dd>Jump top Blue</dd>
+						<dt>Yang</dt><dd>Kick</dd>
+						<dt>Cecil</dt><dd>Use <i>Dancing</i> on bottom Blue</dd>
+						<dt>Rosa</dt><dd>Use <i>Cure2</i> on Cecil/Parry</dd>
+						<dt>Yang</dt><dd>Kick</dd>
+					</dl>
+					<p>If you have more than one blue and one orange doll remaining at this point, you need to do whatever it takes to eliminate the others. Only do the following once there are two dolls remaining.</p>
+					<dl class="dl-horizontal">
+						<dt>Kain</dt><dd>Jump bottom Blue</dd>
+						<dt>Cecil</dt><dd>Use <i>Dancing</i> on bottom Orange</dd>
+					</dl>
+					<p>If you accidentally trigger the big doll, immediately change rows, have Kain Jump, and have Cecil keep himself healed with <i>Cure2</i> potions. If you're lucky, you won't trigger the damage range that results in the dolls splitting again. (It's based on damage, not on time.)</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Golbez</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>22001 (3000)</dd>
+						<dt>EXP</dt><dd>20000</dd>
+						<dt>Party</dt><dd>*Cecil (16:10691) / Rydia (18:27153) / *Kain (20:28334) / Rosa (20:25523) / *Yang (17:14035)</dd>
+						<dt>Ideal Survivors</dt><dd>Cecil, Kain and Rydia</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Kain</dt><dd>Run Buffer<br>Jump</dd>
+						<dt>Cecil</dt><dd>Equip <i>Legend</i><br>Inventory Management<br>Wait for "And you, Cecil!"<br>Fight</dd>
+						<dt>Kain</dt><dd>Fight</dd>
+						<dt>Cecil</dt><dd>Fight</dd>
+						<dt>Rydia</dt><dd>Cast Fire2</dd>
+					</dl>
+					<p>TODO: Inventory management</p>
+					<!--p>If you are following my inventory management route, the following instructions will get everything set up for what's next. During each line of Golbez's speech, move one of the following items to the bottom: <i>Headband</i>, <i>Karate</i>, <i>Wind</i>, and <i>Silver</i>.</p>
+					<p>There are three different <i>Silver</i> items, for a total of six items.</p>
+					<p>During the first Demolish animation, equip <i>Fire</i> (sword) and move the single <i>Dancing</i> to 7L (next to <i>Prisoner</i>).</p>
+					<p>During the second, swap the stack of <i>Dancing</i> and <i>Legend</i>. Then swap <i>Ether1</i> and <i>Prisoner</i>.</p>
+					<p>Finally, during the Mist attack, swap <i>Gaea</i> (helm) and <i>Tiara</i> and then swap <i>Change</i> (rod) and the stack of <i>Dancing</i>.</p-->
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>TODO: Depending on how the step route looks.</p>
+				<p>Your path through the Dwarf castle (especially regarding when to walk and when to cast Warp) may vary significantly depending on your step route. Your step route instructions supersede anything written here, but don't forget to cast Warp to get the crystal. In particular, it may ask you to cast Warp up to three times (in addition to the first warp). The priority order for these warps is 1) the <i>Dwarf</i> (axe) room on the way down, 2) the throne room and 3) the stairway in the right tower.</p>
+			</div>
+			<p>Leave the throne room, and go east to the shop area.</p>
+			<p>Head into the east tower and pick up <i>Dwarf</i> (axe) on the first floor and the <i>Strength</i> (ring), <i>Elixir</i>, <i>Ether1</i> and <i>Ether2</i> on the top floor.</p>
+			<p>Return to the shop area and go to the armor shop.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-shopping-cart"></span>
+				<h4>Shopping</h4>
+				<ul>
+					<li>Sell <i>Wind</i>, <i>Leather</i>, <i>Silver</i>, <i>Cloth</i>, <i>FlameRod</i>.</li>
+					<li>Buy 1 <i>Wizard</i> (robe).</li>
+					<li>Buy 3 <i>Rune</i> (ring).</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Equip Cecil: <i>Dwarf</i>.</li>
+					<li>Equip Kain: <i>Strength</i>.</li>
+					<li>Equip Rydia: <i>Change</i>/*/<i>Tiara</i>/<i>Prisoner</i>/<i>Rune</i>.</li>
+					<li>Swap Cecil and Rosa. (Form, A, Up, Up, A)</li>
+				</ul>
+			</div>
+			<p>Travel through the basement to the other side of the castle and head to the item shop.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-shopping-cart"></span>
+				<h4>Shopping</h4>
+				<ul>
+					<li>Sell <i>Silver</i>, <i>Whip</i>, <i>Gaea</i> (armor).</li>
+					<li>Buy 10 <i>Heal</i>, 20 <i>Life</i>, and 30 <i>Cure2</i>.</li>
+				</ul>
+			</div>
+			<p>Now, go through the passage underneath the Castle to the Dwarf Base. Skip the healing pot, exit to the Underworld, and then make your way to the Tower of Bab-il.</p>
+			<h3 id="walkthrough-tower-of-babil">Tower of Bab-il</h3>
+			<p>Enter the Tower of Bab-il and make your way to the <i>CatClaw</i> on 3F. Collect the chest and continue on. Get the <i>Ether2</i> on 7F, and then continue walking until just before Dr.Lugae.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Equip Yang: */<i>CatClaw</i>/*/*/*.</li>
+					<li>Fully heal everyone except Rosa, but don't heal the mute status.</li>
+				</ul>
+			</div>
+			<p>Approach Dr.Lugae to begin the scene.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Dr.Lugae x1, Balnab x1</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>Dr.Lugae: 4416 / Balnab: 4000</dd>
+						<dt>EXP</dt><dd>0</dd>
+						<dt>Party</dt><dd>*Rosa (20:25523) / Rydia (19:29819) / *Kain (22:35000) / Cecil (18:17357) / *Yang (17:14035)</dd>
+						<dt>Inventory Goals</dt><dd>TODO<!--Swap <i>Darkness</i> and <i>CatClaw</i><br><i>Fire</i> to bottom<br><i>Whip</i> to bottom<br><i>Gaea</i> (armor) to bottom<br><i>Silver</i> to bottom<br><i>Elixir</i> to 4R<br>Swap <i>Elixir</i> and <i>Rune</i><br><i>Gaea</i> (helm) to 5R</dd-->
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Kain</dt><dd>Run Buffer<br>Jump Dr.Lugae</dd>
+						<dt>Yang</dt><dd>Fight (hold A)</dd>
+						<dt>Rydia</dt><dd>Cast Titan</dd>
+						<dt>Cecil</dt><dd>Fight Dr.Lugae</dd>
+						<dt>Yang</dt><dd>Wait for Balnab to act<br>Inventory Management<br>Fight</dd>
+						<dt>Cecil</dt><dd>Fight Dr.Lugae</dd>
+						<dt>Kain</dt><dd>Fight</dd>
+						<dt>Yang</dt><dd>Fight</dd>
+					</dl>
+					<p>After Cecil targets Dr.Lugae the second time, you can basically hold A until the fight is over.</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Dr.Lugae</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>6600</dd>
+						<dt>EXP</dt><dd>15000</dd>
+						<dt>Party</dt><dd>*Rosa (20:25523) / Rydia (19:29819) / *Kain (22:35000) / Cecil (18:17357) / *Yang (17:14035)</dd>
+					</dl>
+				</div>
+                <h5>Battle Plan</h5>
+				<div class="info-block">
+                    <dl class="dl-horizontal">
+                        <dt>Kain</dt><dd>Run Buffer<br>Fight</dd>
+                        <dt>Yang</dt><dd>Run Buffer<br>Fight</dd>
+                        <dt>Rydia</dt><dd>Cast Titan</dd>
+                        <dt>Cecil</dt><dd>Parry</dd>
+                    </dl>
+                    <p>At this point, you can just hold A.</p>
+                </div>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Revive Rosa, cure anyone with low HP, and use Rosa to heal everyone's poison.</li>
+					<li>Unequip Yang: <i>Karate</i>.</li>
+					<li>Swap Rosa and Cecil. (Form, A, Up, Up, A)</li>
+				</ul>
+			</div>
+			<p>After the battle, head to the Super Cannon. Enter the room and prepare to battle.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Dark Imp x3</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>199</dd>
+						<dt>EXP</dt><dd>5820</dd>
+						<dt>Party</dt><dd>*Cecil (19:21107) / Rydia (20:33569) / *Kain (22:38750) / Rosa (20:25523) / *Yang (18:17785)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Kain</dt><dd>Fight (hold A)</dd>
+						<dt>Yang</dt><dd>Uneqip <i>Thunder</i> (claw) and <i>CatClaw</i><br>Parry</dd>
+						<dt>Rydia</dt><dd>Inventory Management<br>Cast Fire-2 on all</dd>
+					</dl>
+				</div>
+			</div>
+			<p>Watch the scenes, wipe your tears away, and make your way out of the Tower of Bab-il.</p>
+			<h3 id="walkthrough-babil-two">Tower of Bab-il, Part Deux</h3>
+			<p>After the scene, fly to Baron and land next to the castle. Wait a fraction of a second, and then enter the castle. (If you don't wait, you will instead walk onto the castle tile without entering.)</p>
+			<p>Head to the right side of the castle, go into the basement to get the <i>Elixir</i> and then get Cid's lackeys to install the hook on your airship.</p>
+			<p>Fly north to Mt.Hobs, pick up the hovercraft, fly northwest to Eblan, and finally take the hovercraft west to the cave.</p>
+			<p>In the first room of the cave, collect the <i>Shuriken</i> and then make your way through until you enter the &quot;town&quot;. Enter the weapon and armor shop (second door from the right).</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-shopping-cart"></span>
+				<h4>Shopping</h4>
+				<ul>
+					<li>Sell <i>Silver</i> (ring) and <i>Shuriken</i>.</li>
+					<li>Buy <i>IceBrand</i>, <i>Blizzard</i>.</li>
+				</ul>
+			</div>
+			<p>Continue into the Pass to Bab-il. Collect the <i>Ether1</i> immediately upon entering, and then pass through this room and the next. Pick up the two <i>Elixir</i>, the two <i>Cure2</i>, and then the three chests at the bottom right.</p>
+			<p>Continue through the cave until you meet up with Edge.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Equip Edge: <i>CatClaw</i>/*/*/*/*.</li>
+					<li>Equip Cecil: */*/*/<i>Karate</i>/*.</li>
+				</ul>
+			</div>
+			<p>Pick up the <i>Ether2</i> in the nearby chest, and then head into the Tower of Bab-il. Pick up the <i>Cure3</i> on 1F and the <i>Middle</i> on B4F on the way to Edge's parents.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: K.Eblan x1, Q.Eblan x1</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>K.Eblan: 60000 / Q.Eblan: 60000</dd>
+						<dt>EXP</dt><dd>0</dd>
+						<dt>Party</dt><dd>*Cecil (19:22271) / Rydia (20:34733) / *Kain (22:39914) / Rosa (20:26687) / *Edge (25:64777)</dd>
+						<dt>Inventory Goals</dt><dd>TODO<i>CatClaw</i> to bottom<br><i>Short</i> to bottom<br><i>Fire</i> to bottom<br><i>Paladin</i> to bottom<br><i>Dancing</i> (single) to 4L<br><i>Dancing</i> (stack) to 5L<br>Swap <i>Legend</i> and <i>Elixir</i></dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Edge</dt><dd>Equip <i>Middle</i><br>Parry</dd>
+						<dt>Kain</dt><dd>Equip <i>Blizzard</i><br>Inventory Management</dd>
+					</dl>
+					<p>After this, your only task is to wait the battle out. You can use the animation and text box time for inventory management, but you will lose time by doing so.</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Set battle speed to 5.</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Rubicant</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>25200</dd>
+						<dt>EXP</dt><dd>25000</dd>
+						<dt>Party</dt><dd>*Cecil (19:22271) / Rydia (20:34733) / *Kain (22:39914) / Rosa (20:26687) / *Edge (25:64777)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Edge</dt><dd>Cast Flood</dd>
+						<dt>Kain</dt><dd>Jump</dd>
+						<dt>Rydia</dt><dd>Cast Ice-2</dd>
+						<dt>Rosa</dt><dd>Parry</dd>
+						<dt>Cecil</dt><dd>Equip <i>IceBrand</i><br>Fight (TODO: Maybe he should cover Rydia here)</dd>
+						<dt>Edge</dt><dd>Cast Flood</dd>
+					</dl>
+				</div>
+				<p>At this point, Rubicant will cast Glare, leaving one of your characters dead:</p>
+				<ul class="nav nav-tabs">
+					<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-battle-rubicant-cecil">Cecil</a></li>
+					<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-battle-rubicant-rydia">Rydia</a></li>
+					<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-battle-rubicant-kain">Kain</a></li>
+					<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-battle-rubicant-rosa">Rosa</a></li>
+					<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-battle-rubicant-edge">Edge</a></li>
+				</ul>
+				<div class="info-block tab-content">
+					<div class="tab-pane fade" id="tab-battle-rubicant-cecil">
+						<dl class="dl-horizontal">
+							<dt>TODO</dt><dd>TODO</dd>
+							<dt>Kain</dt><dd>Jump</dd>
+							<dt>Rosa</dt><dd>Use <i>Life</i> on Cecil</dd>
+							<dt>Edge</dt><dd>Wait for Jump<br>Cast Flood</dd>
+							<dt>Rydia</dt><dd>Cast Ice-2</dd>
+							<dt>Cecil</dt><dd>Wait for Ice-2<br>Fight</dd>
+							<dt>Rosa</dt><dd>Use <i>Life</i> on Rydia/Parry</dd>
+							<dt>Kain</dt><dd>Fight</dd>
+						</dl>
+					</div>
+					<div class="tab-pane fade" id="tab-battle-rubicant-rydia">
+						<dl class="dl-horizontal">
+							<dt>TODO</dt><dd>TODO</dd>
+							<dt>Cecil</dt><dd>Fight</dd>
+							<dt>Kain</dt><dd>Jump</dd>
+							<dt>Rosa</dt><dd>Use <i>Life</i> on Rydia</dd>
+							<dt>Edge</dt><dd>Wait for Jump<br>Cast Flood</dd>
+							<dt>Cecil</dt><dd>Cover Rydia</dd>
+							<dt>Rydia</dt><dd>Cast Ice-2</dd>
+							<dt>Rosa</dt><dd>Parry</dd>
+							<dt>Kain</dt><dd>Fight</dd>
+						</dl>
+					</div>
+					<div class="tab-pane fade" id="tab-battle-rubicant-kain">
+						<dl class="dl-horizontal">
+							<dt>Rosa</dt><dd>Use <i>Life</i> on Kain</dd>
+							<dt>Rydia</dt><dd>Cast Shiva</dd>
+							<dt>Kain</dt><dd>Jump</dd>
+							<dt>Cecil</dt><dd>Fight</dd>
+							<dt>Edge</dt><dd>Cast Flood</dd>
+							<dt>Rosa</dt><dd>Parry</dd>
+							<dt>Rydia</dt><dd>Cast Ice-2</dd>
+						</dl>
+					</div>
+					<div class="tab-pane fade" id="tab-battle-rubicant-rosa">
+						<dl class="dl-horizontal">
+							<dt>TODO</dt><dd>TODO</dd>
+							<dt>Cecil</dt><dd>Cover Rydia</dd>
+							<dt>Kain</dt><dd>Jump</dd>
+							<dt>Edge</dt><dd>Wait for Jump<br>Cast Flood</dd>
+							<dt>Rydia</dt><dd>Cast Ice-2</dd>
+							<dt>Cecil</dt><dd>Use <i>Life</i> on Rosa</dd>
+							<dt>Kain</dt><dd>Fight</dd>
+						</dl>
+					</div>
+					<div class="tab-pane fade" id="tab-battle-rubicant-edge">
+						<dl class="dl-horizontal">
+							<dt>TODO</dt><dd>TODO</dd>
+							<dt>Cecil</dt><dd>Cover Rydia</dd>
+							<dt>Kain</dt><dd>Jump</dd>
+							<dt>Rosa</dt><dd>Use <i>Life</i> on Edge</dd>
+							<dt>Rydia</dt><dd>Wait for Jump<br>Cast Ice-2</dd>
+							<dt>Cecil</dt><dd>Fight</dd>
+							<dt>Edge</dt><dd>Cast Flood</dd>
+							<dt>Rosa</dt><dd>Parry</dd>
+							<dt>Kain</dt><dd>Jump</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<!--div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>There are a few seeds that will want you to put the <i>Dwarf</i> (axe) back on immediately. Otherwise, you can wait until the next menu. That said, if you have the opportunity, it won't hurt to throw it on during the Rubicant battle. It's just that in almost all cases, it's not worth the the extra menu out-of-battle.</p>
+			</div-->
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Equip Cecil: <i>Dwarf</i>.</li>
+					<li>Set battle speed to 1.</li>
+				</ul>
+			</div>
+			<p>After the scenes, enter the crystal room and then proceed through the last few rooms of the tower.</p>
+			<h3 id="walkthrough-airships">Airships and Betrayal</h3>
+			<p>Fly to the Castle of Dwarves and land to the left of the castle.</p>
+			<p>Enter the castle, quickly visit the king to get the <i>Luca</i> (key) and then visit Cid in the infirmary. After the scenes, cast Exit.</p>
+			<p>Fly to the Land of Monsters. Enter the cave, head to B3F, get the <i>Ninja</i> (sword) in the rightmost of the three chests in the bottom left, and then cast Exit.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Cure everyone but Cecil to full.</li>
+					<li>Equip Edge: */<i>Ninja</i> (sword)/*/*/*.</li>
+					<li>Cast Exit.</li>
+				</ul>
+			</div>
+			<p>Fly to the sealed cave and make your way to the first TrapDoor.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: TrapDoor x1, Mantcore x1</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>TrapDoor: 5000 / MantCore: 2000</dd>
+						<dt>EXP</dt><dd>TrapDoor: 31100 / Mantcore: 35000</dd>
+						<dt>Party</dt><dd>*Cecil (20:27271) / Rydia (21:39733) / *Kain (23:44914) / Rosa (21:31687) / *Edge (25:69777)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Edge</dt><dd>Fight (hold A)</dd>
+						<dt>Kain</dt><dd>Jump</dd>
+						<dt>Rydia</dt><dd>Use <i>Life</i> on Search target</dd>
+						<dt>Rosa</dt><dd>Cast Bersk on Edge</dd>
+						<dt>Cecil</dt><dd>Fight Cecil</dd>
+						<dt>Rydia</dt><dd>Cast Titan</dd>
+					</dl>
+				</div>
+				<p>The best case is that Cecil is the target. In that case, Rydia can move on to casting Titan. If Rydia is the search target, it's probably better to just bersk Edge, and then revive Rydia later.</p>
+			</div>
+			<p>Continue through the cave, picking up the <i>Ether1</i> in the next passage and the <i>Life</i> on B2F, before coming to the next TrapDoor.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Cure everyone but Cecil.</li>
+					<li>Make sure Rydia has at least 80 MP.</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: TrapDoor x1, Mantcore x1</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>TrapDoor: 5000 / MantCore: 2000</dd>
+						<dt>EXP</dt><dd>TrapDoor: 31100 / Mantcore: 35000</dd>
+						<dt>Party</dt><dd>*Cecil (20:27271) / Rydia (22:47508) / *Kain (24:52689) / Rosa (22:39462) / *Edge (26:77552)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Edge</dt><dd>Fight (hold A)</dd>
+						<dt>Kain</dt><dd>Jump</dd>
+						<dt>Rydia</dt><dd>Use <i>Life</i> on Search target</dd>
+						<dt>Rosa</dt><dd>Cast Bersk on Edge</dd>
+						<dt>Rydia</dt><dd>Cast Titan</dd>
+					</dl>
+				</div>
+			</div>
+			<p>Pick up the <i>Ether1</i> in the next passage, and continue to the final TrapDoor.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Cure everyone but Cecil.</li>
+					<li>Make sure Rydia has at least 80 MP.</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: TrapDoor x1, Yellow D x1</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>TrapDoor: 5000 / Yellow D: 1800</dd>
+						<dt>EXP</dt><dd>TrapDoor: 31100 / Yellow D: 34000</dd>
+						<dt>Party</dt><dd>*Cecil (20:27271) / Rydia (23:55283) / *Kain (25:60464) / Rosa (23:47237) / *Edge (27:85327)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Edge</dt><dd>Fight (hold A)</dd>
+						<dt>Kain</dt><dd>Jump</dd>
+						<dt>Rydia</dt><dd>Use <i>Life</i> on Search target</dd>
+						<dt>Rosa</dt><dd>Cast Bersk on Edge</dd>
+						<dt>Rydia</dt><dd>Cast Titan</dd>
+					</dl>
+				</div>
+			</div>
+			<p>Enter the crystal room, take the crystal, leave the crystal room, and then prepare for the upcoming battle.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Fully cure Cecil.</li>
+					<li>Make sure everyone's alive.</li>
+					<li>Make sure Rydia has at least 40 MP.</li>
+					<li>Swap Cecil and Rosa (Form, A, Up, Up, A).</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: EvilWall x1</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>EvilWall: 19000</dd>
+						<dt>EXP</dt><dd>23000</dd>
+						<dt>Party</dt><dd>*Cecil (20:27271) / Rydia (24:63058) / *Kain (26:68239) / Rosa (24:55012) / *Edge (27:93102)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Edge</dt><dd>Fight (hold A)</dd>
+						<dt>Kain</dt><dd>Jump</dd>
+						<dt>Rosa</dt><dd>Cast Bersk on Edge</dd>
+						<dt>Rydia</dt><dd>Cast Titan</dd>
+						<dt>Cecil</dt><dd>Fight</dd>
+						<dt>Rosa</dt><dd>Cast Bersk on Kain</dd>
+						<dt>Cecil</dt><dd>Wait/Use <i>Cure2</i> on Cecil/Use <i>Life</i></dd>
+					</dl>
+				</div>
+			</div>
+			<p>Make your way back to the entrance, most likely using Warp on most floors, but this may be step route dependent. Once you reach the entrance, open the menu before you try to leave.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Unequip Kain: <i>Strength</i>.</li>
+				</ul>
+			</div>
+			<p>Fly back to the Castle of Dwarves and go to the throne room. After the scene, cast Exit and fly to the Overworld.</p>
+			<p>Fly to Mysidia, land directly to the left of the town and watch the scene.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>You step route may ask you to either walk or fly to the Big Whale. It seems silly to fly two tiles, but it can potentially save time.</p>
+			</div>
+			<p>Board the Big Whale and fly to the moon.</p>
+			<p>Fly to the Lunar Path and follow the path to the Lunar's Lair. After entering and recruiting FuSoYa, make the trek back to your airship and fly to Earth.</p>
+			<h3 id="walkthrough-giant">Giant of Bab-il</h3>
+			<p>After watching the scenes, make your way through the Giant of Bab-il until you reach the Passage, picking up the <i>Ether1</i> in the chest. You generally want to wait until immediately before the grind fight before you do this menu. If you're on a step route, this is easy. If not, you may want to menu immediately just in case you run into the grind fight on the way. However, back attacks from certain enemies will be more annoying in that case.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Switch to battle speed 2.</li>
+					<li>Use an <i>Ether1</i> on Edge if he has less than 20 MP.</li>
+                    <li>Fully heal the party with Rosa's magic.</li>
+                    <li>Unequip Rosa: <i>Gaea</i> (helm).</li>
+					<li>Equip Rydia: <i>Dancing</i>.</li>
+					<li>Equip FuSoYa: <i>Change</i>/*/<i>Gaea</i>/*/<i>Rune</i>.</li>
+					<li>Equip Rosa: <i>Lunar</i>/*/<i>Wizard</i>/<i>Wizard</i>/<i>Rune</i>.</li>
+					<li>Equip Cecil: <i>IceBrand</i> (to remove <i>Dwarf</i>).</li>
+					<li>Equip Edge: */<i>FireClaw</i>/*/*/*.</li>
+					<li>Swap Rosa and Edge. (Form, A, Up, A)</li>
+					<li>Swap Rydia and Rosa. (Form, Down, A, Up, Up, A)</li>
+				</ul>
+			</div>
+			<p>Next, move along until you find the grind fight. Use either a step route or <a href="{% static "myself086/GrindFightManip.txt" %}">this manipulation</a> (<a href="{% static "myself086/GrindFightManip.PNG" %}">image version</a>) to find it.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Searcher (summons D.Machin) x1, Beamer x2</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>Searcher: 5500 / D.Machin: 15000 / Beamer: 1800</dd>
+						<dt>EXP</dt><dd>647200</dd>
+						<dt>Party</dt><dd>*Edge (27:93102) / Rosa (24:55012) / *FuSoYa (50:1007865) / Cecil (21:31871) / *Rydia (24:67658)</dd>
+					</dl>
+				</div>
+				<h5>Battle Phase One: Setup</h5>
+				<div class="info-block">
+					<p>This fight is somewhat complicated, so instead of a detailed command sequence, we'll instead look at the three phases of the fight. The first phase depends on exactly what type of battle you get:</p>
+					<dl class="row">
+						<dt class="col-3">Normal</dt><dd class="col-9">FuSoYa casts Quake, Rydia waits for Quake and then parries, and everyone else parries until it's FuSoYa's turn.</dd>
+						<dt class="col-3">Strike First</dt><dd class="col-9">FuSoYa casts Lit-3 on a Beamer while Edge parries immediately. Wait on Rydia's turn until Lit-3 is cast, then parry back to FuSoYa. At this point, FuSoYa casts Quake as usual, Rydia waits until Quake and parries, and then everyone else parries back to FuSoYa.</dd>
+						<dt class="col-3">Back Attack/Surprise</dt><dd class="col-9">Edge casts Flood. FuSoYa waits for Flood, then casts Quake. Rydia waits for Quake, then parries. Parry back to FuSoYa.</dd>
+					</dl>
+					<p>If Edge is in the front row (in other words, in any case except a back attack), you might wish to have eithe Rydia, Rosa or Cecil use Change on their first turn. This will minimize the chance of killing the searcher early.<p>
+					<p>If you have a chance during a Beam attack, you should do some minor inventory management. If following my inventory management route, I recommend swapping TODO.</p>
+				</div>
+				<h5>Battle Phase Two: Midfight</h5>
+				<div class="info-block">
+					<p>The following will need to repeat for seventeen cycles (note that Edge does not get a turn for the first cycle):</p>
+					<dl class="dl-horizontal">
+						<dt>Edge</dt><dd>Fight</dd>
+						<dt>FuSoYa</dt><dd>Cast Weak on D.Machin</dd>
+						<dt>Rydia</dt><dd>Fight (hold A)</dd>
+						<dt>Rosa</dt><dd>Use <i>Ether1</i>/<i>Ether2</i> on FuSoYa/Use <i>Elixir</i> on Searcher/Parry</dd>
+						<dt>Cecil</dt><dd>Use <i>Ether1</i>/<i>Ether2</i> on FuSoYa/Use <i>Elixir</i> on Searcher/Parry</dd>
+					</dl>
+					<p>This fight has very difficult timing, and things may go wrong. The most obvious failure is Rydia going before FuSoYa casts Weak. You can prevent this by delaying Rydia's Fight if the Searcher's text box pops up during her turn, but the exact timing of this is difficult to describe in text. Rivers McCown suggests no longer holding A on Rydia's turn after the second cycle. If Rydia does end up going before Weak, the character after FuSoYa should hold A the rest of the fight.</p>
+					<p>The battle speed 2 version of this fight appears to be 100% consistent, so using that is highly recommended.</p>
+					<p>A detailed strategy for recovery if things go wrong is beyond the scope of this guide.</p>
+					<p>Ultimately, you need to kill 17 dragons. While casting Weak, if you note that FuSoYa has less than 50 MP, ensure you restore some MP. After approximately six dragons, you should use an <i>Elixir</i> on the Searcher to ensure it doesn't die.</p>
+				</div>
+				<h5>Battle Phase Three: Victory</h5>
+				<div class="info-block">
+					<p>After you have killed the requisite number of dragons, complete the following tasks:</p>
+					<dl class="dl-horizontal">
+						<dt>Edge</dt><dd>Equip <i>CatClaw</i>/<i>Ninja</i><br>Fight Edge? TODO</dd>
+						<dt>FuSoYa</dt><dd>Cast Weak on Searcher</dd>
+						<dt>Rydia</dt><dd>Use <i>Dancing</i> on Edge</dd>
+						<dt>Rosa</dt><dd>Parry</dd>
+						<dt>Cecil</dt><dd>?????Use <i>Dancing</i> on Edge/Rydia</dd>
+						<dt>FuSoYa</dt><dd>Cast Virus on Cecil</dd>
+						<dt>Rydia</dt><dd>Use <i>Dancing</i> on Rydia</dd>
+						<dt>Rosa</dt><dd>Parry</dd>
+						<dt>FuSoYa</dt><dd>Cast Virus on FuSoYa</dd>
+						<dt>Rosa</dt><dd>Fight (once everyone is dead)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Use <i>Life</i> on Edge (only if expecting an encounter).</li>
+					<li>Rearrange Rosa's top left spells to Wall, White and Cure4.</li>
+					<li>Equip Cecil: <i>Dwarf</i>.</li>
+					<li>Equip Edge: <i>Strength</i>.</li>
+					<li>Change rows and swap Edge and Rosa (Form, Left, A, Down, A).</li>
+					<li>Switch to battle speed 1.</li>
+				</ul>
+				<p>There are only a few random formations that pose a potential problem for a post-grind Rosa, so Edge is revived to help with those if necessary.</p>
+			</div>
+			<p>Continue on to the Elements battle.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-exclamation-triangle"></span>
+				<h4>Experience Path</h4>
+				<p>If someone unexpectedly died in a battle more than once up to this point, and Cecil survived, there is a strong risk that he will be on pace to reach level 28. You may wish to use the <a href="{% url 'tools:experience-route-calculator' %}">Experience Route Calculator</a> to help determine for sure.</p>
+				<p>If Cecil is on pace for level 28, it's absolutely imperative to ensure he dies for the Elements battle.</p>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Elements</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>65000</dd>
+						<dt>EXP</dt><dd>40000</dd>
+						<dt>Party</dt><dd>Rosa (24:55012) / *Edge (27:93102) / FuSoYa (50:1007865) / *Cecil (21:31871) / Rydia (24:67658)</dd>
+						<dt>Ideal Survivors</dt><dd>Edge, Rosa and FuSoYa</dd></dt>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Edge</dt><dd>Run Buffer<br>Equip <i>FireClaw</i><br>Fight</dd>
+						<dt>FuSoYa</dt><dd>Cast Nuke on Milon</dd>
+						<dt>Rosa</dt><dd>Cast Cure4 on Milon</dd>
+						<dt>Rydia</dt><dd>Cast Fire2 on Milon</dd>
+						<dt>Cecil</dt><dd>Cover Edge</dd>
+						<dt>Edge</dt><dd>Fight</dd>
+						<dt>FuSoYa</dt><dd>Cast Ice3 on Elements</dd>
+						<dt>Rosa</dt><dd>Cast Cure4 if still Milon/Cast Blink on Rosa</dd>
+						<dt>Edge</dt><dd>Equip <i>IceClaw</i><br>Fight</dd>
+						<dt>Cecil</dt><dd>Use <i>Cure2</i> on Edge/Fight Cecil</dd>
+						<dt>Rosa</dt><dd>Cast Blink on Edge</dd>
+						<dt>Edge</dt><dd>Fight</dd>
+						<dt>FuSoYa</dt><dd>Cast Ice-3 on Rubicant</dd>
+						<dt>Cecil</dt><dd>Use <i>Cure2</i> on Edge/Fight Cecil</dd>
+						<dt>Rosa</dt><dd>Cast Blink on Rosa</dd>
+						<dt>Edge</dt><dd>Equip <i>Thunder</i> (claw)<br>Fight</dd>
+						<dt>FuSoYa</dt><dd>Cast Bersk on Edge</dd>
+						<dt>Rosa</dt><dd>Cast Cure4 on party (avoid if Cecil's still alive somehow)</dd>
+					</dl>
+					<p>At this point, Edge will do some good damage, while FuSoYa and Rosa can help clean up with Lit-3 and White, respectively.</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Use <i>Life</i> on Edge, Rosa or FuSoYa (if needed).</li>
+					<li>Ensure those three have most of their HP.</li>
+					<li>Cure MP until Rosa has at least 76 and FuSoYa has at least 149.</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: CPU</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>CPU: 20000 / Attacker: 2000 / Defender: 2000</dd>
+						<dt>EXP</dt><dd>150000</dd>
+						<dt>Party</dt><dd>Rosa (49:810645) / *Edge (29:118535) / FuSoYa (50:1028698) / *Cecil (21:31871) / Rydia (24:67658)</dd>
+						<dt>Ideal Survivors</dt><dd>Rosa, FuSoYa, Edge</dd>
+						<dt>Inventory Goals</dt><dd>TODOBoth <i>Dancing</i> x1 to bottom<br><i>Gaea</i> (helm) to bottom<br><i>Strength</i> to 4L</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>FuSoYa</dt><dd>Cast Meteo</dd>
+						<dt>Rosa</dt><dd>Cast Wall on Rosa</dd>
+						<dt>Edge</dt><dd>Parry (must be fast if you want his last turn)</dd>
+						<dt>Rosa</dt><dd>Wait for Maser (second Maser after Edge parried)<br>Cast White on Rosa</dd>
+						<dt>Edge</dt><dd>Parry (must be fast if you want his last turn)</dd>
+						<dt>FuSoYa</dt><dd>Cast Nuke on Rosa</dd>
+						<dt>Edge</dt><dd>TODO</dd>
+					</dl>
+				</div>
+			</div>
+			<h3 id="walkthrough-descent">Final Descent</h3>
+			<p>After the scenes, board the Big Whale.</p>
+			<p>Enter the crystal room, and begin your descent into the Lunar Core. Along the way, you want to collect the chest with <i>White</i> (robe) in one of the rooms on B5. It's the lone chest in a room shaped like an upside down U.</p>
+			<p>You'll need to pick up two of the <i>Ninja</i> stars available along the way. If you're using a step route, it will tell you which ones. Otherwise, pick whichever you prefer. In general, the fastest two are on Lunar Core B1 and Lunar Core B3. In addition, there is an <i>Elixir</i> you may want on Lunar Core B2.</p>
+			<p>TODO: Continue the descent until you reach the final battle. If you run into any formations of <i>Red D. x1</i>, it's probably faster to have Kain parry and for Rosa to cast Exit. The battle itself will take longer, but you'll escape the Heat Ray, which might make healing less necessary.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Equip Rosa: */*/*/<i>White</i>/*.</li>
+					<li>Equip Edge: */*/*/empty/<i>Diamond</i>.</li>
+					<li>Equip Kain: */*/*/<i>Bl.Belt</i>/<i>Strength</i>.</li>
+					<li>Swap Edge and Kain (Form, Down, A, Down, A).</li>
+					<li>Swap Edge and Cecil (Form, Down, Down, A, Down, A).</li>
+					<li>Swap Edge and Rydia (Form, Up, A, Up, A).</li>
+				</ul>
+			</div>
+			<p>Approach Zemus to begin the final cutscenes.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Zeromus</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>110000-120000 (depending on damage rolls)</dd>
+						<dt>EXP</dt><dd>0</dd>
+						<dt>Party</dt><dd>Rosa (49:871745) / *Kain (51:881102) / Cecil (21:30546) / *Rydia (26:84221) / Edge (25:69777)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block col-md">
+					<dl class="dl-horizontal">
+						<dt>Cecil</dt><dd>TODO: Move <i>Dancing</i> to 2L<br>Use <i>Crystal</i> on Zeromus</dd>
+						<dt>Rosa</dt><dd>Cast Bersk on Kain</dd>
+					</dl>
+					<p>Zeromus transforms.</p>
+					<dl class="dl-horizontal">
+						<dt>Edge</dt><dd>Dart <i>Ninja</i></dd>
+						<dt>Rydia</dt><dd>Parry</dd>
+						<dt>Rosa</dt><dd>Cast White</dd>
+						<dt>Cecil</dt><dd>Parry</dd>
+						<dt>Edge</dt><dd>Dart <i>Ninja</i></dd>
+					</dl>
+					<p>Zeromus shakes.</p>
+					<dl class="dl-horizontal">
+                        <dt>Rydia</dt><dd>Wait for Weak (counter to White)<br>Use <i>Elixir</i> on Weak target if Kain or Rosa/Parry</dd>
+						<dt>Cecil</dt><dd>Parry</dd>
+						<dt>Rosa</dt><dd>Cast Cure4 on entire party (as Big Bang goes off)</dd>
+                    </dl>
+                    <p>Zeromus casts Big Bang and shakes.</p>
+                    <dl class="dl-horizontal">
+                        <dt>Rosa</dt><dd>Wait for Kain attack after Zeromus shake<br>Cast Cure4 on party</dd>
+                    </dl>
+                    <p>Zeromus casts Big Bang.</p>
+                    <dl class="dl-horizontal">
+						<dt>Rosa</dt><dd>Wait for Blk.Hole after Big Bang<br>Cast Bersk on Kain</dd>
+						<dt>Rosa</dt><dd>Wait for first Kain attack after Zeromus shake<br>Cast Cure4 on party</dd>
+					</dl>
+					<p>Repeat this cycle until Zeromus is finished. You may need to have Rosa restore her MP at some point, or to separately heal after a Virus or Nuke.</p>
+				</div>
+			</div>
+		</div>
+		<script>$('#toc').toc({
+			'selectors': 'h2,h3'
+		});</script>
+	</body>
+</html>
+{% endblock %}

@@ -7,6 +7,7 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='guides/index.html'), name='index'),
     path('cw-music/', TemplateView.as_view(template_name='guides/cw-music.html'), name='cw-music'),
     path('ff5/', TemplateView.as_view(template_name='guides/ff5.html'), name='ff5'),
+    path('glitchless/', TemplateView.as_view(template_name='guides/glitchless.html'), name='glitchless'),
     path('mini-glitch-room-setup/', TemplateView.as_view(template_name='guides/mini-glitch-room-setup.html'), name='mini-glitch-room-setup'),
     path('mini-inventory-warping/', TemplateView.as_view(template_name='guides/mini-inventory-warping.html'), name='mini-inventory-warping'),
     path('mini-step-routing/', TemplateView.as_view(template_name='guides/mini-step-routing.html'), name='mini-step-routing'),
