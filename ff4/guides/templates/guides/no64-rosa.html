@@ -12,16 +12,15 @@
 {% block content %}				<h1>Final Fantasy IV Any% No64 (Rosa) Guide</h1>
 			<address>Jason Lynch &lt;<a href="mailto:jason@calindora.com">jason@calindora.com</a>&gt; (Aexoden)</address>
 			<h2 id="introduction">Introduction</h2>
-			<p>These are my notes for the Rosa of the Final Fantasy IV Any% No64 speedrun. While I am very familiar with the game and the speedrun, I am nonetheless nowhere near being the world record holder in this category or any other, so there are almost certainly faster ways to do things. That said, I do periodically update this document as new techniques and strategies are discovered, so if you follow them, you're probably not doomed to be perilously slow.</p>
+			<p>These are my notes for the Rosa route of the Final Fantasy IV Any% No64 speedrun. While I am very familiar with the game and the speedrun, I am nonetheless nowhere near being the world record holder in this category or any other, so there are almost certainly faster ways to do things. That said, I do periodically update this document as new techniques and strategies are discovered, so if you follow them, you're probably not doomed to be perilously slow.</p>
 			<p>This particular guide is intended for high-level PB attempts. Beginners may wish to use the marathon guide instead, as it provides extra elixirs, but otherwise, the differences are minimal. Runners using this guide may have trouble competing for the world record time, but times of 3:07 or better are definitely possible. I use this guide for my own PB attempts.</p>
 			<p>For the curious, the following is a short list of differences between this guide and what are generally considered world-record strats:</p>
 			<ul>
 				<li>Two fights in this guide (Rubicant and the grind fight) are done at battle speed 2. In both cases, this sacrifices a few seconds (perhaps upwards of 10 each) per battle to gain a significant amount of consistency.</li>
 				<li>This guide omits using the back row glitch on Cecil, as it requires quite a bit of setup and only saves a few seconds if done perfectly.</li>
-				<li>A world record run will probably omit the healing pot at the Dwarf castle and avoid reviving Rosa. This supposedly can improve the Lugae fight as well, though my testing experience has not been good.</li>
 				<li>Some equipment only used for defense may be omitted in world record runs, though I do not know exactly what gets omitted, if anything.</li>
 				<li>Yang's claws can be equipped in the Baigan fight, but this makes an already annoying fight slightly more annoying.</li>
-				<li>A world record run will omit the extra two elixir pickups and use a less safe strategy for Zeromus that is about ten seconds faster.</li>
+				<li>A world record run will omit the optional extra two elixir pickups and use a less safe strategy for Zeromus that is about ten seconds faster.</li>
 			</ul>
 			<p>There may be additional differences, but these are the ones I can think of at this time.</p>
 			<h2 id="general-concepts">General Concepts</h2>
@@ -70,14 +69,15 @@
 			<h3 id="general-concepts-resources">Resources</h3>
 			<p>The following resources should prove invaluable to either help during a run or to help you learn the run in the first place:</p>
 			<ul>
-				<li><a href="https://docs.google.com/document/d/1oLUA9Xt5RGQehK6I8MY7R4qKbhDeR5V9PY8gz7Lz4YI/edit">Any% No64 Notes</a> (by <a href="https://www.twitch.tv/riversmccown">Rivers McCown</a>)</li>
+                <li><a href="https://docs.google.com/document/d/1oLUA9Xt5RGQehK6I8MY7R4qKbhDeR5V9PY8gz7Lz4YI/edit">Any% No64 Notes</a> (by <a href="https://www.twitch.tv/riversmccown">Rivers McCown</a>)</li>
+                <li><a href="{% url 'routes:route' "no64-rosa-safe" %}">Any% No64 (Rosa) Step Routes</a></li>
 				<li><a href="{% url 'routes:route' "no64-rosa-safe" %}">Any% No64 (Rosa) (Safe) Step Routes</a></li>
 				<li><a href="{% url 'tools:seed-finder' %}">Seed Finder Tool</a></li>
 				<li><a href="{% static "myself086/GrindFightManip.txt" %}">Grind Fight Manipulation Text</a> (by <a href="https://www.twitch.tv/myself086">Myself086</a>)</li>
 				<li><a href="{% static "myself086/GrindFightManip.PNG" %}">Grind Fight Manipulation Image</a> (by <a href="https://www.twitch.tv/myself086">Myself086</a>)</li>
 			</ul>
 			<h3 id="general-concepts-step-route">Step Route</h3>
-			<p>This guide is intended to be used with a step route. The step route is not required, but it will generally save you 2 or 3 minutes if executed properly. For this guide, you should be using the no64-rosa-safe routes.</p>
+			<p>This guide is intended to be used with a step route. The step route is not required, but it will generally save you 2 or 3 minutes if executed properly. For this guide, you can use either the no64-rosa or no64-rosa-safe routes, but be sure to know the differences. First, the safe variant gives you the option of using the healing pot in the Castle of Dwarves (not recommended, but if using the safe routes and you skip it, make sure to take the steps anyway). Second, the safe variant picks up two extra elixirs in the Pass to Bab-il. These aren't strictly required, but will allow you to use the safer Zeromus strat in all cases. The choice is yours.</p>
 			<h2 id="walkthrough">Walkthrough</h2>
 			<h3 id="walkthrough-prologue">Prologue</h3>
 			<p>Begin the game. During the introduction, you may wish to hold down B+Right+Down immediately before the battle with the Raven, in an attempt to avoid the Raven's attack. This is known as the BRD or BIRD skip. It may or may not work for you, depending on the awesomeness of your mashing. Finish the introduction and gain control.</p>
