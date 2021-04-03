@@ -86,7 +86,7 @@ ROUTES = {
         'twin_safe': True,
         'complete': True,
         'seed_finder': True,
-        'status': 'Suboptimal (ETA: April 2021)'
+        'status': 'Suboptimal (ETA: June 2021)'
     },
     'no64-excalbur': {
         'name': 'Any% No64 (Edge+Excalbur)',
@@ -96,7 +96,7 @@ ROUTES = {
         'twin_safe': True,
         'complete': True,
         'seed_finder': True,
-        'status': 'Suboptimal (ETA: January 2021)'
+        'status': 'Optimal'
     },
     'no64-rosa-marathon-recovery-fusoya': {
         'name': 'Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)',
