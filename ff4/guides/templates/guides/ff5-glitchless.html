@@ -1,0 +1,3442 @@
+{% extends "guides/base.html" %}
+{% load static %}
+{% load django_bootstrap_breadcrumbs %}
+
+{% block breadcrumbs %}
+	{{ block.super }}
+	{% breadcrumb "Final Fantasy V Any% Glitchless" "guides:ff5-glitchless" %}
+{% endblock %}
+
+{% block subtitle %}Final Fantasy V Any% Glitchless{% endblock %}
+
+{% block content %}				<h1>Final Fantasy V Any% GlitchlessGuide</h1>
+			<address>Jason Lynch &lt;<a href="mailto:jason@calindora.com">jason@calindora.com</a>&gt; (Aexoden)</address>
+            <h2 id="introduction">Introduction</h2>
+            <p>These are my notes for the Any% Glitchless Final Fantasy V speedrun, specifically run on the RPGe English translation. This guide is very much a work-in-progress, and I've only begun running the game, so I wouldn't rely on these for the moment.</p>
+            <h2 id="general-concepts">General Concepts</h2>
+            <p>While this guide is primarily my notes used during runs, they may be useful to others learning the run, so I'll first go over some general concepts that apply throughout the guide.</p>
+			<h3 id="general-concepts-assumptions">Assumptions</h3>
+			<p>This guide makes the assumption that you are following along from start to finish. Menuing instructions assume that your characters are already equipped as per the guide, and won't list equipment that is staying the same. If you attempt to join in the middle, you may miss this or similar points.</p>
+			<p>This guide is primarily meant to serve as my notes for personal best attempts. As such, they generally tend to err on the side of less safety. In some cases, notes are made regarding potential safer strats for beginners, but they may not be entirely consistent throughout the document.</p>
+			<h3 id="general-concepts-conventions">Conventions</h3>
+			<p>This guide uses the following conventions:</p>
+			<ul>
+				<li>Item names are <i>italicized</i>.</li>
+				<li>Each battle lists the recommended party formation. The slots are listed from top to bottom. Characters in the front row are prefixed with an asterisk (*). In addition, their level and current experience is listed (assuming you follow this guide's experience path).</li>
+				<li>The battle strategies occasionally list multiple actions separated by slashes (/). In such cases, you should take the first option that applies to your situation. That is, don't use a <i>Potion</i> on your party if all your characters are fully healed.</li>
+				<li>In contrast, occasionally multiple commands are listed on separate lines. In this case, you should execute each command in order.</li>
+                <li>Battle summaries list the experience earned through the battle. This assumes you kill the same enemies as the guide.</li>
+                <li>All names are directly from the RPGe translation, even when said names conflict with more recent versions of the game.</li>
+			</ul>
+			<h3 id="general-concepts-resources">Resources</h3>
+			<p>The following resources should prove invaluable to either help during a run or to help you learn the run in the first place:</p>
+			<ul>
+                <li><a href="https://docs.google.com/document/d/1_Mkitdv891bpC1v6ZvVTzkHgBq38oUZDJwR2uJBS7zo/edit">FFV Glitchless Beta</a> (by <a href="https://www.twitch.tv/darklightboco">DarkLightBoco</a>)</li>
+			</ul>
+			<h3 id="general-concepts-step-route">Step Route</h3>
+			<p>This guide is intended to be used with a step route. The step route is not technically required, but it makes things a lot safer, saves time, and makes things more consistent. I will attempt to list backups in case you are not using the step route or if you have fallen off the route, but I make no guarantees in this regard.</p>
+			<h2 id="walkthrough">Walkthrough</h2>
+            <h3 id="walkthrough-prologue">Prologue</h3>
+            <p>After choosing New Game, you will begin a new run on seed zero. Unlike FF4, this is guaranteed and there is no need to identify your seed. However, like FF4, if you have to reset at any point, your seed will change.</p>
+            <p>When the introductory sequence concludes, you will be in control of Boco near Tycoon.</p>
+            <div class="bs-callout bs-callout-danger">
+                <span class="fas fa-shoe-prints"></span>
+                <h4>Step Route</h4>
+                <p>Take 26 extra steps before entering the Meteor at Tycoon.</p>
+				<p>One of the safest ways to do this is to hold right as the cutscene concludes, and go east to the wall. At this point, ideally, you'll go north two or three tiles, then west to the wall, south to the wall, east to the wall, north to the wall, and finally east.</p>
+				<p>If you accidentally only go north one tile, you'll need to hit the west wall, then dip into the southmost alcove before going north. If you go directly west, you can either shuffle north or just go north and south when you reach the wall, before dipping into the alcove.</p>
+            </div>
+            <p>Enter the Meteor at Tycoon and make your way to the cutscene.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Goblin x2</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>1</dd>
+						<dt>EXP</dt><dd>6</dd>
+						<dt>Party</dt><dd>*Butz (1:0) / *empty / *empty / *empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+                        <dt>Butz</dt><dd>Fight (hold A)</dd>
+                        <dt>Butz</dt><dd>Fight (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+            <div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+                <h4>Menu</h4>
+                <p>After the battle, you will be asked to name Butz.</p>
+				<ul>
+                    <li>Set Butz's name to <i>B</i>. (Down, B, B, B, Up, Right, Right, A)</li>
+				</ul>
+            </div>
+            <p>After the scenes, optionally collect the <i>PhenixDwn</i> hidden in the trees to the right and then begin making your way toward the pirate cave.</p>
+            <div class="bs-callout bs-callout-danger">
+                <span class="fas fa-shoe-prints"></span>
+                <h4>Step Route</h4>
+                <p>Take 8 extra steps before the earthquake sequence.</p>
+            </div>
+            <p>During the earthquake sequence, move up, fighting battles as you go.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Goblin x2</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>1</dd>
+						<dt>EXP</dt><dd>6</dd>
+						<dt>Party</dt><dd>*Butz (1:6) / *empty / *empty / *empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+                        <dt>Butz</dt><dd>Fight (hold A)</dd>
+                        <dt>Butz</dt><dd>Fight (hold A)</dd>
+					</dl>
+				</div>
+            </div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Goblin x2</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>1</dd>
+						<dt>EXP</dt><dd>6</dd>
+						<dt>Party</dt><dd>*Butz (2:12) / *empty / *empty / *empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+                        <dt>Butz</dt><dd>Fight (hold A)</dd>
+                        <dt>Butz</dt><dd>Fight (hold A)</dd>
+					</dl>
+				</div>
+            </div>
+            <p>After the earthquake sequence, continue until just outside the entrance to the cave.</p>
+            <div class="bs-callout bs-callout-danger">
+                <span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+                	<li>Take 32 extra steps after the earthquake sequence. (Go north to the wall, east to the wall, north to the wall, west to the wall, south once, west once, south to the wall, and then directly back toward the cave.)</li>
+					<li>Take a half step by opening the menu as you step onto the last tile before the cave.</li>
+				</ul>
+            </div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+                    <li>Set <i>battle speed</i> to 4.</li>
+                    <li>Set <i>message speed</i> to 1.</li>
+                    <li>Set <i>command set</i> to <i>Short</i>.</li>
+                    <li>Set <i>cursor</i> to <i>Memory</i>.</li>
+                    <li>Set <i>reequip</i> to <i>Empty</i>.</li>
+				</ul>
+			</div>
+            <h3 id="walkthrough-pirate-cave">Pirate Cave</h3>
+            <p>Make your way through the cave and board the ship, paying attention to the below notes.</p>
+            <div class="bs-callout bs-callout-danger">
+                <span class="fas fa-shoe-prints"></span>
+                <h4>Step Route</h4>
+                <p>After the cutscene by the spring, be sure to go left first instead of down to avoid the event tile.</p>
+            </div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: Stroper x2, Steel Bat x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+                    <p>Simply run away from the battle (hold L+R).</p>
+				</div>
+            </div>
+            <div class="bs-callout bs-callout-danger">
+                <span class="fas fa-shoe-prints"></span>
+                <h4>Step Route</h4>
+                <p>Take the ship south one tile, and then step off onto the land and back twice (to take two extra steps).</p>
+            </div>
+            <p>Reject the pirate's offer to help (by simply holding B) and make your own way to the Wind Shrine.</p>
+            <h3 id="walkthrough-wind-shrine">Wind Shrine</h3>
+            <p>Begin making your way through the Wind Shrine.</p>
+            <div class="bs-callout bs-callout-danger">
+                <span class="fas fa-shoe-prints"></span>
+                <h4>Step Route</h4>
+                <p>Take 6 extra steps before entering the save point room. (Right to wall, left to wall, up to wall then down at center.)</p>
+            </div>
+            <p>On the final floor, use the secret passage and enter the nearby room to collect the <i>Broad</i> sword. Continue on to engage Wing Raptor.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Wing Raptor</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>250</dd>
+						<dt>EXP</dt><dd>0</dd>
+                        <dt>Party</dt><dd>*Butz (2:18) / *Lenna (1:0) / *Galuf (1:0) / *empty</dd>
+                        <dt>Spoils</dt><dd><i>PhenixDwn</i></dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+                    <p>The turn order here is not entirely consistent. Watch for Galuf's turn to equip the <i>Broad</i> sword.</p>
+                    <dl class="dl-horizontal">
+                        <dt>Faris</dt><dd>Fight (hold A)</dd>
+                        <dt>Lenna</dt><dd>Fight (hold A)</dd>
+                        <dt>Galuf</dt><dd>Equip <i>Broad</i><br>Fight</dd>
+                        <dt>Butz</dt><dd>Fight (hold A)</dd>
+                    </dl>
+                    <p>At this point, simply hold A to Fight until the battle is over.</p>
+				</div>
+            </div>
+            <p>Continue to the crystal and watch the cutscene. (Remember not to hold up on the next room if you want to stay on step route.)</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu &uarr;</h4>
+				<ul>
+                    <li>Job: Butz to Blue Mage. (Left, Left) [Optimize]</li>
+                    <li>Job: Faris to Blue Mage. (Left, Left) [Optimize]</li>
+                    <li>Job: Galuf to Blue Mage. (Left, Left) [Optimize]</li>
+                    <li>Job: Lenna to Thief. (Right, Right) [Optimize]</li>
+                    <li>Move Lenna and Galuf to the back row. (Left, A, A, Down, A, A)</li>
+				</ul>
+			</div>
+			<p>Afterward, begin making your way to the exit by walking back the way you came.</p>
+            <div class="bs-callout bs-callout-danger">
+                <span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>Make sure to avoid the Wing Raptor trigger tile by walking left after leaving the doorway.</li>
+					<li>Take 8 extra steps in the room after the save point. (Up to wall, right to wall, down to wall, right to wall, down to wall, right to wall, left to battle.)</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Black Goblin x2</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>20</dd>
+						<dt>EXP</dt><dd>40</dd>
+                        <dt>Party</dt><dd>*Butz (2:18) / Lenna (1:0) / Galuf (1:0) / *Faris (3:50)</dd>
+                        <dt>Spoils</dt><dd><i>Leather Shoes</i> (<strong>Discard</strong>)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<p>Defend until Goblin Punch hits a Blue Mage. Don't use more than one <i>Potion</i>.</p>
+					<p>After Goblin Punch connects, Fight with Butz and Faris.</p>
+				</div>
+			</div>
+			<p>Continue out of the Wind Shrine and then make your way to Tule.</p>
+			<h3 id="walkthrough-torna-canal">Tule and Torna Canal</h3>
+            <p>Inside Tule, head to the tutorial house and collect the two chests and three hidden treasures.</p>
+			<p>Head to the Tule Magic Shop.</p>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-shopping-cart"></span>
+				<h4>Shopping</h4>
+				<ul>
+					<li>Buy <i>Fire</i>, <i>Bolt</i> and <i>Cure</i>.</li>
+				</ul>
+			</div>
+			<p>Collect the <i>PhenixDwn</i> behind Zokk's House and then enter the house.</p>
+			<p>After the scenes, continue on to and through Torna Canal.</p>
+            <div class="bs-callout bs-callout-danger">
+                <span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>Ensure you sail on the trigger tiles in front of the Torna Canal gates.</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: Octoraken x2</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+                    <p>Run away from the battle (hold L+R).</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: Sucker x2</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+                    <p>Run away from the battle (hold L+R).</p>
+				</div>
+			</div>
+            <div class="bs-callout bs-callout-danger">
+                <span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>On the second tile in the narrow passage after the second battle, open the menu.</p>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu &uarr;</h4>
+				<ul>
+					<li>Job: Galuf to Black Mage. (Left, Left, Left) [No Equipment]</li>
+					<li>Job: Lenna to Black Mage. (Left, Left, Left) [Optimize]</li>
+					<li>Job: Butz to Black Mage. (Left, Left, Left) [Optimize]</li>
+					<li>Move Butz and Faris to the back row and swap them. (Left, A, A, Up, A, A, A, Down, A)</li>
+					<li>Job: Faris to Black Mage. (Left, Left, Left) [No Equipment]</li>
+					<li>Use a <i>Potion</i> on Faris if needed.</li>
+				</ul>
+			</div>
+			<p>Continue down to engage the boss.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Karlabos</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>650</dd>
+                        <dt>Party</dt><dd>Faris (3:60) / Lenna (2:10) / Galuf (2:10) / Butz (2:28)</dd>
+                        <dt>Spoils</dt><dd><i>Tent</i></dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Everybody</dt><dd>(&larr;) Black &raquo; Bolt</dd>
+					</dl>
+                    <p>Faris needs to survive this battle, but no one else matters. (TODO: It's possible Butz and Galuf need to survive, so it may be safest to ensure they do.)</p>
+				</div>
+			</div>
+			<h3 id="walkthrough-ship-graveyard">Ship Graveyard</h3>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu &darr;</h4>
+				<ul>
+					<li>Job: Faris to Thief. (Right, Right) [No Equipment]</li>
+					<li>Job: Lenna to Blue Mage. (Left, Left) [Equip <i>Broad</i>]</li>
+					<li>Job: Galuf to Blue Mage. (Left, Left) [Optimize]</li>
+					<li>Job: Butz to Blue Mage. (Left, Left) [Optimize]</li>
+				</ul>
+			</div>
+			<p>Make your way through the Ship Graveyard, collecting the 990 Gil in the skull crate and the <i>Potion</i> chest along the way.</p>
+            <div class="bs-callout bs-callout-danger">
+                <span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>Before entering the first door, take 7 extra steps.</li>
+					<li>In the room after the room with the map on the desk, take 16 extra steps and then exit and re-enter the room.</li>
+					<li>When entering the room with the skull crate, take 6 extra steps, and head back a floor. (Go down to the wall, left to the wall, up to the wall, and right to the exit.)</li>
+					<li>Take 8 extra steps on this previous floor and then continue onward. (Left to the wall and back.)</li>
+					<li>After the <i>Potion</i> chest, take 4 extra steps.</li>
+					<li>Take 2 extra steps before entering the rest area.</li>
+					<li>When on the ship in between the two rock segments, enter and exit the door.</li>
+					<li>After opening the chest switch, walk immediately left and up to walk on the trigger tile.</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Siren</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>900</dd>
+                        <dt>Party</dt><dd>Faris (3:60) / Lenna (2:10) / Galuf (2:10) / Butz (2:28)</dd>
+                        <dt>Spoils</dt><dd><i>Bronze Armor</i></dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(R) Defend</dd>
+						<dt>Lenna</dt><dd>(&larr;) Blue &raquo; Goblin Punch</dd>
+						<dt>Butz</dt><dd>(&larr;) Blue &raquo; Goblin Punch</dd>
+						<dt>Galuf</dt><dd>(&larr;) Blue &raquo; Goblin Punch</dd>
+                        <dt>Faris</dt><dd>Wait for Siren to attack<br>(&darr;) Item &raquo; <i>PhenixDwn</i> &raquo; anyone dead <strong>or</strong> (R) Defend</dd>
+						<dt>Lenna</dt><dd>(&darr;) Item &raquo; <i>PhenixDwn</i> &raquo; Faris <strong>or</strong> (&larr;) Blue &raquo; Goblin Punch</dd>
+						<dt>Butz</dt><dd>(&larr;) Blue &raquo; Goblin Punch</dd>
+						<dt>Galuf</dt><dd>(&larr;) Blue &raquo; Goblin Punch</dd>
+					</dl>
+					<p>Repeat this strategy until Siren dies. Only use the <i>PhenixDwn</i> on Faris if she dies.</p>
+				</div>
+			</div>
+			<h3 id="walkthrough-carwen">Carwen</h3>
+			<p>Make your way toward the town of Carwen.</p>
+            <div class="bs-callout bs-callout-danger">
+                <span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Come to a complete stop and open the menu when reaching the corner in the mountains below two large mountains.</p>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Use <i>PhenixDwn</i> or <i>Tent</i> if any characters are dead.</li>
+					<li>Job: Butz to Black Mage. (Left, Left, Left) [No Equipment]</li>
+					<li>Job: Galuf to Black Mage. (Left, Left, Left) [No Equipment]</li>
+				</ul>
+			</div>
+            <div class="bs-callout bs-callout-danger">
+                <span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>Travel directly south from the menu, and when reaching a wall, take a half step on the next step to the right.</li>
+					<li>Take another half step after traveling south from there, when leaving the middle of the three tiles next to the water.</li>
+				</ul>
+			</div>
+			<p>In Carwen, collect the <i>Ice Rod</i> in the hidden chest and the 1000 gil in the Pub. Afterward, head to the item shop.</p>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-shopping-cart"></span>
+				<h4>Shopping</h4>
+				<ul>
+					<li>Buy 11 <i>Potion</i>.</li>
+				</ul>
+			</div>
+			<p>After that, leave and make your way toward the North Mountain.</p>
+            <div class="bs-callout bs-callout-danger">
+                <span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>Head east from Carwen to the wall, then head north and take a half step east after hitting the mountains there.</li>
+					<li>Head north and when even with the lower of the two-wide mountain wall to the left at the top, take another half step when stepping onto the last tile moving left.</li>
+				</ul>
+			</div>
+			<h3 id="walkthrough-north-mountain">North Mountain</h3>
+			<p>Make your way through the mountain, paying attention to step route and battle notes below.</p>
+            <div class="bs-callout bs-callout-danger">
+                <span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Take 6 extra steps in the first cave.</p>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: RockGarter x2</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>120</dd>
+						<dt>EXP</dt><dd>92</dd>
+                        <dt>Party</dt><dd>Faris (3:60) / Lenna (2:10) / Galuf (2:10) / Butz (2:28)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(R) Defend</dd>
+						<dt>Lenna</dt><dd>(R) Defend</dd>
+						<dt>Butz</dt><dd>(&larr;) Black &raquo; Fire</dd>
+						<dt>Galuf</dt><dd>Swap <i>Tent</i> and <i>Ice</i> (rod)<br>Swap <i>Knife</i> and <i>Ether</i><br>(&larr;) Black &raquo; Fire</dd>
+					</dl>
+				</div>
+			</div>
+            <div class="bs-callout bs-callout-danger">
+                <span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>Take 14 extra steps in the second cave.</li>
+					<li>On the first map with poison plants, take 16 extra steps and re-enter the cave.</li>
+					<li>Inside the cave, take 16 extra steps and then continue back to the poison plants.</li>
+					<li>Take 4 extra steps immediately before the battle with Magisa.</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Magisa</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>650</dd>
+						<dt>Party</dt><dd>Faris (4:83) / Lenna (3:33) / Galuf (3:33) / Butz (3:51)</dd>
+						<dt>Spoils</dt><dd><i>Whip</i></dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>Wait for Magisa to attack<br>(&darr;) Item &raquo; <i>PhenixDwn</i> &raquo; anyone dead</dd>
+						<dt>Anybody</dt><dd>(&darr;) Item &raquo; <i>PhenixDwn</i> &raquo; Faris (if dead) <strong>or</strong><br>(&darr;) Item &raquo; Equip <i>Knife</i> and attack whoever died if not Faris</dd>
+						<dt>Anybody</dt><dd>(&darr;) Item &raquo; Equip and use <i>Ice</i> (rod)</dd>
+					</dl>
+					<p>If Lenna was forced to equip the <i>Knife</i>, make a mental note to replace it with <i>Broad</i> in the next menu.</p>
+				</div>
+			</div>
+			<p>Continue to the top of the mountain, and after the scenes, make your way to and land in front of Worus Castle.</p>
+			<h3 id="walkthrough-worus">Worus</h3>
+			<p>Inside the castle, collect the 490 gil, <i>PhenixDwn</i> and <i>Tent</i> from the room through the door on the right and down the stairs. Make your way to the throne room and watch the scene.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Equip Lenna: <i>Broad</i> (if she had to equip the <i>Knife</i>)</li>
+					<li>Job: Galuf to Thief. (Right, Right) [No Equipment]</li>
+					<li>Job: Butz to Thief. (Right, Right) [No Equipment]</li>
+				</ul>
+			</div>
+			<p>Afterward, exit the castle.</p>
+            <div class="bs-callout bs-callout-danger">
+                <span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Take a half-step when boarding the Hiryuu by holding A as you're moving onto the tile.</p>
+			</div>
+			<p>Board the Hiryuu and head to Worus Tower. (Fly directly north until you see mountains to the northwest, then turn west. The tower will shortly come into view.)</p>
+			<p>Inside the tower, make your way to the second floor, where there will be an encounter (if on step route).</p>
+            <div class="bs-callout bs-callout-danger">
+                <span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Take 6 extra steps by going left to the wall and then back to the right when entering the second floor.</p>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: RikaldMage x1, IceSoldier x2</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>RikaldMage: 100, IceSoldier: 160</dd>
+						<dt>Party</dt><dd>Faris (4:83) / Lenna (3:33) / Galuf (3:33) / Butz (3:51)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&larr;) Steal &raquo; IceSoldier</dd>
+						<dt>Butz</dt><dd>(&larr;) Steal &raquo; IceSoldier</dd>
+						<dt>Galuf</dt><dd>(&larr;) Steal &raquo; IceSoldier</dd>
+					</dl>
+					<p>Run away once you either get the <i>Mythril</i> (sword) or if you exhaust your steal attempts. If you fail to steal, you will need to use a backup strategy for Galura.</p>
+				</div>
+			</div>
+			<p>Continue to the last floor, where you'll see a chest.</p>
+            <div class="bs-callout bs-callout-danger">
+                <span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>Take 4 extra steps after the battle.</li>
+					<li>Take 8 extra steps on 6F.</li>
+					<li>Take 6 extra steps on 7F.</li>
+				</ul>
+			</div>
+			<p>Collect the <i>Ether</i> in the chest and continue to the next floor, ensuring you open the menu before moving.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Butz to Blue Mage. (Left, Left) [Optimize]</li>
+					<li>Job: Faris to Knight. [Equip <i>Mythril</i> (helm)]</li>
+					<li>Use <i>Potion</i> on Faris twice.</li>
+					<li>If no <i>Mythril</i> (sword), Job: Galuf to Blue Mage. [Left, Left) [Optimize]</li>
+                </ul>
+			</div>
+			<p>Move forward to begin the battle against Galura.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Galura</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>1200</dd>
+						<dt>Party</dt><dd>Faris (4:83) / Lenna (3:33) / Galuf (3:33) / Butz (3:51)</dd>
+						<dt>Spoils</dt><dd>HiPotion</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<p>If you successfully stole the <i>Mythril</i> (sword), follow this strategy:</p>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Galuf</dt><dd>(R) Defend</dd>
+						<dt>Faris</dt><dd>(&larr;) Guard</dd>
+						<dt>Lenna</dt><dd>(&larr;) Blue &raquo; Goblin Punch</dd>
+						<dt>Butz</dt><dd>(&larr;) Blue &raquo; Goblin Punch</dd>
+						<dt>Galuf</dt><dd>(R) Defend</dd>
+						<dt>Faris</dt><dd>(&larr;) Guard (hold A)</dd>
+						<dt>Lenna</dt><dd>(R) Defend</dd>
+						<dt>Butz</dt><dd>(&larr;) Blue &raquo; Goblin Punch (hold A)</dd>
+					</dl>
+				</div>
+                <p>Otherwise, use a simplified strategy where Faris uses Guard and everyone else casts Goblin Punch.</p>
+                <p>If Faris is at some point afflicted with Sap, this fight could get very dodgy.</p>
+			</div>
+			<p>Collect the job crystals and then after the scenes, enter the meteor and travel to Karnak.</p>
+			<h3 id="walkthrough-karnak">Karnak</h3>
+			<p>Begin the walk to Karnak, keeping in mind the step route.</p>
+            <div class="bs-callout bs-callout-danger">
+                <span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Head directly west, and when hitting the mountain, come to a complete stop and open the menu.</p>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Faris to Thief. (Right, Right) [No Equipment]</li>
+					<li>Job: Butz to Blue Mage. (Left, Left, Left) (Ability: !Black) [No Equipment]</li>
+					<li>Job: Galuf to Blue Mage. (Left, Left, Left) [No Equipment]</li>
+					<li>Job: Lenna to Red Mage. (Left, Left) [No Equipment]</li>
+				</ul>
+			</div>
+            <div class="bs-callout bs-callout-danger">
+                <span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>Head north and follow the coastline until the right half of a diagonal below a triangle that points into the sea. Take a half-step to the left.</li>
+					<li>Take another half-step after hitting the mountains after turning south. Take the half-step to the west.</li>
+				</ul>
+			</div>
+			<p>In Karnak, make your way to the armory.</p>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-shopping-cart"></span>
+				<h4>Shopping</h4>
+				<ul>
+					<li>Sell <i>Whip</i>, <i>Knife</i>, <i>Leather</i> (armor), <i>Bronze</i>, <i>Broad</i>, <i>Ether</i>, <i>Mythril</i> (helm), <i>Leather</i> (shield), <i>Mythril</i> (sword).</li>
+					<li>Buy <i>Ice</i> (rod).</li>
+				</ul>
+				<p>For the sake of clarity, you are selling everything except <i>Potion</i>, <i>HiPotion</i>, <i>Tent</i>, <i>PhenixDwn</i> and a <i>Dagger</i>. (If for some reason you don't have a <i>Dagger</i>, you can keep a <i>Knife</i> instead.)</i></p>
+			</div>
+			<p>Watch the scenes in Karnak Castle, and then make your way back to the town. Be careful when taking steps in Karnak Castle, as they affect the step route (except for the prison cells).</p>
+			<p>Once back in town, return to the armory to complete the shopping trip.</p>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-shopping-cart"></span>
+				<h4>Shopping</h4>
+				<ul>
+					<li>Buy 2 <i>Ice</i> (rod), 2 <i>Thunder</i> (rod).</li>
+				</ul>
+			</div>
+			<p>Afterward, leave the town and head to the Steamship.</p>
+			<h3 id="walkthrough-steamship">Steamship</h3>
+			<p>Make your way through the Steamship, paying attention to the step route.</p>
+            <div class="bs-callout bs-callout-danger">
+                <span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>After entering the first elevator, immediately return to the previous room.</li>
+					<li>Take 4 steps and then go back into the elevator, before returning again to the previous room.</li>
+					<li>Take 8 extra steps this time, and then go back into the elevator and continue.
+				</ul>
+			</div>
+			<p>Pick up the <i>PhenixDwn</i> in the chest to the right, and then continue back to the left.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>Take 8 extra steps before entering the next room.</li>
+					<li>After falling from the conveyor belt, take 4 extra steps before entering the room.</li>
+				</ul>
+			</div>
+			<p>Be careful while moving through the lever room. After flipping the two levers next to each other, you should get an encounter when you reach the southmost tile of the grate.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Crew Dust x2, Defeater x2</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>Crew Dust: 240, Defeater: 260</dd>
+						<dt>EXP</dt><dd>560</dd>
+						<dt>Party</dt><dd>Faris (4:83) / Lenna (3:33) / Galuf (3:33) / Butz (3:51)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&uarr;) Fight &raquo; Galuf (A, Right, Down, Down, A)</dd>
+						<dt>Lenna</dt><dd>(&darr;) Item &raquo; Equip and use <i>Ice</i> (rod)</dd>
+					</dl>
+				</div>
+			</div>
+			<p>Continue on until just before the boss battle.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+                    <li>Use <i>PhenixDwn</i> on Galuf.</li>
+					<li>Cast Cure with Lenna on the entire party until fully cured.</li>
+					<li>Job: Lenna to Time Mage. (Down) [No Equipment]</li>
+					<li>Job: Faris to Black Mage. (Down, Left) [No Equipment]</li>
+				</ul>
+			</div>
+			<p>Continue to engage the boss.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: LiquiFlame</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>3000</dd>
+						<dt>Party</dt><dd>Faris (6:269) / Lenna (5:219) / Galuf (3:33) / Butz (5:237)</dd>
+						<dt>Spoils</dt><dd><i>Fire</i> (bow) or <i>Flame</i> (scroll)<i></i></dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Lenna</dt><dd>(<em>If Galuf hit physically</em>) (&darr;) Item &raquo; Potion &raquo; Galuf <strong>or</strong><br>(&darr;) Item &raquo; Equip and use <i>Ice</i> (rod)</dd>
+						<dt>Faris</dt><dd>Swap <i>Potion</i> and <i>Thunder</i> (rod)<br>Swap <i>Ice</i> (rod) and <i>PhenixDwn</i></dd>
+					</dl>
+					<p>At this point, the boss will transform into either its hand or its tornado form. If the tornado form, simply have Faris equip and use another <i>Ice</i> (rod). Otherwise, see below:</p>
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&uarr;) Fight</dd>
+						<dt>Anybody</dt><dd>(&darr;) Item &raquo; <i>PhenixDwn</i> &raquo; anyone dead</dd>
+						<dt>Anybody</dt><dd>(&darr;) Item &raquo; Equip and use <i>Ice</i> (rod)</dd>
+                    </dl>
+                    <p>If you ran out of <i>PhenixDwn</i> earlier, the inventory instructions won't necessarily be right. The rods should end up on the top row.</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Faris to Thief. (Right, Right) [No Equipment]</li>
+					<li>If not on step route, give the !Black ability to Faris.</li>
+					<li>If not on step route, Job: Lenna to Red Mage. (Left, Left) [No Equipment]</li>
+				</ul>
+			</div>
+			<p>Continue forward to the crystal room. Make your way to main prison floor, collect the 2000 gil in the chest, and then go to the next floor. From the main floor, head to 2F and collect the chest, also with 2000 gil. From here, continue to the room on the right side and get the 2000 gil there. Make your way to the exit of the castle.</p>
+            <div class="bs-callout bs-callout-danger">
+                <span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+                    <li>After getting the second chest, take 10 extra steps by touching the chest to the left, then the right wall, then returning to the exit.</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+				<h4>Potential Battles</h4>
+				<p>If you aren't on step route, you may encounter one of two formations.</p>
+				<p>For the single Karnak, simply wait for it to Escape.</p>
+				<p>For the Sergeant and three Karnaks, have Faris and Lenna cast Fire on everyone, and have the other two equip <i>Thunder</i> (rod) and cast Bolt on everyone. You will need to heal after the battle.</p>
+			</div>
+			<p>Eventually, you'll meet the boss.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Sergeant x1, Karnak x3</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>Sergeant: 1000, Karnak: 140</dd>
+						<dt>EXP</d><dd>460</dd>
+						<dt>Party</dt><dd>Faris (5:223) / Lenna (5:173) / Galuf (5:173) / Butz (5:191)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(R) Defend</dd>
+						<dt>Lenna</dt><dd>(&darr;) Item &raquo; Equip and use <i>Thunder</i> (rod)</dd>
+                        <dt>Butz</dt><dd>(&darr;) Item &raquo; Equip and use <i>Thunder</i> (rod)</dd>
+                        <dt>Galuf</dt><dd>Move <i>Fire</i> (bow) to 1L</dd>
+					</dl>
+                </div>
+			</div>
+			<h3 id="walkthrough-ancient-library">Ancient Library</h3>
+			<p>Begin by heading up one tile, then right, and then up again to enter town. (This is to make sure to step on the event tiles where the castle once stood.) Once in town, head to the armory and then to the magic shop.</p>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-shopping-cart"></span>
+				<h4>Shopping</h4>
+                <p>If you didn't win the <i>Fire</i> (bow) from LiquiFlame (defeated the human form instead of the tornado), skip buying one of the <i>Fire</i> (rod), and instead pick up the secret one in the barrel on the city wall. You may wish to do this in any case for extra money.</p>
+				<ul>
+					<li>Sell <i>Fire</i> (bow).</li>
+                    <li>Buy 2 <i>Ice</i> (rod), 3 <i>Fire</i> (rod), 1 <i>Thunder</i> (rod).</li>
+					<li>Buy Life from the left merchant and Haste from the right merchant at the magic shop.</li>
+				</ul>
+			</div>
+			<p>Begin the long walk to the Ancient Library, being careful to follow the step route instructions.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>From the town, walk south two tiles and then west to cross over the castle event tiles and continue west.</li>
+                    <li>Take a half-step to the west when leaving the last full dark green tile.</li>
+                    <li>Head south on the leftmost column of full light green tiles, and take a half-step when stepping onto the second group of light green tiles.</li>
+                    <li>Continue south to the mountains, and follow them west (jogging to the south one tile) to the sea. Take a half-step south from the water and continue.</li>
+                    <li>When you reach the mountains, turn east, and take a half-step when leaving the tile where the diagonal water passes above you.</li>
+					<li>From here, head south and east to enter the library.</li>
+				</ul>
+			</div>
+			<p>Inside the library, go up a floor, use the pot, and then head back down and into the dungeon.</p>
+            <p>On the first room with restricted vision, go to the right and pick up the <i>Ether</i> in the chest. Continue to the next room.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: Page 64 x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+                    <p>Run away from the battle (hold L+R).</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+                    <li>On the map with the stairs, enter the first door and return before continuing to Ifrit.</li>
+                    <li>Before engaging Ifrit, take two extra steps.</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Ifrit</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>3000</dd>
+						<dt>Party</dt><dd>Faris (6:384) / Lenna (6:334) / Galuf (5:148) / Butz (6:352)</dd>
+						<dt>Spoils</dt><dd><i>Flame</i> (scroll)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>Wait for Ifrit<br>(&darr;) Item &raquo; <i>PhenixDwn</i> &raquo; anyone dead <strong>or</strong> (&larr;) Steal</dd>
+						<dt>Anybody</dt><dd>(&darr;) Item &raquo; Equip and use <i>Ice</i> (rod)</dd>
+						<dt>Anybody</dt><dd>(&darr;) Item &raquo; Equip and use <i>Ice</i> (rod)</dd>
+					</dl>
+					<p>It's okay for Galuf to be dead for this fight.</p>
+				</div>
+            </div>
+			<p>After leaving the room with Ifrit, continue onward. Be sure to take the diversion to the south to collect the <i>Stealth</i> (robe).</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+                <p>You can make up to six steps worth of mistakes in this area, and you will fix them in the <i>PhenixDwn</i> room. If you have made mistakes, be careful to menu before the battle.</p>
+			</div>
+			<p>Collect the <i>PhenixDwn</i> at the bottom left of the dark room. Afterward, open the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Use <i>Potion</i> or a white mage to cure any weakened party members. (Use a <i>Tent</i> at the save point to restore MP if needed.)</li>
+					<li>Job: Lenna to Mediator. (Left, Left, Left) [No Equipment]</li>
+                    <li>Equip Butz: <i>Fire</i> (rod)</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Page 64</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>500</dd>
+						<dt>Party</dt><dd>Faris (6:384) / Lenna (6:334) / Galuf (5:148) / Butz (6:352)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+                        <dt>Faris</dt><dd>Wait for Page 64<br>(&darr;) Item &raquo; <i>Potion</i> <strong>or</strong> (R) Defend</dd>
+                        <dt>Lenna</dt><dd>(R) Defend</dd>
+                        <dt>Butz</dt><dd>(&rarr;) Black &raquo; Fire</dd>
+                        <dt>Galuf</dt><dd>(<em>If alive</em>) (R) Defend</dd>
+                        <dt>Faris</dt><dd>(R) Defend</dd>
+                        <dt>Lenna</dt><dd>(R) Defend</dd>
+                        <dt>Butz</dt><dd>(&rarr;) Black &raquo; Fire (hold A)</dd>
+                        <dt>Galuf</dt><dd>(<em>If alive</em>) (R) Defend</dd>
+                        <dt>Faris</dt><dd>(R) Defend</dd>
+                        <dt>Lenna</dt><dd>Wait for L5 Doom (may have already happened)<br>(&larr;) Catch</dd>
+					</dl>
+					<p>It doesn't matter if Galuf or Faris die, so don't bother reviving them.</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Lenna to White Mage. (Down, Left) [No Equipment]</li>
+                    <li>Cast Life with Lenna on Galuf if dead.</li>
+                    <li>Job: Lenna to Time Mage. (Down, Right) [No Equipment]</li>
+                    <li>Job: Galuf to Black Mage. (Down) [No Equipment]</li>
+				</ul>
+			</div>
+            <p>Continue through the dungeon.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: Page 32 x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+                    <p>Run away from the battle (hold L+R).</p>
+				</div>
+			</div>
+			<p>Eventually, you'll reach the room with Mid. Move forward to engage Byblos.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Byblos</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>3600</dd>
+						<dt>Party</dt><dd>Faris (6:384) / Lenna (6:334) / Galuf (5:148) / Butz (6:352)</dd>
+						<dt>Spoils</dt><dd><i>Protect</i> (potion)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Anybody</dt><dd>Wait for Byblos<br>(&darr;) Item &raquo; <i>PhenixDwn</i> &raquo; anyone dead</dd>
+						<dt>Anybody</dt><dd>(&darr;) Item &raquo; Equip and use <i>Fire</i> (rod)</dd>
+						<dt>Anybody</dt><dd>(&darr;) Item &raquo; Equip and use <i>Fire</i> (rod)</dd>
+						<dt>Anybody</dt><dd>Move <i>Flame</i> (scroll) down below other items</dd>
+					</dl>
+					<p>Technically, if Byblos doesn't kill anybody, you can get some inventory management time by delaying on the second <i>Fire</i> (rod). However, this guide doesn't use that potential time as actually getting it is too hit or miss.</p>
+					<p>Galuf can potentially die here if necessary.</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>It doesn't really matter if you half-step or not when talking to Mid. This guide will assume you don't.</p>
+			</div>
+			<p>Talk to Mid to begin the cutscenes, and then leave the library to begin the trek back to Karnak.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+                <ul>
+                    <li>Head west to the mountains, north to almost the water, and then take a half-step to the west.</li>
+                    <li>Continue west and north, and when you reach the water past the desert, take a half-step to the right.</li>
+                    <li>Continue east and north, turning right to go just under the mountains. Take a half-step when leaving the last light green tile.</li>
+                </ul>
+			</div>
+			<p>Enter the town and talk with Cid at the Pub.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>When leaving town, walk directly south and then west into the Steamship to avoid the event tile.</p>
+			</div>
+			<h3 id="walkthrough-crescent-and-grind">Crescent and Grind</h3>
+			<p>Once in control of the ship, make your way toward Crescent, following the below instructions if following step route:</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>Travel south to leave the bay, and then follow the coastline eastward. Take a half-step as you leave the tile where you hug the coast to the north.</li>
+					<li>From here, go south only as far as needed to clear the land to the east, and continue east until you see land to the east. You ultimately want to turn south as far east as you can.</li>
+					<li>Head directly south until you see land to the southwest. Turn to the east when the lowest diagonal of the island is immediately to your northwest, and then continue moving east and south as needed, hugging the coastline.</li>
+					<li>Eventually, you'll be heading directly toward an island. Continue east and south until you approach the third island, and then turn south.</li>
+					<li>Take a half-step when you can see a couple of land tiles to the east approach the middle of the screen. (If you're too far west, and see Crescent approaching instead, take it then.) Crescent should be visible to the southeast. Ensure you enter the bay on the northmost tile to avoid the event tile.</li>
+				</ul>
+			</div>
+			<p>Enter the town, watch the scene, and then proceed to the black chocobo forest.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Butz to Thief. (Right, Right) [No Equipment]</li>
+				</ul>
+			</div>
+			<p>Catch a black chocobo and then fly to Lix (fly directly south until you reach mountains, and then turn west, folowing the northern boundary of the taller peaks).</p>
+			<p>Inside Lix, you will need to shop from the top merchant on the upper floor of the armory and item shop.</p>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-shopping-cart"></span>
+				<h4>Shopping</h4>
+				<ul>
+					<li>Sell <i>Flame</i> (scroll) if in the first slot.</li>
+					<li>Sell <i>Ether</i>, <i>Stealth</i> (robe) and <i>Protect</i> (potion).</li>
+					<li>If you still have less than 7820 gil, sell <i>HiPotion</i> or <i>PhenixDwn</i>.</li>
+					<li>Buy 35 <i>Thunder</i> (scroll), 2 <i>Water</i> (scroll), (up to) 2 <i>Flame</i> (scroll).</li>
+				</ul>
+                <p>You only need 2 <i>Flame</i> (scroll), and you probably have one or two at this point, so only buy what you need to get to two. Only sell it if it's still in the first position.</p>
+                <p>Head to the item shop:</p>
+                <ul>
+                    <li>Buy 11 <i>Potion</i>.</li>
+                </ul>
+			</div>
+			<p>After making your purchases, open the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Butz to Ninja. (Right, Right, Right) (Ability: !Black) [No Equipment]</li>
+					<li>Job: Galuf to Ninja. (Right, Right, Right) (Ability: !Black) [No Equipment]</li>
+                    <li>Job: Lenna to Ninja. (Right, Right, Right) (Ability: !Dimen) [No Equipment]</li>
+				</ul>
+			</div>
+			<p>Leave town to the north and board the black chocobo. If you are exactly on step route, you can half-step onto the black chocobo. Fly to the west, going around the larger peaks to the south twice, and to the north twice. Land on the lowest forest tile directly above the light green area near Istory.</p>
+			<p>You now need to fight a series of encounters. Keep taking steps until you encounter them. The first will be on approximately the third or fourth step.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: MiniDragon x5</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>1000</dd>
+						<dt>EXP</dt><dd>2500</dd>
+						<dt>Party</dt><dd>Faris (6:384) / Lenna (6:334) / Galuf (5:148) / Butz (6:352)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(R) Defend</dd>
+						<dt>Anybody</dt><dd>(&larr;) Throw &raquo; <i>Thunder</i> (scroll)</dd>
+						<dt>Anybody</dt><dd>(&larr;) Throw &raquo; <i>Thunder</i> (scroll)</dd>
+                        <dt>Anybody</dt><dd>(&larr;) Throw &raquo; <i>Thunder</i> (scroll)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Butz to Blue Mage. (Up, Left, Left, Left, Left) [No Equipment]</li>
+				</ul>
+			</div>
+            <p>The next two fights will both be MiniDragon x5. The first will be after 36 steps and the second after another 13 steps.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: MiniDragon x5</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>1000</dd>
+						<dt>EXP</dt><dd>2500</dd>
+						<dt>Party</dt><dd>Faris (10:1509) / Lenna (10:1459) / Galuf (9:1273) / Butz (10:1477)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(R) Defend</dd>
+						<dt>Anybody</dt><dd>(&larr;) Throw &raquo; <i>Thunder</i> (scroll)</dd>
+						<dt>Anybody</dt><dd>(&larr;) Throw &raquo; <i>Thunder</i> (scroll)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Faris to White Mage. (Down) [No Equipment]</li>
+                    <li>Cast Cure with Faris to fully heal the party.</li>
+                    <li>Job: Faris to Thief. (Right, Right) (Ability: !Escape) [No Equipment]</li>
+					<li>Job: Galuf to Blue Mage. (Up, Left, Left, Left, Left) [No Equipment]</li>
+				</ul>
+			</div>
+			<p>The next battle will be in 8 steps, on the grass tiles, so head south to those.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: BlackFlame x5</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>220</dd>
+						<dt>EXP</dt><dd>2500</dd>
+						<dt>Party</dt><dd>Faris (13:3759) / Lenna (13:3709) / Galuf (13:3523) / Butz (13:3727)</dd>
+                        <dt>Spoils</dt><dd><i>Speed</i> (potion)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<p>Defend until the monsters use Dark Shock on a blue mage, then have Lenna throw a <i>Thunder</i> (scroll).</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Galuf to Ninja. (Right, Right, Right) (Ability: !Black) [No Equipment]</li>
+				</ul>
+			</div>
+            <p>Fight two more battles with MiniDragons before continuing. They will occur in the forest after 30 steps and after 10 more steps.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>If you are not on the chocobo tile after the last encounter, half-step onto the chocobo.</p>
+			</div>
+			<p>From here, fly east to the mountain, and then south. Once you reach the desert, you'll need to veer slightly to the east, but you've been here before. Your destination is the Ancient Library. Land in the forest directly west of the Library.</p>
+			<h3 id="walkthrough-library-and-quicksand">Ancient Library and Quicksand</h3>
+			<p>Enter the Ancient Library, watch the scenes, and then begin your trek to the desert.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>Take a half-step when the passage narrows to one tile after turning back northwest.</li>
+				</ul>
+			</div>
+			<p>Continue to the battle with the Sandworm.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Sandworm</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>3000</dd>
+						<dt>Party</dt><dd>Faris (15:6371) / Lenna (15:6321) / Galuf (15:6135) / Butz (15:6339)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(R) Defend</dd>
+						<dt>Lenna</dt><dd>(&larr;) Throw &raquo; <i>Water</i> (scroll)</dd>
+						<dt>Galuf</dt><dd>(&larr;) Throw &raquo; <i>Water</i> (scroll)</dd>
+						<dt>Butz</dt><dd>(&darr;) Item &raquo; <i>PhenixDwn</i> <strong>or</strong> (R) Defend</dd>
+						<dt>Faris</dt><dd>(&darr;) Item &raquo; <i>PhenixDwn</i> <strong>or</strong> (R) Defend</dd>
+						<dt>Lenna</dt><dd>(&larr;) Throw &raquo; <i>Thunder</i> (scroll)</dd>
+					</dl>
+					<p>Most of the time, the first two scroll should finish the battle, but if not, be prepared to loop back to Lenna.</p>
+				</div>
+			</div>
+			<p>To traverse the quicksand, walk across the sandworm until the second lowest row, but exit east from that row. You'll run into an encounter.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Sand Killer x1, Sand Porky x2</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape</dd>
+					</dl>
+				</div>
+			</div>
+			<p>After the battle, head south. Once on dry land, go south again.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Sand Killer x1, Sand Porky x2</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<p>Go west one tile, then south once more. Immediately step south back onto the quickand. Go west one tile and then south.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Sand Killer x2</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Take two extra steps before you leave the map.</p>
+			</div>
+			<p>Hold down to leave the dungeon.</p>
+			<h3 id="walkthrough-airship">Airship Get!</h3>
+			<p>From here, you need to walk to Gohn.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>Head directly south, west, south and east. When you hit the mountains, turn south, and when you hit the mountains, take a half-step to the east.</li>
+				</ul>
+			</div>
+			<p>Walk to the tile leading to the large staircase in the middle. Afterward, head directly west until you hit a wall and head north until a scene. Then return to the main staircase and continue onward.</p>
+			<p>Continue through the scenes until the airship is flying, then open the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<p>Heal the party so everybody has at least 150HP, using either <i>Potion</i> or changing Lenna to White Mage (Down) and back.</p>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Crayclaw</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>2000</dd>
+						<dt>Party</dt><dd>Faris (15:6371) / Lenna (15:6321) / Galuf (15:6135) / Butz (15:6339)</dd>
+						<dt>Spoils</dt><dd><i>Ice</i> (bow)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(R) Defend</dd>
+						<dt>Anybody</dt><dd>(&larr;) Throw &raquo; <i>Thunder</i> (scroll)</dd>
+						<dt>Anybody</dt><dd>(&larr;) Throw &raquo; <i>Thunder</i> (scroll)</dd>
+					</dl>
+				</div>
+			</div>
+			<p>After the battle, fly again to the ruined city for a cutscene. (Head east until the center of the mountains, then head north.) Afterward, return to the Crescent platform.</p>
+			<p>After more scenes, fly to the Tycoon Meteor. (Head north until roughly even with the peninsula to the northeast, and then head west.) Be careful not to half-step the landing, if on step route.</p>
+			<p>Head into the meteor, and collect the adamantite. Afterward, open the menu to prepare for the boss.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Galuf to Blue Mage (Up, Left, Left, Left, Left) [No Equipment]</li>
+					<li>Job: Lenna to White Mage (Down) [No Equipment]</li>
+					<li>Cast Cure with Lenna to heal the party to maximum.</li>
+					<li>Job: Lenna to Mediator (Up, Left, Left) [No Equipment]</li>
+				</ul>
+			</div>
+			<p>Move downward to engage the boss.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: AdamanTiMi</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>2000</dd>
+						<dt>Party</dt><dd>Faris (15:6371) / Lenna (15:6321) / Galuf (15:6135) / Butz (15:6339)</dd>
+						<dt>Spoils</dt><dd><i>TurtleShell</i></dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>Wait for both attacks<br>(&darr;) Item &raquo; <i>PhenixDwn</i> <strong>or</strong> (R) Defend</dd>
+						<dt>Lenna</dt><dd>(&darr;) Item &raquo; <i>PhenixDwn</i> <strong>or</strong> (R) Defend</dd>
+						<dt>Butz</dt><dd>(&larr;) Blue &raquo; L.5 Doom</dd>
+						<dt>Galuf</dt><dd>Wait for <i>PhenixDwn</i><br>(&larr;) Blue &raquo; L.5 Doom</dd>
+					</dl>
+					<p>Make sure Faris, Lenna and Butz all survive. Galuf can die if needed.</p>
+				</div>
+			</div>
+			<p>At this point, return to the platform at Crescent by flying east until the peninsula is visible, and then flying south. After the scenes, fly up to the ruins.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Galuf to Ninja (Right, Right, Right) (Ability: !Black) [No Equipment]</li>
+					<li>Job: Faris to Ninja (Right, Right, Right) (Ability: !Black) [No Equipment]</li>
+				</ul>
+			</div>
+			<p>You want to engage the cannons from right to left, using the template battle plan below.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Rocket x2 or FlameGun x2</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>Rocket: 2500, FlameGun: 2400</dd>
+						<dt>Party</dt><dd>Faris (15:6371) / Lenna (15:6321) / Galuf (15:6135) / Butz (15:6339)</dd>
+						<dt>Spoils</dt><dd><i>Protect</i> (potion) or <i>Speed</i> (potion)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&larr;) Throw &raquo; <i>Thunder</i> (scroll)</dd>
+						<dt>Galuf</dt><dd>(&larr;) Throw &raquo; <i>Thunder</i> (scroll)</dd>
+					</dl>
+					<p>You can simply hold A on all battles except the first one.</p>
+				</div>
+			</div>
+			<p>After those battles, open the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Lenna to Ninja (Right, Right, Right) (Ability: !Dimen) [No Equipment]</li>
+				</ul>
+			</div>
+			<p>After defeating the four sets of cannons, move on to fight the primary cannon.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Sol Cannon x1, Launcher x2</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>Sol Cannon: 22500, Launcher: 10800</dd>
+						<dt>EXP</dt><dd>10</dd>
+						<dt>Party</dt><dd>Faris (15:6371) / Lenna (15:6321) / Galuf (15:6135) / Butz (15:6339)</dd>
+						<dt>Spoils</dt><dd><i>HiPotion</i> x2, <i>DarkMatter</i></dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&larr;) Throw &raquo; <i>Thunder</i> (scroll) (hold A)</dd>
+						<dt>Lenna</dt><dd>(&larr;) Throw &raquo; <i>Thunder</i> (scroll)</dd>
+						<dt>Galuf</dt><dd>(&larr;) Throw &raquo; <i>Thunder</i> (scroll) (hold A)</dd>
+						<dt>Butz</dt><dd>(R) Defend</dd>
+					</dl>
+					<p>Repeat this pattern for approximately three rounds total.</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Faris to Thief (Right, Right) (Ability: !Escape) [No Equipment]</li>
+				</ul>
+			</div>
+			<p>Begin making your way through the Lonka Ruins.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>After collecting the <i>Gold</i> (armor), take four extra steps before continuing.</li>
+				</ul>
+			</div>
+			<p>Sometine on the third floor, you'll run into an encounter.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: Lamia x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape</dd>
+					</dl>
+				</div>
+			</div>
+			<p>Continue through the dungeon until you reach the <i>HiPotion</i> chest (directly north of the stairs you come up on). Collect the chest, then continue, entering the detour area.</p>
+			<p>Walk through the detour area to the chest room. Step to the left one tile, then go north, and collect all chests. After the last one, go down to fall into the hole.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>After returning to the room with the <i>HiPotion</i>, enter the detour area and come back.</li>
+					<li>In the next room after the <i>HiPotion</i> room (Fifth Level), take four extra steps before leaving.</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: Whirl Demon x1, LonkaKnght x2</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: Whirl Demon x1, LonkaKnght x2</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>After coming down the stairs onto the Fifth Level again, take 10 extra steps. (Before going up the final stairs, from the right wall, go left to wall and back.)</li>
+					<li>Take 2 extra steps in the next room. (Just go up to the wall instead of stopping one tile short.)</li>
+				</ul>
+			</div>
+			<p>Collect the <i>Cabin</i> and <i>Ether</i> in the chest room, and then head back. Continue on to the boss.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Faris to Geomancer (Left, Left, Left) (Ability: Dash) [No Equipment]</li>
+					<li>Job: Lenna to Geomancer (Left, Left, Left) [No Equipment]</li>
+				</ul>
+			</div>
+			<p>Talk to Tycoon to engage ArchaeAvis.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: ArchaeAvis</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>1600</dd>
+						<dt>Party</dt><dd>Faris (15:6381) / Lenna (15:6331) / Galuf (15:6145) / Butz (15:6349)</dd>
+						<dt>Spoils</dt><dd><i>Hero</i> (potion)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Galuf</dt><dd>(R) Defend</dd>
+						<dt>Faris</dt><dd>(&larr;) Terrain</dd>
+						<dt>Lenna</dt><dd>(&larr;) Terrain</dd>
+						<dt>Butz</dt><dd>(&darr;) Item &raquo; Equip and use <i>Fire</i> (rod)</dd>
+						<dt>Galuf</dt><dd>(&larr;) Throw &raquo; <i>Thunder</i> (scroll) (hold A)</dd>
+						<dt>Faris</dt><dd>(&larr;) Terrain (hold A)</dd>
+						<dt>Lenna</dt><dd>(&larr;) Terrain (hold A)</dd>
+						<dt>Butz</dt><dd>Wait for ATB to start ticking<br>(&darr;) Item &raquo; Equip and use <i>Thunder</i> (rod)</dd>
+						<dt>Galuf</dt><dd>(&larr;) Throw &raquo; <i>Shuriken</i></dd>
+						<dt>Faris</dt><dd>(&larr;) Terrain (hold A)</dd>
+						<dt>Lenna</dt><dd>(&larr;) Terrain (hold A)</dd>
+						<dt>Butz</dt><dd>(&larr;) Blue &raquo; L.5 Doom</dd>
+					</dl>
+				</div>
+			</div>
+			<p>After the battle, head up into the crystal room and watch the scenes.</p>
+			<p>Fly to and land next to Karnak (fly east to the water, then fly north). After the cutscene, enter the town and head to the armory and item shops.</p>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-shopping-cart"></span>
+				<h4>Shopping</h4>
+				<ul>
+					<li>Sell <i>Ice</i> (bow), <i>Protect</i> (potion), <i>Speed</i> (potion), <i>Gold</i> (armor), <i>Ancient</i> (sword), <i>Full Moon</i>, <i>Cabin</i>, <i>Power</i> (ring).</li>
+					<li>Buy 1 <i>Mythril</i> (knife).</li>
+					<li>Buy 21 <i>Antidote</i>, 11 <i>Eyedrop</i>, 11 <i>MaidnKiss</i>.</li>
+					<li>Buy <i>PhenixDwn</i> until you have 6.</li>
+				</ul>
+				<p>Hopefully, you have at least 9150 gil at this point.</p>
+			</div>
+			<p>Exit the town and board the airship.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Be sure to half-step onto the airship by holding A. If you mess up, you can half-step one of the landings to make up for it.</p>
+			</div>
+			<p>Fly to the Tycoon meteor by flying south to the end of the bay, east until you see the canal, then turning south.</p>
+			<p>Enter the meteor and watch the scene. Afterward, fly to the Worus meteor (head straight north until the river is visible, then fly east).</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Lenna to Mediator (Up) [No Equipment]</li>
+					<li>Job: Faris to Samurai (Left, Down) [No Equipment]</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Puroboros</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>1500</dd>
+						<dt>Party</dt><dd>Faris (15:6381) / Lenna (15:6331) / empty / Butz (15:6349)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&larr;) Gil Toss</dd>
+					</dl>
+				</div>
+			</div>
+			<p>After the battle, open the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Faris to Ninja (Left, Down, Left) (Ability: Dash) [No Equipment]</li>
+					<li>Job: Butz to Samurai (Left, Down) [Equip <i>Mythril</i> (knife)]</li>
+				</ul>
+			</div>
+			<p>Fly to the Gohn meteor by flying east until a continent passes to the south, and then turning south. Land on the green tile to the left of the meteor.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Chim.Brain</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>3300</dd>
+						<dt>Party</dt><dd>Faris (15:6381) / Lenna (15:6331) / empty / Butz (15:6349)</dd>
+						<dt>Spoils</dt><dd><i>PhenixDwn</i></dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&larr;) Throw &raquo; <i>Dagger</i></dd>
+						<dt>Butz</dt><dd>(&larr;) Gil Toss</dd>
+						<dt>Lenna</dt><dd>(&larr;) Release</dd>
+					</dl>
+					<p>There is a chance that Lenna will go before Butz, but since they're both left d-pad inputs, there is no impact whatsoever.</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>If hit by AquaRake, change Lenna to a White Mage (Right, Down, Right) and cast Cure to heal the party.</li>
+					<li>Job: Lenna to Dragoon (Right, Right, Right) [No Equipment]</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Be sure to half step onto the airship.</p>
+			</div>
+			<p>Afterward, fly to the Karnak meteor by heading north to the desert and then turning east.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Titan</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>2500</dd>
+                        <dt>Party</dt><dd>Faris (15:6381) / Lenna (15:6331) / empty / Butz (15:6349)</dd>
+                        <dt>Spoils</dt><dd><i>HiPotion</i></dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&larr;) Throw &raquo; <i>Thunder</i> (scroll)</dd>
+						<dt>Lenna</dt><dd>(&larr;) Jump</dd>
+						<dt>Butz</dt><dd>Wait for Jump to start<br>(&larr;) Gil Toss</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Be sure to half step onto the airship.</p>
+			</div>
+			<p>Fly to the teleporter which is very near to the southeast.</p>
+			<h3 id="walkthrough-galufs-world">Galuf's World</h3>
+			<p>After arriving, open the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Move Butz to the front row. (Left, Down, A, A)</li>
+					<li>Use a <i>Tent</i>.</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Abductor x1</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>1500</dd>
+						<dt>Party</dt><dd>empty / empty / empty / *Butz (15:6349)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Butz</dt><dd>Wait for Abductor to attack<br>(&uarr;) Fight &raquo; Butz</dd>
+					</dl>
+				</div>
+			</div>
+			<p>Watch the scenes, and eventually you'll be in control of Galuf.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Galuf to Thief (Right, Right) [No Equipment]</li>
+				</ul>
+			</div>
+			<p>Make your way to the second basement floor of the castle.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Take 12 extra steps here and then exit and re-enter and continue. (Go south to the wall, west two tiles, and then return.)</p>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: Jail Bear x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+                    <p>Simply run away from the battle (hold L+R).</p>
+				</div>
+			</div>
+			<p>Continue on the next floor, and you'll get an encounter just before the trigger.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: Tarantula x4</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+                    <p>Simply run away from the battle (hold L+R).</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>After the battle, take two extra steps.</p>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Galuf to Samurai (Left, Down) [No Equipment]</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Gilgamesh</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>11500</dd>
+						<dt>Party</dt><dd>empty / empty / Galuf (15:6145) / empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Galuf</dt><dd>(&larr;) Gil Toss</dd>
+					</dl>
+				</div>
+			</div>
+			<p>After the scenes, make your way out of the castle..</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Make sure to go down to the wall and then left to step on only one event tile.</p>
+			</div>
+			<p>Make your way out of the castle back to the world map.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: Jail Bear x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+                    <p>Simply run away from the battle (hold L+R).</p>
+				</div>
+			</div>
+			<p>Once outside the castle, head to the Big Bridge.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Take a half-step when leaving the tile directly south of the barrier tower. Do the following menu at that time.</p>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Move Butz to the back row. (Left, Down, A, A)</li>
+					<li>Job: Galuf to Chemist (Up, Right) [No Equipment]</li>
+					<li>Job: Lenna to Samurai (Left, Down) [No Equipment]</li>
+				</ul>
+			</div>
+			<p>In the first Big Bridge map, walk one tile left, then go up. You will have to fight a battle.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Lil'Chariot x3</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>480</dd>
+						<dt>EXP</dt><dd>900<dd>
+						<dt>Party</dt><dd>*Faris (14:4382) / *Lenna (14:4332) / *Galuf (14:4332) / *Butz (14:4350)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&larr;) Throw &raquo; <i>Thunder</i> (scroll) (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<p>After the battle, head north until the gap in the walls by the towers, and then head to the right side and continue up to the top. Inside the room, you should menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Faris to Samurai (Left, Down) (Ability: Dash) [No Equipment]</li>
+					<li>Job: Galuf to Samurai (Left, Down) [No Equipment]</li>
+				</ul>
+			</div>
+			<p>Move forward to engage Gilgamesh.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Gilgamesh</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>6500</dd>
+						<dt>Party</dt><dd>Faris (15:6606) / Lenna (15:6556) / Galuf (15:6370) / Butz (15:6574)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&larr;) Gil Toss</dd>
+						<dt>Lenna</dt><dd>(&larr;) Gil Toss</dd>
+						<dt>Galuf/Butz</dt><dd>(&larr;) Gil Toss</dd>
+						<dt>Galuf/Butz</dt><dd>Inventory Management<br>(&larr;) Gil Toss</dd>
+					</dl>
+					<p>TODO: The entire inventory management before here needs rewriting. For now, try to make the inventory look like this:</p>
+					<p>Hero, PhenixDwn, HiPotion, Antidote, Potion, empty, empty, Ether, MaidnKiss, Eyedrop, Thunder, TurtleShell, Flame, DarkMatter.</p>
+				</div>
+			</div>
+			<p>After the battle, immediately open the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Lenna or Galuf to White Mage (Right, Down, Right) [No Equipment]</li>
+					<li>Cast Life/Cure with Lenna/Galuf to revive and heal the party.</li>
+					<li>Job: Galuf to Chemist (Up, Right) [No Equipment]</li>
+					<li>Job: Lenna to Thief (Right, Right) (Ability: !Smoke) [No Equipment]</li>
+				</ul>
+			</div>
+			<p>After the battle, continue upward. On the second Big Bridge map, again head to the left side, until a tile away from the gap this time, head to the right, move up 2 tiles, then go to the center.</p>
+			<h3 id="walkthrough-grociana">Grociana</h3>
+			<p>Begin making your way east toward the Moogle cave, passing Rugor.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>Go south only as far as needed to clear the coastline to the east. After you cross a green tile, turn north as soon as possible and take a half-step when leaving that tile to the east.</li>
+					<li>Take a half-step to the east when you hit the mountains (in the 90 degree alcove) after turning south.</li>
+					<li>Take a half-step under the single horizontal coast when approaching the next brown patch.</li>
+					<li>Take a half-step to the east on the upper diagonal coast tile immediately to the southwest of Rugor.</li>
+					<li>Head south until you hit the mountains, then take a half-step to the west.</li>
+					<li>Take a half-step to the west when you hit the mountains south of the bridge next to the castle.</li>
+					<li>Take a final half-step to the south when you hit the diagonal coastline (heading east) before the large turn to the south.</li>
+					<li>Ensure you hug the coastline until you enter the no-encounter area.</li>
+				</ul>
+			</div>
+			<p>Talk to the moogle and then enter the cave.</p>
+			<h3 id="walkthrough-moogle">Moogle Sequence</h3>
+			<p>Enter the water, and you'll come to a fixed encounter.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: Acrophese x4</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+                    <p>Simply run away from the battle (hold L+R).</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Take 10 extra steps on the first platform. (Up to wall, down to wall, right to wall, and exit.)</p>
+			</div>
+			<p>Continue again into the water.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: MooglEater x1, Acrophese x1, Blood Slime x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+                    <p>Simply run away from the battle (hold L+R).</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: MooglEater x1, Acrophese x1, Blood Slime x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+                    <p>Simply run away from the battle (hold L+R).</p>
+				</div>
+			</div>
+			<p>Collect the 4400 gil in the chest and then continue.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: Acrophese x4</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+                    <p>Simply run away from the battle (hold L+R).</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: Acrophese x4</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+                    <p>Simply run away from the battle (hold L+R).</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Take 2 extra steps on the third platform. (Right to wall, up to wall, and straight down to exit.)</p>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: MooglEater x2</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+                    <p>Simply run away from the battle (hold L+R).</p>
+				</div>
+			</div>
+			<p>After you land on the last platform, open the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Lenna to Time Mage (Left, Up, Left) [No Equipment]</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Take 2 extra steps sometime before the boss.</p>
+			</div>
+			<p>Eventually, you'll come to a moogle and skeleton. Move up to engage the boss.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Tyrasaurus</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>5000</dd>
+						<dt>Party</dt><dd>Faris (15:6606) / Lenna (15:6556) / Galuf (15:6370) / Butz (15:6574)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Anybody</dt><dd>(&darr;) Item &raquo; <i>PhenixDwn</i> &raquo; Tyrasaurus</dd>
+					</dl>
+					<p>Continue until the <i>PhenixDwn</i> actually connects.</p>
+				</div>
+			</div>
+			<p>After the scenes, quickly open the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Lenna to Mediator (Up) (Ability: !Dimen) [No Equipment]</li>
+					<li>Job: Butz to Blue Mage (Left, Up, Right) [No Equipment]</li>
+					<li>Make sure everyone has at least 140 HP.</li>
+				</ul>
+				<p>You can delay this menu until one of the pauses or half-steps in the next section.</p>
+			</div>
+			<p>Now, you'll need to make your way through to the Moogle Village. If not on step route, simply stay away from the desert tiles. Otherwise, follow the below instructions:</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>Head straight north until reaching the forest tiles. From here, head to the northeast corner of the nearest forest section.</li>
+					<li>Head east and enter the forest area as soon as possible. Follow that forest area north.</li>
+					<li>Take a half step onto the diagonal forest/desert tile. (Take care of the previous menu here.)</li>
+					<li>Go east from here and exit the desert when the grass is one tile above you.</li>
+				</ul>
+			</div>
+			<p>Enter the Moogle Village by entering the forest and going north until there is an open path to the west, and then going straight east.</p>
+			<p>Talk to the moogle at the upper right corner of the village. Inside the house, talk to the moogle again, and then all chests except the right upper one.</p>
+			<p>Go outside and move down one tile to wait for the moogle.</p>
+			<h3 id="bal-kelb">Bal and Kelb Sequence</h3>
+			<p>After finally gaining control in the castle throne room, collect the <i>Hero</i> (potion) to the left and the Exit spell in the secret passage to the left, and then head up the stairs on the right side of the room, continuing to the roof to speak to Cara.</p>
+			<p>When you reach the main courtyard, head to the door on the left to enter the shop area.</p>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-shopping-cart"></span>
+				<h4>Shopping</h4>
+				<ul>
+					<li>Buy 1 <i>GrnBeret</i> and 1 <i>Stealth</i> (robe).</li>
+					<li>Buy Reset from the right magic shop.</li>
+					<li>Buy Break from the middle magic shop.</li>
+				</ul>
+			</div>
+			<p>Exit the castle and begin the walk toward Kelb. Or, at least, you would, except you get attacked.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Abductor x1</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>2500</dd>
+						<dt>Party</dt><dd>Faris (15:6606) / Lenna (15:6556) / Galuf (15:6370) / Butz (15:6574)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&larr;) Gil Toss</dd>
+					</dl>
+				</div>
+			</div>
+			<p>Now, continue to Kelb, following the step route if appropriate.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Take two steps east, and then head directly north across the dark brown area until the second diagonal grass tile (slanting SW-NE) is directly to the northeast. Come to a complete stop and open the menu.</p>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Butz to Thief (Right, Right) [No Equipment]</li>
+					<li>If anyone has less than 200HP, heal with <i>Potion</i> or by making Faris a White Mage (Right, Right, Down).</li>
+					<li>Job: Faris to Thief (Right, Right) (Ability: !Escape) [No Equipment]</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Take 8 extra steps before entering Kelb.</p>
+			</div>
+			<p>Inside Kelb, enter Kelgar's house, take a single step up, then try to leave. After the scenes, leave the town to the north.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Take 2 extra steps before entering Hiryuu Valley.</p>
+			</div>
+			<h3 id="hiryuu-valley">Hiryuu Valley</h3>
+			<p>Enter the chest room on the first map and collect the 5000 gil. Check the step route below before continuing on.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>Take 4 extra steps after getting the gil chest.</li>
+					<li>After entering the next cave, take 14 steps (go directly right to the wall and back) and then exit.</li>
+					<li>Take 4 extra steps before re-entering the cave and continuing.</li>
+				</ul>
+			</div>
+			<p>Sometime after entering the next cave, you'll get an encounter.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: ZombieDrgn x1</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>4590</dd>
+						<dt>EXP</dt><dd>1648</dd>
+						<dt>Party</dt><dd>Faris (15:6606) / Lenna (15:6556) / Galuf (15:6370) / Butz (15:6574)</dd>
+						<dt>Spoils</dt><dd><i>DragnFang</i></dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Anybody</dt><dd>(&darr;) Item &raquo; <i>PhenixDwn</i> &raquo; ZombieDrgn</dd>
+					</dl>
+					<p>Repeat until successful.</p>
+				</div>
+			</div>
+			<p>Continue until reaching the map with the skeletons. Collect the <i>Bone Mail</i> from the skeleton, and enter the cave.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Take 2 extra steps before entering the cave.</p>
+			</div>
+			<p>Inside the cave, go two tiles below the door and head to the right.</p>
+			<p>Immediately go to the left, enter the door, and flip the switch.</p>
+			<p>On the way back, collect the 7000 gil in the chest.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Take 2 extra steps before leaving the chest room.</p>
+			</div>
+			<p>Continue onward and enter the newly opened cave.</p>
+			<p>Inside the cave, go to the left, and head downward.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: ZombieDrgn x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape</dd>
+					</dl>
+				</div>
+			</div>
+			<p>Collect the <i>Coronet</i> from the chest on the left, and then head back.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: BoneDragon x2</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Exit and re-enter the cave when passing the entrance.</p>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: ZombieDrgn x1, Sting Eagle x1, Drippy x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<p>After the encounter, collect the <i>PhenixDwn</i> in the chest and keep going.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: ZombieDrgn x1, Sting Eagle x1, Drippy x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Take 6 extra steps before leaving the room. (Left to wall, up to wall, right once, up to wall, and down to exit.)</li>
+			</div>
+			<p>Outside, make your way near the boss and then open the menu to prepare (don't go south when reaching the final leg).</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Faris to Samurai (Left, Down) [No Equipment]</li>
+					<li>Job: Butz to Samurai (Left, Down) [Equip <i>Dancing</i>]</li>
+				</ul>
+			</div>
+			<p>Head south to fight the boss.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: HiryuuPlant</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>12000</dd>
+						<dt>Party</dt><dd>Faris (15:7018) / Lenna (15:6968) / Galuf (15:6782) / Butz (15:6986)</dd>
+						<dt>Spoils</dt><dd><i>Elixir</i></dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&larr;) Gil Toss</dd>
+						<dt>Butz</dt><dd>(&larr;) Gil Toss</dd>
+						<dt>Galuf</dt><dd>(R) Defend</dd>
+						<dt>Lenna</dt><dd>(R) Defend</dd>
+						<dt>Faris</dt><dd>(&larr;) Gil Toss (hold A)</dd>
+						<dt>Butz</dt><dd>(&larr;) Gil Toss (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Butz to Thief (Right, Right) (Ability: !Blue) [Equip <i>Dancing</i>, <i>GrnBeret</i>, <i>Stealth</i>]</li>
+					<li>Job: Galuf to Blue Mage (Left, Up, Right) [No Equipment]</li>
+					<li>Job: Faris to Time Mage (Left, Up, Left) [No Equipment]</li>
+					<li>Use Faris to cast Exit</li>
+				</ul>
+			</div>
+			<h3 id="big-boat-barrier-tower">Big Boat and Barrier Tower</h3>
+			<p>Make your way back to Kelb and head to the item shop (inside the Inn).</p>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-shopping-cart"></span>
+				<h4>Shopping</h4>
+				<ul>
+					<li>Buy 21 <i>Revivify</i> from the lower shop.</li>
+					<li>Buy <i>HiPotion</i> and <i>PhenixDwn</i> from the upper shop if needed.</li>
+				</ul>
+				<p>You need at the very least one each of the latter two, though you're much better off with at least 3. You might wish to have a few extras for safety.</p>
+			</div>
+			<p>Continue to Castle Bal.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>As you enter the forest, take a half-step.</li>
+				</ul>
+			</div>
+			<p>Inside the castle, sneak in, and make your way to to talk to Cara in bed and then the Hiryuu on the roof.</p>
+			<p>Fly north through the valley, exit to the ocean, and then fly the short distance north to Guido's cave. Land as close to the forest as possible.</p>
+			<p>After the scenes, fly to the ship armada by flying due east until you see land, south until the big bridge, east to the mountains, south until two tiles below the barrier tower, and then due east.</p>
+			<p>After the short scene on the ship, head inside and take a nap.</p>
+			<p>When you awake, open the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Faris to Samurai (Left, Down) (Ability: Dash) [Equip <i>Bone Mail</i>]
+				</ul>
+			</div>
+			<p>Make your way to the top of the ship, and eventually work down to fight the single stationary enemy.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Gabbledegak x1</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>1200</dd>
+						<dt>EXP</dt><dd>888</dd>
+						<dt>Party</dt><dd>Faris (15:7018) / Lenna (15:6968) / Galuf (15:6782) / Butz (15:6986)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Butz</dt><dd>(R) Defend</dd>
+						<dt>Faris</dt><dd>(&larr;) Gil Toss</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Gilgamesh</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>8888</dd>
+						<dt>Party</dt><dd>Faris (16:7240) / Lenna (16:7190) / Galuf (15:7004) / Butz (16:7208)</dd>
+						<dt>Spoils</dt><dd><i>Gold</i> (shield)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Butz</dt><dd>(&rarr;) Blue &raquo; DarkShock (51%)</dd>
+						<dt>Faris</dt><dd>(&darr;) Item &raquo; <i>HiPotion</i> &raquo; Faris</dd>
+						<dt>Lenna</dt><dd>(<em>If DarkShock missed</em>) (&rarr;) Dimen &raquo; Haste &raquo; Butz <strong>or</strong><br>(R) Defend</dd>
+						<dt>Galuf</dt><dd>(<em>If DarkShock hit</em>) (&larr;) Blue &raquo; L.5 Doom <strong>or</strong><br>(R) Defend</dd>
+					</dl>
+				</div>
+			</div>
+			<p>After the battle, head down to the submarine and enter the Barrier Tower. Begin heading toward the top.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>In the room after the save room, take 10 extra steps, and then leave and re-enter. (Up to the wall, right to the wall, down to the wall, and exit.)</li>
+					<li>After re-entering, immediately take 16 extra steps and then exit and re-enter again. (Left to wall, up to wall, right to wall, down to wall, left to wall, up to wall, right once, and down to exit.)</li>
+				</ul>
+			</div>
+			<p>On the second floor, collect the 9000 gil in the chest you walk directly by.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>After getting the 9000 gil, take 6 extra steps before leaving the room. (Right to the wall and back.)</p>
+			</div>
+			<p>On 4F, you will get into an encounter.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: Wall Knight x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+                    <p>Simply run away from the battle (hold L+R).</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>After the battle, take 8 extra steps before exiting the room. (From the battle, right to the wall, left to the wall, and exit.)</li>
+					<li>After exiting the room, take 8 extra steps, enter the room, and re-exit. (Down to wall, left to wall, up to wall and back.)</li>
+				</ul>
+			</div>
+			<p>On 6F, collect the 18000 gil in the chest.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>After getting the chest, exit and re-enter the room.</p>
+			</div>
+			<p>Continue up to 9F, where you need to go to the right.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>In the save room, take 2 extra steps before leaving.</li>
+					<li>Outside, take 8 extra steps before going back into the save room. (Down to wall, left to wall, up to wall, and back.)</li>
+					<li>Inside the save room, take 18 extra steps before continuing. (Right to wall, up to wall, left to wall, down to wall, right one tile too far, and then exit.)</li>
+				</ul>
+			</div>
+			<p>Continue the roof and before you go up the last staircase, open the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Butz to Time Mage (Left, Up, Left) (Ability: !Blue) [Equip <i>Dancing</i>]</li>
+                    <li>Make sure Butz has at least 54 MP or so (27 bare minimum). Only an issue if Gilgamesh took too long.</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Atmos</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>19997</dd>
+						<dt>Party</dt><dd>Faris (16:7240) / Lenna (16:7190) / Galuf (15:7004) / Butz (16:7208)</dd>
+						<dt>Spoils</dt><dd><i>DarkMatter</i></dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Butz</dt><dd>(&rarr;) Blue &raquo; DarkShock (41%)</dd>
+						<dt>Lenna</dt><dd>(&rarr;) Dimen &raquo; Haste &raquo; Butz</dd>
+						<dt>Galuf</dt><dd>(<em>If DarkShock hit</em>) (&larr;) Blue &raquo; L.5 Doom</dd>
+					</dl>
+					<p>Use an <i>Ether</i> with Lenna if needed. Additionally, cast Reset with Butz if needed.</p>
+				</div>
+			</div>
+			<p>After the scenes, enter the submarine and exit again, and wait for Galuf to rejoin the party.</p>
+			<p>Make your way to Guido's cave. Travel due east until you hit a wall, head north (going around the rock) until a bunch of rocks pass on the left, at which point turn west until you hit a wall, then go north. The cave should come into view.</p>
+			<h3 id="walkthrough-guidos-cave">Guido's Cave</h3>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Use <i>PhenixDwn</i> on Faris.</li>
+					<li>Use <i>Ether</i> on Butz if he has less than 44MP.</li>
+					<li>Job: Butz to Thief (Right, Right) (Ability: !Blue) [No Equipment]</li>
+					<li>Job: Galuf to Chemist (Up, Right) [No Equipment]</li>
+					<li>Job: Faris to Thief (Right, Right) (Ability: !Escape) [No Equipment]</li>
+				</ul>
+			</div>
+			<p>Head south to get an encounter.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Radiator x4</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>900</dd>
+						<dt>EXP</dt><dd>800</dd>
+						<dt>Party</dt><dd>Faris (16:7240) / Lenna (16:7190) / Galuf (15:7004) / Butz (16:7208)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(R) Defend</dd>
+						<dt>Butz</dt><dd>(&rarr;) Blue &raquo; L.5 Doom</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>Take 4 extra steps before leaving the room.</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Radiator x4</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>900</dd>
+						<dt>EXP</dt><dd>800</dd>
+						<dt>Party</dt><dd>Faris (16:8040) / Lenna (16:7990) / Galuf (16:7804) / Butz (16:8008)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(R) Defend</dd>
+						<dt>Butz</dt><dd>(&rarr;) Blue &raquo; L.5 Doom (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<p>Get the rock out of the middle chest, drop it in the top left chest, and then head into the open door.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Take 8 extra steps before leaving the switch room. (Down once, right to wall, left to wall, take 2 more, and exit.)</p>
+			</div>
+			<p>Hit the switch and then leave the room. Collect the rock and then head down to the bottom left chest. Drop the rock in the chest.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Take 2 extra steps before entering the next room.</p>
+			</div>
+			<p>Head into the newly opened door. Simply pass through the next room.</p>
+			<p>On B3F, head to the left and go down to the hidden passage.</p>
+			<p>Hit the switch, and then make your way back toward the newly created doorway.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: Metamorpha x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: Metamorpha x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: Metamorpha x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: Metamorpha x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<p>When emerging into the room after the tunnel, make sure to head right. Continue to visit with Guido.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Lenna to Time Mage (Left, Up, Left) [No Equipment]</li>
+					<li>Use Lenna to cast Exit.</li>
+				</ul>
+			</div>
+			<p>From here, head to Mua. Head west to the wall, and then head north until you're one tile below the coral that appears.</p>
+			<p>Head west, shifting slightly north when you hit the wall, and continue west until you see two coral close together. Continue past those coral until you're one tile west of a third coral that appears. Head directly south until you pass the rocks, and then head east.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Surface at the topmost tile.</p>
+			</div>
+			<p>Surface and then enter Mua. Pick up the <i>Guardian</i> in the upper barrel to the left of the southwest building, and then visit the magic shop.</p>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-shopping-cart"></span>
+				<h4>Shopping</h4>
+				<ul>
+					<li>Buy Wall from the middle shop.</li>
+					<li>Buy Bolt3 from the left shop.</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Use Lenna to cast Exit.</li>
+				</ul>
+			</div>
+			<p>Now, head east to the Forest of Mua.</li>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>Half-step into the submarine (doesn't actually count as a step, but counts as a pause).</li>
+                    <li>From here, east to wall, south to wall, west to wall, south to wall, west once, east once, north to wall. (This adds 12 extra steps.)</li>
+                    <li>Take a half step to the east.</li>
+				</ul>
+			</div>
+			<p>Open the forest, and then after the scenes, head north, jogging once to the east until you get to the chest. Pick up the 2500 gil, and then head south. You'll get an encounter after 2 steps if you're on step route.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Mammon x3, MiniGame x2</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<p>From here, go due east to the wall, and then up to get the <i>Ether</i> in the chest. From here, go down once and then left to enter the tree.</p>
+			<p>On the next forest map, head north three times, east twice, and then north twice more. If you're on step route, you will get an encounter at the correct stopping place as long as you go two tiles east at some point.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Imp x2</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<p>From here, head right. When you reach the wall, go up until even with the alcove to the left, then go due right again.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Mammon x3, MiniMage x2</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Imp x1, Mammon x2, GajraGajri x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<p>Stop when even with the top of the last tree, and go north to collect the 9500 gil in the chest. Afterward, go south to an encounter.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Mammon x3, MiniMage x2</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<p>From the encounter, go due west and then north to activate the tree. Go west one tile for an encounter.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Imp x2</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>After the encounter, take a total of 6 extra steps before entering the tree.</li>
+					<li>Travel quickly through the tree, and on the next map, take 2 extra steps, exit, and re-enter.</li>
+				</ul>
+			</div>
+			<p>After taking the steps and re-entering (if on step route), head north to the tree, east to the hedge, north to the tree, then east two tiles before going all the way north to the next tree. Go two tiles east to around the tree and head north.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: Imp x2, GajraGajri x1, MiniMage x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<p>Head all the way north to the chest with the <i>MornStar</i>. After collecting that, go south three tiles and then due west.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: Wyrm x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: Wyrm x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<p>After the fire begins, collect the <i>Aegis</i> (shield) in the chest, and then wait on the tile below the bottom of the group of three flames. Once in the cave, open up the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Lenna to Samurai (Left, Down) [No Equipment]</li>
+					<li>Job: Faris to Samurai (Left, Down) [Equip <i>Guardian</i>, <i>Aegis</i> (shield) and <i>Stealth</i> (robe)]</li>
+					<li>Job: Butz to Samurai (Left, Down) [Equip: <i>Dancing</i>]</li>
+					<li>Job: Galuf to Thief (Right, Right) (Ability: !Smoke) [No Equipment]</li>
+				</ul>
+			</div>
+			<p>After the menu, heal up at the spring, and then wait for the moogle to vacate the premises. Exit the cave.</p>
+			<p>Head south one tile, then due west until you hit the wall. Head north to the tree, go around it to the left, and keep going north.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: GajraGajri x2, MiniMage x2</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Galuf</dt><dd>(&rarr;) Smoke</dd>
+					</dl>
+				</div>
+			</div>
+			<p>Go left around the bushes and continue north to open the path to the Elder Tree. After the scene, enter the tree.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Galuf to Chemist (Up, Right) [Optimize]</li>
+				</ul>
+			</div>
+			<p>Move forward to engage the boss.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Seal Guardians</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>7777</dd>
+						<dt>Party</dt><dd>Faris (16:8840) / Lenna (16:8790) / Galuf (16:8604) / Butz (16:8808)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&larr;) Gil Toss</dd>
+						<dt>Lenna</dt><dd>(R) Defend</dd>
+						<dt>Butz</dt><dd>(R) Defend</dd>
+						<dt>Galuf</dt><dd>(R) Defend or (&darr;) Item &raquo; <i>HiPotion</i> &raquo; Lenna or Butz</dd>
+						<dt>Faris</dt><dd>(&larr;) Gil Toss (hold A)</dd>
+						<dt>Lenna</dt><dd>(&larr;) Gil Toss</dd>
+						<dt>Butz</dt><dd>(&larr;) Gil Toss</dd>
+					</dl>
+					<p>If Lenna or Butz died before the first turn, use the alternate backup plan:</p>
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&darr;) Item &raquo; <i>PhenixDwn</i> &raquo; Lenna or Butz</dd>
+						<dt>Lenna/Butz</dt><dd>(R) Defend</dd>
+						<dt>Galuf</dt><dd>(&darr;) Item &raquo; <i>HiPotion</i> &raquo; Lenna or Butz</dd>
+						<dt>Faris</dt><dd>(&larr;) Gil Toss</dd>
+						<dt>Lenna</dt><dd>(R) Defend</dd>
+						<dt>Butz</dt><dd>(R) Defend</dd>
+						<dt>Galuf</dt><dd>(R) Defend</dd>
+						<dt>Faris</dt><dd>Wait for monster in back to act<br>(&larr;) Gil Toss</dd>
+						<dt>Lenna</dt><dd>(&larr;) Gil Toss</dd>
+						<dt>Butz</dt><dd>(&larr;) Gil Toss</dd>
+					</dl>
+					<p>Watch for a rare chance of Galuf going before Butz. This shouldn't happen, but if it does, these notes need updating.</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Exdeath</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>50000</dd>
+						<dt>Party</dt><dd>empty / empty / Galuf (16:8604) / empty</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Galuf</dt><dd>(&darr;) Item &raquo; <i>PhenixDwn</i> &raquo; Galuf</dd>
+					</dl>
+				</div>
+			</div>
+			<p>Wait through the scenes, and eventually you'll gain control on the world map.</p>
+			<h3 id="walkthrough-exdeaths-castle">Exdeath's Castle</h3>
+			<p>Fly to Exdeath's castle. From your current location, fly to the west until you pass over the last burned tree in your current row, then turn south. Turn west when you reach the water, and then turn south again to follow the peninsula. Fly until the last fully two-wide row of the peninsula, and then turn west. Land on the first green tile after you cross the brown patch in front of the castle. Enter the castle, take a couple of steps, and then open the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+                    <li>Job: Cara to Samurai (Left, Down) (Ability: Learning) [No Equipment]</li>
+                    <li>Job: Butz to White Mage (Right, Down, Right) (Ability: Learning) [No Equipment]</li>
+                    <li>Job: Faris to Thief (Right, Right) (Ability: !Escape) [No Equipment]</li>
+                    <li>Job: Lenna to Blue Mage (Left, Up, Right) (Ability: !Control) [Optimize, Equip <i>Stealth</i> (robe)]</li>
+				</ul>
+			</div>
+			<p>Continue making your way through the castle, remembering to take a step right at the dead end to trigger the scene, paying attention to the step route notes.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+                    <li>On 2F, take 14 extra steps and then exit and re-enter. (Up once, then left to wall. Take 2 additional steps before leaving.)</li>
+                    <li>Take 2 extra steps before leaving 2F the second time.</li>
+                    <li>On 3F, take 8 extra steps and then exit and re-enter. (Right to wall then left to wall.)</li>
+                    <li>After the transformation, take 12 extra steps before leaving the room. (Left to wall and back right after the transformation.)</li>
+                    <li>On 4F, take 14 extra steps and then exit and re-enter. (Up once, right to wall, then back.)</li>
+				</ul>
+			</div>
+            <p>On 4F, your main goal is to hit the switch and collect the chest with the <i>Ice</i> (shield). Along the way, you have some battles to take care of.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Magic Drgn x1</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>Magic Drgn: 2900</dd>
+						<dt>EXP</dt><dd>1200</dd>
+						<dt>Party</dt><dd>Faris (16:8840) / Lenna (16:8790) / Cara (16:8604) / Butz (16:8808)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(R) Defend</dd>
+						<dt>Cara</dt><dd>(&larr;) Gil Toss</dd>
+						<dt>Lenna</dt><dd>(&rarr;) Control</dd>
+						<dt>Butz</dt><dd>(<em>If Control successful</em>) (&larr;) White &raquo; Wall &raquo; Magic Drgn <strong>or</strong><br>(&larr;) White &raquo; Cure &raquo; Party</dd>
+						<dt>Faris</dt><dd>(R) Defend</dd>
+                        <dt>Cara</dt><dd>(R) Defend</dd>
+                        <dt>Lenna</dt><dd>L.2 Old</dd>
+                        <dt>Butz</dt><dd>(R) Defend</dd>
+                        <dt>Faris</dt><dd>(R) Defend</dd>
+                        <dt>Cara</dt><dd>(&larr;) Gil Toss</dd>
+					</dl>
+                    <p>Make sure L2 Old hits anybody but Faris before ending the battle.</p>
+				</div>
+			</div>
+            <p>After this, continue to the switch. On the way to the chest, there will be another battle.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: DarkWizard x2</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>Escape</dd>
+					</dl>
+				</div>
+			</div>
+            <p>At this point, open the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+                    <li>Job: Lenna to Samurai (Left, Down) [Equip <i>Dancing</i> and <i>Stealth</i> (robe)]</li>
+                    <li>Job: Cara to Mediator (Up) [No Equipment]</li>
+                    <li>Job: Butz to Mediator (Up) [Equip <i>GreenBrt</i>] TODO: Guide just says GN</li>
+				</ul>
+			</div>
+            <p>Collect the chest and continue. You now need to catch two Magic Drgns. If on step route, it'll be your next two encounters. Use the template battle below:</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Magic Drgn x1</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>Magic Drgn: 2900</dd>
+						<dt>Party</dt><dd>Faris (17:9140) / Lenna (17:9090) / Cara (16:8904) / Butz (17:9108)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+                        <dt>Faris</dt><dd>(R) Defend</dd>
+                        <dt>Lenna</dt><dd>(&larr;) Gil Toss</dd>
+                        <dt>Cara</dt><dd>(&larr;) Catch <strong>or</strong> (R) Defend</dd>
+                        <dt>Butz</dt><dd>(&larr;) Catch <strong>or</strong> (R) Defend</dd>
+					</dl>
+					<p>I generally recommend catching with Butz first to minimize the risk of accidentally using Release.</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+                <ul>
+                    <li>After the battle, take 2 extra steps before continuing.</li>
+                </ul>
+			</div>
+            <p>Pick up the Ether on 5F and then continue.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: BandelKuar x2, DarkWizard x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd> (&rarr;) Escape</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+                <ul>
+                    <li>On 7F, Take 6 extra steps to start. (Right to wall, left to wall, right to wall, and continue.)</li>
+                    <li>If the bridge is in the center, take 2 steps before crossing the bridge.</li>
+                    <li>Take a step off the distant skull and then back to take one extra step before continuing.</li>
+                </ul>
+			</div>
+            <p>On the next floor, pick up the 9900 gil in the chest on the far left and continue. On the way, there will be an encounter.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-bolt"></span>
+                <h4>Battle: Red Dragon x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+                <ul>
+                    <li>On the first visit to 10F, take 2 extra steps.</li>
+                    <li>On the second visit to 10F, take 10 extra steps and then exit and re-enter. (Up to wall, right to wall and back.)</li>
+                </ul>
+			</div>
+            <p>If for whatever reason you're off step route at this point, you could grab the chest on 10F to sell for more money. (Go up one tile, all the way to the right, get the chest, then go left twice, down once, left once, and down to the switch.)</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+                <p>Make sure you step on one of the event tiles adjoining the Excalipur chest.</p>
+			</div>
+			<p>Once you reach 13F, go up a few steps and then stop to menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+                    <li>Job: Butz to Thief (Right, Right) (Ability: !Blue) [No Equipment]</li>
+                    <li>Job: Faris to Time Mage (Left, Up, Left) (Ability: Dash) [No Equipment]</li>
+                    <li>Job: Lenna to Knight (Ability: !Dimen) [No Equipment]</li>
+                    <li>Job: Cara to Blue Mage (Left, Up, Right) [Equip: <i>Dancing</i>]</li>
+				</ul>
+			</div>
+			<p>Move forward to engage Exdeath.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Exdeath</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>32768</dd>
+						<dt>Party</dt><dd>Faris (17:9140) / Lenna (17:9090) / Cara (16:8904) / Butz (17:9108)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+                        <dt>Butz</dt><dd>(&rarr;) Blue &raquo; L.2 Old</dd>
+                        <dt>Cara</dt><dd>(&larr;) Blue &raquo; L.5 Doom</dd>
+                        <dt>Faris</dt><dd>(<em>If failed</em>) (&larr;) Dimen &raquo; Reset</dd>
+					</dl>
+                    <p>There is very little margin for error on Cara's turn. If helpful, you can hold down L+R to make sure you get an action in quickly. However, since you can simply keep casting Reset if you miss, it's not overly dangerous.</p>
+				</div>
+			</div>
+			<h3 id="walkthrough-world-3">World 3</h3>
+			<p>Walk north to enter Castle Tycoon and watch the scenes. When you gain control, go out to the balcony to talk to Cara. Exit the castle and head toward the pirate cave to collect Boco.</p>
+			<p>Once you have Boco, begin working your way around the world toward Guido's cave. When you enter the grassy map before the Antlion battle, open the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+                    <li>Job: Butz to Time Mage (Left, Up, Left) [No Equipment]</li>
+				</ul>
+			</div>
+            <p>Continue to fight Antion.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Antlion</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>8100</dd>
+						<dt>Party</dt><dd>empty / empty / Cara (16:8904) / Butz (17:9108)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+                        <dt>Cara</dt><dd>(&larr;) Blue &raquo; L.2 Old</dd>
+                        <dt>Butz</dt><dd>(&larr;) Dimen &raquo; Haste &raquo; Cara</dd>
+                        <dt>Cara</dt><dd>(&larr;) Blue &raquo; L.5 Doom</dd>
+                        <dt>Butz</dt><dd>(<em>If failed</em>) (&larr;) Dimen &raquo; Reset</dd>
+					</dl>
+				</div>
+			</div>
+			<p>After the scenes, continue to Guido's cave, remembering to dismount before you enter the cave. After yet more scenes, you'll find yourself in the Ancient Library. Exit the library and begin the walk to the desert.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Head due west and then one tile south. Take a half-step to the west, and do the following menu.</p>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+                    <li>Job: Butz to Knight [No Equipment]</li>
+                    <li>Job: Cara to Thief (Right, Right) (Ability: !Combine) [No Equipment]</li>
+					<li>Job: Faris to Bard (Left, Left, Left) (Ability: !Gil Toss) [Equip <i>Dancing</i>]</li>
+				</ul>
+			</div>
+			<p>In the forest, take one step to the south to avoid the event tiles. Continue to the Pyramid.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Take 4 extra steps before entering the Pyramid. (This can be done easily by walking around it to the west and entering from the south.)</p>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Gargoyle x2</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>5000</dd>
+						<dt>Party</dt><dd>Faris (17:9140) / empty / Cara (16:8904) / Butz (17:9108)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cara</dt><dd>(&rarr;) Combine &raquo; <i>Potion</i>, <i>DragnFang</i> &raquo; Faris</dd>
+						<dt>Faris</dt><dd>(&rarr;) Gil Toss</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Ability: Faris to !Escape [Equip <i>Dancing</i>]</li>
+                    <li>Job: Butz to Mystic Knight (Right, Down) (Ability: Cover) [Optimize]</li>
+				</ul>
+			</div>
+			<p>Enter the Pyramid and go up the stairs down the hallway with a door. When you enter the room with the switches, several snakes will pop out. You'll very likely have to fight one of these.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Optional Battle: Aspis x1</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>1280</dd>
+						<dt>EXP</dt><dd>266</dd>
+						<dt>Party</dt><dd>Faris (17:9140) / empty / Cara (16:8904) / Butz (17:9108)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cara</dt><dd>(&rarr;) Combine &raquo; <i>Potion</i>, <i>PhenixDwn</i> &raquo; Aspis</dd>
+					</dl>
+				</div>
+			</div>
+			<p>After the battle, ensure you are facing up to avoid fighting the other one. Hit the first and third switches when you have a chance, and make your way to the next floor.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+                <p>When entering the next floor, you'll need to take some steps and exit and re-enter. Most likely, you fought one Aspis, so you'll need to take 13 extra steps. (Right to wall, up until even with the top of the wall and back.)</p>
+				<p>If you avoided both Aspis, you'll need to add an extra step by stepping off and back onto the event tile at the start of the room.</p>
+				<p>If you fought both Aspis, do the same as above, except only go three up instead of four.</p>
+			</div>
+			<p>On the next floor, wait for the spikes to come out, walk to the middle, wait for the stairs, and then proceed to the next room.</p>
+			<p>In the next room, avoid the monsters and make your way to the platform with the mummy. If you do accidentally encounter one of the monsters, there is a backup:</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Optional Battle: MachinHead x1</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>7210</dd>
+						<dt>Party</dt><dd>Faris (17:9140) / empty / Cara (16:8904) / Butz (17:9108)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+                        <dt>Cara</dt><dd>(&rarr;) Combine &raquo; <i>Eyedrop</i>, <i>MaidnKiss</i> &raquo; MachinHead</dd>
+                        <dt>Butz</dt><dd>(&larr;) MgcSwrd &raquo; Bolt3 &raquo; Butz</dd>
+                        <dt>Faris</dt><dd>(R) Defend</dd>
+                        <dt>Cara</dt><dd>Wait for enemy<br>(&rarr;) Combine &raquo; <i>Eyedrop</i>, <i>MaidnKiss</i> &raquo; Machinhead <strong>or</strong> (R) Defend</dd>
+                        <dt>Butz</dt><dd>(&uarr;) Fight</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Use <i>Antidote</i> on everybody.</li>
+					<li>Use <i>HiPotion</i> on Butz.</li>
+                    <li>Job: Cara to Ninja (Left, Down, Left) (Ability: !Black) [No Equipment]</li>
+                    <li>Job: Faris to Ninja (Left, Down, Left) (Ability: !Black) [No Equipment]</li>
+				</ul>
+			</div>
+			<p>Move forward to engage the mummies.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Mummy x3</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>2900</dd>
+						<dt>Party</dt><dd>Faris (17:9140) / empty / Cara (16:8904) / Butz (17:9108)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+                        <dt>Cara</dt><dd>(&larr;) Throw &raquo; <i>Flame</i> (scroll)</dd>
+                        <dt>Faris</dt><dd>(&larr;) Throw &raquo; <i>Flame</i> (scroll)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+                    <li>Job: Faris to Thief (Right, Right) (Ability: !Escape) [Optimize]</li>
+				</ul>
+			</div>
+            <p>Continue through the Pyramid.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: BlandLamia x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape</dd>
+					</dl>
+				</div>
+			</div>
+            <p>In the switch room, hit the first switch, and then continue to the chest room on the right. In the room, hit the left switch, grab the chests on the right, and leave.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+                    <li>After returning from the chest room, take 12 extra steps and then return to the chest room. (Left to wall and back three times.)</li>
+                    <li>Inside the chest room, take 12 extra steps before returning. (Left to wall then return.)</li>
+				</ul>
+			</div>
+            <p>Continue with the rest of the quicksand switches as normal. On the way, there is an encounter.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Pyra Layer x1, Nile x1, BlandLamia x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>On 7F, take two extra steps before going up the stairs.</p>
+			</div>
+            <p>Continue until you reach 8F, with the changing tiles. Grab the <i>Goldpin</i> in the chest on the right and then go through the right door. Collect the 12000 gil in the left chest and return.</p>
+            <p>Back in the changing tiles room, get the <i>Guard</i> (ring) and <i>Ribbon</i> chests and continue to the exit.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+                <p>Take 12 extra steps before leaving the changing tile room.</p>
+	    	</div>
+			<p>After the scenes, leave the Pyramid and walk back to the Elder Tree.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+                    <li>Job: Faris to Bard (Left, Left, Left) (Ability: !Black) [No Equipment]</li>
+                    <li>Job: Cara to Mediator (Up) [No Equipment]
+					<li>Job: Butz to Mediator (Up) (Ability: Cover) [Optimize]</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Merugene</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>20000</dd>
+						<dt>Party</dt><dd>Faris (17:9140) / empty / Cara (16:8904) / Butz (17:9108)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Black &raquo; Fire</dd>
+						<dt>Cara</dt><dd>(&larr;) Release</dd>
+						<dt>Butz</dt><dd>(&larr;) Release</dd>
+					</dl>
+				</div>
+			</div>
+			<h3 id="walkthrough-final-preparation">Final Preparation</h3>
+            <p>After battle, take a step to the right on the world map and then open up the menu, being careful not to half-step.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+                    <li>Job: Cara to Thief (Right, Right) [No Equipment]</li>
+                    <li>Job: Faris to Thief (Right, Right) (Ability: !Escape) [No Equipment]</li>
+					<li>If you don't have an <i>Elixir</i>, make sure Butz has at least 501 HP.</li>
+				</ul>
+			</div>
+			<p>Begin making your way to the airship. On the way, there should be an encounter.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Elm Gigas x1, Hedgehog x1, Sleepy x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+                        <dt>Cara</dt><dd>(&darr;) Item &raquo; <i>Elixir</i> or <i>HiPotion</i> &raquo; Butz</dd>
+						<dt>Faris</dt><dd>Wait for Cara<br>(&rarr;) Escape</dd>
+					</dl>
+					<p>The goal of this battle is to leave Butz in critical HP.</p>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Take a half-step onto the bridge next to the castle.</p>
+			</div>
+			<p>After the scenes, fly to the Mirage forest (nearly straight north) and land in the little nook on the south end of the forest. Enter the town, which can be any of the upper left 6 tiles of the forest.</p>
+			<p>Inside the town, head to the magic shop.</p>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-shopping-cart"></span>
+				<h4>Shopping</h4>
+				<ul>
+                    <li>Buy Size and Float.</li>
+				</ul>
+			</div>
+            <p>Next, head to the armor shop, but before doing any shopping, open the menu.</p>
+            <div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+                    <li>Job: Butz to White Mage (Right, Down, Right) [No Equipment]</li>
+                    <li>Use Butz to cast Life and Size on Lenna.</li>
+                    <li>Job: Butz to Thief (Right, Right) (Ability: !Blue) [No Equipment]</li>
+                    <li>Job: Cara to Time Mage (Left, Up, Left) [Equip: <i>Dancing</i>]
+				</ul>
+			</div>
+            <p>Now, shop at the armor shop, and afterward, the item shop.</p>
+			<div class="bs-callout bs-callout-primary">
+				<span class="fas fa-shopping-cart"></span>
+				<h4>Shopping</h4>
+				<ul>
+                    <li>Sell <i>Goldpin</i>, <i>Gold</i> (shield), <i>Coronet</i>, <i>MornStar</i>, <i>Ice</i> (shield) and <i>Guard</i> (ring).</li>
+                    <li>Buy <i>Crystal</i> (shield).</li>
+                    <li>From the hidden armor shop, buy <i>Running</i>.</li>
+                    <li>From the item shop, buy 11 <i>HiPotion</i>, 6 <i>PhenixDwn</i>, 4 <i>Hero</i> and 7 <i>Ether</i>.</li>
+                    <li>Ensure you have at least 74500 gil after all this shopping.</li>
+                    <li>TODO: Tweak all this buying and selling.</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Be sure to half-step onto the airship.</p>
+			</div>
+			<p>Leave the town, board the airship, and fly to the entrance to the Cleft of Dimension (east the short distance to the bay, and then due north).</p>
+			<h3 id="cleft-of-dimension">Cleft of Dimension</h3>
+			<p>On the first part of the desert, go east whenever possible. Otherwise, go south. Once you're directly below the staircase to the next section, head north.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Land Crawl x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape</dd>
+					</dl>
+				</div>
+			</div>
+			<p>Be sure to move east one tile as soon as you're up the stairs, so you don't accidentally go up onto the wrong tile.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Anku Heggu x3</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Anku Heggu x3</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<p>After the next quicksand ride, simply hold right until you reach the doorway. Make your way until you reach the forest section, following the step route if appropriate.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Land Crawl x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>When climbing up the chain on the left, take two extra steps before entering the room.</li>
+					<li>Take 8 extra steps before returning to the previous map. (Up to wall, left once, and back.)</li>
+					<li>Take 8 extra steps on the previous map, and then continue.</li>
+				</ul>
+			</div>
+			<p>In the forest, head east, north to the tree, west, north and east to get the <i>DrgnFang</i> chest, and then west into the tiny gap. Veer east around the tree, and go north until you reach the hedge. Go east and you'll get an encounter.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: MossFungus x1, White Flame x4</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<p>Go east (jogging north one tile as needed) until you hit the flowers, then head south, weaving your way southeast to get the <i>Ribbon</i> in the chest. After collecting the <i>Ribbon</i>, go east, veer south around the tree, and continue east and south into the alcove.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: MossFungus x1, White Flame x4</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Take 2 extra steps before menuing and triggering the boss fight.</p>
+			</div>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+                    <li>Job: Faris to Chemist (Up, Right) (Ability: Dash) [No Equipment]</li>
+                    <li>Equip Lenna: <i>Guardian</i>, <i>Crystal</i> (shield)</li>
+                    <li>Equip Butz: <i>Running</i> (shoes), <i>Stealth</i> (robe), <i>GrnBeret</i>.</li>
+                    <li>Ensure Butz has at least 33MP.</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Calofisteri</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>18000</dd>
+						<dt>Party</dt><dd>Faris (17:9140) / Lenna (17:9090) / Cara (16:8904) / Butz (17:9108)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+                        <dt>Butz</dt><dd>Wait for Calofisteri<br>(&rarr;) Blue &raquo; L.2 Old</dd>
+						<dt>Cara</dt><dd>(R) Defend</dd>
+						<dt>Faris</dt><dd>(R) Defend</dd>
+						<dt>Lenna</dt><dd>(R) Defend</dd>
+                        <dt>Butz</dt><dd>(&rarr;) Blue &raquo; L.5 Doom</dd>
+                        <dt>Cara</dt><dd>(<em>If failed</em>) (&larr;) Dimen &raquo; Reset</dd>
+					</dl>
+				</div>
+			</div>
+			<p>If you're not on step route, open the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+                    <li>Ability: Butz to !Escape [Equip: <i>Running</i>]</li>
+				</ul>
+			</div>
+			<p>Continue through the cave portion of the dungeon, paying attention to step route if appropriate.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>Enter and exit the obvious cave in the middle of the waterfalls map.</li>
+					<li>Go down the waterfall, and then enter the cave to the left.</li>
+				</ul>
+			</div>
+			<p>Avoid Omega by taking a step downward and moving quickly after exiting the cave.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>Enter the cave, do two loops around the room, take 2 additional steps and then go back a map.</li>
+					<li>Take 8 extra steps outside and then continue. (Go left to wall, up to wall and back.)</li>
+				</ul>
+			</div>
+            <p>Before touching the book, open the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+                    <li>Job: Butz to Chemist (Up, Right) (Ability: !GilToss) [Equip <i>Stealth</i> (robe)]</li>
+                    <li>Job: Cara to Blue Mage (Left, Up, Right) (Ability: !Combine) [Equip <i>Dancing</i>, <i>GrnBeret</i>, <i>Running</i>]</li>
+                    <li>Swap Butz and Faris. (Left, Down, A, Down, A)</li>
+                    <li>Do any desired inventory management. TODO</li>
+				</ul>
+			</div>
+			<p>Talk to the book to engage Apanda.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Apanda</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>22200</dd>
+						<dt>Party</dt><dd>Butz (17:9108) / Lenna (17:9090) / Cara (16:8904) / Faris (17:9140)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cara</dt><dd>(&rarr;) Combine &raquo; <i>Revivify</i>, <i>TurtleShell</i> &raquo; Apanda</dd>
+                        <dt>Cara</dt><dd>(&rarr;) Combine &raquo; <i>Antidote</i>, <i>Revivify</i> &raquo; Butz</dd>
+                        <dt>Faris</dt><dd>(&darr;) Item &raquo; <i>PhenixDwn</i> on Lenna <strong>or</strong> (R) Defend</dd>
+                        <dt>Butz</dt><dd>(&larr;) Drink &raquo; <i>Hero</i></dd>
+                        <dt>Lenna</dt><dd>(&rarr;) Dimen &raquo; Haste &raquo; Butz</dd>
+                        <dt>Cara</dt><dd>(&rarr;) Combine &raquo; <i>Antidote</i>, <i>Revivify</i> &raquo; Butz</dd>
+                        <dt>Butz</dt><dd>(&rarr;) Gil Toss</dd>
+						<dt>Cara</dt><dd>(&rarr;) Combine &raquo; <i>Antidote</i>, <i>Revivify</i> &raquo; Butz</dd>
+						<dt>Faris</dt><dd>(R) Defend</dd>
+                        <dt>Butz</dt><dd>(&rarr;) Gil Toss (hold A)</dd>
+                        <dt>Lenna</dt><dd>(&larr;) Guard</dd>
+                        <dt>Cara</dt><dd>(R) Defend</dd>
+                        <dt>Butz</dt><dd>(&rarr;) Gil Toss (hold A)</dd>
+                        <dt>Cara</dt><dd>(R) Defend</dd>
+                        <dt>Faris</dt><dd>(R) Defend</dd>
+                        <dt>Butz</dt><dd>(&rarr;) Gil Toss (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+            <p>After the battle, open the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+                    <li>Unequip Cara: <i>Running</i></li>
+                    <li>Job: Butz to Thief (Right, Right) (Ability: !Escape) [Equip: <i>Running</i> (shoes)]</li>
+				</ul>
+			</div>
+			<p>Exit the library and make your way through the floating castle.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: AvisDragon x2</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Butz</dt><dd>(&rarr;) Escape</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: AvisDragon x1</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Butz</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: AvisDragon x2</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Butz</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: AvisDragon x2</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Butz</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<p>Inside the castle, head to the right and follow the path to get the <i>Running</i> (shoes).</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<ul>
+					<li>After getting the chest, take 4 extra steps before returning.</li>
+				</ul>
+			</div>
+            <p>Before engaging Catastrophe, open the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+                    <li>Job: Butz to Chemist (Up, Right) (Ability: !Blue) [No Equipment]</li>
+                    <li>Job: Lenna to Time Mage (Left, Up, Left) [Equip <i>Running</i>]</li>
+                    <li>Use <i>Ether</i> on Butz three times.</li>
+                    <li>Cast Float on anybody.</li>
+                    <li>Equip Cara: <i>Running</i> (shoes)</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Catastroph</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>19997</dd>
+						<dt>Party</dt><dd>Butz (17:9108) / Lenna (17:9090) / Cara (16:8904) / Faris (17:9140)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+                        <dt>Cara</dt><dd>(&rarr;) Combine &raquo; <i>Antidote</i>, <i>Revivify</i> &raquo; Butz</dd>
+                        <dt>Lenna</dt><dd>(&larr;) Dimen &raquo; Haste &raquo; Butz</dd>
+                        <dt>Butz</dt><dd>(&larr;) Drink &raquo; <i>Hero</i></dd>
+                        <dt>Cara</dt><dd>(&rarr;) Combine &raquo; <i>Antidote</i>, <i>Revivify</i> &raquo; Butz</dd>
+						<dt>Faris</dt><dd>(R) Defend</dd>
+                        <dt>Lenna</dt><dd>(&larr;) Dimen &raquo; Float</dd>
+						<dt>Butz</dt><dd>(&larr;) Drink &raquo; <i>Hero</i> (hold A)</dd>
+						<dt>Cara</dt><dd>(&rarr;) Combine &raquo; <i>Antidote</i>, <i>Revivify</i> &raquo; Butz</dd>
+						<dt>Lenna</dt><dd>Wait for Gravity 100<br>(&larr;) Dimen &raquo; Float</dd>
+                        <dt>Butz</dt><dd>(&rarr;) Blue &raquo; DarkShock (62%)</dd>
+					</dl>
+					<p>If DarkShock misses, continue with the following:</p>
+					<dl class="dl-horizontal">
+						<dt>Cara</dt><dd>(&rarr;) Combine &raquo; <i>Antidote</i>, <i>Revivify</i> &raquo; Butz</dd>
+						<dt>Faris</dt><dd>(R) Defend</dd>
+						<dt>Lenna</dt><dd>Wait for Gravity 100<br>(&larr;) Dimen &raquo; Float</dd>
+						<dt>Butz</dt><dd>(&rarr;) Blue &raquo; DarkShock (62%)</dd>
+					</dl>
+					<p>Once DarkShock is successfull, Cara should cast L.5 Doom.</p>
+					<p>If Butz gets low on MP, cast Reset with Lenna.</p>
+				</div>
+			</div>
+			<p>If not on step route, open the menu after the battle..</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Lenna to Normal (Left) (Ability: !Dimen, Cover) [Equip: <i>Guardian</i>, <i>Crystal</i> (shield), <i>Ribbon</i>]</li>
+					<li>Job: Butz to Thief (Right, Right) (Ability: !Escape) [Equip: <i>Running</i> (shoes)]</li>
+				</ul>
+			</div>
+			<p>Once you enter the hall, make sure you take the left path, and after your first attempt at exiting the room, open the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Lenna to Normal (Left) (Ability: !Dimen, Cover) [Equip: <i>Guardian</i>, <i>Crystal</i> (shield), <i>Ribbon</i>]</li>
+					<li>Job: Butz to Normal (Left) (Ability: !Blue, !GilToss) [Equip: <i>Ribbon</i>]</li>
+					<li>Job: Faris to Thief (Right, Right) (Ability: !Combine) [Equip: <i>Running</i> (shoes)]</li>
+					<li>Job: Cara to Thief (Right, Right) (Ability: !Combine) [Equip: <i>Running</i> (shoes)]</li>
+				</ul>
+				<p>You can skip Lenna if you already did that change (if you weren't on step route).</p>
+			</div>
+			<p>Attempt to exit again to engage the boss.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Halicarnaso</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>33333</dd>
+						<dt>Party</dt><dd>Butz (17:9374) / Lenna (17:9090) / Cara (17:9170) / Faris (17:9406)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cara</dt><dd>(&rarr;) Combine &raquo; <i>Antidote</i>, <i>Revivify</i> &raquo; Butz</dd>
+						<dt>Faris</dt><dd>(&rarr;) Combine &raquo; <i>Antidote</i>, <i>Revivify</i> &raquo; Butz</dd>
+						<dt>Cara</dt><dd>(&rarr;) Combine &raquo; <i>Revivify</i>, <i>Antidote</i> &raquo; Butz</dd>
+						<dt>Faris</dt><dd>(&rarr;) Combine &raquo; <i>Revivify</i>, <i>Antidote</i> &raquo; Butz</dd>
+						<dt>Lenna</dt><dd>(&larr;) Dimen &raquo; Haste &raquo; Butz</dd>
+						<dt>Butz</dt><dd>(&rarr;) Gil Toss</dd>
+						<dt>Cara</dt><dd>(&rarr;) Combine &raquo; <i>Ether</i>, <i>HiPotion</i> &raquo; Butz</dd>
+						<dt>Faris</dt><dd>(R) Defend</dd>
+						<dt>Butz</dt><dd>(&rarr;) Gil Toss (hold A)</dd>
+						<dt>Cara</dt><dd>(R) Defend</dd>
+						<dt>Faris</dt><dd>(R) Defend</dd>
+						<dt>Lenna</dt><dd>(R) Defend</dd>
+						<dt>Butz</dt><dd>(&rarr;) Gil Toss (hold A)</dd>
+						<dt>Cara</dt><dd>(R) Defend</dd>
+						<dt>Faris</dt><dd>(R) Defend</dd>
+						<dt>Butz</dt><dd>(&rarr;) Gil Toss (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<p>Open the menu to prepare for the next boss.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Ability: Cara to !Escape [Equip <i>Running</i> (shoes)]</li>
+					<li>Job: Faris to Normal (Left) (Ability: !Hide, !Combine) [Equip: <i>Running</i> (shoes)]</li>
+					<li>Job: Lenna to Blue Mage (Left, Up, Right) [No Equipment]</li>
+					<li>Use <i>Ether</i> on Lenna.</li>
+					<li>Use <i>MaidnKiss</i> on Faris and Cara.</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Take 6 extra steps before fighting Twin Tania.</p>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Twin Tania</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>50000</dd>
+						<dt>Party</dt><dd>Butz (17:9374) / Lenna (17:9090) / Cara (17:9170) / Faris (17:9406)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cara</dt><dd>(R) Defend</dd>
+						<dt>Faris</dt><dd>(&larr;) Hide</dd>
+						<dt>Butz/Lenna/Faris</dt><dd>Wait through four Twin Tania actions (including Ineffective)<br>(&larr;) Show</dd>
+						<dt>Faris</dt><dd>(&rarr;) Combine &raquo; <i>Potion</i>, <i>PhenixDwn</i> &raquo; Lenna</dd>
+						<dt>Lenna</dt><dd>Wait for "Charging up for Giga Flare!"<br>(&larr;) Blue &raquo; L.5 Doom</dd>
+					</dl>
+				</div>
+			</div>
+			<p>After battle, open up the menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Lenna to White Mage (Right, Down, Right) [No Equipment]</li>
+					<li>Use Lenna to cast Life on the party.</li>
+					<li>Ensure Lenna has 5MP, Cara has 8MP, and Faris has 33MP.</li>
+					<li>Job: Lenna to Normal (Left) (Ability: !Dimen, Cover) [Equip: <i>Guardian</i>, <i>Crystal</i> (shield), <i>Ribbon</i>, <i>Stealth</i> (robe)]</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>Take 2 extra steps after the battle, somewhere on the bridge.</p>
+			</div>
+			<p>Make your way through the final part of the dungeon.</p>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Belfegor x2</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cara</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Mind Mage x1, Thing x2</h4>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cara</dt><dd>(&rarr;) Escape (hold A)</dd>
+					</dl>
+				</div>
+			</div>
+			<p>Activate the cutscene with Exdeath, and when they're over, prepare for your final menu.</p>
+			<div class="bs-callout bs-callout-info">
+				<span class="fas fa-bars"></span>
+				<h4>Menu</h4>
+				<ul>
+					<li>Job: Cara to MysticKnt (Down, Right) (Ability: !Combine) [Equip: <i>Mythril</i> (knife), <i>Bone Mail</i>, <i>Running</i> (shoes)]</li>
+					<li>Job: Faris to Blue Mage (Left, Up, Right) (Ability: !Combine) [Equip: <i>Aegis</i> (shield), <i>Running</i> (shoes)]</li>
+					<li>Swap Cara and Faris. (Left, A, Up, A)</li>
+				</ul>
+			</div>
+			<div class="bs-callout bs-callout-warning">
+				<span class="fas fa-bolt"></span>
+				<h4>Battle: Exdeath</h4>
+				<h5>Battle Information</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>HP</dt><dd>49001</dd>
+						<dt>Party</dt><dd>Butz (17:9374) / Lenna (17:9090) / Faris (17:9406) / Cara (17:9170)</dd>
+					</dl>
+				</div>
+				<h5>Battle Plan</h5>
+				<div class="info-block">
+					<dl class="dl-horizontal">
+						<dt>Cara</dt><dd>(&rarr;) Combine &raquo; <i>DragnFang</i>, <i>HiPotion</i> &raquo; Butz</dd>
+						<dt>Faris</dt><dd>(&rarr;) Combine &raquo; <i>Antidote</i>, <i>Revivify</i> &raquo; Butz</dd>
+						<dt>Cara</dt><dd>(&rarr;) Combine &raquo; <i>Antidote</i>, <i>Revivify</i> &raquo; Butz</dd>
+						<dt>Lenna</dt><dd>(&larr;) Dimen &raquo; Haste &raquo; Butz</dd>
+						<dt>Butz</dt><dd>(&larr;) Blue &raquo; DarkShock (46%)</dd>
+						<dt>Faris</dt><dd>(&rarr;) Combine &raquo; <i>Antidote</i>, <i>Revivify</i> &raquo; Butz</dd>
+						<dt>Cara</dt><dd>(&rarr;) Combine &raquo; <i>Antidote</i>, <i>Revivify</i> &raquo; Butz</dd>
+						<dt>Butz</dt><dd>(<em>If DarkShock failed</em>) (&larr;) Blue &raquo; DarkShock (66%) <strong>or</strong><br> Wait (skip to next section)</dd>
+					</dl>
+					<p>If DarkShock still hasn't hit, continue attempting and Defending until it does.</p>
+					<p>Once Butz is waiting for ATB, switch to the following:</p>
+					<dl class="dl-horizontal">
+						<dt>Butz</dt><dd>Wait for full ATB<br>Wait for Exdeath attack<br>(&larr;) Blue &raquo; L.2 Old</dd>
+						<dt>Faris</dt><dd>(R) Defend</dd>
+						<dt>Cara</dt><dd>(&larr;) MagicSwd &raquo; Break &raquo; Cara</dd>
+						<dt>Lenna</dt><dd>(R) Defend</dd>
+						<dt>Cara</dt><dd>(R) Defend</dd>
+						<dt>Butz</dt><dd>Wait for either Exdeath attack or Cara's ATB to be close to full<br>Hold L+R<br>Wait for Cara to have yellow ATB<br>(&larr;) Blue &raquo; L.5 Doom<br>Run Buffer</dd>
+					</dl>
+					<p>If you miss the first chance, you can try waiting for ExDeath's next action, holding L+R, waiting for the 28th &quot;Can't run&quot; message, and then using L.5 Doom (and buffering out). This may or may not be consistent. (If you actually queued and missed L.5 Doom, quickly defend four times back to Butz.)</p>
+					<p>Now, it's time for NeoExdeath.</p>
+					<dl class="dl-horizontal">
+						<dt>Faris</dt><dd>Wait for cutscenes<br>(&larr;) Blue &raquo; L.2 Old</dd>
+						<dt>Cara</dt><dd>(&uarr;) Fight (Up, A, Down, A)</dd>
+						<dt>Lenna</dt><dd>(R) Defend</dd>
+						<dt>Cara</dt><dd>(R) Defend</dd>
+						<dt>Butz</dt><dd>(R) Defend</dd>
+						<dt>Faris</dt><dd>Wait for 2 ticks<br>(&larr;) Blue &raquo; L.5 Doom<br>Run Buffer (only matters if the turn isn't buffered automatically)</dd>
+						<dt>Cara</dt><dd>(&uarr;) Fight &raquo; Cara</dd>
+						<dt>Butz</dt><dd>(&rarr;) Gil Toss</dd>
+						<dt>Lenna</dt><dd>(R) Defend</dd>
+						<dt>Faris</dt><dd>(&rarr;) Combine &raquo; <i>Antidote</i>, <i>Revivify</i> &raquo; Butz</dd>
+					</dl>
+					<p>At this point, Butz should continue using Gil Toss, Lenna should Defend, and Faris should either revive Lenna if she dies or defend.</p>
+				</div>
+			</div>
+		</div>
+		<script>$('#toc').toc({
+			'selectors': 'h2,h3'
+		});</script>
+	</body>
+</html>
+{% endblock %}
