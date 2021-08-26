@@ -25,6 +25,7 @@ com.aexoden.ff4.constants = function()
         BLACK_CHOCOBO:  0x04,
         HUMMINGWAY:     0x08,
         SINGLE:         0x10,
+        HUMMINGWAY_32:  0x20,
     };
 
     var SegmentFlags = {

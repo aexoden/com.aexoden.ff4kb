@@ -438,6 +438,10 @@ com.aexoden.ff4.route = function()
                         caption.innerHTML += "<p>Track down the shop Hummingway as pointed to by the arrow, and then leave, making sure to take a total of 16 steps, plus any extras below.</p>";
                     }
 
+                    if ((path.flags & PathFlags.HUMMINGWAY_32) > 0) {
+                        caption.innerHTML += "<p>Track down the shop Hummingway as pointed to by the arrow, and then leave, making sure to take a total of 32 steps, plus any extras below.</p>";
+                    }
+
                     caption.innerHTML += '<dl class="dl">';
 
                     if (pathMetadata.name in data.pathVariables) {

@@ -80,13 +80,13 @@ ROUTES = {
     },
     'no64-rosa-marathon': {
         'name': 'Any% No64 (Rosa) (Marathon)',
-        'description': 'This route runs from the beginning of the game until Zeromus is defeated. Use of the 64-door glitch is banned. The step route begins after the Mist Clip. This particular version of the route relies on Rosa as the primary damage dealer at the end of the game. This variant adds extra save points and a visit to the Elixir shop for use during marathons.',
+        'description': 'This route runs from the beginning of the game until Zeromus is defeated. Use of the 64-door glitch is banned. The step route begins after the Mist Clip. This particular version of the route relies on Rosa as the primary damage dealer at the end of the game. This variant adds extra save points and a visit to the Elixir shop in the Hummingway cave for use during marathons. In addition, the minimum number of steps in the Hummingway has been increased from 16 to 32 to allow for catching the Namingway in the cave.',
         'group': 'standard',
         'enabled': True,
         'twin_safe': True,
         'complete': True,
         'seed_finder': True,
-        'status': 'Suboptimal (ETA: June 2021)'
+        'status': 'Optimal'
     },
     'no64-excalbur': {
         'name': 'Any% No64 (Edge+Excalbur)',
