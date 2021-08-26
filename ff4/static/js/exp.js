@@ -1275,6 +1275,7 @@ com.aexoden.ff4.exp = function()
                 },
                 magus_sisters: {
                     [CHARACTER_KAIN]: [19, null],
+                    [CHARACTER_ROSA]: [null, 19],
                 },
             },
         },
