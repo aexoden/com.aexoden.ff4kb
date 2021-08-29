@@ -1269,6 +1269,9 @@ com.aexoden.ff4.exp = function()
                 dark_imps: {
                     [CHARACTER_CECIL]: [null, 19],
                 },
+                evilwall: {
+                    [CHARACTER_CECIL]: [null, 21],
+                },
                 golbez: {
                     [CHARACTER_RYDIA]: [19, null],
                     [CHARACTER_YANG]: [17, null],
@@ -1326,6 +1329,9 @@ com.aexoden.ff4.exp = function()
                 },
                 magus_sisters: {
                     [CHARACTER_KAIN]: [19, null],
+                },
+                rubicant: {
+                    [CHARACTER_CECIL]: [null, 21],
                 },
             },
         },
@@ -1392,6 +1398,9 @@ com.aexoden.ff4.exp = function()
                 },
                 magus_sisters: {
                     [CHARACTER_KAIN]: [19, null],
+                },
+                rubicant: {
+                    [CHARACTER_CECIL]: [null, 21],
                 },
             },
         },
