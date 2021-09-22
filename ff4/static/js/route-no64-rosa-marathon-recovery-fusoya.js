@@ -328,7 +328,7 @@ com.aexoden.ff4.route_data = function()
             },
         },
         "hummingway-cave": {
-            flags: PathFlags.STEPS | PathFlags.HUMMINGWAY,
+            flags: PathFlags.STEPS | PathFlags.HUMMINGWAY_32,
             map: "3165-0",
             segments: {
                 "base-0": [
@@ -1560,7 +1560,7 @@ com.aexoden.ff4.route_data = function()
             type: VariableFlags.EXTRA,
         },
         E316500: {
-            minSteps: 16,
+            minSteps: 32,
             paths: {
                 "hummingway-cave": {
                     disambiguation: "",

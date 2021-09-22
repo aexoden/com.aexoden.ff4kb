@@ -1,13 +1,13 @@
 ROUTE	Final Fantasy IV Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)
-VERSION	1
-ROSA	v1.2.0-3-g32213e2
+VERSION	2
+ROSA	v1.2.0-32-g919869a
 SEED	124
 MAXSTEP	256
-MAXSEG	0
+MAXSEG	4
 TASMODE	0
 MINIMUM	1
-FRAMES	47837204
-VARS	E30BC00:34
+FRAMES	49369440
+VARS	E30B500:13 E30B900:12 E316500:80 E316D01:50
 
 Fly to Lunar Path                                         Seed: 124   Index:   0
 Lunar Overworld                                           Seed: 124   Index:   0
@@ -30,110 +30,118 @@ Lunar Overworld                                           Seed: 124   Index: 175
 Lunar Path (west)                                         Seed: 124   Index: 210
 Lunar Overworld                                           Seed: 124   Index: 248
 Hummingway Cave                                           Seed: 124   Index: 253
-Lunar Overworld                                           Seed: 141   Index:  13
+  Extra Steps: 80
+Lunar Overworld                                           Seed: 141   Index: 109
   Step   1: 9 / Balloon x2, Grenade x2 (7.687s)
-Save: Before Giant of Bab-il                              Seed: 141   Index:  14
-Giant of Bab-il Mouth                                     Seed: 141   Index:  14
-  Optional Steps: 0
-Giant of Bab-il Neck                                      Seed: 141   Index:  32
-Giant of Bab-il Chest                                     Seed: 141   Index:  34
-  Step  37: 10 / Machine x2, Beamer x2 (7.818s)
-  Step  76: 11 / Horseman x1, Beamer x1, Machine x1 (7.709s)
-Giant of Bab-il Stomach                                   Seed: 141   Index: 116
-  Step  26: 12 / Searcher (summons Horseman) x1, Beamer x2 (7.606s)
-  Step  36: 13 / Machine x2, Beamer x3 (7.876s)
-Grind Fight Search                                        Seed: 141   Index: 165
-  Save: Giant of Bab-il Passage                           Seed: 141   Index: 165
-  Giant of Bab-il Passage                                 Seed: 141   Index: 165
-    Step   3: 14 / D.Machin x1 (7.496s)
-    Step  33: 15 / Horseman x1, Machine x2 (7.724s)
-    Step  73: 16 / MacGiant x1 (7.506s)
+Save: Before Giant of Bab-il                              Seed: 141   Index: 110
+Giant of Bab-il Mouth                                     Seed: 141   Index: 110
+  Optional Steps: 1
+  Extra Steps: 12
+Giant of Bab-il Neck                                      Seed: 141   Index: 141
+  Step   1: 10 / Searcher (summons Machine) x1, Machine x2 (7.655s)
+Giant of Bab-il Chest                                     Seed: 141   Index: 143
+  Step   9: 11 / Horseman x1, Beamer x1, Machine x1 (7.709s)
+  Step  25: 12 / Horseman x1, Beamer x2 (7.663s)
+  Step  55: 13 / Horseman x1, Beamer x1, Machine x1 (7.709s)
+Giant of Bab-il Stomach                                   Seed: 141   Index: 225
+  Extra Steps: 12
+  Step  13: 14 / MacGiant x1, Horseman x1 (7.641s)
+  Step  15: 15 / Searcher (summons Horseman) x1, Beamer x2 (7.606s)
+  Step  56: 16 / Searcher (summons MacGiant) x1 (7.400s)
+Grind Fight Search                                        Seed: 158   Index:  30
+  Save: Giant of Bab-il Passage                           Seed: 158   Index:  30
+  Giant of Bab-il Passage                                 Seed: 158   Index:  30
    (Step  75: 17 / Horseman x1, Machine x2)
-   (Step 116: 18 / MacGiant x1, Machine x1, Beamer x1)
-   (Step 196: 19 / Searcher (summons D.Machin) x1, Beamer x2)
-   (Step 199: 20 / Searcher (summons D.Machin) x1, Beamer x2)
-   (Step 229: 21 / MacGiant x1, Machine x1, Beamer x1)
-   (Step 245: 22 / Searcher (summons D.Machin) x1, Beamer x2)
-  Giant of Bab-il Lung                                    Seed: 141   Index: 239
-    Extra Steps: 34
+   (Step  78: 18 / MacGiant x1, Machine x1, Beamer x1)
+   (Step 108: 19 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 124: 20 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 143: 21 / MacGiant x1, Machine x1, Beamer x1)
+   (Step 155: 22 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step 181: 23 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 218: 24 / Horseman x1, Machine x2)
+   (Step 230: 25 / MacGiant x1)
+  Giant of Bab-il Lung                                    Seed: 158   Index: 104
     Step   1: 17 / Searcher (summons Horseman) x1, Beamer x2 (7.606s)
-    Step  42: 18 / Searcher (summons D.Machin) x1, Beamer x2 (7.658s)
-   (Step 122: 19 / Beamer x1, Machine x2, Horseman x1)
-   (Step 125: 20 / Beamer x1, Machine x2, Horseman x1)
-   (Step 155: 21 / Searcher (summons D.Machin) x1, Beamer x2)
-   (Step 171: 22 / Beamer x1, Machine x2, Horseman x1)
-   (Step 190: 23 / Machine x3, Beamer x2)
-   (Step 202: 24 / Searcher (summons Horseman) x1, Beamer x2)
-   (Step 228: 25 / MacGiant x2)
-Battle: Elements                                          Seed: 158   Index:  25
-Giant of Bab-il Lung                                      Seed: 158   Index:  25
-Giant of Bab-il CPU                                       Seed: 158   Index:  32
-Return to Moon                                            Seed: 158   Index:  34
-Lunar Overworld                                           Seed: 158   Index:  34
-Lunar Path (west)                                         Seed: 158   Index:  39
-Lunar Overworld                                           Seed: 158   Index:  77
-  Step  28: 19 / Procyote x1, Pudding x2 (7.735s)
-  Step  31: 20 / Procyote x1, Pudding x2 (7.735s)
-Lunar Path (east)                                         Seed: 158   Index: 112
-  Step  26: 21 / Juclyote x1, Procyote x2 (7.792s)
-Lunar Overworld                                           Seed: 158   Index: 143
-  Step  11: 22 / Procyote x1, Pudding x2 (7.735s)
-Lunar Subterrane B1                                       Seed: 158   Index: 160
-  Step  25: 23 / Warlock x1 (6.338s)
-Lunar Subterrane B2                                       Seed: 158   Index: 193
-  Step  18: 24 / RedGiant x1 (6.683s)
-Lunar Subterrane B3                                       Seed: 158   Index: 222
-Lunar Subterrane B4                                       Seed: 158   Index: 236
-  Step  12: 25 / King-Ryu x2 (6.739s)
-  Step  24: 26 / D.Bone x1, Warlock x1 (6.366s)
-Lunar Subterrane B4 Passage                               Seed: 175   Index:  36
-  Step   6: 27 / King-Ryu x1, Ging-Ryu x1 (6.738s)
-Lunar Subterrane B4                                       Seed: 175   Index:  65
-Lunar Subterrane B5                                       Seed: 175   Index:  80
-Lunar Subterrane B5 Passage A                             Seed: 175   Index:  97
-  Step  25: 28 / King-Ryu x1, Ging-Ryu x1 (6.738s)
-Lunar Subterrane B5                                       Seed: 175   Index: 130
-Lunar Subterrane B5 Passage B                             Seed: 175   Index: 139
-  Step  26: 29 / King-Ryu x1, Ging-Ryu x1 (6.738s)
-  Step  31: 30 / Tricker x1 (6.815s)
-  Step  32: 31 / King-Ryu x1, Ging-Ryu x1 (6.738s)
-Lunar Subterrane B5 Inward Direct                         Seed: 175   Index: 171
-  Lunar Subterrane B5                                     Seed: 175   Index: 171
-    Step   5: 32 / King-Ryu x2 (6.739s)
-Get Ninja Star on Lunar Subterrane B6                     Seed: 175   Index: 183
-  Lunar Subterrane B6                                     Seed: 175   Index: 183
-    Step  19: 33 / Ging-Ryu x1, RedGiant x1 (6.738s)
-    Step  36: 34 / Ging-Ryu x1, RedGiant x1 (6.738s)
-  Lunar Subterrane B6 Passage                             Seed: 175   Index: 232
-  Lunar Subterrane B7                                     Seed: 175   Index: 245
-  Save: Lunar Subterrane B7 Save Room                     Seed: 192   Index:  12
-  Lunar Subterrane B7 Save Room                           Seed: 192   Index:  12
-  Lunar Subterrane B7                                     Seed: 192   Index:  19
-    Step  21: 35 / D.Fossil x1 (6.354s)
-    Step  44: 36 / Tricker x1 (6.815s)
-  Lunar Core B1                                           Seed: 192   Index:  77
-    Step  27: 37 / EvilMask x1 (12.186s)
-    Step  29: 38 / Red D. x2 (19.700s)
-  Lunar Core B2                                           Seed: 192   Index: 145
-    Step  39: 39 / EvilMask x1 (12.186s)
-    Step  46: 40 / Behemoth x1 (7.413s)
-  Lunar Core B3                                           Seed: 192   Index: 200
-    Step  14: 41 / Red D. x3 (19.547s)
-Lunar Core B4                                             Seed: 192   Index: 252
-  Step  42: 42 / Breath x1 (11.896s)
+    Step   4: 18 / Searcher (summons D.Machin) x1, Beamer x2 (7.658s)
+   (Step  34: 19 / Beamer x1, Machine x2, Horseman x1)
+   (Step  50: 20 / Beamer x1, Machine x2, Horseman x1)
+   (Step  69: 21 / Searcher (summons D.Machin) x1, Beamer x2)
+   (Step  81: 22 / Beamer x1, Machine x2, Horseman x1)
+   (Step 107: 23 / Machine x3, Beamer x2)
+   (Step 144: 24 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 156: 25 / MacGiant x2)
+   (Step 194: 26 / Searcher (summons Horseman) x1, Beamer x2)
+   (Step 247: 27 / D.Machin x1)
+Battle: Elements                                          Seed: 158   Index: 112
+Giant of Bab-il Lung                                      Seed: 158   Index: 112
+Giant of Bab-il CPU                                       Seed: 158   Index: 119
+Return to Moon                                            Seed: 158   Index: 121
+Lunar Overworld                                           Seed: 158   Index: 121
+Lunar Path (west)                                         Seed: 158   Index: 126
+  Step  12: 19 / Red Worm x1, Grenade x3 (7.752s)
+  Step  28: 20 / Red Worm x1, Grenade x3 (7.752s)
+Lunar Overworld                                           Seed: 158   Index: 164
+  Step  21: 21 / Balloon x2, Grenade x2 (7.663s)
+Lunar Path (east)                                         Seed: 158   Index: 199
+  Step  12: 22 / Pudding x4 (7.849s)
+Lunar Overworld                                           Seed: 158   Index: 230
+Lunar Subterrane B1                                       Seed: 158   Index: 247
+  Step   1: 23 / Warlock x1 (6.338s)
+  Step  13: 24 / Warlock x1, Kary x1 (6.350s)
+Lunar Subterrane B2                                       Seed: 175   Index:  24
+  Step  18: 25 / Warlock x1, Kary x1, RedGiant x1 (6.432s)
+Lunar Subterrane B3                                       Seed: 175   Index:  53
+Lunar Subterrane B4                                       Seed: 175   Index:  67
+  Step  55: 26 / D.Bone x1, Warlock x1 (6.366s)
+Lunar Subterrane B4 Passage                               Seed: 175   Index: 123
+Lunar Subterrane B4                                       Seed: 175   Index: 152
+  Step  13: 27 / King-Ryu x2 (6.739s)
+Lunar Subterrane B5                                       Seed: 175   Index: 167
+  Step   3: 28 / Warlock x3 (6.419s)
+  Step   9: 29 / Warlock x3 (6.419s)
+Lunar Subterrane B5 Passage A                             Seed: 175   Index: 184
+  Step  18: 30 / King-Ryu x1, Ging-Ryu x1 (6.738s)
+Lunar Subterrane B5                                       Seed: 175   Index: 217
+  Step   2: 31 / Warlock x3 (6.419s)
+Lunar Subterrane B5 Passage B                             Seed: 175   Index: 226
+Lunar Subterrane B5 Inward Direct                         Seed: 192   Index:   2
+  Lunar Subterrane B5                                     Seed: 192   Index:   2
+Get Ninja Star on Lunar Subterrane B6                     Seed: 192   Index:  14
+  Lunar Subterrane B6                                     Seed: 192   Index:  14
+    Step   4: 32 / Ging-Ryu x1, RedGiant x1 (6.738s)
+    Step  26: 33 / Ging-Ryu x1, RedGiant x1 (6.738s)
+    Step  49: 34 / Ging-Ryu x1, RedGiant x1 (6.738s)
+  Lunar Subterrane B6 Passage                             Seed: 192   Index:  63
+  Lunar Subterrane B7                                     Seed: 192   Index:  76
+  Save: Lunar Subterrane B7 Save Room                     Seed: 192   Index:  99
+  Lunar Subterrane B7 Save Room                           Seed: 192   Index:  99
+  Lunar Subterrane B7                                     Seed: 192   Index: 106
+    Extra Steps: 50
+    Step  78: 35 / D.Fossil x1 (6.354s)
+    Step  85: 36 / Tricker x1 (6.815s)
+    Step 108: 37 / D.Fossil x1 (6.354s)
+  Lunar Core B1                                           Seed: 192   Index: 214
+  Lunar Core B2                                           Seed: 209   Index:  26
+    Step  12: 38 / Red D. x2 (19.700s)
+    Step  44: 39 / EvilMask x1 (12.186s)
+  Lunar Core B3                                           Seed: 209   Index:  81
+    Step   3: 40 / EvilMask x1 (12.190s)
+Lunar Core B4                                             Seed: 209   Index: 133
+  Step   1: 41 / Breath x1 (11.896s)
+  Step   6: 42 / Breath x1 (11.896s)
 
-Encounter Time:      346.250s
-Other Time:          449.726s
-Total Time:          795.976s
+Encounter Time:      335.538s
+Other Time:          485.933s
+Total Time:          821.471s
 
-Base Total Time:     795.976s
-Time Saved:          0.000s
+Base Total Time:     855.706s
+Time Saved:          34.235s
 
-Optional Steps:      0
-Extra Steps:         34
+Optional Steps:      1
+Extra Steps:         154
 Encounters:          42
 
-Base Encounters:     42
-Encounters Saved:    0
+Base Encounters:     45
+Encounters Saved:    3
 
 Number of Variables: 38

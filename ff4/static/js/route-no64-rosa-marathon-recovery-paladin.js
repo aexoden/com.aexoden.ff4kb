@@ -228,14 +228,7 @@ com.aexoden.ff4.route_data = function()
         { name: "overworld-mysidia--after-big-whale--walk", condition: { variable: "C000500", values: [0] } },
         { name: "overworld-mysidia--after-big-whale--fly", condition: { variable: "C000500", values: [1] } },
         { name: "big-whale--entrance-to-crystal" },
-        { name: "lunar-overworld-big-whale--initial-to-hummingway-cave", condition: { variable: "C200000", values: [0]} },
-        { name: "lunar-overworld-big-whale--initial-to-lunar-path-landing", condition: { variable: "C200000", values: [1] } },
-        { name: "big-whale--console-to-exit", condition: { variable: "C200000", values: [0]} },
-        { name: "lunar-overworld--before-hummingway-cave", condition: { variable: "C200000", values: [0]} },
-        { name: "hummingway-cave", condition: { variable: "C200000", values: [0]} },
-        { name: "lunar-overworld--after-hummingway-cave", condition: { variable: "C200000", values: [0]} },
-        { name: "big-whale--entrance-to-console", condition: { variable: "C200000", values: [0]} },
-        { name: "lunar-overworld-big-whale--hummingway-cave-to-lunar-path-landing", condition: { variable: "C200000", values: [0] } },
+        { name: "lunar-overworld-big-whale--initial-to-lunar-path-landing" },
         { name: "big-whale--console-to-exit" },
         { name: "lunar-overworld--lunar-path-landing-to-lunar-path-west--before-fusoya" },
         { name: "lunar-path-west--before-fusoya" },
@@ -248,12 +241,12 @@ com.aexoden.ff4.route_data = function()
         { name: "lunar-overworld--lunar-path-east-to-lunar-path-west" },
         { name: "lunar-path-west--after-fusoya" },
         { name: "lunar-overworld--lunar-path-west-to-lunar-path-landing" },
-        { name: "big-whale--entrance-to-console", condition: { variable: "C200000", values: [1]} },
-        { name: "lunar-overworld-big-whale--lunar-path-landing-to-hummingway-cave", condition: { variable: "C200000", values: [1] } },
-        { name: "big-whale--console-to-exit", condition: { variable: "C200000", values: [1] } },
-        { name: "lunar-overworld--before-hummingway-cave", condition: { variable: "C200000", values: [1] } },
-        { name: "hummingway-cave", condition: { variable: "C200000", values: [1] } },
-        { name: "lunar-overworld--after-hummingway-cave", condition: { variable: "C200000", values: [1] } },
+        { name: "big-whale--entrance-to-console" },
+        { name: "lunar-overworld-big-whale--lunar-path-landing-to-hummingway-cave" },
+        { name: "big-whale--console-to-exit" },
+        { name: "lunar-overworld--before-hummingway-cave" },
+        { name: "hummingway-cave" },
+        { name: "lunar-overworld--after-hummingway-cave" },
         { name: "big-whale--entrance-to-crystal" },
         { name: "giant-of-babil-mouth" },
         { name: "giant-of-babil-neck" },
@@ -1769,7 +1762,7 @@ com.aexoden.ff4.route_data = function()
             },
         },
         "hummingway-cave": {
-            flags: PathFlags.STEPS | PathFlags.HUMMINGWAY,
+            flags: PathFlags.STEPS | PathFlags.HUMMINGWAY_32,
             map: "3165-0",
             segments: {
                 "base-0": [
@@ -5053,29 +5046,6 @@ com.aexoden.ff4.route_data = function()
             },
             type: VariableFlags.CHOICE,
         },
-        C200000: {
-            descriptions: {
-                0: "Visit the Hummingway Cave before recruiting FuSoYa.",
-                1: "Recruit FuSoYa before visiting the Hummingway Cave.",
-            },
-            paths: {
-                0: {
-                    "lunar-overworld-big-whale--initial-to-hummingway-cave": {
-                        index: "0",
-                        instruction: "Visit the Hummingway Cave before recruiting FuSoYa",
-                        location: "Lunar Overworld [first visit]",
-                    },
-                },
-                1: {
-                    "lunar-overworld-big-whale--initial-to-lunar-path-landing": {
-                        index: "0",
-                        instruction: "Recruit FuSoYa before visiting the Hummingway cave",
-                        location: "Lunar Overworld [first visit]",
-                    },
-                },
-            },
-            type: VariableFlags.CHOICE,
-        },
         C305500: {
             descriptions: {
                 1: "Enter the Extra Step Area in Toroian Castle 1F [after Cave Magnes].",
@@ -6867,7 +6837,7 @@ com.aexoden.ff4.route_data = function()
             type: VariableFlags.EXTRA,
         },
         E316500: {
-            minSteps: 16,
+            minSteps: 32,
             paths: {
                 "hummingway-cave": {
                     disambiguation: "",
