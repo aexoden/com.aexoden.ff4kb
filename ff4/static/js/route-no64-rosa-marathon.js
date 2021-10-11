@@ -6896,29 +6896,6 @@ com.aexoden.ff4.route_data = function()
             },
             type: VariableFlags.CHOICE,
         },
-        C30C800: { // eslint-disable-line
-            descriptions: {
-                0: "Walk out of Cave Eblana B2F Weapons/Armors.",
-                1: "Cast Warp to leave Cave Eblana B2F Weapons/Armors.",
-            },
-            paths: {
-                0: {
-                    "cave-eblana-b2f-weapons-armors--direct": {
-                        index: "0",
-                        instruction: "Walk out of the room",
-                        location: "Cave Eblana B2F Weapons/Armors",
-                    },
-                },
-                1: {
-                    "cave-eblana-b2f-weapons-armors--warp": {
-                        index: "0",
-                        instruction: "Cast Warp to leave the room",
-                        location: "Cave Eblana B2F Weapons/Armors",
-                    },
-                },
-            },
-            type: VariableFlags.CHOICE,
-        },
         C30AC00: { // eslint-disable-line
             descriptions: {
                 0: "Equip the Dwarf Axe when removing the Strength Ring.",
@@ -6937,6 +6914,29 @@ com.aexoden.ff4.route_data = function()
                         index: "1",
                         instruction: "Equip the Dwarf Axe immediately after the Rubicant battle",
                         location: "Tower of Bab-il B5F",
+                    },
+                },
+            },
+            type: VariableFlags.CHOICE,
+        },
+        C30C800: { // eslint-disable-line
+            descriptions: {
+                0: "Walk out of Cave Eblana B2F Weapons/Armors.",
+                1: "Cast Warp to leave Cave Eblana B2F Weapons/Armors.",
+            },
+            paths: {
+                0: {
+                    "cave-eblana-b2f-weapons-armors--direct": {
+                        index: "0",
+                        instruction: "Walk out of the room",
+                        location: "Cave Eblana B2F Weapons/Armors",
+                    },
+                },
+                1: {
+                    "cave-eblana-b2f-weapons-armors--warp": {
+                        index: "0",
+                        instruction: "Cast Warp to leave the room",
+                        location: "Cave Eblana B2F Weapons/Armors",
                     },
                 },
             },
