@@ -8441,6 +8441,73 @@ com.aexoden.ff4 = function()
                 instruction: "Don't take any extra steps in the save room. Determine your seed based on the next room:",
             },
         },
+        "no64-excalbur-marathon": {
+            14: {
+                14: "One encounter with CaveToad x3 on step 39.",
+                15: "No encounters.",
+                instruction: "Take <strong>54</strong> extra steps in the save room. Determine your seed based on the next room:",
+            },
+            22: {
+                22: "Two encounters on steps 9 and 36.",
+                23: "Three encounters on steps 9, 24 and 36.",
+                instruction: "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+            },
+            30: {
+                30: "One encounter with CaveToad x3 on step 38.",
+                31: "One encounter with CaveToad x3 on step 5.",
+                instruction: "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+            },
+            41: {
+                41: "No encounters.",
+                42: "One encounter with Pike x3 on step 21.",
+                instruction: "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+            },
+            47: {
+                47: "One encounter on step 21.",
+                48: "Two encounters on steps 21 and 31.",
+                instruction: "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+            },
+            63: {
+                63: "Two encounters on steps 2 and 15.",
+                64: "Two encounters on steps 15 and 32.",
+                instruction: "Take <strong>72</strong> extra steps in the save room. Determine your seed based on the room where you get <i>Darkness</i> (sword):",
+            },
+            68: {
+                68: "No encounters.",
+                69: "One encounter with CaveToad x3 on step 18.",
+                instruction: "Take <strong>16</strong> extra steps in the save room. Determine your seed based on the room after the next room (B3F):",
+            },
+            78: {
+                78: "One encounter with Pike x3 on step 32.",
+                79: "One encounter with Pike x3 on step 14.",
+                instruction: "Don't take any extra steps in the save room. Determine your seed based on the next room:",
+            },
+            132: {
+                132: "First encounter is Aligator x1, Pike x2.",
+                133: "First encounter is TinyMage x2, WaterHag x4.",
+                instruction: "Take <strong>26</strong> extra steps in the save room. Determine your seed based on the room where you get <i>Darkness</i> (sword):",
+            },
+            143: {
+                143: "One encounter with Pike x3 on step 23.",
+                144: "One encounter with CaveToad x3 on step 23.",
+                instruction: "Take <strong>2</strong> extra steps in the save room. Determine your seed based on the next room:",
+            },
+            175: {
+                175: "One encounter with Pike x2, EvilShel x2 on step 21.",
+                176: "No encounters.",
+                instruction: "Take <strong>60</strong> extra steps in the save room. Determine your seed based on the next room:",
+            },
+            183: {
+                183: "Three encounters on steps 22, 38 and 43.",
+                184: "Two encounters on steps 22 and 38.",
+                instruction: "Take <strong>60</strong> extra steps in the save room. Determine your seed based on the room where you get <i>Darkness<?i> (sword):",
+            },
+            247: {
+                247: "No encounters. Take <strong>18</strong> extra steps before leaving the room.",
+                248: "One encounter with Jelly x4 on step 27. Don't take any extra steps before leaving the room.",
+                instruction: "Take <strong>10</strong> extra steps in the save room. Determine your seed based on the room after the next room (B3F):",
+            },
+        },
         "no64-rosa": {
             14: {
                 14: "One encounter with CaveToad x3 on step 39.",
@@ -8530,7 +8597,7 @@ com.aexoden.ff4 = function()
                 instruction: "Don't take any extra steps in the save room. Determine your seed based on the next room:",
             },
             47: {
-                47: "One encounteron step 21.",
+                47: "One encounter on step 21.",
                 48: "Two encounters on steps 21 and 31.",
                 instruction: "Don't take any extra steps in the save room. Determine your seed based on the next room:",
             },
@@ -8790,6 +8857,7 @@ com.aexoden.ff4 = function()
 
     var routeNames = {
         "no64-excalbur": "Any% No64 (Edge+Excalbur)",
+        "no64-excalbur-marathon": "Any% No64 (Edge+Excalbur) (Marathon)",
         "no64-rosa": "Any% No64 (Rosa)",
         "no64-rosa-marathon": "Any% No64 (Rosa) (Marathon)",
         "no64-rosa-marathon-recovery-fusoya": "Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)",
@@ -8801,6 +8869,7 @@ com.aexoden.ff4 = function()
 
     var routeMapSets = {
         "no64-excalbur": "mist",
+        "no64-excalbur-marathon": "mist",
         "no64-rosa": "mist",
         "no64-rosa-marathon": "mist",
         "no64-rosa-marathon-recovery-fusoya": "fusoya",
