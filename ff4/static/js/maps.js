@@ -10732,7 +10732,7 @@ com.aexoden.ff4.maps = function()
         }
     };
 
-    var onMapMouseLeave = function(_) {
+    var onMapMouseLeave = function(_e) {
         document.getElementById("information").innerHTML = "";
     };
 
@@ -10749,8 +10749,8 @@ com.aexoden.ff4.maps = function()
 
             drawMap();
         } else {
-            var tileX = Math.floor(((e.offsetX * currentSize / 512) + currentStartX) / 16) % (getMapSize() / 16);
-            var tileY = Math.floor(((e.offsetY * currentSize / 512) + currentStartY) / 16) % (getMapSize() / 16);
+            var tileX = Math.floor((e.offsetX * currentSize / 512 + currentStartX) / 16) % (getMapSize() / 16);
+            var tileY = Math.floor((e.offsetY * currentSize / 512 + currentStartY) / 16) % (getMapSize() / 16);
 
             var div = document.getElementById("information");
 
@@ -10774,7 +10774,7 @@ com.aexoden.ff4.maps = function()
 
                 let formations = getEncounterFormations(fullMapIndex);
 
-                for (i = 0; i < 8; i++) {
+                for (let i = 0; i < 8; i++) {
                     var rate = FORMATION_RATES[i];
                     contents += "<dt>" + rate + "/256 (" + (100 * rate / 256).toFixed(1) + "%)</dt><dd>" + getFormationText(formations[i]) + "</dd>";
                 }
@@ -10842,8 +10842,8 @@ com.aexoden.ff4.maps = function()
     var onMapMouseUp = function(e) {
         if (dragStartX !== null) {
             if (Math.sqrt(Math.pow(e.offsetX - dragStartX, 2) + Math.pow(e.offsetY - dragStartY, 2)) < 5) {
-                var tileX = Math.floor(((e.offsetX * currentSize / 512) + currentStartX) / 16);
-                var tileY = Math.floor(((e.offsetY * currentSize / 512) + currentStartY) / 16);
+                var tileX = Math.floor((e.offsetX * currentSize / 512 + currentStartX) / 16);
+                var tileY = Math.floor((e.offsetY * currentSize / 512 + currentStartY) / 16);
 
                 var div = document.getElementById("information");
 
@@ -10904,9 +10904,9 @@ com.aexoden.ff4.maps = function()
             factor = Math.max(1 / ZOOM_FACTOR, 512 / currentSize);
         }
 
-        if ((factor > 1 && currentSize < getMapSize()) || (factor < 1 && currentSize > 512)) {
-            var offsetX = (e.offsetX / 512) * currentSize + currentStartX;
-            var offsetY = (e.offsetY / 512) * currentSize + currentStartY;
+        if (factor > 1 && currentSize < getMapSize() || factor < 1 && currentSize > 512) {
+            var offsetX = e.offsetX / 512 * currentSize + currentStartX;
+            var offsetY = e.offsetY / 512 * currentSize + currentStartY;
 
             var oldCurrentSize = currentSize;
             currentSize = Math.round(Math.max(512, Math.min(getMapSize(), currentSize * factor)));
@@ -10935,43 +10935,43 @@ com.aexoden.ff4.maps = function()
         document.getElementById("button-base-" + target).classList.add("active");
     };
 
-    var onButtonGoOverworld = function(e) {
+    var onButtonGoOverworld = function(_e) {
         setGoButtons("overworld");
         mapStack = [];
         updateMap(MAP_OVERWORLD);
     };
 
-    var onButtonGoZot = function(e) {
+    var onButtonGoZot = function(_e) {
         setGoButtons("zot");
         mapStack = [];
         updateMap(0x3098);
     };
 
-    var onButtonGoGiant = function(e) {
+    var onButtonGoGiant = function(_e) {
         setGoButtons("giant");
         mapStack = [];
         updateMap(0x30B5);
     };
 
-    var onButtonGoUnderworld = function(e) {
+    var onButtonGoUnderworld = function(_e) {
         setGoButtons("underworld");
         mapStack = [];
         updateMap(MAP_UNDERWORLD);
     };
 
-    var onButtonGoMoon = function(e) {
+    var onButtonGoMoon = function(_e) {
         setGoButtons("moon");
         mapStack = [];
         updateMap(MAP_MOON);
     };
 
-    var onButtonBack = function(e) {
+    var onButtonBack = function(_e) {
         if (mapStack.length > 0) {
             updateMap(mapStack.pop());
         }
     };
 
-    var onButtonShowOverlay = function(e) {
+    var onButtonShowOverlay = function(_e) {
         drawOverlay = !drawOverlay;
         updateMap(currentMapIndex, false);
     };
@@ -11049,22 +11049,22 @@ com.aexoden.ff4.maps = function()
         var button = document.getElementById("button-base-overworld");
         button.addEventListener("click", onButtonGoOverworld);
 
-        var button = document.getElementById("button-base-zot");
+        button = document.getElementById("button-base-zot");
         button.addEventListener("click", onButtonGoZot);
 
-        var button = document.getElementById("button-base-giant");
+        button = document.getElementById("button-base-giant");
         button.addEventListener("click", onButtonGoGiant);
 
-        var button = document.getElementById("button-base-underworld");
+        button = document.getElementById("button-base-underworld");
         button.addEventListener("click", onButtonGoUnderworld);
 
-        var button = document.getElementById("button-base-moon");
+        button = document.getElementById("button-base-moon");
         button.addEventListener("click", onButtonGoMoon);
 
-        var button = document.getElementById("button-back");
+        button = document.getElementById("button-back");
         button.addEventListener("click", onButtonBack);
 
-        var button = document.getElementById("button-show-overlay");
+        button = document.getElementById("button-show-overlay");
         button.addEventListener("click", onButtonShowOverlay);
 
         updateMap(MAP_OVERWORLD);
