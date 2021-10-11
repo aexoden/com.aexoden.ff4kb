@@ -98,6 +98,16 @@ ROUTES = {
         'seed_finder': True,
         'status': 'Optimal'
     },
+    'no64-excalbur-marathon': {
+        'name': 'Any% No64 (Edge+Excalbur) (Marathon)',
+        'description': 'This route runs from the beginning of the game until Zeromus is defeated. Use of the 64-door glitch is banned. The step route begins after the Mist Clip. This particular version of the route relies on Edge as the primary damage dealer at the end of the game. This variant adds extra save points for use during marathons. In addition, the minimum number of steps in the Hummingway has been increased from 16 to 32 to allow for catching the Namingway in the cave. Finally, this route matches the no64-rosa-marathon route until Castle Baron after escaping the underground. This allows you to defer which route to use (for bid war purposes, perhaps) until that point in the game.',
+        'group': 'standard',
+        'enabled': True,
+        'twin_safe': True,
+        'complete': True,
+        'seed_finder': True,
+        'status': 'Optimal'
+    },
     'no64-rosa-marathon-recovery-fusoya': {
         'name': 'Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)',
         'description': 'This variant of no64-rosa-marathon runs from immediately upon landing on the moon until Zeromus is defeated, and is primarily intended as a step route (and grind) recovery method.',
