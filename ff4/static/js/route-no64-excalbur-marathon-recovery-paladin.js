@@ -177,7 +177,7 @@ com.aexoden.ff4.route_data = function()
         { name: "overworld-airship--castle-baron-to-cave-eblana-h" },
         { name: "overworld-airship--castle-baron-to-cave-eblana-i" },
         { name: "overworld-airship--castle-baron-to-cave-eblana-j" },
-        { name: "overworld-eblan" },
+        { name: "overworld-eblan--castle-baron-to-cave-eblana" },
         { name: "cave-eblana-b1f" },
         { name: "cave-eblana-b2f--before-shop" },
         { name: "cave-eblana-b2f-weapons-armors--direct", condition: { variable: "C30C800", values: [0] } },
@@ -211,8 +211,18 @@ com.aexoden.ff4.route_data = function()
         { name: "castle-of-dwarves-left-tower-2f" },
         { name: "castle-of-dwarves-b1f--2f-to-infirmary" },
         { name: "castle-of-dwarves-infirmary" },
-        { name: "underworld-castle-of-dwarves--castle-of-dwarves-to-sealed-cave" },
-        { name: "underworld-sealed-cave--castle-of-dwarves-to-sealed-cave" },
+        { name: "underworld-castle-of-dwarves--castle-of-dwarves-to-land-of-monsters" },
+        { name: "underworld-airship--castle-of-dwarves-to-land-of-monsters" },
+        { name: "underworld-sealed-cave--castle-of-dwarves-to-land-of-monsters" },
+        { name: "land-of-monsters-b1f" },
+        { name: "land-of-monsters-b2f" },
+        { name: "land-of-monsters-b3f--direct", condition: { variable: "C313800", values: [0] } },
+        { name: "land-of-monsters-b3f--partial-secret", condition: { variable: "C313800", values: [1] } },
+        { name: "land-of-monsters-b3f--full-secret", condition: { variable: "C313800", values: [2] } },
+        { name: "land-of-monsters-b4f--initial" },
+        { name: "town-of-monsters" },
+        { name: "land-of-monsters-b4f--rat-tail" },
+        { name: "underworld-sealed-cave--land-of-monsters-to-sealed-cave" },
         { name: "sealed-cave" },
         { name: "underworld-sealed-cave--sealed-cave-to-castle-of-dwarves" },
         { name: "underworld-castle-of-dwarves--sealed-cave-to-castle-of-dwarves" },
@@ -222,11 +232,39 @@ com.aexoden.ff4.route_data = function()
         { name: "underworld-castle-of-dwarves--castle-of-dwarves-to-overworld" },
         { name: "underworld-airship--castle-of-dwarves-to-overworld-a" },
         { name: "underworld-airship--castle-of-dwarves-to-overworld-b" },
-        { name: "overworld-airship--underworld-to-mysidia" },
-        { name: "overworld-mysidia--before-big-whale" },
+        { name: "overworld-airship--underworld-to-grotto-adamant-a" },
+        { name: "overworld-airship--underworld-to-grotto-adamant-b" },
+        { name: "overworld-eblan--underworld-to-grotto-adamant" },
+        { name: "overworld-airship--underworld-to-grotto-adamant-c" },
+        { name: "overworld-airship--underworld-to-grotto-adamant-d" },
+        { name: "overworld-airship--underworld-to-grotto-adamant-e" },
+        { name: "overworld-airship--underworld-to-grotto-adamant-f" },
+        { name: "overworld-silvera--before-grotto-adamant" },
+        { name: "grotto-adamant--direct", condition: { variable: "C30A000", values: [0] } },
+        { name: "grotto-adamant--warp", condition: { variable: "C30A000", values: [1] } },
+        { name: "overworld-silvera--after-grotto-adamant" },
+        { name: "overworld-airship--grotto-adamant-to-mysidia-a" },
+        { name: "overworld-airship--grotto-adamant-to-mysidia-b" },
+        { name: "overworld-airship--grotto-adamant-to-mysidia-c" },
+        { name: "overworld-airship--grotto-adamant-to-mysidia-d" },
         { name: "mysidia--entrance-to-big-whale" },
-        { name: "overworld-mysidia--after-big-whale--walk", condition: { variable: "C000500", values: [0] } },
-        { name: "overworld-mysidia--after-big-whale--fly", condition: { variable: "C000500", values: [1] } },
+        { name: "overworld-airship--mysidia-to-underworld-a" },
+        { name: "overworld-airship--mysidia-to-underworld-b" },
+        { name: "underworld-airship--overworld-to-kokkol-a" },
+        { name: "underworld-airship--overworld-to-kokkol-b" },
+        { name: "underworld-airship--overworld-to-kokkol-c" },
+        { name: "underworld-kokkol--before-kokkol" },
+        { name: "kokkol-the-smiths--entrance-to-1f" },
+        { name: "kokkol-the-smiths-1f--entrance-to-2f" },
+        { name: "kokkol-the-smiths-2f" },
+        { name: "kokkol-the-smiths-1f--2f-to-exit" },
+        { name: "kokkol-the-smiths--1f-to-exit" },
+        { name: "underworld-kokkol--after-kokkol" },
+        { name: "underworld-airship--kokkol-to-overworld-a" },
+        { name: "underworld-airship--kokkol-to-overworld-b" },
+        { name: "underworld-airship--kokkol-to-overworld-c" },
+        { name: "overworld-airship--underworld-to-big-whale" },
+        { name: "overworld-mysidia--underworld-to-big-whale" },
         { name: "big-whale--entrance-to-crystal" },
         { name: "lunar-overworld-big-whale--initial-to-lunar-path-landing" },
         { name: "big-whale--console-to-exit" },
@@ -279,17 +317,14 @@ com.aexoden.ff4.route_data = function()
         { name: "lunar-subterrane-b5--lower--before-pink-puff-room", condition: { variable: "C316B00", values: [1] } },
         { name: "lunar-subterrane-b5-pink-puff-room", condition: { variable: "C316B00", values: [1] } },
         { name: "lunar-subterrane-b5--lower--after-pink-puff-room", condition: { variable: "C316B00", values: [1] } },
-        { name: "lunar-subterrane-b6--direct", condition: { variable: "C316C00", values: [1, 2] } },
-        { name: "lunar-subterrane-b6--ninja", condition: { variable: "C316C00", values: [0] } },
+        { name: "lunar-subterrane-b6" },
         { name: "lunar-subterrane-b6-passage" },
         { name: "lunar-subterrane-b7--before-save-room" },
         { name: "lunar-subterrane-b7-save-room" },
         { name: "lunar-subterrane-b7--after-save-room" },
-        { name: "lunar-core-b1--direct", condition: { variable: "C316C00", values: [0, 2] } },
-        { name: "lunar-core-b1--ninja", condition: { variable: "C316C00", values: [1] } },
+        { name: "lunar-core-b1" },
         { name: "lunar-core-b2" },
-        { name: "lunar-core-b3--direct", condition: { variable: "C316C00", values: [0, 1] } },
-        { name: "lunar-core-b3--ninja", condition: { variable: "C316C00", values: [2] } },
+        { name: "lunar-core-b3" },
         { name: "lunar-core-b4" },
         { name: "lunar-core-b5" },
     ];
@@ -1761,6 +1796,35 @@ com.aexoden.ff4.route_data = function()
                 ],
             },
         },
+        "grotto-adamant--direct": {
+            flags: PathFlags.STEPS,
+            map: "30A0-0",
+            segments: {
+                "base-0": [
+                    [7, 20, SegmentFlags.START],
+                    [7, 13, SegmentFlags.RETURN],
+                    [7, 21, SegmentFlags.END],
+                ],
+                "extra-2-0": [
+                    [7, 19, SegmentFlags.NONE],
+                    [8, 19, SegmentFlags.RETURN | SegmentFlags.ANNOTATE],
+                ],
+            },
+        },
+        "grotto-adamant--warp": {
+            flags: PathFlags.STEPS,
+            map: "30A0-0",
+            segments: {
+                "base-0": [
+                    [7, 20, SegmentFlags.START],
+                    [7, 13, SegmentFlags.END],
+                ],
+                "extra-2-0": [
+                    [7, 19, SegmentFlags.NONE],
+                    [8, 19, SegmentFlags.RETURN | SegmentFlags.ANNOTATE],
+                ],
+            },
+        },
         "hummingway-cave": {
             flags: PathFlags.STEPS | PathFlags.HUMMINGWAY_32,
             map: "3165-0",
@@ -1776,48 +1840,232 @@ com.aexoden.ff4.route_data = function()
                 ],
             },
         },
-        "lunar-core-b1--direct": {
-            description: "Lunar Core B1",
-            flags: PathFlags.STEPS,
-            map: "316E-0",
+        "kokkol-the-smiths--1f-to-exit": {
+            flags: PathFlags.NONE,
+            map: "3100-0",
             segments: {
                 "base-0": [
-                    [17, 8, SegmentFlags.START],
-                    [17, 9, SegmentFlags.NONE],
-                    [24, 9, SegmentFlags.NONE],
-                    [24, 12, SegmentFlags.NONE],
-                    [26, 12, SegmentFlags.NONE],
-                    [26, 16, SegmentFlags.NONE],
-                    [24, 16, SegmentFlags.NONE],
-                    [24, 15, SegmentFlags.NONE],
-                    [23, 15, SegmentFlags.NONE],
-                    [23, 14, SegmentFlags.NONE],
-                    [21, 14, SegmentFlags.NONE],
-                    [21, 13, SegmentFlags.NONE],
-                    [13, 13, SegmentFlags.NONE],
-                    [13, 15, SegmentFlags.NONE],
-                    [9, 15, SegmentFlags.NONE],
-                    [9, 20, SegmentFlags.NONE],
-                    [12, 20, SegmentFlags.NONE],
-                    [12, 19, SegmentFlags.NONE],
-                    [14, 19, SegmentFlags.NONE],
-                    [14, 20, SegmentFlags.NONE],
-                    [15, 20, SegmentFlags.NONE],
-                    [15, 21, SegmentFlags.NONE],
-                    [19, 21, SegmentFlags.NONE],
-                    [19, 20, SegmentFlags.NONE],
-                    [20, 20, SegmentFlags.NONE],
-                    [20, 16, SegmentFlags.NONE],
-                    [17, 16, SegmentFlags.NONE],
-                    [17, 19, SegmentFlags.END],
-                ],
-                "extra-2-0": [
-                    [17, 21, SegmentFlags.NONE],
-                    [17, 22, SegmentFlags.RETURN | SegmentFlags.ANNOTATE],
+                    [6, 6, SegmentFlags.START],
+                    [6, 12, SegmentFlags.END],
                 ],
             },
         },
-        "lunar-core-b1--ninja": {
+        "kokkol-the-smiths--entrance-to-1f": {
+            flags: PathFlags.NONE,
+            map: "3100-0",
+            segments: {
+                "base-0": [
+                    [6, 11, SegmentFlags.START],
+                    [6, 6, SegmentFlags.END],
+                ],
+            },
+        },
+        "kokkol-the-smiths-1f--2f-to-exit": {
+            flags: PathFlags.NONE,
+            map: "3102-1",
+            segments: {
+                "base-0": [
+                    [14, 5, SegmentFlags.START],
+                    [14, 10, SegmentFlags.NONE],
+                    [11, 10, SegmentFlags.NONE],
+                    [11, 9, SegmentFlags.NONE],
+                    [7, 9, SegmentFlags.RETURN],
+                    [11, 9, SegmentFlags.NONE],
+                    [11, 14, SegmentFlags.NONE],
+                    [7, 14, SegmentFlags.NONE],
+                    [7, 17, SegmentFlags.END],
+                ],
+            },
+        },
+        "kokkol-the-smiths-1f--entrance-to-2f": {
+            flags: PathFlags.NONE,
+            map: "3102-0",
+            segments: {
+                "base-0": [
+                    [7, 14, SegmentFlags.START],
+                    [11, 14, SegmentFlags.NONE],
+                    [11, 11, SegmentFlags.NONE],
+                    [14, 11, SegmentFlags.NONE],
+                    [14, 5, SegmentFlags.END],
+                ],
+            },
+        },
+        "kokkol-the-smiths-2f": {
+            flags: PathFlags.NONE,
+            map: "3103-0",
+            segments: {
+                "base-0": [
+                    [9, 4, SegmentFlags.START],
+                    [2, 4, SegmentFlags.NONE],
+                    [2, 5, SegmentFlags.RETURN],
+                    [2, 4, SegmentFlags.NONE],
+                    [9, 4, SegmentFlags.END],
+                ],
+            },
+        },
+        "land-of-monsters-b1f": {
+            flags: PathFlags.STEPS,
+            map: "3136-0",
+            segments: {
+                "base-0": [
+                    [17, 10, SegmentFlags.START],
+                    [17, 22, SegmentFlags.NONE],
+                    [11, 22, SegmentFlags.NONE],
+                    [11, 21, SegmentFlags.NONE],
+                    [10, 21, SegmentFlags.NONE],
+                    [10, 14, SegmentFlags.NONE],
+                    [3, 14, SegmentFlags.NONE],
+                    [3, 17, SegmentFlags.END],
+                ],
+                "extra-1-0": [
+                    [17, 12, SegmentFlags.NONE],
+                    [17, 11, SegmentFlags.RETURN | SegmentFlags.ANNOTATE],
+                ],
+                "extra-2-0": [
+                    [3, 15, SegmentFlags.NONE],
+                    [4, 15, SegmentFlags.RETURN | SegmentFlags.ANNOTATE],
+                ],
+            },
+        },
+        "land-of-monsters-b2f": {
+            flags: PathFlags.STEPS,
+            map: "3137-0",
+            segments: {
+                "base-0": [
+                    [4, 19, SegmentFlags.START],
+                    [4, 23, SegmentFlags.NONE],
+                    [8, 23, SegmentFlags.NONE],
+                    [8, 22, SegmentFlags.NONE],
+                    [9, 22, SegmentFlags.NONE],
+                    [9, 20, SegmentFlags.NONE],
+                    [13, 20, SegmentFlags.NONE],
+                    [13, 19, SegmentFlags.NONE],
+                    [14, 19, SegmentFlags.NONE],
+                    [14, 11, SegmentFlags.NONE],
+                    [20, 11, SegmentFlags.NONE],
+                    [20, 12, SegmentFlags.NONE],
+                    [24, 12, SegmentFlags.NONE],
+                    [24, 13, SegmentFlags.NONE],
+                    [27, 13, SegmentFlags.NONE],
+                    [27, 14, SegmentFlags.NONE],
+                    [28, 14, SegmentFlags.NONE],
+                    [28, 16, SegmentFlags.END],
+                ],
+                "extra-2-0": [
+                    [18, 11, SegmentFlags.NONE],
+                    [18, 10, SegmentFlags.RETURN | SegmentFlags.ANNOTATE],
+                ],
+            },
+        },
+        "land-of-monsters-b3f--direct": {
+            flags: PathFlags.STEPS,
+            map: "3138-0",
+            segments: {
+                "base-0": [
+                    [11, 2, SegmentFlags.START],
+                    [11, 6, SegmentFlags.NONE],
+                    [4, 6, SegmentFlags.NONE],
+                    [4, 14, SegmentFlags.NONE],
+                    [11, 14, SegmentFlags.NONE],
+                    [11, 22, SegmentFlags.NONE],
+                    [18, 22, SegmentFlags.NONE],
+                    [18, 14, SegmentFlags.END],
+                ],
+                "extra-2-0": [
+                    [18, 15, SegmentFlags.NONE],
+                    [19, 15, SegmentFlags.RETURN | SegmentFlags.ANNOTATE],
+                ],
+            },
+        },
+        "land-of-monsters-b3f--full-secret": {
+            flags: PathFlags.STEPS,
+            map: "3138-0",
+            segments: {
+                "alternate-0": [
+                    [4, 14, SegmentFlags.NONE],
+                    [0, 14, SegmentFlags.NONE],
+                    [0, 26, SegmentFlags.NONE],
+                    [29, 26, SegmentFlags.NONE],
+                    [29, 14, SegmentFlags.NONE],
+                    [18, 14, SegmentFlags.END],
+                ],
+                "base-0": [
+                    [11, 2, SegmentFlags.START],
+                    [11, 6, SegmentFlags.NONE],
+                    [4, 6, SegmentFlags.NONE],
+                    [4, 14, SegmentFlags.NONE],
+                ],
+                "extra-1-0": [
+                    [27, 14, SegmentFlags.NONE],
+                    [28, 14, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+                ],
+                "extra-2-0": [
+                    [19, 14, SegmentFlags.NONE],
+                    [19, 13, SegmentFlags.RETURN | SegmentFlags.ANNOTATE],
+                ],
+            },
+        },
+        "land-of-monsters-b3f--partial-secret": {
+            flags: PathFlags.STEPS,
+            map: "3138-0",
+            segments: {
+                "alternate-0": [
+                    [4, 14, SegmentFlags.NONE],
+                    [0, 14, SegmentFlags.NONE],
+                    [0, 26, SegmentFlags.NONE],
+                    [29, 26, SegmentFlags.NONE],
+                    [29, 22, SegmentFlags.NONE],
+                    [18, 22, SegmentFlags.NONE],
+                    [18, 14, SegmentFlags.END],
+                ],
+                "base-0": [
+                    [11, 2, SegmentFlags.START],
+                    [11, 6, SegmentFlags.NONE],
+                    [4, 6, SegmentFlags.NONE],
+                    [4, 14, SegmentFlags.NONE],
+                ],
+                "extra-1-0": [
+                    [27, 22, SegmentFlags.NONE],
+                    [28, 22, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
+                ],
+                "extra-2-0": [
+                    [18, 15, SegmentFlags.NONE],
+                    [19, 15, SegmentFlags.RETURN | SegmentFlags.ANNOTATE],
+                ],
+            },
+        },
+        "land-of-monsters-b4f--initial": {
+            flags: PathFlags.NONE,
+            map: "313A-0",
+            segments: {
+                "base-0": [
+                    [12, 14, SegmentFlags.START],
+                    [9, 14, SegmentFlags.NONE],
+                    [9, 11, SegmentFlags.NONE],
+                    [4, 11, SegmentFlags.NONE],
+                    [4, 5, SegmentFlags.NONE],
+                    [6, 5, SegmentFlags.NONE],
+                    [6, 4, SegmentFlags.NONE],
+                    [7, 4, SegmentFlags.NONE],
+                    [7, 3, SegmentFlags.NONE],
+                    [14, 3, SegmentFlags.NONE],
+                    [14, 4, SegmentFlags.END],
+                ],
+            },
+        },
+        "land-of-monsters-b4f--rat-tail": {
+            flags: PathFlags.STEPS,
+            map: "313A-0",
+            segments: {
+                "base-0": [
+                    [14, 4, SegmentFlags.START],
+                    [14, 6, SegmentFlags.NONE],
+                    [20, 6, SegmentFlags.NONE],
+                    [20, 7, SegmentFlags.END],
+                ],
+            },
+        },
+        "lunar-core-b1": {
             description: "Lunar Core B1",
             flags: PathFlags.STEPS,
             map: "316E-0",
@@ -1837,13 +2085,6 @@ com.aexoden.ff4.route_data = function()
                     [21, 13, SegmentFlags.NONE],
                     [13, 13, SegmentFlags.NONE],
                     [13, 15, SegmentFlags.NONE],
-                    [8, 15, SegmentFlags.NONE],
-                    [8, 13, SegmentFlags.NONE],
-                    [7, 13, SegmentFlags.NONE],
-                    [7, 12, SegmentFlags.RETURN],
-                    [7, 13, SegmentFlags.NONE],
-                    [8, 13, SegmentFlags.NONE],
-                    [8, 15, SegmentFlags.NONE],
                     [9, 15, SegmentFlags.NONE],
                     [9, 20, SegmentFlags.NONE],
                     [12, 20, SegmentFlags.NONE],
@@ -1892,7 +2133,7 @@ com.aexoden.ff4.route_data = function()
                 ],
             },
         },
-        "lunar-core-b3--direct": {
+        "lunar-core-b3": {
             description: "Lunar Core B3",
             flags: PathFlags.STEPS,
             map: "3170-0",
@@ -1907,39 +2148,6 @@ com.aexoden.ff4.route_data = function()
                     [19, 11, SegmentFlags.NONE],
                     [19, 12, SegmentFlags.NONE],
                     [22, 12, SegmentFlags.NONE],
-                    [22, 15, SegmentFlags.NONE],
-                    [13, 15, SegmentFlags.NONE],
-                    [13, 18, SegmentFlags.NONE],
-                    [14, 18, SegmentFlags.NONE],
-                    [14, 19, SegmentFlags.NONE],
-                    [16, 19, SegmentFlags.NONE],
-                    [16, 20, SegmentFlags.NONE],
-                    [23, 20, SegmentFlags.NONE],
-                    [23, 24, SegmentFlags.END],
-                ],
-                "extra-2-0": [
-                    [23, 21, SegmentFlags.NONE],
-                    [24, 21, SegmentFlags.RETURN | SegmentFlags.ANNOTATE],
-                ],
-            },
-        },
-        "lunar-core-b3--ninja": {
-            description: "Lunar Core B3",
-            flags: PathFlags.STEPS,
-            map: "3170-0",
-            segments: {
-                "base-0": [
-                    [21, 7, SegmentFlags.START],
-                    [21, 9, SegmentFlags.NONE],
-                    [14, 9, SegmentFlags.NONE],
-                    [14, 12, SegmentFlags.NONE],
-                    [17, 12, SegmentFlags.NONE],
-                    [17, 11, SegmentFlags.NONE],
-                    [19, 11, SegmentFlags.NONE],
-                    [19, 12, SegmentFlags.NONE],
-                    [22, 12, SegmentFlags.NONE],
-                    [22, 15, SegmentFlags.NONE],
-                    [24, 15, SegmentFlags.RETURN],
                     [22, 15, SegmentFlags.NONE],
                     [13, 15, SegmentFlags.NONE],
                     [13, 18, SegmentFlags.NONE],
@@ -2586,6 +2794,10 @@ com.aexoden.ff4.route_data = function()
                 "base-0": [
                     [5, 15, SegmentFlags.START],
                     [5, 5, SegmentFlags.NONE],
+                    [13, 5, SegmentFlags.END],
+                ],
+                "base-1": [
+                    [13, 5, SegmentFlags.NONE],
                     [17, 5, SegmentFlags.NONE],
                     [17, 8, SegmentFlags.NONE],
                     [14, 8, SegmentFlags.NONE],
@@ -2593,11 +2805,15 @@ com.aexoden.ff4.route_data = function()
                     [22, 13, SegmentFlags.NONE],
                     [22, 7, SegmentFlags.END],
                 ],
-                "extra-1-0": [
+                "extra-1-1": [
                     [16, 5, SegmentFlags.NONE],
                     [17, 5, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
                 ],
                 "extra-2-0": [
+                    [12, 5, SegmentFlags.NONE],
+                    [12, 6, SegmentFlags.RETURN | SegmentFlags.ANNOTATE],
+                ],
+                "extra-2-1": [
                     [22, 8, SegmentFlags.NONE],
                     [23, 8, SegmentFlags.RETURN | SegmentFlags.ANNOTATE],
                 ],
@@ -2610,10 +2826,6 @@ com.aexoden.ff4.route_data = function()
                 "base-0": [
                     [9, 15, SegmentFlags.START],
                     [9, 7, SegmentFlags.NONE],
-                    [6, 7, SegmentFlags.NONE],
-                    [3, 7, SegmentFlags.NONE],
-                    [3, 13, SegmentFlags.RETURN],
-                    [3, 7, SegmentFlags.NONE],
                     [6, 7, SegmentFlags.NONE],
                     [6, 3, SegmentFlags.END],
                 ],
@@ -2637,7 +2849,7 @@ com.aexoden.ff4.route_data = function()
                 ],
             },
         },
-        "lunar-subterrane-b6--direct": {
+        "lunar-subterrane-b6": {
             description: "Lunar Subterrane B6",
             flags: PathFlags.STEPS,
             map: "316C-0",
@@ -2645,38 +2857,6 @@ com.aexoden.ff4.route_data = function()
                 "base-0": [
                     [20, 1, SegmentFlags.START],
                     [20, 10, SegmentFlags.NONE],
-                    [21, 10, SegmentFlags.NONE],
-                    [21, 14, SegmentFlags.NONE],
-                    [23, 14, SegmentFlags.NONE],
-                    [23, 12, SegmentFlags.NONE],
-                    [27, 12, SegmentFlags.NONE],
-                    [27, 20, SegmentFlags.NONE],
-                    [26, 20, SegmentFlags.NONE],
-                    [26, 21, SegmentFlags.NONE],
-                    [25, 21, SegmentFlags.NONE],
-                    [25, 22, SegmentFlags.NONE],
-                    [22, 22, SegmentFlags.NONE],
-                    [22, 21, SegmentFlags.END],
-                ],
-                "extra-2-0": [
-                    [22, 22, SegmentFlags.NONE],
-                    [21, 22, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
-                ],
-            },
-        },
-        "lunar-subterrane-b6--ninja": {
-            description: "Lunar Subterrane B6",
-            flags: PathFlags.STEPS,
-            map: "316C-0",
-            segments: {
-                "base-0": [
-                    [20, 1, SegmentFlags.START],
-                    [20, 8, SegmentFlags.NONE],
-                    [25, 8, SegmentFlags.NONE],
-                    [25, 6, SegmentFlags.RETURN],
-                    [25, 8, SegmentFlags.NONE],
-                    [21, 8, SegmentFlags.NONE],
-                    [21, 10, SegmentFlags.NONE],
                     [21, 10, SegmentFlags.NONE],
                     [21, 14, SegmentFlags.NONE],
                     [23, 14, SegmentFlags.NONE],
@@ -3227,7 +3407,85 @@ com.aexoden.ff4.route_data = function()
                 ],
             },
         },
-        "overworld-airship--underworld-to-mysidia": {
+        "overworld-airship--grotto-adamant-to-mysidia-a": {
+            flags: PathFlags.STEPS,
+            map: "0000-0",
+            mapRange: [204, 153, 32, 32],
+            segments: {
+                "base-0": [
+                    [222, 152, SegmentFlags.VEHICLE],
+                    [222, 153, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [222, 184, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [222, 154, SegmentFlags.VEHICLE],
+                ],
+            },
+        },
+        "overworld-airship--grotto-adamant-to-mysidia-b": {
+            flags: PathFlags.STEPS,
+            map: "0000-0",
+            mapRange: [204, 184, 32, 32],
+            segments: {
+                "base-0": [
+                    [222, 183, SegmentFlags.VEHICLE],
+                    [222, 184, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [222, 199, SegmentFlags.VEHICLE],
+                    [204, 199, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [203, 199, SegmentFlags.VEHICLE],
+                ],
+            },
+        },
+        "overworld-airship--grotto-adamant-to-mysidia-c": {
+            flags: PathFlags.STEPS,
+            map: "0000-0",
+            mapRange: [173, 184, 32, 32],
+            segments: {
+                "base-0": [
+                    [205, 199, SegmentFlags.VEHICLE],
+                    [204, 199, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [173, 199, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [172, 199, SegmentFlags.VEHICLE],
+                ],
+            },
+        },
+        "overworld-airship--grotto-adamant-to-mysidia-d": {
+            flags: PathFlags.STEPS,
+            map: "0000-0",
+            mapRange: [142, 184, 32, 32],
+            segments: {
+                "base-0": [
+                    [174, 199, SegmentFlags.VEHICLE],
+                    [173, 199, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [153, 199, SegmentFlags.RETURN | SegmentFlags.VEHICLE],
+                    [154, 199, SegmentFlags.END],
+                ],
+            },
+        },
+        "overworld-airship--mysidia-to-underworld-a": {
+            flags: PathFlags.STEPS,
+            map: "0000-0",
+            mapRange: [125, 189, 32, 32],
+            segments: {
+                "base-0": [
+                    [153, 199, SegmentFlags.START | SegmentFlags.VEHICLE],
+                    [153, 211, SegmentFlags.VEHICLE],
+                    [125, 211, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [124, 211, SegmentFlags.VEHICLE],
+                ],
+            },
+        },
+        "overworld-airship--mysidia-to-underworld-b": {
+            flags: PathFlags.STEPS,
+            map: "0000-0",
+            mapRange: [94, 189, 32, 32],
+            segments: {
+                "base-0": [
+                    [126, 211, SegmentFlags.VEHICLE],
+                    [125, 211, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [107, 211, SegmentFlags.END | SegmentFlags.VEHICLE],
+                ],
+            },
+        },
+        "overworld-airship--underworld-to-big-whale": {
             flags: PathFlags.STEPS,
             map: "0000-0",
             mapRange: [97, 189, 32, 32],
@@ -3236,6 +3494,84 @@ com.aexoden.ff4.route_data = function()
                     [106, 212, SegmentFlags.START | SegmentFlags.VEHICLE],
                     [128, 212, SegmentFlags.END | SegmentFlags.VEHICLE],
                     [129, 212, SegmentFlags.VEHICLE],
+                ],
+            },
+        },
+        "overworld-airship--underworld-to-grotto-adamant-a": {
+            flags: PathFlags.STEPS,
+            map: "0000-0",
+            mapRange: [78, 196, 32, 32],
+            segments: {
+                "base-0": [
+                    [106, 212, SegmentFlags.START | SegmentFlags.VEHICLE],
+                    [78, 212, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [77, 212, SegmentFlags.VEHICLE],
+                ],
+            },
+        },
+        "overworld-airship--underworld-to-grotto-adamant-b": {
+            flags: PathFlags.STEPS,
+            map: "0000-0",
+            mapRange: [47, 196, 32, 32],
+            segments: {
+                "base-0": [
+                    [79, 212, SegmentFlags.VEHICLE],
+                    [78, 212, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [47, 212, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [46, 212, SegmentFlags.VEHICLE],
+                ],
+            },
+        },
+        "overworld-airship--underworld-to-grotto-adamant-c": {
+            flags: PathFlags.STEPS,
+            map: "0000-0",
+            mapRange: [241, 216, 32, 32],
+            segments: {
+                "base-0": [
+                    [273, 232, SegmentFlags.VEHICLE],
+                    [272, 232, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [241, 232, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [240, 232, SegmentFlags.VEHICLE],
+                ],
+            },
+        },
+        "overworld-airship--underworld-to-grotto-adamant-d": {
+            flags: PathFlags.STEPS,
+            map: "0000-0",
+            mapRange: [210, 201, 32, 32],
+            segments: {
+                "base-0": [
+                    [242, 232, SegmentFlags.VEHICLE],
+                    [241, 232, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [221, 232, SegmentFlags.VEHICLE],
+                    [221, 201, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [221, 200, SegmentFlags.VEHICLE],
+                ],
+            },
+        },
+        "overworld-airship--underworld-to-grotto-adamant-e": {
+            flags: PathFlags.STEPS,
+            map: "0000-0",
+            mapRange: [205, 170, 32, 32],
+            segments: {
+                "base-0": [
+                    [221, 202, SegmentFlags.VEHICLE],
+                    [221, 201, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [221, 170, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [221, 169, SegmentFlags.VEHICLE],
+                ],
+            },
+        },
+        "overworld-airship--underworld-to-grotto-adamant-f": {
+            flags: PathFlags.STEPS,
+            map: "0000-0",
+            mapRange: [205, 139, 32, 32],
+            segments: {
+                "base-0": [
+                    [221, 171, SegmentFlags.VEHICLE],
+                    [221, 170, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [221, 140, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [222, 140, SegmentFlags.END | SegmentFlags.VEHICLE],
                 ],
             },
         },
@@ -3268,7 +3604,7 @@ com.aexoden.ff4.route_data = function()
                 ],
             },
         },
-        "overworld-eblan": {
+        "overworld-eblan--castle-baron-to-cave-eblana": {
             flags: PathFlags.STEPS,
             map: "0000-0",
             mapRange: [14, 219, 32, 32],
@@ -3286,6 +3622,28 @@ com.aexoden.ff4.route_data = function()
                 "extra-2-0": [
                     [35, 237, SegmentFlags.NONE],
                     [36, 237, SegmentFlags.RETURN | SegmentFlags.ANNOTATE],
+                ],
+            },
+        },
+        "overworld-eblan--underworld-to-grotto-adamant": {
+            flags: PathFlags.STEPS,
+            map: "0000-0",
+            mapRange: [16, 208, 32, 32],
+            segments: {
+                "base-0": [
+                    [48, 212, SegmentFlags.VEHICLE],
+                    [47, 212, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [36, 212, SegmentFlags.VEHICLE],
+                    [36, 237, SegmentFlags.VEHICLE],
+                    [35, 237, SegmentFlags.START],
+                    [24, 237, SegmentFlags.START | SegmentFlags.VEHICLE],
+                    [24, 232, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [16, 232, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [15, 232, SegmentFlags.VEHICLE],
+                ],
+                "extra-2-0": [
+                    [35, 237, SegmentFlags.NONE],
+                    [35, 236, SegmentFlags.RETURN | SegmentFlags.ANNOTATE],
                 ],
             },
         },
@@ -3319,51 +3677,6 @@ com.aexoden.ff4.route_data = function()
                 ],
             },
         },
-        "overworld-mysidia--after-big-whale--fly": {
-            flags: PathFlags.STEPS,
-            map: "0000-0",
-            mapRange: [128, 189, 32, 32],
-            segments: {
-                "base-0": [
-                    [153, 199, SegmentFlags.START],
-                    [151, 199, SegmentFlags.VEHICLE],
-                    [150, 199, SegmentFlags.START | SegmentFlags.END],
-                ],
-                "extra-2-0": [
-                    [153, 199, SegmentFlags.NONE],
-                    [153, 198, SegmentFlags.RETURN | SegmentFlags.ANNOTATE],
-                ],
-            },
-        },
-        "overworld-mysidia--after-big-whale--walk": {
-            flags: PathFlags.STEPS,
-            map: "0000-0",
-            mapRange: [128, 189, 32, 32],
-            segments: {
-                "base-0": [
-                    [153, 199, SegmentFlags.START],
-                    [150, 199, SegmentFlags.END],
-                ],
-                "extra-2-0": [
-                    [153, 199, SegmentFlags.NONE],
-                    [153, 198, SegmentFlags.RETURN | SegmentFlags.ANNOTATE],
-                ],
-            },
-        },
-        "overworld-mysidia--before-big-whale": {
-            flags: PathFlags.STEPS,
-            map: "0000-0",
-            mapRange: [128, 189, 32, 32],
-            segments: {
-                "base-0": [
-                    [127, 212, SegmentFlags.VEHICLE],
-                    [128, 212, SegmentFlags.END | SegmentFlags.VEHICLE],
-                    [153, 212, SegmentFlags.VEHICLE],
-                    [153, 199, SegmentFlags.VEHICLE],
-                    [154, 199, SegmentFlags.START | SegmentFlags.END],
-                ],
-            },
-        },
         "overworld-mysidia--chocobos-forest-to-mysidia": {
             flags: PathFlags.STEPS,
             map: "0000-0",
@@ -3388,6 +3701,62 @@ com.aexoden.ff4.route_data = function()
                 "extra-2-0": [
                     [156, 199, SegmentFlags.NONE],
                     [156, 198, SegmentFlags.RETURN | SegmentFlags.ANNOTATE],
+                ],
+            },
+        },
+        "overworld-mysidia--underworld-to-big-whale": {
+            flags: PathFlags.STEPS,
+            map: "0000-0",
+            mapRange: [128, 189, 32, 32],
+            segments: {
+                "base-0": [
+                    [127, 212, SegmentFlags.VEHICLE],
+                    [128, 212, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [149, 212, SegmentFlags.VEHICLE],
+                    [149, 199, SegmentFlags.VEHICLE],
+                    [150, 199, SegmentFlags.START | SegmentFlags.END],
+                ],
+                "extra-2-0": [
+                    [149, 199, SegmentFlags.NONE],
+                    [149, 198, SegmentFlags.RETURN | SegmentFlags.ANNOTATE],
+                ],
+            },
+        },
+        "overworld-silvera--after-grotto-adamant": {
+            flags: PathFlags.STEPS,
+            map: "0000-0",
+            mapRange: [204, 122, 32, 32],
+            segments: {
+                "base-0": [
+                    [219, 136, SegmentFlags.START],
+                    [219, 137, SegmentFlags.NONE],
+                    [219, 140, SegmentFlags.START | SegmentFlags.VEHICLE],
+                    [221, 140, SegmentFlags.VEHICLE],
+                    [222, 140, SegmentFlags.START],
+                    [222, 153, SegmentFlags.START | SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [222, 154, SegmentFlags.VEHICLE],
+                ],
+                "extra-2-0": [
+                    [222, 140, SegmentFlags.NONE],
+                    [222, 139, SegmentFlags.RETURN | SegmentFlags.ANNOTATE],
+                ],
+            },
+        },
+        "overworld-silvera--before-grotto-adamant": {
+            flags: PathFlags.STEPS,
+            map: "0000-0",
+            mapRange: [204, 122, 32, 32],
+            segments: {
+                "base-0": [
+                    [222, 140, SegmentFlags.START],
+                    [221, 140, SegmentFlags.NONE],
+                    [219, 140, SegmentFlags.START | SegmentFlags.VEHICLE],
+                    [219, 137, SegmentFlags.VEHICLE],
+                    [219, 136, SegmentFlags.START | SegmentFlags.END],
+                ],
+                "extra-2-0": [
+                    [222, 140, SegmentFlags.NONE],
+                    [222, 139, SegmentFlags.RETURN | SegmentFlags.ANNOTATE],
                 ],
             },
         },
@@ -4790,6 +5159,30 @@ com.aexoden.ff4.route_data = function()
                 ],
             },
         },
+        "town-of-monsters": {
+            flags: PathFlags.STEPS,
+            map: "313C-0",
+            segments: {
+                "base-0": [
+                    [28, 11, SegmentFlags.START],
+                    [28, 12, SegmentFlags.RETURN],
+                    [28, 11, SegmentFlags.END],
+                ],
+            },
+        },
+        "underworld-airship--castle-of-dwarves-to-land-of-monsters": {
+            flags: PathFlags.STEPS,
+            map: "1000-0",
+            mapRange: [38, 66, 32, 32],
+            segments: {
+                "base-0": [
+                    [70, 82, SegmentFlags.VEHICLE],
+                    [69, 82, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [38, 82, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [37, 82, SegmentFlags.VEHICLE],
+                ],
+            },
+        },
         "underworld-airship--castle-of-dwarves-to-overworld-a": {
             flags: PathFlags.STEPS,
             map: "1000-0",
@@ -4812,6 +5205,83 @@ com.aexoden.ff4.route_data = function()
                     [112, 36, SegmentFlags.VEHICLE],
                     [112, 35, SegmentFlags.END | SegmentFlags.VEHICLE],
                     [112, 17, SegmentFlags.END | SegmentFlags.VEHICLE],
+                ],
+            },
+        },
+        "underworld-airship--kokkol-to-overworld-a": {
+            flags: PathFlags.STEPS,
+            map: "1000-0",
+            mapRange: [96, 63, 32, 32],
+            segments: {
+                "base-0": [
+                    [112, 95, SegmentFlags.VEHICLE],
+                    [112, 94, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [112, 63, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [112, 62, SegmentFlags.VEHICLE],
+                ],
+            },
+        },
+        "underworld-airship--kokkol-to-overworld-b": {
+            flags: PathFlags.STEPS,
+            map: "1000-0",
+            mapRange: [96, 32, 32, 32],
+            segments: {
+                "base-0": [
+                    [112, 64, SegmentFlags.VEHICLE],
+                    [112, 63, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [112, 32, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [112, 31, SegmentFlags.VEHICLE],
+                ],
+            },
+        },
+        "underworld-airship--kokkol-to-overworld-c": {
+            flags: PathFlags.STEPS,
+            map: "1000-0",
+            mapRange: [96, 1, 32, 32],
+            segments: {
+                "base-0": [
+                    [112, 33, SegmentFlags.VEHICLE],
+                    [112, 32, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [112, 17, SegmentFlags.END | SegmentFlags.VEHICLE],
+                ],
+            },
+        },
+        "underworld-airship--overworld-to-kokkol-a": {
+            flags: PathFlags.STEPS,
+            map: "1000-0",
+            mapRange: [92, 9, 32, 32],
+            segments: {
+                "base-0": [
+                    [113, 16, SegmentFlags.START | SegmentFlags.VEHICLE],
+                    [106, 16, SegmentFlags.VEHICLE],
+                    [106, 40, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [106, 41, SegmentFlags.VEHICLE],
+                ],
+            },
+        },
+        "underworld-airship--overworld-to-kokkol-b": {
+            flags: PathFlags.STEPS,
+            map: "1000-0",
+            mapRange: [92, 40, 32, 32],
+            segments: {
+                "base-0": [
+                    [106, 39, SegmentFlags.VEHICLE],
+                    [106, 40, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [106, 71, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [106, 72, SegmentFlags.VEHICLE],
+                ],
+            },
+        },
+        "underworld-airship--overworld-to-kokkol-c": {
+            flags: PathFlags.STEPS,
+            map: "1000-0",
+            mapRange: [92, 71, 32, 32],
+            segments: {
+                "base-0": [
+                    [106, 70, SegmentFlags.VEHICLE],
+                    [106, 71, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [106, 102, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [106, 103, SegmentFlags.VEHICLE],
                 ],
             },
         },
@@ -4858,6 +5328,23 @@ com.aexoden.ff4.route_data = function()
                 ],
             },
         },
+        "underworld-castle-of-dwarves--castle-of-dwarves-to-land-of-monsters": {
+            flags: PathFlags.STEPS,
+            map: "1000-0",
+            mapRange: [69, 66, 32, 32],
+            segments: {
+                "base-0": [
+                    [99, 82, SegmentFlags.START],
+                    [98, 82, SegmentFlags.NONE],
+                    [69, 82, SegmentFlags.START | SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [68, 82, SegmentFlags.VEHICLE],
+                ],
+                "extra-2-0": [
+                    [98, 82, SegmentFlags.NONE],
+                    [98, 81, SegmentFlags.RETURN | SegmentFlags.ANNOTATE],
+                ],
+            },
+        },
         "underworld-castle-of-dwarves--castle-of-dwarves-to-overworld": {
             flags: PathFlags.STEPS,
             map: "1000-0",
@@ -4873,23 +5360,6 @@ com.aexoden.ff4.route_data = function()
                 "extra-2-0": [
                     [100, 83, SegmentFlags.NONE],
                     [99, 83, SegmentFlags.RETURN | SegmentFlags.ANNOTATE | SegmentFlags.VERTICAL],
-                ],
-            },
-        },
-        "underworld-castle-of-dwarves--castle-of-dwarves-to-sealed-cave": {
-            flags: PathFlags.STEPS,
-            map: "1000-0",
-            mapRange: [69, 66, 32, 32],
-            segments: {
-                "base-0": [
-                    [99, 82, SegmentFlags.START],
-                    [98, 82, SegmentFlags.NONE],
-                    [69, 82, SegmentFlags.START | SegmentFlags.END | SegmentFlags.VEHICLE],
-                    [68, 82, SegmentFlags.VEHICLE],
-                ],
-                "extra-2-0": [
-                    [98, 82, SegmentFlags.NONE],
-                    [98, 81, SegmentFlags.RETURN | SegmentFlags.ANNOTATE],
                 ],
             },
         },
@@ -4986,18 +5456,68 @@ com.aexoden.ff4.route_data = function()
                 ],
             },
         },
-        "underworld-sealed-cave--castle-of-dwarves-to-sealed-cave": {
+        "underworld-kokkol--after-kokkol": {
             flags: PathFlags.STEPS,
             map: "1000-0",
-            mapRange: [38, 80, 32, 32],
+            mapRange: [96, 94, 32, 32],
             segments: {
                 "base-0": [
-                    [70, 82, SegmentFlags.VEHICLE],
-                    [69, 82, SegmentFlags.END | SegmentFlags.VEHICLE],
-                    [48, 82, SegmentFlags.VEHICLE],
-                    [48, 110, SegmentFlags.VEHICLE],
+                    [104, 123, SegmentFlags.START],
+                    [104, 122, SegmentFlags.NONE],
+                    [112, 122, SegmentFlags.START | SegmentFlags.VEHICLE],
+                    [112, 94, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [112, 93, SegmentFlags.VEHICLE],
+                ],
+            },
+        },
+        "underworld-kokkol--before-kokkol": {
+            flags: PathFlags.STEPS,
+            map: "1000-0",
+            mapRange: [92, 96, 32, 32],
+            segments: {
+                "base-0": [
+                    [106, 95, SegmentFlags.VEHICLE],
+                    [106, 102, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [106, 122, SegmentFlags.VEHICLE],
+                    [104, 122, SegmentFlags.VEHICLE],
+                    [104, 123, SegmentFlags.START | SegmentFlags.END],
+                ],
+                "extra-2-0": [
+                    [104, 122, SegmentFlags.NONE],
+                    [104, 121, SegmentFlags.RETURN | SegmentFlags.ANNOTATE],
+                ],
+            },
+        },
+        "underworld-sealed-cave--castle-of-dwarves-to-land-of-monsters": {
+            flags: PathFlags.STEPS,
+            map: "1000-0",
+            mapRange: [11, 68, 32, 32],
+            segments: {
+                "base-0": [
+                    [43, 82, SegmentFlags.VEHICLE],
+                    [38, 82, SegmentFlags.END | SegmentFlags.VEHICLE],
+                    [29, 82, SegmentFlags.VEHICLE],
+                    [29, 87, SegmentFlags.VEHICLE],
+                    [27, 87, SegmentFlags.VEHICLE],
+                    [27, 86, SegmentFlags.START | SegmentFlags.END],
+                ],
+            },
+        },
+        "underworld-sealed-cave--land-of-monsters-to-sealed-cave": {
+            flags: PathFlags.STEPS,
+            map: "1000-0",
+            mapRange: [20, 82, 32, 32],
+            segments: {
+                "base-0": [
+                    [27, 86, SegmentFlags.START],
+                    [27, 87, SegmentFlags.NONE],
+                    [27, 110, SegmentFlags.START | SegmentFlags.VEHICLE],
                     [46, 110, SegmentFlags.VEHICLE],
                     [46, 109, SegmentFlags.START | SegmentFlags.END],
+                ],
+                "extra-2-0": [
+                    [46, 110, SegmentFlags.NONE],
+                    [47, 110, SegmentFlags.RETURN | SegmentFlags.ANNOTATE],
                 ],
             },
         },
@@ -5023,29 +5543,6 @@ com.aexoden.ff4.route_data = function()
     };
 
     data.variables = {
-        C000500: {
-            descriptions: {
-                0: "Walk to the Big Whale.",
-                1: "Fly the Falcon to the Big Whale.",
-            },
-            paths: {
-                0: {
-                    "overworld-mysidia--after-big-whale--walk": {
-                        index: "0",
-                        instruction: "Walk to the Big Whale",
-                        location: "Overworld (Mysidia) [before Moon]",
-                    },
-                },
-                1: {
-                    "overworld-mysidia--after-big-whale--fly": {
-                        index: "0",
-                        instruction: "Fly the Falcon to the Big Whale",
-                        location: "Overworld (Mysidia) [before Moon]",
-                    },
-                },
-            },
-            type: VariableFlags.CHOICE,
-        },
         C305500: {
             descriptions: {
                 1: "Enter the Extra Step Area in Toroian Castle 1F [after Cave Magnes].",
@@ -5086,6 +5583,29 @@ com.aexoden.ff4.route_data = function()
                         index: "0",
                         instruction: "Enter the Save Room",
                         location: "Cave Magnes B4F",
+                    },
+                },
+            },
+            type: VariableFlags.CHOICE,
+        },
+        C30A000: { // eslint-disable-line
+            descriptions: {
+                0: "Walk out of Grotto Adamant.",
+                1: "Cast Warp to leave Grotto Adamant.",
+            },
+            paths: {
+                0: {
+                    "grotto-adamant--direct": {
+                        index: "0",
+                        instruction: "Walk out of the room",
+                        location: "Grotto Adamant",
+                    },
+                },
+                1: {
+                    "grotto-adamant--warp": {
+                        index: "0",
+                        instruction: "Cast Warp to leave the room",
+                        location: "Grotto Adamant",
                     },
                 },
             },
@@ -5234,6 +5754,37 @@ com.aexoden.ff4.route_data = function()
             },
             type: VariableFlags.CHOICE,
         },
+        C313800: {
+            descriptions: {
+                0: "Take the direct route in Land of Monsters B3F.",
+                1: "Take the partial secret passage in Land of Monsters B3F.",
+                2: "Take the full secret passage in Land of Monsters B3F.",
+            },
+            paths: {
+                0: {
+                    "land-of-monsters-b3f--direct": {
+                        index: "0",
+                        instruction: "Take the direct route",
+                        location: "Land of Monsters B3F",
+                    },
+                },
+                1: {
+                    "land-of-monsters-b3f--partial-secret": {
+                        index: "0",
+                        instruction: "Take the partial secret passage",
+                        location: "Land of Monsters B3F",
+                    },
+                },
+                2: {
+                    "land-of-monsters-b3f--full-secret": {
+                        index: "0",
+                        instruction: "Take the full secret passage",
+                        location: "Land of Monsters B3F",
+                    },
+                },
+            },
+            type: VariableFlags.CHOICE,
+        },
         C316B00: { // eslint-disable-line
             descriptions: {
                 1: "Enter the Pink Puff Room on Lunar Subterrane B5 (lower).",
@@ -5249,32 +5800,24 @@ com.aexoden.ff4.route_data = function()
             },
             type: VariableFlags.CHOICE,
         },
-        C316C00: {
+        C317500: {
             descriptions: {
-                0: "Get the Ninja star on Lunar Subterrane B6",
-                1: "Get the Ninja star on Lunar Core B1",
-                2: "Get the Ninja star on Lunar Core B3",
+                0: "Do the final Zeromus menu immediately after getting the Protect Ring.",
+                1: "Do the final Zeromus menu immediately before Zeromus.",
             },
             paths: {
                 0: {
-                    "lunar-subterrane-b6--ninja": {
+                    "lunar-subterrane-b5-passage-a": {
                         index: "0",
-                        instruction: "Get the Ninja star",
-                        location: "Lunar Subterrane B6",
+                        instruction: "Do the final Zeromus menu immediately after getting the Protect Ring",
+                        location: "Lunar Subterrane B5 Passage A",
                     },
                 },
                 1: {
-                    "lunar-core-b1--ninja": {
+                    "lunar-core-b5": {
                         index: "0",
-                        instruction: "Get the Ninja star",
-                        location: "Lunar Core B1",
-                    },
-                },
-                2: {
-                    "lunar-core-b3--ninja": {
-                        index: "0",
-                        instruction: "Get the Ninja star",
-                        location: "Lunar Core B3",
+                        instruction: "Do the final Zeromus menu immediately before Zeromus",
+                        location: "Lunar Core B5",
                     },
                 },
             },
@@ -5293,12 +5836,7 @@ com.aexoden.ff4.route_data = function()
         },
         E000503: {
             paths: {
-                "overworld-mysidia--after-big-whale--fly": {
-                    disambiguation: "",
-                    index: "0",
-                    location: "Overworld (Mysidia) [before Moon]",
-                },
-                "overworld-mysidia--after-big-whale--walk": {
+                "overworld-mysidia--underworld-to-big-whale": {
                     disambiguation: "",
                     index: "0",
                     location: "Overworld (Mysidia) [before Moon]",
@@ -5358,6 +5896,28 @@ com.aexoden.ff4.route_data = function()
             },
             type: VariableFlags.EXTRA,
         },
+        E000704: {
+            paths: {
+                "overworld-silvera--before-grotto-adamant": {
+                    disambiguation: "",
+                    index: "0",
+                    location: "Overworld (Silvera) [before Grotto Adamant]",
+                },
+            },
+            routes: {},
+            type: VariableFlags.EXTRA,
+        },
+        E000705: {
+            paths: {
+                "overworld-silvera--after-grotto-adamant": {
+                    disambiguation: "",
+                    index: "0",
+                    location: "Overworld (Silvera) [after Grotto Adamant]",
+                },
+            },
+            routes: {},
+            type: VariableFlags.EXTRA,
+        },
         E000A00: {
             paths: {
                 "overworld-agart--castle-baron-to-agart": {
@@ -5371,10 +5931,21 @@ com.aexoden.ff4.route_data = function()
         },
         E000A01: {
             paths: {
-                "overworld-eblan": {
+                "overworld-eblan--castle-baron-to-cave-eblana": {
                     disambiguation: "",
                     index: "0",
                     location: "Overworld (Eblan)",
+                },
+            },
+            routes: {},
+            type: VariableFlags.EXTRA,
+        },
+        E000A02: {
+            paths: {
+                "overworld-eblan--underworld-to-grotto-adamant": {
+                    disambiguation: "",
+                    index: "0",
+                    location: "Overworld (Eblan) [switching airships]",
                 },
             },
             routes: {},
@@ -5415,7 +5986,7 @@ com.aexoden.ff4.route_data = function()
         },
         E100003: {
             paths: {
-                "underworld-castle-of-dwarves--castle-of-dwarves-to-sealed-cave": {
+                "underworld-castle-of-dwarves--castle-of-dwarves-to-land-of-monsters": {
                     disambiguation: "",
                     index: "0",
                     location: "Underworld (Castle of Dwarves) [after infirmary visit]",
@@ -5435,12 +6006,34 @@ com.aexoden.ff4.route_data = function()
             routes: {},
             type: VariableFlags.EXTRA,
         },
+        E100100: {
+            paths: {
+                "underworld-sealed-cave--land-of-monsters-to-sealed-cave": {
+                    disambiguation: "",
+                    index: "0",
+                    location: "Underworld (Sealed Cave) [before Sealed Cave]",
+                },
+            },
+            routes: {},
+            type: VariableFlags.EXTRA,
+        },
         E100101: {
             paths: {
                 "underworld-sealed-cave--sealed-cave-to-castle-of-dwarves": {
                     disambiguation: "",
                     index: "0",
                     location: "Underworld (Sealed Cave) [after Sealed Cave]",
+                },
+            },
+            routes: {},
+            type: VariableFlags.EXTRA,
+        },
+        E100102: {
+            paths: {
+                "underworld-kokkol--before-kokkol": {
+                    disambiguation: "",
+                    index: "0",
+                    location: "Underworld (Kokkol)",
                 },
             },
             routes: {},
@@ -5862,6 +6455,22 @@ com.aexoden.ff4.route_data = function()
                     disambiguation: "",
                     index: "0",
                     location: "Tower of Zot 6F",
+                },
+            },
+            routes: {},
+            type: VariableFlags.EXTRA,
+        },
+        E30A000: { // eslint-disable-line
+            paths: {
+                "grotto-adamant--direct": {
+                    disambiguation: "",
+                    index: "0",
+                    location: "Grotto Adamant",
+                },
+                "grotto-adamant--warp": {
+                    disambiguation: "",
+                    index: "0",
+                    location: "Grotto Adamant",
                 },
             },
             routes: {},
@@ -6759,6 +7368,50 @@ com.aexoden.ff4.route_data = function()
             routes: {},
             type: VariableFlags.EXTRA,
         },
+        E313600: {
+            paths: {
+                "land-of-monsters-b1f": {
+                    disambiguation: "",
+                    index: "0",
+                    location: "Land of Monsters B1F",
+                },
+            },
+            routes: {},
+            type: VariableFlags.EXTRA,
+        },
+        E313700: {
+            paths: {
+                "land-of-monsters-b2f": {
+                    disambiguation: "",
+                    index: "0",
+                    location: "Land of Monsters B2F",
+                },
+            },
+            routes: {},
+            type: VariableFlags.EXTRA,
+        },
+        E313800: {
+            lowPriority: true,
+            paths: {
+                "land-of-monsters-b3f--direct": {
+                    disambiguation: "",
+                    index: "0",
+                    location: "Land of Monsters B3F",
+                },
+                "land-of-monsters-b3f--full-secret": {
+                    disambiguation: "",
+                    index: "0",
+                    location: "Land of Monsters B3F",
+                },
+                "land-of-monsters-b3f--partial-secret": {
+                    disambiguation: "",
+                    index: "0",
+                    location: "Land of Monsters B3F",
+                },
+            },
+            routes: {},
+            type: VariableFlags.EXTRA,
+        },
         E314400: {
             paths: {
                 "sealed-cave": {
@@ -6954,12 +7607,7 @@ com.aexoden.ff4.route_data = function()
         },
         E316C00: {
             paths: {
-                "lunar-subterrane-b6--direct": {
-                    disambiguation: "",
-                    index: "0",
-                    location: "Lunar Subterrane B6",
-                },
-                "lunar-subterrane-b6--ninja": {
+                "lunar-subterrane-b6": {
                     disambiguation: "",
                     index: "0",
                     location: "Lunar Subterrane B6",
@@ -6992,12 +7640,7 @@ com.aexoden.ff4.route_data = function()
         },
         E316E00: {
             paths: {
-                "lunar-core-b1--direct": {
-                    disambiguation: "",
-                    index: "0",
-                    location: "Lunar Core B1",
-                },
-                "lunar-core-b1--ninja": {
+                "lunar-core-b1": {
                     disambiguation: "",
                     index: "0",
                     location: "Lunar Core B1",
@@ -7019,12 +7662,7 @@ com.aexoden.ff4.route_data = function()
         },
         E317000: {
             paths: {
-                "lunar-core-b3--direct": {
-                    disambiguation: "",
-                    index: "0",
-                    location: "Lunar Core B3",
-                },
-                "lunar-core-b3--ninja": {
+                "lunar-core-b3": {
                     disambiguation: "",
                     index: "0",
                     location: "Lunar Core B3",
@@ -7047,8 +7685,19 @@ com.aexoden.ff4.route_data = function()
         E317500: {
             paths: {
                 "lunar-subterrane-b5-passage-a": {
-                    disambiguation: "",
+                    disambiguation: " before getting the Protect Ring",
                     index: "0",
+                    location: "Lunar Subterrane B5 Passage A",
+                },
+            },
+            routes: {},
+            type: VariableFlags.EXTRA,
+        },
+        E317501: {
+            paths: {
+                "lunar-subterrane-b5-passage-a": {
+                    disambiguation: " after getting the Protect Ring and any associated menuing",
+                    index: "1",
                     location: "Lunar Subterrane B5 Passage A",
                 },
             },

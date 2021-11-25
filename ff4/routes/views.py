@@ -128,6 +128,16 @@ ROUTES = {
         'seed_finder': True,
         'status': 'Optimal'
     },
+    'no64-excalbur-marathon-recovery-paladin': {
+        'name': 'Any% No64 (Edge+Excalbur) (Marathon) (Recovery: Paladin)',
+        'description': 'This variant of no64-excalbur-marathon runs from the save point on Mt.Ordeals after Cecil becomes a Paladin until Zeromus is defeated, and is primarily intended as a step route (and grind) recovery method. As with the base no64-excalbur-marathon route, this route matches the no64-rosa-marathon-recovery-paladin route until Castle Baron after escaping the underground. This allows you to defer which route to use (for bid war purposes, perhaps) until that point in the game.',
+        'group': 'recovery',
+        'enabled': True,
+        'twin_safe': True,
+        'complete': True,
+        'seed_finder': True,
+        'status': 'Optimal'
+    },
 
     'premist': {
         'name': 'Pre-Mist Clip',
