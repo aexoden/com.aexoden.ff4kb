@@ -8370,6 +8370,7 @@ com.aexoden.ff4 = function()
     var _twinSeedData = {};
 
     _twinSeedData.fusoya = {
+        "no64-excalbur-marathon-recovery-fusoya": {},
         "no64-rosa-marathon-recovery-fusoya": {},
     };
 
@@ -8846,6 +8847,7 @@ com.aexoden.ff4 = function()
     };
 
     _twinSeedData.paladin = {
+        "no64-excalbur-marathon-recovery-paladin": {},
         "no64-rosa-marathon-recovery-paladin": {},
     };
 
@@ -8858,6 +8860,8 @@ com.aexoden.ff4 = function()
     var routeNames = {
         "no64-excalbur": "Any% No64 (Edge+Excalbur)",
         "no64-excalbur-marathon": "Any% No64 (Edge+Excalbur) (Marathon)",
+        "no64-excalbur-marathon-recovery-fusoya": "Any% No64 (Edge+Excalbur) (Marathon) (Recovery: FuSoYa)",
+        "no64-excalbur-marathon-recovery-paladin": "Any% No64 (Edge+Excalbur) (Marathon) (Recovery: Paladin)",
         "no64-rosa": "Any% No64 (Rosa)",
         "no64-rosa-marathon": "Any% No64 (Rosa) (Marathon)",
         "no64-rosa-marathon-recovery-fusoya": "Any% No64 (Rosa) (Marathon) (Recovery: FuSoYa)",
@@ -8870,6 +8874,8 @@ com.aexoden.ff4 = function()
     var routeMapSets = {
         "no64-excalbur": "mist",
         "no64-excalbur-marathon": "mist",
+        "no64-excalbur-marathon-recovery-fusoya": "fusoya",
+        "no64-excalbur-marathon-recovery-paladin": "paladin",
         "no64-rosa": "mist",
         "no64-rosa-marathon": "mist",
         "no64-rosa-marathon-recovery-fusoya": "fusoya",
