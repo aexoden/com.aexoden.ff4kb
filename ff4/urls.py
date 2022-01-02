@@ -8,6 +8,7 @@ urlpatterns = [
 	path('', TemplateView.as_view(template_name='index.html'), name='index'),
 	path('admin/', admin.site.urls),
 	path('guides/', include('ff4.guides.urls')),
+	path('info/', include('ff4.info.urls')),
 	path('routes/', include('ff4.routes.urls')),
 	path('tools/', include('ff4.tools.urls')),
 

@@ -1,0 +1,19 @@
+{% extends "info/base.html" %}
+{% load static %}
+{% load django_bootstrap_breadcrumbs %}
+
+{% block breadcrumbs %}
+	{{ block.super }}
+{% endblock %}
+
+{% block subtitle %}Index{% endblock %}
+
+{% block content %}				<h1>Game Information</h1>
+                <p>This section provides detailed data directly from the game.</p>
+                <ul>
+                    <li><a href="{% url "info:monsters" %}">Monsters</a></li>
+                </ul>
+{% endblock %}
+
+{% block extrajs %}
+{% endblock %}

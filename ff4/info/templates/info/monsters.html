@@ -1,0 +1,32 @@
+{% extends "info/base.html" %}
+{% load static %}
+{% load django_bootstrap_breadcrumbs %}
+
+{% block breadcrumbs %}
+	{{ block.super }}
+{% endblock %}
+
+{% block subtitle %}Index{% endblock %}
+
+{% block content %}				<h1>Monster Information</h1>
+                <p>This section provides detailed monster data directly from the game.</p>
+                <table class="table table-striped">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name (US)</th>
+                        <th>Name (JP)</th>
+                        <th>Name (Easytype)</th>
+                    </tr>
+{% for monster in monsters %}
+                    <tr>
+                        <td>0x{{ monster.id_hex }}</td>
+                        <td>{{ monster.name_us}}</td>
+                        <td>{{ monster.name_jp }}</td>
+                        <td>{% if monster.name_easytype == monster.name_jp %}{{ monster.name_easytype }}{% else %}<strong>{{ monster.name_easytype}}</strong>{% endif %}</td>
+                    </tr>
+{% endfor %}
+                </table>
+{% endblock %}
+
+{% block extrajs %}
+{% endblock %}

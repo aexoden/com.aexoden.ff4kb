@@ -20,7 +20,10 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<ul class="navbar-nav mr-auto">
-						<li class="nav-item{% if request.resolver_match.namespace == 'guides' %} active{% endif %}">
+                        <li class="nav-item{% if request.resolver_match.namespace == 'info' %} active{% endif %}">
+                            <a class="nav-link" href="{% url 'info:index' %}">Game Information</a>
+                        </li>
+                        <li class="nav-item{% if request.resolver_match.namespace == 'guides' %} active{% endif %}">
 							<a class="nav-link" href="{% url 'guides:index' %}">Guides</a>
 						</li>
 						<li class="nav-item{% if request.resolver_match.namespace == 'routes' %} active{% endif %}">

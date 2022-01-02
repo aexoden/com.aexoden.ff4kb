@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% load django_bootstrap_breadcrumbs %}
+
+{% block breadcrumbs %}
+	{{ block.super }}
+	{% breadcrumb "Game Information" "info:index" %}
+{% endblock %}
+
+{% block title %}{% block subtitle %}{% endblock %} &laquo; Game Information{% endblock %}
