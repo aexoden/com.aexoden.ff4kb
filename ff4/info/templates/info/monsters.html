@@ -4,9 +4,10 @@
 
 {% block breadcrumbs %}
 	{{ block.super }}
+    {% breadcrumb "Monster Information" "info:monsters" %}
 {% endblock %}
 
-{% block subtitle %}Index{% endblock %}
+{% block subtitle %}Monster Information{% endblock %}
 
 {% block content %}				<h1>Monster Information</h1>
                 <p>This section provides detailed monster data directly from the game.</p>
