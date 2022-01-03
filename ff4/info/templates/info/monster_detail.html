@@ -1,0 +1,33 @@
+{% extends "info/base.html" %}
+{% load static %}
+{% load django_bootstrap_breadcrumbs %}
+
+{% block breadcrumbs %}
+	{{ block.super }}
+    {% breadcrumb "Monster Information" "info:monsters" %}
+    {% breadcrumb_for "info:monster_detail" id %}{{ name_us }}{% endbreadcrumb_for %}
+{% endblock %}
+
+{% block subtitle %}{{ name_us }} &raquo; Monster Information{% endblock %}
+
+{% block content %}				<h1>Monster Information: {{ name_us }}</h1>
+                <p>This page gives detailed information about the {{ name_us }} monster. Do note that while many monsters have a non-zero physical and magic evade defined, a bug (or last minute design choice that looks like a bug) prevents them from being loaded properly at the start of the battle. Therefore, except for monsters that change their parameters during the battle (such as Valvalis), you can assume the evade value is 0%.</p>
+                <h2>Basic Information</h2>
+                <dl class="row">
+                    <dt class="col-sm-3">Name (USA)</dt><dd class="col-sm-9">{{ name_us }}</dd>
+                    <dt class="col-sm-3">Name (Japan)</dt><dd class="col-sm-9">{{ name_jp }}</dd>
+                    <dt class="col-sm-3">Name (Easytype)</dt><dd class="col-sm-9">{{ name_easytype }}</dd>
+                    <dt class="col-sm-3">Boss</dt><dd class="col-sm-9">{% if boss %}Yes{% else %}No{% endif %}</dd>
+                    <dt class="col-sm-3">HP</dt><dd class="col-sm-9">{{ hp }}</dd>
+                    <dt class="col-sm-3">Level</dt><dd class="col-sm-9">{{ level }}</dd>
+                    <dt class="col-sm-3">EXP</dt><dd class="col-sm-9">{{ exp }}</dd>
+                    <dt class="col-sm-3">GP</dt><dd class="col-sm-9">{{ gp }}</dd>
+                    <dt class="col-sm-3">Agility</dt><dd class="col-sm-9">{{ agility }}</dd>
+                    <dt class="col-sm-3">Physical Attack</dt><dd class="col-sm-9">{{ physical_attack }}</dd>
+                    <dt class="col-sm-3">Physical Defense</dt><dd class="col-sm-9">{{ physical_defense }}</dd>
+                    <dt class="col-sm-3">Magic Defense</dt><dd class="col-sm-9">{{ magic_defense }}</dd>
+                </dl>
+{% endblock %}
+
+{% block extrajs %}
+{% endblock %}

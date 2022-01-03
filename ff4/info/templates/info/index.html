@@ -10,6 +10,17 @@
 
 {% block content %}				<h1>Game Information</h1>
                 <p>This section provides detailed data directly from the game.</p>
+                <h2>Game Versions</h2>
+                <p>There are five versions of the game for the Super Nintendo and Super Famicom:</p>
+                <dl class="row">
+                    <dt class="col-sm-3">Japan</dt><dd class="col-sm-9">The original version of the game released in Japan for the SFC.</dd>
+                    <dt class="col-sm-3">Japan Rev 1</dt><dd class="col-sm-9">A second version released in Japan that fixed a few critical bugs.</dd>
+                    <dt class="col-sm-3">USA<dt><dd class="col-sm-9">The first version released in North America. Fixed some issues from the Japan Rev 1 release, and made several changes that either made the game easier or more difficult depending on your perspective.</dd>
+                    <dt class="col-sm-3">USA Rev 1</dt><dd class="col-sm-9">The second version released in North America. Fixed some bugs from the previous release.</dd>
+                    <dt class="col-sm-3">Easytype</dt><dd class="col-sm-9">Exclusive to Japan, this version of the game fixed a few bugs on top of the USA Rev 1 release, as well as made additional changes to make the game even easier. While it used the Japanese script, the text was simplified to some extent for younger players.</dd>
+                </dl>
+                <p>Note that it is a common misconception that the USA release is the same as Easytype. The original Japanese release seems to be quite rare, with Rev 1 being more common. In the USA, the original version seems slightly more common than the Rev 1 version, but both are readily available.</p>
+                <h2>Game Data</h2>
                 <ul>
                     <li><a href="{% url "info:monsters" %}">Monsters</a></li>
                 </ul>

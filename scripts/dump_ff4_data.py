@@ -301,9 +301,25 @@ class FF4(object):
         base_address = 0x0E0000 + self._read_u16(0x0EA6A0 + id * 2)
 
         physical_attack_index = self._read_u8(base_address + 3)
+        physical_attack_multiplier = self._read_u8(0x0EA380 + physical_attack_index * 3 + 0)
+        physical_attack_accuracy = self._read_u8(0x0EA380 + physical_attack_index * 3 + 1)
+        physical_attack_base = self._read_u8(0x0EA380 + physical_attack_index * 3 + 2)
+
         physical_defense_index = self._read_u8(base_address + 4)
+        physical_defense_multiplier = self._read_u8(0x0EA380 + physical_defense_index * 3 + 0)
+        physical_defense_evade = self._read_u8(0x0EA380 + physical_defense_index * 3 + 1)
+        physical_defense_base = self._read_u8(0x0EA380 + physical_defense_index * 3 + 2)
+
         magic_defense_index = self._read_u8(base_address + 5)
+        magic_defense_multiplier = self._read_u8(0x0EA380 + magic_defense_index * 3 + 0)
+        magic_defense_evade = self._read_u8(0x0EA380 + magic_defense_index * 3 + 1)
+        magic_defense_base = self._read_u8(0x0EA380 + magic_defense_index * 3 + 2)
+
         agility_index = self._read_u8(base_address + 6) & 0x3F
+        agility_minimum = self._read_u8(0x0EA620 + agility_index * 2 + 0)
+        agility_maximum = self._read_u8(0x0EA620 + agility_index * 2 + 1)
+        agility_range = f'{agility_minimum} - {agility_maximum}' if agility_maximum > agility_minimum else f'{agility_minimum}'
+
         item_drop_index = self._read_u8(base_address + 7) & 0x3F
 
         flags = self._read_u8(base_address + 9)
@@ -338,6 +354,8 @@ class FF4(object):
 
         return {
             'boss': self._read_u8(base_address) & 0x80 > 0,
+            'exp': self._read_u16(0x0EA1C0 + id * 2),
+            'gp': self._read_u16(0x0EA000 + id * 2),
             'hp': self._read_u16(base_address + 1),
             'level': self._read_u8(base_address) & 0x7F,
             'magic_power': magic_power,
@@ -345,23 +363,27 @@ class FF4(object):
             'race': race,
 
             'physical_attack_index': physical_attack_index,
-            'physical_attack_multiplier': self._read_u8(0x0EA380 + physical_attack_index * 3 + 0),
-            'physical_attack_accuracy': self._read_u8(0x0EA380 + physical_attack_index * 3 + 1),
-            'physical_attack_base': self._read_u8(0x0EA380 + physical_attack_index * 3 + 2),
+            'physical_attack_multiplier': physical_attack_multiplier,
+            'physical_attack_accuracy': physical_attack_accuracy,
+            'physical_attack_base': physical_attack_base,
+            'physical_attack': f'{physical_attack_multiplier} x {physical_attack_base} [{physical_attack_accuracy}%]',
 
             'physical_defense_index': physical_defense_index,
-            'physical_defense_multiplier': self._read_u8(0x0EA380 + physical_defense_index * 3 + 0),
-            'physical_defense_evade': self._read_u8(0x0EA380 + physical_defense_index * 3 + 1),
-            'physical_defense_base': self._read_u8(0x0EA380 + physical_defense_index * 3 + 2),
+            'physical_defense_multiplier': physical_defense_multiplier,
+            'physical_defense_evade': physical_defense_evade,
+            'physical_defense_base': physical_defense_base,
+            'physical_defense': f'{physical_defense_multiplier} x {physical_defense_base} [{physical_defense_evade}%]',
 
-            'magic_defense_index': self._read_u8(base_address + 5),
-            'magic_defense_multiplier': self._read_u8(0x0EA380 + magic_defense_index * 3 + 0),
-            'magic_defense_evade': self._read_u8(0x0EA380 + magic_defense_index * 3 + 1),
-            'magic_defense_base': self._read_u8(0x0EA380 + magic_defense_index * 3 + 2),
+            'magic_defense_index': magic_defense_index,
+            'magic_defense_multiplier': magic_defense_multiplier,
+            'magic_defense_evade': magic_defense_evade,
+            'magic_defense_base': magic_defense_base,
+            'magic_defense': f'{magic_defense_multiplier} x {magic_defense_base} [{magic_defense_evade}%]',
 
             'agility_index': agility_index,
-            'agility_minimum': self._read_u8(0x0EA620 + agility_index * 2 + 0),
-            'agility_maximum': self._read_u8(0x0EA620 + agility_index * 2 + 1),
+            'agility_minimum': agility_minimum,
+            'agility_maximum': agility_maximum,
+            'agility_range': agility_range,
 
             'item_drop_index': item_drop_index,
             'item_drop_1': self._read_u8(0x0E9F00 + item_drop_index * 4 + 0),

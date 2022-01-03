@@ -14,14 +14,14 @@
                 <table class="table table-striped">
                     <tr>
                         <th>ID</th>
-                        <th>Name (US)</th>
-                        <th>Name (JP)</th>
+                        <th>Name (USA)</th>
+                        <th>Name (Japan)</th>
                         <th>Name (Easytype)</th>
                     </tr>
 {% for monster in monsters %}
                     <tr>
                         <td>0x{{ monster.id_hex }}</td>
-                        <td>{{ monster.name_us}}</td>
+                        <td><a href="{% url 'info:monster_detail' monster.id %}">{{ monster.name_us }}</a></td>
                         <td>{{ monster.name_jp }}</td>
                         <td>{% if monster.name_easytype == monster.name_jp %}{{ monster.name_easytype }}{% else %}<strong>{{ monster.name_easytype}}</strong>{% endif %}</td>
                     </tr>
