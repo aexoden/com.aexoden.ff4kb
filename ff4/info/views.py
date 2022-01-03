@@ -1,7 +1,8 @@
 import json
 import os
 
-from typing import Any
+from collections.abc import Callable
+from typing import Any, Optional
 
 from django.conf import settings
 from django.http import Http404
@@ -26,9 +27,40 @@ def get_monster_names(names: dict[str, list[str]]):
     return name_us, name_jp, name_easytype
 
 
-def group_values(values: Any):
+def filter_magic_power(value: str):
+    return 'None' if value == '-1' else value
+
+
+def filter_race(value: str):
+    race = int(value)
+    races: list[str] = []
+
+    if race & 0x01 > 0:
+        races.append("Dragon")
+    if race & 0x02 > 0:
+        races.append("Machine")
+    if race & 0x04 > 0:
+        races.append("Reptile")
+    if race & 0x08 > 0:
+        races.append("Spirit")
+    if race & 0x10 > 0:
+        races.append("Giant")
+    if race & 0x20 > 0:
+        races.append("Flan")
+    if race & 0x40 > 0:
+        races.append("Mage")
+    if race & 0x80 > 0:
+        races.append("Undead")
+
+    if len(races) == 0:
+        races.append("None")
+
+    return ', '.join(races)
+
+
+def group_values(values: Any, filter: Optional[Callable[[str], str]] = None):
     if type(values) is not dict:
-        return values
+        return filter(str(values)) if filter else values
 
     output: list[tuple[int, str]] = []
 
@@ -53,6 +85,9 @@ def group_values(values: Any):
         else:
             version = ', '.join(versions)
             priority = -1
+
+        if filter:
+            value = filter(str(value))
 
         output.append((priority, f'{value} ({version})'))
 
@@ -106,6 +141,8 @@ def monster_detail(request, id):
         'physical_attack': group_values(monster_data['physical_attack']),
         'physical_defense': group_values(monster_data['physical_defense']),
         'magic_defense': group_values(monster_data['magic_defense']),
+        'magic_power': group_values(monster_data['magic_power'], filter_magic_power),
+        'race': group_values(monster_data['race'], filter_race),
     }
 
     return render(request, 'info/monster_detail.html', context)
