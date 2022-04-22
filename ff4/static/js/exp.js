@@ -924,7 +924,7 @@ com.aexoden.ff4.exp = function()
                 dr_lugae: {modify: false, count: 1},
             },
             name: "Dr.Lugae",
-            party: {[CHARACTER_CECIL]: true, [CHARACTER_KAIN]: true, [CHARACTER_ROSA]: true, [CHARACTER_RYDIA]: true, [CHARACTER_YANG]: true},
+            party: {[CHARACTER_CECIL]: true, [CHARACTER_KAIN]: true, [CHARACTER_ROSA]: false, [CHARACTER_RYDIA]: true, [CHARACTER_YANG]: true},
             shadow: [],
         },
         elements: {
@@ -1238,8 +1238,88 @@ com.aexoden.ff4.exp = function()
                 cpu: {
                     party: { [CHARACTER_CECIL]: false, [CHARACTER_ROSA]: true },
                 },
-                dr_lugae: {
-                    party: { [CHARACTER_ROSA]: false },
+                elements: {
+                    monsters: { elements_1: { count: 0 }, elements_2: { count: 1 }},
+                    party: { [CHARACTER_CECIL]: false, [CHARACTER_ROSA]: true},
+                },
+                grind: {
+                    monsters: { d_machin: { count: 17 }},
+                    party: { [CHARACTER_EDGE]: false, [CHARACTER_ROSA]: true },
+                },
+                magus_sisters: {
+                    monsters: {sandy: { modify: true }},
+                    party: { [CHARACTER_CECIL]: false },
+                },
+                milon_z: {
+                    party: { [CHARACTER_POROM]: true },
+                },
+                valvalis: {
+                    party: { [CHARACTER_CID]: false },
+                },
+            },
+            restrictions: {
+                cpu: {
+                    [CHARACTER_CECIL]: [null, 27],
+                    [CHARACTER_EDGE]: [32, null],
+                    [CHARACTER_ROSA]: [20, null],
+                },
+                dark_imps: {
+                    [CHARACTER_CECIL]: [null, 19],
+                },
+                evilwall: {
+                    [CHARACTER_CECIL]: [null, 21],
+                },
+                golbez: {
+                    [CHARACTER_RYDIA]: [19, null],
+                    [CHARACTER_YANG]: [17, null],
+                },
+                magus_sisters: {
+                    [CHARACTER_KAIN]: [19, null],
+                    [CHARACTER_ROSA]: [null, 19],
+                },
+            },
+        },
+        "pixel-remaster": {
+            battles: [
+                "d_mist",
+                "officer_soldiers",
+                "pikes",
+                "octomamm",
+                "antlion",
+                "waterhag",
+                "mombomb",
+                "fabul_1",
+                "fabul_2",
+                "fabul_3",
+                "fabul_4",
+                "fabul_5",
+                "fabul_6",
+                "milon",
+                "milon_z",
+                "baigan",
+                "kainazzo",
+                "dark_elf",
+                "flamedog",
+                "magus_sisters",
+                "valvalis",
+                "calbrena",
+                "golbez",
+                "dr_lugae",
+                "dark_imps",
+                "rubicant",
+                "trapdoor_1",
+                "trapdoor_2",
+                "trapdoor_3",
+                "evilwall",
+                "grind",
+                "elements",
+                "cpu",
+            ],
+            exp_table: "sfc",
+            name: "Pixel Remaster Any%",
+            overrides: {
+                cpu: {
+                    party: { [CHARACTER_CECIL]: false, [CHARACTER_ROSA]: true },
                 },
                 elements: {
                     monsters: { elements_1: { count: 0 }, elements_2: { count: 1 }},
@@ -1376,7 +1456,7 @@ com.aexoden.ff4.exp = function()
                     party: { [CHARACTER_CECIL]: false, [CHARACTER_EDGE]: false, [CHARACTER_ROSA]: true},
                 },
                 grind: {
-                    monsters: { d_machin: { count: 18 }},
+                    monsters: { d_machin: { count: 17 }},
                     party: { [CHARACTER_EDGE]: false, [CHARACTER_ROSA]: true },
                 },
                 valvalis: {
@@ -1545,11 +1625,17 @@ com.aexoden.ff4.exp = function()
         return _battleData[battle].party[character];
     };
 
-    var getLevel = function(character, exp) {
+    var getLevel = function(character, exp, half) {
         let levels = _characterData[character].levels;
 
         for (let level in levels) {
-            if (exp < levels[level]) {
+            let level_exp = levels[level];
+
+            if (half) {
+                level_exp = Math.floor(level_exp / 2);
+            }
+
+            if (exp < level_exp) {
                 return level - 1;
             }
         }
@@ -1626,6 +1712,8 @@ com.aexoden.ff4.exp = function()
         var route = getRoute();
         var routeData = _routeData[route];
         let warnings = [];
+
+        let half = route == "pixel-remaster";
 
         let exp = {};
 
@@ -1706,13 +1794,13 @@ com.aexoden.ff4.exp = function()
                     }
                 }
 
-                let oldLevel = getLevel(character, exp[character]);
+                let oldLevel = getLevel(character, exp[character], half);
 
                 if (getCharacterAlive(battle, character) || index >= 0) {
                     exp[character] += Math.floor(battleExp / survivors);
                 }
 
-                let newLevel = getLevel(character, exp[character]);
+                let newLevel = getLevel(character, exp[character], half);
 
                 var item = document.createElement("li");
 
@@ -1757,7 +1845,7 @@ com.aexoden.ff4.exp = function()
             };
 
             for (let character in battleData.party) {
-                doCharacter(character, -1);
+                doCharacter(character, -1, route == "pixel-remaster");
             }
 
             battleData.shadow.forEach(doCharacter);
