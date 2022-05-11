@@ -11,6 +11,7 @@ urlpatterns = [
     path('glitchless/', TemplateView.as_view(template_name='guides/glitchless.html'), name='glitchless'),
     path('mini-glitch-room-setup/', TemplateView.as_view(template_name='guides/mini-glitch-room-setup.html'), name='mini-glitch-room-setup'),
     path('mini-inventory-warping/', TemplateView.as_view(template_name='guides/mini-inventory-warping.html'), name='mini-inventory-warping'),
+    path('mini-seed-92-manipulation/', TemplateView.as_view(template_name='guides/mini-seed-92-manipulation.html'), name='mini-seed-92-manipulation'),
     path('mini-step-routing/', TemplateView.as_view(template_name='guides/mini-step-routing.html'), name='mini-step-routing'),
     path('no64-excalbur/', TemplateView.as_view(template_name='guides/no64-excalbur.html'), name='no64-excalbur'),
     path('no64-rosa/', TemplateView.as_view(template_name='guides/no64-rosa.html'), name='no64-rosa'),

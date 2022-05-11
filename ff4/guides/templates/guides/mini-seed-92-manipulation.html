@@ -1,0 +1,60 @@
+{% extends "guides/base.html" %}
+{% load static %}
+{% load django_bootstrap_breadcrumbs %}
+
+{% block breadcrumbs %}
+	{{ block.super }}
+	{% breadcrumb "Seed 92 Manipulation" "guides:mini-seed-92-manipulation" %}
+{% endblock %}
+
+{% block subtitle %}Seed 92 Manipulation{% endblock %}
+
+{% block content %}				<h1>Seed 92 Manipulation</h1>
+			<address>Jason Lynch &lt;<a href="mailto:jason@calindora.com">jason@calindora.com</a>&gt; (Aexoden)</address>
+			<h2 id="introduction">Introduction</h2>
+            <p>A key technique used by competitive Final Fantasy IV speedruns is seed 92 manipulation, which provides a guaranteed seed 92 at the start of the game, leading to zero encounters between the start of the game and entering the Village of Mist (as long as you take an extra step before leaving the castle). This document details the technical details of how the manipulation works as well as the procedure for setting it up.</p>
+            <h2 id="basics">Encounter Seed Basics</h2>
+            <p>At any given time, the current encounter pattern is determined by the encounter seed (stored in memory at <code>0x7E17EF</code>). A detailed explation of encounter RNG is beyond the scope of this guide, but suffice it to say that we are primarily interested in the initial value of the encounter seed when starting a new game.</p>
+            <p>In order for you to understand how the initial encounter seed is determined, I must first introduce a value we will refer to as the <i>frame counter</i>. This value (stored in memory at <code>0x7E0FFF</code>), is not surprisingly incremented once per frame in various parts of the game. For our purposes, it's important to note that it is incremented while on the title screen and while walking in the field (overworld and dungeon maps), but is not incremented while in battle or in menus (including the load game menu).</p>
+            <p>The initial encounter seed is determined in one of two ways, depending on if you are starting a new game or loading an existing save:</p>
+            <ul>
+                <li>When starting a new game, the initial encounter seed is set to the current value of the frame counter.</li>
+                <li>When loading an existing save, your initial encounter seed is set to the saved seed value in the saved game plus the current value of the frame counter. (For example, if you are on seed 10 and you save your game, reset, and reload, your new seed will be 10 plus the current value of the frame counter at the time you load the save.)</p>
+            </ul>
+            <p>Putting these facts together, we can analyze how the seed 92 manipulation works.</p>
+            <h2 id="manipulation">How the Manipulation Works</h2>
+            <p>In order for a new game to start on seed 92, the current value of the frame counter must be 92 when "New Game" is selected.</p>
+            <p>When walking near Baron castle, seed 81 turns out to be very convenient. It is the only seed that has an encounter on step 10. Therefore, if we load a game and get an encounter on the 10th step, we know that we are on seed 81.</p>
+            <p>If you load a save, immediately start walking and get an encounter on the 10th step, the frame counter will increment by 234 (160 walking frames plus some as the game loads and as the battle starts). (Certain things can cause an extra frame, like potentially having the Big Whale visible, so avoid that.)</p>
+            <p>The frame counter is a single byte that will wrap around from 255 to 0 each cycle. Since we want the frame counter to be 92 when we enter the battle (as it will not increment during the battle, the subsequent death, or on the load game screen), and since we know that it will increment by 234 frames, we know that we want the initial frame counter when we load the save to be <code>(92 - 234) mod 256 = (92 + 256 - 234) = 114</code>.</p>
+            <p>Putting this all together, we know that we want the value of the frame counter to be 114 when we load our Baron save, and we also know that we want it to be seed 81 (so we get the encounter on the 10th step). Looking back on our rules for seeds when loading a save, we know that we need to load a save that satisfies the equation <code>(X + 114) mod 256 = 81</code>. The answer, which can be calculated via <code>(81 + 256 - 114)</code>, is 223. Therefore, we need a save near Baron on seed 223, ideally set up to make it easy to identify the 10th step, without risk of walking frame imperfectly.</p>
+            <h2 id="setup">Setting Up the Manipulation</h2>
+            <p>Here is my recommended way to set up your cartridge or save file:</p>
+            <div class="float-right" style="margin: 10px;">
+                <img src="{% static 'img/misc/baron-seed-92.png' %}">
+            </div>
+            <ol>
+                <li>Start a new game and proceed until you've entered Mist from the "wrong" side (via the Mist clip). (If you still have a Mist clip save from a previous run, you can just open that and save yourself some time.)</li>
+                <li>Buy a stack of <i>Dancing</i> and then exit the village on the right side. You will reappear on the overworld map to the left of the village.</li>
+                <li>Walk back to near Baron, equipping Kain with one of the <i>Dancing</i> and killing Cecil along the way.</li>
+                <li>From this location near Baron, you should save your game and reload. Using the <i>Outside Baron</i> tab (ignore the other tabs) of <a href="https://docs.google.com/spreadsheets/d/1ff9KXLlYGG8aaHP0OUJGGROvCYIVJcbJ2ca2HoFMdmU/edit?usp=sharing">this spreadsheet</a>, keep reloading until you are on seed 223. If you do a hard reset, pressing the A button on the title screen at the same time will always give you the same seed. (Doing a hard reset varies by emulator. If you are on console, you will need to wait several seconds with the console off. My own console takes up to 17 seconds. If you are using a flash cart, you may not need to wait nearly that long.) Adjust your timing on the title screen until you are on seed 223. This can be the most time consuming step.</li>
+                <li>After confirming seed 223, walk northwest of Baron until you are just south of the river, and either 2, 3 or 4 steps west of the bridge. Save your game. I prefer to change the background color to something distinctive and to save in the third slot. If you don't need slots 2 or 4 for anything, feel free to use those as well as backups.</li>
+            </ol>
+            <p>Congratulations! You are now set up for seed 92 manipulation. Of course, you're not done yet, because you still need to know how to actually use the manipulation to do a run.</p>
+            <h2 id="usage">Using the Manipulation</h2>
+            <p>When you're ready to do a run, you simply need to use the following procedure:</p>
+            <ol>
+                <li>Hard reset your console/emulator. For consoles, power down for up to 17 seconds. For emulators, this varies. Some emulators may have an explicit "hard reset" option, while others may need you to completely reload the ROM file.</li>
+                <li>Start your game and press A on the title screen with the correct timing (see below).</li>
+                <li>Load your seed 223 save and immediately begin holding down to walk (before the game finishes loading).</li>
+                <li>If you get an encounter on step 10 (when you hit the mountains), have Kain kill himself with the <i>Dancing</i> and you're ready to go. You can sit on the load game screen for as long as necessary. (I have left it overnight before doing a run the next day.)</li>
+            </ol>
+            <p>Of course, it sounds easy, but the hard part is finding the correct timing to press A on the title screen. The exact timing will vary from console to console (or emulator to emulator), so you may need to experiment a bit. As with above, if you properly do a hard reset beforehand, the timing should be consistent from attempt to attempt.</p>
+            <p>In order to make this process slightly less painful, consider using my <a href="{% url "guides:mini-glitch-room-setup" %}">Glitch Room Setup</a> guide, which will tell you how to set up a special glitch room that will negate the need for hard resets. Do note that this will only replace the hard reset. You will still need to follow the remaining instructions, including pressing A with the correct timing.</p>
+            <h2 id="resources">Additional Resources</h2>
+            <ul>
+                <li><a href="https://docs.google.com/spreadsheets/d/1ff9KXLlYGG8aaHP0OUJGGROvCYIVJcbJ2ca2HoFMdmU/edit?usp=sharing">Encounter Seed Tutorial Spreadsheet</a> (by <a href="https://www.twitch.tv/endlesstundra">EndlessTundra</a>) (NOTE: The "Instructions" tab is out of date. Just use the "Outside Baron" tab.)</li>
+                <li><a href="https://www.twitch.tv/neerrm/v/6256410">Guaranteed Seed 92 Manipulation</a> (by <a href="https://www.twitch.tv/neerrm">neerrm</a>) (the video may be more helpful than my text)</li>
+                <li><a href="{% url "guides:mini-glitch-room-setup" %}">Glitch Room Setup</a></li>
+            </ul>
+{% endblock %}
