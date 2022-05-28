@@ -12,24 +12,24 @@
 {% block content %}				<h1>Final Fantasy IV Any% No64 (Rosa) Guide</h1>
 			<address>Jason Lynch &lt;<a href="mailto:jason@calindora.com">jason@calindora.com</a>&gt; (Aexoden)</address>
 			<h2 id="introduction">Introduction</h2>
-			<p>These are my notes for the Rosa route of the Final Fantasy IV Any% No64 speedrun. While I am very familiar with the game and the speedrun, I am nonetheless nowhere near being the world record holder in this category or any other, so there are almost certainly faster ways to do things. That said, I do periodically update this document as new techniques and strategies are discovered, so if you follow them, you're probably not doomed to be perilously slow.</p>
-			<p>This particular guide is intended for high-level PB attempts. Beginners may wish to use the marathon guide instead, as it provides extra elixirs, but otherwise, the differences are minimal. Runners using this guide may have trouble competing for the world record time, but times of 3:07 or better are definitely possible. I use this guide for my own PB attempts.</p>
+			<p>These are my notes for the Rosa route of the Final Fantasy IV Any% No64 speedrun. While I am very familiar with the game and the speedrun, some of my strategies do not match those used by the world record runs, so there may be faster ways to do things. That said, I do periodically update this document as new techniques and strategies are discovered.</p>
+			<p>This particular guide is intended for high-level PB attempts. Beginners may wish to use the marathon guide instead, as it provides extra elixirs, but otherwise, the differences are minimal (and the marathon guide is less frequently updated, so it may be missing some helpful commentary). Runners using this guide may have trouble competing for the world record time, but times of 3:05 or better are definitely possible. I use this guide for my own PB attempts.</p>
+            <p>The reader should be careful about prematurely blaming RNG for their times. While there is a substantial RNG component at high levels, until you are able to consistently get times of 3:09 or better, I wouldn't worry about RNG at all. However, it is true that at times closer to the world record, back attack luck and battle RNG can be substantial contributors. I estimate an approximate overally swing of five minutes or so. Some of this can be mitigated by learning how to mitigate RNG in various fights, but certain fights (Octomamm, for instance) remaing problematic. Back attack manipulation may help with back attacks and surprise attacks, but there is at this time no real documentation of the technique and its limitations.</p>
 			<p>For the curious, the following is a short list of differences between this guide and what are generally considered world-record strats:</p>
 			<ul>
 				<li>Two fights in this guide (Rubicant and the grind fight) are done at battle speed 2. In both cases, this sacrifices a few seconds (perhaps upwards of 10 each) per battle to gain a significant amount of consistency.</li>
 				<li>This guide omits using the back row glitch on Cecil, as it requires quite a bit of setup and only saves a few seconds if done perfectly.</li>
-				<li>Some equipment only used for defense may be omitted in world record runs, though I do not know exactly what gets omitted, if anything.</li>
+				<li>Some equipment only used for defense may be omitted in world record runs, though I'm not sure if any of this equipment is still in this guide.</li>
 				<li>Yang's claws can be equipped in the Baigan fight, but this makes an already annoying fight slightly more annoying.</li>
-				<li>A world record run will omit the optional extra two elixir pickups and use a less safe strategy for Zeromus that is about ten seconds faster.</li>
 			</ul>
 			<p>There may be additional differences, but these are the ones I can think of at this time.</p>
 			<h2 id="general-concepts">General Concepts</h2>
-			<p>While these are largely my personal notes used when I actually run the game, a number of people have been using them to learn the run, so I will briefly go over some of the more general concepts that apply to the run. However, the notes will almost certainly still assume you are generally familiar with some of the techniques used speedrunning the game (such as item duplication and run buffering). If you are unfamiliar with these, there are other resources on this site that you may wish to examine.</p>
+			<p>While these are largely my personal notes used when I actually run the game, a number of people have been using them to learn the run, so I will briefly go over some of the more general concepts that apply to the run.</p>
 			<h3 id="general-concepts-route">Route</h3>
 			<p>As I write this, there are several potential routes you may choose to run this category. These routes mostly only differ in the final third of the game, so the first two-thirds are roughly the same in any case. Here is a brief summary:</p>
 			<dl class="row">
-				<dt class="col-2">Rosa</dt><dd class="col-10">This is the fastest route. It relies on Rosa as the primary damage dealer for the final three fights. It can be somewhat technical to execute, and practice is almost certainly required.</dd>
-				<dt class="col-2">Edge+Excalbur</dt><dd class="col-10">This route instead relies on Edge throwing <i>Excalbur</i> as the primary damage. This route is slower than the Rosa route by perhaps two and a half minutes. However, it is arguably both easier to execute and more consistent. The fights are completely scripted with only a single variation in the fight final depending on if Cecil was the target of Nuke or not.</dd>
+				<dt class="col-2">Rosa</dt><dd class="col-10">This is the fastest route. It relies on Rosa as the primary damage dealer for the final three fights. The Zeromus fight can be somewhat technical to execute, and practice is almost certainly required. The best chance of success requires counting damage to some extent during the Zeromus fight.</dd>
+				<dt class="col-2">Edge+Excalbur</dt><dd class="col-10">This route instead relies on Edge throwing <i>Excalbur</i> as the primary damage. This route is slower than the Rosa route by perhaps two and a half minutes. However, it is arguably both easier to execute and more consistent. The fights are completely scripted with only a single variation in the fight final depending on if Cecil was the target of Nuke or not. The biggest advantage is that there is no need to count damage during the Zeromus fight.</dd>
 				<dt class="col-2">Edge+Drain</dt><dd class="col-10">The standard route for a long time, this route primarily does damage by having Edge throw the <i>Drain</i> spear. Exactly how this route compares to Edge+Excalbur time-wise is the subject of debate, but this route is probably no worse than equal to the Edge+Excalbur route, perhaps being 30 seconds faster. However, it is largely deprecated, as it is more difficult to execute and not nearly as fast as the Rosa route.</dd>
 				<dt class="col-2">Berserk Edge</dt><dd class="col-10">This route barely gets an entry, but people have played around with attempting to route it. It is inspired by the glitchless SFC runs.</dd>
 			</dl>
@@ -42,18 +42,49 @@
 			</ol>
 			<p>The &quot;perfect&quot; path is a matter of personal preference and is always up for debate. I make my recommendations throughout this guide, but there are many ways to skin a cat, and you're welcome to develop your own path that suits your playing style better. However, keep in mind the following points:</p>
 			<ul>
-				<li>Cecil absolutely needs to reach level 20 before fighting Rubicant. Otherwise, Rubicant will be approximately twice as fast, and you'll have a bad time.</li>
-				<li>Rosa needs to be level 20 (in order to learn Bersk) by the time you reach Zeromus. This is irrelevant for the Rosa route, but for Drain or Excalbur, it's essential unless you want to wing your own Zeromus strat.</li>
-				<li>Kain ideally should be level 19 by the time you reach Valvalis. While it is possible to defeat Valvalis with a level 18 Kain, the fight is longer and requires a slightly modified strat.</li>
+				<li>Kain ideally should be level 19 by the time you reach Valvalis. While it is possible to defeat Valvalis with a level 18 Kain, it's not recommended.</li>
 				<li>Yang should be level 17 by the time you reach Dr.Lugae. However, it is not absolutely essential, as there are strats to handle a level 16 Yang.</li>
 				<li>Rydia should ideally be level 19 by the time you reach Dr.Lugae, but like with Yang, it is not absolutely essential.</li>
-				<li>Especially toward the later fights, it's best to not have too many people dead, as if Cecil receives too many levels, the Zeromus fight can go badly. For Rosa, you want Cecil to be level 27 or lower, and for Excalbur, level 29 or lower.</li>
+                <li>Cecil should reach level 20 before fighting Rubicant. Otherwise, Rubicant will be approximately twice as fast, and you'll have a bad time. (Actually, this is slightly outdated advice and if you look at my glitchless guide, you will find a version of the Rubicant strat intended for a level 19 Cecil. Future versions of the No64 route may switch to that as well, but figuring out the experience route to consistently have Cecil at level 19 is an adventure.)</li>
+				<li>For the Edge routes, Rosa needs to be level 20 (in order to learn Bersk) by the time you reach Zeromus.</li>
+				<li>Especially toward the later fights, it's best to not have too many people dead, as if Cecil receives too many levels, the Zeromus fight can go badly. For Rosa, you want Cecil to be level 27 or lower, and for Excalbur, level 29 or lower. In addition, there is some evidence to suggest that for the Rosa route, Cecil should stay at level 21.</li>
 			</ul>
 			<p>In these notes, I recommend a particular experience path. However, it isn't necessary to follow it exactly, so long as the above goals are maintained. Consult some of the other guides (especially riversmccown's guide) for more information on other possibilities.</p>
+            <h3 id="general-concepts-item-duplication">Item Duplication</h3>
+            <p>There are two primary methods of item duplication. One, used within the spoils screen after battle or after opening a chest with a full inventory, is used to duplicate consumables and is unused in this run.</p>
+            <p>The other is used to duplicate weapons and shields and is used several times. There are two variants: a single duplication (which results in two of the target item) and a full duplication (which primarily results in 256 of the target item). Regardless of which you are using, the technique starts out the same:</p>
+            <ol>
+                <li>Open your inventory in battle and select any empty spot in the inventory other than the first empty one. (Press A to select that empty slot.)</li>
+                <li>Move up to your hand inventory and select the desired hand to duplicate. (Press A to select that hand.)</li>
+            </ol>
+            <p>If performing a single duplication, you are done with the in-battle portion. If performing a full duplication, continue with the following steps:</p>
+            <ol start="3">
+                <li>Select the same hand inventory spot again. (Press A to select that hand again.)</li>
+                <li>Move down and select the originally selected empty spot once more. (At this point, you have pressed A a total of four times.)</li>
+            </ol>
+            <p>At this point, you have pressed A a total of either two or four times (depending on which dupe). The rest of the duplication takes place out of battle. Keep in mind this is a basic description and you may see some runners do more advanced techniques at times. To complete the dupe, perform the following steps out of battle:</p>
+            <ol>
+                <li>Open the equip menu for the targeted character and find the hand you duplicated. If doing a full dupe, you should see a 5 next to the slot.</li>
+                <li>In that hand, equip the item you wish to duplicate. If doing a single dupe, they should now have 2 equipped.</li>
+                <li>Either way, unequip the item in question. (I'm not sure what happens if you tried to dupe from a stack of more than one, but that shouldn't come up in this run anyway.)</li>
+                <li>If you did the full dupe and are duping for money, you are now done, and simply need to sell that slot you just unequipped to. If you actually want the duplicated item, equip it once more. If you did a single dupe, you will now have one in your hand and one remaining in the inventory. If you did a full dupe, you will have one in your hand and 255 in your inventory.</li>
+            </ol>
+            <p>In order to hopefully prevent some common points of confusion, keep the following points in mind:</p>
+            <ul>
+                <li>The item you are duping is not determined until you equip it out of battle. It doesn't matter what you have equipped in battle (except that it can't be nothing). (For example, if Yang has the FireClaw equipped and you dupe that hand, you can still dupe the IceClaw by equipping it out of battle.) During the in battle stage, you are glitching the hand, not the item.</li>
+                <li>Any glitched slots in your inventory will be &quot;fixed&quot; if you get into a battle. (Glitched hands will remain glitched.) If you are doing the dupe for money, make sure you don't get into a battle after you have finished the dupe in the equip screen (but before you have sold the empty slot).</li>
+            </ul>
+            <h3 id="general-concepts-run-buffering">Run Buffering</h3>
+            <p>An incredibly important technique for the speedrun is something called &quot;run buffering&quot; or &quot;'can't run' buffering&quot;. When attempting to run from a fight that cannot be run from (such as a boss fight), the game displays a dialog box that informs the player of their inability to run (hence the name of the technique). While this dialog is displayed, the ATB does not advance, but the player may input commands.</p>
+            <p>To properly execute a run buffer, once a character's menu has begun to open, hold L and R to attempt to run. Do note that the required timing on these buffers varies throughout the run. (Some of them have very strict required timing while others are more lenient.) For some of the more difficult buffers, common techniques are musical cues or to listen for the menu chime.</p>
+            <p>In addition, on occasion, you may need to buffer out of a command. In other words, after selecting and confirming the target of a command, quickly hold L and R. This technique is used infrequently, but is important when it is.</p>
+            <h3 id="general-concepts-pause-buffering">Pause Buffering</h3>
+            <p>Going along with run buffering is something called pause buffering. This technique allows one to guarantee perfect run buffer timing. This is mostly for consistency, and at this time, I think I'm the only runner who consistently uses it.</p>
+            <p>To execute a pause buffer, wait until the target character's turn is approaching. (In other words, wait until you've confirmed the previous character's action or until a preceding animation has finished.) At this point, pause the game. You are looking for the target character to begin flashing. If they have not after a second or two, quickly unpause and repause the game. This will allow one ATB tick to pass. Again, check for the target character to flash. Repeat the process as necessary until they are flashing. At this point, you should hold down L and R, and then press Start to unpause. The run buffer will immediately take effect as the character's menu pops up.</p>
 			<h3 id="general-concepts-inventory-management">Inventory Management</h3>
 			<p>Another important aspect of any No64 run is inventory management. You end up with a very full inventory and optimizing the location of items in the inventory is essential to a good run. This guide makes some recommendations, but ultimately, you will need to come up with an inventory management scheme you're comfortable with.</p>
 			<h3 id="general-concepts-mimic-glitch">Mimic Glitch</h3>
-			<p>You have the option of using the Mimic Glitch (AKA <i>Carrot</i>/<i>TrashCan</i>) to defeat Milon and/or Milon Z. Learning these is beyond the scope of this guide, but it may be useful to know that you only need to pick up the <i>Carrot</i> or move the <i>TrashCan</i> to the top of the inventory if you intend to utilize these strategies.</p>
+			<p>You have the option of using the Mimic Glitch (AKA <i>Carrot</i>/<i>TrashCan</i>) to defeat Milon and/or Milon Z. Learning these is beyond the scope of this guide, but it may be useful to know that you only need to pick up the <i>Carrot</i> or move the <i>TrashCan</i> to the top of the inventory if you intend to utilize these strategies. Keep in mind that this glitch is only possible on the original USA revision (sometimes called 1.0). The glitch was fixed in Rev 1 (sometimes called 1.1).</p>
 			<h3 id="general-concepts-assumptions">Assumptions</h3>
 			<p>This guide makes the assumption that you are following along from start to finish. Menuing instructions assume that your characters are already equipped as per the guide, and won't list equipment that is staying the same. If you attempt to join in the middle, you may miss this or similar points.</p>
 			<p>This guide is primarily meant to serve as my notes for personal best attempts. As such, they generally tend to err on the side of less safety. In some cases, notes are made regarding potential safer strats for beginners, but they may not be entirely consistent throughout the document (especially regarding inventory management).</p>
@@ -133,7 +164,13 @@
 				</div>
 			</div>
 			<h3 id="walkthrough-mist-clip">Mist Clip</h3>
-			<p>After the battle, exit the cave and head toward Mist. When you approach the last tile before the town, hold left, and then hold X. When the menu opens, release the keys, and then use the <i>Tent</i>. After the night is over, and Cecil lowers his arm, begin to hold right, and almost immediately after, begin to hold X (while continuing to hold right). Once the menu is open, you can release the keys.</p>
+			<p>After the battle, exit the cave and head toward Mist. While moving right as you approach the last tile before the town, hold left, and then hold X. The menu should open immediately after you turn around, but before you move any further. When the menu opens, release the buttons, and then use the <i>Tent</i>. After the night is over, and Cecil lowers his arm, begin to hold right, and almost immediately after, begin to hold X (while continuing to hold right). Once the menu is open, you can release the buttons.</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+				<p>If you are interested in manipulating your seed on a soft reset, this is what I consider the best time to do so. After using the <i>Tent</i>, find a consistent time to start a timer. I use the fifth note of the <i>Tent</i> song. Begin your rightward movement at your target time.</p>
+                <p>The hard part, of course, is determining your target time. This will require you to be very consistent in your mashing or to be using turbo. In addition, you will need to be close to frame perfect in your walking (including opening the door, getting the <i>Tent</i>, talking to the lady near Cecil's bedroom, getting the <i>Carrot</i>, and getting and riding the Chocobo). The closer you are to perfect in these, the more consistent your ability to target your seed on the soft reset. For reference, when using turbo, I begin my rightward walk at approximately 10.6 seconds on the timer. This fairly consistently puts me in the 40s. On non-turbo, the range is much wider (upwards of 80 frames), and I haven't figured out the ideal timing.</p>
+			</div>
 			<div class="bs-callout bs-callout-info">
 				<span class="fas fa-bars"></span>
 				<h4>Menu</h4>
@@ -233,22 +270,23 @@
 				<h5>Battle Plan</h5>
 				<div class="info-block">
 					<p>The following turn order assumes nothing goes particularly badly. Depending on how the battle actually flows, you may need to have Tellah revive Rydia with Life1 or cure the party with Cure2. Research suggests it is optimal for Tellah to stop himself on his third turn, but you can delay this if you need to cure. If Tellah gets any additional turns after casting Stop, it's easiest to just Parry.</p>
+                    <p>I recommend holding Up+A starting on the black screen before the fight, so Cecil will enter the item menu immediately when his turn comes up.</p>
 					<dl class="dl-horizontal">
 						<dt>Cecil</dt><dd>Equip <i>Darkness</i> (sword)<br>Fight</dd>
 						<dt>Tellah</dt><dd>Cast Lit-1</dd>
 						<dt>Rydia</dt><dd>Equip <i>Dancing</i><br>Use <i>Dancing</i></dd>
-						<dt>Cecil</dt><dd>Inventory Management<br>Fight</dd>
+						<dt>Cecil</dt><dd>Move <i>Shadow</i> (sword) to 4L<br>Swap <i>Shadow</i> (sword) and <i>TrashCan</i><br>Fight</dd>
 						<dt>Tellah</dt><dd>Cast Lit-1</dd>
-						<dt>Cecil</dt><dd>Inventory Management<br>Fight</dd>
+						<dt>Cecil</dt><dd>Move <i>Rod</i> to bottom<br>Fight</dd>
 						<dt>Rydia</dt><dd>Use <i>Dancing</i></dd>
 						<dt>Tellah</dt><dd>Cast Stop on Tellah</dd>
 						<dt>Cecil</dt><dd>Fight</dd>
 						<dt>Rydia</dt><dd>Use <i>Dancing</i><br>Run Buffer</dd>
-						<dt>Cecil</dt><dd>Inventory Management<br>Fight</dd>
+						<dt>Cecil</dt><dd>Fight</dd>
 						<dt>Cecil</dt><dd>Fight</dd>
 						<dt>Rydia</dt><dd>Use <i>Dancing</i></dd>
 					</dl>
-					<p>At this point, just continue the pattern until Octomamm dies.</p>
+					<p>At this point, just continue the pattern until Octomamm dies. Getting the two inventory management opportunities to happen correctly on Cecil's second and third turns requires good execution of the first few turns.</p>
 				</div>
 			</div>
 			<p>Immediately after the battle, open the menu.</p>
@@ -273,7 +311,7 @@
 						<dt>HP</dt><dd>1000</dd>
 						<dt>EXP</dt><dd>1500</dd>
 						<dt>Party</dt><dd>Rydia (4:400) / *empty / Edward (5:388) / *Cecil (11:4230) / empty</dd>
-						<dt>Inventory Goals</dt><dd><i>Life</i> to 5R (if unused)</dd>
+						<dt>Inventory Goals</dt><dd><i>Life</i> to 5R (if unused)<br><i>Dreamer</i> to bottom (if you get a chance)</dd>
 					</dl>
 				</div>
 				<h5>Battle Plan</h5>
@@ -281,13 +319,13 @@
 					<dl class="dl-horizontal">
 						<dt>Cecil</dt><dd>Use <i>Life</i> on Rydia/Parry</dd>
 						<dt>Edward</dt><dd>Equip <i>Dancing</i><br>Use <i>Dancing</i></dd>
-						<dt>Rydia</dt><dd>Inventory Management<br>Use <i>Dancing</i></dd>
+						<dt>Rydia</dt><dd>Move <i>Life</i> to 5R<br>Use <i>Dancing</i></dd>
 						<dt>Cecil</dt><dd>Parry</dd>
 						<dt>Edward</dt><dd>Run Buffer<br>Use <i>Dancing</i></dd>
 						<dt>Cecil</dt><dd>Parry (or perhaps Fight&mdash;see below)</dd>
 						<dt>Rydia</dt><dd>Use <i>Dancing</i></dd>
 					</dl>
-					<p>Depending on damage rolls, Cecil may be able to Fight on his last turn instead of Parrying. He can do anywhere from 0-70 damage, with a median value of 54.</p>
+					<p>Depending on damage rolls, Cecil may be able to Fight on his last turn instead of Parrying. He can do anywhere from 0-70 damage, with a median value of 54. If you think Edward is likely to kill Antlion with his dagger or if you intend to Fight, this is a great time to have Cecil move <i>Dreamer</i> to the bottom of the inventory.</p>
 				</div>
 			</div>
 			<p>Walk out of the cave, board the hovercraft, and return to Kaipo, making sure to park directly to the left of the town.</p>
@@ -370,7 +408,7 @@
 						<dt>HP</dt><dd>General: 320 / Fighter: 65</dd>
 						<dt>EXP</dt><dd>820</dd>
 						<dt>Party</dt><dd>empty / *Yang (10:2553) / Edward (9:2180) / *Cecil (12:5222) / empty</dd>
-						<dt>Inventory Goals</dt><dd><i>Dreamer</i> to bottom</dd>
+						<dt>Inventory Goals</dt><dd><i>Dreamer</i> to bottom (if not done earlier)</dd>
 					</dl>
 				</div>
 				<h5>Battle Plan</h5>
@@ -528,7 +566,7 @@
 				<ul>
 					<li>Buy 10 <i>Gaea</i> (helm), 10 <i>Silver</i> (ring), 1 <i>Paladin</i> (shield), 1 <i>Paladin</i> (gauntlet).</li>
 				</ul>
-				<p>If you want additional safety during the Milon fights, you can also buy <i>Gaea</i> (armor). Technically, the <i>Paladin</i> equipment and <i>Silver</i> (ring) are also just for safety, but I still use them.</p>
+				<p>If you want additional safety during the Milon fights, you can also buy <i>Gaea</i> (armor).</p>
 			</div>
 			<p>Exit the town and head east to Mt.Ordeals.</p>
 			<h3 id="walkthrough-mt-ordeals">Mt.Ordeals</h3>
@@ -605,8 +643,10 @@
 							<dt>Porom</dt><dd>Pause Buffer then Run Buffer<br>Use <i>Cure2</i> on Ghast<br>Run Buffer</dd>
 							<dt>Cecil</dt><dd>Equip <i>Darkness</i> (sword)<br>Swap <i>Black</i> (sword) and <i>Paladin</i> (shield) (optional)<br>Move <i>Black</i> (sword) to bottom (optional)<br>Half-use <i>Cure2</i> (don't select a target, but cancel back to the item selection instead)<br>Swap <i>Cure2</i> and <i>Carrot</i><br>Close menu and wait</dd>
 						</dl>
-						<p>This strategy is incredibly timing-sensitive. There are many ways it can go wrong, and the only way to really get good at this strategy is to practice it over and over. Porom's first run buffer has an incredibly short window, and in my experience, you must slightly anticipate it unless you have excellent reaction times. A relatively consistent method (if you're musically inclined) is to note that the proper time to run buffer is exactly four beats of the song after you confirm Fire1 (thanks to <a href="https://www.twitch.tv/SwimmyLionni">SwimmyLionni</a> for telling me this). Regarding Tellah casting Stop, you may have better success if you have him wait a second or two before casting. Porom's second run buffer is more important. The first might be prevented by Milon taking an invisible turn.</p>
-						<p>The notes talk about pause buffering before Porom's final turn. To execute this, immediately pause once you queue Stop. Continue unpausing and pausing quickly until you see Porom flashing. At this point, hold down L and R and unpause. This allows you to get the run buffer in as quickly as possible. This is only necessary on battle speed 1, and can also be omitted if you're confident on the run buffer timing. Do note, however, that there is an incredibly short, approximately six frame window.</p>
+						<p>This strategy is incredibly timing-sensitive. There are many ways it can go wrong, and the only way to really get good at this strategy is to practice it over and over. Porom's first run buffer has an incredibly short window, and in my experience, you must slightly anticipate it unless you have excellent reaction times. A relatively consistent method (if you're musically inclined) is to note that the proper time to run buffer is exactly four beats of the song after you confirm Fire1 (thanks to <a href="https://www.twitch.tv/SwimmyLionni">SwimmyLionni</a> for telling me this).</p>
+                        <p>Regarding the final sequence, once you queue Tellah's stop, Porom must queue her <i>Cure2</i> before too many ticks pass, or Tellah will finish casting Stop before Cecil gets his menu. As a result, the buffers on Porom's turn are incredibly important. <strong>If Tellah beats Cecil, it most likely does not mean you were too fast with Tellah (unless you were plinking on Tellah's turn, then you might be too fast). It means you were too slow with Porom.</strong> If you delay Tellah's turn by a couple of seconds, on many patterns, this will result in Porom's turn being buffered for free by an invisible Milon turn. This is not guaranteed, however, so it's safer to simply go at a normal speed with Tellah and then rely on the pause buffer to get the run buffer in quickly. Regardless of how you do the opening buffer, the buffer after queueing the <i>Cure2</i> is very important.</p>
+                        <p>To execute the pause buffer, pause the game immediately after you queue Stop. Watch for Porom to flash. If she doesn't within a second or two, quickly unpause and repause once to pass an ATB tick. Repeat until she is flashing. At this point, hold down L and R and press start to unpause. This allows you to get the run buffer in as quickly as possible. This is only necessary on battle speed 1, and can also be omitted if you're confident on the run buffer timing. Do note, however, that there is an incredibly short window to get the first buffer of approximately six frames.</p>
+                        <p>Finally, if you are too slow on Tellah's turn, Milon will get a chance to cast Lit-1 before the final Carrot toss. If you're particularly unlucky, this Lit-1 will strike and kill Palom. Great way to end a run, that.</p>
 					</div>
 				</div>
 			</div>
@@ -617,6 +657,7 @@
 					<li>Set battle speed to 1 (if set to 2).</li>
 					<li>Fully heal the party (including MP if necessary).</li>
 					<li>Change rows and swap Porom and Tellah. (Form, Left, A, Up, A)</li>
+                    <li>If you haven't yet, now's another great time to equip Tellah with a <i>Gaea</i> (helm).</li>
 					<li>If using the Cure2 strategy, cast Piggy on all party members.</li>
 				</ul>
 			</div>
@@ -641,21 +682,25 @@
 				</ul>
 				<div class="info-block tab-content">
 					<div class="tab-pane fade" id="tab-battle-milonz-cure2">
-						<p>Cecil should Fight and everyone else should use <i>Cure2</i> on Milon Z.</p>
+						<p>Everyone should use <i>Cure2</i> on Milon Z.</p>
+                        <p>If Cecil still has <i>Black</i> equipped, you can have him Fight instead.</p>
 						<p>It's unlikely you'll need to heal, but if you do, you have plenty of <i>Life</i> or <i>Cure2</i> potions.</p>
-						<p>The experience path assumes one character (specifically Porom) dies here. If you're close to finishing the battle and everyone is still alive, you may want to kill someone to keep your experience path intact (doesn't matter who). If only two survive, that's even better, as it helps ensure that Rosa will reach level 20 before Rubicant.</p>
+						<p>The experience path assumes one character (specifically Porom) dies here. If you're close to finishing the battle and everyone is still alive, you may want to kill someone to keep your experience path intact (doesn't matter who). If only one or two survive, that's even better, but I wouldn't go out of your way to force it.</p>
 					</div>
 					<div class="tab-pane fade show active" id="tab-battle-milonz-mimic">
-						<p>Hold Up and A starting from the black screen. Release as soon as you hear Cecil's item menu trigger.</p>
+						<p>Hold Up and A starting from the black screen. If Milon attacks Cecil or Tellah, you can simply release up so Cecil attacks instead. Otherwise, release as soon as you hear Cecil's item menu trigger.</p>
 						<dl class="dl-horizontal">
-							<dt>Cecil</dt><dd>Use <i>Cure2</i>/Use <i>Heal</i></dd>
+							<dt>Cecil</dt><dd>Use <i>Cure2</i>/Fight</dd>
 							<dt>Palom</dt><dd>Cast Ice-2 on Porom</dd>
+                        </dl>
+                        <p>If Milon attacks here before Tellah's menu pops up, you will need to run buffer on Tellah's turn.</p>
+                        <dl class="dl-horizontal">
 							<dt>Tellah</dt><dd>Cast Stop on Cecil</dd>
-							<dt>Porom</dt><dd>Run Buffer<br>Twin</dd>
-							<dt>Cecil</dt><dd>Half-use <i>Cure2</i> (don't select a target, but cancel back to the item selection instead)<br>Swap <i>Cure2</i> and <i>TrashCan</i><br>Close menu and wait</dd>
+							<dt>Porom</dt><dd>Run Buffer (but not too quickly)<br>Twin</dd>
+							<dt>Cecil</dt><dd>Half-use <i>Cure2</i> (don't select a target, but cancel back to the item selection instead)<br>Swap <i>Cure2</i> and <i>TrashCan</i><br>Move <i>Cure2</i> to 2R (optional inventory management)<br>Close menu and wait</dd>
 							<dt>Tellah</dt><dd>Equip <i>Change</i> (rod)<br>Inventory Management</dd>
 						</dl>
-						<p>The experience path assumes one character dies here (specifically Porom). If you somehow get into a situation where two are dead, that's even better, as it helps ensure that Rosa will reach level 20 before Rubicant.</p>
+						<p>The experience path assumes one character dies here (specifically Porom). If you somehow get into a situation where two or three are dead, that's even better, but the only way that happens without the strat going badly is is if Milon Z snipes Cecil at the end.</p>
 					</div>
 				</div>
 			</div>
@@ -679,7 +724,8 @@
 						<dt>Cecil</dt><dd>Equip <i>Paladin</i> (shield)<br>Use <i>Dancing</i></dd>
 						<dt>Cecil</dt><dd>Run Buffer<br>Use <i>Dancing</i></dd>
 					</dl>
-				</div>
+                    <p>There is a very small chance you'll need a fifth dagger. Ideally, you'll kill him on the third, but that only happens about a third of the time.</p>
+                </div>
 			</div>
 			<p>After the scenes, descend the mountain and head to the chocobo forest. Catch a yellow chocobo and travel back to Mysidia.</p>
 			<p>Talk to the elder, and then head to Baron via the Serpent Road.</p>
@@ -704,7 +750,7 @@
 						<dt>Palom</dt><dd>Equip <i>Dancing</i><br>Use <i>Dancing</i></dd>
 						<dt>Tellah</dt><dd>Equip <i>Change</i> (if not already equipped)<br>Inventory Management</dd>
 					</dl>
-					<p>If either Cecil or Palom are unable to kill their respective Guards, Tellah should cast Virus.</p>
+					<p>If either Cecil or Palom are unable to kill their respective Guards, Tellah should cast Virus on all enemies.</p>
 				</div>
 			</div>
 			<div class="bs-callout bs-callout-warning">
@@ -731,7 +777,7 @@
 						<dt class="col-6">6.0 seconds</dt><dd class="col-6">Hold A at about 13.2 seconds</dd>
 						<dt class="col-6">7.3 seconds</dt><dd class="col-6">Hold A at about 15.8 seconds</dd>
 					</dl>
-					<p>Originally, I tried using musical cues, but the problem is that the music doesn't restart for the second battle.</p>
+					<p>Originally, I tried using musical cues, but the problem is that the music doesn't restart for the second battle. These timings aren't perfect, but I haven't gotten around to improving them.</p>
 				</div>
 			</div>
 			<p>After the scenes, head to the Baron weapon and armor shop.</p>
@@ -788,8 +834,7 @@
 			<div class="bs-callout bs-callout-danger">
 				<span class="fas fa-exclamation-triangle"></span>
 				<h4>Experience Path</h4>
-				<p>If you are unable to kill Yang at Baigan, your experience path becomes a little more dicey. Keep Yang alive for Kainazzo, and continue on to Dark Elf, where you'll have to make a decision during the battle.</p>
-				<p>(This assumes both twins were dead. Routing experience in the event one or both of them survives is beyond the scope of this guide.)</p>
+                <p>If you are unable to kill Yang at Baigan, your experience path may become slightly more difficult. If Yang's HP are low enough that he'll die to Wave, just don't heal him and let him die at Kainazzo, and you should be okay. Refer to the <a href="{% url 'tools:experience-route-calculator' %}">Experience Route Calculator</a> for more complicated scenarios (like twins that survived).</p>
 			</div>
 			<div class="bs-callout bs-callout-info">
 				<span class="fas fa-bars"></span>
@@ -822,6 +867,7 @@
 						<dt>Tellah</dt><dd>Cast Lit-3</dd>
 						<dt>Cecil</dt><dd>Wait for Lit-3<br>Inventory Management</dd>
 					</dl>
+                    <p>If Tellah rolls low here, have Cecil and Yang fight and then Tellah can cast Virus.</p>
 				</div>
 			</div>
 			<div class="bs-callout bs-callout-danger">
@@ -847,14 +893,9 @@
 			<div class="bs-callout bs-callout-danger">
 				<span class="fas fa-exclamation-triangle"></span>
 				<h4>Experience Path</h4>
-				<p>If you were unable to kill Yang during the Baigan fight, please read the below information (you can ignore it otherwise):</p>
-				<p>During the upcoming Dark Elf fight, Dark Elf will cast Weak. You have different options to fix your experience path depending on who is targeted.</p>
-				<dl class="dl-horizontal">
-					<dt>Tellah</dt><dd>This is the best case scenario. If Dark Elf uses Weak on Tellah, kill him before ending the fight. This is worth doing even if Yang was dead at Baigan, if three people survived at Milon Z. It makes the path slightly safer.</dd>
-					<dt>Yang</dt><dd>Killing Yang if Dark Elf uses Weak against him will almost fix everything, but you can still end up with a level 16 Yang at Dr.Lugae. If three characters survived at Milon Z. (most likely), you'll want to kill off Cid toward the end of the Valvalis fight.</dd>
-					<dt>Cecil</dt><dd>The situation's looking more grim in this case. You can either kill Cecil in this fight and then absolutely ensure that Cid dies at Valvalis (or Cecil won't get enough experience to reach level 20 by Rubicant), or you can skip killing Cecil, and follow the below instructions for Nobody instead.</p>
-					<dt>Nobody</dt><dd>If Dark Elf misses Weak (as he is wont to do when you really need it), you're going to have to do the hard work yourself. The best option is probably to simply kill off Tellah manually. (Parry back to Tellah's turn, have him Virus himself, then kill off Dark Elf. It will cost you something like 30 seconds, but <strong>two people (including Cid) need to die in this fight</strong>).</p>
-				</dl>
+				<p><strong>If you were unable to kill Yang during either of the Baigan or Kainazzo fights, please read the below information (you can ignore it otherwise and skip straight to the battle notes):</strong></p>
+                <p>As it stands now, Kain will not reach level 19 before Valvalis and Rydia won't reach level 19 before Dr.Lugae. As you may recall, this is bad. During the upcoming Dark Elf fight, Dark Elf will cast Weak. Your mission is to kill whoever gets targeted.</p>
+                <p>If Dark Elf misses Weak, you're going to have to do the hard work yourself. Your best option is to have Tellah cast Virus on someone, probably himself (after he has cast Weak on the Dark Elf dragon form).</p>
 			</div>
 			<div class="bs-callout bs-callout-warning">
 				<span class="fas fa-bolt"></span>
@@ -883,12 +924,11 @@
 						<dt>Yang</dt><dd>Parry</dd>
 						<dt>Cecil</dt><dd>Fight</dd>
 						<dt>Tellah</dt><dd>Wait for &quot;ME CHANGE!&quot;<br>Equip <i>Thunder</i> (rod)<br>Cast Weak</dd>
-						<dt>Yang</dt><dd>Duplicate <i>IceClaw</i> slot<br>Fight</dd>
+						<dt>Yang</dt><dd>Duplicate <i>IceClaw</i> slot<br>Fight (unless you need to kill someone)</dd>
 						<dt>Cecil</dt><dd>Inventory Management</dd>
 					</dl>
 					<p>If Cecil's first damage roll is 684 or less, Yang should Fight on his second turn instead of Parrying.</p>
 					<p>If Cecil's first damage roll is 942 or greater, Cid should Fight, Yang should fight on his second turn, and Cecil should Parry on his second turn. (The run buffer after Virus is not necessary in this scenario.)</p>
-					<p>If three characters survived at Milon Z. and the opportunity for killing Tellah presents itself, take it.</p>
 				</div>
 			</div>
 			<p>After the battle, get the crystal and leave the room.</p>
@@ -932,14 +972,14 @@
 						<dt>Cecil</dt><dd>Pause Buffer after Fire to Run Buffer<br>Cover Tellah<br>Run Buffer</dd>
 						<dt>Yang</dt><dd>Fight Yang</dd>
 						<dt>Tellah</dt><dd>Cast Ice-2</dd>
-						<dt>Cecil</dt><dd>Wait for Ice-2<br>Swap <i>Earth</i> and single <i>Dancing</i><br>Single duplicate weapon slot<br>Inventory Management</dd>
+						<dt>Cecil</dt><dd>Wait for Ice-2<br>Swap <i>Earth</i> and single <i>Dancing</i><br>Single duplicate weapon slot<br>Move <i>Legend</i> to 5R</dd>
 					</dl>
 				</div>
 			</div>
 			<div class="bs-callout bs-callout-danger">
 				<span class="fas fa-exclamation-triangle"></span>
 				<h4>Experience Path</h4>
-				<p>If Yang dies to FlameDog, you'll either have to a) resign yourself to a level 16 Yang at Dr.Lugae, b) use the Life glitch to kill three extra blue dolls at Calbrena or c) revive Yang at Golbez. The level 16 Yang method is probably the simplest.</p>
+				<p>If Yang dies to FlameDog, you'll either have to either resign yourself to a level 16 Yang at Dr.Lugae (which typically isn't the end of the world) or use the Life glitch to kill an extra blue doll at Calbrena (good luck getting favorable timing for that one).</p>
 			</div>
 			<div class="bs-callout bs-callout-info">
 				<span class="fas fa-bars"></span>
@@ -1019,8 +1059,8 @@
 						<dt>Cecil</dt><dd>Use <i>Dancing</i></dd>
 						<dt>Cid</dt><dd>Fight</dd>
 						<dt>Kain</dt><dd>Jump</dd>
-						<dt>Yang</dt><dd>Run Buffer<br>Kick</dd>
-						<dt>Rosa</dt><dd>Wait for Valvalis to transform<br>Use <i>Cure2</i> on Cecil/Parry</dd>
+						<dt>Yang</dt><dd>Run Buffer<br>Fight</dd>
+						<dt>Rosa</dt><dd>Wait for the end of the Valvalis transformation <br>Use <i>Cure2</i> on Cecil/Parry</dd>
 					</dl>
 					<p>At this point, Valvalis transforms into her tornado form.</p>
 					<dl class="dl-horizontal">
@@ -1037,7 +1077,7 @@
 						<dt>Cecil</dt><dd>Use <i>Dancing</i></dd>
 					</dl>
 					<p>If the damage rolls were decent, Kain can Fight on his last turn instead of Jumping. If Valvalis still doesn't die, just continue the normal pattern. She won't have much HP left at this point.</p>
-					<p>If Cid dies, leave him dead, as it will help Rosa's experience path. Everyone else (except perhaps Cecil) optimally needs to survive. Being fully stoned counts as death, but it can be hard to see if this is the case or not.</p>
+					<p>If Cid dies, leave him dead, as it will help the experience path. Everyone else (except perhaps Cecil) optimally needs to survive. Being fully stoned counts as death, but it can be hard to see if this is the case or not.</p>
 					<p>If you want to ensure a level 19 Rydia for Dr.Lugae, make sure Cid dies here. Depending on your exact experience path, this may not be necessary, but it is if you are following this guide exactly.</p>
 				</div>
 			</div>
@@ -1067,24 +1107,25 @@
 				<h5>Battle Plan</h5>
 				<div class="info-block">
 					<dl class="dl-horizontal">
-						<dt>Kain</dt><dd>Run Buffer<br>Jump center Blue</dd>
-						<dt>Cecil</dt><dd>Use <i>Dancing</i> on center Orange</dd>
+						<dt>Kain</dt><dd>Run Buffer<br>Jump top Blue</dd>
+						<dt>Cecil</dt><dd>Use <i>Dancing</i> on bottom Orange</dd>
 						<dt>Yang</dt><dd>Kick</dd>
 						<dt>Rosa</dt><dd>Cast Slow on all enemies</dd>
 						<dt>Cecil</dt><dd>Use <i>Dancing</i> on top Orange</dd>
 						<dt>Rosa</dt><dd>Cast Mute on party</dd>
-						<dt>Kain</dt><dd>Jump top Blue</dd>
-						<dt>Yang</dt><dd>Kick</dd>
-						<dt>Cecil</dt><dd>Use <i>Dancing</i> on bottom Blue</dd>
-						<dt>Rosa</dt><dd>Use <i>Cure2</i> on Cecil/Parry</dd>
-						<dt>Yang</dt><dd>Kick</dd>
-					</dl>
-					<p>If you have more than one blue and one orange doll remaining at this point, you need to do whatever it takes to eliminate the others. Only do the following once there are two dolls remaining.</p>
-					<dl class="dl-horizontal">
 						<dt>Kain</dt><dd>Jump bottom Blue</dd>
-						<dt>Cecil</dt><dd>Use <i>Dancing</i> on bottom Orange</dd>
+						<dt>Yang</dt><dd>Kick</dd>
+						<dt>Cecil</dt><dd>Use <i>Dancing</i> on middle Blue</dd>
+						<dt>Rosa</dt><dd>Use <i>Cure2</i> on Cecil/Parry</dd>
+						<dt>Yang</dt><dd>Kick/Fight</dd>
+					</dl>
+					<p>If you have more than one blue and one orange doll remaining at this point, you need to do whatever it takes to eliminate the others. Often, you can change Yang's previous turn to Fight the doll that's hanging around, but this is a situation that you have to play by ear. Relying on Yang for anything here can be scary. In any case, only do the following once there are two dolls remaining.</p>
+					<dl class="dl-horizontal">
+						<dt>Kain</dt><dd>Jump remaining Blue</dd>
+						<dt>Cecil</dt><dd>Use <i>Dancing</i> on remaining Orange</dd>
 					</dl>
 					<p>If you accidentally trigger the big doll, immediately change rows, have Kain Jump, and have Cecil keep himself healed with <i>Cure2</i> potions. If you're lucky, you won't trigger the damage range that results in the dolls splitting again. (It's based on damage, not on time.)</p>
+                    <p>Try to make sure Kain is on the ground before queuing Mute, or it'll miss Kain. The mute status helps with the Dr.Lugae fight. Sometimes the timing of the fight doesn't make this easy.</p>
 				</div>
 			</div>
 			<div class="bs-callout bs-callout-warning">
@@ -1109,7 +1150,7 @@
 						<dt>Cecil</dt><dd>Fight</dd>
 						<dt>Rydia</dt><dd>Cast Fire2</dd>
 					</dl>
-					<p>If you are following my inventory management route, the following instructions will get everything set up for what's next. During each line of Golbez's speech, move one of the following items to the bottom: <i>Headband</i>, <i>Karate</i>, <i>Wind</i>, and <i>Silver</i>.</p>
+					<p>If you are following my inventory management route, the following instructions will get everything set up for what's next. During each line of Golbez's speech, move one of the following items to the bottom: <i>Headband</i>, <i>Karate</i>, <i>Silver</i>, and <i>Wind</i>.</p>
 					<p>There are three different <i>Silver</i> items, for a total of six items.</p>
 					<p>During the first Demolish animation, equip <i>Fire</i> (sword) and move the single <i>Dancing</i> to 7L (next to <i>Prisoner</i>).</p>
 					<p>During the second, swap the stack of <i>Dancing</i> and <i>Legend</i>. Then swap <i>Ether1</i> and <i>Prisoner</i>.</p>
@@ -1142,9 +1183,9 @@
 					<li>Equip Rydia: <i>Change</i>/*/<i>Tiara</i>/<i>Prisoner</i>/<i>Rune</i>.</li>
 					<li>Swap Cecil and Rosa. (Form, A, Up, Up, A)</li>
 				</ul>
-				<p>If you are on pace to have a level 16 Yang at Dr.Lugae, give the <i>Strength</i> (ring) to Yang instead of Kain.</p>
+                <P>There has been some talk about giving the <i>Strength</i> (ring) to Yang instead of Kain if Yang is level 16. My experience and limited bot data suggests it doesn't really matter and may even be harmful to do so. I'd advise against it, but this note is left here in case you want to experiment.</p>
 			</div>
-			<p>Travel through the passage underneath the Castle to the Dwarf Base. If you are using the safe route, heal at the healing pot, otherwise skip it. Exit to the Underworld, and then make your way to the Tower of Bab-il.</p>
+			<p>Travel through the passage underneath the Castle to the Dwarf Base. If you are using the safe step route, make sure to walk up to the healing pot (though I don't recommend using it). Otherwise, skip it entirely. Exit to the Underworld, and then make your way to the Tower of Bab-il.</p>
 			<h3 id="walkthrough-tower-of-babil">Tower of Bab-il</h3>
 			<p>Enter the Tower of Bab-il and make your way to the <i>CatClaw</i> on 3F. Collect the chest and continue walking until just before Dr.Lugae.</p>
 			<div class="bs-callout bs-callout-info">
@@ -1152,7 +1193,7 @@
 				<h4>Menu</h4>
 				<ul>
 					<li>Equip Yang: */<i>CatClaw</i>/*/*/* (finishes duplication).</li>
-					<li>Fully heal the party (except perhaps Rosa), but don't heal mute (if you skipped the healing pot).</li>
+					<li>Fully heal the party (except Rosa), but don't heal mute.</li>
 				</ul>
 			</div>
 			<p>Approach Dr.Lugae to begin the scene.</p>
@@ -1175,14 +1216,13 @@
 						<dt>Yang</dt><dd>Fight (hold A)</dd>
 						<dt>Rydia</dt><dd>Cast Titan</dd>
 						<dt>Cecil</dt><dd>Fight Dr.Lugae</dd>
-						<dt>Rosa</dt><dd>Cast Mute on Dr.Lugae</dd>
-						<dt>Yang</dt><dd>Inventory Management<br>Fight</dd>
+						<dt>Yang</dt><dd>Wait for Balnab to attack Dr.Lugae<br>Inventory Management<br>Fight</dd>
 						<dt>Cecil</dt><dd>Fight Dr.Lugae</dd>
 						<dt>Kain</dt><dd>Fight</dd>
 						<dt>Yang</dt><dd>Fight</dd>
 					</dl>
-					<p>After Cecil targets Dr.Lugae the second time, you can basically hold A until the fight is over. Yang may not be sufficient, in which case Rosa or Rydia will most likely finish the job.</p>
-					<p>If you kept Rosa dead, simply skip her turn. In that case, Yang will need to wait for the dialog before he begins inventory management. Also, in case you were wondering, the Mute cast is for timing purposes only.</p>
+					<p>After Cecil targets Dr.Lugae the second time, you can basically hold A until the fight is over.</p>
+                    <p>If for some reason Rosa is alive, have her cast Mute when her turn comes up. This just serves as a buffer, and doesn't do anything important.</p>
 				</div>
 			</div>
 			<div class="bs-callout bs-callout-warning">
@@ -1197,7 +1237,7 @@
 					</dl>
 				</div>
                 <h5>Battle Plan</h5>
-                <p>This fight can vary slightly depending on if you revived Rosa or not. Ideally, she's dead.</p>
+                <p>This fight can vary slightly depending on if you revived Rosa or not. Ideally, she's dead. I'd remove the other instructions, but I guess they're useful if you accidentally revive her.</p>
 				<ul class="nav nav-tabs">
 					<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tab-battle-lugae-rosa-dead">Rosa Dead</a></li>
 					<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-battle-lugae-rosa-alive">Rosa Alive</a></li>
@@ -1234,7 +1274,7 @@
 				<h4>Menu</h4>
 				<ul>
 					<li>Equip Yang: <i>CatClaw</i>/*/*/*/*.</li>
-					<li>Heal the party as needed (poison, most likely).</li>
+					<li>Heal the party as needed (reviving Rosa and curing poison, most likely).</li>
 					<li>Swap Rosa and Cecil. (Form, A, Up, Up, A)</li>
 				</ul>
 				<p>If Cecil gained a level during the Dr.Lugae battles (he does if you're following the experience route), it becomes absolutely imperative to equip the second <i>CatClaw</i> on Yang. Otherwise, you're going to have a bad time with random battles.</p>
@@ -1273,17 +1313,21 @@
 				<span class="fas fa-shopping-cart"></span>
 				<h4>Shopping</h4>
 				<ul>
-					<li>Buy <i>Ice</i> (shield).</li>
 					<li>Buy <i>IceBrand</i>, <i>Blizzard</i>.</li>
 				</ul>
 			</div>
-			<p>Continue through the cave until you meet up with Edge, making sure to pick up the two <i>Elixir</i> chests on the way if you are using the safe route. (When you return to the first room after the town, they are the two chests in the secret passage.)</p>
+			<div class="bs-callout bs-callout-danger">
+				<span class="fas fa-shoe-prints"></span>
+				<h4>Step Route</h4>
+                <p>For now, the step route still has you walk to the armor vendor (even though the <i>Ice</i> (shield) has been removed). Future revisions of the step route will likely change this.</p>
+			</div>
+			<p>Continue through the cave until you meet up with Edge, making sure to pick up the two <i>Elixir</i> chests on the way if you are using the safe route. (When you return to the first room after the town after visiting the second, they are the two chests in the secret passage.)</p>
 			<div class="bs-callout bs-callout-info">
 				<span class="fas fa-bars"></span>
 				<h4>Menu</h4>
 				<ul>
 					<li>Equip Edge: <i>CatClaw</i>/<i>CatClaw</i>/*/*/*.</li>
-					<li>Equip Cecil: <i>IceBrand</i>/<i>Ice</i>/*/*/*.</li>
+					<li>Equip Cecil: <i>IceBrand</i>/*/*/*/*.</li>
 				</ul>
 				<p>Equipping Cecil here is primarily done to remove the <i>Dwarf</i> (axe), which would cause problems in the next boss battle if left equipped. Your step route may instead direct you to keep it on until just before Edge's parents instead. Either way, it must come off before that battle, unless you want to lose 10 seconds.</p>
 			</div>
@@ -1307,6 +1351,7 @@
 						<dt>Kain</dt><dd>Equip <i>Blizzard</i><br>Inventory Management</dd>
 					</dl>
 					<p>After this, your only task is to wait the battle out. You can use the animation and text box time for inventory management, but you will lose time by doing so. If necessary, you can also have Edge Dart any extra blades you have lying around, but that obviously wastes even more time.</p>
+                    <p>If Cecil is level 19 (he shouldn't be unless the experience path went badly), have him equip the <i>Dwarf</i> (axe) again.</p>
 				</div>
 			</div>
 			<div class="bs-callout bs-callout-info">
@@ -1328,6 +1373,7 @@
 					</dl>
 				</div>
 				<h5>Battle Plan</h5>
+                <p>If Cecil is level 19, this strategy is not going to go very well. Refer to the level 19 strats from my <a href="{% url "guides:glitchless" %}#">Any% Glitchless</a> guide instead.</p>
 				<div class="info-block">
 					<dl class="dl-horizontal">
 						<dt>Edge</dt><dd>Cast Flood</dd>
@@ -1340,15 +1386,15 @@
 				</div>
 				<p>At this point, Rubicant will cast Glare, most likely leaving one of your characters dead:</p>
 				<ul class="nav nav-tabs">
-					<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tab-battle-rubicant-nobody">Nobody</a></li>
-					<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-battle-rubicant-cecil">Cecil</a></li>
+					<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-battle-rubicant-nobody">Nobody</a></li>
+					<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tab-battle-rubicant-cecil">Cecil</a></li>
 					<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-battle-rubicant-rydia">Rydia</a></li>
 					<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-battle-rubicant-kain">Kain</a></li>
 					<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-battle-rubicant-rosa">Rosa</a></li>
 					<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-battle-rubicant-edge">Edge</a></li>
 				</ul>
 				<div class="info-block tab-content">
-					<div class="tab-pane fade show active" id="tab-battle-rubicant-nobody">
+					<div class="tab-pane fade" id="tab-battle-rubicant-nobody">
 						<dl class="dl-horizontal">
 							<dt>Cecil</dt><dd>Cover Rydia</dd>
 							<dt>Kain</dt><dd>Jump</dd>
@@ -1360,7 +1406,7 @@
 							<dt>Kain</dt><dd>Fight</dd>
 						</dl>
 					</div>
-					<div class="tab-pane fade" id="tab-battle-rubicant-cecil">
+					<div class="tab-pane fade show active" id="tab-battle-rubicant-cecil">
 						<dl class="dl-horizontal">
 							<dt>Kain</dt><dd>Jump</dd>
 							<dt>Rosa</dt><dd>Use <i>Life</i> on Cecil</dd>
@@ -1431,6 +1477,7 @@
 				<ul>
 					<li>Set battle speed to 1.</li>
 				</ul>
+                <p>This is only worth doing if you are expecting perhaps three or more encounters before the Castle of Dwarves.</p>
 			</div>
 			<p>After the scenes, enter the crystal room and then proceed through the last few rooms of the tower.</p>
 			<h3 id="walkthrough-airships">Airships and Betrayal</h3>
@@ -1440,6 +1487,7 @@
 				<span class="fas fa-bars"></span>
 				<h4>Menu</h4>
 				<ul>
+                    <li>Set battle speed to 1 if you haven't already.</li>
 					<li>Equip Cecil: <i>Dwarf</i>.</li>
 					<li>Unequip Kain: <i>Strength</i> (ring) to second empty slot.</li>
 					<li>Cast Exit.</li>
@@ -1464,7 +1512,7 @@
 				<ul>
 					<li>Switch to battle speed 2.</li>
 					<li>Underflow FuSoYa's MP.</li>
-					<li>Use an <i>Ether1</i> on Edge if he has less than 20 MP. (If using the safe route, you can use an <i>Elixir</i> instead.)</li>
+					<li>Use an <i>Ether1</i> (or <i>Elixir</i> if using the safe route) on Edge if he has less than 20 MP. (This is potentially deprecated. See the grind fight setup phase to see if you need to worry about this.)</li>
 					<li>Fully heal the party.</li>
 					<li>Equip FuSoYa: empty/*/<i>Gaea</i>/*/<i>Rune</i>.</li>
 					<li>Equip Rosa: <i>Lunar</i>/*/<i>Wizard</i>/<i>Wizard</i>/<i>Rune</i>.</li>
@@ -1495,7 +1543,8 @@
 						<dt class="col-3">Strike First</dt><dd class="col-9">FuSoYa casts Lit-3 on a Beamer while Edge parries immediately. Wait on Rydia's turn until Lit-3 is cast, then parry back to FuSoYa. At this point, FuSoYa casts Quake as usual, Rydia waits until Quake and parries, and then everyone else parries back to FuSoYa.</dd>
 						<dt class="col-3">Back Attack/Surprise</dt><dd class="col-9">Edge casts Flood. FuSoYa waits for Flood, then casts Quake. Rydia waits for Quake, then parries. Parry back to FuSoYa.</dd>
 					</dl>
-					<p>If Edge is in the front row (in other words, in any case except a back attack), you might wish to have eithe Rydia, Rosa or Cecil use Change on their first turn. This will minimize the chance of killing the searcher early.<p>
+                    <p><strong>Potential update:</strong> For the back attack/surprise formation, you may be able to avoid the Flood. Simply have Edge wait for the two Beam attacks, and then parry after the dialog goes away. Continue as normal from here with FuSoYa casting Quake. This remains experimental. It seems to work much of the time but seems more prone to failure. If you are using this method, you no longer need to check Edge's MP in the pre-battle menu.</p>
+					<p>If Edge is in the front row (in other words, in any case except a back attack), you might wish to have either Rydia, Rosa or Cecil use Change on their first turn. This will minimize the chance of killing the searcher early.<p>
 					<p>If you have a chance during a Beam attack, you should do some minor inventory management. If following my inventory management route, I recommend swapping <i>Strength</i> and <i>Dwarf</i> and then swapping <i>IceBrand</i> and <i>Karate</i>.</p>
 				</div>
 				<h5>Battle Phase Two: Midfight</h5>
@@ -1511,15 +1560,16 @@
 					<p>This fight has very difficult timing, and things may go wrong. The most obvious failure is Rydia going before FuSoYa casts Weak. You can prevent this by delaying Rydia's Fight if the Searcher's text box pops up during her turn, but the exact timing of this is difficult to describe in text. Rivers McCown suggests no longer holding A on Rydia's turn after the second cycle. If Rydia does end up going before Weak, the character after FuSoYa should hold A the rest of the fight.</p>
 					<p>The battle speed 2 version of this fight appears to be 100% consistent, so using that is highly recommended.</p>
 					<p>A detailed strategy for recovery if things go wrong is beyond the scope of this guide.</p>
-					<p>Ultimately, you need to kill 18 dragons. Each <i>Life</i> use counts as an additional dragon kill.</p>
+					<p>Ultimately, you need to kill 17 dragons. Each <i>Life</i> use counts as an additional dragon kill.</p>
 				</div>
 				<h5>Battle Phase Three: Victory</h5>
 				<div class="info-block">
 					<p>After you have killed the requisite number of dragons, complete the following tasks:</p>
 					<dl class="dl-horizontal">
+                        <dt>Cecil</dt><dd>Use <i>Dancing</i> on Edge</dd>
 						<dt>Edge</dt><dd>Parry</dd>
 						<dt>FuSoYa</dt><dd>Cast Weak on Searcher</dd>
-						<dt>Rydia</dt><dd>Use <i>Dancing</i> on Edge</dd>
+						<dt>Rydia</dt><dd>Use <i>Dancing</i> on Edge/Rydia</dd>
 						<dt>Rosa</dt><dd>Parry</dd>
 						<dt>Cecil</dt><dd>Use <i>Dancing</i> on Edge/Rydia</dd>
 						<dt>FuSoYa</dt><dd>Cast Virus on Cecil</dd>
@@ -1547,7 +1597,7 @@
 				<span class="fas fa-exclamation-triangle"></span>
 				<h4>Experience Path</h4>
 				<p>If someone unexpectedly died in a battle more than once up to this point, and Cecil survived, there is a strong risk that he will be on pace to reach level 28. You may wish to use the <a href="{% url 'tools:experience-route-calculator' %}">Experience Route Calculator</a> to help determine for sure.</p>
-				<p>If Cecil is on pace for level 28, it's absolutely imperative to ensure he dies for the Elements battle. You can then revive him for the CPU battle if desired.</p>
+				<p>If Cecil is on pace for level 28, it's absolutely imperative to ensure he dies for the Elements battle. You can then revive him for the CPU battle if desired (though I can't imagine why).</p>
 			</div>
 			<div class="bs-callout bs-callout-warning">
 				<span class="fas fa-bolt"></span>
@@ -1573,7 +1623,7 @@
 						<dt>FuSoYa</dt><dd>Cast Fire3 on Rosa</dd>
 						<dt>Rosa</dt><dd>Cast Wall on Rosa</dd>
 					</dl>
-					<p>At this point, not every turn is listed, but Cecil, Edge and Rydia should focus on making sure Cecil and Edge are dead. Afterward, Rydia can equip <i>Change</i> and then parry.</p>
+					<p>At this point, not every turn is listed, but Cecil, Edge and Rydia should focus on making sure Cecil and Edge are dead. Afterward, Rydia can equip <i>Change</i> and then parry. If you get unlucky, Cecil will have to equip <i>Dancing</i> and take care of himself.</p>
 					<dl class="dl-horizontal">
 						<dt>Rosa</dt><dd>Cast Cure4 on Rosa</dd>
 						<dt>FuSoYa</dt><dd>Cast Fire3 on Rosa</dd>
@@ -1592,6 +1642,7 @@
 					<li>Use <i>Life</i> on Rydia (if needed).</li>
 					<li>Underflow FuSoYa's MP to cure the party.</li>
 					<li>Equip Edge: <i>CatClaw</i>/*/*/*/*.</li>
+                    <li>Equip Cecil: <i>Dwarf</i> (axe)/*/*/*/* (if he equipped <i>Dancing</i> during the fight).</li>
 				</ul>
 			</div>
 			<div class="bs-callout bs-callout-warning">
@@ -1629,7 +1680,7 @@
 			<div class="bs-callout bs-callout-danger">
 				<span class="fas fa-shoe-prints"></span>
 				<h4>Step Route</h4>
-				<p>If you are using a step route, you will potentially need to pick up one of the chests with a <i>Ninja</i> star. This guide does not require one in its Zeromus battle strategy, but the chest is in the step routes. There are three potential choices (Subterrane B6, Core B1 and Core B3), and the step route will tell you which to pick up. If not using a step route (or if the route is an older route and doesn't tell you), pick up the one on Core B3, as it has the shortest walk. If you don't need one for your Zeromus fight, however, don't bother picking it up unless you're on step route.</p>
+				<p>If you are using a step route, you will potentially need to pick up one of the chests with a <i>Ninja</i> star. This guide does not require one in its Zeromus battle strategy, but the chest is in the step routes, as some other vrsions of the Zeromus fight do make use of one. There are three potential choices (Subterrane B6, Core B1 and Core B3), and the step route will tell you which to pick up. If not using a step route (or if the route is an older route and doesn't tell you), pick up the one on Core B3, as it has the shortest walk. If you don't need one for your Zeromus fight, however, don't bother picking it up, but still walk to the chest to stay on step route. (You may be able to skip doing so in the Core without affecting your step route much but be careful about shifting encounters between floors in that case.</p>
 			</div>
 			<p>Continue the descent until you reach the final battle. If you run into any formations of <i>Red D. x1</i>, it's probably faster to have Kain parry and for Rosa to cast Exit. The battle itself will take longer, but you'll escape the Heat Ray, which might make healing less necessary.</p>
 			<div class="bs-callout bs-callout-info">
