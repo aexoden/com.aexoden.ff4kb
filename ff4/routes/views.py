@@ -148,6 +148,26 @@ ROUTES = {
         'seed_finder': True,
         'status': 'Optimal'
     },
+    'glitchless': {
+        'name': 'Any% Glitchless',
+        'description': 'This route runs from the beginning of the game until Zeromus is defeated, without using any of various glitches. These routes assume you know which seed you are using before you start the run.',
+        'group': 'standard',
+        'enabled': True,
+        'twin_safe': True,
+        'complete': False,
+        'seed_finder': False,
+        'status': 'Near Optimal (Optimal Estimate: Early 2023)',
+    },
+    'glitchless-no-manip': {
+        'name': 'Any% Glitchless (No Seed Manipulation)',
+        'description': 'This route runs from the beginning of the game until Zeromus is defeated, without using any of various glitches. These routes are safe to use if you aren not manipulating your starting seed, but some seeds may be suboptimal as a result.',
+        'group': 'standard',
+        'enabled': True,
+        'twin_safe': True,
+        'complete': False,
+        'seed_finder': True,
+        'status': 'Suboptimal (Optimal Estimate: Mid to Late 2023)',
+    },
 
     'premist': {
         'name': 'Pre-Mist Clip',
