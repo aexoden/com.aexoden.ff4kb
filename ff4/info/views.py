@@ -5,7 +5,7 @@ from collections.abc import Callable
 from typing import Any, Optional
 
 from django.conf import settings
-from django.http import Http404
+from django.http import Http404, HttpRequest
 from django.shortcuts import render
 
 
@@ -58,7 +58,7 @@ def filter_race(value: str):
     return ', '.join(races)
 
 
-def group_values(values: Any, filter: Optional[Callable[[str], str]] = None):
+def group_values(values: dict[Any, list[str]] | list[Any], filter: Optional[Callable[[str], str]] = None):
     if type(values) is not dict:
         return filter(str(values)) if filter else values
 
@@ -94,7 +94,7 @@ def group_values(values: Any, filter: Optional[Callable[[str], str]] = None):
     return ' / '.join([x[1] for x in sorted(output, reverse=True)])
 
 
-def monsters(request):
+def monsters(request: HttpRequest):
     with open(os.path.join(settings.BASE_DIR, 'ff4', 'data', 'monsters.json')) as f:
         monster_data = json.load(f)
 
@@ -118,7 +118,7 @@ def monsters(request):
     return render(request, 'info/monsters.html', context)
 
 
-def monster_detail(request, id):
+def monster_detail(request: HttpRequest, id: int):
     if id < 0 or id >= 0xE0:
         raise Http404("Nonexistent monster.")
 

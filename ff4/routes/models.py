@@ -2,12 +2,14 @@ import os
 import re
 import subprocess
 
+from typing import Optional
+
 from django.conf import settings
 
 
-def decode_vars(variables):
+def decode_vars(variables: list[str]):
     chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_'
-    result = []
+    result: list[str] = []
     variables = variables[1:]
 
     while len(variables) > 0:
@@ -27,21 +29,21 @@ def decode_vars(variables):
     return ' '.join(result)
 
 
-def get_route_update_time(route, seed):
+def get_route_update_time(route: str, seed: int):
     filename = os.path.join(settings.BASE_DIR, 'ff4', 'data', 'routes', route, '{:03d}.txt'.format(seed))
     return os.path.getmtime(filename)
 
 
 class RouteDetail(object):
-    def __init__(self, route, seed, variables=None):
+    def __init__(self, route: str, seed: int, variables: Optional[list[str]] = None):
         self._route = route
         self._seed = seed
         self._filename = os.path.join(settings.BASE_DIR, 'ff4', 'data', 'routes', route, '{:03d}.txt'.format(seed))
 
-        self._data = []
-        self._html_data = []
-        self._battles = {}
-        self._vars = {}
+        self._data: list[str] = []
+        self._html_data: list[str] = []
+        self._battles: dict[str, list[tuple[int, str, str]]] = {}
+        self._vars: dict[str, int] = {}
         self._custom = variables is not None
         self._load_data(variables)
 
@@ -101,22 +103,22 @@ class RouteDetail(object):
     def vars(self):
         return self._vars
 
-    def get_value(self, index):
+    def get_value(self, index: str):
         return self._vars[index] if index in self._vars else 0
 
-    def _parse_variables(self, data):
+    def _parse_variables(self, data: str):
         if data.strip() != '':
             for index, value in [x.split(':') for x in data.split(' ')]:
                 self._vars[index] = int(value)
 
-    def _test_line(self, patterns, line):
+    def _test_line(self, patterns: list[str], line: str):
         for pattern in patterns:
             if re.search(pattern, line):
                 return True
 
         return False
 
-    def _test_options(self, line):
+    def _test_options(self, line: str):
         patterns = [
             '(In|Out)ward.*(Steps|Secret)',
             'Castle of Dwarves (Walk|Warp)',
@@ -132,7 +134,7 @@ class RouteDetail(object):
 
         return self._test_line(patterns, line)
 
-    def _test_battles(self, line):
+    def _test_battles(self, line: str):
         patterns = [
             'Blue D. x1',
             'Searcher.*D.Machin',
@@ -146,7 +148,7 @@ class RouteDetail(object):
 
         return self._test_line(patterns, line)
 
-    def _load_data(self, variables):
+    def _load_data(self, variables: Optional[list[str]]):
         phase = 1
 
         if variables:
@@ -161,7 +163,7 @@ class RouteDetail(object):
                 data = f.read().split('\n')
 
         current_area = None
-        current_battles = []
+        current_battles: list[tuple[int, str, str]] = []
         keep_battles = False
 
         for line in data:
@@ -196,6 +198,8 @@ class RouteDetail(object):
                 if line.strip().startswith('Step') or line.strip().startswith('(Step'):
                     matches = re.search(r'Step *(?P<step>[0-9]*): *(?P<index>[0-9]*) / (?P<formation>.*)\)?', line)
 
+                    assert(matches)
+
                     step = int(matches.group('step'))
                     formation = matches.group('formation')
 
@@ -218,6 +222,7 @@ class RouteDetail(object):
                     current_battles.append((step, style, formation))
                 elif not line.strip().startswith('Battle') and not self._test_options(line) and not re.search('Steps: [1-9]', line):
                     if keep_battles:
+                        assert(current_area)
                         self._battles[current_area] = current_battles
 
                     current_area = line[:30].strip()
@@ -227,6 +232,7 @@ class RouteDetail(object):
                 self._data.append(line.rstrip())
             elif phase >= 3 and len(line) > 1:
                 if keep_battles:
+                    assert(current_area)
                     self._battles[current_area] = current_battles
                     keep_battles = False
 

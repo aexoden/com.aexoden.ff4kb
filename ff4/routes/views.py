@@ -2,10 +2,12 @@ import json
 import os
 import statistics
 
+from typing import Any, Optional
+
 from django.conf import settings
-from django.http import Http404
+from django.http import Http404, HttpRequest
 from django.shortcuts import render
-from django.urls import reverse
+from django.urls import reverse  # type: ignore
 
 from .models import RouteDetail, get_route_update_time
 
@@ -286,7 +288,7 @@ ROUTES = {
 }
 
 
-def get_color(value, mean, stdev):
+def get_color(value: float, mean: float, stdev: float):
     colors = [
         (0.00, (128, 64, 0)),
         (0.50, (255, 255, 255)),
@@ -312,15 +314,16 @@ def get_color(value, mean, stdev):
     return '#{:02X}{:02X}{:02X}'.format(*color)
 
 
-def mad(data):
+def mad(data: list[float]):
     median = statistics.median(data)
     return statistics.median([abs(x - median) for x in data]) * 1.4826
 
 
-def index(request):
-    routes = dict(GROUPS)
+def index(request: HttpRequest):
+    routes: dict[str, dict[str, Any]] = dict(GROUPS)
 
     for route, data in ROUTES.items():
+        assert(isinstance(data['group'], str))
         if 'routes' not in routes[data['group']]:
             routes[data['group']]['routes'] = {}
 
@@ -337,7 +340,7 @@ def index(request):
     return render(request, 'routes/index.html', context)
 
 
-def get_metrics(route):
+def get_metrics(route: str):
     metrics_cache_filename = os.path.join(settings.BASE_DIR, 'ff4', 'cache', 'metrics-{}.json'.format(route))
     metrics_cache_updated = False
 
@@ -345,11 +348,11 @@ def get_metrics(route):
         with open(metrics_cache_filename, 'r') as f:
             seed_metrics = json.load(f)
     else:
-        seed_metrics = {
-            'update_time': [-1 for seed in range(256)],
-            'frames': [0 for seed in range(256)],
-            'encounters': [0 for seed in range(256)],
-            'steps': [0 for seed in range(256)],
+        seed_metrics: dict[str, list[float]] = {
+            'update_time': [-1 for _ in range(256)],
+            'frames': [0 for _ in range(256)],
+            'encounters': [0 for _ in range(256)],
+            'steps': [0 for _ in range(256)],
         }
 
     try:
@@ -371,9 +374,9 @@ def get_metrics(route):
     return seed_metrics
 
 
-def get_colors(route):
+def get_colors(route: str):
     metrics = get_metrics(route)
-    result = []
+    result: list[str] = []
 
     for seed in range(256):
         result.append(get_color(metrics['frames'][seed], statistics.median(metrics['frames']), mad(metrics['frames'])))
@@ -381,12 +384,12 @@ def get_colors(route):
     return result
 
 
-def route(request, route):
+def route(request: HttpRequest, route: str):
     seed_metrics = get_metrics(route)
-    seeds = []
+    seeds: list[list[dict[str, Any]]] = []
 
     for group_index in range(16):
-        group = []
+        group: list[dict[str, Any]] = []
 
         for index in range(16):
             seed = group_index * 16 + index
@@ -398,7 +401,7 @@ def route(request, route):
 
         seeds.append(group)
 
-    metrics = []
+    metrics: list[dict[str, Any]] = []
 
     metric_data = {
         'Time': 'frames',
@@ -418,7 +421,7 @@ def route(request, route):
         }
 
         for type in values:
-            selected = []
+            selected: list[int] = []
 
             for seed, value in enumerate(seed_metrics[key]):
                 if value == values[type]:
@@ -445,7 +448,7 @@ def route(request, route):
     return render(request, 'routes/route.html', context)
 
 
-def detail(request, route, seed, vars=None):
+def detail(request: HttpRequest, route: str, seed: int, vars: Optional[list[str]] = None):
     try:
         r = RouteDetail(route, seed, vars)
     except FileNotFoundError:

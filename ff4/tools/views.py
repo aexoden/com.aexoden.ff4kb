@@ -1,19 +1,21 @@
 import json
 
+from django.http import HttpRequest
 from django.shortcuts import render
 
-def seed_finder(request):
-	from ff4.routes.views import ROUTES, get_colors
 
-	colors = {}
+def seed_finder(request: HttpRequest):
+    from ff4.routes.views import ROUTES, get_colors
 
-	for route in ROUTES:
-		if ROUTES[route]['seed_finder']:
-			colors[route] = get_colors(route)
+    colors = {}
 
-	context = {
-		'routes': ROUTES,
-		'colors': json.dumps(colors)
-	}
+    for route in ROUTES:
+        if ROUTES[route]['seed_finder']:
+            colors[route] = get_colors(route)
 
-	return render(request, 'tools/seed-finder.html', context)
+    context = {
+        'routes': ROUTES,
+        'colors': json.dumps(colors)
+    }
+
+    return render(request, 'tools/seed-finder.html', context)
