@@ -28,7 +28,8 @@
 					</div>
 					<div class="row" style="margin-top: 1.0em; height: 600px;">
 						<div class="col">
-							<canvas width="512" height="512" id="map">
+							<canvas width="512" height="512" id="map"></canvas>
+                            <a id="direct-link">Direct Link to Current Image</a>
 						</div>
 						<div class="col" id="information"></div>
 					</div>
@@ -36,21 +37,22 @@
 					<p>The map viewer currently operates in a fashion similiar to other online map sites. If the map is larger than the window, you can click and drag to move the map. In addition, you can also zoom in or out using your mouse scroll wheel. I haven't tested it on mobile, and I don't expect it to work very well at this time.</p>
 					<p>By default, the map shows a tile overlay which indicates interesting tiles with the following colors:</p>
 					<dl class="dl-horizontal">
-						<dt>Blue</dt><dd>Encounters cannot occur on this tile</dd>
+						<dt>Blue</dt><dd>Encounters cannot occur on this tile (does not increment step counter)</dd>
 						<dt>Cyan</dt><dd>Event trigger</dd>
 						<dt>Green</dt><dd>Return trigger (returns to previous floor)</dd>
 						<dt>Magenta</dt><dd>Warp trigger (goes to a specified destination)</dd>
 						<dt>Yellow</dt><dd>Treasure</dd>
 						<dt>White</dt><dd>A trigger tile that isn't associated with an actual trigger. (In other words, if you can reach it, it can potentially be manipulated with your <a href="{% url "guides:mini-inventory-warping" %}">inventory</a>.)
 					</dl>
+                    <p>In addition, trigger tiles also can never have random encounters. NPCs on the map will be solid if they are stationary or semi-transparent if they are mobile.</p>
 					<p>Any extra information about the tile will appear to the right of the map when you hover over the tile. If the tile is a warp of some sort, clicking on the tile will take you to the appropriate map. (Warps will take you to the designated map. Return warps will take you back to the last map you visited.)</p>
 					<p>Some maps don't have any way to exit, since they rely on you being able to reach the edge of the map (which works the same as a return warp, if the border is crossable). In such cases, simply press the green button above to simulate a return.</p>
-					<p>Finally, you can directly go to certain locations via the toolbar above.</p>
+					<p>Finally, you can directly go to certain locations via the toolbar above. If you are looking for a specific map, look at the <a href="{% url 'info:maps' %}">list of maps</a>.</p>
 {% endblock %}
 
 {% block extrajs %}
 				<script src="{% static "js/maps.js" %}"></script>
 				<script>
-					com.aexoden.ff4.maps.init();
+					com.aexoden.ff4.maps.init({{ map }});
 				</script>
 {% endblock %}

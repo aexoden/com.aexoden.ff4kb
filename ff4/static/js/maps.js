@@ -10932,7 +10932,9 @@ com.aexoden.ff4.maps = function()
         document.getElementById("button-base-underworld").classList.remove("active");
         document.getElementById("button-base-moon").classList.remove("active");
 
-        document.getElementById("button-base-" + target).classList.add("active");
+        if (target !== null) {
+            document.getElementById("button-base-" + target).classList.add("active");
+        }
     };
 
     var onButtonGoOverworld = function(_e) {
@@ -11026,9 +11028,24 @@ com.aexoden.ff4.maps = function()
             }
 
             drawMap();
+
+            if (currentMapIndex == MAP_OVERWORLD) {
+                setGoButtons("overworld");
+            } else if (currentMapIndex == MAP_UNDERWORLD) {
+                setGoButtons("underworld");
+            } else if (currentMapIndex == 0x3098) {
+                setGoButtons("zot");
+            } else if (currentMapIndex == 0x30B5) {
+                setGoButtons("giant");
+            } else if (currentMapIndex == MAP_MOON) {
+                setGoButtons("moon");
+            } else {
+                setGoButtons(null);
+            }
         };
 
         currentImage.src = "/static/img/maps/" + (drawOverlay ? "composite" : "base") + "/" + currentMapIndex.toString(16).padStart(4, "0").toUpperCase() + "-0.png";
+        document.getElementById("direct-link").href = currentImage.src;
     };
 
     var updateDisplay = function() {
@@ -11036,7 +11053,7 @@ com.aexoden.ff4.maps = function()
         drawMap();
     };
 
-    var init = function() {
+    var init = function(map) {
         var canvas = document.getElementById("map");
         canvas.addEventListener("wheel", onMapWheel);
         canvas.addEventListener("DOMMouseScroll", onMapWheel);
@@ -11067,7 +11084,7 @@ com.aexoden.ff4.maps = function()
         button = document.getElementById("button-show-overlay");
         button.addEventListener("click", onButtonShowOverlay);
 
-        updateMap(MAP_OVERWORLD);
+        updateMap(map);
         updateDisplay();
     };
 

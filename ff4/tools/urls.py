@@ -8,7 +8,8 @@ app_name = 'tools'
 urlpatterns = [
     path('', TemplateView.as_view(template_name='tools/index.html'), name='index'),
     path('experience-route-calculator/', TemplateView.as_view(template_name='tools/experience-route-calculator.html'), name='experience-route-calculator'),
-    path('map-viewer/', TemplateView.as_view(template_name='tools/map-viewer.html'), name='map-viewer'),
+    path('map-viewer/', views.map_viewer, name='map-viewer'),
+    path('map-viewer/<slug:map>', views.map_viewer, name='map-viewer-map'),
     path('nocw-gp-calculator/', TemplateView.as_view(template_name='tools/nocw-gp-calculator.html'), name='nocw-gp-calculator'),
     path('nocw-igt-calculator/', TemplateView.as_view(template_name='tools/nocw-igt-calculator.html'), name='nocw-igt-calculator'),
     path('grind-finder/', TemplateView.as_view(template_name='tools/grind-finder.html'), name='grind-finder'),
