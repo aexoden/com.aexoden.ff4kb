@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 
+from collections.abc import Iterable
 from typing import Any
 
 #
@@ -327,13 +328,14 @@ class FF4(object):
 
         magic_power = -1
         race = 0
+        counter_script_index = -1
 
         if flags & 0x80 > 0:
             # element/status attack
             offset += 3
 
         if flags & 0x40 > 0:
-            #element/status defense
+            # element/status defense
             offset += 3
 
         if flags & 0x20 > 0:
@@ -349,7 +351,7 @@ class FF4(object):
             offset += 1
 
         if flags & 0x04 > 0:
-            # counterattack
+            counter_script_index = self._read_u8(base_address + offset)
             offset += 1
 
         return {
@@ -392,28 +394,29 @@ class FF4(object):
             'item_drop_4': self._read_u8(0x0E9F00 + item_drop_index * 4 + 3),
 
             'script_index': self._read_u8(base_address + 8),
+            'counter_script_index': counter_script_index,
         }
 
 
 #
-# Commands
+# Functions
 #
 
-def command_monsters(roms: list[FF4]):
-    monsters: list[dict[str, Any]] = []
+def collate_data(roms: list[FF4], ids: Iterable[int], method_name: str):
+    entries: list[dict[str, Any]] = []
 
-    for id in range(0xE0):
-        monster_info: dict[str, dict[str, Any]] = {}
-        monster: dict[str, Any] = {}
+    for id in ids:
+        entry_info: dict[str, dict[str, Any]] = {}
+        entry: dict[str, Any] = {}
 
         for rom in roms:
-            monster_info[rom.version] = rom.get_monster_info(id)
+            entry_info[rom.version] = getattr(rom, method_name)(id)
 
-        for key in monster_info['us']:
+        for key in entry_info['us']:
             values: dict[str, list[str]] = {}
 
             for rom in roms:
-                value = monster_info[rom.version][key]
+                value = entry_info[rom.version][key]
 
                 if value not in values:
                     values[value] = []
@@ -421,12 +424,21 @@ def command_monsters(roms: list[FF4]):
                 values[value].append(rom.version)
 
             if len(values) == 1:
-                monster[key] = list(values.keys())[0]
+                entry[key] = list(values.keys())[0]
             else:
-                monster[key] = values
+                entry[key] = values
 
-        monsters.append(monster)
+        entries.append(entry)
 
+    return entries
+
+
+#
+# Commands
+#
+
+def command_monsters(roms: list[FF4]):
+    monsters = collate_data(roms, range(0xE0), "get_monster_info")
     print(json.dumps(monsters, sort_keys=True, indent=4))
 
 

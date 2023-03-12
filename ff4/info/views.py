@@ -27,7 +27,7 @@ def get_monster_names(names: dict[str, list[str]]):
     return name_us, name_jp, name_easytype
 
 
-def filter_magic_power(value: str):
+def filter_negative_one(value: str):
     return 'None' if value == '-1' else value
 
 
@@ -141,8 +141,10 @@ def monster_detail(request: HttpRequest, id: int):
         'physical_attack': group_values(monster_data['physical_attack']),
         'physical_defense': group_values(monster_data['physical_defense']),
         'magic_defense': group_values(monster_data['magic_defense']),
-        'magic_power': group_values(monster_data['magic_power'], filter_magic_power),
+        'magic_power': group_values(monster_data['magic_power'], filter_negative_one),
         'race': group_values(monster_data['race'], filter_race),
+        'script_index': group_values(monster_data['script_index']),
+        'counter_script_index': group_values(monster_data['counter_script_index'], filter_negative_one)
     }
 
     return render(request, 'info/monster_detail.html', context)
