@@ -64,6 +64,34 @@ def filter_drop_rate(value: str, _version: Version) -> str:
     return f'{int(value) / 99 * 100:0.3f}% ({value}/99)'
 
 
+def filter_element_weakness(value: str, _version: Version) -> str:
+    element = int(value)
+    elements: list[str] = []
+    suffix = ''
+
+    if element & 0x01 > 0:
+        elements.append('Fire')
+    if element & 0x02 > 0:
+        elements.append('Ice')
+    if element & 0x04 > 0:
+        elements.append('Lightning')
+    if element & 0x08 > 0:
+        elements.append('Darkness')
+    if element & 0x10 > 0:
+        elements.append('Holy')
+    if element & 0x20 > 0:
+        elements.append('Air')
+    if element & 0x40 > 0:
+        elements.append('Drain')
+    if element & 0x80 > 0:
+        suffix = ' (strong)'
+
+    if len(elements) > 0:
+        return ', '.join(elements) + suffix
+    else:
+        return 'None'
+
+
 def filter_item(value: str, version: Version) -> str:
     return ff4.get_item_names(int(value))[version]
 
@@ -435,6 +463,7 @@ def monster_detail(request: HttpRequest, id: int):
         'magic_defense': group_values(monster_data['magic_defense']),
         'magic_power': group_values(monster_data['magic_power'], filter_negative_one),
         'race': group_values(monster_data['race'], filter_race),
+        'element_weakness': group_values(monster_data['element_weakness'], filter_element_weakness),
         'script_index': group_values(monster_data['script_index']),
         'counter_script_index': group_values(monster_data['counter_script_index'], filter_negative_one),
         'item_drop_rate_base': group_values(monster_data['item_drop_rate'], filter_drop_rate),
