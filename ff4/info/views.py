@@ -242,6 +242,10 @@ def group_values(values: dict[Any, list[str]] | list[Any], filter: Optional[Call
             version = 'USA and Japan'
             filter_version = Version.JP
             priority = 10
+        elif versions == ['jp', 'jp-easytype', 'jp-rev-1']:
+            version = 'Japan and Easytype'
+            filter_version = Version.JP
+            priority = 5
         else:
             version = ', '.join(versions)
             filter_version = Version.US
