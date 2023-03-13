@@ -61,7 +61,7 @@ def filter_audio_track(value: str, _version: Version) -> str:
 
 
 def filter_drop_rate(value: str, _version: Version) -> str:
-    return f'{int(value) / 99 * 100:0.3f}%'
+    return f'{int(value) / 99 * 100:0.3f}% ({value}/99)'
 
 
 def filter_item(value: str, version: Version) -> str:
