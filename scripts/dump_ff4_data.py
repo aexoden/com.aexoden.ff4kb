@@ -410,7 +410,11 @@ class FF4(object):
         agility_maximum = self._read_u8(0x0EA620 + agility_index * 2 + 1)
         agility_range = f'{agility_minimum} - {agility_maximum}' if agility_maximum > agility_minimum else f'{agility_minimum}'
 
-        element_weakness = 0x00
+        element_weakness = 0
+        element_defense = 0
+        status_defense = 0
+        element_attack = 0
+        status_attack = 0
 
         item_drop_index = self._read_u8(base_address + 7) & 0x3F
         item_drop_rate = self._read_u8(base_address + 7) >> 6
@@ -432,11 +436,13 @@ class FF4(object):
         counter_script_index = -1
 
         if flags & 0x80 > 0:
-            # element/status attack
+            element_attack = self._read_u8(base_address + offset)
+            status_attack = self._read_u16(base_address + offset + 1)
             offset += 3
 
         if flags & 0x40 > 0:
-            # element/status defense
+            element_defense = self._read_u8(base_address + offset)
+            status_defense = self._read_u16(base_address + offset + 1)
             offset += 3
 
         if flags & 0x20 > 0:
@@ -489,6 +495,10 @@ class FF4(object):
             'agility_range': agility_range,
 
             'element_weakness': element_weakness,
+            'element_defense': element_defense,
+            'status_defense': status_defense,
+            'element_attack': element_attack,
+            'status_attack': status_attack,
 
             'item_drop_index': item_drop_index,
             'item_drop_rate': item_drop_rate,

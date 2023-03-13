@@ -127,6 +127,49 @@ def filter_race(value: str, _version: Version):
     return ', '.join(races)
 
 
+def filter_status(value: str, _version: Version):
+    status = int(value)
+    statuses: list[str] = []
+
+    if status & 0x0001 > 0:
+        statuses.append('Poison')
+    if status & 0x0002 > 0:
+        statuses.append('Darkness')
+    if status & 0x0004 > 0:
+        statuses.append('Mute')
+    if status & 0x0008 > 0:
+        statuses.append('Pig')
+    if status & 0x0010 > 0:
+        statuses.append('Small')
+    if status & 0x0020 > 0:
+        statuses.append('Toad')
+    if status & 0x0040 > 0:
+        statuses.append('Stone')
+    if status & 0x0080 > 0:
+        statuses.append('Swoon')
+    if status & 0x0100 > 0:
+        statuses.append('Gradual Petrify')
+    if status & 0x0200 > 0:
+        statuses.append('Gradual Petrify')
+    if status & 0x0400 > 0:
+        statuses.append('Berserk')
+    if status & 0x0800 > 0:
+        statuses.append('Charm')
+    if status & 0x1000 > 0:
+        statuses.append('Sleep')
+    if status & 0x2000 > 0:
+        statuses.append('Paralyze')
+    if status & 0x4000 > 0:
+        statuses.append('Float')
+    if status & 0x8000 > 0:
+        statuses.append('Curse')
+
+    if len(statuses) == 0:
+        statuses.append('None')
+
+    return ', '.join(statuses)
+
+
 def extract_values(values: str | int | bool | dict[str, list[str]], return_type: Type[T]) -> dict[Version, T]:
     if type(values) is dict:
         value_us = ''
@@ -464,6 +507,10 @@ def monster_detail(request: HttpRequest, id: int):
         'magic_power': group_values(monster_data['magic_power'], filter_negative_one),
         'race': group_values(monster_data['race'], filter_race),
         'element_weakness': group_values(monster_data['element_weakness'], filter_element_weakness),
+        'element_defense': group_values(monster_data['element_defense'], filter_element_weakness),
+        'status_defense': group_values(monster_data['status_defense'], filter_status),
+        'element_attack': group_values(monster_data['element_attack'], filter_element_weakness),
+        'status_attack': group_values(monster_data['status_attack'], filter_status),
         'script_index': group_values(monster_data['script_index']),
         'counter_script_index': group_values(monster_data['counter_script_index'], filter_negative_one),
         'item_drop_rate_base': group_values(monster_data['item_drop_rate'], filter_drop_rate),
