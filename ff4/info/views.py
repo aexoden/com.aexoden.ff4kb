@@ -2,29 +2,62 @@ import json
 import os
 
 from collections.abc import Callable
-from typing import Any, Optional
+from enum import Enum
+from typing import Any, Optional, Type, TypeVar
 
 from django.conf import settings
 from django.http import Http404, HttpRequest
 from django.shortcuts import render
 
+T = TypeVar("T", str, int, bool)
 
-def get_monster_names(names: dict[str, list[str]]):
-    name_us = ''
-    name_jp = ''
-    name_easytype = ''
 
-    for name, versions in names:
-        if 'us' in versions:
-            name_us = name
+#
+# Enums
+#
 
-        if 'jp' in versions:
-            name_jp = name
+class Version(Enum):
+    US = 0
+    JP = 1
+    EASYTYPE = 2
 
-        if 'jp-easytype' in versions:
-            name_easytype = name
 
-    return name_us, name_jp, name_easytype
+#
+# Functions
+#
+
+def filter_arrangement(value: str):
+    arrangements = {
+        14: '14: Zombie x4',
+        18: '18: Machine x2, Beamer x3',
+        20: '20: Guard x3',
+        29: '29: Gargoyle x1, Cocktric x3',
+        33: '33: Spirit x2, Soul x2, Red Bone x2',
+        43: '43: Mad Ogre x4 (A)',
+        45: '45: Mad Ogre x4 (B)',
+        48: '48: Octomamm',
+        49: '49: Antlion',
+        50: '50: Girl (summons Titan)',
+        51: '51: D.Mist',
+        52: '52: MomBomb',
+        53: '53: Milon',
+    }
+
+    if int(value) in arrangements:
+        return arrangements[int(value)]
+    else:
+        return f'{value}'
+
+
+def filter_audio_track(value: str) -> str:
+    if value == '0':
+        return 'Battle 1'
+    elif value == '1':
+        return 'Battle 2'
+    elif value == '2':
+        return 'Battle with the Four Fiends'
+    else:
+        return '[does not change music]'
 
 
 def filter_negative_one(value: str):
@@ -58,9 +91,46 @@ def filter_race(value: str):
     return ', '.join(races)
 
 
-def group_values(values: dict[Any, list[str]] | list[Any], filter: Optional[Callable[[str], str]] = None):
+def extract_values(values: str | int | bool | dict[str, list[str]], return_type: Type[T]) -> dict[Version, T]:
+    if type(values) is dict:
+        value_us = ''
+        value_jp = ''
+        value_easytype = ''
+
+        for value, versions in values.items():
+            if 'us' in versions:
+                value_us = value
+
+            if 'jp' in versions:
+                value_jp = value
+
+            if 'jp-easytype' in versions:
+                value_easytype = value
+
+            if 'us' in versions and 'us-rev-1' not in versions:
+                raise ValueError("USA and USA (Rev 1) have different values")
+
+            if 'jp' in versions and 'jp-rev-1' not in versions:
+                raise ValueError("Japan and Japan (Rev 1) have different values")
+
+        return {
+            Version.US: return_type(value_us),
+            Version.JP: return_type(value_jp),
+            Version.EASYTYPE: return_type(value_easytype)
+        }
+    elif type(values) is str or type(values) is int or type(values) is bool:
+        return {
+            Version.US: return_type(values),
+            Version.JP: return_type(values),
+            Version.EASYTYPE: return_type(values)
+        }
+    else:
+        raise ValueError(f'Unexpected value type: {type(values)}')
+
+
+def group_values(values: dict[Any, list[str]] | list[Any], filter: Optional[Callable[[str], str]] = None) -> str:
     if type(values) is not dict:
-        return filter(str(values)) if filter else values
+        return filter(str(values)) if filter else str(values)
 
     output: list[tuple[int, str]] = []
 
@@ -94,21 +164,219 @@ def group_values(values: dict[Any, list[str]] | list[Any], filter: Optional[Call
     return ' / '.join([x[1] for x in sorted(output, reverse=True)])
 
 
-def monsters(request: HttpRequest):
-    with open(os.path.join(settings.BASE_DIR, 'ff4', 'data', 'monsters.json')) as f:
-        monster_data = json.load(f)
+#
+# Classes
+#
 
+class FF4(object):
+    def __init__(self):
+        with open(os.path.join(settings.BASE_DIR, 'ff4', 'data', 'formations.json')) as f:
+            self._formations = json.load(f)
+
+        with open(os.path.join(settings.BASE_DIR, 'ff4', 'data', 'monsters.json')) as f:
+            self._monsters = json.load(f)
+
+    #
+    # Public Methods
+    #
+
+    def get_formation(self, id: int):
+        formation_data = self._formations[id]
+
+        monsters: list[dict[str, Any]] = []
+
+        for i in range(1, 4):
+            if type(formation_data[f'monster_{i}_count']) is dict or formation_data[f'monster_{i}_count'] > 0:
+                monsters.append({
+                    'id': formation_data[f'monster_{i}_id'],
+                    'count': group_values(formation_data[f'monster_{i}_count']),
+                    'swooned': group_values(formation_data[f'monster_{i}_swooned']),
+                    'egg': group_values(formation_data[f'monster_{i}_egg']),
+                })
+
+        formation_data['monsters'] = monsters
+
+        formation_data['description_us'] = self._get_formation_description(id, Version.US)
+        formation_data['description_jp'] = self._get_formation_description(id, Version.JP)
+        formation_data['description_easytype'] = self._get_formation_description(id, Version.EASYTYPE)
+
+        return formation_data
+
+    def get_formations(self):
+        return [self.get_formation(i) for i in range(len(self._formations))]
+
+    def get_monster(self, id: int):
+        return self._monsters[id]
+
+    def get_monsters(self):
+        return self._monsters
+
+    def get_monster_names(self, id: int):
+        return extract_values(self._monsters[id]['name'], str)
+
+    #
+    # Private Methods
+    #
+
+    def _get_formation_description(self, id: int, version: Version):
+        formation_data = self._formations[id]
+
+        monsters: list[dict[str, Any]] = []
+
+        for i in range(1, 4):
+            if type(formation_data[f'monster_{i}_count']) is dict or formation_data[f'monster_{i}_count'] > 0:
+                monsters.append({
+                    'id': group_values(formation_data[f'monster_{i}_id']),
+                    'count': group_values(formation_data[f'monster_{i}_count']),
+                    'swooned': group_values(formation_data[f'monster_{i}_swooned']),
+                    'egg': group_values(formation_data[f'monster_{i}_egg']),
+                })
+
+        monster_1_id = extract_values(formation_data['monster_1_id'], int)[version]
+        monster_1_count = extract_values(formation_data['monster_1_count'], int)[version]
+        monster_1_name = self.get_monster_names(monster_1_id)[version]
+        monster_1_egg = extract_values(formation_data['monster_1_egg'], bool)[version]
+        monster_1_summon = monster_1_id in [0x46, 0x62, 0x79, 0x7B, 0x87, 0x96, 0xCE]
+
+        monster_2_id = extract_values(formation_data['monster_2_id'], int)[version]
+        monster_2_count = extract_values(formation_data['monster_2_count'], int)[version]
+        monster_2_egg = extract_values(formation_data['monster_2_egg'], bool)[version]
+        monster_2_swooned = extract_values(formation_data['monster_2_swooned'], bool)[version]
+
+        if monster_2_id == monster_1_id:
+            monster_1_count += monster_2_count
+            monster_2_count = 0
+
+        monster_3_id = extract_values(formation_data['monster_3_id'], int)[version]
+        monster_3_count = extract_values(formation_data['monster_3_count'], int)[version]
+        monster_3_egg = extract_values(formation_data['monster_3_egg'], bool)[version]
+        monster_3_swooned = extract_values(formation_data['monster_3_swooned'], bool)[version]
+
+        if monster_3_id == monster_1_id:
+            monster_1_count += monster_3_count
+            monster_3_count = 0
+
+        if monster_3_id == monster_2_id and not monster_1_summon:
+            monster_2_count += monster_3_count
+            monster_3_count = 0
+
+        summon_description = ''
+
+        if monster_1_summon:
+            monster_2_name = self.get_monster_names(monster_2_id)[version]
+            summon_description = f' (summons {monster_2_name})'
+
+        egg_name = self.get_monster_names(0xDF)[version]
+
+        if monster_1_egg:
+            description = f'{egg_name} ({monster_1_name}){summon_description} x{monster_1_count}'
+        else:
+            description = f'{monster_1_name}{summon_description} x{monster_1_count}'
+
+        if monster_2_count > 0 and not monster_1_summon and not monster_2_swooned:
+            monster_2_name = self.get_monster_names(monster_2_id)[version]
+
+            if monster_2_egg:
+                description = f'{description}, {egg_name} ({monster_2_name}) x{monster_2_count}'
+            else:
+                description = f'{description}, {monster_2_name} x{monster_2_count}'
+
+        if monster_3_count > 0 and not monster_3_swooned:
+            monster_3_name = self.get_monster_names(monster_3_id)[version]
+
+            if monster_3_egg:
+                description = f'{description}, {egg_name} ({monster_3_name}) x{monster_3_count}'
+            else:
+                description = f'{description}, {monster_3_name} x{monster_3_count}'
+
+        return description
+
+
+#
+# Handlers
+#
+
+def formations(request: HttpRequest):
+    ff4 = FF4()
+    formations: list[dict[str, Any]] = []
+
+    for id, formation in enumerate(ff4.get_formations()):
+        formations.append({
+            'id': id,
+            'id_hex': f'{id:03X}',
+            'description_us': formation['description_us'],
+            'description_jp': formation['description_jp'],
+            'description_easytype': formation['description_easytype'],
+        })
+
+    context = {
+        'formations': formations,
+    }
+
+    return render(request, 'info/formations.html', context)
+
+
+def formation_detail(request: HttpRequest, id: int):
+    if id < 0 or id >= 0x200:
+        raise Http404("Nonexistent monster formation.")
+
+    ff4 = FF4()
+    formation = ff4.get_formation(id)
+
+    assert(type(formation['monsters']) is list)
+
+    monsters: list[dict[str, str]] = []
+
+    for monster_data in formation['monsters']:
+        ids = extract_values(monster_data['id'], str)
+        names = ff4.get_monster_names(monster_data['id'])
+
+        monsters.append({
+            'id': group_values(monster_data['id']),
+            'id_us': ids[Version.US],
+            'id_jp': ids[Version.JP],
+            'id_easytype': ids[Version.EASYTYPE],
+            'name_us': names[Version.US],
+            'name_jp': names[Version.JP],
+            'name_easytype': names[Version.EASYTYPE],
+            'count': group_values(monster_data['count']),
+            'swooned': group_values(monster_data['swooned']),
+            'egg': group_values(monster_data['egg']),
+        })
+
+    context = {
+        'description_us': formation['description_us'],
+        'monsters': monsters,
+        'arrangement': group_values(formation['arrangement'], filter_arrangement),
+        'audio_track': group_values(formation['audio_track'], filter_audio_track),
+        'auto_battle': group_values(formation['auto_battle']),
+        'back_attack': group_values(formation['back_attack']),
+        'character_sprite': group_values(formation['character_sprite']),
+        'disable_running': group_values(formation['disable_running']),
+        'floating': group_values(formation['floating']),
+        'scripted': group_values(formation['scripted']),
+        'slow_death': group_values(formation['slow_death']),
+        'target_map': group_values(formation['target_map']),
+        'transparent': group_values(formation['transparent']),
+        'vram_layout': group_values(formation['vram_layout']),
+    }
+
+    return render(request, 'info/formation_detail.html', context)
+
+
+def monsters(request: HttpRequest):
+    ff4 = FF4()
     monsters: list[dict[str, Any]] = []
 
-    for id, data in enumerate(monster_data):
-        name_us, name_jp, name_easytype = get_monster_names(data['name'].items())
+    for id, _ in enumerate(ff4.get_monsters()):
+        names = ff4.get_monster_names(id)
 
         monsters.append({
             'id': id,
             'id_hex': f'{id:02X}',
-            'name_us': name_us,
-            'name_jp': name_jp,
-            'name_easytype': name_easytype,
+            'name_us': names[Version.US],
+            'name_jp': names[Version.JP],
+            'name_easytype': names[Version.EASYTYPE],
         })
 
     context = {
@@ -122,10 +390,10 @@ def monster_detail(request: HttpRequest, id: int):
     if id < 0 or id >= 0xE0:
         raise Http404("Nonexistent monster.")
 
-    with open(os.path.join(settings.BASE_DIR, 'ff4', 'data', 'monsters.json')) as f:
-        monster_data = json.load(f)[id]
+    ff4 = FF4()
 
-    name_us, name_jp, name_easytype = get_monster_names(monster_data['name'].items())
+    names = ff4.get_monster_names(id)
+    monster_data = ff4.get_monster(id)
 
     context = {
         'agility': group_values(monster_data['agility_range']),
@@ -135,9 +403,9 @@ def monster_detail(request: HttpRequest, id: int):
         'hp': group_values(monster_data['hp']),
         'id': id,
         'level': group_values(monster_data['level']),
-        'name_us': name_us,
-        'name_jp': name_jp,
-        'name_easytype': name_easytype,
+        'name_us': names[Version.US],
+        'name_jp': names[Version.JP],
+        'name_easytype': names[Version.EASYTYPE],
         'physical_attack': group_values(monster_data['physical_attack']),
         'physical_defense': group_values(monster_data['physical_defense']),
         'magic_defense': group_values(monster_data['magic_defense']),

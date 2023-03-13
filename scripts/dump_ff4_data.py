@@ -298,6 +298,57 @@ class FF4(object):
     def version(self):
         return self._version
 
+    def get_formation_info(self, id: int) -> dict[str, Any]:
+        base_address = 0x0E8000 + id * 8
+
+        flags_1 = self._read_u8(base_address + 0)
+        flags_2 = self._read_u8(base_address + 6)
+
+        monster_counts = self._read_u8(base_address + 4)
+        swoon_mode = monster_counts & 0x03
+
+        monsters: list[dict[str, Any]] = []
+
+        for i in range(3):
+            monster = {
+                'id': self._read_u8(base_address + 1 + i),
+                'count': (monster_counts >> ((3 - i) * 2)) & 0x03,
+                'swooned': (i == 1 and swoon_mode in [1, 2]) or (i == 2 and swoon_mode in [2, 3]),
+                'egg': (flags_1 >> (7 - i)) & 0x01 > 0,
+            }
+
+            monsters.append(monster)
+
+        arrangement = self._read_u8(base_address + 5)
+        target_map = self._read_u8(base_address + 7)
+
+        return {
+            'monster_1_id': monsters[0]['id'],
+            'monster_1_count': monsters[0]['count'],
+            'monster_1_swooned': monsters[0]['swooned'],
+            'monster_1_egg': monsters[0]['egg'],
+            'monster_2_id': monsters[1]['id'],
+            'monster_2_count': monsters[1]['count'],
+            'monster_2_swooned': monsters[1]['swooned'],
+            'monster_2_egg': monsters[1]['egg'],
+            'monster_3_id': monsters[2]['id'],
+            'monster_3_count': monsters[2]['count'],
+            'monster_3_swooned': monsters[2]['swooned'],
+            'monster_3_egg': monsters[2]['egg'],
+            'arrangement': arrangement,
+            'target_map': target_map,
+            'vram_layout': flags_1 & 0x07,
+            'back_attack': flags_1 & 0x08 > 0,
+            'slow_death': flags_1 & 0x10 > 0,
+            'disable_running': flags_2 & 0x01 > 0,
+            'scripted': flags_2 & 0x02 > 0,
+            'audio_track': (flags_2 >> 2) & 0x03,
+            'character_sprite': flags_2 & 0x10 > 0,
+            'auto_battle': flags_2 & 0x20 > 0,
+            'floating': flags_2 & 0x40 > 0,
+            'transparent': flags_2 & 0x80 > 0,
+        }
+
     def get_monster_info(self, id: int) -> dict[str, Any]:
         base_address = 0x0E0000 + self._read_u16(0x0EA6A0 + id * 2)
 
@@ -437,6 +488,11 @@ def collate_data(roms: list[FF4], ids: Iterable[int], method_name: str):
 # Commands
 #
 
+def command_formations(roms: list[FF4]):
+    formations = collate_data(roms, range(0x200), "get_formation_info")
+    print(json.dumps(formations, sort_keys=True, indent=4))
+
+
 def command_monsters(roms: list[FF4]):
     monsters = collate_data(roms, range(0xE0), "get_monster_info")
     print(json.dumps(monsters, sort_keys=True, indent=4))
@@ -451,6 +507,8 @@ def main():
     parser.add_argument('--roms', required=True, help='Text file containing the list of ROMs to dump from')
 
     subparsers = parser.add_subparsers(required=True)
+    parser_formations = subparsers.add_parser('formations', help='Dump information about monster formations')
+    parser_formations.set_defaults(func=command_formations)
     parser_monsters = subparsers.add_parser('monsters', help='Dump information about monsters')
     parser_monsters.set_defaults(func=command_monsters)
 

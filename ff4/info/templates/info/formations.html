@@ -1,0 +1,33 @@
+{% extends "info/base.html" %}
+{% load static %}
+{% load django_bootstrap_breadcrumbs %}
+
+{% block breadcrumbs %}
+	{{ block.super }}
+    {% breadcrumb "Monster Formation Information" "info:formations" %}
+{% endblock %}
+
+{% block subtitle %}Monster Formation Information{% endblock %}
+
+{% block content %}				<h1>Monster Formation Information</h1>
+                <p>This section provides detailed monster formation data directly from the game.</p>
+                <table class="table table-striped">
+                    <tr>
+                        <th>ID</th>
+                        <th>Description (USA)</th>
+                        <th>Description (Japan)</th>
+                        <th>Description (Easytype)</th>
+                    </tr>
+{% for formation in formations %}
+                    <tr>
+                        <td>0x{{ formation.id_hex }}</td>
+                        <td><a href="{% url 'info:formation_detail' formation.id %}">{{ formation.description_us }}</a></td>
+                        <td>{{ formation.description_jp }}</td>
+                        <td>{{ formation.description_easytype }}</td>
+                    </tr>
+{% endfor %}
+                </table>
+{% endblock %}
+
+{% block extrajs %}
+{% endblock %}

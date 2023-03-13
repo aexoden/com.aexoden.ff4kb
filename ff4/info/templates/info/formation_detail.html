@@ -1,0 +1,48 @@
+{% extends "info/base.html" %}
+{% load static %}
+{% load django_bootstrap_breadcrumbs %}
+
+{% block breadcrumbs %}
+	{{ block.super }}
+    {% breadcrumb "Monster Formation Information" "info:formations" %}
+    {% breadcrumb_for "info:formation_detail" id %}{{ description_us }}{% endbreadcrumb_for %}
+{% endblock %}
+
+{% block subtitle %}{{ description_us }} &raquo; Monster Formation Information{% endblock %}
+
+{% block content %}				<h1>Monster Formation Information: {{ description_us }}</h1>
+                <p>This page gives detailed information about the {{ description_us }} monster formation.</p>
+                <h2>Basic Information</h2>
+                <dl class="row">
+                    <dt class="col-sm-3">Auto Battle</dt><dd class="col-sm-9">{{ auto_battle }}</dd>
+                    <dt class="col-sm-3">Disables Running</dt><dd class="col-sm-9">{{ disable_running }}</dd>
+                    <dt class="col-sm-3">Floating (Visual)</dt><dd class="col-sm-9"> {{ floating }}</dd>
+                    <dt class="col-sm-3">Forces Back Attack</dt><dd class="col-sm-9">{{ back_attack }}</dd>
+                    <dt class="col-sm-3">Scripted Death</dt><dd class="col-sm-9">{{ scripted }}</dd>
+                </dl>
+                <h2>Technical Information</h2>
+                <dl class="row">
+                    <dt class="col-sm-3">Audio Track</dt><dd class="col-sm-9">{{ audio_track }}</dd>
+                    <dt class="col-sm-3">Controller Target Mapping</dt><dd class="col-sm-9">{{ target_map }}</dd>
+                    <dt class="col-sm-3">Monster Arrangement</dt><dd class="col-sm-9">{{ arrangement }}</dd>
+                    <dt class="col-sm-3">Slow Death Animation</dt><dd class="col-sm-9">{{ slow_death }}</dd>
+                    <dt class="col-sm-3">Transparent</dt><dd class="col-sm-9">{{ transparent }}</dd>
+                    <dt class="col-sm-3">Uses Character Sprite</dt><dd class="col-sm-9">{{ character_sprite }}</dd>
+                    <dt class="col-sm-3">VRAM Layout</dt><dd class="col-sm-9"> {{ vram_layout }}</dd>
+                </dl>
+{% for monster in monsters %}
+                <h2>Monster Type #{{ forloop.counter }}</h2>
+                <dl class="row">
+                    <dt class="col-sm-3">ID</dt><dd class="col-sm-9">{{ monster.id }}</dd>
+                    <dt class="col-sm-3">Name (USA)</dt><dd class="col-sm-9"><a href="{% url 'info:monster_detail' monster.id_us %}">{{ monster.name_us }}</a></dd>
+                    <dt class="col-sm-3">Name (Japan)</dt><dd class="col-sm-9"><a href="{% url 'info:monster_detail' monster.id_jp %}">{{ monster.name_jp }}</a></dd>
+                    <dt class="col-sm-3">Name (Easytype)</dt><dd class="col-sm-9"><a href="{% url 'info:monster_detail' monster.id_easytype %}">{{ monster.name_easytype }}</a></dd>
+                    <dt class="col-sm-3">Count</dt><dd class="col-sm-9">{{ monster.count }}</dd>
+                    <dt class="col-sm-3">Starts Swooned</dt><dd class="col-sm-9">{{ monster.swooned }}</dd>
+                    <dt class="col-sm-3">Egg</dt><dd class="col-sm-9">{{ monster.egg }}</dd>
+                </dl>
+{% endfor %}
+{% endblock %}
+
+{% block extrajs %}
+{% endblock %}
