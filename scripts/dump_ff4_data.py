@@ -244,6 +244,36 @@ CHARACTERS: dict[str, dict[int, str]] = {
         0xF6: 'ン',
     },
     'us': {
+        0x15: ' ',
+        0x29: '[claw] ',
+        0x2A: '[rod] ',
+        0x2B: '[staff] ',
+        0x2C: '[dark sword] ',
+        0x2D: '[sword] ',
+        0x2E: '[holy sword] ',
+        0x2F: '[spear] ',
+        0x30: '[dagger] ',
+        0x31: '[katana] ',
+        0x32: '[star] ',
+        0x33: '[boomerang] ',
+        0x34: '[axe] ',
+        0x35: '[wrench] ',
+        0x36: '[harp] ',
+        0x37: '[bow] ',
+        0x38: '[arrow] ',
+        0x3A: '[whip] ',
+        0x3B: '[shield] ',
+        0x3C: '[helm] ',
+        0x3D: '[armor] ',
+        0x3E: '[gauntlet] ',
+        0x41: '[call magic] ',
+        0x79: '[tent] ',
+        0x7A: '[potion] ',
+        0x7B: '[robe] ',
+        0x7C: '[ring] ',
+        0x7D: '[crystal] ',
+        0x7E: '[key] ',
+        0x7F: '[tail] ',
         0xC1: '.',
         0xC2: '-',
     }
@@ -349,6 +379,14 @@ class FF4(object):
             'transparent': flags_2 & 0x80 > 0,
         }
 
+    def get_item_info(self, id: int) -> dict[str, Any]:
+        base_address = 0x0F8000 + id * 9
+        name = self._read_string(base_address, 9).strip()
+
+        return {
+            'name': name,
+        }
+
     def get_monster_info(self, id: int) -> dict[str, Any]:
         base_address = 0x0E0000 + self._read_u16(0x0EA6A0 + id * 2)
 
@@ -372,7 +410,19 @@ class FF4(object):
         agility_maximum = self._read_u8(0x0EA620 + agility_index * 2 + 1)
         agility_range = f'{agility_minimum} - {agility_maximum}' if agility_maximum > agility_minimum else f'{agility_minimum}'
 
+        element_weakness = 0x00
+
         item_drop_index = self._read_u8(base_address + 7) & 0x3F
+        item_drop_rate = self._read_u8(base_address + 7) >> 6
+
+        if item_drop_rate == 1:
+            item_drop_rate = 5
+        elif item_drop_rate == 2:
+            item_drop_rate = 25
+        elif item_drop_rate == 3:
+            item_drop_rate = 99
+        else:
+            item_drop_rate = 25
 
         flags = self._read_u8(base_address + 9)
         offset = 10
@@ -390,7 +440,7 @@ class FF4(object):
             offset += 3
 
         if flags & 0x20 > 0:
-            # element weakness
+            element_weakness = self._read_u8(base_address + offset)
             offset += 1
 
         if flags & 0x10 > 0:
@@ -438,7 +488,10 @@ class FF4(object):
             'agility_maximum': agility_maximum,
             'agility_range': agility_range,
 
+            'element_weakness': element_weakness,
+
             'item_drop_index': item_drop_index,
+            'item_drop_rate': item_drop_rate,
             'item_drop_1': self._read_u8(0x0E9F00 + item_drop_index * 4 + 0),
             'item_drop_2': self._read_u8(0x0E9F00 + item_drop_index * 4 + 1),
             'item_drop_3': self._read_u8(0x0E9F00 + item_drop_index * 4 + 2),
@@ -493,6 +546,11 @@ def command_formations(roms: list[FF4]):
     print(json.dumps(formations, sort_keys=True, indent=4))
 
 
+def command_items(roms: list[FF4]):
+    items = collate_data(roms, range(0x100), "get_item_info")
+    print(json.dumps(items, sort_keys=True, indent=4))
+
+
 def command_monsters(roms: list[FF4]):
     monsters = collate_data(roms, range(0xE0), "get_monster_info")
     print(json.dumps(monsters, sort_keys=True, indent=4))
@@ -508,7 +566,9 @@ def main():
 
     subparsers = parser.add_subparsers(required=True)
     parser_formations = subparsers.add_parser('formations', help='Dump information about monster formations')
-    parser_formations.set_defaults(func=command_formations)
+    parser_formations.set_defaults(func=command_items)
+    parser_items = subparsers.add_parser('items', help='Dump information about items')
+    parser_items.set_defaults(func=command_items)
     parser_monsters = subparsers.add_parser('monsters', help='Dump information about monsters')
     parser_monsters.set_defaults(func=command_monsters)
 

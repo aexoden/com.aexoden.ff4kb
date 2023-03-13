@@ -31,6 +31,14 @@
                     <dt class="col-sm-3">Script Index</dt><dd class="col-sm-9">{{ script_index }}</dd>
                     <dt class="col-sm-3">Counter Script Index</dt><dd class="col-sm-9">{{ counter_script_index }}</dd>
                 </dl>
+                <h2>Item Drops</h2>
+                <dl class="row">
+                    <dt class="col-sm-3">Base Drop Rate</dt><dd class="col-sm-9">{{ item_drop_rate_base }}</dd>
+                    <dt class="col-sm-3">First Item (128/256)</dt><dd class="col-sm-9">{{ item_drop_1 }}</dd>
+                    <dt class="col-sm-3">Second Item (80/256)</dt><dd class="col-sm-9">{{ item_drop_2 }}</dd>
+                    <dt class="col-sm-3">Third Item (44/256)</dt><dd class="col-sm-9">{{ item_drop_3 }}</dd>
+                    <dt class="col-sm-3">Fourth Item (4/256)</dt><dd class="col-sm-9">{{ item_drop_4 }}</dd>
+                </dl>
 {% endblock %}
 
 {% block extrajs %}

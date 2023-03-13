@@ -26,7 +26,7 @@ class Version(Enum):
 # Functions
 #
 
-def filter_arrangement(value: str):
+def filter_arrangement(value: str, _version: Version):
     arrangements = {
         14: '14: Zombie x4',
         18: '18: Machine x2, Beamer x3',
@@ -49,7 +49,7 @@ def filter_arrangement(value: str):
         return f'{value}'
 
 
-def filter_audio_track(value: str) -> str:
+def filter_audio_track(value: str, _version: Version) -> str:
     if value == '0':
         return 'Battle 1'
     elif value == '1':
@@ -60,11 +60,19 @@ def filter_audio_track(value: str) -> str:
         return '[does not change music]'
 
 
-def filter_negative_one(value: str):
+def filter_drop_rate(value: str, _version: Version) -> str:
+    return f'{int(value) / 99 * 100:0.3f}%'
+
+
+def filter_item(value: str, version: Version) -> str:
+    return ff4.get_item_names(int(value))[version]
+
+
+def filter_negative_one(value: str, _version: Version):
     return 'None' if value == '-1' else value
 
 
-def filter_race(value: str):
+def filter_race(value: str, _version: Version):
     race = int(value)
     races: list[str] = []
 
@@ -128,36 +136,48 @@ def extract_values(values: str | int | bool | dict[str, list[str]], return_type:
         raise ValueError(f'Unexpected value type: {type(values)}')
 
 
-def group_values(values: dict[Any, list[str]] | list[Any], filter: Optional[Callable[[str], str]] = None) -> str:
+def group_values(values: dict[Any, list[str]] | list[Any], filter: Optional[Callable[[str, Version], str]] = None) -> str:
     if type(values) is not dict:
-        return filter(str(values)) if filter else str(values)
+        return filter(str(values), Version.US) if filter else str(values)
 
     output: list[tuple[int, str]] = []
 
     for value, versions in values.items():
         versions = sorted(versions)
 
+        if 'us' in versions and 'us-rev-1' not in versions:
+            raise ValueError("USA and USA (Rev 1) have different values")
+
+        if 'jp' in versions and 'jp-rev-1' not in versions:
+            raise ValueError("Japan and Japan (Rev 1) have different values")
+
         if versions == ['us', 'us-rev-1']:
             version = 'USA'
+            filter_version = Version.US
             priority = 10
         elif versions == ['jp-easytype', 'us', 'us-rev-1']:
             version = 'USA and Easytype'
+            filter_version = Version.US
             priority = 10
         elif versions == ['jp', 'jp-rev-1']:
             version = 'Japan'
+            filter_version = Version.JP
             priority = 5
         elif versions == ['jp-easytype']:
             version = 'Easytype'
+            filter_version = Version.EASYTYPE
             priority = 3
         elif versions == ['jp', 'jp-rev-1', 'us', 'us-rev-1']:
             version = 'USA and Japan'
+            filter_version = Version.JP
             priority = 10
         else:
             version = ', '.join(versions)
+            filter_version = Version.US
             priority = -1
 
         if filter:
-            value = filter(str(value))
+            value = filter(str(value), filter_version)
 
         output.append((priority, f'{value} ({version})'))
 
@@ -172,6 +192,9 @@ class FF4(object):
     def __init__(self):
         with open(os.path.join(settings.BASE_DIR, 'ff4', 'data', 'formations.json')) as f:
             self._formations = json.load(f)
+
+        with open(os.path.join(settings.BASE_DIR, 'ff4', 'data', 'items.json')) as f:
+            self._items = json.load(f)
 
         with open(os.path.join(settings.BASE_DIR, 'ff4', 'data', 'monsters.json')) as f:
             self._monsters = json.load(f)
@@ -204,6 +227,9 @@ class FF4(object):
 
     def get_formations(self):
         return [self.get_formation(i) for i in range(len(self._formations))]
+
+    def get_item_names(self, id: int):
+        return extract_values(self._items[id]['name'], str)
 
     def get_monster(self, id: int):
         return self._monsters[id]
@@ -296,8 +322,10 @@ class FF4(object):
 # Handlers
 #
 
+ff4 = FF4()
+
+
 def formations(request: HttpRequest):
-    ff4 = FF4()
     formations: list[dict[str, Any]] = []
 
     for id, formation in enumerate(ff4.get_formations()):
@@ -320,7 +348,6 @@ def formation_detail(request: HttpRequest, id: int):
     if id < 0 or id >= 0x200:
         raise Http404("Nonexistent monster formation.")
 
-    ff4 = FF4()
     formation = ff4.get_formation(id)
 
     assert(type(formation['monsters']) is list)
@@ -365,7 +392,6 @@ def formation_detail(request: HttpRequest, id: int):
 
 
 def monsters(request: HttpRequest):
-    ff4 = FF4()
     monsters: list[dict[str, Any]] = []
 
     for id, _ in enumerate(ff4.get_monsters()):
@@ -390,8 +416,6 @@ def monster_detail(request: HttpRequest, id: int):
     if id < 0 or id >= 0xE0:
         raise Http404("Nonexistent monster.")
 
-    ff4 = FF4()
-
     names = ff4.get_monster_names(id)
     monster_data = ff4.get_monster(id)
 
@@ -412,7 +436,12 @@ def monster_detail(request: HttpRequest, id: int):
         'magic_power': group_values(monster_data['magic_power'], filter_negative_one),
         'race': group_values(monster_data['race'], filter_race),
         'script_index': group_values(monster_data['script_index']),
-        'counter_script_index': group_values(monster_data['counter_script_index'], filter_negative_one)
+        'counter_script_index': group_values(monster_data['counter_script_index'], filter_negative_one),
+        'item_drop_rate_base': group_values(monster_data['item_drop_rate'], filter_drop_rate),
+        'item_drop_1': group_values(monster_data['item_drop_1'], filter_item),
+        'item_drop_2': group_values(monster_data['item_drop_2'], filter_item),
+        'item_drop_3': group_values(monster_data['item_drop_3'], filter_item),
+        'item_drop_4': group_values(monster_data['item_drop_4'], filter_item),
     }
 
     return render(request, 'info/monster_detail.html', context)
