@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import sys
 
 from collections.abc import Iterable
 from typing import Any
@@ -304,6 +305,13 @@ class FF4(object):
         else:
             print(f'WARNING: {filename} is not a recognized version')
 
+        self._scan_encounters()
+        self._scan_triggers()
+        self._scan_npcs()
+
+        # Opening Event
+        self._scan_event(0x10, 0x0000)
+
     def _read_u8(self, address: int):
         return self._data[address // 0x10000 * 0x8000 + address % 0x8000]
 
@@ -327,6 +335,214 @@ class FF4(object):
     @property
     def version(self):
         return self._version
+
+    def _scan_encounters(self):
+        self._encounters_maps = {
+            0x0000: self._scan_encounters_map(0x0000),
+            0x1000: self._scan_encounters_map(0x1000),
+            0x2000: self._scan_encounters_map(0x2000),
+        }
+
+        for map in range(0x3000, 0x3180):
+            self._encounters_maps[map] = self._scan_encounters_map(map)
+
+    def _scan_encounters_map(self, map: int):
+        if map == 0x0000:
+            map_address = 0x0EC542
+            map_count = 64
+            group_address = 0x0EC796
+        elif map == 0x1000:
+            map_address = 0x0EC582
+            map_count = 16
+            group_address = 0x0EC796
+        elif map == 0x2000:
+            map_address = 0x0EC592
+            map_count = 4
+            group_address = 0x0EC796
+        else:
+            map_address = 0x0EC596 + map - 0x3000
+            map_count = 1
+            group_address = 0x0EC816
+
+        groups: set[int] = set()
+
+        for i in range(map_count):
+            group = self._read_u8(map_address + i)
+            groups.add(group)
+
+        formations: set[int] = set()
+
+        if map >= 0x3000:
+            encounter_rate = self._read_u8(0x0EC342 + map - 0x3000)
+            if encounter_rate == 0:
+                return formations
+
+        for group in groups:
+            address = group_address + group * 8
+            for i in range(8):
+                formation = self._read_u8(address + i)
+                if map == 0x1000 or map == 0x2000 or map >= 0x3100:
+                    formation += 0x100
+                formations.add(formation)
+
+        return formations
+
+    def _scan_event(self, id: int, map: int):
+        address = 0x128200 + self._read_u16(0x128000 + id * 2)
+        end_address = 0x128200 + self._read_u16(0x128000 + (id + 1) * 2)
+
+        current_map = [map]
+        warning = False
+
+        while address < end_address:
+            opcode = self._read_u8(address)
+
+            if opcode < 0xDB:
+                bytes = 1
+            elif opcode == 0xE2:
+                bytes = 3
+            elif opcode == 0xFE:
+                bytes = 5
+            else:
+                bytes = 2
+
+            if opcode == 0xFE:
+                next_byte = self._read_u8(address + 1)
+                if next_byte == 0xFB:
+                    current_map.append(0x0000)
+                elif next_byte == 0xFC:
+                    current_map.append(0x1000)
+                elif next_byte == 0xFD:
+                    current_map.append(0x2000)
+                else:
+                    current_map.append(0x3000 + next_byte + (0x100 if current_map[-1] > 0x3100 else 0))
+            elif opcode == 0xFD:
+                next_byte = self._read_u8(address + 1)
+                if next_byte == 0x1D:
+                    if len(current_map) == 1:
+                        warning = True
+                    else:
+                        current_map.pop()
+                elif next_byte == 0x04:
+                    # Girl and Titan
+                    self._encounters_maps[current_map[-1]].add(0x0EC)
+            elif opcode == 0xEC:
+                formation = self._read_u8(address + 1)
+
+                if current_map[-1] >= 0x3100:
+                    formation += 0x100
+
+                self._encounters_maps[current_map[-1]].add(formation)
+
+                if warning:
+                    print(f'Added {formation} to {map:04X} but the map history stack was incorrect')
+
+            address += bytes
+
+    def _scan_npcs(self):
+        for map in range(0x3000, 0x3180):
+            self._scan_npcs_map(map)
+
+    def _scan_npcs_map(self, map: int):
+        map_address = 0x159C84 + (map - 0x3000) * 13
+        npc_placement_offset = (self._read_u8(map_address + 3) * 2)
+        high_npcs = False
+
+        if self._read_u8(map_address + 10) & 0x80 > 0 or map == 0x1000 or map == 0x2000 or map >= 0x3100:
+            high_npcs = True
+            npc_placement_offset += 0x200
+
+        address = self._read_u16(0x138000 + npc_placement_offset) + 0x138300
+
+        while self._read_u8(address) > 0:
+            npc = self._read_u8(address)
+
+            if high_npcs:
+                npc += 256
+
+            n_address = self._read_u16(0x139800 + npc * 2) + 0x139C00
+            n_limit = self._read_u16(0x139800 + (npc + 1) * 2) + 0x139C00
+
+            while n_address < n_limit:
+                if self._read_u8(n_address) == 0xFF:
+                    event = self._read_u8(n_address + 1)
+                    self._scan_event(event, map)
+
+                    n_address += 1
+
+                n_address += 1
+
+            address += 4
+
+    def _scan_triggers(self):
+        self._scan_triggers_map(0x0000)
+        self._scan_triggers_map(0x1000)
+        self._scan_triggers_map(0x2000)
+
+        for map in range(0x3000, 0x3180):
+            self._scan_triggers_map(map)
+
+    def _scan_triggers_map(self, map: int):
+        if map < 0x3000:
+            if self.version in ['jp', 'jp-rev-1']:
+                address = self._read_u16(int(0x158000 + map / 0x1000 * 2)) + 0x158006
+                limit = self._read_u16(int(0x158000 + ((map / 0x1000) + 1) * 2)) + 0x158006 if map < 0x2000 else 0x1581A0
+            else:
+                address = self._read_u16(int(0x19FE60 + map / 0x1000 * 2)) + 0x19FE66
+                limit = self._read_u16(int(0x19Fe60 + ((map / 0x1000) + 1) * 2)) + 0x19FE66 if map < 0x2000 else 0x1A0000
+        else:
+            if self.version in ['jp', 'jp-rev-1']:
+                address = self._read_u16(0x158200 + (map - 0x3000) * 2) + 0x158500
+                limit = self._read_u16(0x158200 + ((map - 0x3000) + 1) * 2) + 0x158500
+            else:
+                address = self._read_u16(0x158000 + (map - 0x3000) * 2) + 0x158300
+                limit = self._read_u16(0x158000 + ((map - 0x3000) + 1) * 2) + 0x158300
+
+        while address < limit:
+            if self._read_u8(address + 2) == 0xFF:
+                conditional_event = self._read_u8(address + 3)
+                ce_address = self._read_u16(0x12F260 + conditional_event * 2) + 0x12F460
+                ce_limit = self._read_u16(0x12F260 + (conditional_event + 1) * 2) + 0x12F460
+
+                while ce_address < ce_limit:
+                    if self._read_u8(ce_address) == 0xFF:
+                        event = self._read_u8(ce_address + 1)
+                        # In theory, we should verify that this tile is actually a trigger tile, but that's even more
+                        # complexity.
+                        self._scan_event(event, map)
+
+                        ce_address += 1
+
+                    ce_address += 1
+            elif self._read_u8(address + 2) == 0xFE:
+                byte_2 = self._read_u8(address + 3)
+
+                if byte_2 & 0x40 > 0:
+                    formation = (byte_2 & 0x1F) + 0x1C0 + (1 if map in [0x1000, 0x2000] or map >= 0x3100 else 0) * 32
+                    self._encounters_maps[map].add(formation)
+
+            address += 5
+
+    def _find_monster(self, id: int):
+        results: dict[str, set[int]] = {
+            'maps': set(),
+            'treasures': set(),
+            'events': set(),
+        }
+
+        for map, formations in self._encounters_maps.items():
+            for formation in formations:
+                formation_data = self.get_formation_info(formation)
+
+                for i in range(1, 4):
+                    if formation_data[f'monster_{i}_id'] == id:
+                        results['maps'].add(map)
+
+                    # Egg
+                    if id == 0xDF and formation_data[f'monster_{i}_egg']:
+                        results['maps'].add(map)
+
+        return results
 
     def get_formation_info(self, id: int) -> dict[str, Any]:
         base_address = 0x0E8000 + id * 8
@@ -419,7 +635,9 @@ class FF4(object):
         item_drop_index = self._read_u8(base_address + 7) & 0x3F
         item_drop_rate = self._read_u8(base_address + 7) >> 6
 
-        if item_drop_rate == 1:
+        if item_drop_rate == 0:
+            item_drop_rate = 0
+        elif item_drop_rate == 1:
             item_drop_rate = 5
         elif item_drop_rate == 2:
             item_drop_rate = 25
@@ -434,6 +652,26 @@ class FF4(object):
         magic_power = -1
         race = 0
         counter_script_index = -1
+
+        alternate_scripts_set: set[bool] = set()
+        locations = self._find_monster(id)
+
+        for map in locations['maps']:
+            if 0x315A <= map <= 0x315C or 0x3167 <= map <= 0x317E:
+                alternate_scripts_set.add(True)
+            else:
+                alternate_scripts_set.add(False)
+
+        alternate_scripts: bool = False
+
+        if len(alternate_scripts_set) == 0:
+            print(f'WARNING: Not sure if monster {id} uses alternate scripts', file=sys.stderr)
+            alternate_scripts = False
+        if len(alternate_scripts_set) == 1:
+            alternate_scripts = list(alternate_scripts_set)[0]
+        elif len(alternate_scripts_set) > 1:
+            print(f'WARNING: Monster {id} potentially both does and does not use alternate scripts', file=sys.stderr)
+            alternate_scripts = True
 
         if flags & 0x80 > 0:
             element_attack = self._read_u8(base_address + offset)
@@ -509,6 +747,7 @@ class FF4(object):
 
             'script_index': self._read_u8(base_address + 8),
             'counter_script_index': counter_script_index,
+            'alternate_scripts': alternate_scripts,
         }
 
 
@@ -576,7 +815,7 @@ def main():
 
     subparsers = parser.add_subparsers(required=True)
     parser_formations = subparsers.add_parser('formations', help='Dump information about monster formations')
-    parser_formations.set_defaults(func=command_items)
+    parser_formations.set_defaults(func=command_formations)
     parser_items = subparsers.add_parser('items', help='Dump information about items')
     parser_items.set_defaults(func=command_items)
     parser_monsters = subparsers.add_parser('monsters', help='Dump information about monsters')

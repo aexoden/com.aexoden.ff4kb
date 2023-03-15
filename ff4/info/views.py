@@ -517,6 +517,7 @@ def monster_detail(request: HttpRequest, id: int):
         'status_attack': group_values(monster_data['status_attack'], filter_status),
         'script_index': group_values(monster_data['script_index']),
         'counter_script_index': group_values(monster_data['counter_script_index'], filter_negative_one),
+        'alternate_scripts': group_values(monster_data['alternate_scripts']),
         'item_drop_rate_base': group_values(monster_data['item_drop_rate'], filter_drop_rate),
         'item_drop_1': group_values(monster_data['item_drop_1'], filter_item),
         'item_drop_2': group_values(monster_data['item_drop_2'], filter_item),
