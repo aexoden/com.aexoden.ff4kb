@@ -267,6 +267,8 @@ CHARACTERS: dict[str, dict[int, str]] = {
         0x3C: '[helm] ',
         0x3D: '[armor] ',
         0x3E: '[gauntlet] ',
+        0x3F: '[black magic] ',
+        0x40: '[white magic] ',
         0x41: '[call magic] ',
         0x79: '[tent] ',
         0x7A: '[potion] ',
@@ -603,6 +605,21 @@ class FF4(object):
             'name': name,
         }
 
+    def get_spell_info(self, id: int) -> dict[str, Any]:
+        if id < 0x48:
+            base_address = 0x0F8900
+            length = 6
+        else:
+            id -= 0x48
+            base_address = 0x0F8AB0
+            length = 8
+
+        name = self._read_string(base_address + id * length, length).strip()
+
+        return {
+            'name': name,
+        }
+
     def get_monster_info(self, id: int) -> dict[str, Any]:
         base_address = 0x0E0000 + self._read_u16(0x0EA6A0 + id * 2)
 
@@ -750,6 +767,123 @@ class FF4(object):
             'alternate_scripts': alternate_scripts,
         }
 
+    def get_script_info(self, id: int):
+        address = 0x0EE030
+        index = 0
+        pair = 0
+
+        scripts: dict[str, int] = {
+            'condition_set_0': -1,
+            'condition_set_1': -1,
+            'condition_set_2': -1,
+            'condition_set_3': -1,
+            'condition_set_4': -1,
+            'condition_set_5': -1,
+            'condition_set_6': -1,
+            'condition_set_7': -1,
+            'action_set_0': -1,
+            'action_set_1': -1,
+            'action_set_2': -1,
+            'action_set_3': -1,
+            'action_set_4': -1,
+            'action_set_5': -1,
+            'action_set_6': -1,
+            'action_set_7': -1,
+        }
+
+        while index <= id:
+            value = self._read_u8(address)
+
+            if value == 0xFF:
+                address += 1
+                index += 1
+            elif index == 0xE7:
+                address += 1
+            elif index == id:
+                scripts[f'condition_set_{pair}'] = value
+                scripts[f'action_set_{pair}'] = self._read_u8(address + 1)
+
+                address += 2
+                pair += 1
+            else:
+                address += 2
+
+        return scripts
+
+    def get_hp_check_info(self, id: int) -> dict[str, int]:
+        address = 0x0EE000 + id * 2
+
+        return {
+            'hp_value': self._read_u16(address)
+        }
+
+    def get_monster_derived_stats_info(self, id: int) -> dict[str, int]:
+        address = 0x0EA380 + id * 3
+
+        return {
+            'multiplier': self._read_u8(address),
+            'accuracy': self._read_u8(address + 1),
+            'power': self._read_u8(address + 2),
+        }
+
+    def get_condition_set_info(self, id: int) -> dict[str, int]:
+        address = 0x0EE600
+        index = 0
+        entry = 0
+
+        conditions: dict[str, int] = {
+            'condition_0': -1,
+            'condition_1': -1,
+            'condition_2': -1,
+        }
+
+        while index <= id:
+            value = self._read_u8(address)
+
+            if value == 0xFF:
+                index += 1
+            elif index == id:
+                conditions[f'condition_{entry}'] = value
+                entry += 1
+
+            address += 1
+
+        return conditions
+
+    def get_condition_info(self, id: int):
+        address = 0x0EE700 + 4 * id
+
+        return {
+            'opcode': self._read_u8(address),
+            'parameter_1': self._read_u8(address + 1),
+            'parameter_2': self._read_u8(address + 2),
+            'parameter_3': self._read_u8(address + 3),
+        }
+
+    def get_standard_action_set_info(self, id: int):
+        return self.get_action_set_info(0x0EE900, id)
+
+    def get_alternate_action_set_info(self, id: int):
+        return self.get_action_set_info(0x0EB6C0, id)
+
+    def get_action_set_info(self, address: int, id: int):
+        index = 0
+        blob: list[str] = []
+
+        while index <= id:
+            value = self._read_u8(address)
+
+            if value == 0xFF:
+                index += 1
+            elif index == id:
+                blob.append(str(value))
+
+            address += 1
+
+        return {
+            'actions': ', '.join(blob),
+        }
+
 
 #
 # Functions
@@ -802,7 +936,39 @@ def command_items(roms: list[FF4]):
 
 def command_monsters(roms: list[FF4]):
     monsters = collate_data(roms, range(0xE0), "get_monster_info")
-    print(json.dumps(monsters, sort_keys=True, indent=4))
+    derived_stats = collate_data(roms, range(224), "get_monster_derived_stats_info")
+
+    data = {
+        'monsters': monsters,
+        'derived_stats': derived_stats,
+    }
+
+    print(json.dumps(data, sort_keys=True, indent=4))
+
+
+def command_scripts(roms: list[FF4]):
+    scripts = collate_data(roms, range(0xFE), "get_script_info")
+    condition_sets = collate_data(roms, range(0x63), "get_condition_set_info")
+    conditions = collate_data(roms, range(0x50), "get_condition_info")
+    standard_action_sets = collate_data(roms, range(0x100), "get_standard_action_set_info")
+    alternate_action_sets = collate_data(roms, range(0x60), "get_alternate_action_set_info")
+    hp_check_data = collate_data(roms, range(0x18), "get_hp_check_info")
+
+    data = {
+        'scripts': scripts,
+        'condition_sets': condition_sets,
+        'conditions': conditions,
+        'standard_action_sets': standard_action_sets,
+        'alternate_action_sets': alternate_action_sets,
+        'hp_check_data': hp_check_data,
+    }
+
+    print(json.dumps(data, sort_keys=True, indent=4))
+
+
+def command_spells(roms: list[FF4]):
+    spells = collate_data(roms, range(0xB0), "get_spell_info")
+    print(json.dumps(spells, sort_keys=True, indent=4))
 
 
 #
@@ -820,6 +986,10 @@ def main():
     parser_items.set_defaults(func=command_items)
     parser_monsters = subparsers.add_parser('monsters', help='Dump information about monsters')
     parser_monsters.set_defaults(func=command_monsters)
+    parser_scripts = subparsers.add_parser('scripts', help='Dump information about battle scripts')
+    parser_scripts.set_defaults(func=command_scripts)
+    parser_spells = subparsers.add_parser('spells', help='Dump information about spells')
+    parser_spells.set_defaults(func=command_spells)
 
     args = parser.parse_args()
     roms: list[FF4] = []

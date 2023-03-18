@@ -45,6 +45,30 @@
                     <dt class="col-sm-3">Third Item (44/256)</dt><dd class="col-sm-9">{{ item_drop_3 }}</dd>
                     <dt class="col-sm-3">Fourth Item (4/256)</dt><dd class="col-sm-9">{{ item_drop_4 }}</dd>
                 </dl>
+{% for version, script_data in script.items %}
+                <h2>Scripts ({{ version }})</h2>
+{% for condition, actions in script_data %}
+                <h3>{{ condition }}</h3>
+                <ol>
+{% for action in actions %}
+                    <li>{{ action }}</li>
+{% endfor %}
+                </ol>
+{% endfor %}
+{% endfor %}
+{% for version, script_data in counter_script.items %}
+{% if script_data|length > 0 %}
+                <h2>Counter Scripts ({{ version }})</h2>
+{% for condition, actions in script_data %}
+                <h3>{{ condition }}</h3>
+                <ol>
+{% for action in actions %}
+                    <li>{{ action }}</li>
+{% endfor %}
+                </ol>
+{% endfor %}
+{% endif %}
+{% endfor %}
 {% endblock %}
 
 {% block extrajs %}
