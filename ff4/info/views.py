@@ -554,8 +554,6 @@ class FF4(object):
                 spell_name = f'special spell to clear Caller status and animate D.Mist attack (index 0x{id:02X})'
             elif id == 0xB1:
                 spell_name = f'special spell to activate Caller (index 0x{id:02X})'
-            #elif id == 0xB2:
-            #    spell_name = f'special spell to hide monsters and apparitions (index 0x{id:02X})'
             elif id == 0xB3:
                 spell_name = f'special spell to show Anna apparition (index 0x{id:02X})'
             elif id == 0xB4:
@@ -601,7 +599,7 @@ class FF4(object):
         elif id == 0xE0:
             return 'Twin Cast'
         elif id == 0xE1:
-            return 'Wait'
+            return 'Take no action on this turn'
         elif id == 0xE8:
             return f'Change race to {filter_race(str(parameters[0]), Version.US)}'
         elif id == 0xEA:
@@ -870,19 +868,6 @@ class FF4(object):
                     conditions.append(str(opcode) + ' ' + target)
 
         return conditions
-
-# 0: check status
-# 1: check hp
-# 2: check flag
-# 3: check living
-# 4: check monster count
-# 5: check formation
-# 6: check acting type alone
-# 7: check recent attack
-# 8: check recent attacks all
-# 9: check running with spell
-# A: check damage
-# B: check alone
 
     def _format_character_target(self, target: int) -> tuple[str, bool]:
         if target == 0x01:

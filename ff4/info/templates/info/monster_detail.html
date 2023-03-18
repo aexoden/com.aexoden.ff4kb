@@ -45,10 +45,11 @@
                     <dt class="col-sm-3">Third Item (44/256)</dt><dd class="col-sm-9">{{ item_drop_3 }}</dd>
                     <dt class="col-sm-3">Fourth Item (4/256)</dt><dd class="col-sm-9">{{ item_drop_4 }}</dd>
                 </dl>
+                <h2>Scripts</h2>
 {% for version, script_data in script.items %}
-                <h2>Scripts ({{ version }})</h2>
+                <h3>{{ version }}</h3>
 {% for condition, actions in script_data %}
-                <h3>{{ condition }}</h3>
+                <h4>{{ condition }}</h4>
                 <ol>
 {% for action in actions %}
                     <li>{{ action }}</li>
@@ -56,11 +57,15 @@
                 </ol>
 {% endfor %}
 {% endfor %}
+                <h2>Counter Scripts</h2>
+{% if counter_script_index == "None" %}
+                    <p>This monster has no counter scripts.</p>
+{% endif %}
 {% for version, script_data in counter_script.items %}
 {% if script_data|length > 0 %}
-                <h2>Counter Scripts ({{ version }})</h2>
+                <h3>{{ version }}</h3>
 {% for condition, actions in script_data %}
-                <h3>{{ condition }}</h3>
+                <h4>{{ condition }}</h4>
                 <ol>
 {% for action in actions %}
                     <li>{{ action }}</li>
