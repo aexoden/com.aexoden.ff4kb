@@ -10,7 +10,7 @@
 {% block subtitle %}Inventory Warping{% endblock %}
 
 {% block content %}				<h1>Inventory Warping Fundamentals</h1>
-			<address>Jason Lynch &lt;<a href="mailto:jason@calindora.com">jason@calindora.com</a>&gt; (Aexoden)</address>
+			<address>Jason Lynch &lt;<a href="mailto:jason@aexoden.com">jason@aexoden.com</a>&gt; (Aexoden)</address>
 			<h2 id="introduction">Introduction</h2>
 			<p>A key feature of the current routes that use the 64-floor glitch is the use of inventory warping. The exact technical description of this process is probably beyond the scope of this guide, but the short version is something like this: Certain tiles in the game are trigger tiles, and when you step on one, the game searches a particular area of memory for data about what to do. If a given trigger tile doesn't have any data to find, the game keeps searching memory endlessly until it finds some. These searches can happen to pass through areas of memory that we can modify, like our inventory. As far as I can tell, every trigger tile on a normal map in the game either has an associated trigger or is inaccessible. However, on certain glitch maps, there are trigger tiles that are completely manipulable.</p>
 			<h2 id="technical-details">Technical Details</h2>
