@@ -9,15 +9,14 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 import os
 
+from django.core.management.utils import get_random_secret_key
+
 from configurations import Configuration, values  # type: ignore
 
 
 class Common(Configuration):
     # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-    # SECURITY WARNING: keep the secret key used in production secret!
-    SECRET_KEY = values.SecretValue()
 
     # SECURITY WARNING: don't run with debug turned on in production!
     DEBUG = values.BooleanValue(False)
@@ -118,8 +117,14 @@ class Common(Configuration):
         os.path.join(BASE_DIR, 'ff4', 'static')
     ]
 
+class Build(Common):
+    SECRET_KEY = get_random_secret_key()
 
-class Development(Common):
+class Run(Common):
+    # SECURITY WARNING: keep the secret key used in production secret!
+    SECRET_KEY = values.SecretValue()
+
+class Development(Run):
     DEBUG = True
 
     ALLOWED_HOSTS = []
@@ -133,7 +138,7 @@ class Development(Common):
     ]
 
 
-class Staging(Common):
+class Staging(Run):
     # Security
     SESSION_COOKIE_SECURE = values.BooleanValue(True)
     SECURE_BROWSER_XSS_FILTER = values.BooleanValue(True)
@@ -150,3 +155,5 @@ class Staging(Common):
 
 class Production(Staging):
     pass
+
+
