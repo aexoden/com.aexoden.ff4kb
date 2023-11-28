@@ -24,16 +24,12 @@ My setup currently additionally sets SECRET_KEY to the same value as
 DJANGO_SECRET_KEY. I currently do not know which of these is required or if both
 are.
 
-## Known Issues
+## Notes
 
-There is one issue with the current code that make deploying this more difficult
-than it should be:
-
-1. The step route generation tool, rosa, is included as a binary directly in the
-   repository. Ideally, it would be built from source on the target machine. The
-   current binary is relatively generic for a current cloud VM, but it could be
-   problematic in the future if it happens to use an instruction that is later
-   removed (or if ARM servers become popular, etc.). Thus, depending on the
-   current situation, it may be necessary to build a new binary manually. This
-   tool is currently only used for custom routes, so most of the site's
-   functionality would remain intact nonetheless.
+One feature of this web site (using custom values for a route's variables)
+requires a copy of [rosa](https://github.com/aexoden/rosa) to be placed in the
+`rosa` directory. The `Dockerfile` will take care of building and installing
+this, but if you are doing some other form of installation, you will need to
+handle the rosa installation yourself. Note that this feature currently has no
+obvious public-facing interface, though if someone knew the correct parameters
+to pass to the URL, they could access it.
