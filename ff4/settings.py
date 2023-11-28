@@ -23,7 +23,7 @@ class Common(Configuration):
     # SECURITY WARNING: don't run with debug turned on in production!
     DEBUG = values.BooleanValue(False)
 
-    ALLOWED_HOSTS = ['ff4.aexoden.com', 'ff4kb.aexoden.com', 'ff4kb.calindora.com']
+    ALLOWED_HOSTS = values.ListValue(['ff4kb.aexoden.com'], environ_name='ALLOWED_HOSTS')
 
     ALLOWED_HOSTS.append(gethostname())
     ALLOWED_HOSTS.extend(list(set(gethostbyname_ex(gethostname())[2])))

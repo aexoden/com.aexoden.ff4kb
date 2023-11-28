@@ -12,6 +12,9 @@ However, the deployment is done via a standard Dockerfile. There are certain
 environment variables that should be set, either automatically by Dokku (or some
 other PaaS solution), or manually by the user:
 
+* DJANGO_ALLOWED_HOSTS: A comma separated list of domain names the app should
+  reply to. The default is `ff4kb.aexoden.com` but this is almost certainly not
+  what you want.
 * DJANGO_SECRET_KEY: Should be set to a random, unpredictable value. Generators
   are available on the web.
 * ENVIRONMENT: Set to `Production` for production.
