@@ -39,7 +39,6 @@ class Common(Configuration):
 
         'django_extensions',
         'django_bootstrap_breadcrumbs',
-        'debug_toolbar',
 
         'ff4.guides',
         'ff4.info',
@@ -136,6 +135,10 @@ class Development(Run):
 
     INTERNAL_IPS = [
         '127.0.0.1'
+    ]
+
+    INSTALLED_APPS = Common.INSTALLED_APPS + [
+        'debug_toolbar',
     ]
 
     MIDDLEWARE = Common.MIDDLEWARE + [
