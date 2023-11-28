@@ -26,8 +26,8 @@ are.
 
 ## Known Issues
 
-There are a couple of issues with the current code that make deploying this more
-difficult than it should be:
+There is one issue with the current code that make deploying this more difficult
+than it should be:
 
 1. The step route generation tool, rosa, is included as a binary directly in the
    repository. Ideally, it would be built from source on the target machine. The
@@ -37,11 +37,3 @@ difficult than it should be:
    current situation, it may be necessary to build a new binary manually. This
    tool is currently only used for custom routes, so most of the site's
    functionality would remain intact nonetheless.
-
-2. Basic statistics about each route are cached to avoid reading all files on
-   disk every time the data is needed. This cache is generated per route on
-   first use. However, generating the cache is a relatively slow operation (potentially
-   several seconds), and will make the site appear to stall. If the seed finder
-   tool is accessed, the site will likely time out and give an error. The second
-   or third attempt should succeed, however. A better solution would be to
-   generate the cache during the deployment process.

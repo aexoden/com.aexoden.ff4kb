@@ -11,6 +11,7 @@ RUN poetry install
 # Django setup
 RUN ENVIRONMENT=Build poetry run python manage.py collectstatic --noinput
 RUN ENVIRONMENT=Build poetry run python manage.py migrate
+RUN ENVIRONMENT=Build poetry run python manage.py generate_metrics_cache
 
 # Set up execution
 ENV FORWARDED_ALLOW_IPS='*'
