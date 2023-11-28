@@ -1,0 +1,19 @@
+{
+    "healthchecks": {
+        "web": [
+            {
+                "type": "startup",
+                "name": "django",
+                "description": "Checking if the Django app reponds and gives no errors",
+                "path": "/guides",
+                "attempts": 3
+            },
+            {
+                "type": "startup",
+                "name": "static files",
+                "description": "Checking if static files were properly deployed",
+                "path": "/static/css/style.css"
+            }
+        ]
+    }
+}

@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 import os
 
+from socket import gethostname, gethostbyname_ex
+
 from django.core.management.utils import get_random_secret_key
 
 from configurations import Configuration, values  # type: ignore
@@ -22,6 +24,9 @@ class Common(Configuration):
     DEBUG = values.BooleanValue(False)
 
     ALLOWED_HOSTS = ['ff4.aexoden.com', 'ff4kb.aexoden.com', 'ff4kb.calindora.com']
+
+    ALLOWED_HOSTS.append(gethostname())
+    ALLOWED_HOSTS.extend(list(set(gethostbyname_ex(gethostname())[2])))
 
     # Application definition
     INSTALLED_APPS = [
