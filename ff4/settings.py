@@ -129,6 +129,9 @@ class Run(Common):
     SECRET_KEY = values.SecretValue()
 
 class Development(Run):
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    DOTENV = os.path.join(BASE_DIR, '.env')
+
     DEBUG = True
 
     ALLOWED_HOSTS = []
