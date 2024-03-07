@@ -1,0 +1,13 @@
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 32
+    allow:
+    - dependency-type: "all"
+    groups:
+      patch-versions:
+        update-types:
+        - "patch"
