@@ -936,6 +936,14 @@ com.aexoden.ff4.exp = function()
             party: {[CHARACTER_CECIL]: true, [CHARACTER_EDGE]: true, [CHARACTER_FUSOYA]: true, [CHARACTER_ROSA]: false, [CHARACTER_RYDIA]: false},
             shadow: [CHARACTER_KAIN],
         },
+        elements_pr: {
+            monsters: {
+                elements_pr: {modify: false, count: 1},
+            },
+            name: "Elements",
+            party: {[CHARACTER_CECIL]: false, [CHARACTER_EDGE]: false, [CHARACTER_FUSOYA]: true, [CHARACTER_ROSA]: false, [CHARACTER_RYDIA]: false},
+            shadow: [CHARACTER_KAIN],
+        },
         evilwall: {
             monsters: {
                 evilwall: {modify: false, count: 1},
@@ -1146,53 +1154,54 @@ com.aexoden.ff4.exp = function()
     };
 
     let _monsterData = {
-        antlion:       {name: "Antlion",  exp: {"*": 1500}},
-        attacker:      {name: "Attacker", exp: {sfc: 0, snes: 50000}},
-        baigan:        {name: "Baigan",   exp: {"*": 4800}},
-        beamer:        {name: "Beamer",   exp: {sfc: 3199, snes: 3250}},
-        bomb:          {name: "Bomb",     exp: {sfc: 361, snes: 370}},
-        brena:         {name: "Brena",    exp: {"*": 1000}},
-        cal:           {name: "Cal",      exp: {"*": 1000}},
-        calbrena:      {name: "Calbrena", exp: {sfc: 12000, snes: 15000}},
-        cindy:         {name: "Cindy",    exp: {sfc: 2500, snes: 3000}},
-        cpu:           {name: "CPU",      exp: {"*": 50000}},
-        d_machin:      {name: "D.Machin", exp: {sfc: 41400, snes: 41500}},
-        d_mist:        {name: "D.Mist",   exp: {"*": 700}},
-        dark_elf:      {name: "Dark Elf", exp: {"*": 6000}},
-        dark_imp:      {name: "Dark Imp", exp: {sfc: 1930, snes: 1940}},
-        defender:      {name: "Defender", exp: {sfc: 0, snes: 50000}},
-        dr_lugae:      {name: "Dr.Lugae", exp: {sfc: 10101, snes: 15000}},
+        antlion:       {name: "Antlion",  exp: {"*": 1500, pr: 1050}},
+        attacker:      {name: "Attacker", exp: {"*": 0, snes: 50000}},
+        baigan:        {name: "Baigan",   exp: {"*": 4800, pr: 3360}},
+        beamer:        {name: "Beamer",   exp: {sfc: 3199, snes: 3250, pr: 2239}},
+        bomb:          {name: "Bomb",     exp: {sfc: 361, snes: 370, pr: 253}},
+        brena:         {name: "Brena",    exp: {"*": 1000, pr: 700}},
+        cal:           {name: "Cal",      exp: {"*": 1000, pr: 700}},
+        calbrena:      {name: "Calbrena", exp: {sfc: 12000, snes: 15000, pr: 8400}},
+        cindy:         {name: "Cindy",    exp: {sfc: 2500, snes: 3000, pr: 1750}},
+        cpu:           {name: "CPU",      exp: {"*": 50000, pr: 35000}},
+        d_machin:      {name: "D.Machin", exp: {sfc: 41400, snes: 41500, pr: 28980}},
+        d_mist:        {name: "D.Mist",   exp: {"*": 700, pr: 490}},
+        dark_elf:      {name: "Dark Elf", exp: {"*": 6000, pr: 4200}},
+        dark_imp:      {name: "Dark Imp", exp: {sfc: 1930, snes: 1940, pr: 1351}},
+        defender:      {name: "Defender", exp: {"*": 0, snes: 50000}},
+        dr_lugae:      {name: "Dr.Lugae", exp: {sfc: 10101, snes: 15000, pr: 7071}},
         elements_1:    {name: "Elements (Milon Z./Rubicant)", exp: {"*": 40000}},
         elements_2:    {name: "Elements (Kainazzo/Valvalis)", exp: {"*": 62500}},
-        evilwall:      {name: "EvilWall", exp: {"*": 23000}},
-        fighter:       {name: "Fighter",  exp: {sfc: 400, snes: 410}},
-        flamedog:      {name: "Flamedog", exp: {sfc: 1708, snes: 1720}},
-        gargoyle:      {name: "Gargoyle", exp: {sfc: 315, snes: 320}},
-        general:       {name: "General",  exp: {sfc: 600, snes: 610}},
-        ghast:         {name: "Ghast",    exp: {sfc: 50,  snes: 150}},
-        golbez:        {name: "Golbez",   exp: {"*": 15000}},
-        graybomb:      {name: "GrayBomb", exp: {sfc: 445, snes: 450}},
-        imp_cap:       {name: "Imp Cap.", exp: {sfc: 184, snes: 190}},
-        kainazzo:      {name: "Kainazzo", exp: {"*": 5500}},
-        left_arm:      {name: "Left Arm", exp: {"*": 10}},
-        lilith:        {name: "Lilith",   exp: {sfc: 2703, snes: 2750}},
-        milon:         {name: "Milon",    exp: {"*": 3200}},
-        milon_z:       {name: "Milon Z.", exp: {sfc: 3600, snes: 4000}},
-        mindy:         {name: "Mindy",    exp: {sfc: 2500, snes: 3000}},
-        octomamm:      {name: "Octomamm", exp: {"*": 1200}},
-        officer:       {name: "Officer",  exp: {sfc: 398, snes: 400}},
-        pike:          {name: "Pike",     exp: {sfc: 119, snes: 120}},
-        rightarm:      {name: "RightArm", exp: {"*": 10}},
-        rubicant:      {name: "Rubicant", exp: {sfc: 18000, snes: 25000}},
-        sandy:         {name: "Sandy",    exp: {sfc: 2500, snes: 3000}},
-        searcher:      {name: "Searcher", exp: {sfc: 15004, snes: 18200}},
-        shadow:        {name: "Shadow",   exp: {sfc: 1, snes: 5000}},
-        soldier:       {name: "Soldier",  exp: {sfc: 157, snes: 160}},
-        trapdoor:      {name: "TrapDoor", exp: {sfc: 30000, snes: 31100}},
-        valvalis:      {name: "Valvalis", exp: {sfc: 9000, snes: 9500}},
-        waterhag:      {name: "WaterHag", exp: {sfc: 136, snes: 140}},
-        waterhag_boss: {name: "WaterHag", exp: {"*": 800}},
-        weeper:        {name: "Weeper",   exp: {sfc: 157, snes: 160}},
+        elements_pr:   {name: "Elements", exp: {"*": 28000}},
+        evilwall:      {name: "EvilWall", exp: {"*": 23000, pr: 16100}},
+        fighter:       {name: "Fighter",  exp: {sfc: 400, snes: 410, pr: 280}},
+        flamedog:      {name: "Flamedog", exp: {sfc: 1708, snes: 1720, pr: 1196}},
+        gargoyle:      {name: "Gargoyle", exp: {sfc: 315, snes: 320, pr: 221}},
+        general:       {name: "General",  exp: {sfc: 600, snes: 610, pr: 420}},
+        ghast:         {name: "Ghast",    exp: {sfc: 50,  snes: 150, pr: 35}},
+        golbez:        {name: "Golbez",   exp: {"*": 15000, pr: 10500}},
+        graybomb:      {name: "GrayBomb", exp: {sfc: 445, snes: 450, pr: 312}},
+        imp_cap:       {name: "Imp Cap.", exp: {sfc: 184, snes: 190, pr: 129}},
+        kainazzo:      {name: "Kainazzo", exp: {"*": 5500, pr: 3850}},
+        left_arm:      {name: "Left Arm", exp: {"*": 10, pr: 7}},
+        lilith:        {name: "Lilith",   exp: {sfc: 2703, snes: 2750, pr: 1892}},
+        milon:         {name: "Milon",    exp: {"*": 3200, pr: 2240}},
+        milon_z:       {name: "Milon Z.", exp: {sfc: 3600, snes: 4000, pr: 2520}},
+        mindy:         {name: "Mindy",    exp: {sfc: 2500, snes: 3000, pr: 1750}},
+        octomamm:      {name: "Octomamm", exp: {"*": 1200, pr: 840}},
+        officer:       {name: "Officer",  exp: {sfc: 398, snes: 400, pr: 279}},
+        pike:          {name: "Pike",     exp: {sfc: 119, snes: 120, pr: 83}},
+        rightarm:      {name: "RightArm", exp: {"*": 10, pr: 7}},
+        rubicant:      {name: "Rubicant", exp: {sfc: 18000, snes: 25000, pr: 12600}},
+        sandy:         {name: "Sandy",    exp: {sfc: 2500, snes: 3000, pr: 1750}},
+        searcher:      {name: "Searcher", exp: {sfc: 15004, snes: 18200, pr: 10503}},
+        shadow:        {name: "Shadow",   exp: {"*": 1, snes: 5000}},
+        soldier:       {name: "Soldier",  exp: {sfc: 157, snes: 160, pr: 110}},
+        trapdoor:      {name: "TrapDoor", exp: {sfc: 30000, snes: 31100, pr: 21000}},
+        valvalis:      {name: "Valvalis", exp: {sfc: 9000, snes: 9500, pr: 6300}},
+        waterhag:      {name: "WaterHag", exp: {sfc: 136, snes: 140, pr: 95}},
+        waterhag_boss: {name: "WaterHag", exp: {"*": 800, pr: 560}},
+        weeper:        {name: "Weeper",   exp: {sfc: 157, snes: 160, pr: 110}},
     };
 
     let _routeData = {
@@ -1312,7 +1321,7 @@ com.aexoden.ff4.exp = function()
                 "trapdoor_3",
                 "evilwall",
                 "grind",
-                "elements",
+                "elements_pr",
                 "cpu",
             ],
             exp_table: "sfc",
@@ -1787,10 +1796,10 @@ com.aexoden.ff4.exp = function()
                 for (let monster in battleData.monsters) {
                     let count = getMonsterProperty(route, battle, monster, "count", false);
 
-                    if ("*" in _monsterData[monster].exp) {
-                        battleExp += _monsterData[monster].exp["*"] * count;
-                    } else {
+                    if (routeData.exp_table in _monsterData[monster].exp) {
                         battleExp += _monsterData[monster].exp[routeData.exp_table] * count;
+                    } else if ("*" in _monsterData[monster].exp) {
+                        battleExp += _monsterData[monster].exp["*"] * count;
                     }
                 }
 
