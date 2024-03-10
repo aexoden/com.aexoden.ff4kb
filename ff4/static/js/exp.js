@@ -1348,7 +1348,7 @@ com.aexoden.ff4.exp = function()
                 "elements_pr",
                 "cpu",
             ],
-            exp_table: "sfc",
+            exp_table: "pr",
             monster_names: "pr",
             name: "Pixel Remaster Any%",
             overrides: {
