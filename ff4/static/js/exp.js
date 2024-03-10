@@ -1360,7 +1360,7 @@ com.aexoden.ff4.exp = function()
                     party: { [CHARACTER_CECIL]: false, [CHARACTER_ROSA]: true},
                 },
                 grind: {
-                    monsters: { d_machin: { count: 0 }},
+                    monsters: { searcher: { count: 0 }, beamer: { count: 0 }, d_machin: { count: 0 }},
                     party: { [CHARACTER_EDGE]: false, [CHARACTER_ROSA]: true },
                 },
                 magus_sisters: {
