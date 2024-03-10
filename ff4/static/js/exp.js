@@ -1848,6 +1848,10 @@ com.aexoden.ff4.exp = function()
             let doCharacter = function(character, index) {
                 if (!(character in exp)) {
                     exp[character] = _characterData[character].starting_exp;
+
+                    if (half) {
+                        exp[character] = Math.floor(exp[character] / 2);
+                    }
                 }
 
                 let battleExp = 0;
