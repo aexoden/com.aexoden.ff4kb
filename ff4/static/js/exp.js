@@ -856,12 +856,70 @@ com.aexoden.ff4.exp = function()
         },
     };
 
+    let _monsterData = {
+        antlion:       {name: {snes: "Antlion", pr: "Antlion"},         exp: {"*": 1500, pr: 1050}},
+        attacker:      {name: {snes: "Attacker", pr: "Attack Node"},    exp: {"*": 0, snes: 50000}},
+        baigan:        {name: {snes: "Baigan", pr: "Baigan"},           exp: {"*": 4800, pr: 3360}},
+        beamer:        {name: {snes: "Beamer", pr: "Beamer"},           exp: {sfc: 3199, snes: 3250, pr: 2239}},
+        bomb:          {name: {snes: "Bomb", pr: "Bomb"},               exp: {sfc: 361, snes: 370, pr: 253}},
+        brena:         {name: {snes: "Brena", pr: "Brina"},             exp: {"*": 1000, pr: 700}},
+        cal:           {name: {snes: "Cal", pr: "Calco"},               exp: {"*": 1000, pr: 700}},
+        calbrena:      {name: {snes: "Calbrena", pr: "Calcobrena"},     exp: {sfc: 12000, snes: 15000, pr: 8400}},
+        cindy:         {name: {snes: "Cindy", pr: "Cindy"},             exp: {sfc: 2500, snes: 3000, pr: 1750}},
+        cpu:           {name: {snes: "CPU", pr: "CPU"},                 exp: {"*": 50000, pr: 35000}},
+        d_machin:      {name: {snes: "D.Machin", pr: "Mech Dragon"},    exp: {sfc: 41400, snes: 41500, pr: 28980}},
+        d_mist:        {name: {snes: "D.Mist", pr: "Mist Dragon"},      exp: {"*": 700, pr: 490}},
+        dark_elf:      {name: {snes: "Dark Elf", pr: "Dark Elf"},       exp: {"*": 6000, pr: 4200}},
+        dark_imp:      {name: {snes: "Dark Imp", pr: "Goblin Captain"}, exp: {sfc: 1930, snes: 1940, pr: 1351}},
+        defender:      {name: {snes: "Defender", pr: "Defense Node"},   exp: {"*": 0, snes: 50000}},
+        dr_lugae:      {name: {snes: "Dr.Lugae", pr: "Dr. Lugae"},      exp: {sfc: 10101, snes: 15000, pr: 7071}},
+        elements_1:    {name: {snes: "Elements (Milon Z./Rubicant)"},   exp: {"*": 40000}},
+        elements_2:    {name: {snes: "Elements (Kainazzo/Valvalis)"},   exp: {"*": 62500}},
+        elements_pr:   {name: {pr: "Elemental Lords"},                  exp: {"*": 28000}},
+        evilwall:      {name: {snes: "EvilWall", pr: "Demon Wall"},     exp: {"*": 23000, pr: 16100}},
+        fighter:       {name: {snes: "Fighter", pr: "Baron Warrior"},   exp: {sfc: 400, snes: 410, pr: 280}},
+        flamedog:      {name: {snes: "Flamedog", pr: "Fiery Hound"},    exp: {sfc: 1708, snes: 1720, pr: 1196}},
+        gargoyle:      {name: {snes: "Gargoyle", pr: "Gargoyle"},       exp: {sfc: 315, snes: 320, pr: 221}},
+        general:       {name: {snes: "General", pr: "Captain"},         exp: {sfc: 600, snes: 610, pr: 420}},
+        ghast:         {name: {snes: "Ghast", pr: "Skullnant"},         exp: {sfc: 50,  snes: 150, pr: 35}},
+        ghoul:         {name: {snes: "Ghoul", pr: "Ghoul"},             exp: {sfc: 505, snes: 580, pr: 354}},
+        golbez:        {name: {snes: "Golbez", pr: "Golbez"},           exp: {"*": 15000, pr: 10500}},
+        graybomb:      {name: {snes: "GrayBomb", pr: "Gray Bomb"},      exp: {sfc: 445, snes: 450, pr: 312}},
+        imp_cap:       {name: {snes: "Imp Cap.", pr: "Domovoi"},        exp: {sfc: 184, snes: 190, pr: 129}},
+        kainazzo:      {name: {snes: "Kainazzo", pr: "Cagnazzo"},       exp: {"*": 5500, pr: 3850}},
+        left_arm:      {name: {snes: "Left Arm", pr: "Left Arm"},       exp: {"*": 10, pr: 7}},
+        lilith:        {name: {snes: "Lilith", pr: "Lilith"},           exp: {sfc: 2703, snes: 2750, pr: 1892}},
+        milon:         {name: {snes: "Milon", pr: "Scarmiglione"},      exp: {"*": 3200, pr: 2240}},
+        milon_z:       {name: {snes: "Milon Z.", pr: "Scarmiglione (second battle)"}, exp: {sfc: 3600, snes: 4000, pr: 2520}},
+        mindy:         {name: {snes: "Mindy", pr: "Mindy"},             exp: {sfc: 2500, snes: 3000, pr: 1750}},
+        octomamm:      {name: {snes: "Octomamm", pr: "Octomammoth"},    exp: {"*": 1200, pr: 840}},
+        officer:       {name: {snes: "Officer", pr: "General"},         exp: {sfc: 398, snes: 400, pr: 279}},
+        pike:          {name: {snes: "Pike", pr: "Killer Fish"},        exp: {sfc: 119, snes: 120, pr: 83}},
+        red_bone:      {name: {snes: "Red Bone", pr: "Bloodbones"},     exp: {sfc: 315, snes: 320, pr: 221}},
+        revenant:      {name: {snes: "Revenant", pr: "Revenant"},       exp: {sfc: 575, snes: 680, pr: 403}},
+        rightarm:      {name: {snes: "RightArm", pr: "Right Arm"},      exp: {"*": 10, pr: 7}},
+        rubicant:      {name: {snes: "Rubicant", pr: "Rubicante"},      exp: {sfc: 18000, snes: 25000, pr: 12600}},
+        sandy:         {name: {snes: "Sandy", pr: "Sandy"},             exp: {sfc: 2500, snes: 3000, pr: 1750}},
+        searcher:      {name: {snes: "Searcher", pr: "Searcher"},       exp: {sfc: 15004, snes: 18200, pr: 10503}},
+        shadow:        {name: {snes: "Shadow", pr: "Shadow Dragon"},    exp: {"*": 1, snes: 5000}},
+        skelton:       {name: {snes: "Skelton", pr: "Skeleton"},        exp: {sfc: 238, snes: 240, pr: 167}},
+        soldier:       {name: {snes: "Soldier", pr: "Baron Soldier"},   exp: {sfc: 157, snes: 160, pr: 110}},
+        soul:          {name: {snes: "Soul", pr: "Soul"},               exp: {sfc: 460, snes: 510, pr: 322}},
+        spirit:        {name: {snes: "Spirit", pr: "Spirit"},           exp: {sfc: 278, snes: 290, pr: 195}},
+        trapdoor:      {name: {snes: "TrapDoor", pr: "Trap Door"},      exp: {sfc: 30000, snes: 31100, pr: 21000}},
+        valvalis:      {name: {snes: "Valvalis", pr: "Barbariccia"},    exp: {sfc: 9000, snes: 9500, pr: 6300}},
+        waterhag:      {name: {snes: "WaterHag", pr: "Sahagin"},        exp: {sfc: 136, snes: 140, pr: 95}},
+        waterhag_boss: {name: {snes: "WaterHag", pr: "Sahagin"},        exp: {"*": 800, pr: 560}},
+        weeper:        {name: {snes: "Weeper", pr: "Leshy"},            exp: {sfc: 157, snes: 160, pr: 110}},
+        zombie:        {name: {snes: "Zombie", pr: "Zombie"},           exp: {sfc: 112, snes: 120, pr: 78}},
+    };
+
     let _battleData = {
         antlion: {
             monsters: {
                 antlion: {modify: false, count: 1},
             },
-            name: "Antlion",
+            name: _monsterData.antlion.name,
             party: {[CHARACTER_DKC]: true, [CHARACTER_EDWARD]: true, [CHARACTER_RYDIA]: true},
             shadow: [CHARACTER_KAIN, CHARACTER_TELLAH],
         },
@@ -871,7 +929,7 @@ com.aexoden.ff4.exp = function()
                 left_arm: {modify: true, count: 1},
                 rightarm: {modify: true, count: 1},
             },
-            name: "Baigan",
+            name: _monsterData.baigan.name,
             party: {[CHARACTER_CECIL]: true, [CHARACTER_PALOM]: false, [CHARACTER_POROM]: false, [CHARACTER_TELLAH]: true, [CHARACTER_YANG]: false},
             shadow: [CHARACTER_KAIN, CHARACTER_RYDIA, CHARACTER_ROSA],
         },
@@ -881,7 +939,7 @@ com.aexoden.ff4.exp = function()
                 cal: {modify: true, count: 3},
                 calbrena: {modify: true, count: 0},
             },
-            name: "Calbrena",
+            name: _monsterData.calbrena.name,
             party: {[CHARACTER_CECIL]: true, [CHARACTER_KAIN]: true, [CHARACTER_ROSA]: true, [CHARACTER_YANG]: true},
             shadow: [CHARACTER_RYDIA],
         },
@@ -891,7 +949,7 @@ com.aexoden.ff4.exp = function()
                 cpu: {modify: false, count: 1},
                 defender: {modify: true, count: 1},
             },
-            name: "CPU",
+            name: _monsterData.cpu.name,
             party: {[CHARACTER_CECIL]: true, [CHARACTER_EDGE]: true, [CHARACTER_FUSOYA]: true, [CHARACTER_ROSA]: false, [CHARACTER_RYDIA]: false},
             shadow: [CHARACTER_KAIN],
         },
@@ -899,7 +957,7 @@ com.aexoden.ff4.exp = function()
             monsters: {
                 d_mist: {modify: false, count: 1},
             },
-            name: "D.Mist",
+            name: _monsterData.d_mist.name,
             party: {[CHARACTER_DKC]: true, [CHARACTER_KAIN]: true},
             shadow: [],
         },
@@ -907,7 +965,7 @@ com.aexoden.ff4.exp = function()
             monsters: {
                 dark_elf: {modify: false, count: 1},
             },
-            name: "Dark Elf",
+            name: _monsterData.dark_elf.name,
             party: {[CHARACTER_CECIL]: true, [CHARACTER_CID]: false, [CHARACTER_TELLAH]: true, [CHARACTER_YANG]: true},
             shadow: [CHARACTER_KAIN, CHARACTER_RYDIA, CHARACTER_ROSA],
         },
@@ -915,7 +973,7 @@ com.aexoden.ff4.exp = function()
             monsters: {
                 dark_imp: {modify: true, count: 3},
             },
-            name: "Dark Imps",
+            name: {snes: "Dark Imps", pr: "Goblin Captains"},
             party: {[CHARACTER_CECIL]: true, [CHARACTER_KAIN]: true, [CHARACTER_ROSA]: true, [CHARACTER_RYDIA]: true, [CHARACTER_YANG]: true},
             shadow: [],
         },
@@ -923,7 +981,7 @@ com.aexoden.ff4.exp = function()
             monsters: {
                 dr_lugae: {modify: false, count: 1},
             },
-            name: "Dr.Lugae",
+            name: _monsterData.dr_lugae.name,
             party: {[CHARACTER_CECIL]: true, [CHARACTER_KAIN]: true, [CHARACTER_ROSA]: false, [CHARACTER_RYDIA]: true, [CHARACTER_YANG]: true},
             shadow: [],
         },
@@ -932,7 +990,7 @@ com.aexoden.ff4.exp = function()
                 elements_1: {modify: true, count: 1},
                 elements_2: {modify: true, count: 0},
             },
-            name: "Elements",
+            name: {snes: "Elements", pr: "Elemental Lords"},
             party: {[CHARACTER_CECIL]: true, [CHARACTER_EDGE]: true, [CHARACTER_FUSOYA]: true, [CHARACTER_ROSA]: false, [CHARACTER_RYDIA]: false},
             shadow: [CHARACTER_KAIN],
         },
@@ -940,7 +998,7 @@ com.aexoden.ff4.exp = function()
             monsters: {
                 elements_pr: {modify: false, count: 1},
             },
-            name: "Elements",
+            name: _monsterData.elements_pr.name,
             party: {[CHARACTER_CECIL]: false, [CHARACTER_EDGE]: false, [CHARACTER_FUSOYA]: true, [CHARACTER_ROSA]: false, [CHARACTER_RYDIA]: false},
             shadow: [CHARACTER_KAIN],
         },
@@ -948,7 +1006,7 @@ com.aexoden.ff4.exp = function()
             monsters: {
                 evilwall: {modify: false, count: 1},
             },
-            name: "EvilWall",
+            name: _monsterData.evilwall.name,
             party: {[CHARACTER_CECIL]: true, [CHARACTER_EDGE]: true, [CHARACTER_KAIN]: true, [CHARACTER_ROSA]: true, [CHARACTER_RYDIA]: true},
             shadow: [],
         },
@@ -957,7 +1015,7 @@ com.aexoden.ff4.exp = function()
                 general: {modify: true, count: 0},
                 fighter: {modify: true, count: 2},
             },
-            name: "Fabul Gauntlet #1: General/Fighters",
+            name: {snes: "Fabul Gauntlet #1: General/Fighters", pr: "Fabul Gauntlet #1: Captain/Baron Warriors"},
             party: {[CHARACTER_DKC]: true, [CHARACTER_EDWARD]: true, [CHARACTER_YANG]: true},
             shadow: [CHARACTER_KAIN, CHARACTER_TELLAH, CHARACTER_ROSA],
         },
@@ -967,7 +1025,7 @@ com.aexoden.ff4.exp = function()
                 waterhag: {modify: true, count: 1},
                 weeper: {modify: true, count: 1},
             },
-            name: "Fabul Gauntlet #2: Weeper/WaterHag/Imp Cap.",
+            name: {snes: "Fabul Gauntlet #2: Weeper/WaterHag/Imp Cap.", pr: "Fabul Gauntlet #2: Leshy/Sahagin/Domovoi"},
             party: {[CHARACTER_DKC]: true, [CHARACTER_EDWARD]: true, [CHARACTER_YANG]: true},
             shadow: [CHARACTER_KAIN, CHARACTER_TELLAH, CHARACTER_ROSA],
         },
@@ -976,7 +1034,7 @@ com.aexoden.ff4.exp = function()
                 general: {modify: true, count: 0},
                 fighter: {modify: true, count: 2},
             },
-            name: "Fabul Gauntlet #3: General/Fighters",
+            name: {snes: "Fabul Gauntlet #3: General/Fighters", pr: "Fabul Gauntlet #3: Captain/Baron Warriors"},
             party: {[CHARACTER_DKC]: true, [CHARACTER_EDWARD]: true, [CHARACTER_YANG]: true},
             shadow: [CHARACTER_KAIN, CHARACTER_TELLAH, CHARACTER_ROSA],
         },
@@ -984,7 +1042,7 @@ com.aexoden.ff4.exp = function()
             monsters: {
                 gargoyle: {modify: false, count: 1},
             },
-            name: "Fabul Gauntlet #4: Gargoyle",
+            name: {snes: "Fabul Gauntlet #4: Gargoyle", pr: "Fabul Gauntlet #4: Gargoyle"},
             party: {[CHARACTER_DKC]: true, [CHARACTER_EDWARD]: true, [CHARACTER_YANG]: true},
             shadow: [CHARACTER_KAIN, CHARACTER_TELLAH, CHARACTER_ROSA],
         },
@@ -994,7 +1052,7 @@ com.aexoden.ff4.exp = function()
                 waterhag: {modify: true, count: 1},
                 weeper: {modify: true, count: 1},
             },
-            name: "Fabul Gauntlet #5: Weeper/WaterHag/Imp Cap.",
+            name: {snes: "Fabul Gauntlet #5: Weeper/WaterHag/Imp Cap.", pr: "Fabul Gauntlet #5: Leshy/Sahagin/Domovoi"},
             party: {[CHARACTER_DKC]: true, [CHARACTER_EDWARD]: true, [CHARACTER_YANG]: true},
             shadow: [CHARACTER_KAIN, CHARACTER_TELLAH, CHARACTER_ROSA],
         },
@@ -1003,7 +1061,7 @@ com.aexoden.ff4.exp = function()
                 general: {modify: true, count: 0},
                 fighter: {modify: true, count: 2},
             },
-            name: "Fabul Gauntlet #6: General/Fighters",
+            name: {snes: "Fabul Gauntlet #6: General/Fighters", pr: "Fabul Gauntlet #6: Captain/Baron Warriors"},
             party: {[CHARACTER_DKC]: true, [CHARACTER_EDWARD]: true, [CHARACTER_YANG]: true},
             shadow: [CHARACTER_KAIN, CHARACTER_TELLAH, CHARACTER_ROSA],
         },
@@ -1011,7 +1069,7 @@ com.aexoden.ff4.exp = function()
             monsters: {
                 flamedog: {modify: false, count: 1},
             },
-            name: "FlameDog",
+            name: _monsterData.flamedog.name,
             party: {[CHARACTER_CECIL]: true, [CHARACTER_CID]: false, [CHARACTER_TELLAH]: true, [CHARACTER_YANG]: true},
             shadow: [CHARACTER_KAIN, CHARACTER_RYDIA, CHARACTER_ROSA],
         },
@@ -1020,7 +1078,7 @@ com.aexoden.ff4.exp = function()
                 golbez: {modify: false, count: 1},
                 shadow: {modify: false, count: 1},
             },
-            name: "Golbez",
+            name: _monsterData.golbez.name,
             party: {[CHARACTER_CECIL]: true, [CHARACTER_KAIN]: true, [CHARACTER_ROSA]: false, [CHARACTER_RYDIA]: true, [CHARACTER_YANG]: false},
             shadow: [],
         },
@@ -1030,7 +1088,7 @@ com.aexoden.ff4.exp = function()
                 d_machin: {modify: true, count: 15},
                 searcher: {modify: true, count: 1},
             },
-            name: "Grind Fight",
+            name: {snes: "Grind Fight", pr: "Grind Fight"},
             party: {[CHARACTER_CECIL]: false, [CHARACTER_EDGE]: true, [CHARACTER_FUSOYA]: false, [CHARACTER_ROSA]: false, [CHARACTER_RYDIA]: false},
             shadow: [CHARACTER_KAIN],
         },
@@ -1038,7 +1096,7 @@ com.aexoden.ff4.exp = function()
             monsters: {
                 kainazzo: {modify: false, count: 1},
             },
-            name: "Kainazzo",
+            name: _monsterData.kainazzo.name,
             party: {[CHARACTER_CECIL]: true, [CHARACTER_PALOM]: false, [CHARACTER_POROM]: false, [CHARACTER_TELLAH]: true, [CHARACTER_YANG]: true},
             shadow: [CHARACTER_KAIN, CHARACTER_RYDIA, CHARACTER_ROSA],
         },
@@ -1048,7 +1106,7 @@ com.aexoden.ff4.exp = function()
                 mindy: {modify: false, count: 1},
                 sandy: {modify: false, count: 1},
             },
-            name: "Magus Sisters",
+            name: {snes: "Magus Sisters", pr: "Magus Sisters"},
             party: {[CHARACTER_CECIL]: true, [CHARACTER_CID]: false, [CHARACTER_TELLAH]: true, [CHARACTER_YANG]: false},
             shadow: [CHARACTER_KAIN, CHARACTER_RYDIA, CHARACTER_ROSA],
         },
@@ -1057,7 +1115,7 @@ com.aexoden.ff4.exp = function()
                 milon: {modify: false, count: 1},
                 ghast: {modify: false, count: 4},
             },
-            name: "Milon",
+            name: _monsterData.milon.name,
             party: {[CHARACTER_DKC]: true, [CHARACTER_PALOM]: true, [CHARACTER_POROM]: true, [CHARACTER_TELLAH]: true},
             shadow: [CHARACTER_KAIN, CHARACTER_RYDIA, CHARACTER_ROSA, CHARACTER_YANG],
         },
@@ -1065,7 +1123,7 @@ com.aexoden.ff4.exp = function()
             monsters: {
                 milon_z: {modify: false, count: 1},
             },
-            name: "Milon Z.",
+            name: _monsterData.milon_z.name,
             party: {[CHARACTER_DKC]: true, [CHARACTER_PALOM]: true, [CHARACTER_POROM]: false, [CHARACTER_TELLAH]: true},
             shadow: [CHARACTER_KAIN, CHARACTER_RYDIA, CHARACTER_ROSA, CHARACTER_YANG],
         },
@@ -1074,7 +1132,7 @@ com.aexoden.ff4.exp = function()
                 bomb: {modify: true, count: 3},
                 graybomb: {modify: true, count: 3},
             },
-            name: "MomBomb",
+            name: {snes: "MomBomb", pr: "Mom Bomb"},
             party: {[CHARACTER_DKC]: true, [CHARACTER_EDWARD]: true, [CHARACTER_ROSA]: true, [CHARACTER_RYDIA]: true, [CHARACTER_YANG]: true},
             shadow: [CHARACTER_KAIN, CHARACTER_TELLAH],
         },
@@ -1082,7 +1140,7 @@ com.aexoden.ff4.exp = function()
             monsters: {
                 octomamm: {modify: false, count: 1},
             },
-            name: "Octomamm",
+            name: _monsterData.octomamm.name,
             party: {[CHARACTER_DKC]: true, [CHARACTER_RYDIA]: true, [CHARACTER_TELLAH]: true},
             shadow: [CHARACTER_KAIN],
         },
@@ -1091,7 +1149,7 @@ com.aexoden.ff4.exp = function()
                 officer: {modify: true, count: 0},
                 soldier: {modify: true, count: 3},
             },
-            name: "Officer/Soldiers",
+            name: {snes: "Officer/Soldiers", pr: "General/Baron Soldiers"},
             party: {[CHARACTER_DKC]: true},
             shadow: [CHARACTER_KAIN],
         },
@@ -1106,7 +1164,7 @@ com.aexoden.ff4.exp = function()
                 spirit: {modify: true, count: 0},
                 zombie: {modify: true, count: 0},
             },
-            name: "Ordeals Grind",
+            name: {snes: "Mt. Ordeals Grind", pr: "Mt. Ordeals Grind"},
             party: {[CHARACTER_CECIL]: true, [CHARACTER_PALOM]: false, [CHARACTER_POROM]: false, [CHARACTER_TELLAH]: false},
             shadow: [CHARACTER_KAIN, CHARACTER_RYDIA, CHARACTER_ROSA, CHARACTER_YANG],
         },
@@ -1114,7 +1172,7 @@ com.aexoden.ff4.exp = function()
             monsters: {
                 pike: {modify: true, count: 3},
             },
-            name: "Pike x3",
+            name: {snes: "Pike x3", pr: "Killer Fish x3"},
             party: {[CHARACTER_DKC]: true, [CHARACTER_RYDIA]: true, [CHARACTER_TELLAH]: true},
             shadow: [CHARACTER_KAIN],
         },
@@ -1122,7 +1180,7 @@ com.aexoden.ff4.exp = function()
             monsters: {
                 rubicant: {modify: false, count: 1},
             },
-            name: "Rubicant",
+            name: _monsterData.rubicant.name,
             party: {[CHARACTER_CECIL]: true, [CHARACTER_EDGE]: true, [CHARACTER_KAIN]: true, [CHARACTER_ROSA]: true, [CHARACTER_RYDIA]: true},
             shadow: [],
         },
@@ -1130,7 +1188,7 @@ com.aexoden.ff4.exp = function()
             monsters: {
                 trapdoor: {modify: true, count: 1},
             },
-            name: "TrapDoor 1",
+            name: {snes: "TrapDoor 1", pr: "Trap Door 1"},
             party: {[CHARACTER_CECIL]: false, [CHARACTER_EDGE]: true, [CHARACTER_KAIN]: true, [CHARACTER_ROSA]: true, [CHARACTER_RYDIA]: true},
             shadow: [],
         },
@@ -1138,7 +1196,7 @@ com.aexoden.ff4.exp = function()
             monsters: {
                 trapdoor: {modify: true, count: 1},
             },
-            name: "TrapDoor 2",
+            name: {snes: "TrapDoor 2", pr: "Trap Door 2"},
             party: {[CHARACTER_CECIL]: false, [CHARACTER_EDGE]: true, [CHARACTER_KAIN]: true, [CHARACTER_ROSA]: true, [CHARACTER_RYDIA]: true},
             shadow: [],
         },
@@ -1146,7 +1204,7 @@ com.aexoden.ff4.exp = function()
             monsters: {
                 trapdoor: {modify: true, count: 1},
             },
-            name: "TrapDoor 3",
+            name: {snes: "TrapDoor 3", pr: "Trap Door 3"},
             party: {[CHARACTER_CECIL]: false, [CHARACTER_EDGE]: true, [CHARACTER_KAIN]: true, [CHARACTER_ROSA]: true, [CHARACTER_RYDIA]: true},
             shadow: [],
         },
@@ -1154,7 +1212,7 @@ com.aexoden.ff4.exp = function()
             monsters: {
                 valvalis: {modify: false, count: 1},
             },
-            name: "Valvalis",
+            name: _monsterData.valvalis.name,
             party: {[CHARACTER_CECIL]: true, [CHARACTER_CID]: true, [CHARACTER_KAIN]: true, [CHARACTER_ROSA]: true, [CHARACTER_YANG]: true},
             shadow: [CHARACTER_RYDIA],
         },
@@ -1162,68 +1220,10 @@ com.aexoden.ff4.exp = function()
             monsters: {
                 waterhag_boss: {modify: false, count: 1},
             },
-            name: "WaterHag",
+            name: _monsterData.waterhag.name,
             party: {[CHARACTER_EDWARD]: true},
             shadow: [CHARACTER_KAIN, CHARACTER_TELLAH],
         },
-    };
-
-    let _monsterData = {
-        antlion:       {name: "Antlion",  exp: {"*": 1500, pr: 1050}},
-        attacker:      {name: "Attacker", exp: {"*": 0, snes: 50000}},
-        baigan:        {name: "Baigan",   exp: {"*": 4800, pr: 3360}},
-        beamer:        {name: "Beamer",   exp: {sfc: 3199, snes: 3250, pr: 2239}},
-        bomb:          {name: "Bomb",     exp: {sfc: 361, snes: 370, pr: 253}},
-        brena:         {name: "Brena",    exp: {"*": 1000, pr: 700}},
-        cal:           {name: "Cal",      exp: {"*": 1000, pr: 700}},
-        calbrena:      {name: "Calbrena", exp: {sfc: 12000, snes: 15000, pr: 8400}},
-        cindy:         {name: "Cindy",    exp: {sfc: 2500, snes: 3000, pr: 1750}},
-        cpu:           {name: "CPU",      exp: {"*": 50000, pr: 35000}},
-        d_machin:      {name: "D.Machin", exp: {sfc: 41400, snes: 41500, pr: 28980}},
-        d_mist:        {name: "D.Mist",   exp: {"*": 700, pr: 490}},
-        dark_elf:      {name: "Dark Elf", exp: {"*": 6000, pr: 4200}},
-        dark_imp:      {name: "Dark Imp", exp: {sfc: 1930, snes: 1940, pr: 1351}},
-        defender:      {name: "Defender", exp: {"*": 0, snes: 50000}},
-        dr_lugae:      {name: "Dr.Lugae", exp: {sfc: 10101, snes: 15000, pr: 7071}},
-        elements_1:    {name: "Elements (Milon Z./Rubicant)", exp: {"*": 40000}},
-        elements_2:    {name: "Elements (Kainazzo/Valvalis)", exp: {"*": 62500}},
-        elements_pr:   {name: "Elements", exp: {"*": 28000}},
-        evilwall:      {name: "EvilWall", exp: {"*": 23000, pr: 16100}},
-        fighter:       {name: "Fighter",  exp: {sfc: 400, snes: 410, pr: 280}},
-        flamedog:      {name: "Flamedog", exp: {sfc: 1708, snes: 1720, pr: 1196}},
-        gargoyle:      {name: "Gargoyle", exp: {sfc: 315, snes: 320, pr: 221}},
-        general:       {name: "General",  exp: {sfc: 600, snes: 610, pr: 420}},
-        ghast:         {name: "Ghast",    exp: {sfc: 50,  snes: 150, pr: 35}},
-        ghoul:         {name: "Ghoul",    exp: {sfc: 505, snes: 580, pr: 354}},
-        golbez:        {name: "Golbez",   exp: {"*": 15000, pr: 10500}},
-        graybomb:      {name: "GrayBomb", exp: {sfc: 445, snes: 450, pr: 312}},
-        imp_cap:       {name: "Imp Cap.", exp: {sfc: 184, snes: 190, pr: 129}},
-        kainazzo:      {name: "Kainazzo", exp: {"*": 5500, pr: 3850}},
-        left_arm:      {name: "Left Arm", exp: {"*": 10, pr: 7}},
-        lilith:        {name: "Lilith",   exp: {sfc: 2703, snes: 2750, pr: 1892}},
-        milon:         {name: "Milon",    exp: {"*": 3200, pr: 2240}},
-        milon_z:       {name: "Milon Z.", exp: {sfc: 3600, snes: 4000, pr: 2520}},
-        mindy:         {name: "Mindy",    exp: {sfc: 2500, snes: 3000, pr: 1750}},
-        octomamm:      {name: "Octomamm", exp: {"*": 1200, pr: 840}},
-        officer:       {name: "Officer",  exp: {sfc: 398, snes: 400, pr: 279}},
-        pike:          {name: "Pike",     exp: {sfc: 119, snes: 120, pr: 83}},
-        red_bone:      {name: "Red Bone", exp: {sfc: 315, snes: 320, pr: 221}},
-        revenant:      {name: "Revenant", exp: {sfc: 575, snes: 680, pr: 403}},
-        rightarm:      {name: "RightArm", exp: {"*": 10, pr: 7}},
-        rubicant:      {name: "Rubicant", exp: {sfc: 18000, snes: 25000, pr: 12600}},
-        sandy:         {name: "Sandy",    exp: {sfc: 2500, snes: 3000, pr: 1750}},
-        searcher:      {name: "Searcher", exp: {sfc: 15004, snes: 18200, pr: 10503}},
-        shadow:        {name: "Shadow",   exp: {"*": 1, snes: 5000}},
-        skelton:       {name: "Skelton",  exp: {sfc: 238, snes: 240, pr: 167}},
-        soldier:       {name: "Soldier",  exp: {sfc: 157, snes: 160, pr: 110}},
-        soul:          {name: "Soul",     exp: {sfc: 460, snes: 510, pr: 322}},
-        spirit:        {name: "Spirit",   exp: {sfc: 278, snes: 290, pr: 195}},
-        trapdoor:      {name: "TrapDoor", exp: {sfc: 30000, snes: 31100, pr: 21000}},
-        valvalis:      {name: "Valvalis", exp: {sfc: 9000, snes: 9500, pr: 6300}},
-        waterhag:      {name: "WaterHag", exp: {sfc: 136, snes: 140, pr: 95}},
-        waterhag_boss: {name: "WaterHag", exp: {"*": 800, pr: 560}},
-        weeper:        {name: "Weeper",   exp: {sfc: 157, snes: 160, pr: 110}},
-        zombie:        {name: "Zombie",   exp: {sfc: 112, snes: 120, pr: 78}},
     };
 
     let _routeData = {
@@ -1264,6 +1264,7 @@ com.aexoden.ff4.exp = function()
                 "cpu",
             ],
             exp_table: "snes",
+            monster_names: "snes",
             name: "Any% Glitchless",
             overrides: {
                 cpu: {
@@ -1348,6 +1349,7 @@ com.aexoden.ff4.exp = function()
                 "cpu",
             ],
             exp_table: "sfc",
+            monster_names: "pr",
             name: "Pixel Remaster Any%",
             overrides: {
                 cpu: {
@@ -1426,6 +1428,7 @@ com.aexoden.ff4.exp = function()
                 "cpu",
             ],
             exp_table: "snes",
+            monster_names: "snes",
             name: "Any% No64 (Edge+Excalbur)",
             overrides: {},
             restrictions: {
@@ -1479,6 +1482,7 @@ com.aexoden.ff4.exp = function()
                 "cpu",
             ],
             exp_table: "snes",
+            monster_names: "snes",
             name: "Any% No64 (Rosa)",
             overrides: {
                 cpu: {
@@ -1542,6 +1546,7 @@ com.aexoden.ff4.exp = function()
                 "golbez",
             ],
             exp_table: "snes",
+            monster_names: "snes",
             name: "Any% NoCW",
             overrides: {},
             restrictions: {
@@ -1583,6 +1588,7 @@ com.aexoden.ff4.exp = function()
                 "cpu",
             ],
             exp_table: "sfc",
+            monster_names: "snes",
             name: "Sample SFC Route (to show EXP differences)",
             overrides: {},
             restrictions: {
@@ -1676,6 +1682,11 @@ com.aexoden.ff4.exp = function()
         return "++";
     };
 
+
+    var getLocalizedName = function(data, table, language) {
+        return data[table];
+    }
+
     var getMonsterProperty = function(route, battle, monster, property, dfault) {
         if (property == "count" && !dfault) {
             if (battle in _monster_overrides && monster in _monster_overrides[battle]) {
@@ -1765,7 +1776,7 @@ com.aexoden.ff4.exp = function()
                 addDiv = true;
             }
 
-            battleDiv.innerHTML = "<h4>" + battleData.name + "</h4>";
+            battleDiv.innerHTML = "<h4>" + getLocalizedName(battleData.name, routeData.monster_names, "en") + "</h4>";
             for (let monster in battleData.monsters) {
                 let monsters = [];
                 if (getMonsterProperty(route, battle, monster, "modify", false)) {
@@ -1781,7 +1792,7 @@ com.aexoden.ff4.exp = function()
                         firstDiv.setAttribute("class", "form-group");
                         let label = document.createElement("label");
                         label.setAttribute("for", key);
-                        label.innerHTML = "Total " + _monsterData[monster].name + " Kills";
+                        label.innerHTML = "Total " + getLocalizedName(_monsterData[monster].name, routeData.monster_names, "en") + " Kills";
                         let input = document.createElement("input");
                         input.setAttribute("type", "number");
                         input.setAttribute("id", key);
