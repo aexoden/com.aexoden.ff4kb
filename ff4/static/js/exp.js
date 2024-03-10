@@ -108,7 +108,7 @@ com.aexoden.ff4.exp = function()
                 69: 2811910,
                 70: 2976564,
             },
-            name: "Cecil",
+            name: {en: "Cecil", ja: "セシル"},
             starting_exp: 0,
         },
         [CHARACTER_CID]: {
@@ -165,7 +165,7 @@ com.aexoden.ff4.exp = function()
                 69: 3236659,
                 70: 3426149,
             },
-            name: "Cid",
+            name: {en: "Cid", ja: "シド"},
             starting_exp: 26754,
         },
         [CHARACTER_DKC]: {
@@ -232,7 +232,7 @@ com.aexoden.ff4.exp = function()
                 69: 3624876,
                 70: 3837344,
             },
-            name: "Cecil",
+            name: {en: "Cecil", ja: "セシル"},
             starting_exp: 3000,
         },
         [CHARACTER_EDGE]: {
@@ -284,7 +284,7 @@ com.aexoden.ff4.exp = function()
                 69: 2803492,
                 70: 2964772,
             },
-            name: "Edge",
+            name: {en: "Edge", ja: "エッジ"},
             starting_exp: 64777,
         },
         [CHARACTER_EDWARD]: {
@@ -356,7 +356,7 @@ com.aexoden.ff4.exp = function()
                 69: 2906050,
                 70: 3075520,
             },
-            name: "Edward",
+            name: {en: "Edward", ja: "ギルバート"},
             starting_exp: 388,
         },
         [CHARACTER_FUSOYA]: {
@@ -383,7 +383,7 @@ com.aexoden.ff4.exp = function()
                 69: 3615947,
                 70: 3828607,
             },
-            name: "FuSoYa",
+            name: {en: "FuSoYa", ja: "フースーヤ"},
             starting_exp: 1007865,
         },
         [CHARACTER_KAIN]: {
@@ -450,7 +450,7 @@ com.aexoden.ff4.exp = function()
                 69: 2835649,
                 70: 3001339,
             },
-            name: "Kain",
+            name: {en: "Kain", ja: "カイン"},
             starting_exp: 2300,
         },
         [CHARACTER_PALOM]: {
@@ -517,7 +517,7 @@ com.aexoden.ff4.exp = function()
                 69: 2765275,
                 70: 2927185,
             },
-            name: "Palom",
+            name: {en: "Palom", ja: "パロム"},
             starting_exp: 1957,
         },
         [CHARACTER_POROM]: {
@@ -584,7 +584,7 @@ com.aexoden.ff4.exp = function()
                 69: 2760744,
                 70: 2922654,
             },
-            name: "Porom",
+            name: {en: "Porom", ja: "ポロム"},
             starting_exp: 1957,
         },
         [CHARACTER_ROSA]: {
@@ -651,7 +651,7 @@ com.aexoden.ff4.exp = function()
                 69: 3115187,
                 70: 3297677,
             },
-            name: "Rosa",
+            name: {en: "Rosa", ja: "ローザ"},
             starting_exp: 2139,
         },
         [CHARACTER_RYDIA]: {
@@ -727,7 +727,7 @@ com.aexoden.ff4.exp = function()
                 69: 3547587,
                 70: 3754787,
             },
-            name: "Rydia",
+            name: {en: "Rydia", ja: "リディア"},
             starting_exp: 0,
         },
         [CHARACTER_TELLAH]: {
@@ -784,7 +784,7 @@ com.aexoden.ff4.exp = function()
                 69: 3726427,
                 70: 3935510,
             },
-            name: "Tellah",
+            name: {en: "Tellah", ja: "テラ"},
             starting_exp: 54873,
         },
         [CHARACTER_YANG]: {
@@ -851,67 +851,67 @@ com.aexoden.ff4.exp = function()
                 69: 3168683,
                 70: 3354463,
             },
-            name: "Yang",
+            name: {en: "Yang", ja: "ヤン"},
             starting_exp: 2061,
         },
     };
 
     let _monsterData = {
-        antlion:       {name: {snes: "Antlion", pr: "Antlion"},         exp: {"*": 1500, pr: 1050}},
-        attacker:      {name: {snes: "Attacker", pr: "Attack Node"},    exp: {"*": 0, snes: 50000}},
-        baigan:        {name: {snes: "Baigan", pr: "Baigan"},           exp: {"*": 4800, pr: 3360}},
-        beamer:        {name: {snes: "Beamer", pr: "Beamer"},           exp: {sfc: 3199, snes: 3250, pr: 2239}},
-        bomb:          {name: {snes: "Bomb", pr: "Bomb"},               exp: {sfc: 361, snes: 370, pr: 253}},
-        brena:         {name: {snes: "Brena", pr: "Brina"},             exp: {"*": 1000, pr: 700}},
-        cal:           {name: {snes: "Cal", pr: "Calco"},               exp: {"*": 1000, pr: 700}},
-        calbrena:      {name: {snes: "Calbrena", pr: "Calcobrena"},     exp: {sfc: 12000, snes: 15000, pr: 8400}},
-        cindy:         {name: {snes: "Cindy", pr: "Cindy"},             exp: {sfc: 2500, snes: 3000, pr: 1750}},
-        cpu:           {name: {snes: "CPU", pr: "CPU"},                 exp: {"*": 50000, pr: 35000}},
-        d_machin:      {name: {snes: "D.Machin", pr: "Mech Dragon"},    exp: {sfc: 41400, snes: 41500, pr: 28980}},
-        d_mist:        {name: {snes: "D.Mist", pr: "Mist Dragon"},      exp: {"*": 700, pr: 490}},
-        dark_elf:      {name: {snes: "Dark Elf", pr: "Dark Elf"},       exp: {"*": 6000, pr: 4200}},
-        dark_imp:      {name: {snes: "Dark Imp", pr: "Goblin Captain"}, exp: {sfc: 1930, snes: 1940, pr: 1351}},
-        defender:      {name: {snes: "Defender", pr: "Defense Node"},   exp: {"*": 0, snes: 50000}},
-        dr_lugae:      {name: {snes: "Dr.Lugae", pr: "Dr. Lugae"},      exp: {sfc: 10101, snes: 15000, pr: 7071}},
-        elements_1:    {name: {snes: "Elements (Milon Z./Rubicant)"},   exp: {"*": 40000}},
-        elements_2:    {name: {snes: "Elements (Kainazzo/Valvalis)"},   exp: {"*": 62500}},
-        elements_pr:   {name: {pr: "Elemental Lords"},                  exp: {"*": 28000}},
-        evilwall:      {name: {snes: "EvilWall", pr: "Demon Wall"},     exp: {"*": 23000, pr: 16100}},
-        fighter:       {name: {snes: "Fighter", pr: "Baron Warrior"},   exp: {sfc: 400, snes: 410, pr: 280}},
-        flamedog:      {name: {snes: "Flamedog", pr: "Fiery Hound"},    exp: {sfc: 1708, snes: 1720, pr: 1196}},
-        gargoyle:      {name: {snes: "Gargoyle", pr: "Gargoyle"},       exp: {sfc: 315, snes: 320, pr: 221}},
-        general:       {name: {snes: "General", pr: "Captain"},         exp: {sfc: 600, snes: 610, pr: 420}},
-        ghast:         {name: {snes: "Ghast", pr: "Skullnant"},         exp: {sfc: 50,  snes: 150, pr: 35}},
-        ghoul:         {name: {snes: "Ghoul", pr: "Ghoul"},             exp: {sfc: 505, snes: 580, pr: 354}},
-        golbez:        {name: {snes: "Golbez", pr: "Golbez"},           exp: {"*": 15000, pr: 10500}},
-        graybomb:      {name: {snes: "GrayBomb", pr: "Gray Bomb"},      exp: {sfc: 445, snes: 450, pr: 312}},
-        imp_cap:       {name: {snes: "Imp Cap.", pr: "Domovoi"},        exp: {sfc: 184, snes: 190, pr: 129}},
-        kainazzo:      {name: {snes: "Kainazzo", pr: "Cagnazzo"},       exp: {"*": 5500, pr: 3850}},
-        left_arm:      {name: {snes: "Left Arm", pr: "Left Arm"},       exp: {"*": 10, pr: 7}},
-        lilith:        {name: {snes: "Lilith", pr: "Lilith"},           exp: {sfc: 2703, snes: 2750, pr: 1892}},
-        milon:         {name: {snes: "Milon", pr: "Scarmiglione"},      exp: {"*": 3200, pr: 2240}},
-        milon_z:       {name: {snes: "Milon Z.", pr: "Scarmiglione (second battle)"}, exp: {sfc: 3600, snes: 4000, pr: 2520}},
-        mindy:         {name: {snes: "Mindy", pr: "Mindy"},             exp: {sfc: 2500, snes: 3000, pr: 1750}},
-        octomamm:      {name: {snes: "Octomamm", pr: "Octomammoth"},    exp: {"*": 1200, pr: 840}},
-        officer:       {name: {snes: "Officer", pr: "General"},         exp: {sfc: 398, snes: 400, pr: 279}},
-        pike:          {name: {snes: "Pike", pr: "Killer Fish"},        exp: {sfc: 119, snes: 120, pr: 83}},
-        red_bone:      {name: {snes: "Red Bone", pr: "Bloodbones"},     exp: {sfc: 315, snes: 320, pr: 221}},
-        revenant:      {name: {snes: "Revenant", pr: "Revenant"},       exp: {sfc: 575, snes: 680, pr: 403}},
-        rightarm:      {name: {snes: "RightArm", pr: "Right Arm"},      exp: {"*": 10, pr: 7}},
-        rubicant:      {name: {snes: "Rubicant", pr: "Rubicante"},      exp: {sfc: 18000, snes: 25000, pr: 12600}},
-        sandy:         {name: {snes: "Sandy", pr: "Sandy"},             exp: {sfc: 2500, snes: 3000, pr: 1750}},
-        searcher:      {name: {snes: "Searcher", pr: "Searcher"},       exp: {sfc: 15004, snes: 18200, pr: 10503}},
-        shadow:        {name: {snes: "Shadow", pr: "Shadow Dragon"},    exp: {"*": 1, snes: 5000}},
-        skelton:       {name: {snes: "Skelton", pr: "Skeleton"},        exp: {sfc: 238, snes: 240, pr: 167}},
-        soldier:       {name: {snes: "Soldier", pr: "Baron Soldier"},   exp: {sfc: 157, snes: 160, pr: 110}},
-        soul:          {name: {snes: "Soul", pr: "Soul"},               exp: {sfc: 460, snes: 510, pr: 322}},
-        spirit:        {name: {snes: "Spirit", pr: "Spirit"},           exp: {sfc: 278, snes: 290, pr: 195}},
-        trapdoor:      {name: {snes: "TrapDoor", pr: "Trap Door"},      exp: {sfc: 30000, snes: 31100, pr: 21000}},
-        valvalis:      {name: {snes: "Valvalis", pr: "Barbariccia"},    exp: {sfc: 9000, snes: 9500, pr: 6300}},
-        waterhag:      {name: {snes: "WaterHag", pr: "Sahagin"},        exp: {sfc: 136, snes: 140, pr: 95}},
-        waterhag_boss: {name: {snes: "WaterHag", pr: "Sahagin"},        exp: {"*": 800, pr: 560}},
-        weeper:        {name: {snes: "Weeper", pr: "Leshy"},            exp: {sfc: 157, snes: 160, pr: 110}},
-        zombie:        {name: {snes: "Zombie", pr: "Zombie"},           exp: {sfc: 112, snes: 120, pr: 78}},
+        antlion:       {name: {snes: {en: "Antlion",  ja: "アントリオン"}, pr: "Antlion"},         exp: {"*": 1500, pr: 1050}},
+        attacker:      {name: {snes: {en: "Attacker", ja: "げいげきシステム"}, pr: "Attack Node"},    exp: {"*": 0, snes: 50000}},
+        baigan:        {name: {snes: {en: "Baigan",   ja: "ベイガン"}, pr: "Baigan"},           exp: {"*": 4800, pr: 3360}},
+        beamer:        {name: {snes: {en: "Beamer",   ja: "きかいほう"}, pr: "Beamer"},           exp: {sfc: 3199, snes: 3250, pr: 2239}},
+        bomb:          {name: {snes: {en: "Bomb",     ja: "ボム"}, pr: "Bomb"},               exp: {sfc: 361, snes: 370, pr: 253}},
+        brena:         {name: {snes: {en: "Brena",    ja: "ブリーナ"}, pr: "Brina"},             exp: {"*": 1000, pr: 700}},
+        cal:           {name: {snes: {en: "Cal",      ja: "カルコ"}, pr: "Calco"},               exp: {"*": 1000, pr: 700}},
+        calbrena:      {name: {snes: {en: "Calbrena", ja: "カルコブリーナ"}, pr: "Calcobrena"},     exp: {sfc: 12000, snes: 15000, pr: 8400}},
+        cindy:         {name: {snes: {en: "Cindy",    ja: "マグ"}, pr: "Cindy"},             exp: {sfc: 2500, snes: 3000, pr: 1750}},
+        cpu:           {name: {snes: {en: "CPU",      ja: "せいぎょシステム"}, pr: "CPU"},                 exp: {"*": 50000, pr: 35000}},
+        d_machin:      {name: {snes: {en: "D.Machin", ja: "きかいりゅう"}, pr: "Mech Dragon"},    exp: {sfc: 41400, snes: 41500, pr: 28980}},
+        d_mist:        {name: {snes: {en: "D.Mist",   ja: "ミストドラゴン"}, pr: "Mist Dragon"},      exp: {"*": 700, pr: 490}},
+        dark_elf:      {name: {snes: {en: "Dark Elf", ja: "ダークエルフ"}, pr: "Dark Elf"},       exp: {"*": 6000, pr: 4200}},
+        dark_imp:      {name: {snes: {en: "Dark Imp", ja: "ゴブリンキャップ"}, pr: "Goblin Captain"}, exp: {sfc: 1930, snes: 1940, pr: 1351}},
+        defender:      {name: {snes: {en: "Defender", ja: "ぼうえいシステム"}, pr: "Defense Node"},   exp: {"*": 0, snes: 50000}},
+        dr_lugae:      {name: {snes: {en: "Dr.Lugae", ja: "ルゲイエ"}, pr: "Dr. Lugae"},      exp: {sfc: 10101, snes: 15000, pr: 7071}},
+        elements_1:    {name: {snes: {en: "Elements (Milon Z./Rubicant)", ja: "してんのう (スカルミリョーネ / ルビカンテ)"}},   exp: {"*": 40000}},
+        elements_2:    {name: {snes: {en: "Elements (Kainazzo/Valvalis)", ja: "してんのう (カイナッツォ / バルバリシア)"}},   exp: {"*": 62500}},
+        elements_pr:   {name: {pr: {en: "Elemental Lords", ja: "してんのう"}},                  exp: {"*": 28000}},
+        evilwall:      {name: {snes: {en: "EvilWall", ja: "デモンズウォール"}, pr: "Demon Wall"},     exp: {"*": 23000, pr: 16100}},
+        fighter:       {name: {snes: {en: "Fighter",  ja: "バロンかいへい"}, pr: "Baron Warrior"},   exp: {sfc: 400, snes: 410, pr: 280}},
+        flamedog:      {name: {snes: {en: "Flamedog", ja: "フレイムドッグ"}, pr: "Fiery Hound"},    exp: {sfc: 1708, snes: 1720, pr: 1196}},
+        gargoyle:      {name: {snes: {en: "Gargoyle", ja: "ガーゴイル"}, pr: "Gargoyle"},       exp: {sfc: 315, snes: 320, pr: 221}},
+        general:       {name: {snes: {en: "General",  ja: "キャプテン"}, pr: "Captain"},         exp: {sfc: 600, snes: 610, pr: 420}},
+        ghast:         {name: {snes: {en: "Ghast",    ja: "スカルナント"}, pr: "Skullnant"},         exp: {sfc: 50,  snes: 150, pr: 35}},
+        ghoul:         {name: {snes: {en: "Ghoul",    ja: "グール"}, pr: "Ghoul"},             exp: {sfc: 505, snes: 580, pr: 354}},
+        golbez:        {name: {snes: {en: "Golbez",   ja: "ゴルベーザ"}, pr: "Golbez"},           exp: {"*": 15000, pr: 10500}},
+        graybomb:      {name: {snes: {en: "GrayBomb", ja: "ペイニーボム"}, pr: "Gray Bomb"},      exp: {sfc: 445, snes: 450, pr: 312}},
+        imp_cap:       {name: {snes: {en: "Imp Cap.", ja: "ドモボーイ"}, pr: "Domovoi"},        exp: {sfc: 184, snes: 190, pr: 129}},
+        kainazzo:      {name: {snes: {en: "Kainazzo", ja: "カイナッツォ"}, pr: "Cagnazzo"},       exp: {"*": 5500, pr: 3850}},
+        left_arm:      {name: {snes: {en: "Left Arm", ja: "ひだりうで"}, pr: "Left Arm"},       exp: {"*": 10, pr: 7}},
+        lilith:        {name: {snes: {en: "Lilith",   ja: "リリス"}, pr: "Lilith"},           exp: {sfc: 2703, snes: 2750, pr: 1892}},
+        milon:         {name: {snes: {en: "Milon",    ja: "スカルミリョーネ"}, pr: "Scarmiglione"},      exp: {"*": 3200, pr: 2240}},
+        milon_z:       {name: {snes: {en: "Milon Z.", ja: "スカルミリョーネ (第二戦)"}, pr: "Scarmiglione (second battle)"}, exp: {sfc: 3600, snes: 4000, pr: 2520}},
+        mindy:         {name: {snes: {en: "Mindy",    ja: "ラグ"}, pr: "Mindy"},             exp: {sfc: 2500, snes: 3000, pr: 1750}},
+        octomamm:      {name: {snes: {en: "Octomamm", ja: "オクトマンモス"}, pr: "Octomammoth"},    exp: {"*": 1200, pr: 840}},
+        officer:       {name: {snes: {en: "Officer",  ja: "ジェネラル"}, pr: "General"},         exp: {sfc: 398, snes: 400, pr: 279}},
+        pike:          {name: {snes: {en: "Pike",     ja: "フライキラー"}, pr: "Killer Fish"},        exp: {sfc: 119, snes: 120, pr: 83}},
+        red_bone:      {name: {snes: {en: "Red Bone", ja: "ブラッディボーン"}, pr: "Bloodbones"},     exp: {sfc: 315, snes: 320, pr: 221}},
+        revenant:      {name: {snes: {en: "Revenant", ja: "レブナント"}, pr: "Revenant"},       exp: {sfc: 575, snes: 680, pr: 403}},
+        rightarm:      {name: {snes: {en: "RightArm", ja: "みぎうで"}, pr: "Right Arm"},      exp: {"*": 10, pr: 7}},
+        rubicant:      {name: {snes: {en: "Rubicant", ja: "ルビカンテ"}, pr: "Rubicante"},      exp: {sfc: 18000, snes: 25000, pr: 12600}},
+        sandy:         {name: {snes: {en: "Sandy",    ja: "ドグ"}, pr: "Sandy"},             exp: {sfc: 2500, snes: 3000, pr: 1750}},
+        searcher:      {name: {snes: {en: "Searcher", ja: "サーチャー"}, pr: "Searcher"},       exp: {sfc: 15004, snes: 18200, pr: 10503}},
+        shadow:        {name: {snes: {en: "Shadow",   ja: "こくりゅう"}, pr: "Shadow Dragon"},    exp: {"*": 1, snes: 5000}},
+        skelton:       {name: {snes: {en: "Skelton",  ja: "スケルトン"}, pr: "Skeleton"},        exp: {sfc: 238, snes: 240, pr: 167}},
+        soldier:       {name: {snes: {en: "Soldier",  ja: "バロンへい"}, pr: "Baron Soldier"},   exp: {sfc: 157, snes: 160, pr: 110}},
+        soul:          {name: {snes: {en: "Soul",     ja: "ソウル"}, pr: "Soul"},               exp: {sfc: 460, snes: 510, pr: 322}},
+        spirit:        {name: {snes: {en: "Spirit",   ja: "スピリット"}, pr: "Spirit"},           exp: {sfc: 278, snes: 290, pr: 195}},
+        trapdoor:      {name: {snes: {en: "TrapDoor", ja: "アサルトドアー"}, pr: "Trap Door"},      exp: {sfc: 30000, snes: 31100, pr: 21000}},
+        valvalis:      {name: {snes: {en: "Valvalis", ja: "バルバリシア"}, pr: "Barbariccia"},    exp: {sfc: 9000, snes: 9500, pr: 6300}},
+        waterhag:      {name: {snes: {en: "WaterHag", ja: "サハギン"}, pr: "Sahagin"},        exp: {sfc: 136, snes: 140, pr: 95}},
+        waterhag_boss: {name: {snes: {en: "WaterHag", ja: "サハギン"}, pr: "Sahagin"},        exp: {"*": 800, pr: 560}},
+        weeper:        {name: {snes: {en: "Weeper",   ja: "レーシイ"}, pr: "Leshy"},            exp: {sfc: 157, snes: 160, pr: 110}},
+        zombie:        {name: {snes: {en: "Zombie",   ja: "ゾンビー"}, pr: "Zombie"},           exp: {sfc: 112, snes: 120, pr: 78}},
     };
 
     let _battleData = {
@@ -973,7 +973,7 @@ com.aexoden.ff4.exp = function()
             monsters: {
                 dark_imp: {modify: true, count: 3},
             },
-            name: {snes: "Dark Imps", pr: "Goblin Captains"},
+            name: {snes: {en: "Dark Imps", ja: "ゴブリンキャップ x3"}, pr: "Goblin Captains"},
             party: {[CHARACTER_CECIL]: true, [CHARACTER_KAIN]: true, [CHARACTER_ROSA]: true, [CHARACTER_RYDIA]: true, [CHARACTER_YANG]: true},
             shadow: [],
         },
@@ -990,7 +990,7 @@ com.aexoden.ff4.exp = function()
                 elements_1: {modify: true, count: 1},
                 elements_2: {modify: true, count: 0},
             },
-            name: {snes: "Elements", pr: "Elemental Lords"},
+            name: {snes: {en: "Elements", ja: "してんのう"}, pr: "Elemental Lords"},
             party: {[CHARACTER_CECIL]: true, [CHARACTER_EDGE]: true, [CHARACTER_FUSOYA]: true, [CHARACTER_ROSA]: false, [CHARACTER_RYDIA]: false},
             shadow: [CHARACTER_KAIN],
         },
@@ -1015,7 +1015,7 @@ com.aexoden.ff4.exp = function()
                 general: {modify: true, count: 0},
                 fighter: {modify: true, count: 2},
             },
-            name: {snes: "Fabul Gauntlet #1: General/Fighters", pr: "Fabul Gauntlet #1: Captain/Baron Warriors"},
+            name: {snes: {en: "Fabul Gauntlet #1: General/Fighters", ja: "ファブール 1: キャプテン / バロンかいへい"}, pr: "Fabul Gauntlet #1: Captain/Baron Warriors"},
             party: {[CHARACTER_DKC]: true, [CHARACTER_EDWARD]: true, [CHARACTER_YANG]: true},
             shadow: [CHARACTER_KAIN, CHARACTER_TELLAH, CHARACTER_ROSA],
         },
@@ -1025,7 +1025,7 @@ com.aexoden.ff4.exp = function()
                 waterhag: {modify: true, count: 1},
                 weeper: {modify: true, count: 1},
             },
-            name: {snes: "Fabul Gauntlet #2: Weeper/WaterHag/Imp Cap.", pr: "Fabul Gauntlet #2: Leshy/Sahagin/Domovoi"},
+            name: {snes: {en: "Fabul Gauntlet #2: Weeper/WaterHag/Imp Cap.", ja: "ファブール 2: レーシイ / サハギン / ドモボーイ"}, pr: "Fabul Gauntlet #2: Leshy/Sahagin/Domovoi"},
             party: {[CHARACTER_DKC]: true, [CHARACTER_EDWARD]: true, [CHARACTER_YANG]: true},
             shadow: [CHARACTER_KAIN, CHARACTER_TELLAH, CHARACTER_ROSA],
         },
@@ -1034,7 +1034,7 @@ com.aexoden.ff4.exp = function()
                 general: {modify: true, count: 0},
                 fighter: {modify: true, count: 2},
             },
-            name: {snes: "Fabul Gauntlet #3: General/Fighters", pr: "Fabul Gauntlet #3: Captain/Baron Warriors"},
+            name: {snes: {en: "Fabul Gauntlet #3: General/Fighters", ja: "ファブール 3: キャプテン / バロンかいへい"}, pr: "Fabul Gauntlet #3: Captain/Baron Warriors"},
             party: {[CHARACTER_DKC]: true, [CHARACTER_EDWARD]: true, [CHARACTER_YANG]: true},
             shadow: [CHARACTER_KAIN, CHARACTER_TELLAH, CHARACTER_ROSA],
         },
@@ -1042,7 +1042,7 @@ com.aexoden.ff4.exp = function()
             monsters: {
                 gargoyle: {modify: false, count: 1},
             },
-            name: {snes: "Fabul Gauntlet #4: Gargoyle", pr: "Fabul Gauntlet #4: Gargoyle"},
+            name: {snes: {en: "Fabul Gauntlet #4: Gargoyle", ja: "ファブール 4: ガーゴイル"}, pr: "Fabul Gauntlet #4: Gargoyle"},
             party: {[CHARACTER_DKC]: true, [CHARACTER_EDWARD]: true, [CHARACTER_YANG]: true},
             shadow: [CHARACTER_KAIN, CHARACTER_TELLAH, CHARACTER_ROSA],
         },
@@ -1052,7 +1052,7 @@ com.aexoden.ff4.exp = function()
                 waterhag: {modify: true, count: 1},
                 weeper: {modify: true, count: 1},
             },
-            name: {snes: "Fabul Gauntlet #5: Weeper/WaterHag/Imp Cap.", pr: "Fabul Gauntlet #5: Leshy/Sahagin/Domovoi"},
+            name: {snes: {en: "Fabul Gauntlet #5: Weeper/WaterHag/Imp Cap.", ja: "ファブール 5: レーシイ / サハギン / ドモボーイ"}, pr: "Fabul Gauntlet #5: Leshy/Sahagin/Domovoi"},
             party: {[CHARACTER_DKC]: true, [CHARACTER_EDWARD]: true, [CHARACTER_YANG]: true},
             shadow: [CHARACTER_KAIN, CHARACTER_TELLAH, CHARACTER_ROSA],
         },
@@ -1061,7 +1061,7 @@ com.aexoden.ff4.exp = function()
                 general: {modify: true, count: 0},
                 fighter: {modify: true, count: 2},
             },
-            name: {snes: "Fabul Gauntlet #6: General/Fighters", pr: "Fabul Gauntlet #6: Captain/Baron Warriors"},
+            name: {snes: {en: "Fabul Gauntlet #6: General/Fighters", ja: "ファブール 6: キャプテン / バロンかいへい"}, pr: "Fabul Gauntlet #6: Captain/Baron Warriors"},
             party: {[CHARACTER_DKC]: true, [CHARACTER_EDWARD]: true, [CHARACTER_YANG]: true},
             shadow: [CHARACTER_KAIN, CHARACTER_TELLAH, CHARACTER_ROSA],
         },
@@ -1088,7 +1088,7 @@ com.aexoden.ff4.exp = function()
                 d_machin: {modify: true, count: 15},
                 searcher: {modify: true, count: 1},
             },
-            name: {snes: "Grind Fight", pr: "Grind Fight"},
+            name: {snes: {en: "Grind Fight", ja: "レベル上げ"}, pr: "Grind Fight"},
             party: {[CHARACTER_CECIL]: false, [CHARACTER_EDGE]: true, [CHARACTER_FUSOYA]: false, [CHARACTER_ROSA]: false, [CHARACTER_RYDIA]: false},
             shadow: [CHARACTER_KAIN],
         },
@@ -1106,7 +1106,7 @@ com.aexoden.ff4.exp = function()
                 mindy: {modify: false, count: 1},
                 sandy: {modify: false, count: 1},
             },
-            name: {snes: "Magus Sisters", pr: "Magus Sisters"},
+            name: {snes: {en: "Magus Sisters", ja: "メーガス三姉妹"}, pr: "Magus Sisters"},
             party: {[CHARACTER_CECIL]: true, [CHARACTER_CID]: false, [CHARACTER_TELLAH]: true, [CHARACTER_YANG]: false},
             shadow: [CHARACTER_KAIN, CHARACTER_RYDIA, CHARACTER_ROSA],
         },
@@ -1132,7 +1132,7 @@ com.aexoden.ff4.exp = function()
                 bomb: {modify: true, count: 3},
                 graybomb: {modify: true, count: 3},
             },
-            name: {snes: "MomBomb", pr: "Mom Bomb"},
+            name: {snes: {en: "MomBomb", ja: "マザーボム"}, pr: "Mom Bomb"},
             party: {[CHARACTER_DKC]: true, [CHARACTER_EDWARD]: true, [CHARACTER_ROSA]: true, [CHARACTER_RYDIA]: true, [CHARACTER_YANG]: true},
             shadow: [CHARACTER_KAIN, CHARACTER_TELLAH],
         },
@@ -1149,7 +1149,7 @@ com.aexoden.ff4.exp = function()
                 officer: {modify: true, count: 0},
                 soldier: {modify: true, count: 3},
             },
-            name: {snes: "Officer/Soldiers", pr: "General/Baron Soldiers"},
+            name: {snes: {en: "Officer/Soldiers", ja: "ジェネラル / バロンへい"}, pr: "General/Baron Soldiers"},
             party: {[CHARACTER_DKC]: true},
             shadow: [CHARACTER_KAIN],
         },
@@ -1164,7 +1164,7 @@ com.aexoden.ff4.exp = function()
                 spirit: {modify: true, count: 0},
                 zombie: {modify: true, count: 0},
             },
-            name: {snes: "Mt. Ordeals Grind", pr: "Mt. Ordeals Grind"},
+            name: {snes: {en: "Mt. Ordeals Grind", ja: "試練の山でレベル上げ"}, pr: "Mt. Ordeals Grind"},
             party: {[CHARACTER_CECIL]: true, [CHARACTER_PALOM]: false, [CHARACTER_POROM]: false, [CHARACTER_TELLAH]: false},
             shadow: [CHARACTER_KAIN, CHARACTER_RYDIA, CHARACTER_ROSA, CHARACTER_YANG],
         },
@@ -1172,7 +1172,7 @@ com.aexoden.ff4.exp = function()
             monsters: {
                 pike: {modify: true, count: 3},
             },
-            name: {snes: "Pike x3", pr: "Killer Fish x3"},
+            name: {snes: {en: "Pike x3", ja: "フライキラー x3"}, pr: "Killer Fish x3"},
             party: {[CHARACTER_DKC]: true, [CHARACTER_RYDIA]: true, [CHARACTER_TELLAH]: true},
             shadow: [CHARACTER_KAIN],
         },
@@ -1188,7 +1188,7 @@ com.aexoden.ff4.exp = function()
             monsters: {
                 trapdoor: {modify: true, count: 1},
             },
-            name: {snes: "TrapDoor 1", pr: "Trap Door 1"},
+            name: {snes: {en: "TrapDoor 1", ja: "アサルトドアー 1"}, pr: "Trap Door 1"},
             party: {[CHARACTER_CECIL]: false, [CHARACTER_EDGE]: true, [CHARACTER_KAIN]: true, [CHARACTER_ROSA]: true, [CHARACTER_RYDIA]: true},
             shadow: [],
         },
@@ -1196,7 +1196,7 @@ com.aexoden.ff4.exp = function()
             monsters: {
                 trapdoor: {modify: true, count: 1},
             },
-            name: {snes: "TrapDoor 2", pr: "Trap Door 2"},
+            name: {snes: {en: "TrapDoor 2", ja: "アサルトドアー 2"}, pr: "Trap Door 2"},
             party: {[CHARACTER_CECIL]: false, [CHARACTER_EDGE]: true, [CHARACTER_KAIN]: true, [CHARACTER_ROSA]: true, [CHARACTER_RYDIA]: true},
             shadow: [],
         },
@@ -1204,7 +1204,7 @@ com.aexoden.ff4.exp = function()
             monsters: {
                 trapdoor: {modify: true, count: 1},
             },
-            name: {snes: "TrapDoor 3", pr: "Trap Door 3"},
+            name: {snes: {en: "TrapDoor 3", ja: "アサルトドアー 3"}, pr: "Trap Door 3"},
             party: {[CHARACTER_CECIL]: false, [CHARACTER_EDGE]: true, [CHARACTER_KAIN]: true, [CHARACTER_ROSA]: true, [CHARACTER_RYDIA]: true},
             shadow: [],
         },
@@ -1360,7 +1360,7 @@ com.aexoden.ff4.exp = function()
                     party: { [CHARACTER_CECIL]: false, [CHARACTER_ROSA]: true},
                 },
                 grind: {
-                    monsters: { d_machin: { count: 17 }},
+                    monsters: { d_machin: { count: 0 }},
                     party: { [CHARACTER_EDGE]: false, [CHARACTER_ROSA]: true },
                 },
                 magus_sisters: {
@@ -1632,16 +1632,28 @@ com.aexoden.ff4.exp = function()
     };
 
     var initSelect = function() {
-        var select = document.getElementById("route-select");
+        var routeSelect = document.getElementById("route-select");
+        var languageSelect = document.getElementById("language-select");
 
         for (const route in _routeData) {
             var option = document.createElement("option");
             option.text = _routeData[route].name;
             option.id = route;
-            select.add(option);
+            routeSelect.add(option);
         }
 
-        select.addEventListener("change", onRouteChange);
+        var englishOption = document.createElement("option");
+        englishOption.text = "English";
+        englishOption.id = "en";
+        languageSelect.add(englishOption);
+
+        var japaneseOption = document.createElement("option");
+        japaneseOption.text = "日本語";
+        japaneseOption.id = "ja";
+        languageSelect.add(japaneseOption);
+
+        routeSelect.addEventListener("change", onRouteChange);
+        languageSelect.addEventListener("change", onLanguageChange);
     };
 
     var getCharacterAlive = function(battle, character) {
@@ -1684,7 +1696,13 @@ com.aexoden.ff4.exp = function()
 
 
     var getLocalizedName = function(data, table, language) {
-        return data[table];
+        if (typeof data[table] == "object" && language in data[table]) {
+            return data[table][language];
+        } else if (typeof data["snes"] == "object" && language != "en" && language in data["snes"]) {
+            return data["snes"][language];
+        } else {
+            return data[table];
+        }
     }
 
     var getMonsterProperty = function(route, battle, monster, property, dfault) {
@@ -1707,6 +1725,11 @@ com.aexoden.ff4.exp = function()
         var select = document.getElementById("route-select");
         return select.options[select.selectedIndex].id;
     };
+
+    var getLanguage = function() {
+        var select = document.getElementById("language-select");
+        return select.options[select.selectedIndex].id;
+    }
 
     var onInputChange = function(e) {
         let tokens = this.id.split("-");
@@ -1754,6 +1777,7 @@ com.aexoden.ff4.exp = function()
     var updateDisplay = function(reset) {
         var e = document.getElementById("battles");
         var route = getRoute();
+        var language = getLanguage();
         var routeData = _routeData[route];
         let warnings = [];
 
@@ -1776,7 +1800,7 @@ com.aexoden.ff4.exp = function()
                 addDiv = true;
             }
 
-            battleDiv.innerHTML = "<h4>" + getLocalizedName(battleData.name, routeData.monster_names, "en") + "</h4>";
+            battleDiv.innerHTML = "<h4>" + getLocalizedName(battleData.name, routeData.monster_names, language) + "</h4>";
             for (let monster in battleData.monsters) {
                 let monsters = [];
                 if (getMonsterProperty(route, battle, monster, "modify", false)) {
@@ -1792,7 +1816,7 @@ com.aexoden.ff4.exp = function()
                         firstDiv.setAttribute("class", "form-group");
                         let label = document.createElement("label");
                         label.setAttribute("for", key);
-                        label.innerHTML = "Total " + getLocalizedName(_monsterData[monster].name, routeData.monster_names, "en") + " Kills";
+                        label.innerHTML = "Total " + getLocalizedName(_monsterData[monster].name, routeData.monster_names, language) + " Kills";
                         let input = document.createElement("input");
                         input.setAttribute("type", "number");
                         input.setAttribute("id", key);
@@ -1816,7 +1840,7 @@ com.aexoden.ff4.exp = function()
             }
 
             if (survivors == 0) {
-                warnings.push("Zero survivors in " + battleData.name + " battle");
+                warnings.push("Zero survivors in " + getLocalizedName(battleData.name, routeData.monster_names, language) + " battle");
             }
 
             let list = document.createElement("ul");
@@ -1854,15 +1878,15 @@ com.aexoden.ff4.exp = function()
                     link.setAttribute("id", "override-" + battle + "-" + character);
 
                     if (getCharacterAlive(battle, character)) {
-                        link.innerHTML = "<strong>" + _characterData[character].name + " (" + exp[character] + ")</strong>";
+                        link.innerHTML = "<strong>" + _characterData[character].name[language] + " (" + exp[character] + ")</strong>";
                     } else {
-                        link.innerHTML = _characterData[character].name  + " (" + exp[character] + ")";
+                        link.innerHTML = _characterData[character].name[language]  + " (" + exp[character] + ")";
                     }
 
                     item.appendChild(link);
                     link.addEventListener("click", onOverrideClick);
                 } else if (newLevel > oldLevel) {
-                    item.innerHTML = "<strong>" + _characterData[character].name + " (" + exp[character] + ")</strong> (shadow)";
+                    item.innerHTML = "<strong>" + _characterData[character].name[language] + " (" + exp[character] + ")</strong> (shadow)";
                 }
 
                 if (newLevel > oldLevel) {
@@ -1879,11 +1903,11 @@ com.aexoden.ff4.exp = function()
                     let max = routeData.restrictions[battle][character][1];
 
                     if (min != null && newLevel < min) {
-                        warnings.push(_characterData[character].name + " does not reach level " + min + " by the end of " + battleData.name);
+                        warnings.push(_characterData[character].name[language] + " does not reach level " + min + " by the end of " + getLocalizedName(battleData.name, routeData.monster_names, language));
                     }
 
                     if (max != null && newLevel > max) {
-                        warnings.push(_characterData[character].name + " exceeds level " + max + " at the end of " + battleData.name);
+                        warnings.push(_characterData[character].name[language] + " exceeds level " + max + " at the end of " + getLocalizedName(battleData.name, routeData.monster_names, language));
                     }
                 }
             };
@@ -1932,6 +1956,10 @@ com.aexoden.ff4.exp = function()
 
     var onRouteChange = function() {
         reset();
+    };
+
+    var onLanguageChange = function() {
+        updateDisplay(false);
     };
 
     /*
