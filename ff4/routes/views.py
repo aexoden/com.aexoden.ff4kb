@@ -32,6 +32,11 @@ GROUPS = {
         'description': 'These routes are uncommon alternate routes that are unlikely to be used during a run. They currently have no summary or tutorial data. None of these routes is twin seed safe.',
         'twin_safe': True,
     },
+    'hidden': {
+        'name': 'Hidden Routes',
+        'description': 'These routes are active, but are hidden from public view.',
+        'twin_safe': False,
+    },
     'archive': {
         'name': 'Archived Routes',
         'description': 'These routes are archived from the old version of the site. They have not been updated to the new data structure, and their optimization status is unknown (though they should be near optimal relative to their input data). There is no associated tutorial or summary data. Eventually, I would like to convert them to the new structure, but this is not a high priority. These routes are not guaranteed to be twin seed safe (though some of them may be).',
@@ -158,7 +163,7 @@ ROUTES = {
         'twin_safe': True,
         'complete': False,
         'seed_finder': False,
-        'status': 'Near Optimal (Optimal Estimate: Early 2023)',
+        'status': 'Near Optimal (Optimal Estimate: Late 2024)',
     },
     'glitchless-no-manip': {
         'name': 'Any% Glitchless (No Seed Manipulation)',
@@ -168,7 +173,27 @@ ROUTES = {
         'twin_safe': True,
         'complete': False,
         'seed_finder': True,
-        'status': 'Suboptimal (Optimal Estimate: Mid to Late 2023)',
+        'status': 'Suboptimal (Optimal Estimate: Mid to Late 2025)',
+    },
+    'no64-rosa-all-bosses-riversmccown': {
+        'name': 'Any% No64 (Rosa) All Bosses [riversmccown]',
+        'description': 'This route branches from the existing no64-rosa routes after defeating CPU, and may be suboptimal. It is primarily intended for use in a marathon setting, but does not include any additional marathon safety, except for using the save point after defeating Plague and the D.Lunars.',
+        'group': 'hidden',
+        'enabled': True,
+        'twin_safe': True,
+        'complete': False,
+        'seed_finder': False,
+        'status': 'Suboptimal',
+    },
+    'no64-excalbur-all-bosses-riversmccown': {
+        'name': 'Any% No64 (Edge+Excalbur) All Bosses [riversmccown]',
+        'description': 'This route branches from the existing no64-rosa routes after defeating Rubicant, and may be suboptimal. It is primarily intended for use in a marathon setting, but does not include any additional marathon safety, except for using the save point after defeating Plague and the D.Lunars.',
+        'group': 'hidden',
+        'enabled': True,
+        'twin_safe': True,
+        'complete': False,
+        'seed_finder': False,
+        'status': 'Suboptimal',
     },
 
     'premist': {
@@ -324,6 +349,9 @@ def index(request: HttpRequest):
 
     for route, data in ROUTES.items():
         assert(isinstance(data['group'], str))
+        if data['group'] == 'hidden':
+            continue
+
         if 'routes' not in routes[data['group']]:
             routes[data['group']]['routes'] = {}
 
