@@ -121,9 +121,8 @@ class RouteDetail(object):
     def _test_options(self, line: str):
         patterns = [
             '(In|Out)ward.*(Steps|Secret)',
-            'Castle of Dwarves (Walk|Warp)',
+            '(Walk|Warp)',
             '(Remove|Equip|Skip) Dwarf Axe',
-            'Cave Eblana B2F Shop (Walk|Warp)',
             'Zeromus Menu',
             'Visit Hummingway',
             'Recruit FuSoYa First',
