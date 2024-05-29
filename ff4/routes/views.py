@@ -29,7 +29,7 @@ GROUPS = {
     },
     'alternate': {
         'name': 'Alternate Routes',
-        'description': 'These routes are uncommon alternate routes that are unlikely to be used during a run. They currently have no summary or tutorial data. None of these routes is twin seed safe.',
+        'description': 'These routes are uncommon alternate routes that are less likely to be used during a run. They currently have no summary or tutorial data. They may or may not be twin seed safe.',
         'twin_safe': True,
     },
     'hidden': {
@@ -177,8 +177,8 @@ ROUTES = {
     },
     'no64-rosa-all-bosses-riversmccown': {
         'name': 'Any% No64 (Rosa) All Bosses [riversmccown]',
-        'description': 'This route branches from the existing no64-rosa routes after defeating CPU, and may be suboptimal. It is primarily intended for use in a marathon setting, but does not include any additional marathon safety, except for using the save point after defeating Plague and the D.Lunars.',
-        'group': 'hidden',
+        'description': 'This route branches from the existing no64-rosa routes after defeating CPU, and may be suboptimal. It was put together for RPGLB 2024 and is primarily intended for use in a marathon setting, but does not include any additional marathon safety, except for using the save point after defeating Plague and the D.Lunars. They are twin seed safe as long as you start on the regular no64-rosa routes.',
+        'group': 'alternate',
         'enabled': True,
         'twin_safe': True,
         'complete': False,
@@ -187,8 +187,8 @@ ROUTES = {
     },
     'no64-excalbur-all-bosses-riversmccown': {
         'name': 'Any% No64 (Edge+Excalbur) All Bosses [riversmccown]',
-        'description': 'This route branches from the existing no64-rosa routes after defeating Rubicant, and may be suboptimal. It is primarily intended for use in a marathon setting, but does not include any additional marathon safety, except for using the save point after defeating Plague and the D.Lunars.',
-        'group': 'hidden',
+        'description': 'This route branches from the existing no64-rosa routes after defeating Rubicant, and may be suboptimal. It was put together for RPGLB 2024 and is primarily intended for use in a marathon setting, but does not include any additional marathon safety, except for using the save point after defeating Plague and the D.Lunars. They are twin seed safe as long as you start on the regular no64-rosa routes.',
+        'group': 'alternate',
         'enabled': True,
         'twin_safe': True,
         'complete': False,
