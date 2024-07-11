@@ -8,10 +8,10 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-django = "^5.0.6"
+django = "^5.0.7"
 dj-database-url = "^2.2.0"
 django-configurations = "^2.5"
-django-debug-toolbar = "^4.4.2"
+django-debug-toolbar = "^4.4.6"
 django-extensions = "^3.2.3"
 django4-bootstrap-breadcrumbs = "^0.10.0"
 gunicorn = "^22.0.0"
@@ -20,7 +20,7 @@ whitenoise = "^6.7.0"
 
 [tool.poetry.group.dev.dependencies]
 bandit = "^1.7.9"
-pylint = "^3.2.3"
+pylint = "^3.2.5"
 flake8 = "^7.1.0"
 pydocstyle = "^6.3.0"
 
