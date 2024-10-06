@@ -3,7 +3,7 @@ updates:
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
     open-pull-requests-limit: 32
     allow:
     - dependency-type: "all"
@@ -11,3 +11,7 @@ updates:
       patch-versions:
         update-types:
         - "patch"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      itnerval: "weekly"
