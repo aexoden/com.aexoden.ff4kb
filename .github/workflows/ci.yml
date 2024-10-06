@@ -1,0 +1,70 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+
+    env:
+      DJANGO_ALLOWED_HOSTS: localhost,127.0.0.1
+      DJANGO_SECRET_KEY: THIS_IS_A_TESTING_SECRET_KEY_ONLY
+      ENVIRONMENT: Testing
+      PORT: 8000
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build Docker image
+        run: docker build -t ff4kb .
+
+      - name: Run Docker container
+        run: |
+          docker run -d -p 8000:8000 \
+            -e DJANGO_ALLOWED_HOSTS=${{ env.DJANGO_ALLOWED_HOSTS }} \
+            -e DJANGO_SECRET_KEY=${{ env.DJANGO_SECRET_KEY }} \
+            -e ENVIRONMENT=${{ env.ENVIRONMENT }} \
+            -e PORT=${{ env.PORT }} \
+            ff4kb
+
+      - name: Wait for application to start
+        run: |
+          max_retries=30
+          counter=0
+          until curl --head --silent --max-time 5 "http://localhost:8000" ; do
+            if [ "$counter" -gt "$max_retries" ] ; then
+              echo "Maximum attempts reached"
+              exit 1
+            fi
+
+            echo "Waiting for application to start..."
+            sleep 2
+            counter=$((counter+1))
+          done
+
+      - name: Check application response
+        run: |
+          urls=(
+            "http://localhost:8000/"
+            "http://localhost:8000/static/css/style.css"
+            "http://localhost:8000/guides/"
+            "http://localhost:8000/routes/no64-excalbur/24/"
+          )
+
+          for url in "${urls[@]}" ; do
+            response=$(curl -s -o /dev/null -w "%{http_code}" $url)
+            if [ $response -eq 200 ]; then
+              echo "$url is responding correctly with status code 200"
+            else
+              echo "$url is not responding as expected: $response"
+              exit 1
+            fi
+          done

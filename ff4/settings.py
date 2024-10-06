@@ -148,6 +148,8 @@ class Development(Run):
         'debug_toolbar.middleware.DebugToolbarMiddleware'
     ]
 
+class Testing(Run):
+    pass
 
 class Staging(Run):
     # Security
