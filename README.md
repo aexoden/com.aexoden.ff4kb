@@ -20,11 +20,7 @@ other PaaS solution), or manually by the user:
 * ENVIRONMENT: Set to `Production` for production.
 * PORT: The port to bind to, typically set automatically by Dokku.
 
-My setup currently additionally sets SECRET_KEY to the same value as
-DJANGO_SECRET_KEY. I currently do not know which of these is required or if both
-are.
-
-## Notes
+## Usage Notes
 
 One feature of this web site (using custom values for a route's variables)
 requires a copy of [rosa](https://github.com/aexoden/rosa) to be placed in the
@@ -33,3 +29,18 @@ this, but if you are doing some other form of installation, you will need to
 handle the rosa installation yourself. Note that this feature currently has no
 obvious public-facing interface, though if someone knew the correct parameters
 to pass to the URL, they could access it.
+
+## Development Notes
+
+This site's codebase was originally developed in late 2017. While it has evolved
+over time, parts of the design still reflect early choices that I now consider
+suboptimal or outdated. Though many improvements have been made, some aspects
+remain a product of their time. Specifically, the code still relies on too many
+nested dictionaries and contains many scattered magic numbers. A number of lints
+I would normally fix properly (mostly to do with magic numbers or complexity)
+are instead ignored. In addition, there is minimal testing architecture, leaving
+breakage all too easy to cause.
+
+I do not currently have much interest in doing deep architectural improvements
+myself (and would be more tempted to rewrite everything in Rust), but well done
+pull requests are welcome.
