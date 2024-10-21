@@ -23,7 +23,7 @@ gunicorn = "^23.0.0"
 whitenoise = "^6.7.0"
 
 [tool.poetry.group.dev.dependencies]
-ruff = "^0.6.9"
+ruff = "^0.7.0"
 
 [build-system]
 requires = ["poetry-core"]
