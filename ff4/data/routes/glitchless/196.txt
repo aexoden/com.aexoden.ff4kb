@@ -3,11 +3,11 @@ VERSION	1
 ROSA	v1.2.0-38-g30af530+
 SEED	196
 MAXSTEP	80
-MAXSEG	21
+MAXSEG	27
 TASMODE	0
 MINIMUM	1
-FRAMES	226047988
-VARS	C307800:1 C30CA00:1 C314A00:1 C314D00:1 C315500:1 C316C00:2 E000705:2 E302A00:3 E304900:6 E304C00:2 E304E00:8 E305500:9 E308701:12 E30B500:1 E30BD00:58 E30CC00:8 E30CD00:80 E310801:45 E310901:14 E310B00:2 E310E00:10 E310F00:20 E311000:2 E311900:2 E312400:8 E312502:6 E314400:6
+FRAMES	225951988
+VARS	C307800:1 C30CA00:1 C314A00:1 C314D00:1 C315500:1 C316C00:2 E000705:2 E302A00:3 E304700:1 E304900:6 E304C00:2 E304E00:6 E304F00:1 E305500:9 E308701:12 E30B500:1 E30BD00:58 E30CC00:8 E30CD00:80 E310800:1 E310801:45 E310901:14 E310A00:1 E310B00:2 E310E00:10 E310E01:1 E310F00:16 E311000:2 E311001:1 E311900:2 E312400:8 E312502:6 E314400:6
 
 Baron 2F                                                                      Seed: 196   Index:   0
 Baron 1F                                                                      Seed: 196   Index:   2
@@ -140,14 +140,13 @@ Fabul King's Room                                                             Se
   Optional Steps: 6
 Fabul 2F                                                                      Seed:   8   Index: 165
 Fabul 1F                                                                      Seed:   8   Index: 170
-  Optional Steps: 0
-Fabul Inn                                                                     Seed:   8   Index: 183
+  Optional Steps: 1
+Fabul Inn                                                                     Seed:   8   Index: 184
   Optional Steps: 2
-Fabul Right Tower 3F                                                          Seed:   8   Index: 186
-  Optional Steps: 0
-Fabul Right Tower 2F                                                          Seed:   8   Index: 191
+Fabul Right Tower 3F                                                          Seed:   8   Index: 187
+  Optional Steps: 1
+Fabul Right Tower 2F                                                          Seed:   8   Index: 193
   Optional Steps: 6
-  Extra Steps: 2
 Fabul Right Tower 1F                                                          Seed:   8   Index: 210
 Fabul                                                                         Seed:   8   Index: 214
 Fabul 2F                                                                      Seed:   8   Index: 214
@@ -330,32 +329,32 @@ Castle of Dwarves King's Room                                                 Se
 Battle: Calbrena and Golbez                                                   Seed:  93   Index: 239
 Castle of Dwarves King's Room                                                 Seed:  93   Index: 239
 Castle of Dwarves 1F                                                          Seed:  93   Index: 242
-  Optional Steps: 0
-Castle of Dwarves Right Tower 2F                                              Seed:  93   Index: 249
+  Optional Steps: 1
+Castle of Dwarves Right Tower 2F                                              Seed:  93   Index: 250
   Optional Steps: 10
-Castle of Dwarves Right Tower 3F                                              Seed: 110   Index:  12
+Castle of Dwarves Right Tower 3F                                              Seed: 110   Index:  13
   Optional Steps: 2
-Castle of Dwarves 4F                                                          Seed: 110   Index:  21
-Castle of Dwarves Right Tower 5F Walk                                         Seed: 110   Index:  22
-  Castle of Dwarves Right Tower 5F                                            Seed: 110   Index:  22
+Castle of Dwarves 4F                                                          Seed: 110   Index:  22
+Castle of Dwarves Right Tower 5F Walk                                         Seed: 110   Index:  23
+  Castle of Dwarves Right Tower 5F                                            Seed: 110   Index:  23
     Optional Steps: 2
-Castle of Dwarves Right Tower 4F Walk                                         Seed: 110   Index:  29
-  Castle of Dwarves 4F                                                        Seed: 110   Index:  29
-Castle of Dwarves Right Tower 3F Walk                                         Seed: 110   Index:  30
-  Castle of Dwarves Right Tower 3F                                            Seed: 110   Index:  30
-    Optional Steps: 0
-Castle of Dwarves Right Tower 2F                                              Seed: 110   Index:  37
-  Optional Steps: 0
-Castle of Dwarves B1F                                                         Seed: 110   Index:  42
-Castle of Dwarves Left Tower 2F Walk                                          Seed: 110   Index:  68
-  Castle of Dwarves Left Tower 2F                                             Seed: 110   Index:  68
-Castle of Dwarves B1F                                                         Seed: 110   Index:  72
-  Optional Steps: 0
-Castle of Dwarves B2F                                                         Seed: 110   Index:  88
+Castle of Dwarves Right Tower 4F Walk                                         Seed: 110   Index:  30
+  Castle of Dwarves 4F                                                        Seed: 110   Index:  30
+Castle of Dwarves Right Tower 3F Walk                                         Seed: 110   Index:  31
+  Castle of Dwarves Right Tower 3F                                            Seed: 110   Index:  31
+    Optional Steps: 1
+Castle of Dwarves Right Tower 2F                                              Seed: 110   Index:  39
+  Optional Steps: 1
+Castle of Dwarves B1F                                                         Seed: 110   Index:  45
+Castle of Dwarves Left Tower 2F Walk                                          Seed: 110   Index:  71
+  Castle of Dwarves Left Tower 2F                                             Seed: 110   Index:  71
+Castle of Dwarves B1F                                                         Seed: 110   Index:  75
+  Optional Steps: 1
+Castle of Dwarves B2F                                                         Seed: 110   Index:  92
   Optional Steps: 2
-Castle of Dwarves Dwarf Base                                                  Seed: 110   Index: 113
+Castle of Dwarves Dwarf Base                                                  Seed: 110   Index: 117
   Optional Steps: 2
-  Extra Steps: 18
+  Extra Steps: 14
 Underworld (Castle of Dwarves)                                                Seed: 110   Index: 157
   Step  61: 67 / Dark Imp x4 (6.631s)
   Step 122: 68 / Armadilo x1, Tortoise x2 (6.637s)
@@ -645,14 +644,14 @@ Get Ninja Stars on Lunar Core B1 and Lunar Core B3                            Se
 Lunar Core B4                                                                 Seed:  92   Index:  81
 
 Encounter Time:      1109.339s
-Other Time:          2651.933s
-Total Time:          3761.272s
+Other Time:          2650.335s
+Total Time:          3759.675s
 
 Base Total Time:     3930.502s
-Time Saved:          169.230s
+Time Saved:          170.827s
 
-Optional Steps:      44
-Extra Steps:         260
+Optional Steps:      50
+Extra Steps:         254
 Encounters:          141
 
 Base Encounters:     164

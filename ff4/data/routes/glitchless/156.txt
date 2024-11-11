@@ -3,11 +3,11 @@ VERSION	1
 ROSA	v1.2.0-38-g30af530+
 SEED	156
 MAXSTEP	80
-MAXSEG	21
+MAXSEG	24
 TASMODE	0
 MINIMUM	1
-FRAMES	225824843
-VARS	C305500:1 C307800:1 C30CA00:1 C314A00:1 C314C00:1 C314D00:1 C315200:1 C315500:1 C316C00:1 C316D00:1 E000200:10 E000705:2 E200001:4 E302A00:1 E304000:11 E304E00:2 E305501:47 E30B500:1 E30CC00:30 E30CD00:12 E310801:55 E310A00:1 E310B00:2 E310E00:10 E310F00:8 E311000:2 E311900:2 E312202:6 E316900:8 E316A01:4 E317B00:12
+FRAMES	225792700
+VARS	C305500:1 C307800:1 C30CA00:1 C314A00:1 C314C00:1 C314D00:1 C315200:1 C315500:1 C316C00:1 C316D00:1 E000200:10 E000705:2 E200001:4 E302A00:1 E304000:11 E304E00:2 E305501:47 E30B500:1 E30CC00:30 E30CD00:12 E310801:23 E310A00:1 E310B00:2 E310E00:10 E310E01:1 E310F00:6 E311000:2 E311001:1 E311900:2 E312202:6 E313700:32 E316900:8 E316A01:4 E317B00:12
 
 Baron 2F                                                                      Seed: 156   Index:   0
 Baron 1F                                                                      Seed: 156   Index:   2
@@ -343,19 +343,19 @@ Castle of Dwarves Right Tower 4F Walk                                         Se
   Castle of Dwarves 4F                                                        Seed:  70   Index:  61
 Castle of Dwarves Right Tower 3F Walk                                         Seed:  70   Index:  62
   Castle of Dwarves Right Tower 3F                                            Seed:  70   Index:  62
-    Optional Steps: 0
-Castle of Dwarves Right Tower 2F                                              Seed:  70   Index:  69
-  Optional Steps: 0
-Castle of Dwarves B1F                                                         Seed:  70   Index:  74
-Castle of Dwarves Left Tower 2F Walk                                          Seed:  70   Index: 100
-  Castle of Dwarves Left Tower 2F                                             Seed:  70   Index: 100
-Castle of Dwarves B1F                                                         Seed:  70   Index: 104
+    Optional Steps: 1
+Castle of Dwarves Right Tower 2F                                              Seed:  70   Index:  70
   Optional Steps: 1
-Castle of Dwarves B2F                                                         Seed:  70   Index: 121
+Castle of Dwarves B1F                                                         Seed:  70   Index:  76
+Castle of Dwarves Left Tower 2F Walk                                          Seed:  70   Index: 102
+  Castle of Dwarves Left Tower 2F                                             Seed:  70   Index: 102
+Castle of Dwarves B1F                                                         Seed:  70   Index: 106
+  Optional Steps: 1
+Castle of Dwarves B2F                                                         Seed:  70   Index: 123
   Optional Steps: 2
-Castle of Dwarves Dwarf Base                                                  Seed:  70   Index: 146
+Castle of Dwarves Dwarf Base                                                  Seed:  70   Index: 148
   Optional Steps: 2
-  Extra Steps: 6
+  Extra Steps: 4
 Underworld (Castle of Dwarves)                                                Seed:  70   Index: 178
   Step  53: 65 / Dark Imp x3, Armadilo x1, BlackLiz x1 (6.673s)
   Step  72: 66 / Dark Imp x3, Armadilo x1, BlackLiz x1 (6.558s)
@@ -463,17 +463,18 @@ Castle of Dwarves King's Room Walk                                            Se
   Castle of Dwarves King's Room                                               Seed: 172   Index: 171
   Castle of Dwarves 1F                                                        Seed: 172   Index: 174
     Optional Steps: 1
-    Extra Steps: 54
-Castle of Dwarves Left Tower 2F                                               Seed: 172   Index: 236
-Castle of Dwarves B1F                                                         Seed: 172   Index: 243
-Castle of Dwarves Infirmary                                                   Seed: 172   Index: 248
-Underworld (Castle of Dwarves)                                                Seed: 172   Index: 252
-Underworld (Tomra)                                                            Seed: 172   Index: 253
-Land of Monsters B1F                                                          Seed: 172   Index: 253
-  Step  21: 103 / Conjurer (summons HugeNaga) x1 (7.177s)
-Land of Monsters B2F                                                          Seed: 189   Index:  32
-  Step   8: 104 / Warrior x2, Fiend x2 (7.532s)
-  Step  31: 105 / Warrior x2, Fiend x2 (7.534s)
+    Extra Steps: 22
+Castle of Dwarves Left Tower 2F                                               Seed: 172   Index: 204
+Castle of Dwarves B1F                                                         Seed: 172   Index: 211
+Castle of Dwarves Infirmary                                                   Seed: 172   Index: 216
+Underworld (Castle of Dwarves)                                                Seed: 172   Index: 220
+Underworld (Tomra)                                                            Seed: 172   Index: 221
+Land of Monsters B1F                                                          Seed: 172   Index: 221
+Land of Monsters B2F                                                          Seed: 189   Index:   0
+  Extra Steps: 32
+  Step  18: 103 / Conjurer (summons HugeNaga) x1 (7.172s)
+  Step  40: 104 / Warrior x2, Fiend x2 (7.534s)
+  Step  63: 105 / Warrior x2, Fiend x2 (7.534s)
 Land of Monsters B3F                                                          Seed: 189   Index:  76
 Underworld (Tomra)                                                            Seed: 189   Index: 101
 Underworld (Tomra)                                                            Seed: 189   Index: 102
@@ -655,15 +656,15 @@ Lunar Core B4                                                                 Se
   Step  10: 142 / Mind x1 (11.989s)
   Step  31: 143 / Mind x1 (11.982s)
 
-Encounter Time:      1126.592s
-Other Time:          2630.967s
-Total Time:          3757.559s
+Encounter Time:      1126.590s
+Other Time:          2630.435s
+Total Time:          3757.024s
 
 Base Total Time:     3966.752s
-Time Saved:          209.193s
+Time Saved:          209.728s
 
-Optional Steps:      36
-Extra Steps:         194
+Optional Steps:      38
+Extra Steps:         192
 Encounters:          143
 
 Base Encounters:     164

@@ -166,11 +166,11 @@ ROUTES: dict[str, dict[str, str | bool]] = {
         "twin_safe": True,
         "complete": False,
         "seed_finder": False,
-        "status": "Near Optimal (Optimal Estimate: Late 2024)",
+        "status": "Optimal",
     },
     "glitchless-no-manip": {
         "name": "Any% Glitchless (No Seed Manipulation)",
-        "description": "This route runs from the beginning of the game until Zeromus is defeated, without using any of various glitches. These routes are safe to use if you aren not manipulating your starting seed, but some seeds may be suboptimal as a result.",  # noqa: E501
+        "description": "This route runs from the beginning of the game until Zeromus is defeated, without using any of various glitches. These routes are safe to use if you aren't manipulating your starting seed, but some seeds may be suboptimal as a result. In addition, they use a somewhat lower maximum allowed steps to ease computation difficulty.",  # noqa: E501
         "group": "standard",
         "enabled": True,
         "twin_safe": True,

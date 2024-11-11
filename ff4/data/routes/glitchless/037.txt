@@ -3,11 +3,11 @@ VERSION	1
 ROSA	v1.2.0-38-g30af530+
 SEED	37
 MAXSTEP	80
-MAXSEG	21
+MAXSEG	28
 TASMODE	0
 MINIMUM	1
-FRAMES	227964220
-VARS	C305500:1 C308F00:1 C314A00:1 C314C00:1 C314D00:1 C315100:1 C315200:1 C315500:1 C315600:1 C316C00:2 E000705:20 E302A00:23 E304000:5 E304900:6 E304C00:2 E304E00:22 E305500:3 E305501:25 E307400:44 E308700:3 E308702:13 E309200:56 E30CC00:3 E310A00:1 E310B00:2 E310E00:10 E310F00:10 E311000:2 E311900:2 E316A01:6 E316D00:2
+FRAMES	227836970
+VARS	C305500:1 C308F00:1 C314A00:1 C314C00:1 C314D00:1 C315100:1 C315200:1 C315500:1 C315600:1 C316C00:2 E000701:1 E000705:22 E302A00:23 E304000:5 E304700:1 E304900:6 E304C00:2 E304E00:20 E304F00:1 E305500:3 E305501:23 E307400:44 E308700:3 E308702:1 E309200:56 E309700:12 E30CC00:3 E310800:1 E310A00:1 E310B00:2 E310E00:10 E310E01:1 E310F00:6 E311000:2 E311001:1 E311900:2 E316A01:6 E316D00:2
 
 Baron 2F                                                                      Seed:  37   Index:   0
 Baron 1F                                                                      Seed:  37   Index:   2
@@ -140,14 +140,14 @@ Fabul King's Room                                                             Se
   Optional Steps: 6
 Fabul 2F                                                                      Seed: 105   Index: 234
 Fabul 1F                                                                      Seed: 105   Index: 239
-  Optional Steps: 0
-Fabul Inn                                                                     Seed: 105   Index: 252
+  Optional Steps: 1
+Fabul Inn                                                                     Seed: 105   Index: 253
   Optional Steps: 2
-Fabul Right Tower 3F                                                          Seed: 105   Index: 255
-  Optional Steps: 0
-Fabul Right Tower 2F                                                          Seed: 122   Index:   4
+Fabul Right Tower 3F                                                          Seed: 122   Index:   0
+  Optional Steps: 1
+Fabul Right Tower 2F                                                          Seed: 122   Index:   6
   Optional Steps: 6
-  Extra Steps: 16
+  Extra Steps: 14
 Fabul Right Tower 1F                                                          Seed: 122   Index:  37
 Fabul                                                                         Seed: 122   Index:  41
 Fabul 2F                                                                      Seed: 122   Index:  41
@@ -191,23 +191,23 @@ Mt.Ordeals Summit                                                             Se
 Paladin                                                                       Seed: 139   Index:  72
 Mt.Ordeals Summit                                                             Seed: 139   Index:  72
   Optional Steps: 1
+Mt.Ordeals-7th station                                                        Seed: 139   Index:  95
+  Step  16: 39 / Zombie x3, Ghoul x2, Revenant x2 (8.271s)
+Mt.Ordeals-3rd station                                                        Seed: 139   Index: 137
+  Step  15: 40 / Zombie x3, Ghoul x2, Revenant x2 (8.269s)
+Mt.Ordeals                                                                    Seed: 139   Index: 167
+  Step   1: 41 / Spirit x3, Soul x1 (8.841s)
+  Step  31: 42 / Spirit x3, Soul x1 (8.502s)
+Overworld (Mt.Ordeals)                                                        Seed: 139   Index: 211
+Mt.Ordeals Chocobo's Forest                                                   Seed: 139   Index: 224
+Take Chocobo to Mysidia                                                       Seed: 139   Index: 224
+Overworld (Mysidia)                                                           Seed: 139   Index: 224
+Mysidia                                                                       Seed: 139   Index: 224
+Mysidia House of Wishes                                                       Seed: 139   Index: 224
+Mysidia                                                                       Seed: 139   Index: 224
+Mysidia Serpent Road                                                          Seed: 139   Index: 224
+Town of Baron Serpent Road                                                    Seed: 139   Index: 225
   Extra Steps: 12
-Mt.Ordeals-7th station                                                        Seed: 139   Index: 107
-  Step   4: 39 / Zombie x3, Ghoul x2, Revenant x2 (8.271s)
-Mt.Ordeals-3rd station                                                        Seed: 139   Index: 149
-  Step   3: 40 / Zombie x3, Ghoul x2, Revenant x2 (8.269s)
-  Step  19: 41 / Ghoul x2, Soul x2 (9.022s)
-Mt.Ordeals                                                                    Seed: 139   Index: 179
-  Step  19: 42 / Spirit x3, Soul x1 (8.841s)
-Overworld (Mt.Ordeals)                                                        Seed: 139   Index: 223
-Mt.Ordeals Chocobo's Forest                                                   Seed: 139   Index: 236
-Take Chocobo to Mysidia                                                       Seed: 139   Index: 236
-Overworld (Mysidia)                                                           Seed: 139   Index: 236
-Mysidia                                                                       Seed: 139   Index: 236
-Mysidia House of Wishes                                                       Seed: 139   Index: 236
-Mysidia                                                                       Seed: 139   Index: 236
-Mysidia Serpent Road                                                          Seed: 139   Index: 236
-Town of Baron Serpent Road                                                    Seed: 139   Index: 237
 Town of Baron                                                                 Seed: 139   Index: 240
 Town of Baron Inn                                                             Seed: 139   Index: 240
 Town of Baron Inn                                                             Seed: 139   Index: 240
@@ -251,113 +251,113 @@ Toroian Castle 1F                                                             Se
 Toroian Castle                                                                Seed: 156   Index: 200
 Toroian Castle Infirmary                                                      Seed: 156   Index: 200
 Overworld (Silvera/Toroia)                                                    Seed: 156   Index: 205
-  Optional Steps: 0
-  Step   6: 49 / Python x1, StingRat x2 (8.776s)
-Chocobo's Village                                                             Seed: 156   Index: 242
-Fly Black Chocobo to Cave Magnes                                              Seed: 156   Index: 242
-Overworld (Silvera/Toroia)                                                    Seed: 156   Index: 242
-Cave Magnes B1F                                                               Seed: 156   Index: 243
-  Step  17: 50 / Panther x2 (8.347s)
-  Step  55: 51 / Mage x2 (9.006s)
-Cave Magnes B2F                                                               Seed: 173   Index:  55
-  Step  40: 52 / Panther x2 (8.336s)
-Cave Magnes B3F Inward Save Room Steps                                        Seed: 173   Index: 112
-  Cave Magnes B3F                                                             Seed: 173   Index: 112
-  Cave Magnes B3F Save Room                                                   Seed: 173   Index: 120
-    Extra Steps: 56
-  Cave Magnes B3F                                                             Seed: 173   Index: 176
-    Step  43: 53 / Ogre x3 (8.886s)
-Cave Magnes B3F Passage                                                       Seed: 173   Index: 239
-Cave Magnes B4F Inward Direct                                                 Seed: 173   Index: 250
-  Cave Magnes B4F                                                             Seed: 173   Index: 250
-    Step  24: 54 / Panther x2, Ogre x2 (9.393s)
-Cave Magnes Crystal Room                                                      Seed: 190   Index:  36
-Battle: Dark Elf                                                              Seed: 190   Index:  36
-Cave Magnes Crystal Room                                                      Seed: 190   Index:  36
-Cave Magnes B4F                                                               Seed: 190   Index:  36
-Overworld (Silvera/Toroia)                                                    Seed: 190   Index:  36
-Chocobo's Village                                                             Seed: 190   Index:  38
-Overworld (Silvera/Toroia)                                                    Seed: 190   Index:  38
-Toroian Castle                                                                Seed: 190   Index:  38
-Toroian Castle 1F Inward Extra Steps Area Steps                               Seed: 190   Index:  38
-  Toroian Castle 1F                                                           Seed: 190   Index:  38
-    Optional Steps: 3
-    Extra Steps: 22
-Toroian Castle 2F                                                             Seed: 190   Index:  64
-Overworld (Silvera/Toroia)                                                    Seed: 190   Index:  64
-  Optional Steps: 2
-  Extra Steps: 18
-Tower of Zot 1F                                                               Seed: 190   Index:  85
-  Step  19: 55 / Marion (summons Puppet) x1, Puppet x2 (9.242s)
-Tower of Zot 2F                                                               Seed: 190   Index: 145
-  Step  27: 56 / Centaur x3 (8.633s)
-  Step  46: 57 / Centaur x1, IceBeast x2 (10.638s)
-Battle: FlameDog                                                              Seed: 190   Index: 197
-Tower of Zot 2F                                                               Seed: 190   Index: 197
-  Step  17: 58 / Centaur x3 (8.526s)
-Tower of Zot 3F                                                               Seed: 190   Index: 214
-  Step  19: 59 / Marion (summons Puppet) x1, Puppet x2 (9.136s)
-  Step  48: 60 / SwordMan x1, Ice Liz x2 (10.485s)
-  Step  80: 61 / Centaur x2, IceBeast x2 (10.518s)
-Tower of Zot 4F                                                               Seed: 207   Index:  44
-  Step  26: 62 / Marion (summons Puppet) x1, Puppet x3 (9.593s)
-Tower of Zot 5F                                                               Seed: 207   Index: 104
-Tower of Zot 5F Save Room                                                     Seed: 207   Index: 116
-Tower of Zot 5F                                                               Seed: 207   Index: 116
-Battle: Magus Sisters                                                         Seed: 207   Index: 128
-Tower of Zot 5F                                                               Seed: 207   Index: 128
-Tower of Zot 6F                                                               Seed: 207   Index: 129
-Battle: Tellah vs. Golbez                                                     Seed: 207   Index: 141
-Tower of Zot 6F                                                               Seed: 207   Index: 141
-Tower of Zot 7F                                                               Seed: 207   Index: 143
-Battle: Valvalis                                                              Seed: 207   Index: 143
-Baron Left Tower Room                                                         Seed: 207   Index: 143
-Baron Left Tower 2F                                                           Seed: 207   Index: 144
-Baron Left Tower 1F                                                           Seed: 207   Index: 147
-Baron                                                                         Seed: 207   Index: 149
-Baron Left Passage                                                            Seed: 207   Index: 149
-Baron                                                                         Seed: 207   Index: 151
-Baron 1F                                                                      Seed: 207   Index: 151
-Baron                                                                         Seed: 207   Index: 162
-Overworld (Baron)                                                             Seed: 207   Index: 162
-Overworld (Eblan)                                                             Seed: 207   Index: 162
-Agart                                                                         Seed: 207   Index: 162
-Agart Well                                                                    Seed: 207   Index: 162
-Agart                                                                         Seed: 207   Index: 162
-Overworld (Eblan)                                                             Seed: 207   Index: 162
-Underworld (Castle of Dwarves)                                                Seed: 207   Index: 163
-Castle of Dwarves                                                             Seed: 207   Index: 164
-Castle of Dwarves 1F                                                          Seed: 207   Index: 164
-Castle of Dwarves King's Room                                                 Seed: 207   Index: 164
-Battle: Calbrena and Golbez                                                   Seed: 207   Index: 165
-Castle of Dwarves King's Room                                                 Seed: 207   Index: 165
-Castle of Dwarves 1F                                                          Seed: 207   Index: 168
-  Optional Steps: 0
-Castle of Dwarves Right Tower 2F                                              Seed: 207   Index: 175
-  Optional Steps: 10
-Castle of Dwarves Right Tower 3F                                              Seed: 207   Index: 194
-  Optional Steps: 2
-Castle of Dwarves 4F                                                          Seed: 207   Index: 203
-Castle of Dwarves Right Tower 5F Walk                                         Seed: 207   Index: 204
-  Castle of Dwarves Right Tower 5F                                            Seed: 207   Index: 204
-    Optional Steps: 2
-Castle of Dwarves Right Tower 4F Walk                                         Seed: 207   Index: 211
-  Castle of Dwarves 4F                                                        Seed: 207   Index: 211
-Castle of Dwarves Right Tower 3F Walk                                         Seed: 207   Index: 212
-  Castle of Dwarves Right Tower 3F                                            Seed: 207   Index: 212
-    Optional Steps: 0
-Castle of Dwarves Right Tower 2F                                              Seed: 207   Index: 219
-  Optional Steps: 0
-Castle of Dwarves B1F                                                         Seed: 207   Index: 224
-Castle of Dwarves Left Tower 2F Walk                                          Seed: 207   Index: 250
-  Castle of Dwarves Left Tower 2F                                             Seed: 207   Index: 250
-Castle of Dwarves B1F                                                         Seed: 207   Index: 254
   Optional Steps: 1
-Castle of Dwarves B2F                                                         Seed: 224   Index:  15
+  Step   6: 49 / Python x1, StingRat x2 (8.776s)
+Chocobo's Village                                                             Seed: 156   Index: 243
+Fly Black Chocobo to Cave Magnes                                              Seed: 156   Index: 243
+Overworld (Silvera/Toroia)                                                    Seed: 156   Index: 243
+Cave Magnes B1F                                                               Seed: 156   Index: 244
+  Step  16: 50 / Panther x2 (8.347s)
+  Step  54: 51 / Mage x2 (9.006s)
+Cave Magnes B2F                                                               Seed: 173   Index:  56
+  Step  39: 52 / Panther x2 (8.336s)
+Cave Magnes B3F Inward Save Room Steps                                        Seed: 173   Index: 113
+  Cave Magnes B3F                                                             Seed: 173   Index: 113
+  Cave Magnes B3F Save Room                                                   Seed: 173   Index: 121
+    Extra Steps: 56
+  Cave Magnes B3F                                                             Seed: 173   Index: 177
+    Step  42: 53 / Ogre x3 (8.886s)
+Cave Magnes B3F Passage                                                       Seed: 173   Index: 240
+Cave Magnes B4F Inward Direct                                                 Seed: 173   Index: 251
+  Cave Magnes B4F                                                             Seed: 173   Index: 251
+    Step  23: 54 / Panther x2, Ogre x2 (9.393s)
+Cave Magnes Crystal Room                                                      Seed: 190   Index:  37
+Battle: Dark Elf                                                              Seed: 190   Index:  37
+Cave Magnes Crystal Room                                                      Seed: 190   Index:  37
+Cave Magnes B4F                                                               Seed: 190   Index:  37
+Overworld (Silvera/Toroia)                                                    Seed: 190   Index:  37
+Chocobo's Village                                                             Seed: 190   Index:  39
+Overworld (Silvera/Toroia)                                                    Seed: 190   Index:  39
+Toroian Castle                                                                Seed: 190   Index:  39
+Toroian Castle 1F Inward Extra Steps Area Steps                               Seed: 190   Index:  39
+  Toroian Castle 1F                                                           Seed: 190   Index:  39
+    Optional Steps: 3
+    Extra Steps: 20
+Toroian Castle 2F                                                             Seed: 190   Index:  63
+Overworld (Silvera/Toroia)                                                    Seed: 190   Index:  63
   Optional Steps: 2
-Castle of Dwarves Dwarf Base                                                  Seed: 224   Index:  40
+  Extra Steps: 20
+Tower of Zot 1F                                                               Seed: 190   Index:  86
+  Step  18: 55 / Marion (summons Puppet) x1, Puppet x2 (9.242s)
+Tower of Zot 2F                                                               Seed: 190   Index: 146
+  Step  26: 56 / Centaur x3 (8.633s)
+  Step  45: 57 / Centaur x1, IceBeast x2 (10.638s)
+Battle: FlameDog                                                              Seed: 190   Index: 198
+Tower of Zot 2F                                                               Seed: 190   Index: 198
+  Step  16: 58 / Centaur x3 (8.526s)
+Tower of Zot 3F                                                               Seed: 190   Index: 215
+  Step  18: 59 / Marion (summons Puppet) x1, Puppet x2 (9.136s)
+  Step  47: 60 / SwordMan x1, Ice Liz x2 (10.485s)
+  Step  79: 61 / Centaur x2, IceBeast x2 (10.518s)
+Tower of Zot 4F                                                               Seed: 207   Index:  45
+  Step  25: 62 / Marion (summons Puppet) x1, Puppet x3 (9.593s)
+Tower of Zot 5F                                                               Seed: 207   Index: 105
+Tower of Zot 5F Save Room                                                     Seed: 207   Index: 117
+Tower of Zot 5F                                                               Seed: 207   Index: 117
+Battle: Magus Sisters                                                         Seed: 207   Index: 129
+Tower of Zot 5F                                                               Seed: 207   Index: 129
+Tower of Zot 6F                                                               Seed: 207   Index: 130
+Battle: Tellah vs. Golbez                                                     Seed: 207   Index: 142
+Tower of Zot 6F                                                               Seed: 207   Index: 142
+Tower of Zot 7F                                                               Seed: 207   Index: 144
+Battle: Valvalis                                                              Seed: 207   Index: 144
+Baron Left Tower Room                                                         Seed: 207   Index: 144
+Baron Left Tower 2F                                                           Seed: 207   Index: 145
+Baron Left Tower 1F                                                           Seed: 207   Index: 148
+Baron                                                                         Seed: 207   Index: 150
+Baron Left Passage                                                            Seed: 207   Index: 150
+Baron                                                                         Seed: 207   Index: 152
+Baron 1F                                                                      Seed: 207   Index: 152
+Baron                                                                         Seed: 207   Index: 163
+Overworld (Baron)                                                             Seed: 207   Index: 163
+Overworld (Eblan)                                                             Seed: 207   Index: 163
+Agart                                                                         Seed: 207   Index: 163
+Agart Well                                                                    Seed: 207   Index: 163
+Agart                                                                         Seed: 207   Index: 163
+Overworld (Eblan)                                                             Seed: 207   Index: 163
+Underworld (Castle of Dwarves)                                                Seed: 207   Index: 164
+Castle of Dwarves                                                             Seed: 207   Index: 165
+Castle of Dwarves 1F                                                          Seed: 207   Index: 165
+Castle of Dwarves King's Room                                                 Seed: 207   Index: 165
+Battle: Calbrena and Golbez                                                   Seed: 207   Index: 166
+Castle of Dwarves King's Room                                                 Seed: 207   Index: 166
+Castle of Dwarves 1F                                                          Seed: 207   Index: 169
+  Optional Steps: 1
+Castle of Dwarves Right Tower 2F                                              Seed: 207   Index: 177
+  Optional Steps: 10
+Castle of Dwarves Right Tower 3F                                              Seed: 207   Index: 196
   Optional Steps: 2
-  Extra Steps: 8
+Castle of Dwarves 4F                                                          Seed: 207   Index: 205
+Castle of Dwarves Right Tower 5F Walk                                         Seed: 207   Index: 206
+  Castle of Dwarves Right Tower 5F                                            Seed: 207   Index: 206
+    Optional Steps: 2
+Castle of Dwarves Right Tower 4F Walk                                         Seed: 207   Index: 213
+  Castle of Dwarves 4F                                                        Seed: 207   Index: 213
+Castle of Dwarves Right Tower 3F Walk                                         Seed: 207   Index: 214
+  Castle of Dwarves Right Tower 3F                                            Seed: 207   Index: 214
+    Optional Steps: 1
+Castle of Dwarves Right Tower 2F                                              Seed: 207   Index: 222
+  Optional Steps: 1
+Castle of Dwarves B1F                                                         Seed: 207   Index: 228
+Castle of Dwarves Left Tower 2F Walk                                          Seed: 207   Index: 254
+  Castle of Dwarves Left Tower 2F                                             Seed: 207   Index: 254
+Castle of Dwarves B1F                                                         Seed: 224   Index:   2
+  Optional Steps: 1
+Castle of Dwarves B2F                                                         Seed: 224   Index:  19
+  Optional Steps: 2
+Castle of Dwarves Dwarf Base                                                  Seed: 224   Index:  44
+  Optional Steps: 2
+  Extra Steps: 4
 Underworld (Castle of Dwarves)                                                Seed: 224   Index:  74
   Step  26: 63 / Tortoise x2, Armadilo x1, BlackLiz x1 (6.806s)
   Step  54: 64 / Dark Imp x4 (6.515s)
@@ -647,15 +647,15 @@ Get Ninja Stars on Lunar Core B1 and Lunar Core B3                            Se
 Lunar Core B4                                                                 Seed: 172   Index: 194
   Step  25: 150 / Breath x1 (11.991s)
 
-Encounter Time:      1164.120s
-Other Time:          2629.037s
-Total Time:          3793.157s
+Encounter Time:      1163.600s
+Other Time:          2627.440s
+Total Time:          3791.039s
 
 Base Total Time:     4003.455s
-Time Saved:          210.298s
+Time Saved:          212.415s
 
-Optional Steps:      50
-Extra Steps:         210
+Optional Steps:      56
+Extra Steps:         204
 Encounters:          150
 
 Base Encounters:     171

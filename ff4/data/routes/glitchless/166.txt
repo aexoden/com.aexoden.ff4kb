@@ -3,11 +3,11 @@ VERSION	1
 ROSA	v1.2.0-38-g30af530+
 SEED	166
 MAXSTEP	80
-MAXSEG	21
+MAXSEG	22
 TASMODE	0
 MINIMUM	1
-FRAMES	223077477
-VARS	C000500:1 C307800:1 C309300:1 C30CA01:1 C30CC00:1 C314A00:1 C314C00:1 C314D00:1 C315100:1 C315200:1 C315300:1 C315500:1 C315600:1 C316C00:1 E302A00:3 E304000:3 E304700:1 E304900:6 E304C00:2 E304E00:6 E304F00:1 E305400:40 E305500:27 E307400:14 E307B01:14 E308700:1 E308702:1 E309700:50 E30A100:8 E30BD00:16 E30CC00:2 E310801:4 E310901:8 E314400:1 E316D00:12
+FRAMES	223077039
+VARS	C000500:1 C305500:1 C307800:1 C309300:1 C30CA01:1 C30CC00:1 C314A00:1 C314C00:1 C314D00:1 C315100:1 C315200:1 C315300:1 C315500:1 C315600:1 C316C00:1 E000701:1 E302A00:3 E304000:3 E304700:1 E304900:6 E304C00:2 E304E00:6 E304F00:1 E305400:40 E305500:25 E307400:14 E307B01:14 E308700:1 E308702:1 E309700:50 E30A100:8 E30BD00:16 E30CC00:2 E310801:4 E310901:8 E314400:1 E316D00:12
 
 Baron 2F                                                                      Seed: 166   Index:   0
 Baron 1F                                                                      Seed: 166   Index:   2
@@ -241,43 +241,44 @@ Overworld (Silvera/Toroia)                                                    Se
 Toroian Castle                                                                Seed:  29   Index: 215
 Toroian Castle 1F                                                             Seed:  29   Index: 215
   Optional Steps: 3
-  Extra Steps: 24
-Toroian Castle                                                                Seed:  29   Index: 248
-Toroian Castle Infirmary                                                      Seed:  29   Index: 248
-Overworld (Silvera/Toroia)                                                    Seed:  29   Index: 253
-  Optional Steps: 0
-  Step  29: 41 / Python x1, StingRat x2 (8.776s)
-Chocobo's Village                                                             Seed:  46   Index:  34
-Fly Black Chocobo to Cave Magnes                                              Seed:  46   Index:  34
-Overworld (Silvera/Toroia)                                                    Seed:  46   Index:  34
-Cave Magnes B1F                                                               Seed:  46   Index:  35
-  Step  12: 42 / Ogre x2 (8.448s)
-  Step  23: 43 / Ogre x2 (8.112s)
-  Step  26: 44 / Panther x1, StingRat x3 (8.852s)
-Cave Magnes B2F                                                               Seed:  46   Index: 103
-  Step  22: 45 / Cave Bat x3 (9.463s)
-Cave Magnes B3F Inward Direct                                                 Seed:  46   Index: 160
-  Cave Magnes B3F                                                             Seed:  46   Index: 160
-    Step  26: 46 / Cave Bat x3 (9.457s)
-    Step  43: 47 / VampGirl x1, Cave Bat x3 (9.483s)
-Cave Magnes B3F Passage                                                       Seed:  46   Index: 230
-  Step   6: 48 / Panther x2, Ogre x2 (9.395s)
-Cave Magnes B4F Inward Save Room Steps                                        Seed:  46   Index: 241
-  Cave Magnes B4F                                                             Seed:  46   Index: 241
-  Cave Magnes B4F Save Room                                                   Seed:  63   Index:  23
+  Extra Steps: 22
+Toroian Castle                                                                Seed:  29   Index: 246
+Toroian Castle Infirmary                                                      Seed:  29   Index: 246
+Overworld (Silvera/Toroia)                                                    Seed:  29   Index: 251
+  Optional Steps: 1
+  Step   2: 41 / Python x1, StingRat x2 (8.776s)
+  Step  31: 42 / Python x1, StingRat x2 (8.711s)
+Chocobo's Village                                                             Seed:  46   Index:  33
+Fly Black Chocobo to Cave Magnes                                              Seed:  46   Index:  33
+Overworld (Silvera/Toroia)                                                    Seed:  46   Index:  33
+Cave Magnes B1F                                                               Seed:  46   Index:  34
+  Step  13: 43 / Ogre x2 (8.448s)
+  Step  24: 44 / Panther x1, StingRat x3 (8.852s)
+  Step  27: 45 / Cave Bat x3 (9.139s)
+Cave Magnes B2F                                                               Seed:  46   Index: 102
+  Step  23: 46 / Cave Bat x3 (9.463s)
+Cave Magnes B3F Inward Direct                                                 Seed:  46   Index: 159
+  Cave Magnes B3F                                                             Seed:  46   Index: 159
+    Step  27: 47 / VampGirl x1, Cave Bat x3 (9.801s)
+    Step  44: 48 / CaveNaga x1, Python x2 (8.666s)
+Cave Magnes B3F Passage                                                       Seed:  46   Index: 229
+  Step   7: 49 / Panther x2, Ogre x2 (9.395s)
+Cave Magnes B4F Inward Save Room Steps                                        Seed:  46   Index: 240
+  Cave Magnes B4F                                                             Seed:  46   Index: 240
+  Cave Magnes B4F Save Room                                                   Seed:  63   Index:  22
     Extra Steps: 8
-  Cave Magnes B4F                                                             Seed:  63   Index:  31
-Cave Magnes Crystal Room                                                      Seed:  63   Index:  66
-Battle: Dark Elf                                                              Seed:  63   Index:  66
-Cave Magnes Crystal Room                                                      Seed:  63   Index:  66
-Cave Magnes B4F                                                               Seed:  63   Index:  66
-Overworld (Silvera/Toroia)                                                    Seed:  63   Index:  66
-  Step   2: 49 / StingRat x3, Treant x2 (9.805s)
-Chocobo's Village                                                             Seed:  63   Index:  68
-Overworld (Silvera/Toroia)                                                    Seed:  63   Index:  68
-Toroian Castle                                                                Seed:  63   Index:  68
-Toroian Castle 1F Inward Direct                                               Seed:  63   Index:  68
-  Toroian Castle 1F                                                           Seed:  63   Index:  68
+  Cave Magnes B4F                                                             Seed:  63   Index:  30
+Cave Magnes Crystal Room                                                      Seed:  63   Index:  65
+Battle: Dark Elf                                                              Seed:  63   Index:  65
+Cave Magnes Crystal Room                                                      Seed:  63   Index:  65
+Cave Magnes B4F                                                               Seed:  63   Index:  65
+Overworld (Silvera/Toroia)                                                    Seed:  63   Index:  65
+Chocobo's Village                                                             Seed:  63   Index:  67
+Overworld (Silvera/Toroia)                                                    Seed:  63   Index:  67
+Toroian Castle                                                                Seed:  63   Index:  67
+Toroian Castle 1F Inward Extra Steps Area Steps                               Seed:  63   Index:  67
+  Toroian Castle 1F                                                           Seed:  63   Index:  67
+    Optional Steps: 0
 Toroian Castle 2F                                                             Seed:  63   Index:  68
 Overworld (Silvera/Toroia)                                                    Seed:  63   Index:  68
   Optional Steps: 0
@@ -638,15 +639,15 @@ Get Ninja Stars on Lunar Subterrane B6 and Lunar Core B3                      Se
 Lunar Core B4                                                                 Seed:  45   Index: 163
   Step  40: 134 / Breath x1 (11.991s)
 
-Encounter Time:      1069.829s
-Other Time:          2642.016s
-Total Time:          3711.845s
+Encounter Time:      1069.290s
+Other Time:          2642.548s
+Total Time:          3711.838s
 
 Base Total Time:     4053.298s
-Time Saved:          341.453s
+Time Saved:          341.460s
 
-Optional Steps:      27
-Extra Steps:         193
+Optional Steps:      28
+Extra Steps:         191
 Encounters:          134
 
 Base Encounters:     170

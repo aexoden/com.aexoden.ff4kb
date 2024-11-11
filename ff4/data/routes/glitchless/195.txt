@@ -3,11 +3,11 @@ VERSION	1
 ROSA	v1.2.0-38-g30af530+
 SEED	195
 MAXSTEP	80
-MAXSEG	21
+MAXSEG	22
 TASMODE	0
 MINIMUM	1
-FRAMES	221000915
-VARS	C307800:1 C314A00:1 C314C00:1 C314D00:1 C315100:1 C315200:1 C315500:1 C316C00:2 C316D00:1 E000701:7 E000705:2 E302A02:4 E304E00:2 E305500:11 E309700:2 E30B500:5 E30CC00:14 E310800:1 E310801:1 E310A00:1 E310B00:2 E310E00:10 E310E01:1 E310F00:2 E311000:2 E311001:1 E311900:2 E315600:10 E316700:14 E317B00:6
+FRAMES	220993648
+VARS	C307800:1 C314A00:1 C314C00:1 C314D00:1 C315100:1 C315200:1 C315500:1 C316C00:2 C316D00:1 E000701:1 E000705:2 E302A02:4 E303E00:14 E304E00:2 E305500:3 E309700:2 E30B500:5 E30CC00:14 E310800:1 E310801:1 E310A00:1 E310B00:2 E310E00:10 E310E01:1 E310F00:2 E311000:2 E311001:1 E311900:2 E315600:10 E316700:14 E317B00:6
 
 Baron 2F                                                                      Seed: 195   Index:   0
 Baron 1F                                                                      Seed: 195   Index:   2
@@ -220,38 +220,37 @@ Old Water-way                                                                 Se
   Step  77: 44 / Pike x3, Piranha x3 (8.105s)
 Baron B3F                                                                     Seed:  41   Index: 216
 Baron B2F                                                                     Seed:  58   Index:  14
+  Extra Steps: 14
   Step   1: 45 / AquaWorm x2 (8.470s)
   Step  10: 46 / AquaWorm x2 (8.344s)
-Baron B1F Inward Direct                                                       Seed:  58   Index:  40
-  Baron B1F                                                                   Seed:  58   Index:  40
-    Step  13: 47 / Guard x2 (8.677s)
-Baron                                                                         Seed:  58   Index:  61
-Baron Left Passage                                                            Seed:  58   Index:  61
-Baron                                                                         Seed:  58   Index:  63
-Baron 1F                                                                      Seed:  58   Index:  63
-Battle: Baigan                                                                Seed:  58   Index:  70
-Baron 1F                                                                      Seed:  58   Index:  70
-Baron 2F                                                                      Seed:  58   Index:  71
-Baron 3F                                                                      Seed:  58   Index:  75
-Baron King's Room                                                             Seed:  58   Index:  75
-Battle: Kainazzo                                                              Seed:  58   Index:  75
-Overworld (Mist)                                                              Seed:  58   Index:  75
-Village Mist                                                                  Seed:  58   Index:  75
-Village Mist Weapon Shop                                                      Seed:  58   Index:  75
-Village Mist                                                                  Seed:  58   Index:  75
-Village Mist House                                                            Seed:  58   Index:  75
-Overworld (Mist)                                                              Seed:  58   Index:  75
-Overworld (Silvera/Toroia)                                                    Seed:  58   Index:  76
-Toroian Castle                                                                Seed:  58   Index:  77
-Toroian Castle 1F                                                             Seed:  58   Index:  77
+  Step  39: 47 / Guard x2 (8.556s)
+Baron B1F Inward Direct                                                       Seed:  58   Index:  54
+  Baron B1F                                                                   Seed:  58   Index:  54
+Baron                                                                         Seed:  58   Index:  75
+Baron Left Passage                                                            Seed:  58   Index:  75
+Baron                                                                         Seed:  58   Index:  77
+Baron 1F                                                                      Seed:  58   Index:  77
+Battle: Baigan                                                                Seed:  58   Index:  84
+Baron 1F                                                                      Seed:  58   Index:  84
+Baron 2F                                                                      Seed:  58   Index:  85
+Baron 3F                                                                      Seed:  58   Index:  89
+Baron King's Room                                                             Seed:  58   Index:  89
+Battle: Kainazzo                                                              Seed:  58   Index:  89
+Overworld (Mist)                                                              Seed:  58   Index:  89
+Village Mist                                                                  Seed:  58   Index:  89
+Village Mist Weapon Shop                                                      Seed:  58   Index:  89
+Village Mist                                                                  Seed:  58   Index:  89
+Village Mist House                                                            Seed:  58   Index:  89
+Overworld (Mist)                                                              Seed:  58   Index:  89
+Overworld (Silvera/Toroia)                                                    Seed:  58   Index:  90
+Toroian Castle                                                                Seed:  58   Index:  91
+Toroian Castle 1F                                                             Seed:  58   Index:  91
   Optional Steps: 3
-  Extra Steps: 8
-Toroian Castle                                                                Seed:  58   Index:  94
-Toroian Castle Infirmary                                                      Seed:  58   Index:  94
-Overworld (Silvera/Toroia)                                                    Seed:  58   Index:  99
+Toroian Castle                                                                Seed:  58   Index: 100
+Toroian Castle Infirmary                                                      Seed:  58   Index: 100
+Overworld (Silvera/Toroia)                                                    Seed:  58   Index: 105
   Optional Steps: 1
-  Extra Steps: 6
-  Step  44: 48 / Cannibal x1, Treant x2 (8.817s)
+  Step  38: 48 / Cannibal x1, Treant x2 (8.817s)
 Chocobo's Village                                                             Seed:  58   Index: 143
 Fly Black Chocobo to Cave Magnes                                              Seed:  58   Index: 143
 Overworld (Silvera/Toroia)                                                    Seed:  58   Index: 143
@@ -642,12 +641,12 @@ Lunar Core B4                                                                 Se
   Step  27: 141 / Breath x1 (11.991s)
   Step  32: 142 / Breath x1 (11.984s)
 
-Encounter Time:      1089.255s
+Encounter Time:      1089.134s
 Other Time:          2588.038s
-Total Time:          3677.292s
+Total Time:          3677.172s
 
 Base Total Time:     3957.088s
-Time Saved:          279.796s
+Time Saved:          279.916s
 
 Optional Steps:      36
 Extra Steps:         64
