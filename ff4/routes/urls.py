@@ -13,5 +13,5 @@ urlpatterns = [
     path("tutorial/", RedirectView.as_view(pattern_name="guides:mini-step-routing", permanent=True)),
     path("<slug:route>/", views.route, name="route"),
     path("<slug:route>/<int:seed>/", views.detail, name="detail"),
-    path("<slug:route>/<int:seed>/custom/<slug:vars>/", views.detail, name="detail"),
+    path("<slug:route>/<int:seed>/custom/<slug:variables>/", views.detail, name="detail"),
 ]
