@@ -309,6 +309,19 @@ def group_values(
     return {x[1][1]: return_type(x[1][0]) for x in sorted(output, reverse=True)}
 
 
+def format_value(value: str | int | bool) -> str:
+    if isinstance(value, bool):
+        return "Yes" if value else "No"
+
+    if isinstance(value, str) and value.lower() == "true":
+        return "Yes"
+
+    if isinstance(value, str) and value.lower() == "false":
+        return "No"
+
+    return str(value)
+
+
 def group_values_string(
     values: str | int | bool | dict[Any, list[str]],  # noqa: FBT001
     filter_func: Callable[[str, Version], str] | None = None,
@@ -316,7 +329,7 @@ def group_values_string(
     grouped = group_values(values, str, filter_func)
 
     return " / ".join(
-        [str(value) if version == "All" else f"{value} ({version})" for version, value in grouped.items()]
+        [format_value(value) if version == "All" else f"{format_value(value)} ({version})" for version, value in grouped.items()]
     )
 
 
@@ -1089,7 +1102,7 @@ def monster_detail(request: HttpRequest, monster_id: int) -> HttpResponse:
 
     context: dict[str, str | int | bool | dict[str, Any]] = {
         "agility": group_values_string(monster_data["agility_range"]),
-        "boss": monster_data["boss"],
+        "boss": group_values_string(monster_data["boss"]),
         "exp": group_values_string(monster_data["exp"]),
         "gp": group_values_string(monster_data["gp"]),
         "hp": group_values_string(monster_data["hp"]),
