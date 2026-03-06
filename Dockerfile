@@ -1,5 +1,5 @@
 # Use a Python+Poetry image as the base
-FROM thehale/python-poetry:1.7.1-py3.11-slim
+FROM ghcr.io/astral-sh/uv:python3.12-trixie-slim
 
 # Copy files
 COPY . /app
@@ -25,14 +25,15 @@ RUN ninja -C build -v
 RUN cp build/rosa /app/rosa/rosa
 
 # Install Python dependencies
+ENV UV_NO_DEV=1
 WORKDIR /app
-RUN poetry install
+RUN uv sync --locked
 
 # Django setup
-RUN ENVIRONMENT=Build poetry run python manage.py collectstatic --noinput
-RUN ENVIRONMENT=Build poetry run python manage.py migrate
-RUN ENVIRONMENT=Build poetry run python manage.py generate_metrics_cache
+RUN ENVIRONMENT=Build uv run python manage.py collectstatic --noinput
+RUN ENVIRONMENT=Build uv run python manage.py migrate
+RUN ENVIRONMENT=Build uv run python manage.py generate_metrics_cache
 
 # Set up execution
 ENV FORWARDED_ALLOW_IPS='*'
-ENTRYPOINT ["poetry", "run", "gunicorn", "ff4.wsgi", "--log-file", "-"]
+ENTRYPOINT ["uv", "run", "gunicorn", "ff4.wsgi", "--log-file", "-"]

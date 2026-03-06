@@ -1,33 +1,41 @@
 [project]
 name = "ff4kb"
 version = "1.0.0"
-requires-python = ">=3.12"
-
-[tool.poetry]
-name = "ff4"
-version = "1.0.0"
 description = "ff4kb.aexoden.com"
-authors = ["Jason Lynch <jason@aexoden.com>"]
-license = "MIT"
 readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+authors = [{ name = "Jason Lynch", email = "jason@aexoden.com" }]
+dependencies = [
+  "dj-database-url>=3.1.2",
+  "django>=6.0.3",
+  "django-configurations>=2.5.1",
+  "django-debug-toolbar>=6.2.0",
+  "django-extensions>=4.1",
+  "django4-bootstrap-breadcrumbs>=0.10.0",
+  "gunicorn>=25.1.0",
+  "whitenoise>=6.12.0",
+]
 
-[tool.poetry.dependencies]
-python = "^3.11"
-django = "^5.1"
-dj-database-url = "^2.3.0"
-django-configurations = "^2.5"
-django-debug-toolbar = "^5.0.1"
-django-extensions = "^3.2.3"
-django4-bootstrap-breadcrumbs = "^0.10.0"
-gunicorn = "^23.0.0"
-whitenoise = "^6.9.0"
-
-[tool.poetry.group.dev.dependencies]
-ruff = "^0.9.9"
+[dependency-groups]
+dev = [
+  "ruff>=0.15.5",
+]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.sdist]
+exclude = ["/.github"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["ff4"]
+
+[tool.poetry]
+#
+# Ruff
+#
 
 [tool.ruff]
 line-length = 120
@@ -37,66 +45,17 @@ line-ending = "lf"
 
 [tool.ruff.lint]
 preview = true
-select = [
-    "A",
-    "ANN",
-    "ARG",
-    "ASYNC",
-    "B",
-    "BLE",
-    "C4",
-    "COM",
-    "CPY",
-    "DTZ",
-    "E",
-    "EM",
-    "ERA",
-    "EXE",
-    "F",
-    "FA",
-    "FBT",
-    "FIX",
-    "FURB",
-    "G",
-    "I",
-    "ICN",
-    "INP",
-    "ISC",
-    "LOG",
-    "N",
-    "PERF",
-    "PIE",
-    "PL",
-    "PT",
-    "PTH",
-    "PYI",
-    "Q",
-    "RET",
-    "RSE",
-    "RUF",
-    "S",
-    "SIM",
-    "SLF",
-    "SLOT",
-    "T10",
-    "TCH",
-    "TD",
-    "TID",
-    "TRY",
-    "UP",
-    "W",
-    "YTT",
-]
+select = ["ALL"]
 ignore = [
-    "COM812",
-    "ISC001",
-    "S404",
-    "S603",
+  "COM812",
+  "ISC001",
 ]
-
 
 [tool.ruff.lint.flake8-copyright]
 notice-rgx = "(?i)SPDX-FileCopyrightText: \\d{4}"
 
 [tool.ruff.lint.isort]
 lines-between-types = 1
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
