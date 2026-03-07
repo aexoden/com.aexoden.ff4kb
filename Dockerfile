@@ -36,4 +36,4 @@ RUN ENVIRONMENT=Build uv run python manage.py generate_metrics_cache
 
 # Set up execution
 ENV FORWARDED_ALLOW_IPS='*'
-ENTRYPOINT ["uv", "run", "gunicorn", "ff4.wsgi", "--log-file", "-"]
+ENTRYPOINT ["uv", "run", "gunicorn", "ff4kb.wsgi", "--log-file", "-"]

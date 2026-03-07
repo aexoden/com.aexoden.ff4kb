@@ -30,7 +30,7 @@ build-backend = "hatchling.build"
 exclude = ["/.github"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["ff4"]
+packages = ["src/ff4kb"]
 
 [tool.poetry]
 #

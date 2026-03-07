@@ -10,10 +10,10 @@ from django.views.generic import RedirectView, TemplateView
 urlpatterns = [  # type: ignore
     path("", TemplateView.as_view(template_name="index.html"), name="index"),
     path("admin/", admin.site.urls),
-    path("guides/", include("ff4.guides.urls")),
-    path("info/", include("ff4.info.urls")),
-    path("routes/", include("ff4.routes.urls")),
-    path("tools/", include("ff4.tools.urls")),
+    path("guides/", include("ff4kb.guides.urls")),
+    path("info/", include("ff4kb.info.urls")),
+    path("routes/", include("ff4kb.routes.urls")),
+    path("tools/", include("ff4kb.tools.urls")),
     path("seed-step-list.txt", RedirectView.as_view(url=static("txt/seed-step-list.txt"), permanent=True)),
     path(
         "seed-step-list-sorted.txt", RedirectView.as_view(url=static("txt/seed-step-list-sorted.txt"), permanent=True)

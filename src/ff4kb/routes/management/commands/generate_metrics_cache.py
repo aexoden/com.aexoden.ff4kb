@@ -5,7 +5,7 @@ import sys
 
 from django.core.management.base import BaseCommand
 
-from ff4.routes.views import ROUTES, get_metrics
+from ff4kb.routes.views import ROUTES, get_metrics
 
 
 class Command(BaseCommand):

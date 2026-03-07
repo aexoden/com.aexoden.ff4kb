@@ -21,7 +21,7 @@ from django.core.management.utils import get_random_secret_key
 
 class Common(Configuration):
     # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-    BASE_DIR = str(Path(__file__).absolute().parent.parent)
+    BASE_DIR = str(Path(__file__).absolute().parent.parent.parent)
 
     # SECURITY WARNING: don't run with debug turned on in production!
     DEBUG = cast(values.BooleanValue, values.BooleanValue(False))  # noqa: FBT003
@@ -41,10 +41,10 @@ class Common(Configuration):
         "django.contrib.staticfiles",
         "django_extensions",
         "django_bootstrap_breadcrumbs",
-        "ff4.guides",
-        "ff4.info",
-        "ff4.routes",
-        "ff4.tools",
+        "ff4kb.guides",
+        "ff4kb.info",
+        "ff4kb.routes",
+        "ff4kb.tools",
     ]
 
     MIDDLEWARE: ClassVar[list[str]] = [
@@ -58,12 +58,12 @@ class Common(Configuration):
         "django.middleware.clickjacking.XFrameOptionsMiddleware",
     ]
 
-    ROOT_URLCONF = "ff4.urls"
+    ROOT_URLCONF = "ff4kb.urls"
 
     TEMPLATES: ClassVar[list[dict[str, Any]]] = [
         {
             "BACKEND": "django.template.backends.django.DjangoTemplates",
-            "DIRS": [str(Path(BASE_DIR) / "ff4" / "templates")],
+            "DIRS": [str(Path(BASE_DIR) / "src" / "ff4kb" / "templates")],
             "APP_DIRS": True,
             "OPTIONS": {
                 "context_processors": [
@@ -76,7 +76,7 @@ class Common(Configuration):
         },
     ]
 
-    WSGI_APPLICATION = "ff4.wsgi.application"
+    WSGI_APPLICATION = "ff4kb.wsgi.application"
 
     # Database
     # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
@@ -118,7 +118,7 @@ class Common(Configuration):
     STATIC_ROOT = str(Path(BASE_DIR) / "static")
     STATIC_URL = "/static/"
 
-    STATICFILES_DIRS: ClassVar[list[str]] = [str(Path(BASE_DIR) / "ff4" / "static")]
+    STATICFILES_DIRS: ClassVar[list[str]] = [str(Path(BASE_DIR) / "frontend" / "static")]
 
 
 class Build(Common):
@@ -131,7 +131,7 @@ class Run(Common):
 
 
 class Development(Run):
-    BASE_DIR = str(Path(__file__).absolute().parent.parent)
+    BASE_DIR = str(Path(__file__).absolute().parent.parent.parent)
     DOTENV = str(Path(BASE_DIR) / ".env")
 
     DEBUG = True

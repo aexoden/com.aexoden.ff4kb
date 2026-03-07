@@ -442,7 +442,7 @@ def format_condition_target(target: int) -> tuple[str, bool]:  # noqa: PLR0911
 
 class FF4:
     def __init__(self) -> None:
-        path = Path(settings.BASE_DIR) / "ff4" / "data"
+        path = Path(settings.BASE_DIR) / "data"
 
         with (path / "formations.json").open("r", encoding="utf-8") as f:
             self._formations = json.load(f)

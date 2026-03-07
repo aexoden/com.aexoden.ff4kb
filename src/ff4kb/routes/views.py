@@ -370,7 +370,7 @@ def index(request: HttpRequest) -> HttpResponse:
 
 
 def get_metrics(route: str) -> dict[str, list[float]]:
-    metrics_cache_path = Path(settings.BASE_DIR) / "ff4" / "cache" / f"metrics-{route}.json"
+    metrics_cache_path = Path(settings.BASE_DIR) / "cache" / f"metrics-{route}.json"
     metrics_cache_updated = False
 
     if metrics_cache_path.exists():

@@ -32,7 +32,7 @@ def decode_vars(variables: list[str]) -> str:
 
 
 def get_route_update_time(route: str, seed: int) -> float:
-    path = Path(settings.BASE_DIR) / "ff4" / "data" / "routes" / route / f"{seed:03d}.txt"
+    path = Path(settings.BASE_DIR) / "data" / "routes" / route / f"{seed:03d}.txt"
     return path.stat().st_mtime
 
 
@@ -75,7 +75,7 @@ class RouteDetail:
     def __init__(self, route: str, seed: int, variables: list[str] | None = None) -> None:
         self._route = route
         self._seed = seed
-        self._path = Path(settings.BASE_DIR) / "ff4" / "data" / "routes" / route / f"{seed:03d}.txt"
+        self._path = Path(settings.BASE_DIR) / "data" / "routes" / route / f"{seed:03d}.txt"
 
         self._data: list[str] = []
         self._html_data: list[str] = []
