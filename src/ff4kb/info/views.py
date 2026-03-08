@@ -4,14 +4,16 @@
 
 import json
 
-from collections.abc import Callable
 from enum import Enum
 from pathlib import Path
-from typing import Any, TypeVar, cast
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from django.conf import settings  # type: ignore[import-untyped]
 from django.http import Http404, HttpRequest, HttpResponse  # type: ignore[import-untyped]
 from django.shortcuts import render  # type: ignore[import-untyped]
+
+if TYPE_CHECKING:
+    from collections.abc import Callable
 
 T = TypeVar("T", str, int, bool)
 
