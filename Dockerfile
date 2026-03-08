@@ -1,5 +1,5 @@
 # Use a Python+Poetry image as the base
-FROM ghcr.io/astral-sh/uv:python3.12-trixie-slim
+FROM ghcr.io/astral-sh/uv:python3.12-trixie-slim@sha256:cab406ea74885312aa1f55a97bc7ed0fd46366643c0e17ffd002a03d7eb9e45f
 
 # Copy files
 COPY . /app
