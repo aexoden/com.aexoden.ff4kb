@@ -75,19 +75,50 @@ jobs:
 
       - name: Wait for application to start
         run: |
-          max_retries=30
-          counter=0
-          until curl --head --silent --max-time 5 "http://127.0.0.1:8000" ; do
-            if [ "$counter" -gt "$max_retries" ] ; then
-              echo "Maximum attempts reached"
-              docker logs ff4kb
+          for i in $(seq 1 30); do
+            # Verify the container is still running
+            if ! docker inspect --format='{{.State.Running}}' ff4kb 2>/dev/null | grep -q true; then
+              echo "::error::Container exited unexpectedly on attempt $i/30"
+              docker inspect --format='{{json .State}}' ff4kb 2>/dev/null || true
+              docker logs ff4kb 2>&1 || true
               exit 1
             fi
 
-            echo "Waiting for application to start..."
+            # Attempt a GET request (HEAD can behave differently with some WSGI servers)
+            rc=0
+            curl --silent --fail --max-time 5 --output /dev/null "http://127.0.0.1:8000/" || rc=$?
+            if [ "$rc" -eq 0 ]; then
+              echo "Application is ready (attempt $i/30)"
+              exit 0
+            fi
+
+            echo "Attempt $i/30: not ready (curl exit code $rc)"
+
+            # On later attempts, run a verbose request to capture connection-level details
+            if [ "$i" -ge 27 ]; then
+              echo "--- Verbose curl output ---"
+              curl --verbose --max-time 5 "http://127.0.0.1:8000/" 2>&1 || true
+              echo "--- Container logs (last 10 lines) ---"
+              docker logs --tail 10 ff4kb 2>&1 || true
+            fi
+
             sleep 2
-            counter=$((counter+1))
           done
+
+          echo "::error::Application did not become ready within 60 seconds"
+          echo "=== Failure Diagnostics ==="
+          echo "--- Container State ---"
+          docker inspect --format='{{json .State}}' ff4kb 2>/dev/null || true
+          echo ""
+          echo "--- Port Bindings ---"
+          docker port ff4kb 2>/dev/null || true
+          echo ""
+          echo "--- Host Listening Ports ---"
+          ss -tlnp 2>/dev/null | grep 8000 || echo "Port 8000 is NOT listening on the host"
+          echo ""
+          echo "--- Container Logs ---"
+          docker logs ff4kb 2>&1 || true
+          exit 1
 
       - name: Check application response
         run: |
@@ -110,4 +141,9 @@ jobs:
 
       - name: Dump container logs on failure
         if: failure()
-        run: docker logs ff4kb
+        run: |
+          echo "--- Container State ---"
+          docker inspect --format='{{json .State}}' ff4kb 2>/dev/null || true
+          echo ""
+          echo "--- Container Logs ---"
+          docker logs ff4kb 2>&1 || true
