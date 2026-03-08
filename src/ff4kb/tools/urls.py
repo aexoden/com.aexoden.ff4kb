@@ -19,6 +19,11 @@ urlpatterns = [
     path("map-viewer/", views.map_viewer, name="map-viewer"),
     path("map-viewer/<slug:map_id>", views.map_viewer, name="map-viewer-map"),
     path(
+        "map-viewer-ultima/",
+        TemplateView.as_view(template_name="tools/map-viewer-ultima.html"),
+        name="map-viewer-ultima",
+    ),
+    path(
         "nocw-gp-calculator/",
         TemplateView.as_view(template_name="tools/nocw-gp-calculator.html"),
         name="nocw-gp-calculator",
