@@ -64,7 +64,7 @@ jobs:
 
       - name: Run Docker container
         run: |
-          docker run -d --name ff4kb -p 8000:8000 \
+          docker run -d --name ff4kb --network host \
             -e DJANGO_ALLOWED_HOSTS=${{ env.DJANGO_ALLOWED_HOSTS }} \
             -e DJANGO_SECRET_KEY=${{ env.DJANGO_SECRET_KEY }} \
             -e ENVIRONMENT=${{ env.ENVIRONMENT }} \
@@ -84,7 +84,7 @@ jobs:
 
             # Attempt a GET request (HEAD can behave differently with some WSGI servers)
             rc=0
-            curl --silent --fail --max-time 5 --output /dev/null "http://127.0.0.1:8000/" || rc=$?
+            curl --silent --fail --max-time 5 --output /dev/null "http://127.0.0.1:${{ env.PORT }}/" || rc=$?
             if [ "$rc" -eq 0 ]; then
               echo "Application is ready (attempt $i/30)"
               exit 0
@@ -95,7 +95,7 @@ jobs:
             # On later attempts, run a verbose request to capture connection-level details
             if [ "$i" -ge 27 ]; then
               echo "--- Verbose curl output ---"
-              curl --verbose --max-time 5 "http://127.0.0.1:8000/" 2>&1 || true
+              curl --verbose --max-time 5 "http://127.0.0.1:${{ env.PORT }}/" 2>&1 || true
               echo "--- Container logs (last 10 lines) ---"
               docker logs --tail 10 ff4kb 2>&1 || true
             fi
@@ -112,7 +112,7 @@ jobs:
           docker port ff4kb 2>/dev/null || true
           echo ""
           echo "--- Host Listening Ports ---"
-          ss -tlnp 2>/dev/null | grep 8000 || echo "Port 8000 is NOT listening on the host"
+          ss -tlnp 2>/dev/null | grep ${{ env.PORT }} || echo "Port ${{ env.PORT }} is NOT listening on the host"
           echo ""
           echo "--- Container Logs ---"
           docker logs ff4kb 2>&1 || true
@@ -121,10 +121,10 @@ jobs:
       - name: Check application response
         run: |
           urls=(
-            "http://127.0.0.1:8000/"
-            "http://127.0.0.1:8000/static/css/style.css"
-            "http://127.0.0.1:8000/guides/"
-            "http://127.0.0.1:8000/routes/no64-excalbur/24/"
+            "http://127.0.0.1:${{ env.PORT }}/"
+            "http://127.0.0.1:${{ env.PORT }}/static/css/style.css"
+            "http://127.0.0.1:${{ env.PORT }}/guides/"
+            "http://127.0.0.1:${{ env.PORT }}/routes/no64-excalbur/24/"
           )
 
           for url in "${urls[@]}" ; do
