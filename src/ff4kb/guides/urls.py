@@ -2,8 +2,8 @@
 # SPDX-FileCopyrightText: 2024 Jason Lynch <jason@aexoden.com>
 """URL patterns for the FF4KB guides package."""
 
-from django.urls import path
-from django.views.generic import RedirectView, TemplateView
+from django.urls import path  # type: ignore[import-untyped]
+from django.views.generic import RedirectView, TemplateView  # type: ignore[import-untyped]
 
 app_name = "guides"
 

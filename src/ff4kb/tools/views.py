@@ -7,9 +7,9 @@ import json
 from pathlib import Path
 from typing import Any
 
-from django.conf import settings
-from django.http import Http404, HttpRequest, HttpResponse
-from django.shortcuts import redirect, render
+from django.conf import settings  # type: ignore[import-untyped]
+from django.http import Http404, HttpRequest, HttpResponse  # type: ignore[import-untyped]
+from django.shortcuts import redirect, render  # type: ignore[import-untyped]
 
 from ff4kb.routes.views import ROUTES, get_colors
 

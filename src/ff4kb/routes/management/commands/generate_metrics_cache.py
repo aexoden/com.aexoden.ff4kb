@@ -6,12 +6,12 @@ import sys
 
 from typing import Any
 
-from django.core.management.base import BaseCommand
+from django.core.management.base import BaseCommand  # type: ignore[import-untyped]
 
 from ff4kb.routes.views import ROUTES, get_metrics
 
 
-class Command(BaseCommand):
+class Command(BaseCommand):  # type: ignore[misc]
     """Django management command to generate the route metrics cache."""
 
     help = "Generates the route metrics cache"

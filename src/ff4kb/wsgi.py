@@ -9,6 +9,6 @@ configuration = os.getenv("ENVIRONMENT", "development").title()
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ff4kb.settings")
 os.environ.setdefault("DJANGO_CONFIGURATION", configuration)
 
-from configurations.wsgi import get_wsgi_application  # pyright: ignore[reportMissingTypeStubs] # noqa: E402
+from configurations.wsgi import get_wsgi_application  # type: ignore[import-untyped]  # noqa: E402
 
 application = get_wsgi_application()

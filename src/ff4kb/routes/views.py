@@ -8,10 +8,10 @@ import statistics
 from pathlib import Path
 from typing import Any
 
-from django.conf import settings
-from django.http import Http404, HttpRequest, HttpResponse
-from django.shortcuts import render
-from django.urls import reverse
+from django.conf import settings  # type: ignore[import-untyped]
+from django.http import Http404, HttpRequest, HttpResponse  # type: ignore[import-untyped]
+from django.shortcuts import render  # type: ignore[import-untyped]
+from django.urls import reverse  # type: ignore[import-untyped]
 
 from .models import RouteDetail, get_route_update_time
 
@@ -530,11 +530,13 @@ def get_metrics(route: str) -> dict[str, list[float]]:
     metrics_cache_path = Path(settings.BASE_DIR) / "cache" / f"metrics-{route}.json"
     metrics_cache_updated = False
 
+    seed_metrics: dict[str, list[float]] = {}
+
     if metrics_cache_path.exists():
         with metrics_cache_path.open("r", encoding="utf-8") as f:
             seed_metrics = json.load(f)
     else:
-        seed_metrics: dict[str, list[float]] = {
+        seed_metrics = {
             "update_time": [-1 for _ in range(256)],
             "frames": [0 for _ in range(256)],
             "encounters": [0 for _ in range(256)],

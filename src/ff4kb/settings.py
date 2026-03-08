@@ -13,11 +13,11 @@ from pathlib import Path
 from socket import gethostbyname_ex, gethostname
 from typing import Any, ClassVar, cast
 
-from configurations import Configuration, values  # pyright: ignore[reportMissingTypeStubs]
-from django.core.management.utils import get_random_secret_key
+from configurations import Configuration, values  # type: ignore[import-untyped]
+from django.core.management.utils import get_random_secret_key  # type: ignore[import-untyped]
 
 
-class Common(Configuration):
+class Common(Configuration):  # type: ignore[misc]
     """Common settings for all environments."""
 
     # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -26,7 +26,7 @@ class Common(Configuration):
     # SECURITY WARNING: don't run with debug turned on in production!
     DEBUG = cast("values.BooleanValue", values.BooleanValue(False))  # noqa: FBT003
 
-    ALLOWED_HOSTS = cast("values.ListValue", values.ListValue(["ff4kb.aexoden.com"], environ_name="ALLOWED_HOSTS"))
+    ALLOWED_HOSTS: ClassVar[list[str]] = cast("list[str]", values.ListValue(["ff4kb.aexoden.com"], environ_name="ALLOWED_HOSTS"))
 
     ALLOWED_HOSTS.append(gethostname())  # pyright: ignore[reportUnknownMemberType, reportAttributeAccessIssue]
     ALLOWED_HOSTS.extend(list(set(gethostbyname_ex(gethostname())[2])))  # pyright: ignore[reportUnknownMemberType, reportAttributeAccessIssue]

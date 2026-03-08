@@ -7,7 +7,7 @@ import subprocess  # noqa: S404 (used for running rosa with custom variables)
 
 from pathlib import Path
 
-from django.conf import settings
+from django.conf import settings  # type: ignore[import-untyped]
 
 
 def decode_vars(variables: list[str]) -> str:

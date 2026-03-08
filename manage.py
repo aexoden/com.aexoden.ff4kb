@@ -12,6 +12,6 @@ if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ff4kb.settings")
     os.environ.setdefault("DJANGO_CONFIGURATION", configuration)
 
-    from configurations.management import execute_from_command_line  # pyright: ignore[reportMissingTypeStubs]
+    from configurations.management import execute_from_command_line  # type: ignore[import-untyped]
 
     execute_from_command_line(sys.argv)

@@ -2,8 +2,8 @@
 # SPDX-FileCopyrightText: 2024 Jason Lynch <jason@aexoden.com>
 """URL patterns for the FF4KB game information package."""
 
-from django.urls import path
-from django.views.generic import TemplateView
+from django.urls import path  # type: ignore[import-untyped]
+from django.views.generic import TemplateView  # type: ignore[import-untyped]
 
 from . import views
 

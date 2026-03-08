@@ -2,11 +2,11 @@
 # SPDX-FileCopyrightText: 2024 Jason Lynch <jason@aexoden.com>
 """URL configuration for FF4KB."""
 
-from django.conf import settings
-from django.contrib import admin
-from django.templatetags.static import static
-from django.urls import URLPattern, URLResolver, include, path
-from django.views.generic import RedirectView, TemplateView
+from django.conf import settings  # type: ignore[import-untyped]
+from django.contrib import admin  # type: ignore[import-untyped]
+from django.templatetags.static import static  # type: ignore[import-untyped]
+from django.urls import URLPattern, URLResolver, include, path  # type: ignore[import-untyped]
+from django.views.generic import RedirectView, TemplateView  # type: ignore[import-untyped]
 
 urlpatterns: list[URLPattern | URLResolver] = [
     path("", TemplateView.as_view(template_name="index.html"), name="index"),
@@ -51,7 +51,7 @@ urlpatterns: list[URLPattern | URLResolver] = [
 ]
 
 if settings.DEBUG:
-    import debug_toolbar  # pyright: ignore[reportMissingTypeStubs]
+    import debug_toolbar  # type: ignore[import-untyped]
 
     urlpatterns.extend(
         [

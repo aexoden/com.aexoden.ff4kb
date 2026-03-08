@@ -9,9 +9,9 @@ from enum import Enum
 from pathlib import Path
 from typing import Any, TypeVar, cast
 
-from django.conf import settings
-from django.http import Http404, HttpRequest, HttpResponse
-from django.shortcuts import render
+from django.conf import settings  # type: ignore[import-untyped]
+from django.http import Http404, HttpRequest, HttpResponse  # type: ignore[import-untyped]
+from django.shortcuts import render  # type: ignore[import-untyped]
 
 T = TypeVar("T", str, int, bool)
 
@@ -618,7 +618,7 @@ class FF4:
 
         with (path / "monsters.json").open("r", encoding="utf-8") as f:
             monsters = json.load(f)
-            self._monsters = monsters["monsters"]
+            self._monsters: list[dict[str, Any]] = monsters["monsters"]
             self._derived_stats = monsters["derived_stats"]
 
         with (path / "scripts.json").open("r", encoding="utf-8") as f:
@@ -702,7 +702,7 @@ class FF4:
         """
         return self._monsters[monster_id]
 
-    def get_monsters(self) -> list[dict[int, Any]]:
+    def get_monsters(self) -> list[dict[str, Any]]:
         """Get all monsters.
 
         Returns:
@@ -979,13 +979,13 @@ class FF4:
             return f"Set magic power to {parameters[0]}"
 
         if command_id == 0xEF:  # noqa: PLR2004
-            element = parameters[0]
-            element_str = filter_element_weakness(str(element & 0x7F), Version.US)
+            weakness_element = parameters[0]
+            weakness_element_str = filter_element_weakness(str(weakness_element & 0x7F), Version.US)
 
-            if element & 0x80 > 0:
-                return f"Set strong and normal elemental weaknesses to {element_str}"
+            if weakness_element & 0x80 > 0:
+                return f"Set strong and normal elemental weaknesses to {weakness_element_str}"
 
-            return f"Set normal elemental weakness to {element_str}"
+            return f"Set normal elemental weakness to {weakness_element_str}"
 
         if command_id == 0xF0:  # noqa: PLR2004
             slot = parameters[0] >> 6
