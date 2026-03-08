@@ -1,13 +1,14 @@
 # SPDX-License-Identifier: MIT
 # SPDX-FileCopyrightText: 2024 Jason Lynch <jason@aexoden.com>
+"""URL configuration for FF4KB."""
 
 from django.conf import settings
 from django.contrib import admin
 from django.templatetags.static import static
-from django.urls import include, path
+from django.urls import URLPattern, URLResolver, include, path
 from django.views.generic import RedirectView, TemplateView
 
-urlpatterns = [  # type: ignore
+urlpatterns: list[URLPattern | URLResolver] = [
     path("", TemplateView.as_view(template_name="index.html"), name="index"),
     path("admin/", admin.site.urls),
     path("guides/", include("ff4kb.guides.urls")),
@@ -50,10 +51,10 @@ urlpatterns = [  # type: ignore
 ]
 
 if settings.DEBUG:
-    import debug_toolbar  # type: ignore
+    import debug_toolbar  # pyright: ignore[reportMissingTypeStubs]
 
-    urlpatterns.extend(  # type: ignore
+    urlpatterns.extend(
         [
-            path("__debug__/", include(debug_toolbar.urls)),  # type: ignore
+            path("__debug__/", include(debug_toolbar.urls)),
         ]
     )

@@ -1,5 +1,6 @@
 # SPDX-License-Identifier: MIT
 # SPDX-FileCopyrightText: 2024 Jason Lynch <jason@aexoden.com>
+"""Views for the info package."""
 
 import json
 
@@ -21,12 +22,16 @@ T = TypeVar("T", str, int, bool)
 
 
 class Version(Enum):
+    """Enum representing the different versions of Final Fantasy IV."""
+
     US = 0
     JP = 1
     EASYTYPE = 2
 
 
 class ConditionOpcode(Enum):
+    """Enum representing the different condition opcodes."""
+
     CHECK_STATUS = 0
     CHECK_HP = 1
     CHECK_FLAG = 2
@@ -48,6 +53,15 @@ class ConditionOpcode(Enum):
 
 
 def filter_arrangement(value: str, _version: Version) -> str:
+    """Filter for monster arrangements in formations.
+
+    Args:
+        value: The arrangement value to filter.
+        _version: The version of the game (not used in this filter).
+
+    Returns:
+        A human-readable string representing the monster arrangement.
+    """
     arrangements = {
         14: "14: Zombie x4",
         18: "18: Machine x2, Beamer x3",
@@ -71,6 +85,15 @@ def filter_arrangement(value: str, _version: Version) -> str:
 
 
 def filter_audio_track(value: str, _version: Version) -> str:
+    """Filter for audio tracks in monster scripts.
+
+    Args:
+        value: The audio track value to filter.
+        _version: The version of the game (not used in this filter).
+
+    Returns:
+        A human-readable string representing the audio track.
+    """
     audio_tracks = {
         "0": "Battle 1",
         "1": "Battle 2",
@@ -81,6 +104,15 @@ def filter_audio_track(value: str, _version: Version) -> str:
 
 
 def filter_song(value: int, _version: Version) -> str:
+    """Filter for songs in monster scripts.
+
+    Args:
+        value: The song value to filter.
+        _version: The version of the game (not used in this filter).
+
+    Returns:
+        A human-readable string representing the song.
+    """
     songs: dict[int, str] = {
         0x00: "none",
         0x04: "Chocobo Chocobo",
@@ -98,10 +130,28 @@ def filter_song(value: int, _version: Version) -> str:
 
 
 def filter_drop_rate(value: str, _version: Version) -> str:
+    """Filter for drop rates in monster scripts.
+
+    Args:
+        value: The drop rate value to filter.
+        _version: The version of the game (not used in this filter).
+
+    Returns:
+        A human-readable string representing the drop rate.
+    """
     return f"{int(value) / 99 * 100:0.3f}% ({value}/99)"
 
 
 def filter_element_weakness(value: str, _version: Version) -> str:
+    """Filter for elemental weaknesses in monster scripts.
+
+    Args:
+        value: The elemental weakness value to filter.
+        _version: The version of the game (not used in this filter).
+
+    Returns:
+        A human-readable string representing the elemental weaknesses.
+    """
     element = int(value)
     elements: list[str] = []
     suffix = ""
@@ -130,14 +180,41 @@ def filter_element_weakness(value: str, _version: Version) -> str:
 
 
 def filter_item(value: str, version: Version) -> str:
+    """Filter for items in monster scripts.
+
+    Args:
+        value: The item value to filter.
+        version: The version of the game.
+
+    Returns:
+        A human-readable string representing the item.
+    """
     return ff4.get_item_names(int(value))[version]
 
 
 def filter_negative_one(value: str, _version: Version) -> str:
+    """Filter for values that can be -1 in monster scripts.
+
+    Args:
+        value: The value to filter.
+        _version: The version of the game (not used in this filter).
+
+    Returns:
+        A human-readable string representing the value.
+    """
     return "None" if value == "-1" else value
 
 
 def filter_race(value: str, _version: Version) -> str:
+    """Filter for races in monster scripts.
+
+    Args:
+        value: The race value to filter.
+        _version: The version of the game (not used in this filter).
+
+    Returns:
+        A human-readable string representing the races.
+    """
     race = int(value)
     races: list[str] = []
 
@@ -165,6 +242,15 @@ def filter_race(value: str, _version: Version) -> str:
 
 
 def filter_status(value: str, _version: Version) -> str:
+    """Filter for status effects in monster scripts.
+
+    Args:
+        value: The status value to filter.
+        _version: The version of the game (not used in this filter).
+
+    Returns:
+        A human-readable string representing the status effects.
+    """
     status = int(value)
     statuses: list[str] = []
 
@@ -213,7 +299,22 @@ def filter_status(value: str, _version: Version) -> str:
     return ", ".join(statuses)
 
 
-def extract_values(values: str | int | bool | dict[str, list[str]], return_type: type[T]) -> dict[Version, T]:  # noqa: FBT001
+def extract_values[T: (str, int, bool)](
+    values: str | int | bool | dict[str, list[str]],  # noqa: FBT001
+    return_type: type[T],
+) -> dict[Version, T]:
+    """Extract values for different game versions.
+
+    Args:
+        values: The values to extract.
+        return_type: The type to convert the values to.
+
+    Returns:
+        A dictionary mapping each game version to the extracted value.
+
+    Raises:
+        ValueError: If USA and USA (Rev 1) have different values or if Japan and Japan (Rev 1) have different values.
+    """
     if isinstance(values, dict):
         value_us = ""
         value_jp = ""
@@ -250,11 +351,24 @@ def extract_values(values: str | int | bool | dict[str, list[str]], return_type:
     }
 
 
-def group_values(
+def group_values[T: (str, int, bool)](  # noqa: C901
     values: str | int | bool | dict[str, list[str]],  # noqa: FBT001
     return_type: type[T],
     filter_func: Callable[[str, Version], str] | None = None,
 ) -> dict[str, T]:
+    """Group values for different game versions.
+
+    Args:
+        values: The values to group.
+        return_type: The type to convert the values to.
+        filter_func: An optional function to filter the values.
+
+    Returns:
+        A dictionary mapping each unique value to the game versions that have that value.
+
+    Raises:
+        ValueError: If USA and USA (Rev 1) have different values or if Japan and Japan (Rev 1) have different values.
+    """
     if not isinstance(values, dict):
         return {"All": return_type(filter_func(str(values), Version.US) if filter_func else values)}
 
@@ -309,7 +423,15 @@ def group_values(
     return {x[1][1]: return_type(x[1][0]) for x in sorted(output, reverse=True)}
 
 
-def format_value(value: str | int | bool) -> str:
+def format_value(value: str | int | bool) -> str:  # noqa: FBT001
+    """Format a value for display.
+
+    Args:
+        value: The value to format.
+
+    Returns:
+        str: A human-readable string representing the value.
+    """
     if isinstance(value, bool):
         return "Yes" if value else "No"
 
@@ -326,14 +448,34 @@ def group_values_string(
     values: str | int | bool | dict[Any, list[str]],  # noqa: FBT001
     filter_func: Callable[[str, Version], str] | None = None,
 ) -> str:
+    """Group values for different game versions and format them as a string.
+
+    Args:
+        values: The values to group.
+        filter_func: An optional function to filter the values.
+
+    Returns:
+        A formatted string representing the grouped values.
+    """
     grouped = group_values(values, str, filter_func)
 
     return " / ".join(
-        [format_value(value) if version == "All" else f"{format_value(value)} ({version})" for version, value in grouped.items()]
+        [
+            format_value(value) if version == "All" else f"{format_value(value)} ({version})"
+            for version, value in grouped.items()
+        ]
     )
 
 
 def format_action_target(target: int) -> str:
+    """Format an action target for display.
+
+    Args:
+        target: The action target to format.
+
+    Returns:
+        A human-readable string representing the action target.
+    """
     targets = {
         0x16: "self",
         0x17: "all monsters",
@@ -364,6 +506,18 @@ def format_action_target(target: int) -> str:
 
 
 def format_character_target(target: int) -> tuple[str, bool]:
+    """Format a character action target for display.
+
+    Args:
+        target: The character action target to format.
+
+    Returns:
+        A tuple containing a human-readable string representing the character action target
+        and a boolean indicating whether the target is valid.
+
+    Raises:
+        ValueError: If the target is not a valid character ID.
+    """
     characters = {
         0x01: "Cecil (dark knight)",
         0x02: "Kain (before Mist)",
@@ -395,7 +549,16 @@ def format_character_target(target: int) -> tuple[str, bool]:
     raise ValueError(msg)
 
 
-def format_condition_target(target: int) -> tuple[str, bool]:  # noqa: PLR0911
+def format_condition_target(target: int) -> tuple[str, bool]:  # noqa: C901, PLR0911
+    """Format a condition target for display.
+
+    Args:
+        target: The condition target to format.
+
+    Returns:
+        A tuple containing a human-readable string representing the condition target
+        and a boolean indicating whether the target is valid.
+    """
     if target < 0x16:  # noqa: PLR2004
         return format_character_target(target)
 
@@ -441,7 +604,10 @@ def format_condition_target(target: int) -> tuple[str, bool]:  # noqa: PLR0911
 
 
 class FF4:
+    """Class for accessing Final Fantasy IV data."""
+
     def __init__(self) -> None:
+        """Initialize the FF4 class by loading data from JSON files."""
         path = Path(settings.BASE_DIR) / "data"
 
         with (path / "formations.json").open("r", encoding="utf-8") as f:
@@ -466,6 +632,14 @@ class FF4:
     #
 
     def get_formation(self, formation_id: int) -> dict[str, Any]:
+        """Get a formation by its ID.
+
+        Args:
+            formation_id: The ID of the formation to retrieve.
+
+        Returns:
+            A dictionary containing the formation data.
+        """
         formation_data: dict[str, Any] = dict(self._formations[formation_id])
 
         monsters: list[dict[str, Any]] = [
@@ -488,24 +662,75 @@ class FF4:
         return formation_data
 
     def get_formations(self) -> list[dict[str, Any]]:
+        """Get all formations.
+
+        Returns:
+            A list of dictionaries containing formation data.
+        """
         return [self.get_formation(i) for i in range(len(self._formations))]
 
     def get_item_names(self, item_id: int) -> dict[Version, str]:
+        """Get the names of an item in different versions.
+
+        Args:
+            item_id: The ID of the item.
+
+        Returns:
+            A dictionary mapping versions to item names.
+        """
         return extract_values(self._items[item_id]["name"], str)
 
     def get_spell_names(self, spell_id: int) -> dict[Version, str]:
+        """Get the names of a spell in different versions.
+
+        Args:
+            spell_id: The ID of the spell.
+
+        Returns:
+            A dictionary mapping versions to spell names.
+        """
         return extract_values(self._spells[spell_id]["name"], str)
 
     def get_monster(self, monster_id: int) -> dict[str, Any]:
+        """Get a monster by its ID.
+
+        Args:
+            monster_id: The ID of the monster.
+
+        Returns:
+            A dictionary containing the monster data.
+        """
         return self._monsters[monster_id]
 
     def get_monsters(self) -> list[dict[int, Any]]:
+        """Get all monsters.
+
+        Returns:
+            A list of dictionaries containing monster data.
+        """
         return self._monsters
 
     def get_monster_names(self, monster_id: int) -> dict[Version, str]:
+        """Get the names of a monster in different versions.
+
+        Args:
+            monster_id: The ID of the monster.
+
+        Returns:
+            A dictionary mapping versions to monster names.
+        """
         return extract_values(self._monsters[monster_id]["name"], str)
 
     def get_script(self, monster_id: int, *, alternate: bool) -> dict[str, Any]:
+        """Get the script of a monster in different versions.
+
+        Args:
+            monster_id: The ID of the monster.
+            alternate: Whether to use the alternate script.
+
+        Returns:
+            A dictionary mapping versions to monster scripts.
+        """
         result: dict[Version, list[tuple[str, Any]]] = {}
 
         for version in [Version.US, Version.JP, Version.EASYTYPE]:
@@ -640,7 +865,7 @@ class FF4:
         stats = self._derived_stats[derived_stats_id]
         return f"{stats['multiplier']} x {stats['power']} ({stats['accuracy']}%)"
 
-    def _format_command(self, command_id: int, parameters: list[int]) -> str:  # noqa: PLR0911, PLR0912, PLR0915
+    def _format_command(self, command_id: int, parameters: list[int]) -> str:  # noqa: C901, PLR0911, PLR0912, PLR0915
         if command_id < 0xC0:  # noqa: PLR2004
             spell_name = ff4.get_spell_names(command_id)[Version.US] if command_id < 0xB0 else ""  # noqa: PLR2004
 
@@ -736,7 +961,10 @@ class FF4:
             if parameters[0] & 0x80 == 0:
                 return f"Increase relative speed value by {parameters[0] * 10}% (slows monster down)"
 
-            return f"Decrease relative speed value by {parameters[0] * 10}% (in theory, but it's bugged and the real amount will differ) (speeds monster up)"  # noqa: E501
+            return (
+                f"Decrease relative speed value by {parameters[0] * 10}% (in theory, but it's bugged and the real"
+                " amount will differ) (speeds monster up)"
+            )
 
         if command_id == 0xED:  # noqa: PLR2004
             immune = parameters[0] & 0x80 > 0
@@ -891,7 +1119,7 @@ class FF4:
 
         return actions
 
-    def _format_condition_set(self, condition_set_id: int, version: Version) -> list[str]:  # noqa: PLR0912, PLR0914, PLR0915
+    def _format_condition_set(self, condition_set_id: int, version: Version) -> list[str]:  # noqa: C901, PLR0912, PLR0914, PLR0915
         condition_set_data = self._scripts["condition_sets"][condition_set_id]
         conditions: list[str] = []
 
@@ -994,6 +1222,14 @@ ff4 = FF4()
 
 
 def formations(request: HttpRequest) -> HttpResponse:
+    """View for the formations page.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        HttpResponse: The HTTP response object containing the rendered formations page.
+    """
     formations: list[dict[str, Any]] = []
 
     for formation_id, formation in enumerate(ff4.get_formations()):
@@ -1015,19 +1251,34 @@ def formations(request: HttpRequest) -> HttpResponse:
 
 
 def formation_detail(request: HttpRequest, formation_id: int) -> HttpResponse:
+    """View for the formation detail page.
+
+    Args:
+        request: The HTTP request object.
+        formation_id: The ID of the formation to display.
+
+    Returns:
+        HttpResponse: The HTTP response object containing the rendered formation detail page.
+
+    Raises:
+        Http404: If the formation ID is invalid.
+        TypeError: If the formation data is malformed.
+    """
     if formation_id < 0 or formation_id >= 0x200:  # noqa: PLR2004
         msg = "Nonexistent monster formation"
         raise Http404(msg)
 
     formation = ff4.get_formation(formation_id)
 
-    assert isinstance(formation["monsters"], list)  # noqa: S101
+    if not isinstance(formation["monsters"], list):
+        msg = "Malformed monster formation data: monsters field is not a list"
+        raise TypeError(msg)
 
     monsters: list[dict[str, str]] = []
 
-    for monster_data in cast(list[dict[str, str | bool | int]], formation["monsters"]):
+    for monster_data in cast("list[dict[str, str | bool | int]]", formation["monsters"]):
         ids = extract_values(monster_data["id"], str)
-        names = ff4.get_monster_names(cast(int, monster_data["id"]))
+        names = ff4.get_monster_names(cast("int", monster_data["id"]))
 
         monsters.append(
             {
@@ -1065,6 +1316,14 @@ def formation_detail(request: HttpRequest, formation_id: int) -> HttpResponse:
 
 
 def monsters(request: HttpRequest) -> HttpResponse:
+    """View for the monsters page.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        HttpResponse: The HTTP response object containing the rendered monsters page.
+    """
     monsters: list[dict[str, Any]] = []
 
     for monster_id, _ in enumerate(ff4.get_monsters()):
@@ -1088,6 +1347,18 @@ def monsters(request: HttpRequest) -> HttpResponse:
 
 
 def monster_detail(request: HttpRequest, monster_id: int) -> HttpResponse:
+    """View for the monster detail page.
+
+    Args:
+        request: The HTTP request object.
+        monster_id: The ID of the monster.
+
+    Returns:
+        HttpResponse: The HTTP response object containing the rendered monster detail page.
+
+    Raises:
+        Http404: If the monster ID is invalid.
+    """
     if monster_id < 0 or monster_id >= 0xE0:  # noqa: PLR2004
         msg = "Nonexistent monster."
         raise Http404(msg)

@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: MIT
 # SPDX-FileCopyrightText: 2024 Jason Lynch <jason@aexoden.com>
+# ruff: noqa: T201 (print statements are intentional for this script)
+"""Script to dump data from FF4 ROMs."""
 
 import argparse
 import hashlib
@@ -292,7 +294,10 @@ CHARACTERS: dict[str, dict[int, str]] = {
 
 
 class FF4:
+    """Class to represent an FF4 ROM and provide methods to extract data from it."""
+
     def __init__(self, path: Path) -> None:
+        """Initialize the FF4 class by loading the ROM data and determining the version."""
         with path.open("rb") as f:
             self._data = f.read()
 
@@ -341,6 +346,7 @@ class FF4:
 
     @property
     def version(self) -> str:
+        """Get the version of the ROM."""
         return self._version
 
     def _scan_encounters(self) -> None:
@@ -394,7 +400,7 @@ class FF4:
 
         return formations
 
-    def _scan_event(self, event_id: int, map_id: int) -> None:  # noqa: PLR0912
+    def _scan_event(self, event_id: int, map_id: int) -> None:  # noqa: C901, PLR0912
         address = 0x128200 + self._read_u16(0x128000 + event_id * 2)
         end_address = 0x128200 + self._read_u16(0x128000 + (event_id + 1) * 2)
 
@@ -562,6 +568,14 @@ class FF4:
         return results
 
     def get_formation_info(self, formation_id: int) -> dict[str, Any]:
+        """Get information about a formation by its ID.
+
+        Args:
+            formation_id: The ID of the formation to get information about.
+
+        Returns:
+            dict[str, Any]: A dictionary containing information about the formation.
+        """
         base_address = 0x0E8000 + formation_id * 8
 
         flags_1 = self._read_u8(base_address + 0)
@@ -613,6 +627,14 @@ class FF4:
         }
 
     def get_item_info(self, item_id: int) -> dict[str, Any]:
+        """Get information about an item by its ID.
+
+        Args:
+            item_id: The ID of the item to get information about.
+
+        Returns:
+            dict[str, Any]: A dictionary containing information about the item.
+        """
         base_address = 0x0F8000 + item_id * 9
         name = self._read_string(base_address, 9).strip()
 
@@ -621,6 +643,14 @@ class FF4:
         }
 
     def get_spell_info(self, spell_id: int) -> dict[str, Any]:
+        """Get information about a spell by its ID.
+
+        Args:
+            spell_id: The ID of the spell to get information about.
+
+        Returns:
+            dict[str, Any]: A dictionary containing information about the spell.
+        """
         if spell_id < 0x48:  # noqa: PLR2004
             base_address = 0x0F8900
             length = 6
@@ -635,7 +665,15 @@ class FF4:
             "name": name,
         }
 
-    def get_monster_info(self, monster_id: int) -> dict[str, Any]:  # noqa: PLR0912, PLR0914, PLR0915
+    def get_monster_info(self, monster_id: int) -> dict[str, Any]:  # noqa: C901, PLR0912, PLR0914, PLR0915
+        """Get information about a monster by its ID.
+
+        Args:
+            monster_id: The ID of the monster to get information about.
+
+        Returns:
+            dict[str, Any]: A dictionary containing information about the monster.
+        """
         base_address = 0x0E0000 + self._read_u16(0x0EA6A0 + monster_id * 2)
 
         physical_attack_index = self._read_u8(base_address + 3)
@@ -699,12 +737,15 @@ class FF4:
         alternate_scripts: bool = False
 
         if len(alternate_scripts_set) == 0:
-            print(f"WARNING: Not sure if monster {id} uses alternate scripts", file=sys.stderr)
+            print(f"WARNING: Not sure if monster {monster_id} uses alternate scripts", file=sys.stderr)
             alternate_scripts = False
         if len(alternate_scripts_set) == 1:
             alternate_scripts = next(iter(alternate_scripts_set))
         elif len(alternate_scripts_set) > 1:
-            print(f"WARNING: Monster {id} potentially both does and does not use alternate scripts", file=sys.stderr)
+            print(
+                f"WARNING: Monster {monster_id} potentially both does and does not use alternate scripts",
+                file=sys.stderr,
+            )
             alternate_scripts = True
 
         if flags & 0x80 > 0:
@@ -778,6 +819,14 @@ class FF4:
         }
 
     def get_script_info(self, script_id: int) -> dict[str, int]:
+        """Get information about a script by its ID.
+
+        Args:
+            script_id: The ID of the script to get information about.
+
+        Returns:
+            dict[str, int]: A dictionary containing information about the script.
+        """
         address = 0x0EE030
         index = 0
         pair = 0
@@ -821,11 +870,27 @@ class FF4:
         return scripts
 
     def get_hp_check_info(self, hp_id: int) -> dict[str, int]:
+        """Get information about an HP check by its ID.
+
+        Args:
+            hp_id: The ID of the HP check to get information about.
+
+        Returns:
+            dict[str, int]: A dictionary containing information about the HP check.
+        """
         address = 0x0EE000 + hp_id * 2
 
         return {"hp_value": self._read_u16(address)}
 
     def get_monster_derived_stats_info(self, stats_id: int) -> dict[str, int]:
+        """Get information about monster derived stats by its ID.
+
+        Args:
+            stats_id: The ID of the monster derived stats to get information about.
+
+        Returns:
+            dict[str, int]: A dictionary containing information about the monster derived stats.
+        """
         address = 0x0EA380 + stats_id * 3
 
         return {
@@ -835,6 +900,14 @@ class FF4:
         }
 
     def get_condition_set_info(self, condition_set_id: int) -> dict[str, int]:
+        """Get information about a condition set by its ID.
+
+        Args:
+            condition_set_id: The ID of the condition set to get information about.
+
+        Returns:
+            dict[str, int]: A dictionary containing information about the condition set.
+        """
         address = 0x0EE600
         index = 0
         entry = 0
@@ -859,6 +932,14 @@ class FF4:
         return conditions
 
     def get_condition_info(self, condition_id: int) -> dict[str, int]:
+        """Get information about a condition by its ID.
+
+        Args:
+            condition_id: The ID of the condition to get information about.
+
+        Returns:
+            dict[str, int]: A dictionary containing information about the condition.
+        """
         address = 0x0EE700 + 4 * condition_id
 
         return {
@@ -869,12 +950,37 @@ class FF4:
         }
 
     def get_standard_action_set_info(self, action_set_id: int) -> dict[str, str]:
+        """Get information about a standard action set by its ID.
+
+        Args:
+            action_set_id: The ID of the standard action set to get information about.
+
+        Returns:
+            dict[str, str]: A dictionary containing information about the standard action set.
+        """
         return self.get_action_set_info(0x0EE900, action_set_id)
 
     def get_alternate_action_set_info(self, action_set_id: int) -> dict[str, str]:
+        """Get information about an alternate action set by its ID.
+
+        Args:
+            action_set_id: The ID of the alternate action set to get information about.
+
+        Returns:
+            dict[str, str]: A dictionary containing information about the alternate action set.
+        """
         return self.get_action_set_info(0x0EB6C0, action_set_id)
 
     def get_action_set_info(self, address: int, action_set_id: int) -> dict[str, str]:
+        """Get information about an action set by its ID.
+
+        Args:
+            address: The starting address of the action set.
+            action_set_id: The ID of the action set to get information about.
+
+        Returns:
+            dict[str, str]: A dictionary containing information about the action set.
+        """
         index = 0
         blob: list[str] = []
 
@@ -899,6 +1005,16 @@ class FF4:
 
 
 def collate_data(roms: list[FF4], ids: Iterable[int], method_name: str) -> list[dict[str, Any]]:
+    """Collate data from multiple ROMs by a given method and list of IDs.
+
+    Args:
+        roms: A list of FF4 ROM objects to collate data from.
+        ids: An iterable of IDs to collate data for.
+        method_name: The name of the method to call on each ROM object.
+
+    Returns:
+        A list of dictionaries containing the collated data.
+    """
     entries: list[dict[str, Any]] = []
 
     for data_id in ids:
@@ -935,16 +1051,31 @@ def collate_data(roms: list[FF4], ids: Iterable[int], method_name: str) -> list[
 
 
 def command_formations(roms: list[FF4]) -> None:
+    """Dump information about monster formations from the given ROMs.
+
+    Args:
+        roms: A list of FF4 ROM objects to dump data from.
+    """
     formations = collate_data(roms, range(0x200), "get_formation_info")
     print(json.dumps(formations, sort_keys=True, indent=4))
 
 
 def command_items(roms: list[FF4]) -> None:
+    """Dump information about items from the given ROMs.
+
+    Args:
+        roms: A list of FF4 ROM objects to dump data from.
+    """
     items = collate_data(roms, range(0x100), "get_item_info")
     print(json.dumps(items, sort_keys=True, indent=4))
 
 
 def command_monsters(roms: list[FF4]) -> None:
+    """Dump information about monsters from the given ROMs.
+
+    Args:
+        roms: A list of FF4 ROM objects to dump data from.
+    """
     monsters = collate_data(roms, range(0xE0), "get_monster_info")
     derived_stats = collate_data(roms, range(224), "get_monster_derived_stats_info")
 
@@ -957,6 +1088,11 @@ def command_monsters(roms: list[FF4]) -> None:
 
 
 def command_scripts(roms: list[FF4]) -> None:
+    """Dump information about battle scripts from the given ROMs.
+
+    Args:
+        roms: A list of FF4 ROM objects to dump data from.
+    """
     scripts = collate_data(roms, range(0xFE), "get_script_info")
     condition_sets = collate_data(roms, range(0x63), "get_condition_set_info")
     conditions = collate_data(roms, range(0x50), "get_condition_info")
@@ -977,6 +1113,11 @@ def command_scripts(roms: list[FF4]) -> None:
 
 
 def command_spells(roms: list[FF4]) -> None:
+    """Dump information about spells from the given ROMs.
+
+    Args:
+        roms: A list of FF4 ROM objects to dump data from.
+    """
     spells = collate_data(roms, range(0xB0), "get_spell_info")
     print(json.dumps(spells, sort_keys=True, indent=4))
 
@@ -987,6 +1128,7 @@ def command_spells(roms: list[FF4]) -> None:
 
 
 def main() -> None:
+    """Main execution function for the script."""
     parser = argparse.ArgumentParser()
     parser.add_argument("--roms", required=True, help="Text file containing the list of ROMs to dump from")
 

@@ -1,8 +1,6 @@
 # SPDX-License-Identifier: MIT
 # SPDX-FileCopyrightText: 2024 Jason Lynch <jason@aexoden.com>
-
-"""
-Django settings for ff4 project.
+"""Django settings for FF4KB.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/2.0/topics/settings/
@@ -15,21 +13,23 @@ from pathlib import Path
 from socket import gethostbyname_ex, gethostname
 from typing import Any, ClassVar, cast
 
-from configurations import Configuration, values  # type: ignore
+from configurations import Configuration, values  # pyright: ignore[reportMissingTypeStubs]
 from django.core.management.utils import get_random_secret_key
 
 
 class Common(Configuration):
+    """Common settings for all environments."""
+
     # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
     BASE_DIR = str(Path(__file__).absolute().parent.parent.parent)
 
     # SECURITY WARNING: don't run with debug turned on in production!
-    DEBUG = cast(values.BooleanValue, values.BooleanValue(False))  # noqa: FBT003
+    DEBUG = cast("values.BooleanValue", values.BooleanValue(False))  # noqa: FBT003
 
-    ALLOWED_HOSTS = cast(values.ListValue, values.ListValue(["ff4kb.aexoden.com"], environ_name="ALLOWED_HOSTS"))
+    ALLOWED_HOSTS = cast("values.ListValue", values.ListValue(["ff4kb.aexoden.com"], environ_name="ALLOWED_HOSTS"))
 
-    ALLOWED_HOSTS.append(gethostname())  # type: ignore
-    ALLOWED_HOSTS.extend(list(set(gethostbyname_ex(gethostname())[2])))  # type: ignore
+    ALLOWED_HOSTS.append(gethostname())  # pyright: ignore[reportUnknownMemberType, reportAttributeAccessIssue]
+    ALLOWED_HOSTS.extend(list(set(gethostbyname_ex(gethostname())[2])))  # pyright: ignore[reportUnknownMemberType, reportAttributeAccessIssue]
 
     # Application definition
     INSTALLED_APPS: ClassVar[list[str]] = [
@@ -81,7 +81,7 @@ class Common(Configuration):
     # Database
     # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
     DATABASES = cast(
-        values.DatabaseURLValue, values.DatabaseURLValue("sqlite:///{}".format(str(Path(BASE_DIR) / "db.sqlite3")))
+        "values.DatabaseURLValue", values.DatabaseURLValue("sqlite:///{}".format(str(Path(BASE_DIR) / "db.sqlite3")))
     )
 
     # Password validation
@@ -122,15 +122,21 @@ class Common(Configuration):
 
 
 class Build(Common):
+    """Settings for build environments."""
+
     SECRET_KEY = get_random_secret_key()
 
 
 class Run(Common):
+    """Settings for run environments."""
+
     # SECURITY WARNING: keep the secret key used in production secret!
-    SECRET_KEY = cast(values.SecretValue, values.SecretValue())
+    SECRET_KEY = cast("values.SecretValue", values.SecretValue())
 
 
 class Development(Run):
+    """Settings for the development environment."""
+
     BASE_DIR = str(Path(__file__).absolute().parent.parent.parent)
     DOTENV = str(Path(BASE_DIR) / ".env")
 
@@ -146,21 +152,23 @@ class Development(Run):
 
 
 class Testing(Run):
-    pass
+    """Settings for the testing environment."""
 
 
 class Staging(Run):
+    """Settings for the staging environment."""
+
     # Security
-    SESSION_COOKIE_SECURE = cast(values.BooleanValue, values.BooleanValue(True))  # noqa: FBT003
-    SECURE_BROWSER_XSS_FILTER = cast(values.BooleanValue, values.BooleanValue(True))  # noqa: FBT003
-    SECURE_CONTENT_TYPE_NOSNIFF = cast(values.BooleanValue, values.BooleanValue(True))  # noqa: FBT003
-    SECURE_HSTS_INCLUDE_SUBDOMAINS = cast(values.BooleanValue, values.BooleanValue(True))  # noqa: FBT003
-    SECURE_HSTS_SECONDS = cast(values.IntegerValue, values.IntegerValue(31536000))
-    SECURE_REDIRECT_EXEMPT = cast(values.ListValue, values.ListValue([]))
-    SECURE_SSL_HOST = cast(values.Value, values.Value(None))
-    SECURE_SSL_REDIRECT = cast(values.BooleanValue, values.BooleanValue(True))  # noqa: FBT003
-    SECURE_PROXY_SSL_HEADER = cast(values.TupleValue, values.TupleValue(("HTTP_X_FORWARDED_PROTO", "https")))
+    SESSION_COOKIE_SECURE = cast("values.BooleanValue", values.BooleanValue(True))  # noqa: FBT003
+    SECURE_BROWSER_XSS_FILTER = cast("values.BooleanValue", values.BooleanValue(True))  # noqa: FBT003
+    SECURE_CONTENT_TYPE_NOSNIFF = cast("values.BooleanValue", values.BooleanValue(True))  # noqa: FBT003
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = cast("values.BooleanValue", values.BooleanValue(True))  # noqa: FBT003
+    SECURE_HSTS_SECONDS = cast("values.IntegerValue", values.IntegerValue(31536000))
+    SECURE_REDIRECT_EXEMPT = cast("values.ListValue", values.ListValue([]))
+    SECURE_SSL_HOST = cast("values.Value", values.Value(None))
+    SECURE_SSL_REDIRECT = cast("values.BooleanValue", values.BooleanValue(True))  # noqa: FBT003
+    SECURE_PROXY_SSL_HEADER = cast("values.TupleValue", values.TupleValue(("HTTP_X_FORWARDED_PROTO", "https")))
 
 
 class Production(Staging):
-    pass
+    """Settings for the production environment."""

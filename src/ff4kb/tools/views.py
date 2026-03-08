@@ -1,5 +1,6 @@
 # SPDX-License-Identifier: MIT
 # SPDX-FileCopyrightText: 2024 Jason Lynch <jason@aexoden.com>
+"""Views for FF4KB tools."""
 
 import json
 
@@ -14,6 +15,18 @@ from ff4kb.routes.views import ROUTES, get_colors
 
 
 def map_viewer(request: HttpRequest, map_id: str = "0000") -> HttpResponse:
+    """View for the map viewer tool.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+        map_id (str, optional): The ID of the map to view. Defaults to "0000".
+
+    Returns:
+        HttpResponse: The HTTP response object.
+
+    Raises:
+        Http404: If the map ID is invalid or the map does not exist.
+    """
     try:
         map_int = int(map_id, 16)
         map_str = f"{map_int:04X}"
@@ -39,6 +52,14 @@ def map_viewer(request: HttpRequest, map_id: str = "0000") -> HttpResponse:
 
 
 def seed_finder(request: HttpRequest) -> HttpResponse:
+    """View for the seed finder tool.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: The HTTP response object.
+    """
     colors = {}
 
     for route in ROUTES:

@@ -1,5 +1,6 @@
 # SPDX-License-Identifier: MIT
 # SPDX-FileCopyrightText: 2024 Jason Lynch <jason@aexoden.com>
+"""URL patterns for the routes package."""
 
 from django.urls import path
 from django.views.generic import RedirectView

@@ -1,5 +1,6 @@
 # SPDX-License-Identifier: MIT
 # SPDX-FileCopyrightText: 2024 Jason Lynch <jason@aexoden.com>
+"""URL configuration for FF4KB tools."""
 
 from django.urls import path
 from django.views.generic import RedirectView, TemplateView

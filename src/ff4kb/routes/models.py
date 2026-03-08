@@ -1,8 +1,9 @@
 # SPDX-License-Identifier: MIT
 # SPDX-FileCopyrightText: 2024 Jason Lynch <jason@aexoden.com>
+"""Models for the routes package."""
 
 import re
-import subprocess
+import subprocess  # noqa: S404 (used for running rosa with custom variables)
 
 from pathlib import Path
 
@@ -10,6 +11,14 @@ from django.conf import settings
 
 
 def decode_vars(variables: list[str]) -> str:
+    """Decode the custom variable string into a format that can be passed to rosa.
+
+    Args:
+        variables (list[str]): The list of variable strings to decode.
+
+    Returns:
+        str: The decoded variable string.
+    """
     chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_"
     result: list[str] = []
     variables = variables[1:]
@@ -32,15 +41,41 @@ def decode_vars(variables: list[str]) -> str:
 
 
 def get_route_update_time(route: str, seed: int) -> float:
+    """Get the last update time of a route.
+
+    Args:
+        route (str): The name of the route.
+        seed (int): The seed number of the route.
+
+    Returns:
+        float: The last update time of the route in seconds since the epoch.
+    """
     path = Path(settings.BASE_DIR) / "data" / "routes" / route / f"{seed:03d}.txt"
     return path.stat().st_mtime
 
 
 def test_line(patterns: list[str], line: str) -> bool:
+    """Test if a line matches any of the given patterns.
+
+    Args:
+        patterns (list[str]): The list of patterns to test.
+        line (str): The line to test.
+
+    Returns:
+        bool: True if the line matches any pattern, False otherwise.
+    """
     return any(re.search(pattern, line) for pattern in patterns)
 
 
 def test_options(line: str) -> bool:
+    """Test if a line matches any of the option patterns.
+
+    Args:
+        line (str): The line to test.
+
+    Returns:
+        bool: True if the line matches any option pattern, False otherwise.
+    """
     patterns = [
         "(In|Out)ward.*(Steps|Secret)",
         "(Walk|Warp)",
@@ -57,6 +92,14 @@ def test_options(line: str) -> bool:
 
 
 def test_battles(line: str) -> bool:
+    """Test if a line matches any of the battle patterns.
+
+    Args:
+        line (str): The line to test.
+
+    Returns:
+        bool: True if the line matches any battle pattern, False otherwise.
+    """
     patterns = [
         "Blue D. x1",
         "Searcher.*D.Machin",
@@ -72,7 +115,16 @@ def test_battles(line: str) -> bool:
 
 
 class RouteDetail:
+    """A class representing the details of a specific route and seed combination."""
+
     def __init__(self, route: str, seed: int, variables: list[str] | None = None) -> None:
+        """Initialize a RouteDetail instance.
+
+        Args:
+            route (str): The name of the route.
+            seed (int): The seed number of the route.
+            variables (list[str] | None): Optional list of custom variables.
+        """
         self._route = route
         self._seed = seed
         self._path = Path(settings.BASE_DIR) / "data" / "routes" / route / f"{seed:03d}.txt"
@@ -86,61 +138,139 @@ class RouteDetail:
 
     @property
     def data(self) -> list[str]:
+        """Get the data of the route.
+
+        Returns:
+            list[str]: The data of the route.
+        """
         return self._data
 
     @property
     def html_data(self) -> list[str]:
+        """Get the HTML data of the route.
+
+        Returns:
+            list[str]: The HTML data of the route.
+        """
         return self._html_data
 
     @property
     def route_description(self) -> str:
+        """Get the description of the route.
+
+        Returns:
+            str: The description of the route.
+        """
         return f"{self._route_description} (version {self._route_version})"
 
     @property
     def encounters(self) -> int:
+        """Get the number of encounters in the route.
+
+        Returns:
+            int: The number of encounters in the route.
+        """
         return self._encounters
 
     @property
     def steps(self) -> int:
+        """Get the total number of steps in the route.
+
+        Returns:
+            int: The total number of steps in the route.
+        """
         return self._optional_steps + self._extra_steps
 
     @property
     def optional_steps(self) -> int:
+        """Get the number of optional steps in the route.
+
+        Returns:
+            int: The number of optional steps in the route.
+        """
         return self._optional_steps
 
     @property
     def extra_steps(self) -> int:
+        """Get the number of extra steps in the route.
+
+        Returns:
+            int: The number of extra steps in the route.
+        """
         return self._extra_steps
 
     @property
     def frames(self) -> float:
+        """Get the number of frames in the route.
+
+        Returns:
+            float: The number of frames in the route.
+        """
         return self._frames
 
     @property
     def custom(self) -> bool:
+        """Check if the route has custom variables.
+
+        Returns:
+            bool: True if the route has custom variables, False otherwise.
+        """
         return self._custom
 
     @property
     def update_time(self) -> float:
+        """Get the last update time of the route file.
+
+        Returns:
+            float: The last update time of the route file.
+        """
         return self._path.stat().st_mtime
 
     @property
     def saved_time(self) -> float:
+        """Get the saved time of the route.
+
+        Returns:
+            float: The saved time of the route.
+        """
         return self._saved_time
 
     @property
     def saved_encounters(self) -> int:
+        """Get the number of saved encounters in the route.
+
+        Returns:
+            int: The number of saved encounters in the route.
+        """
         return self._saved_encounters
 
     @property
     def battles(self) -> dict[str, list[tuple[int, str, str]]]:
+        """Get the battles in the route.
+
+        Returns:
+            dict[str, list[tuple[int, str, str]]]: The battles in the route.
+        """
         return self._battles
 
     @property
     def vars(self) -> dict[str, int]:
+        """Get the variables in the route.
+
+        Returns:
+            dict[str, int]: The variables in the route.
+        """
         return self._vars
 
     def get_value(self, index: str) -> int:
+        """Get the value of a variable in the route.
+
+        Args:
+            index (str): The index of the variable.
+
+        Returns:
+            int: The value of the variable.
+        """
         return self._vars.get(index, 0)
 
     def _parse_variables(self, data: str) -> None:
@@ -148,14 +278,18 @@ class RouteDetail:
             for index, value in [x.split(":") for x in data.split(" ")]:
                 self._vars[index] = int(value)
 
-    def _load_data(self, variables: list[str] | None) -> None:  # noqa: PLR0912, PLR0915
+    def _load_data(self, variables: list[str] | None) -> None:  # noqa: C901, PLR0912, PLR0914, PLR0915 (complexity)
         phase = 1
+
+        header_phase = 1
+        body_phase = 2
+        footer_phase = 3
 
         if variables:
             var_string = decode_vars(variables)
             rosa_args = ["./rosa", "-r", self._route, "-s", str(self._seed), "-m", "0", "-v", var_string]
 
-            result = subprocess.run(
+            result = subprocess.run(  # noqa: S603 (used for running rosa with custom variables)
                 rosa_args, capture_output=True, cwd=Path(settings.BASE_DIR) / "rosa", encoding="utf-8", check=True
             )
 
@@ -168,11 +302,11 @@ class RouteDetail:
         current_battles: list[tuple[int, str, str]] = []
         keep_battles = False
 
-        for line in data:
+        for line in data:  # noqa: PLR1702
             if not line.strip():
                 phase += 1
 
-            if phase == 1:
+            if phase == header_phase:
                 tokens = line.split("\t")
 
                 if tokens[0] == "ROUTE":
@@ -186,8 +320,8 @@ class RouteDetail:
                         self._frames = float(tokens[1])
                 elif tokens[0] == "VARS":
                     self._parse_variables(tokens[1])
-            elif phase == 2 and len(line) > 1:  # noqa: PLR2004
-                if re.search("Steps: [1-9]", line):
+            elif phase == body_phase and len(line) > 1:
+                if re.search(r"Steps: [1-9]", line):
                     self._html_data.append(f'<b class="text-primary">{line.rstrip()}</b>')
                 elif test_options(line):
                     self._html_data.append(f'<b class="text-info">{line.rstrip()}</b>')
@@ -200,32 +334,35 @@ class RouteDetail:
                 if line.strip().startswith("Step") or line.strip().startswith("(Step"):
                     matches = re.search(r"Step *(?P<step>[0-9]*): *(?P<index>[0-9]*) / (?P<formation>.*)\)?", line)
 
-                    assert matches  # noqa: S101
+                    if matches:
+                        step = int(matches.group("step"))
+                        formation = matches.group("formation")
 
-                    step = int(matches.group("step"))
-                    formation = matches.group("formation")
+                        if re.search(r"Searcher.*Machin", line):
+                            style = "text-primary"
 
-                    if re.search("Searcher.*Machin", line):
-                        style = "text-primary"
-
-                        if line.strip().startswith("("):
-                            style += " font-italic"
+                            if line.strip().startswith("("):
+                                style += " font-italic"
+                                formation = formation[:-1]
+                            else:
+                                style += " font-weight-bold"
+                        elif test_battles(line):
+                            style = "text-danger"
+                        elif line.strip().startswith("("):
+                            style = "text-muted font-italic"
                             formation = formation[:-1]
                         else:
-                            style += " font-weight-bold"
-                    elif test_battles(line):
-                        style = "text-danger"
-                    elif line.strip().startswith("("):
-                        style = "text-muted font-italic"
-                        formation = formation[:-1]
-                    else:
-                        style = ""
+                            style = ""
 
-                    current_battles.append((step, style, formation))
+                        current_battles.append((step, style, formation))
+                    else:
+                        # This should never happen, but if it does, we want to know about it so we can fix the regex
+                        msg = f"Failed to parse battle line: {line}"
+                        raise ValueError(msg)
                 elif (
                     not line.strip().startswith("Battle")
                     and not test_options(line)
-                    and not re.search("Steps: [1-9]", line)
+                    and not re.search(r"Steps: [1-9]", line)
                 ):
                     if keep_battles:
                         self._battles[current_area] = current_battles
@@ -235,7 +372,7 @@ class RouteDetail:
                     keep_battles = False
 
                 self._data.append(line.rstrip())
-            elif phase >= 3 and len(line) > 1:  # noqa: PLR2004
+            elif phase >= footer_phase and len(line) > 1:
                 if keep_battles:
                     self._battles[current_area] = current_battles
                     keep_battles = False
