@@ -15,29 +15,27 @@ env:
   FORCE_COLOR: "1"
 
 jobs:
-  ci:
-    name: Continuous Integration
+  lint:
+    name: Lint and Type Check
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
-      - name: Install uv
-        uses: astral-sh/setup-uv@5a095e7a2014a4212f075830d4f7277575a9d098 # v7
-        with:
-          version: "0.10.9"
+      - name: Install Devbox
+        uses: jetify-com/devbox-install-action@a0d2d53632934ae004f878c840055956d9f741b0 # v0.14.0
 
       - name: Set up uv
-        run: uv sync --locked
+        run: devbox run uv sync --locked
 
       - name: Check formatting
-        run: uv run ruff format --check
+        run: devbox run uv run ruff format --check
 
       - name: Lint
-        run: uv run ruff check
+        run: devbox run uv run ruff check
 
       - name: Type check
-        run: uv run mypy .
+        run: devbox run uv run mypy .
 
   docker-test:
     name: Test Docker Build and Application
