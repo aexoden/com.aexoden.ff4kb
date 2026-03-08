@@ -26,7 +26,9 @@ class Common(Configuration):  # type: ignore[misc]
     # SECURITY WARNING: don't run with debug turned on in production!
     DEBUG = cast("values.BooleanValue", values.BooleanValue(False))  # noqa: FBT003
 
-    ALLOWED_HOSTS: ClassVar[list[str]] = cast("list[str]", values.ListValue(["ff4kb.aexoden.com"], environ_name="ALLOWED_HOSTS"))
+    ALLOWED_HOSTS: ClassVar[list[str]] = cast(
+        "list[str]", values.ListValue(["ff4kb.aexoden.com"], environ_name="ALLOWED_HOSTS")
+    )
 
     ALLOWED_HOSTS.append(gethostname())  # pyright: ignore[reportUnknownMemberType, reportAttributeAccessIssue]
     ALLOWED_HOSTS.extend(list(set(gethostbyname_ex(gethostname())[2])))  # pyright: ignore[reportUnknownMemberType, reportAttributeAccessIssue]
