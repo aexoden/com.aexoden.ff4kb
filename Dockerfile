@@ -1,39 +1,58 @@
-# Use a Python+Poetry image as the base
-FROM ghcr.io/astral-sh/uv:python3.12-trixie-slim@sha256:cab406ea74885312aa1f55a97bc7ed0fd46366643c0e17ffd002a03d7eb9e45f
+#
+# Build the rosa binary
+#
 
-# Copy files
-COPY . /app
+FROM debian:trixie-slim AS rosa-builder
 
-# Install rosa dependencies
-RUN apt-get update
-RUN apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates \
     clang \
     git \
     libboost-dev \
     liblmdb-dev \
     meson \
-    pkg-config
+    pkg-config \
+    && rm -rf /var/lib/apt/lists/*
 
-# Build and install rosa
 RUN git clone https://github.com/aexoden/rosa /rosa-build
 WORKDIR /rosa-build
-RUN git submodule init
-RUN git submodule update
-RUN mkdir build
-RUN CXX=clang++ CXXFLAGS=-march=native meson setup build
-RUN ninja -C build -v
-RUN cp build/rosa /app/rosa/rosa
+RUN git submodule init && git submodule update
+RUN CXX=clang++ meson setup build && ninja -C build -v
+
+#
+# Build the final image
+#
+
+FROM ghcr.io/astral-sh/uv:python3.14-trixie-slim
+
+# Install rosa runtime dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    liblmdb0 \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Copy dependency metadata first to leverage Docker caching
+COPY pyproject.toml uv.lock ./
 
 # Install Python dependencies
 ENV UV_NO_DEV=1
-WORKDIR /app
-RUN uv sync --locked
+RUN uv sync --frozen --no-install-project
 
-# Django setup
-RUN ENVIRONMENT=Build uv run python manage.py collectstatic --noinput
-RUN ENVIRONMENT=Build uv run python manage.py migrate
-RUN ENVIRONMENT=Build uv run python manage.py generate_metrics_cache
+# Copy application code
+COPY . .
 
-# Set up execution
+# Copy rosa binary from builder stage
+COPY --from=rosa-builder /rosa-build/build/rosa ./rosa/rosa
+
+# Install the project itself
+RUN uv sync --frozen
+
+# Django build steps
+RUN ENVIRONMENT=Build uv run python manage.py collectstatic --noinput && \
+    ENVIRONMENT=Build uv run python manage.py migrate && \
+    ENVIRONMENT=Build uv run python manage.py generate_metrics_cache
+
 ENV FORWARDED_ALLOW_IPS='*'
+EXPOSE 8000
 ENTRYPOINT ["uv", "run", "gunicorn", "ff4kb.wsgi", "--log-file", "-"]
