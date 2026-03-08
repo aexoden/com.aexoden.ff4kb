@@ -2,7 +2,7 @@
 # Build the rosa binary
 #
 
-FROM debian:trixie-slim AS rosa-builder
+FROM debian:trixie-slim@sha256:1d3c811171a08a5adaa4a163fbafd96b61b87aa871bbc7aa15431ac275d3d430 AS rosa-builder
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
@@ -23,7 +23,7 @@ RUN CXX=clang++ meson setup build && ninja -C build -v
 # Build the final image
 #
 
-FROM ghcr.io/astral-sh/uv:python3.14-trixie-slim
+FROM ghcr.io/astral-sh/uv:python3.14-trixie-slim@sha256:009e0a24546776dc561c4058a3e643839a16a59b61469dd9ebfb620e79e8ac9a
 
 # Install rosa runtime dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
