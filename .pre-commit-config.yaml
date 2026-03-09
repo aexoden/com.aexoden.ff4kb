@@ -32,27 +32,27 @@ repos:
       - id: uv-lock
         name: uv lockfile check
         description: Check that the uv lockfile is up to date
-        entry: devbox run uv lock --check
+        entry: devbox run -- uv lock --check
         language: system
         pass_filenames: false
 
       - id: ruff-check
         name: ruff check
         description: Lint Python files using ruff
-        entry: devbox run uv run ruff check
+        entry: devbox run -- uv run ruff check
         language: system
         pass_filenames: false
 
       - id: ruff-format
         name: ruff format check
         description: Check Python file formatting using ruff
-        entry: devbox run uv run ruff format --check
+        entry: devbox run -- uv run ruff format --check
         language: system
         pass_filenames: false
 
       - id: mypy
         name: mypy type checker
         description: Type check Python files using mypy
-        entry: devbox run uv run mypy .
+        entry: devbox run -- uv run mypy .
         language: system
         pass_filenames: false
