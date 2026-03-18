@@ -9,12 +9,30 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
+import socket
+
 from pathlib import Path
 from socket import gethostbyname_ex, gethostname
 from typing import Any, ClassVar, cast
 
 from configurations import Configuration, values  # type: ignore[import-untyped]
 from django.core.management.utils import get_random_secret_key  # type: ignore[import-untyped]
+
+
+def _resolve_local_ips() -> list[str]:
+    """Return the local hostname and its resolved IPs, with a short timeout to avoid blocking."""
+    results: list[str] = []
+    hostname = gethostname()
+    results.append(hostname)
+    original_timeout = socket.getdefaulttimeout()
+    try:
+        socket.setdefaulttimeout(3)
+        results.extend(set(gethostbyname_ex(hostname)[2]))
+    except TimeoutError, OSError:
+        pass
+    finally:
+        socket.setdefaulttimeout(original_timeout)
+    return results
 
 
 class Common(Configuration):  # type: ignore[misc]
@@ -30,8 +48,7 @@ class Common(Configuration):  # type: ignore[misc]
         "list[str]", values.ListValue(["ff4kb.aexoden.com"], environ_name="ALLOWED_HOSTS")
     )
 
-    ALLOWED_HOSTS.append(gethostname())  # pyright: ignore[reportUnknownMemberType, reportAttributeAccessIssue]
-    ALLOWED_HOSTS.extend(list(set(gethostbyname_ex(gethostname())[2])))  # pyright: ignore[reportUnknownMemberType, reportAttributeAccessIssue]
+    ALLOWED_HOSTS.extend(_resolve_local_ips())  # pyright: ignore[reportUnknownMemberType, reportAttributeAccessIssue]
 
     # Application definition
     INSTALLED_APPS: ClassVar[list[str]] = [
