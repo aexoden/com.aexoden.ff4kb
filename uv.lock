@@ -109,20 +109,20 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "dj-database-url", specifier = ">=3.1.2" },
-    { name = "django", specifier = ">=6.0.3" },
-    { name = "django-configurations", specifier = ">=2.5.1" },
-    { name = "django-debug-toolbar", specifier = ">=6.2.0" },
-    { name = "django-extensions", specifier = ">=4.1" },
-    { name = "django4-bootstrap-breadcrumbs", specifier = ">=0.10.0" },
-    { name = "gunicorn", specifier = ">=25.1.0" },
-    { name = "whitenoise", specifier = ">=6.12.0" },
+    { name = "dj-database-url", specifier = "==3.1.2" },
+    { name = "django", specifier = "==6.0.3" },
+    { name = "django-configurations", specifier = "==2.5.1" },
+    { name = "django-debug-toolbar", specifier = "==6.2.0" },
+    { name = "django-extensions", specifier = "==4.1" },
+    { name = "django4-bootstrap-breadcrumbs", specifier = "==0.10.0" },
+    { name = "gunicorn", specifier = "==25.1.0" },
+    { name = "whitenoise", specifier = "==6.12.0" },
 ]
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "mypy", specifier = ">=1.19.1" },
-    { name = "ruff", specifier = ">=0.15.5" },
+    { name = "mypy", specifier = "==1.19.1" },
+    { name = "ruff", specifier = "==0.15.6" },
 ]
 
 [[package]]
