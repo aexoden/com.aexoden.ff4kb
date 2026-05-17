@@ -15,6 +15,48 @@ env:
   FORCE_COLOR: "1"
 
 jobs:
+  check-versions:
+    name: Check version sync
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+
+      - name: Check versions
+        run: |
+          set -euo pipefail
+
+          check_version() {
+            local name="$1"
+            shift
+
+            declare -A versions
+            while [[ $# -gt 0 ]]; do
+              versions["$1"]="$2"
+              shift 2
+            done
+
+            unique=$(printf '%s\n' "${versions[@]}" | sort -u | wc -l)
+            if [[ "$unique" -ne 1 ]]; then
+              echo "::error::${name} version mismatch detected:"
+              for source in "${!versions[@]}"; do
+                echo "  ${source}: ${versions[$source]}"
+              done
+              exit 1
+            fi
+
+            echo "All ${name} versions are consistent: ${versions[docker]}"
+          }
+
+          check_version "Python" \
+            docker "$(grep -oP '(?<=FROM python:)[^-]+' Dockerfile)" \
+            pyproject_toml "$(grep -oP '(?<=requires-python = "==)[^"]+' pyproject.toml)" \
+            python_version_file "$(cat .python-version)"
+
+          check_version "uv" \
+            devbox "$(jq -r '.packages.uv' devbox.json)" \
+            docker "$(grep -oP '(?<=COPY --from=ghcr.io/astral-sh/uv:)[^ @]+' Dockerfile | head -n 1)"
+
   lint:
     name: Lint and Type Check
     runs-on: ubuntu-latest

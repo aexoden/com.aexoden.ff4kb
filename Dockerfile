@@ -23,7 +23,8 @@ RUN CXX=clang++ meson setup build && ninja -C build -v
 # Build the final image
 #
 
-FROM ghcr.io/astral-sh/uv:python3.14-trixie-slim@sha256:8090f78a8865a8fce78ec0bce3177648879148fb22c6dfc4cc0de51f15aea107
+FROM python:3.14.3-slim-trixie
+COPY --from=ghcr.io/astral-sh/uv:0.10.12 /uv /uvx /bin/
 
 # Install rosa runtime dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
