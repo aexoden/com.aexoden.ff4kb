@@ -51,7 +51,7 @@ urlpatterns: list[URLPattern | URLResolver] = [
 ]
 
 if settings.DEBUG:
-    import debug_toolbar  # type: ignore[import-untyped]
+    import debug_toolbar
 
     urlpatterns.extend(
         [
