@@ -1137,16 +1137,16 @@ class FF4:
                     condition_data["parameter_3"],
                 )
 
-                try:
-                    target, plural = format_condition_target(parameters[0])
+                target_value = parameters[0] & 0x7F if parameters[0] & 0x80 > 0 else parameters[0]
 
-                    if parameters[0] & 0x80 > 0:
-                        target, plural = format_condition_target(parameters[0] & 0x7F)
-                    else:
-                        target = target.replace("all", "any")
-                        plural = False
-                except ValueError:
+                if target_value == 0:
                     target, plural = "nobody", False
+                else:
+                    target, plural = format_condition_target(target_value)
+
+                if parameters[0] & 0x80 == 0:
+                    target = target.replace("all", "any")
+                    plural = False
 
                 verb = "have" if plural else "has"
 
