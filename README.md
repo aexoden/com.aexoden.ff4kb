@@ -70,10 +70,11 @@ During development, they will be generated on demand if not already cached.
 
 ## Deployment
 
-This site is currently deployed using a [dokku](https://dokku.com/) instance.
-However, the deployment is done via a standard Dockerfile. There are certain
-environment variables that should be set, either automatically by Dokku (or some
-other PaaS solution), or manually by the user:
+This site is currently deployed using a [Coolify](https://coolify.io) instance,
+and was historically deployed using [dokku](https://dokku.com/). However, the
+deployment is done using a standard Dockerfile, so in principle, it should be
+easy to deploy with other tools as well. There are certain environment variables
+that need to be set, either automatically by your PaaS solution or manually:
 
 * DJANGO_ALLOWED_HOSTS: A comma separated list of domain names the app should
   reply to. The default is `ff4kb.aexoden.com` but this is almost certainly not
@@ -81,7 +82,11 @@ other PaaS solution), or manually by the user:
 * DJANGO_SECRET_KEY: Should be set to a random, unpredictable value. Generators
   are available on the web.
 * ENVIRONMENT: Set to `Production` for production.
-* PORT: The port to bind to, typically set automatically by Dokku.
+* PORT: The port to bind to. Set automatically by Dokku or Coolify. Defaults to
+  8000.
+
+You will almost certainly need some sort of reverse proxy, either provided by
+Dokku, Coolify, etc. or manually configured.
 
 ## Usage Notes
 
