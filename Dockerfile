@@ -56,4 +56,8 @@ RUN ENVIRONMENT=Build uv run python manage.py collectstatic --noinput && \
 
 ENV FORWARDED_ALLOW_IPS='*'
 EXPOSE 8000
+
+HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
+    CMD ["python", "/app/scripts/healthcheck.py"]
+
 ENTRYPOINT ["uv", "run", "gunicorn", "ff4kb.wsgi", "--log-file", "-"]
