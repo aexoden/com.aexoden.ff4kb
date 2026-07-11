@@ -78,6 +78,20 @@ ROUTES: dict[str, dict[str, str | bool]] = {
         "seed_finder": True,
         "status": "Optimal",
     },
+    "cw": {
+        "name": "Any% (Credits Warp)",
+        "description": (
+            "This route is for the modern (2026+) Any% category that does a credits warp shortly after Cecil becomes a"
+            " paladin. I did not generate the current version of the routes myself, so I make no guarantees about"
+            " correctness. I may or may not fix that at some point."
+        ),
+        "group": "alternate",
+        "enabled": True,
+        "twin_safe": False,
+        "complete": False,
+        "seed_finder": False,
+        "status": "Unknown",
+    },
     "nocw": {
         "name": "Any% NoCW",
         "description": (
