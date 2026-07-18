@@ -348,7 +348,7 @@ class FF4:
 
     @property
     def version(self) -> str:
-        """Get the version of the ROM."""
+        """The version of the ROM."""
         return self._version
 
     def _scan_encounters(self) -> None:
