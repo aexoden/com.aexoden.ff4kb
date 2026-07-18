@@ -138,7 +138,7 @@ class RouteDetail:
 
     @property
     def data(self) -> list[str]:
-        """Get the data of the route.
+        """The route data.
 
         Returns:
             list[str]: The data of the route.
@@ -147,7 +147,7 @@ class RouteDetail:
 
     @property
     def html_data(self) -> list[str]:
-        """Get the HTML data of the route.
+        """The HTML data of the route.
 
         Returns:
             list[str]: The HTML data of the route.
@@ -156,7 +156,7 @@ class RouteDetail:
 
     @property
     def route_description(self) -> str:
-        """Get the description of the route.
+        """The description of the route.
 
         Returns:
             str: The description of the route.
@@ -165,7 +165,7 @@ class RouteDetail:
 
     @property
     def encounters(self) -> int:
-        """Get the number of encounters in the route.
+        """The number of encounters in the route.
 
         Returns:
             int: The number of encounters in the route.
@@ -174,7 +174,7 @@ class RouteDetail:
 
     @property
     def steps(self) -> int:
-        """Get the total number of steps in the route.
+        """The total number of steps in the route.
 
         Returns:
             int: The total number of steps in the route.
@@ -183,7 +183,7 @@ class RouteDetail:
 
     @property
     def optional_steps(self) -> int:
-        """Get the number of optional steps in the route.
+        """The number of optional steps in the route.
 
         Returns:
             int: The number of optional steps in the route.
@@ -192,7 +192,7 @@ class RouteDetail:
 
     @property
     def extra_steps(self) -> int:
-        """Get the number of extra steps in the route.
+        """The number of extra steps in the route.
 
         Returns:
             int: The number of extra steps in the route.
@@ -201,7 +201,7 @@ class RouteDetail:
 
     @property
     def frames(self) -> float:
-        """Get the number of frames in the route.
+        """The number of frames in the route.
 
         Returns:
             float: The number of frames in the route.
@@ -210,7 +210,7 @@ class RouteDetail:
 
     @property
     def custom(self) -> bool:
-        """Check if the route has custom variables.
+        """Whether the route has custom variables.
 
         Returns:
             bool: True if the route has custom variables, False otherwise.
@@ -219,7 +219,7 @@ class RouteDetail:
 
     @property
     def update_time(self) -> float:
-        """Get the last update time of the route file.
+        """The last update time of the route file.
 
         Returns:
             float: The last update time of the route file.
@@ -228,7 +228,7 @@ class RouteDetail:
 
     @property
     def saved_time(self) -> float:
-        """Get the saved time of the route.
+        """The saved time of the route.
 
         Returns:
             float: The saved time of the route.
@@ -237,7 +237,7 @@ class RouteDetail:
 
     @property
     def saved_encounters(self) -> int:
-        """Get the number of saved encounters in the route.
+        """The number of saved encounters in the route.
 
         Returns:
             int: The number of saved encounters in the route.
@@ -246,7 +246,7 @@ class RouteDetail:
 
     @property
     def battles(self) -> dict[str, list[tuple[int, str, str]]]:
-        """Get the battles in the route.
+        """The battles in the route.
 
         Returns:
             dict[str, list[tuple[int, str, str]]]: The battles in the route.
@@ -255,7 +255,7 @@ class RouteDetail:
 
     @property
     def vars(self) -> dict[str, int]:
-        """Get the variables in the route.
+        """The variables in the route.
 
         Returns:
             dict[str, int]: The variables in the route.
