@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: MIT
 # SPDX-FileCopyrightText: 2024 Jason Lynch <jason@aexoden.com>
-# ruff: noqa: T201 (print statements are intentional for this script)
+# ruff: file-ignore[print] (print statements are intentional for this script)
 """Script to dump data from FF4 ROMs."""
 
 import argparse
@@ -199,11 +199,11 @@ CHARACTERS: dict[str, dict[int, str]] = {
         0xBE: "ュ",
         0xBF: "ョ",
         0xC2: "ー",
-        0xC4: "！",  # noqa: RUF001
-        0xC5: "？",  # noqa: RUF001
-        0xC6: "％",  # noqa: RUF001
+        0xC4: "！",  # ruff:ignore[ambiguous-unicode-character-string]
+        0xC5: "？",  # ruff:ignore[ambiguous-unicode-character-string]
+        0xC6: "％",  # ruff:ignore[ambiguous-unicode-character-string]
         0xC7: "/",
-        0xC8: "：",  # noqa: RUF001
+        0xC8: "：",  # ruff:ignore[ambiguous-unicode-character-string]
         0xC9: "」",
         0xCA: "ア",
         0xCB: "イ",
@@ -229,7 +229,7 @@ CHARACTERS: dict[str, dict[int, str]] = {
         0xDF: "ニ",
         0xE0: "ヌ",
         0xE1: "ネ",
-        0xE2: "ノ",  # noqa: RUF001
+        0xE2: "ノ",  # ruff:ignore[ambiguous-unicode-character-string]
         0xE3: "ハ",
         0xE4: "ヒ",
         0xE5: "フ",
@@ -366,11 +366,11 @@ class FF4:
             map_address = 0x0EC542
             map_count = 64
             group_address = 0x0EC796
-        elif map_id == 0x1000:  # noqa: PLR2004
+        elif map_id == 0x1000:  # ruff:ignore[magic-value-comparison]
             map_address = 0x0EC582
             map_count = 16
             group_address = 0x0EC796
-        elif map_id == 0x2000:  # noqa: PLR2004
+        elif map_id == 0x2000:  # ruff:ignore[magic-value-comparison]
             map_address = 0x0EC592
             map_count = 4
             group_address = 0x0EC796
@@ -387,7 +387,7 @@ class FF4:
 
         formations: set[int] = set()
 
-        if map_id >= 0x3000:  # noqa: PLR2004
+        if map_id >= 0x3000:  # ruff:ignore[magic-value-comparison]
             encounter_rate = self._read_u8(0x0EC342 + map_id - 0x3000)
             if encounter_rate == 0:
                 return formations
@@ -396,13 +396,13 @@ class FF4:
             address = group_address + group * 8
             for i in range(8):
                 formation = self._read_u8(address + i)
-                if map_id in {0x1000, 0x2000} or map_id >= 0x3100:  # noqa: PLR2004
+                if map_id in {0x1000, 0x2000} or map_id >= 0x3100:  # ruff:ignore[magic-value-comparison]
                     formation += 0x100
                 formations.add(formation)
 
         return formations
 
-    def _scan_event(self, event_id: int, map_id: int) -> None:  # noqa: C901, PLR0912
+    def _scan_event(self, event_id: int, map_id: int) -> None:  # ruff:ignore[complex-structure, too-many-branches]
         address = 0x128200 + self._read_u16(0x128000 + event_id * 2)
         end_address = 0x128200 + self._read_u16(0x128000 + (event_id + 1) * 2)
 
@@ -412,39 +412,39 @@ class FF4:
         while address < end_address:
             opcode = self._read_u8(address)
 
-            if opcode < 0xDB:  # noqa: PLR2004
+            if opcode < 0xDB:  # ruff:ignore[magic-value-comparison]
                 byte_count = 1
-            elif opcode == 0xE2:  # noqa: PLR2004
+            elif opcode == 0xE2:  # ruff:ignore[magic-value-comparison]
                 byte_count = 3
-            elif opcode == 0xFE:  # noqa: PLR2004
+            elif opcode == 0xFE:  # ruff:ignore[magic-value-comparison]
                 byte_count = 5
             else:
                 byte_count = 2
 
-            if opcode == 0xFE:  # noqa: PLR2004
+            if opcode == 0xFE:  # ruff:ignore[magic-value-comparison]
                 next_byte = self._read_u8(address + 1)
-                if next_byte == 0xFB:  # noqa: PLR2004
+                if next_byte == 0xFB:  # ruff:ignore[magic-value-comparison]
                     current_map.append(0x0000)
-                elif next_byte == 0xFC:  # noqa: PLR2004
+                elif next_byte == 0xFC:  # ruff:ignore[magic-value-comparison]
                     current_map.append(0x1000)
-                elif next_byte == 0xFD:  # noqa: PLR2004
+                elif next_byte == 0xFD:  # ruff:ignore[magic-value-comparison]
                     current_map.append(0x2000)
                 else:
-                    current_map.append(0x3000 + next_byte + (0x100 if current_map[-1] > 0x3100 else 0))  # noqa: PLR2004
-            elif opcode == 0xFD:  # noqa: PLR2004
+                    current_map.append(0x3000 + next_byte + (0x100 if current_map[-1] > 0x3100 else 0))  # ruff:ignore[magic-value-comparison]
+            elif opcode == 0xFD:  # ruff:ignore[magic-value-comparison]
                 next_byte = self._read_u8(address + 1)
-                if next_byte == 0x1D:  # noqa: PLR2004
+                if next_byte == 0x1D:  # ruff:ignore[magic-value-comparison]
                     if len(current_map) == 1:
                         warning = True
                     else:
                         current_map.pop()
-                elif next_byte == 0x04:  # noqa: PLR2004
+                elif next_byte == 0x04:  # ruff:ignore[magic-value-comparison]
                     # Girl and Titan
                     self._encounters_maps[current_map[-1]].add(0x0EC)
-            elif opcode == 0xEC:  # noqa: PLR2004
+            elif opcode == 0xEC:  # ruff:ignore[magic-value-comparison]
                 formation = self._read_u8(address + 1)
 
-                if current_map[-1] >= 0x3100:  # noqa: PLR2004
+                if current_map[-1] >= 0x3100:  # ruff:ignore[magic-value-comparison]
                     formation += 0x100
 
                 self._encounters_maps[current_map[-1]].add(formation)
@@ -463,7 +463,7 @@ class FF4:
         npc_placement_offset = self._read_u8(map_address + 3) * 2
         high_npcs = False
 
-        if self._read_u8(map_address + 10) & 0x80 > 0 or map_id in {0x1000, 0x2000} or map_id >= 0x3100:  # noqa: PLR2004
+        if self._read_u8(map_address + 10) & 0x80 > 0 or map_id in {0x1000, 0x2000} or map_id >= 0x3100:  # ruff:ignore[magic-value-comparison]
             high_npcs = True
             npc_placement_offset += 0x200
 
@@ -479,7 +479,7 @@ class FF4:
             n_limit = self._read_u16(0x139800 + (npc + 1) * 2) + 0x139C00
 
             while n_address < n_limit:
-                if self._read_u8(n_address) == 0xFF:  # noqa: PLR2004
+                if self._read_u8(n_address) == 0xFF:  # ruff:ignore[magic-value-comparison]
                     event = self._read_u8(n_address + 1)
                     self._scan_event(event, map_id)
 
@@ -498,22 +498,22 @@ class FF4:
             self._scan_triggers_map(map_id)
 
     def _scan_triggers_map(self, map_id: int) -> None:
-        if map_id < 0x3000:  # noqa: PLR2004
+        if map_id < 0x3000:  # ruff:ignore[magic-value-comparison]
             if self.version in {"jp", "jp-rev-1"}:
                 address = self._read_u16(int(0x158000 + map_id / 0x1000 * 2)) + 0x158006
                 limit = (
                     self._read_u16(int(0x158000 + ((map_id / 0x1000) + 1) * 2)) + 0x158006
-                    if map_id < 0x2000  # noqa: PLR2004
+                    if map_id < 0x2000  # ruff:ignore[magic-value-comparison]
                     else 0x1581A0
                 )
             else:
                 address = self._read_u16(int(0x19FE60 + map_id / 0x1000 * 2)) + 0x19FE66
                 limit = (
                     self._read_u16(int(0x19FE60 + ((map_id / 0x1000) + 1) * 2)) + 0x19FE66
-                    if map_id < 0x2000  # noqa: PLR2004
+                    if map_id < 0x2000  # ruff:ignore[magic-value-comparison]
                     else 0x1A0000
                 )
-        else:  # noqa: PLR5501
+        else:  # ruff:ignore[collapsible-else-if]
             if self.version in {"jp", "jp-rev-1"}:
                 address = self._read_u16(0x158200 + (map_id - 0x3000) * 2) + 0x158500
                 limit = self._read_u16(0x158200 + ((map_id - 0x3000) + 1) * 2) + 0x158500
@@ -522,13 +522,13 @@ class FF4:
                 limit = self._read_u16(0x158000 + ((map_id - 0x3000) + 1) * 2) + 0x158300
 
         while address < limit:
-            if self._read_u8(address + 2) == 0xFF:  # noqa: PLR2004
+            if self._read_u8(address + 2) == 0xFF:  # ruff:ignore[magic-value-comparison]
                 conditional_event = self._read_u8(address + 3)
                 ce_address = self._read_u16(0x12F260 + conditional_event * 2) + 0x12F460
                 ce_limit = self._read_u16(0x12F260 + (conditional_event + 1) * 2) + 0x12F460
 
                 while ce_address < ce_limit:
-                    if self._read_u8(ce_address) == 0xFF:  # noqa: PLR2004
+                    if self._read_u8(ce_address) == 0xFF:  # ruff:ignore[magic-value-comparison]
                         event = self._read_u8(ce_address + 1)
                         # In theory, we should verify that this tile is actually a trigger tile, but that's even more
                         # complexity.
@@ -537,12 +537,12 @@ class FF4:
                         ce_address += 1
 
                     ce_address += 1
-            elif self._read_u8(address + 2) == 0xFE:  # noqa: PLR2004
+            elif self._read_u8(address + 2) == 0xFE:  # ruff:ignore[magic-value-comparison]
                 byte_2 = self._read_u8(address + 3)
 
                 if byte_2 & 0x40 > 0:
                     formation = (
-                        (byte_2 & 0x1F) + 0x1C0 + (1 if map_id in {0x1000, 0x2000} or map_id >= 0x3100 else 0) * 32  # noqa: PLR2004
+                        (byte_2 & 0x1F) + 0x1C0 + (1 if map_id in {0x1000, 0x2000} or map_id >= 0x3100 else 0) * 32  # ruff:ignore[magic-value-comparison]
                     )
                     self._encounters_maps[map_id].add(formation)
 
@@ -564,7 +564,7 @@ class FF4:
                         results["maps"].add(map_id)
 
                     # Egg
-                    if monster_id == 0xDF and formation_data[f"monster_{i}_egg"]:  # noqa: PLR2004
+                    if monster_id == 0xDF and formation_data[f"monster_{i}_egg"]:  # ruff:ignore[magic-value-comparison]
                         results["maps"].add(map_id)
 
         return results
@@ -592,7 +592,7 @@ class FF4:
             monster: dict[str, Any] = {
                 "id": self._read_u8(base_address + 1 + i),
                 "count": (monster_counts >> ((3 - i) * 2)) & 0x03,
-                "swooned": (i == 1 and swoon_mode in {1, 2}) or (i == 2 and swoon_mode in {2, 3}),  # noqa: PLR2004
+                "swooned": (i == 1 and swoon_mode in {1, 2}) or (i == 2 and swoon_mode in {2, 3}),  # ruff:ignore[magic-value-comparison]
                 "egg": (flags_1 >> (7 - i)) & 0x01 > 0,
             }
 
@@ -653,7 +653,7 @@ class FF4:
         Returns:
             dict[str, Any]: A dictionary containing information about the spell.
         """
-        if spell_id < 0x48:  # noqa: PLR2004
+        if spell_id < 0x48:  # ruff:ignore[magic-value-comparison]
             base_address = 0x0F8900
             length = 6
         else:
@@ -667,7 +667,7 @@ class FF4:
             "name": name,
         }
 
-    def get_monster_info(self, monster_id: int) -> dict[str, Any]:  # noqa: C901, PLR0912, PLR0914, PLR0915
+    def get_monster_info(self, monster_id: int) -> dict[str, Any]:  # ruff:ignore[complex-structure, too-many-branches, too-many-locals, too-many-statements]
         """Get information about a monster by its ID.
 
         Args:
@@ -713,9 +713,9 @@ class FF4:
             item_drop_rate = 0
         elif item_drop_rate == 1:
             item_drop_rate = 5
-        elif item_drop_rate == 2:  # noqa: PLR2004
+        elif item_drop_rate == 2:  # ruff:ignore[magic-value-comparison]
             item_drop_rate = 25
-        elif item_drop_rate == 3:  # noqa: PLR2004
+        elif item_drop_rate == 3:  # ruff:ignore[magic-value-comparison]
             item_drop_rate = 99
         else:
             item_drop_rate = 25
@@ -731,10 +731,10 @@ class FF4:
         locations = self._find_monster(monster_id)
 
         for map_id in locations["maps"]:
-            if 0x315A <= map_id <= 0x315C or 0x3167 <= map_id <= 0x317E:  # noqa: PLR2004
-                alternate_scripts_set.add(True)  # noqa: FBT003
+            if 0x315A <= map_id <= 0x315C or 0x3167 <= map_id <= 0x317E:  # ruff:ignore[magic-value-comparison]
+                alternate_scripts_set.add(True)  # ruff:ignore[boolean-positional-value-in-call]
             else:
-                alternate_scripts_set.add(False)  # noqa: FBT003
+                alternate_scripts_set.add(False)  # ruff:ignore[boolean-positional-value-in-call]
 
         alternate_scripts: bool = False
 
@@ -855,10 +855,10 @@ class FF4:
         while index <= script_id:
             value = self._read_u8(address)
 
-            if value == 0xFF:  # noqa: PLR2004
+            if value == 0xFF:  # ruff:ignore[magic-value-comparison]
                 address += 1
                 index += 1
-            elif index == 0xE7:  # noqa: PLR2004
+            elif index == 0xE7:  # ruff:ignore[magic-value-comparison]
                 address += 1
             elif index == script_id:
                 scripts[f"condition_set_{pair}"] = value
@@ -923,7 +923,7 @@ class FF4:
         while index <= condition_set_id:
             value = self._read_u8(address)
 
-            if value == 0xFF:  # noqa: PLR2004
+            if value == 0xFF:  # ruff:ignore[magic-value-comparison]
                 index += 1
             elif index == condition_set_id:
                 conditions[f"condition_{entry}"] = value
@@ -989,7 +989,7 @@ class FF4:
         while index <= action_set_id:
             value = self._read_u8(address)
 
-            if value == 0xFF:  # noqa: PLR2004
+            if value == 0xFF:  # ruff:ignore[magic-value-comparison]
                 index += 1
             elif index == action_set_id:
                 blob.append(str(value))

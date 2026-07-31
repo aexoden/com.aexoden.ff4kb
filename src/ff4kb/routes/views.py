@@ -543,7 +543,7 @@ def get_metrics(route: str) -> dict[str, list[float]]:
             "steps": [0 for _ in range(256)],
         }
 
-    try:  # noqa: PLW0717
+    try:  # ruff:ignore[too-many-statements-in-try-clause]
         for seed in range(256):
             if (
                 seed_metrics["update_time"][seed] == -1

@@ -46,8 +46,8 @@ line-ending = "lf"
 preview = true
 select = ["ALL"]
 ignore = [
-  "COM812",
-  "ISC001",
+  "missing-trailing-comma",
+  "single-line-implicit-string-concatenation",
 ]
 
 [tool.ruff.lint.flake8-copyright]

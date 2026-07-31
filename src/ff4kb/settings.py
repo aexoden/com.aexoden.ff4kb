@@ -42,7 +42,7 @@ class Common(Configuration):  # type: ignore[misc]
     BASE_DIR = str(Path(__file__).absolute().parent.parent.parent)
 
     # SECURITY WARNING: don't run with debug turned on in production!
-    DEBUG = cast("values.BooleanValue", values.BooleanValue(False))  # noqa: FBT003
+    DEBUG = cast("values.BooleanValue", values.BooleanValue(False))  # ruff:ignore[boolean-positional-value-in-call]
 
     ALLOWED_HOSTS: ClassVar[list[str]] = cast(
         "list[str]", values.ListValue(["ff4kb.aexoden.com"], environ_name="ALLOWED_HOSTS")
@@ -178,14 +178,14 @@ class Staging(Run):
     """Settings for the staging environment."""
 
     # Security
-    SESSION_COOKIE_SECURE = cast("values.BooleanValue", values.BooleanValue(True))  # noqa: FBT003
-    SECURE_BROWSER_XSS_FILTER = cast("values.BooleanValue", values.BooleanValue(True))  # noqa: FBT003
-    SECURE_CONTENT_TYPE_NOSNIFF = cast("values.BooleanValue", values.BooleanValue(True))  # noqa: FBT003
-    SECURE_HSTS_INCLUDE_SUBDOMAINS = cast("values.BooleanValue", values.BooleanValue(True))  # noqa: FBT003
+    SESSION_COOKIE_SECURE = cast("values.BooleanValue", values.BooleanValue(True))  # ruff:ignore[boolean-positional-value-in-call]
+    SECURE_BROWSER_XSS_FILTER = cast("values.BooleanValue", values.BooleanValue(True))  # ruff:ignore[boolean-positional-value-in-call]
+    SECURE_CONTENT_TYPE_NOSNIFF = cast("values.BooleanValue", values.BooleanValue(True))  # ruff:ignore[boolean-positional-value-in-call]
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = cast("values.BooleanValue", values.BooleanValue(True))  # ruff:ignore[boolean-positional-value-in-call]
     SECURE_HSTS_SECONDS = cast("values.IntegerValue", values.IntegerValue(31536000))
     SECURE_REDIRECT_EXEMPT = cast("values.ListValue", values.ListValue([]))
     SECURE_SSL_HOST = cast("values.Value", values.Value(None))
-    SECURE_SSL_REDIRECT = cast("values.BooleanValue", values.BooleanValue(True))  # noqa: FBT003
+    SECURE_SSL_REDIRECT = cast("values.BooleanValue", values.BooleanValue(True))  # ruff:ignore[boolean-positional-value-in-call]
     SECURE_PROXY_SSL_HEADER = cast("values.TupleValue", values.TupleValue(("HTTP_X_FORWARDED_PROTO", "https")))
 
 

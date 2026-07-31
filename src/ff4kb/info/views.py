@@ -302,7 +302,7 @@ def filter_status(value: str, _version: Version) -> str:
 
 
 def extract_values[T: (str, int, bool)](
-    values: str | int | bool | dict[str, list[str]],  # noqa: FBT001
+    values: str | int | bool | dict[str, list[str]],  # ruff:ignore[boolean-type-hint-positional-argument]
     return_type: type[T],
 ) -> dict[Version, T]:
     """Extract values for different game versions.
@@ -353,8 +353,8 @@ def extract_values[T: (str, int, bool)](
     }
 
 
-def group_values[T: (str, int, bool)](  # noqa: C901
-    values: str | int | bool | dict[str, list[str]],  # noqa: FBT001
+def group_values[T: (str, int, bool)](  # ruff:ignore[complex-structure]
+    values: str | int | bool | dict[str, list[str]],  # ruff:ignore[boolean-type-hint-positional-argument]
     return_type: type[T],
     filter_func: Callable[[str, Version], str] | None = None,
 ) -> dict[str, T]:
@@ -425,7 +425,7 @@ def group_values[T: (str, int, bool)](  # noqa: C901
     return {x[1][1]: return_type(x[1][0]) for x in sorted(output, reverse=True)}
 
 
-def format_value(value: str | int | bool) -> str:  # noqa: FBT001
+def format_value(value: str | int | bool) -> str:  # ruff:ignore[boolean-type-hint-positional-argument]
     """Format a value for display.
 
     Args:
@@ -447,7 +447,7 @@ def format_value(value: str | int | bool) -> str:  # noqa: FBT001
 
 
 def group_values_string(
-    values: str | int | bool | dict[Any, list[str]],  # noqa: FBT001
+    values: str | int | bool | dict[Any, list[str]],  # ruff:ignore[boolean-type-hint-positional-argument]
     filter_func: Callable[[str, Version], str] | None = None,
 ) -> str:
     """Group values for different game versions and format them as a string.
@@ -501,7 +501,7 @@ def format_action_target(target: int) -> str:
         0x29: "all swooned monsters",
     }
 
-    if target < 0x16:  # noqa: PLR2004
+    if target < 0x16:  # ruff:ignore[magic-value-comparison]
         return format_character_target(target)[0]
 
     return targets.get(target, f"Unexpected target value: {target:02X}")
@@ -551,7 +551,7 @@ def format_character_target(target: int) -> tuple[str, bool]:
     raise ValueError(msg)
 
 
-def format_condition_target(target: int) -> tuple[str, bool]:  # noqa: C901, PLR0911
+def format_condition_target(target: int) -> tuple[str, bool]:  # ruff:ignore[complex-structure, too-many-return-statements]
     """Format a condition target for display.
 
     Args:
@@ -561,10 +561,10 @@ def format_condition_target(target: int) -> tuple[str, bool]:  # noqa: C901, PLR
         A tuple containing a human-readable string representing the condition target
         and a boolean indicating whether the target is valid.
     """
-    if target < 0x16:  # noqa: PLR2004
+    if target < 0x16:  # ruff:ignore[magic-value-comparison]
         return format_character_target(target)
 
-    if target == 0x17:  # noqa: PLR2004
+    if target == 0x17:  # ruff:ignore[magic-value-comparison]
         return "self", False
 
     if target in {0x18, 0x19}:
@@ -579,10 +579,10 @@ def format_condition_target(target: int) -> tuple[str, bool]:  # noqa: C901, PLR
     if target in {0x1C, 0x27}:
         return "all monsters of type 3", True
 
-    if target == 0x1D:  # noqa: PLR2004
+    if target == 0x1D:  # ruff:ignore[magic-value-comparison]
         return "all", True
 
-    if target == 0x1E:  # noqa: PLR2004
+    if target == 0x1E:  # ruff:ignore[magic-value-comparison]
         return "all except self", True
 
     if target in {0x1F, 0x24}:
@@ -783,7 +783,7 @@ class FF4:
     # Private Methods
     #
 
-    def _get_formation_description(self, formation_id: int, version: Version) -> str:  # noqa: PLR0914
+    def _get_formation_description(self, formation_id: int, version: Version) -> str:  # ruff:ignore[too-many-locals]
         formation_data = self._formations[formation_id]
 
         monster_1_id = extract_values(formation_data["monster_1_id"], int)[version]
@@ -867,99 +867,99 @@ class FF4:
         stats = self._derived_stats[derived_stats_id]
         return f"{stats['multiplier']} x {stats['power']} ({stats['accuracy']}%)"
 
-    def _format_command(self, command_id: int, parameters: list[int]) -> str:  # noqa: C901, PLR0911, PLR0912, PLR0915
-        if command_id < 0xC0:  # noqa: PLR2004
-            spell_name = ff4.get_spell_names(command_id)[Version.US] if command_id < 0xB0 else ""  # noqa: PLR2004
+    def _format_command(self, command_id: int, parameters: list[int]) -> str:  # ruff:ignore[complex-structure, too-many-branches, too-many-return-statements, too-many-statements]
+        if command_id < 0xC0:  # ruff:ignore[magic-value-comparison]
+            spell_name = ff4.get_spell_names(command_id)[Version.US] if command_id < 0xB0 else ""  # ruff:ignore[magic-value-comparison]
 
-            if command_id < 0x31:  # noqa: PLR2004
+            if command_id < 0x31:  # ruff:ignore[magic-value-comparison]
                 pass
-            elif command_id < 0x5E:  # noqa: PLR2004
+            elif command_id < 0x5E:  # ruff:ignore[magic-value-comparison]
                 spell_name = ff4.get_spell_names(command_id - 0x30)[Version.US]
                 spell_name = f"{spell_name} (target all by default)"
-            elif command_id == 0x8E:  # noqa: PLR2004
+            elif command_id == 0x8E:  # ruff:ignore[magic-value-comparison]
                 spell_name = f"special spell to order other monsters (index 0x{command_id:02X})"
-            elif command_id == 0xA9:  # noqa: PLR2004
+            elif command_id == 0xA9:  # ruff:ignore[magic-value-comparison]
                 spell_name = f"special spell to increment monster invincibility flag (index 0x{command_id:02X})"
-            elif command_id == 0xAA:  # noqa: PLR2004
+            elif command_id == 0xAA:  # ruff:ignore[magic-value-comparison]
                 spell_name = f"special spell to decrement monster invincibility flag (index 0x{command_id:02X})"
-            elif command_id == 0xAD:  # noqa: PLR2004
+            elif command_id == 0xAD:  # ruff:ignore[magic-value-comparison]
                 spell_name = f"special spell to replace self with next monster (index 0x{command_id:02X})"
-            elif command_id == 0xAE:  # noqa: PLR2004
+            elif command_id == 0xAE:  # ruff:ignore[magic-value-comparison]
                 spell_name = f"special spell to end battle (index 0x{command_id:02X})"
-            elif command_id == 0xAF:  # noqa: PLR2004
+            elif command_id == 0xAF:  # ruff:ignore[magic-value-comparison]
                 spell_name = f"special spell to advance EvilWall (index 0x{command_id:02X})"
-            elif command_id == 0xB0:  # noqa: PLR2004
+            elif command_id == 0xB0:  # ruff:ignore[magic-value-comparison]
                 spell_name = (
                     f"special spell to clear Caller status and animate D.Mist attack (index 0x{command_id:02X})"
                 )
-            elif command_id == 0xB1:  # noqa: PLR2004
+            elif command_id == 0xB1:  # ruff:ignore[magic-value-comparison]
                 spell_name = f"special spell to activate Caller (index 0x{command_id:02X})"
-            elif command_id == 0xB3:  # noqa: PLR2004
+            elif command_id == 0xB3:  # ruff:ignore[magic-value-comparison]
                 spell_name = f"special spell to show Anna apparition (index 0x{command_id:02X})"
-            elif command_id == 0xB4:  # noqa: PLR2004
+            elif command_id == 0xB4:  # ruff:ignore[magic-value-comparison]
                 spell_name = f"special spell to show Edward and Tellah apparition (index 0x{command_id:02X})"
-            elif command_id == 0xB5:  # noqa: PLR2004
+            elif command_id == 0xB5:  # ruff:ignore[magic-value-comparison]
                 spell_name = f"special spell to show Palom and Porom apparition (index 0x{command_id:02X})"
-            elif command_id == 0xB6:  # noqa: PLR2004
+            elif command_id == 0xB6:  # ruff:ignore[magic-value-comparison]
                 spell_name = f"special spell to show Yang and Cid apparitions (index 0x{command_id:02X})"
-            elif command_id == 0xB7:  # noqa: PLR2004
+            elif command_id == 0xB7:  # ruff:ignore[magic-value-comparison]
                 spell_name = f"special spell to show FuSoYa and Golbez apparitions (index 0x{command_id:02X})"
-            elif command_id == 0xB8:  # noqa: PLR2004
+            elif command_id == 0xB8:  # ruff:ignore[magic-value-comparison]
                 spell_name = f"special spell to hide apparitions (index 0x{command_id:02X})"
-            elif command_id == 0xBA:  # noqa: PLR2004
+            elif command_id == 0xBA:  # ruff:ignore[magic-value-comparison]
                 spell_name = f"special spell to revive (index 0x{command_id:02X})"
-            elif command_id == 0xBB:  # noqa: PLR2004
+            elif command_id == 0xBB:  # ruff:ignore[magic-value-comparison]
                 spell_name = f"special spell to make monsters shake and rumble (index 0x{command_id:02X})"
-            elif command_id == 0xBC:  # noqa: PLR2004
+            elif command_id == 0xBC:  # ruff:ignore[magic-value-comparison]
                 spell_name = f"special spell to cause small damage to all monsters (index 0x{command_id:02X})"
-            elif command_id == 0xBE:  # noqa: PLR2004
+            elif command_id == 0xBE:  # ruff:ignore[magic-value-comparison]
                 spell_name = f"special spell to fully restore HP and MP (index 0x{command_id:02X})"
-            elif command_id == 0xBF:  # noqa: PLR2004
+            elif command_id == 0xBF:  # ruff:ignore[magic-value-comparison]
                 spell_name = f"special spell to play a chime sound and flash (index 0x{command_id:02X})"
-            elif spell_name == "Dummy" or command_id >= 0xAE:  # noqa: PLR2004
+            elif spell_name == "Dummy" or command_id >= 0xAE:  # ruff:ignore[magic-value-comparison]
                 spell_name = f"spell #{command_id:02X}"
             else:
                 spell_name = f"monster spell {spell_name} (index 0x{command_id:02X})"
 
             return f"Cast {spell_name}"
 
-        if command_id == 0xC0:  # noqa: PLR2004
+        if command_id == 0xC0:  # ruff:ignore[magic-value-comparison]
             return "Fight"
 
-        if command_id == 0xC2:  # noqa: PLR2004
+        if command_id == 0xC2:  # ruff:ignore[magic-value-comparison]
             return "Magic"
 
-        if command_id == 0xC4:  # noqa: PLR2004
+        if command_id == 0xC4:  # ruff:ignore[magic-value-comparison]
             return "Call"
 
-        if command_id == 0xC5:  # noqa: PLR2004
+        if command_id == 0xC5:  # ruff:ignore[magic-value-comparison]
             return "Dark Wave"
 
-        if command_id == 0xC6:  # noqa: PLR2004
+        if command_id == 0xC6:  # ruff:ignore[magic-value-comparison]
             return "Jump"
 
-        if command_id == 0xCE:  # noqa: PLR2004
+        if command_id == 0xCE:  # ruff:ignore[magic-value-comparison]
             return "Kick"
 
-        if command_id == 0xDE:  # noqa: PLR2004
+        if command_id == 0xDE:  # ruff:ignore[magic-value-comparison]
             return "Land"
 
-        if command_id == 0xE0:  # noqa: PLR2004
+        if command_id == 0xE0:  # ruff:ignore[magic-value-comparison]
             return "Twin Cast"
 
-        if command_id == 0xE1:  # noqa: PLR2004
+        if command_id == 0xE1:  # ruff:ignore[magic-value-comparison]
             return "Take no action on this turn"
 
-        if command_id == 0xE8:  # noqa: PLR2004
+        if command_id == 0xE8:  # ruff:ignore[magic-value-comparison]
             return f"Change race to {filter_race(str(parameters[0]), Version.US)}"
 
-        if command_id == 0xEA:  # noqa: PLR2004
+        if command_id == 0xEA:  # ruff:ignore[magic-value-comparison]
             return f"Set physical defense to {self._get_derived_stats(parameters[0])}"
 
-        if command_id == 0xEB:  # noqa: PLR2004
+        if command_id == 0xEB:  # ruff:ignore[magic-value-comparison]
             return f"Set magic defense to {self._get_derived_stats(parameters[0])}"
 
-        if command_id == 0xEC:  # noqa: PLR2004
+        if command_id == 0xEC:  # ruff:ignore[magic-value-comparison]
             if parameters[0] & 0x80 == 0:
                 return f"Increase relative speed value by {parameters[0] * 10}% (slows monster down)"
 
@@ -968,7 +968,7 @@ class FF4:
                 " amount will differ) (speeds monster up)"
             )
 
-        if command_id == 0xED:  # noqa: PLR2004
+        if command_id == 0xED:  # ruff:ignore[magic-value-comparison]
             immune = parameters[0] & 0x80 > 0
             element = filter_element_weakness(str(parameters[0] & 0x7F), Version.US)
 
@@ -977,10 +977,10 @@ class FF4:
 
             return f"Set elemental resistance to {element}"
 
-        if command_id == 0xEE:  # noqa: PLR2004
+        if command_id == 0xEE:  # ruff:ignore[magic-value-comparison]
             return f"Set magic power to {parameters[0]}"
 
-        if command_id == 0xEF:  # noqa: PLR2004
+        if command_id == 0xEF:  # ruff:ignore[magic-value-comparison]
             weakness_element = parameters[0]
             weakness_element_str = filter_element_weakness(str(weakness_element & 0x7F), Version.US)
 
@@ -989,7 +989,7 @@ class FF4:
 
             return f"Set normal elemental weakness to {weakness_element_str}"
 
-        if command_id == 0xF0:  # noqa: PLR2004
+        if command_id == 0xF0:  # ruff:ignore[magic-value-comparison]
             slot = parameters[0] >> 6
             sprite_id = parameters[0] & 0x3F
 
@@ -1034,13 +1034,13 @@ class FF4:
 
             return f"Change sprite for monster in slot {slot} to {sprite}"
 
-        if command_id == 0xF1:  # noqa: PLR2004
+        if command_id == 0xF1:  # ruff:ignore[magic-value-comparison]
             return f"Display battle message {parameters[0]} (force battle speed 6)"
 
-        if command_id == 0xF2:  # noqa: PLR2004
+        if command_id == 0xF2:  # ruff:ignore[magic-value-comparison]
             return f"Display battle message {parameters[0]} (no speed change)"
 
-        if command_id == 0xF3:  # noqa: PLR2004
+        if command_id == 0xF3:  # ruff:ignore[magic-value-comparison]
             return f"Change music to {filter_song(parameters[0], Version.US)}"
 
         if command_id in {0xF4, 0xF5, 0xF6}:
@@ -1055,23 +1055,23 @@ class FF4:
 
             return f"Subtract {value} from flag {index}"
 
-        if command_id == 0xF7:  # noqa: PLR2004
+        if command_id == 0xF7:  # ruff:ignore[magic-value-comparison]
             mode = "Disable" if parameters[0] & 0x80 > 0 else "Enable"
             return f"{mode} battle background darkening effect"
 
-        if command_id == 0xF9:  # noqa: PLR2004
+        if command_id == 0xF9:  # ruff:ignore[magic-value-comparison]
             return f"Set target to {format_action_target(parameters[0])}"
 
-        if command_id == 0xFB:  # noqa: PLR2004
+        if command_id == 0xFB:  # ruff:ignore[magic-value-comparison]
             return "Execute pending commands and continue chain"
 
-        if command_id == 0xFC:  # noqa: PLR2004
+        if command_id == 0xFC:  # ruff:ignore[magic-value-comparison]
             return "End chain"
 
-        if command_id == 0xFD:  # noqa: PLR2004
+        if command_id == 0xFD:  # ruff:ignore[magic-value-comparison]
             return "Start a chain"
 
-        if command_id == 0xFE:  # noqa: PLR2004
+        if command_id == 0xFE:  # ruff:ignore[magic-value-comparison]
             return "Execute pending commands and wait for next turn"
 
         return f"Unknown action: #{id:02X}"
@@ -1121,7 +1121,7 @@ class FF4:
 
         return actions
 
-    def _format_condition_set(self, condition_set_id: int, version: Version) -> list[str]:  # noqa: C901, PLR0912, PLR0914, PLR0915
+    def _format_condition_set(self, condition_set_id: int, version: Version) -> list[str]:  # ruff:ignore[complex-structure, too-many-branches, too-many-locals, too-many-statements]
         condition_set_data = self._scripts["condition_sets"][condition_set_id]
         conditions: list[str] = []
 
@@ -1158,7 +1158,7 @@ class FF4:
                 elif opcode == ConditionOpcode.CHECK_HP:
                     value = extract_values(self._scripts["hp_check_data"][parameters[2]]["hp_value"], int)[version]
 
-                    predicate = "maximum HP" if value == 0xFFFF else f"{value} HP"  # noqa: PLR2004
+                    predicate = "maximum HP" if value == 0xFFFF else f"{value} HP"  # ruff:ignore[magic-value-comparison]
 
                     conditions.append(f"{target.capitalize()} {verb} less than {predicate}")
                 elif opcode == ConditionOpcode.CHECK_FLAG:
@@ -1266,7 +1266,7 @@ def formation_detail(request: HttpRequest, formation_id: int) -> HttpResponse:
         Http404: If the formation ID is invalid.
         TypeError: If the formation data is malformed.
     """
-    if formation_id < 0 or formation_id >= 0x200:  # noqa: PLR2004
+    if formation_id < 0 or formation_id >= 0x200:  # ruff:ignore[magic-value-comparison]
         msg = "Nonexistent monster formation"
         raise Http404(msg)
 
@@ -1361,7 +1361,7 @@ def monster_detail(request: HttpRequest, monster_id: int) -> HttpResponse:
     Raises:
         Http404: If the monster ID is invalid.
     """
-    if monster_id < 0 or monster_id >= 0xE0:  # noqa: PLR2004
+    if monster_id < 0 or monster_id >= 0xE0:  # ruff:ignore[magic-value-comparison]
         msg = "Nonexistent monster."
         raise Http404(msg)
 
