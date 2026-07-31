@@ -20,7 +20,7 @@ dependencies = [
 [dependency-groups]
 dev = [
   "mypy==2.3.0",
-  "ruff==0.15.21",
+  "ruff==0.16.0",
 ]
 
 [build-system]
@@ -46,8 +46,8 @@ line-ending = "lf"
 preview = true
 select = ["ALL"]
 ignore = [
-  "COM812",
-  "ISC001",
+  "missing-trailing-comma",
+  "single-line-implicit-string-concatenation",
 ]
 
 [tool.ruff.lint.flake8-copyright]

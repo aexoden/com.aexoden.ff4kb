@@ -3,7 +3,7 @@
 """Models for the routes package."""
 
 import re
-import subprocess  # noqa: S404 (used for running rosa with custom variables)
+import subprocess  # ruff:ignore[suspicious-subprocess-import] (used for running rosa with custom variables)
 
 from pathlib import Path
 
@@ -278,7 +278,7 @@ class RouteDetail:
             for index, value in [x.split(":") for x in data.split(" ")]:
                 self._vars[index] = int(value)
 
-    def _load_data(self, variables: list[str] | None) -> None:  # noqa: C901, PLR0912, PLR0914, PLR0915 (complexity)
+    def _load_data(self, variables: list[str] | None) -> None:  # ruff:ignore[complex-structure, too-many-branches, too-many-locals, too-many-statements]
         phase = 1
 
         header_phase = 1
@@ -289,7 +289,7 @@ class RouteDetail:
             var_string = decode_vars(variables)
             rosa_args = ["./rosa", "-r", self._route, "-s", str(self._seed), "-m", "0", "-v", var_string]
 
-            result = subprocess.run(  # noqa: S603 (used for running rosa with custom variables)
+            result = subprocess.run(  # ruff:ignore[subprocess-without-shell-equals-true] (used for running rosa with custom variables)
                 rosa_args, capture_output=True, cwd=Path(settings.BASE_DIR) / "rosa", encoding="utf-8", check=True
             )
 
@@ -302,7 +302,7 @@ class RouteDetail:
         current_battles: list[tuple[int, str, str]] = []
         keep_battles = False
 
-        for line in data:  # noqa: PLR1702
+        for line in data:  # ruff:ignore[too-many-nested-blocks]
             if not line.strip():
                 phase += 1
 

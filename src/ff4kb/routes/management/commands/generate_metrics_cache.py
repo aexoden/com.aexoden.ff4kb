@@ -3,6 +3,7 @@
 """Django management command to generate the route metrics cache."""
 
 import sys
+import typing
 
 from typing import Any
 
@@ -16,7 +17,8 @@ class Command(BaseCommand):  # type: ignore[misc]
 
     help = "Generates the route metrics cache"
 
-    def handle(self, *_args: Any, **_options: Any) -> None:  # noqa: ANN401, PLR6301
+    @typing.override
+    def handle(self, *_args: Any, **_options: Any) -> None:
         """Generate the route metrics cache."""
         for route in ROUTES:
             sys.stdout.write(f"Generating metrics cache for {route}\n")
