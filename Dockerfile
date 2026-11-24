@@ -2,7 +2,7 @@
 # Build the rosa binary
 #
 
-FROM debian:trixie-slim@sha256:62bd423aeee912639ca8ee681c2b762cb3e25137e0a92b20be455898a9f034ad AS rosa-builder
+FROM debian:trixie-slim@sha256:8aa5a7bf5a1955bddbe7d74fcdd0b91ab30e74362a8b73af672b0481b35b44a0 AS rosa-builder
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
